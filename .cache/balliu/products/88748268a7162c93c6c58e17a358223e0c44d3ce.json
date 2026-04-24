@@ -1,0 +1,23 @@
+{
+  "url": "https://www.balliuexport.com/producto/silla-de-aluminio-mila/",
+  "title": "Silla Mila",
+  "image": "https://www.balliuexport.com/wp-content/uploads/2020/02/mila-silla-blanco-800x614-1.jpg",
+  "attributes": {
+    "Peso": "3,7",
+    "Material": "Aluminio",
+    "Aluminio mate": "Blanco, Aluminio",
+    "Tejido Balliu": "Blanco 07/00, Ceniza 38/00",
+    "Largo": "59",
+    "Ancho": "58",
+    "Alto": "83",
+    "Cantidad máxima": "10"
+  },
+  "content_parts": [],
+  "tokens": [
+    "mila",
+    "silla"
+  ],
+  "key_tokens": [
+    "mila"
+  ]
+}
