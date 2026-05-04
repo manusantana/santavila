@@ -1,1 +1,10 @@
-{"name":"api-products","version":"1.0.0"}
+{
+  "name": "api-products",
+  "version": "1.0.0",
+  "scripts": {
+    "shopify": "shopify"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.94.1"
+  }
+}
