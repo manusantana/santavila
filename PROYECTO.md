@@ -18,6 +18,15 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 | Estado | En construcción |
 | Región / Mercado | España |
 
+### Estado verificado el 24 de abril de 2026
+- Conexión Admin GraphQL API comprobada con éxito usando `SHOPIFY_ACCESS_TOKEN` de `.envlocal`
+- Nombre interno de la tienda en Shopify: `santavila`
+- Storefront público todavía protegido por contraseña (`https://mueblesexterior.myshopify.com/password`)
+- Catálogo actual verificado: 252 productos totales
+  - 248 productos en `ACTIVE`
+  - 4 productos en `DRAFT`
+- Distribución real actual por `vendor` en Shopify: `Balliu` 137 productos, `Hevea` 115 productos
+
 ---
 
 ## 2. Stack Técnico
@@ -27,12 +36,13 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 - **Autenticación:** OAuth 2.0 vía Partner Dashboard (las Custom/Private Apps quedaron obsoletas a partir de 2026)
 - **App:** `API-Products`, client_id `b29216aed8d9ba73423c54a8828cf65d`, configurada en `shopify.app.toml`
 - **Distribución:** Distribución personalizada (no pública), enlace de instalación generado desde Partner Dashboard → Distribución
-- **Token:** `[REDACTED_VER_ENV_LOCAL]` (guardado en `.env.local`)
+- **Token:** `[REDACTED_VER_ENV_LOCAL]` (guardado en `.envlocal`)
 - **Scopes usados:** `read_products`, `write_products`, `read_files`, `write_files`
 
 ### Scripts Python
 - **Intérprete:** `/usr/bin/python3` (Python 3.9.6 del sistema). **NO usar el virtualenv** (Python 3.13 de pyenv tiene módulo `_lzma` roto).
 - **Dependencias:** solo librería estándar (`json`, `urllib`, `csv`, `time`, `pathlib`, `re`)
+- **Observación operativa:** el archivo real de secretos del workspace es `.envlocal`, pero varios scripts del repo todavía intentan leer `.env`
 
 ### Herramientas externas
 - **remove.bg** API key `[REDACTED_VER_ENV_LOCAL]` — eliminación de fondo. Límite: 50 créditos/mes (plan gratuito). Rate limit: ~12 req seguidas → `sleep(3)` entre peticiones.
@@ -44,7 +54,8 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 ### Hevea
 - **Origen del catálogo:** CSV con 116 productos recibido del proveedor
-- **Estado:** ✅ 116 productos importados en Shopify con imágenes
+- **Estado histórico:** ✅ 116 productos importados en Shopify con imágenes
+- **Estado verificado el 24 de abril de 2026:** 115 productos con `vendor = "Hevea"` en Shopify
 - **Imágenes:** 49 imágenes optimizadas en `images_optimized/` (~0.3 MB c/u)
 - **Cutouts (fondos eliminados):** 48 PNGs con fondo transparente en `images_cutout/`
   - 31 calificados como `completo` (producto bien recortado)
@@ -53,7 +64,9 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 ### Balliu
 - **Origen del catálogo:** Web `balliuexport.com` (no había CSV ni PDF con imágenes)
-- **Estado:** ✅ 165 productos en Shopify | 🔄 Galerías de imágenes en curso
+- **Estado histórico:** ✅ 165 productos en Shopify | 🔄 Galerías de imágenes en curso
+- **Estado verificado el 24 de abril de 2026:** 137 productos con `vendor = "Balliu"` en Shopify
+- **Borradores actuales verificados:** 4 productos Balliu en `DRAFT`
 - **Catálogo v1:** `balliu_catalog.json` — 97 productos, ~5 imgs/producto (original)
 - **Catálogo v2:** `balliu_catalog_full.json` — 97 productos, **498 imágenes** totales (todas las del carrusel WooCommerce, extraídas con `data-large_image`)
 - **Imágenes en Shopify (estado actual):**
@@ -71,7 +84,8 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 - **Títulos SEO descriptivos** sin nombres de colección del proveedor ni nombres propios de la marca.
   Ejemplo: `Sillón exterior aluminio · estilo envolvente | 98×90 cm`
-- **Proveedor (`vendor`):** Siempre `"Muebles Exterior"` — nunca Hevea, Balliu, etc.
+- **Proveedor (`vendor`) objetivo:** Siempre `"Muebles Exterior"` — nunca Hevea, Balliu, etc.
+- **Estado real verificado el 24 de abril de 2026:** Shopify usa `vendor = "Balliu"` en 137 productos y `vendor = "Hevea"` en 115 productos
 - **Precios con IVA 21% incluido** — Shopify configurado con "incluir impuesto en precio".
 - **Variantes de color/tamaño:** Cuando un mismo diseño tiene SKUs separados por color o tamaño significativo, agruparlos como variantes Shopify (no como productos independientes).
   - **Excepción revisada:** Mesa Córcega sí se consolidó (dos tamaños del mismo diseño). Mesa Mundra NO (una es redonda, la otra rectangular).
@@ -94,7 +108,7 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 2. Configurar URL `http://localhost:3000`, callback, scopes
 3. Ir a **Partner Dashboard → Distribución → Distribución personalizada** → introducir el dominio de la tienda → generar enlace de instalación
 4. Abrir el enlace de instalación en el navegador → autorizar → el servidor OAuth local (`get_shopify_token.mjs`) captura el token
-5. Guardar el token en `.env.local`
+5. Guardar el token en `.envlocal`
 
 Ver guía completa en `docs/shopify-api-setup.md`.
 
@@ -182,6 +196,22 @@ Tras ese cambio, ejecutar: `python3 balliu_full_images.py --remap` y luego sin f
 
 ---
 
+### Fase 8 — Verificación operativa Shopify (24 de abril de 2026)
+- Comprobada conexión de solo lectura con la Admin GraphQL API usando `SHOPIFY_ACCESS_TOKEN` de `.envlocal`
+- Scopes confirmados: `read_products`, `write_products`, `read_files`, `write_files`
+- Nombre interno de la tienda: `santavila`
+- Storefront público verificado como protegido por contraseña; la home resuelve a `https://mueblesexterior.myshopify.com/password`
+- Catálogo verificado: 252 productos totales (`248 ACTIVE`, `4 DRAFT`)
+- Últimos productos actualizados detectados en la comprobación: productos Balliu actualizados el 18 de abril de 2026
+- Productos en `DRAFT` detectados:
+  - `balliu-parasol-para-terraza-acrilico-c8dd492d`
+  - `balliu-parasol-para-terraza-acrilico-236bd5f0`
+  - `balliu-cojin-exterior-523e5ae9`
+  - `balliu-limpiador-para-mobiliario-exterior-d0d3fc26`
+- Desviación detectada: la convención documentada de `vendor = "Muebles Exterior"` no coincide con el estado actual de la tienda
+
+---
+
 ## 6. Errores Conocidos y Soluciones
 
 | Error | Causa | Solución |
@@ -203,7 +233,7 @@ Tras ese cambio, ejecutar: `python3 balliu_full_images.py --remap` y luego sin f
 ```
 Muebles-Exterior/
 │
-├── .env.local                          # Tokens API (Shopify, HF, remove.bg)
+├── .envlocal                           # Tokens API (Shopify, HF, remove.bg)
 ├── shopify.app.toml                    # Config app Shopify Partner
 ├── package.json
 │
