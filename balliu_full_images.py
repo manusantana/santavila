@@ -319,11 +319,11 @@ def build_smart_mapping(catalog):
         m = re.search(r"-([0-9a-f]{8})(?:-\d+)?$", handle)
         hash_val = m.group(1) if m else None
 
-        # Get variant option from CSV
-        variant_opt = hash_to_variant.get(hash_val, "") if hash_val else ""
+        # Get variant option and csv_handle from CSV hash
+        csv_handle_from_hash, variant_opt = hash_to_variant.get(hash_val, ("", "")) if hash_val else ("", "")
 
-        # Get Balliu slug
-        balliu_slug = slug_lookup.get(pid)
+        # Get Balliu slug — CSV_HANDLE_TO_SLUG covers all 165 products
+        balliu_slug = CSV_HANDLE_TO_SLUG.get(csv_handle_from_hash) or slug_lookup.get(pid)
 
         # Get images for this slug
         all_imgs  = catalog.get(balliu_slug, {}).get("images", []) if balliu_slug else []

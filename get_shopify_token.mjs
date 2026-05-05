@@ -22,7 +22,7 @@ try {
 // ── Configuración ─────────────────────────────────────────
 const CLIENT_ID     = "b29216aed8d9ba73423c54a8828cf65d";
 const SHOP          = "mueblesexterior.myshopify.com";
-const SCOPES        = "read_products,write_products,read_files,write_files";
+const SCOPES        = "read_products,write_products,read_files,write_files,read_content,write_content";
 const REDIRECT_URI  = "http://localhost:3000/callback";
 const PORT          = 3000;
 // ──────────────────────────────────────────────────────────
