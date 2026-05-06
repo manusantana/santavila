@@ -41,8 +41,8 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 ### Scripts Python
 - **Intérprete:** `/usr/bin/python3` (Python 3.9.6 del sistema). **NO usar el virtualenv** (Python 3.13 de pyenv tiene módulo `_lzma` roto).
-- **Dependencias:** solo librería estándar (`json`, `urllib`, `csv`, `time`, `pathlib`, `re`)
-- **Observación operativa:** el archivo real de secretos del workspace es `.envlocal`, pero varios scripts del repo todavía intentan leer `.env`
+- **Dependencias:** la mayoría usan solo librería estándar (`json`, `urllib`, `csv`, `time`, `pathlib`, `re`). Excepción: `export_tarifas.py` requiere `openpyxl` (instalar con `pip install openpyxl`).
+- **Observación operativa:** el archivo real de secretos del workspace es `.envlocal`, pero varios scripts del repo todavía intentan leer `.env`. `upload_blogs.py` lee el token vía `from config import SHOPIFY_ACCESS_TOKEN` (en lugar de `os.environ`).
 
 ### Herramientas externas
 - **remove.bg** API key `[REDACTED_VER_ENV_LOCAL]` — eliminación de fondo. Límite: 50 créditos/mes (plan gratuito). Rate limit: ~12 req seguidas → `sleep(3)` entre peticiones.
