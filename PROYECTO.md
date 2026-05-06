@@ -62,6 +62,36 @@ Actualmente en construcción y protegida con contraseña de Shopify.
   - 14 calificados como `recortado` (producto toca el borde de la imagen original)
   - Estado detallado en `cutout_status.json`
 
+#### Condiciones comerciales (acuerdo con Hevea)
+- **Política de precios:** Santavila puede fijar el PVP que considere oportuno, **siempre que no sea inferior al precio mínimo indicado en el CSV** del proveedor (columna `PVP Recomendado` en el CSV de Hevea — actúa como suelo de venta, no como recomendación opcional).
+- **Plazo de entrega:** **7-10 días**. Hevea envía directamente al cliente final (dropshipping) a través de su propia red logística — Santavila no manipula stock físico.
+- **Coste de envío:** **Gratuito a península** para pedidos superiores a **900 €**. Por debajo de ese umbral, el coste lo asume Santavila o se repercute al cliente (a definir en checkout).
+- **Origen y calidad:** Producto **100% fabricado en España** con materiales de máxima calidad. Diferenciador clave para copy, fichas SEO y comunicación.
+- **Personalización:** Tapicería y estructura **totalmente personalizables en color**. Implicación operativa: el catálogo Shopify debe permitir comunicar/seleccionar opciones de color, aunque hoy se publique solo el color por defecto.
+- **Garantía:** **3 años** sobre todo el catálogo Hevea. Argumento de venta y de soporte post-venta — debe figurar en ficha de producto y en política de devoluciones / garantía de la tienda.
+
+> **Recordatorio operativo:** estas condiciones son específicas de Hevea. Las condiciones de Balliu pueden ser distintas y deben documentarse aparte cuando se confirmen.
+
+#### Seguimiento de tarifas (modo controller)
+
+Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con **prefijo de fecha** `YYYYMMDD - …csv`. Esa carpeta es la **fuente de verdad** del histórico de precios.
+
+**Comando único para regenerar el seguimiento tras añadir un CSV nuevo:**
+```bash
+python3 update_hevea_seguimiento.py
+```
+
+El script detecta automáticamente todos los CSVs con prefijo de fecha y reconstruye dos hojas en `Santavila.xlsx`:
+
+- **`Hevea Seguimiento`** (formato wide, 16 columnas fijas) — vista de control. Una fila por producto con: identificación, fechas de aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`, marcado con ⚠ si el SKU está reusado por el proveedor), precio y PVP actuales, margen €/% sobre PVP, markup % sobre coste, Δ% vs snapshot anterior, Δ% vs origen, nº de subidas y mini-gráfico de tendencia (`▁▂▃▄▅▆▇█`).
+- **`Hevea Histórico`** (formato long) — una fila por (SKU, Producto, Fecha) con precio, PVP y deltas vs fecha anterior. Crece por filas, nunca por columnas — escala sin problema a 10, 20, 50 fechas.
+
+Las hojas `Todos`, `Hevea`, `Balliu` **no se tocan**. El script es **idempotente** (ejecutarlo varias veces da el mismo resultado) y **reversible** (si retiras un CSV de la carpeta y vuelves a ejecutar, ese snapshot desaparece del histórico).
+
+**SKUs reusados por Hevea (estado conocido a 2026-04-24):** `557-010147` (3 productos: ACAPULCO-3, ACAPULCO-8 ya descatalogado, MANHATAN-1 nuevo), `557-010884` (LUNA-44 + BRANDON-7), `557-1563` (UNIVERSAL-120 + MESA CENTRO 120). Estos productos quedan marcados con `⚠` en la columna Estado y se desambiguan internamente por la primera palabra del nombre.
+
+> **Aviso:** las dos hojas se regeneran desde cero en cada ejecución. Si añades columnas custom a `Hevea Seguimiento` o `Hevea Histórico`, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
+
 ### Balliu
 - **Origen del catálogo:** Web `balliuexport.com` (no había CSV ni PDF con imágenes)
 - **Estado histórico:** ✅ 165 productos en Shopify | 🔄 Galerías de imágenes en curso

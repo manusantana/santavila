@@ -73,6 +73,7 @@ Muebles-Exterior/
 ├── consolidate_remaining.py         # Consolida grupos pendientes Balliu (vera, brunei, capri)
 ├── generate_lifestyle_images.py     # Genera imágenes de ambiente con IA (FLUX.1-schnell)
 ├── export_tarifas.py                # Genera XLSX con tarifas Hevea+Balliu (requiere openpyxl)
+├── update_hevea_seguimiento.py      # Regenera hojas "Hevea Seguimiento" y "Hevea Histórico" desde CSVs fechados
 ├── upload_blogs.py                  # Sube artículos al blog "News" de la tienda
 │
 ├── get_shopify_token.mjs            # Servidor OAuth para obtener token de acceso
@@ -116,6 +117,17 @@ shopify store execute --store mueblesexterior.myshopify.com \
 La mayoría de scripts usan solo la librería estándar (`json`, `urllib`, `csv`, `pathlib`, `re`). Excepciones:
 
 - `export_tarifas.py` requiere **`openpyxl`** (`pip install openpyxl`)
+- `update_hevea_seguimiento.py` requiere **`openpyxl`**
+
+### Seguimiento de tarifas Hevea
+
+Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con prefijo `YYYYMMDD - …csv`. Para regenerar las hojas de seguimiento en `Santavila.xlsx`:
+
+```bash
+python3 update_hevea_seguimiento.py
+```
+
+Crea/regenera dos hojas: **`Hevea Seguimiento`** (vista de control con KPIs y tendencia) y **`Hevea Histórico`** (formato long, una fila por SKU×fecha). Idempotente y reversible. Las hojas `Todos`, `Hevea`, `Balliu` no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
 
 ---
 
