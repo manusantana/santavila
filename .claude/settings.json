@@ -2,7 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(curl -s \"https://www.balliuexport.com/wp-json/wc/v3/products?per_page=5\")",
-      "Bash(curl -s \"https://www.balliuexport.com/tienda/\")"
+      "Bash(curl -s \"https://www.balliuexport.com/tienda/\")",
+      "Bash(grep -E \"^~\\\\\\\\\\\\$|\\\\.xlsx$\")",
+      "Bash(/usr/bin/python3 update_hevea_seguimiento.py)",
+      "Bash(/usr/bin/python3)",
+      "Bash(file *.pdf)",
+      "Bash(/usr/bin/python3 -c ' *)",
+      "Bash(pdftotext -layout \"20260507-Tarifa pvp productes.pdf\" /tmp/balliu_0507.txt)",
+      "Bash(pdftotext -layout \"20260330- TARIFA 2026 UBICUO LIBRES PENSADORES SL.pdf\" /tmp/balliu_0330.txt)",
+      "Bash(/usr/bin/python3 -c \"import pdfplumber; print\\('OK', pdfplumber.__version__\\)\")",
+      "Bash(/usr/bin/python3 /tmp/balliu_extract_test.py)",
+      "Bash(grep \"~\\\\\\\\\\\\$\")",
+      "Bash(/usr/bin/python3 update_balliu_seguimiento.py)",
+      "Read(//Users/sergio/Personal/19 - IA/00-Google Antigravity/12 - ULP Santavila/**)",
+      "Bash(lsof '~$Santavila.xlsx')"
     ]
   },
   "enabledPlugins": {}

@@ -74,7 +74,9 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 #### Seguimiento de tarifas (modo controller)
 
-Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con **prefijo de fecha** `YYYYMMDD - …csv`. Esa carpeta es la **fuente de verdad** del histórico de precios.
+Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con **prefijo de fecha** `YYYYMMDD …csv` (acepta espacio o guión tras la fecha). Esa carpeta es la **fuente de verdad** del histórico de precios. Snapshots descartados (p. ej. tarifas anuladas o reemplazadas por una corrección posterior) se mueven a `proveedores_raw/hevea/_archived/` — el script no los recoge pero quedan recuperables.
+
+**Snapshots vigentes (2026-05-07):** 06/03, 17/04, 07/05. La tarifa del 24/04 fue reemplazada por la del 07/05 y archivada en `_archived/`.
 
 **Comando único para regenerar el seguimiento tras añadir un CSV nuevo:**
 ```bash
@@ -88,13 +90,42 @@ El script detecta automáticamente todos los CSVs con prefijo de fecha y reconst
 
 Las hojas `Todos`, `Hevea`, `Balliu` **no se tocan**. El script es **idempotente** (ejecutarlo varias veces da el mismo resultado) y **reversible** (si retiras un CSV de la carpeta y vuelves a ejecutar, ese snapshot desaparece del histórico).
 
-**SKUs reusados por Hevea (estado conocido a 2026-04-24):** `557-010147` (3 productos: ACAPULCO-3, ACAPULCO-8 ya descatalogado, MANHATAN-1 nuevo), `557-010884` (LUNA-44 + BRANDON-7), `557-1563` (UNIVERSAL-120 + MESA CENTRO 120). Estos productos quedan marcados con `⚠` en la columna Estado y se desambiguan internamente por la primera palabra del nombre.
+**SKUs reusados por Hevea (estado conocido a 2026-05-07):** `557-010147` (ACAPULCO-3, ACAPULCO-8 ya descatalogado, MANHATAN-1), `557-010884` (LUNA-44 + BRANDON-7), `557-1563` (UNIVERSAL-120 + MESA CENTRO 120). Estos productos quedan marcados con `⚠` en la columna Estado y se desambiguan internamente por la primera palabra del nombre.
+
+**Variaciones de cabecera que tolera el lector:** la columna de precio se detecta por substring `exworks` (cubre `Precio neto exworks`, `Precio neto exworks sin iva`, `Precio exworks (sin iva)`, etc.) y la de PVP por substring `pvp` + `recomendado` (cubre `PVP Recomendado` y `PVP Recomendado (sin iva)`). Si Hevea introduce un nuevo nombre que rompa esas reglas el script lo avisará por stderr.
 
 > **Aviso:** las dos hojas se regeneran desde cero en cada ejecución. Si añades columnas custom a `Hevea Seguimiento` o `Hevea Histórico`, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
 
 ### Balliu
 - **Origen del catálogo:** Web `balliuexport.com` (no había CSV ni PDF con imágenes)
 - **Estado histórico:** ✅ 165 productos en Shopify | 🔄 Galerías de imágenes en curso
+
+#### Seguimiento de tarifas Balliu (modo controller)
+
+Cada PDF de tarifa que envía Balliu se guarda en `proveedores_raw/balliu/` con **prefijo de fecha** `YYYYMMDD …pdf`. PDFs sin prefijo (catálogo general, fichas técnicas) se ignoran. Snapshots descartados se mueven a `proveedores_raw/balliu/_archived/`.
+
+**Comando único para regenerar el seguimiento tras añadir un PDF nuevo:**
+```bash
+python3 update_balliu_seguimiento.py
+```
+
+El script extrae las tarifas con `pdfplumber` (texto + coordenadas + detección de tablas) y reconstruye dos hojas en `Santavila.xlsx`:
+
+- **`Balliu Seguimiento`** (formato wide, 13 columnas) — vista de control. Una fila por (Producto, Variante, Grupo, Ord). KPIs: 1ª/Última aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`), Coste actual €, PVP con IVA €, Δ% vs anterior, Δ% vs origen, nº de subidas, mini-gráfico de tendencia.
+- **`Balliu Histórico`** (formato long) — una fila por (Producto, Variante, Grupo, Ord, Fecha) con coste, PVP y deltas vs fecha anterior.
+
+**Diferencias respecto a Hevea:**
+- **Fuente PDF, no CSV.** Balliu envía la tarifa en PDF tabular con foto de producto, texto en tres columnas (Producto / Variante+Grupo / €/u.) y nombre del producto centrado verticalmente sobre N variantes. El parser usa `extract_tables()` para agrupar variantes por bloque y `extract_words()` con coordenadas X para distinguir producto inline (X<200) de variante.
+- **PVP calculado, no recibido.** El PDF sólo da el coste sin IVA (lo que paga Santavila a Balliu). El script calcula `PVP con IVA = Coste × 1,21`. La hoja `Balliu` antigua mantiene su PVP de venta real (con markup propio de Santavila); estas hojas nuevas solo trackean coste y referencia con IVA.
+- **Identificación por (Producto, Variante, Grupo, Ord).** Sin SKU. El cruce con la hoja `Balliu` y los SKUs largos tipo `BALLIU_EVA_PRO_TUMBONA_…_923110D9` queda pendiente para una fase posterior.
+- **Duplicados intencionales del proveedor.** Balliu lista 2 veces algunas (Producto, Variante, Grupo) con precios distintos: actualmente `Bimba Silla / Blanca / G2` y `Capri Mesa / 60X60 Mesa Alta Tablero Hpl Gd / G2`. Se distinguen con sufijo `(#1)`, `(#2)` cuando hay duplicado, asumiendo que el orden de aparición en el PDF se mantiene estable entre snapshots.
+
+Las hojas `Todos`, `Hevea`, `Balliu`, `Hevea Histórico`, `Hevea Seguimiento` **no se tocan**. El script es **idempotente**.
+
+**Snapshots vigentes (2026-05-07):** 30/03, 07/05. Subida media del coste 53,8 % entre snapshots; rango +33,3 % a +80,2 %; 0 bajadas, 0 productos sin cambio.
+
+> **Aviso:** las dos hojas Balliu se regeneran desde cero en cada ejecución. Si añades columnas custom a `Balliu Seguimiento` o `Balliu Histórico`, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
+
 - **Estado verificado el 24 de abril de 2026:** 137 productos con `vendor = "Balliu"` en Shopify
 - **Borradores actuales verificados:** 4 productos Balliu en `DRAFT`
 - **Catálogo v1:** `balliu_catalog.json` — 97 productos, ~5 imgs/producto (original)

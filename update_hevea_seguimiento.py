@@ -34,7 +34,7 @@ BASE = Path(__file__).parent
 XLSX = BASE / "Santavila.xlsx"
 HEVEA_DIR = BASE / "proveedores_raw" / "hevea"
 
-DATE_PREFIX_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})\s*-")
+DATE_PREFIX_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(?:\s|\s*-)")
 
 # ── Lectura de CSVs ───────────────────────────────────────────────────────────
 
@@ -57,18 +57,34 @@ def find_dated_csvs(folder):
         print(f"⚠ CSVs con fecha inválida en el nombre, ignorados: {skipped}", file=sys.stderr)
     return sorted(out)
 
-def normalize_price_col(headers):
+def find_col(headers, *patterns):
+    """Devuelve el nombre real de la columna que contenga TODAS las substrings
+    indicadas (case-insensitive). Útil cuando el proveedor renombra columnas
+    entre snapshots (p. ej. 'PVP Recomendado' → 'PVP Recomendado (sin iva)')."""
     for h in headers:
-        if h and "exworks" in h.lower():
+        if not h:
+            continue
+        hl = h.lower()
+        if all(p.lower() in hl for p in patterns):
             return h
-    raise KeyError(f"No se encontró columna 'exworks' en headers: {list(headers)}")
+    return None
+
+def normalize_price_col(headers):
+    h = find_col(headers, "exworks")
+    if not h:
+        raise KeyError(f"No se encontró columna 'exworks' en headers: {list(headers)}")
+    return h
 
 def read_csv(path):
     with open(path, encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
     if not rows:
         return []
-    pc = normalize_price_col(rows[0].keys())
+    headers = rows[0].keys()
+    pc = normalize_price_col(headers)
+    pvp_col = find_col(headers, "pvp", "recomendado")
+    if not pvp_col:
+        print(f"⚠ {path.name}: no se encontró columna 'PVP Recomendado*'", file=sys.stderr)
     out = []
     for r in rows:
         sku = (r.get("SKU") or "").strip()
@@ -80,7 +96,7 @@ def read_csv(path):
         except ValueError:
             precio = None
         try:
-            pvp_raw = (r.get("PVP Recomendado") or "").strip()
+            pvp_raw = (r.get(pvp_col) or "").strip() if pvp_col else ""
             pvp = float(pvp_raw) if pvp_raw else None
         except ValueError:
             pvp = None

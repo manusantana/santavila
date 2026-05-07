@@ -40,10 +40,15 @@ Muebles-Exterior/
 │
 ├── docs/
 │   ├── shopify-api-setup.md                    # Guía para conectar Shopify Admin API
+│   ├── santavila/                              # Auditoría, backlog, modelo de datos y plan de tema
 │   ├── Santavila como líder de mobiliario...   # Posicionamiento de marca
 │   └── The Perfect Product Page Builder.pdf    # Guía de fichas de producto
 │
+├── plan_santavila_shopify/          # Prompts maestros y plan operativo del proyecto Santavila
+│
 ├── proveedores_raw/                 # Catálogos originales de los proveedores
+│   ├── hevea/      *.csv (con prefijo YYYYMMDD) + _archived/
+│   └── balliu/     *.pdf (con prefijo YYYYMMDD) + _archived/
 │
 ├── images_optimized/                # 49 imágenes Hevea comprimidas (~0.3 MB c/u)
 ├── images_balliu/                   # Imágenes originales de Balliu
@@ -74,6 +79,7 @@ Muebles-Exterior/
 ├── generate_lifestyle_images.py     # Genera imágenes de ambiente con IA (FLUX.1-schnell)
 ├── export_tarifas.py                # Genera XLSX con tarifas Hevea+Balliu (requiere openpyxl)
 ├── update_hevea_seguimiento.py      # Regenera hojas "Hevea Seguimiento" y "Hevea Histórico" desde CSVs fechados
+├── update_balliu_seguimiento.py     # Regenera hojas "Balliu Seguimiento" y "Balliu Histórico" desde PDFs fechados
 ├── upload_blogs.py                  # Sube artículos al blog "News" de la tienda
 │
 ├── get_shopify_token.mjs            # Servidor OAuth para obtener token de acceso
@@ -118,16 +124,35 @@ La mayoría de scripts usan solo la librería estándar (`json`, `urllib`, `csv`
 
 - `export_tarifas.py` requiere **`openpyxl`** (`pip install openpyxl`)
 - `update_hevea_seguimiento.py` requiere **`openpyxl`**
+- `update_balliu_seguimiento.py` requiere **`openpyxl`** + **`pdfplumber`** (`pip install pdfplumber`)
 
-### Seguimiento de tarifas Hevea
+### Seguimiento de tarifas (Hevea + Balliu)
 
-Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con prefijo `YYYYMMDD - …csv`. Para regenerar las hojas de seguimiento en `Santavila.xlsx`:
+Cada tarifa nueva se guarda en `proveedores_raw/<proveedor>/` con prefijo de fecha `YYYYMMDD …` (Hevea CSV, Balliu PDF). Snapshots descartados se mueven a `proveedores_raw/<proveedor>/_archived/` — el script no los recoge pero quedan recuperables.
 
 ```bash
+# Regenerar Hevea Seguimiento + Hevea Histórico
 python3 update_hevea_seguimiento.py
+
+# Regenerar Balliu Seguimiento + Balliu Histórico
+python3 update_balliu_seguimiento.py
 ```
 
-Crea/regenera dos hojas: **`Hevea Seguimiento`** (vista de control con KPIs y tendencia) y **`Hevea Histórico`** (formato long, una fila por SKU×fecha). Idempotente y reversible. Las hojas `Todos`, `Hevea`, `Balliu` no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
+Cada script crea/regenera dos hojas en `Santavila.xlsx`:
+
+- **`<Proveedor> Seguimiento`** — vista de control wide. Una fila por producto con identificación, fechas de aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`), precio/coste actual, PVP, deltas % vs anterior y vs origen, nº de subidas y mini-tendencia (`▁▂▃▄▅▆▇█`).
+- **`<Proveedor> Histórico`** — formato long. Una fila por (producto, fecha) con precio/coste, PVP y deltas vs fecha anterior.
+
+Diferencias clave entre proveedores:
+
+| | Hevea | Balliu |
+|---|---|---|
+| Fuente | CSV con SKU + Producto + Coste + PVP recomendado | PDF tabular con Producto + Variante + Grupo + Coste |
+| PVP | Recibido del proveedor | Calculado: Coste × 1,21 (sólo IVA) |
+| Identificación | (SKU, primera palabra del Producto) | (Producto, Variante, Grupo, Ord) |
+| Parser | `csv.DictReader` con detección flexible de cabeceras | `pdfplumber` con coordenadas X + agrupación por bloques |
+
+Ambos scripts son **idempotentes** y **reversibles** (retira un snapshot del directorio y vuelve a ejecutar — desaparece). Las hojas `Todos`, `Hevea`, `Balliu` no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
 
 ---
 
