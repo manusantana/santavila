@@ -1,0 +1,1330 @@
+{
+  "_meta": {
+    "fecha_coste_origen": "2026-03-30",
+    "fecha_pvp_origen": "2026-05-07",
+    "total_filas_mapeadas": 165,
+    "no_match": []
+  },
+  "mapping": [
+    {
+      "sku": "BALLIU_EVA_PRO_TUMBONA_CHASIS_BLANCO_TA_923110D9",
+      "fila_todos_origen": 119,
+      "producto": "Eva Pro Tumbona",
+      "variante": "Chasis Blanco/Tablillas Mario Eskenazi",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_TUMBONA_CHASIS_BLANCO_TE_B19AF1EA",
+      "fila_todos_origen": 120,
+      "producto": "Eva Pro Tumbona",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_TUMBONA_CHASIS_PRESTIGE__DDEEEF3F",
+      "fila_todos_origen": 121,
+      "producto": "Eva Pro Tumbona",
+      "variante": "Chasis Prestige/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CARMEN_TUMBONA_CHASIS_BLANCO_TA_ADD04DFC",
+      "fila_todos_origen": 122,
+      "producto": "Carmen Tumbona",
+      "variante": "Chasis Blanco/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CARMEN_TUMBONA_CHASIS_PRESTIGE__3B908F70",
+      "fila_todos_origen": 123,
+      "producto": "Carmen Tumbona",
+      "variante": "Chasis Prestige/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CARMEN_TUMBONA_CHASIS_BLANCO_TE_009E68E4",
+      "fila_todos_origen": 124,
+      "producto": "Carmen Tumbona",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CARMEN_TUMBONA_CHASIS_PRESTIGE__16A6D4DB",
+      "fila_todos_origen": 125,
+      "producto": "Carmen Tumbona",
+      "variante": "Chasis Prestige/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_LOLA_TUMBONA_CHASIS_BLANCO_TA_3D8CA52F",
+      "fila_todos_origen": 126,
+      "producto": "Lola Tumbona",
+      "variante": "Chasis Blanco/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_LOLA_TUMBONA_CHASIS_PRESTIGE__9F313C12",
+      "fila_todos_origen": 127,
+      "producto": "Lola Tumbona",
+      "variante": "Chasis Prestige/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_LOLA_TUMBONA_CHASIS_BLANCO_TE_ACA076AE",
+      "fila_todos_origen": 128,
+      "producto": "Lola Tumbona",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_LOLA_TUMBONA_CHASIS_PRESTIGE__B52B3A7F",
+      "fila_todos_origen": 129,
+      "producto": "Lola Tumbona",
+      "variante": "Chasis Prestige/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_TUMBONA_CHASIS_BLANCO_TE_B19AF1EA",
+      "fila_todos_origen": 130,
+      "producto": "Eva R Tumbona",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_TUMBONA_CHASIS_BLANCO_TA_32A6C0EA",
+      "fila_todos_origen": 131,
+      "producto": "Eva Rt Tumbona",
+      "variante": "Chasis Blanco/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_RG_TUMBONA_CHASIS_BLANCO_TE_D369D964",
+      "fila_todos_origen": 132,
+      "producto": "Eva RG Tumbona",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_RG_TUMBONA_CHASIS_ARENA_TEL_D8285FFB",
+      "fila_todos_origen": 133,
+      "producto": "Eva RG Tumbona",
+      "variante": "Chasis Arena/Tela Balliu",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_RTG_TUMBONA_CHASIS_BLANCO_TA_0648657B",
+      "fila_todos_origen": 134,
+      "producto": "Eva Rtg Tumbona",
+      "variante": "Chasis Blanco/Tablillas",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_NOA_TUMBONA_CHASIS_BLANCO_TE_28FF014D",
+      "fila_todos_origen": 135,
+      "producto": "Noa Tumbona Apilable",
+      "variante": "Chasis Blanco/Tela Balliu",
+      "grupo": "G4",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_NOA_TUMBONA_CHASIS_PRESTIGE__E5BE2A33",
+      "fila_todos_origen": 136,
+      "producto": "Noa Tumbona Apilable",
+      "variante": "Chasis Prestige/Tela Balliu",
+      "grupo": "G4",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_TUMBONA_SIN_RUEDAS_DA3F5C24",
+      "fila_todos_origen": 137,
+      "producto": "Olimpia S Tumbona Apilable",
+      "variante": "Sin Ruedas",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_TUMBONA_CON_RUEDAS_82D4D0A8",
+      "fila_todos_origen": 138,
+      "producto": "Olimpia S Tumbona Apilable",
+      "variante": "Con Ruedas",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_TUMBONA_TELA_BALLIU_36870D09",
+      "fila_todos_origen": 139,
+      "producto": "Etna Tumbona",
+      "variante": "Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_TUMBONA_TELA_BALLIU_CON__AFBA154C",
+      "fila_todos_origen": 140,
+      "producto": "Etna Tumbona",
+      "variante": "Tela Balliu con ruedas",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_ALTA_TUMBONA_AL_TELA_BALLIU_D08586C1",
+      "fila_todos_origen": 141,
+      "producto": "Etna Tumbona alta",
+      "variante": "Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_ALTA_TUMBONA_AL_TELA_BALLIU_CON__9E0F219D",
+      "fila_todos_origen": 142,
+      "producto": "Etna Tumbona alta",
+      "variante": "Tela Balliu con ruedas",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_IRIS_TUMBONA_CON_RUEDAS_9064B7B9",
+      "fila_todos_origen": 143,
+      "producto": "Iris Tumbona",
+      "variante": "Con Ruedas",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MARINA_TUMBONA_TELA_BALLIU_F7AB4DA8",
+      "fila_todos_origen": 144,
+      "producto": "Marina Tumbona",
+      "variante": "Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALBA_TUMBONA_TELA_BALLIU_20620134",
+      "fila_todos_origen": 145,
+      "producto": "Alba Tumbona",
+      "variante": "Tela Balliu",
+      "grupo": "G4",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CANNES_MINI_TUMBONA_MINI_TUMBONA_CAN_5A6F53EB",
+      "fila_todos_origen": 146,
+      "producto": "Cannes Mini Tumbona",
+      "variante": "Mini Tumbona Cannes (Con cojin)",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRISTOL_MINI_TUMBONA_MINI_TUMBONA_BRI_FA211C70",
+      "fila_todos_origen": 147,
+      "producto": "Bristol Mini Tumbona",
+      "variante": "Mini Tumbona Bristol (Con cojín)",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MARINA_MINI_TUMBONA_MINI_TUMBONA_MAR_98AB84CE",
+      "fila_todos_origen": 148,
+      "producto": "Marina Mini Tumbona",
+      "variante": "Mini Tumbona Marina Fija",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_AURA_CAMA_BALINESA_TELA_NAUTICA_2BD3A7A4",
+      "fila_todos_origen": 149,
+      "producto": "Aura Cama Balinesa",
+      "variante": "Tela Nautica",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALMA_CAMA_BALINESA_TELA_NAUTICA_DCAF71D8",
+      "fila_todos_origen": 150,
+      "producto": "Alma Cama Balinesa",
+      "variante": "Tela Nautica",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SILLA_TABURETE_ETNA_AL_A66B4A0A",
+      "fila_todos_origen": 151,
+      "producto": "Etna Silla",
+      "variante": "Taburete Etna aluminio",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SILLA_CON_BRAZOS_5C88BD77",
+      "fila_todos_origen": 152,
+      "producto": "Etna Silla",
+      "variante": "Con Brazos",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SILLA_ALTA_CON_BRAZOS_EAF4A34A",
+      "fila_todos_origen": 153,
+      "producto": "Etna Silla",
+      "variante": "Alta Con Brazos",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DUNA_SILLA_BLANCA_484CBEA0",
+      "fila_todos_origen": 154,
+      "producto": "Bimba Silla",
+      "variante": "Blanca",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DUNA_SILLA_COLOR_NEGRO_TORT_611D28CC",
+      "fila_todos_origen": 155,
+      "producto": "Bimba Silla",
+      "variante": "Color negro / Tortora",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BIMBA_SILLA_BLANCA_8164CC65",
+      "fila_todos_origen": 156,
+      "producto": "Bimba Silla",
+      "variante": "Blanca",
+      "grupo": "G2",
+      "ord": 2
+    },
+    {
+      "sku": "BALLIU_BIMBA_SILLA_NEGRA_5F329445",
+      "fila_todos_origen": 157,
+      "producto": "Bimba Silla",
+      "variante": "Negra",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_SILLA_BLANCA_0B607EC7",
+      "fila_todos_origen": 158,
+      "producto": "Selva Silla",
+      "variante": "Blanca",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_SILLA_COLOR_5FDA60B0",
+      "fila_todos_origen": 159,
+      "producto": "Selva Silla",
+      "variante": "Color",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNA_SILLA_SIN_BRAZOS_AF080E9C",
+      "fila_todos_origen": 160,
+      "producto": "Bruna Silla",
+      "variante": "Sin Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNA_SILLA_CON_BRAZOS_D52BECC5",
+      "fila_todos_origen": 161,
+      "producto": "Bruna Silla",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_VERA_SILLA_SIN_BRAZOS_DAABCDAF",
+      "fila_todos_origen": 162,
+      "producto": "Vera Silla",
+      "variante": "Sin Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_VERA_SILLA_CON_BRAZOS_75353330",
+      "fila_todos_origen": 163,
+      "producto": "Vera Silla",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_VERA_SILLA_L_CON_BRAZOS_51F30794",
+      "fila_todos_origen": 164,
+      "producto": "Vera Silla",
+      "variante": "L Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SILLA_VENUS_SIN_BRAZOS_CD07E7D6",
+      "fila_todos_origen": 165,
+      "producto": "Silla Venus",
+      "variante": "Sin Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SILLA_VENUS_CON_BRAZOS_C654C52F",
+      "fila_todos_origen": 166,
+      "producto": "Silla Venus",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNA_SILLA_CON_BRAZ_94B6E5B5",
+      "fila_todos_origen": 167,
+      "producto": "Silla Alba",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MILA_SILLA_CON_BRAZOS_BC0C02EC",
+      "fila_todos_origen": 168,
+      "producto": "Mila Silla",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNA_SILLA_CON_BRAZ_94B6E5B5",
+      "fila_todos_origen": 169,
+      "producto": "Dalia Silla",
+      "variante": "Con Brazos",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_GRETA_SILLA_ALUMINIO_AFD89221",
+      "fila_todos_origen": 170,
+      "producto": "Greta Silla",
+      "variante": "Aluminio",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_GRETA_MESA_TABLERO_ALUMINIO_9E30CA7F",
+      "fila_todos_origen": 171,
+      "producto": "Greta Mesa",
+      "variante": "Tablero Aluminio",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MINI_MESA_COLOR_BLANCO_5D0FB586",
+      "fila_todos_origen": 172,
+      "producto": "Mini Mesa",
+      "variante": "Color Blanco",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MINI_MESA_COLOR_NATURAL_PR_1CF4D3D5",
+      "fila_todos_origen": 173,
+      "producto": "Mini Mesa",
+      "variante": "Color Natural/Prestige/Estandar",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_MINI_MESA_AU_COLOR_BLANCO_DE421A42",
+      "fila_todos_origen": 174,
+      "producto": "Mini Mesa Eva Pro",
+      "variante": "Color Blanco",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_MINI_MESA_AU_COLOR_NATURAL_PR_911A77BA",
+      "fila_todos_origen": 175,
+      "producto": "Mini Mesa Eva Pro",
+      "variante": "Color Natural/Pr Estige",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_BCN_MESA_AUX_COLOR_BLANCO_35554775",
+      "fila_todos_origen": 176,
+      "producto": "Bcn Mesa",
+      "variante": "Color Blanco",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_EVA_PRO_BCN_MESA_AUX_COLOR_NATURAL_PR_25CD2EDE",
+      "fila_todos_origen": 177,
+      "producto": "Bcn Mesa",
+      "variante": "Color Natural/Prestige",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_MESA_AUXILIA_TELA_BALLIU_6C7A42D9",
+      "fila_todos_origen": 178,
+      "producto": "Olimpia Auxiliar Mesa",
+      "variante": "Mesa auxiliar Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_NOA_MESA_AUXILIAR_COLOR_BLANCO_90B11E5B",
+      "fila_todos_origen": 179,
+      "producto": "Noa Auxiliar Mesa",
+      "variante": "Color Blanco",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_NOA_MESA_AUXILIAR_COLOR_NATURAL_PR_27CE9446",
+      "fila_todos_origen": 180,
+      "producto": "Noa Auxiliar Mesa",
+      "variante": "Color Natural/Prestige",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_MESA_AUXILIAR_TABLERO_HPL_C5331CE8",
+      "fila_todos_origen": 181,
+      "producto": "Mesa Auxiliar Etna",
+      "variante": "Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_MESA_AUXILIAR_TABLERO_HPL_GD_7664D255",
+      "fila_todos_origen": 182,
+      "producto": "Mesa Auxiliar Etna",
+      "variante": "Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_MESA_AUXILIAR_DIAMETRO_60_WERZ_9C991818",
+      "fila_todos_origen": 183,
+      "producto": "Selva Mesa",
+      "variante": "Diametro 60 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_DIAMETRO_70_WERZ_33CE1613",
+      "fila_todos_origen": 184,
+      "producto": "Selva Mesa",
+      "variante": "Diametro 70 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_DIAMETRO_80_WERZ_EB565C3E",
+      "fila_todos_origen": 185,
+      "producto": "Selva Mesa",
+      "variante": "Diametro 80 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_DIAMETRO_90_WERZ_871DF608",
+      "fila_todos_origen": 186,
+      "producto": "Selva Mesa",
+      "variante": "Diametro 90 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_70_X_70_WERZALIT_7AB14C9A",
+      "fila_todos_origen": 187,
+      "producto": "Selva Mesa",
+      "variante": "70 X 70 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_80_X_80_WERZALIT_1A5A5005",
+      "fila_todos_origen": 188,
+      "producto": "Selva Mesa",
+      "variante": "80 X 80 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SELVA_MESA_120_X_80_WERZALI_747885BD",
+      "fila_todos_origen": 189,
+      "producto": "Selva Mesa",
+      "variante": "120 X 80 Werzalit",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_80X80_TABLERO_HP_EF580AE2",
+      "fila_todos_origen": 190,
+      "producto": "Brunei Mesa",
+      "variante": "80X80 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_80X80_TABLERO_HP_FCE3B8BD",
+      "fila_todos_origen": 191,
+      "producto": "Brunei Mesa",
+      "variante": "80X80 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_130X80_TABLERO_H_DF7C872B",
+      "fila_todos_origen": 192,
+      "producto": "Brunei Mesa",
+      "variante": "130X80 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_130X80_TABLERO_H_5068224E",
+      "fila_todos_origen": 193,
+      "producto": "Brunei Mesa",
+      "variante": "130X80 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_160X90_TABLERO_H_11303F43",
+      "fila_todos_origen": 194,
+      "producto": "Brunei Mesa",
+      "variante": "160X90 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_160X90_TABLERO_H_C39E3349",
+      "fila_todos_origen": 195,
+      "producto": "Brunei Mesa",
+      "variante": "160X90 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_190X90_TABLERO_H_4D2D1E60",
+      "fila_todos_origen": 196,
+      "producto": "Brunei Mesa",
+      "variante": "190X90 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRUNEI_MESA_190X90_TABLERO_H_7FCC116E",
+      "fila_todos_origen": 197,
+      "producto": "Brunei Mesa",
+      "variante": "190X90 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ATLANTA_MESA_240X90_TABLERO_H_78358691",
+      "fila_todos_origen": 198,
+      "producto": "Brunei Mesa",
+      "variante": "240X90 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ATLANTA_MESA_240X90_TABLERO_H_D4E471C5",
+      "fila_todos_origen": 199,
+      "producto": "Brunei Mesa",
+      "variante": "240X90 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ATLANTA_MESA_140_180X90_EXTEN_E4EC7D7C",
+      "fila_todos_origen": 200,
+      "producto": "Atlanta Mesa",
+      "variante": "140/180X90 Extensible",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ATLANTA_MESA_200_260X100_EXTE_9D798E50",
+      "fila_todos_origen": 201,
+      "producto": "Atlanta Mesa",
+      "variante": "200/260X100 Extensible",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MESA_JAVA_140_180X100_EXTE_8E073AAB",
+      "fila_todos_origen": 202,
+      "producto": "Mesa Java",
+      "variante": "140/180X100 Extensible Hpl",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MESA_JAVA_140_180X100_EXTE_E5E3BB40",
+      "fila_todos_origen": 203,
+      "producto": "Mesa Java",
+      "variante": "140/180X100 Extensible Hpl Gd",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MESA_JAVA_200_260X100_EXTE_23187EA9",
+      "fila_todos_origen": 204,
+      "producto": "Mesa Java",
+      "variante": "200/260X100 Extensible Hpl",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_MESA_JAVA_200_260X100_EXTE_4A63BE2F",
+      "fila_todos_origen": 205,
+      "producto": "Mesa Java",
+      "variante": "200/260X100 Extensible Hpl Gd",
+      "grupo": "G3",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_70_MESA_ALTA_TABLERO_HPL_45C511E9",
+      "fila_todos_origen": 206,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 70 Mesa Alta Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_70_MESA_ALTA_TABLERO_HPL_GD_F99491CE",
+      "fila_todos_origen": 207,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 70 Mesa Alta Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_70_MESA_TABLERO_HPL_451E7BA8",
+      "fila_todos_origen": 208,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 70 Mesa Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_70_MESA_TABLERO_HPL_GD_3ADFE773",
+      "fila_todos_origen": 209,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 70 Mesa Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_80_MESA_TABLERO_HPL_65E3CA13",
+      "fila_todos_origen": 210,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 80 Mesa Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_DIAM_80_MESA_TABLERO_HPL_GD_1B4F3962",
+      "fila_todos_origen": 211,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 80 Mesa Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_DIAM_90_TABLE_HP_22901F1B",
+      "fila_todos_origen": 212,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 90 Table Hpl Table Top",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_DIAM_90_TABLE_HP_6C6DFD1C",
+      "fila_todos_origen": 213,
+      "producto": "Capri Mesa",
+      "variante": "Diam. 90 Table Hpl Table Top Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_70X70_PIE_SIMPLE_724B0DB0",
+      "fila_todos_origen": 214,
+      "producto": "Capri Mesa",
+      "variante": "70X70 Pie Simple Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_70X70_PIE_SIMPLE_A0A23F40",
+      "fila_todos_origen": 215,
+      "producto": "Capri Mesa",
+      "variante": "70X70 Pie Simple Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_80X80_PIE_SIMPLE_2A80CB3A",
+      "fila_todos_origen": 216,
+      "producto": "Capri Mesa",
+      "variante": "80X80 Pie Simple Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_80X80_PIE_SIMPLE_8CA835FF",
+      "fila_todos_origen": 217,
+      "producto": "Capri Mesa",
+      "variante": "80X80 Pie Simple Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_120X80_PIE_DOBLE_5C848C82",
+      "fila_todos_origen": 218,
+      "producto": "Capri Mesa",
+      "variante": "120X80 Pie Doble Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_120X80_PIE_DOBLE_798DCADF",
+      "fila_todos_origen": 219,
+      "producto": "Capri Mesa",
+      "variante": "120X80 Pie Doble Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_120X80_PIE_DOBLE_3C3BF077",
+      "fila_todos_origen": 220,
+      "producto": "Capri Mesa",
+      "variante": "120X80 Pie Doble alto Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_CAPRI_MESA_120X80_PIE_DOBLE_05C442CF",
+      "fila_todos_origen": 221,
+      "producto": "Capri Mesa",
+      "variante": "120X80 Pie Doble alto Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658",
+      "fila_todos_origen": 222,
+      "producto": "Capri Mesa",
+      "variante": "60X60 Mesa Alta Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658",
+      "fila_todos_origen": 223,
+      "producto": "Capri Mesa",
+      "variante": "60X60 Mesa Alta Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 2
+    },
+    {
+      "sku": "BALLIU_70X70_MESA_ALTA_TABLERO_HPL_94512EAB",
+      "fila_todos_origen": 224,
+      "producto": "Capri Mesa",
+      "variante": "70X70 Mesa Alta Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_70X70_MESA_ALTA_TABLERO_HPL_GD_5D74130E",
+      "fila_todos_origen": 225,
+      "producto": "Capri Mesa",
+      "variante": "70X70 Mesa Alta Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SOFIA_MESA_70X70_TABLERO_HP_9D14E31F",
+      "fila_todos_origen": 226,
+      "producto": "Sofia Mesa",
+      "variante": "70X70 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SOFIA_MESA_70X70_TABLERO_HP_146F72CA",
+      "fila_todos_origen": 227,
+      "producto": "Sofia Mesa",
+      "variante": "70X70 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SOFIA_MESA_80X80_TABLERO_HP_1A2FE7B5",
+      "fila_todos_origen": 228,
+      "producto": "Sofia Mesa",
+      "variante": "80X80 Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SOFIA_MESA_80X80_TABLERO_HP_96593887",
+      "fila_todos_origen": 229,
+      "producto": "Sofia Mesa",
+      "variante": "80X80 Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_SOFIA_MESA_70X70_HPL_F6074154",
+      "fila_todos_origen": 230,
+      "producto": "Mesa Altea",
+      "variante": "70X70 Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_70_X_70_HPL_GD_1B61E6B6",
+      "fila_todos_origen": 231,
+      "producto": "Mesa Altea",
+      "variante": "70 X 70 Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_80_X_80_HPL_A05618AD",
+      "fila_todos_origen": 232,
+      "producto": "Mesa Altea",
+      "variante": "80 X 80 Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_80_X_80_HPL_GD_0A3EE957",
+      "fila_todos_origen": 233,
+      "producto": "Mesa Altea",
+      "variante": "80 X 80 Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_DIAM_80_HPL_50525E0B",
+      "fila_todos_origen": 234,
+      "producto": "Mesa Altea",
+      "variante": "Diam. 80 Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_DIAM_80_HPL_GD_B06218CA",
+      "fila_todos_origen": 235,
+      "producto": "Mesa Altea",
+      "variante": "Diam. 80 Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ALTEA_MESA_120_X_80_HPL_BF75A33D",
+      "fila_todos_origen": 236,
+      "producto": "Mesa Altea",
+      "variante": "120 X 80 Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_AGATA_MESA_120_X_80_HPL_GD_D7AB6E04",
+      "fila_todos_origen": 237,
+      "producto": "Mesa Altea",
+      "variante": "120 X 80 Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_AGATA_MESA_70X70_ENCIMERA_A_DD745448",
+      "fila_todos_origen": 238,
+      "producto": "Agata Mesa",
+      "variante": "70X70 Encimera aluminio",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_AGATA_MESA_180_X_90_ENCIMER_C0092E17",
+      "fila_todos_origen": 239,
+      "producto": "Agata Mesa",
+      "variante": "180 X 90 Encimera aluminio",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_NORA_MESA_DIAMETRO_70_ALUM_72514F40",
+      "fila_todos_origen": 240,
+      "producto": "Nora Mesa",
+      "variante": "Diametro 70 Aluminio",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_SOFA_INDIVIDUAL_TELA__5E2EF268",
+      "fila_todos_origen": 241,
+      "producto": "Olimpia Sofa",
+      "variante": "Individual Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_SOFA_DOBLE_TELA_BALLI_4C82D31E",
+      "fila_todos_origen": 242,
+      "producto": "Olimpia Sofa",
+      "variante": "Doble Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_SOFA_TRIPLE_TELA_BALL_CACE2317",
+      "fila_todos_origen": 243,
+      "producto": "Olimpia Sofa",
+      "variante": "Triple Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_MESA_AUXILIA_CENTRAL_TABLERO__19D3D0EE",
+      "fila_todos_origen": 244,
+      "producto": "Olimpia Mesa",
+      "variante": "Central tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_MESA_AUXILIA_CENTRAL_TABLERO__9E2A2ECB",
+      "fila_todos_origen": 245,
+      "producto": "Olimpia Mesa",
+      "variante": "Central tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_MESA_AUXILIA_ESQUINERA_TABLER_5AD43BF2",
+      "fila_todos_origen": 246,
+      "producto": "Olimpia Mesa",
+      "variante": "Esquinera tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_OLIMPIA_MESA_AUXILIA_ESQUINERA_TABLER_2AD5A2DF",
+      "fila_todos_origen": 247,
+      "producto": "Olimpia Mesa",
+      "variante": "Esquinera tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SOFA_INDIVIDUAL_ACRIL_674AB9A1",
+      "fila_todos_origen": 248,
+      "producto": "Sofa Etna",
+      "variante": "Individual Acrílico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SOFA_DOBLE_ACRILICO_AED77E2A",
+      "fila_todos_origen": 249,
+      "producto": "Sofa Etna",
+      "variante": "Doble Acrílico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_SOFA_TRIPLE_ACRILICO_E58D825A",
+      "fila_todos_origen": 250,
+      "producto": "Sofa Etna",
+      "variante": "Triple Acrílico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_MESA_CENTRAL_TABLERO_HPL_510B363E",
+      "fila_todos_origen": 251,
+      "producto": "Etna Mesa central",
+      "variante": "Tablero Hpl",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ETNA_MESA_CENTRAL_TABLERO_HPL_GD_BC53F712",
+      "fila_todos_origen": 252,
+      "producto": "Etna Mesa central",
+      "variante": "Tablero Hpl Gd",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0",
+      "fila_todos_origen": 253,
+      "producto": "Pamela Parasol",
+      "variante": "Parasol tela acrílica",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_BALLIU_82E48B2D",
+      "fila_todos_origen": 254,
+      "producto": "Pamela Parasol",
+      "variante": "Parasol tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0",
+      "fila_todos_origen": 255,
+      "producto": "Ocean Parasol",
+      "variante": "Parasol tela acrílica",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_BALLIU_82E48B2D",
+      "fila_todos_origen": 256,
+      "producto": "Ocean Parasol",
+      "variante": "Parasol tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_BALLIU_250__F1ED8B8B",
+      "fila_todos_origen": 257,
+      "producto": "Ocean Parasol",
+      "variante": "Parasol tela Balliu 250 cm.",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_ACRILICA_25_C8DD492D",
+      "fila_todos_origen": 258,
+      "producto": "Ocean Parasol",
+      "variante": "Parasol tela acrílica 250 cm.",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0",
+      "fila_todos_origen": 259,
+      "producto": "Agora Parasol",
+      "variante": "Parasol tela acrílica",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PARASOL_TELA_BALLIU_82E48B2D",
+      "fila_todos_origen": 260,
+      "producto": "Agora Parasol",
+      "variante": "Parasol tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_GARBI_PARASOL_DIAM_300_CM_TELA_3B7E77D1",
+      "fila_todos_origen": 261,
+      "producto": "Parasol Garbí",
+      "variante": "Central Diam. 300 Cm Tela Balliu",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BRISA_PARASOL_PARASOL_TELA_BAL_0CEBA8E7",
+      "fila_todos_origen": 262,
+      "producto": "Parasol Brisa",
+      "variante": "Parasol tela Balliu 300X300 cm.",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_ROMA_PARASOL_300X300_CM_6C1E1224",
+      "fila_todos_origen": 263,
+      "producto": "Parasol Roma",
+      "variante": "Lateral 300X300 Cm",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PASARELA_RESINA_RECI_METRO_PASARELA_B_DA11D420",
+      "fila_todos_origen": 264,
+      "producto": "Pasarela Resina Reciclada 100 %",
+      "variante": "Metro Pasarela blanca reciclada 120 cm.",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PASARELA_RESINA_METRO_PASARELA_1_DF85D2D1",
+      "fila_todos_origen": 265,
+      "producto": "Pasarela Resina",
+      "variante": "Metro Pasarela 120 cm.",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_COLCHONETA_TUMBONA_TEJIDO_ACRILICO_26977CB8",
+      "fila_todos_origen": 266,
+      "producto": "Colchoneta Tumbona",
+      "variante": "Tejido acrilico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_COLCHONETA_TUMBONA_TELA_BALLIU_GUAT_0E9A3256",
+      "fila_todos_origen": 267,
+      "producto": "Colchoneta Tumbona",
+      "variante": "Tela Balliu / Guata",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_COLCHONETA_TUMBONA_TELA_BALLIU_DRYF_41269616",
+      "fila_todos_origen": 268,
+      "producto": "Colchoneta Tumbona",
+      "variante": "Tela Balliu / Dryfeel",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_WEGUARD_CAJA_DE_SEGU_6264905D",
+      "fila_todos_origen": 269,
+      "producto": "Caja Seguridad",
+      "variante": "Weguard",
+      "grupo": "G1",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PIE_PARASOL_40_KG_C2147052",
+      "fila_todos_origen": 270,
+      "producto": "Pie Parasol",
+      "variante": "40 kg",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PIE_PARASOL_40_KG_RE_FAB3CAC6",
+      "fila_todos_origen": 271,
+      "producto": "Pie Parasol",
+      "variante": "40 kg Recubrimiento Plastico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BASE_HORMIGON_25_KG_3EE8B72D",
+      "fila_todos_origen": 272,
+      "producto": "Base Hormigón",
+      "variante": "25 Kg",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_BASE_HORMIGON_30_KG_890A4CD4",
+      "fila_todos_origen": 273,
+      "producto": "Base Hormigón",
+      "variante": "30 Kg",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_TUMBONA_12_UNIDADES_D7D20AB0",
+      "fila_todos_origen": 274,
+      "producto": "Funda Tumbona",
+      "variante": "12 Unidades",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_TUMBONA_24_UNIDADES_287BB1C0",
+      "fila_todos_origen": 275,
+      "producto": "Funda Tumbona",
+      "variante": "24 Unidades",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_TUMBONA_2_UNIDADES_686CC405",
+      "fila_todos_origen": 276,
+      "producto": "Funda Tumbona",
+      "variante": "2 Unidades",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_PARASOL_1_UNIDADES_ACRIL_A1C16324",
+      "fila_todos_origen": 277,
+      "producto": "Funda Parasol",
+      "variante": "1 Unidades acrilico",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_SOFA_SOFA_INDIVIDUAL_6F6D4953",
+      "fila_todos_origen": 278,
+      "producto": "Funda sofá",
+      "variante": "Sofá individual",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_SOFA_SOFA_DOBLE_0595C4C0",
+      "fila_todos_origen": 279,
+      "producto": "Funda sofá",
+      "variante": "Sofá doble",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_SOFA_SOFA_TRIPLE_852AF1C6",
+      "fila_todos_origen": 280,
+      "producto": "Funda sofá",
+      "variante": "sofá triple",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_FUNDA_SILLA_6_UNIDADES_340B2844",
+      "fila_todos_origen": 281,
+      "producto": "Funda Silla",
+      "variante": "6 Unidades",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_COJIN_40X40_COJIN_CUADRAL_523E5AE9",
+      "fila_todos_origen": 282,
+      "producto": "Cojin",
+      "variante": "40X40 Cojin cuadral",
+      "grupo": "G2",
+      "ord": 1
+    },
+    {
+      "sku": "BALLIU_PRODUCTO_LIMPIADOR_LIMPIADOR_TUMBON_D0D3FC26",
+      "fila_todos_origen": 283,
+      "producto": "Producto Limpiador",
+      "variante": "Limpiador Tumbona/Tejido",
+      "grupo": "G2",
+      "ord": 1
+    }
+  ]
+}

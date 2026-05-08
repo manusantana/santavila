@@ -5,18 +5,24 @@ update_balliu_seguimiento.py
 Genera (o regenera) dos hojas en Santavila.xlsx con el seguimiento de tarifas
 de Balliu, leyendo todos los PDFs con prefijo YYYYMMDD en proveedores_raw/balliu/.
 
-Diferencias con Hevea:
-  - Fuente: PDFs (no CSVs). Se parsean con pdfplumber por coordenadas.
-  - Balliu sólo da COSTE sin IVA. El PVP se calcula como Coste × 1,21 (sólo IVA).
-  - Identificación por (Producto, Variante, Grupo, Ord) — Balliu repite algunos
-    nombres (p. ej. Capri Mesa 60X60... aparece 2 veces con precios distintos).
+Semántica de Balliu (distinta a Hevea):
+  - Balliu emite DOS tipos de tarifa, ambos sin IVA, con frecuencias distintas:
+      • Tarifa CLIENT     → COSTE (lo que paga Santavila a Balliu)
+      • Tarifa PVP        → PVP RECOMENDADO (suelo de venta sugerido por Balliu)
+  - Cada PDF se clasifica por tipo según contenga "pvp" en el nombre.
+  - El "histórico" es una serie temporal POR TIPO (se calculan deltas dentro
+    del mismo tipo, no se compara coste con PVP).
+  - El "seguimiento" muestra el último valor de cada tipo + márgenes calculados:
+      PVP con IVA = PVP sin IVA × 1,21 (lo que paga el cliente final)
+      Margen €    = PVP sin IVA − Coste sin IVA
+      Margen %    = Margen / PVP sin IVA   (margen bruto, métrica financiera)
+      Markup %    = Margen / Coste         (markup sobre coste, lectura pricing)
 
-Idempotente: ejecutar varias veces produce el mismo resultado.
-NO toca las hojas existentes "Todos", "Hevea", "Balliu", "Hevea Histórico",
-"Hevea Seguimiento". Sí regenera "Balliu Histórico" y "Balliu Seguimiento".
+Identificación: (Producto, Variante, Grupo, Ord). Sin SKU (el PDF no lo trae).
+Balliu lista 2 veces algunas combinaciones; el orden de aparición las distingue.
 
-PDFs sin prefijo de fecha (catálogo, fichas, etc.) se ignoran. Snapshots
-descartados se mueven a `proveedores_raw/balliu/_archived/`.
+Idempotente. NO toca otras hojas. Snapshots descartados se mueven a
+proveedores_raw/balliu/_archived/ (el script no los recoge).
 
 Requiere: pip install openpyxl pdfplumber
 """
@@ -41,6 +47,17 @@ DATE_PREFIX_RE = re.compile(r"^(\d{4})(\d{2})(\d{2})(?:\s|\s*-)")
 GROUP_RE = re.compile(r"^G[1-4]$")
 PRICE_TOKEN_RE = re.compile(r"^[\d\.]+,\d{2}$")
 IVA = 1.21
+
+TIPO_COSTE = "COSTE"
+TIPO_PVP = "PVP_RECOMENDADO"
+
+# ── Detección de tipo de tarifa ──────────────────────────────────────────────
+
+def infer_tipo(filename):
+    """Heurística: si el nombre del PDF contiene 'pvp' → PVP recomendado.
+    Si no → coste cliente. Balliu nombra explícitamente sus PDFs así."""
+    return TIPO_PVP if "pvp" in filename.lower() else TIPO_COSTE
+
 
 # ── Extracción de tarifa desde PDF ───────────────────────────────────────────
 
@@ -74,7 +91,6 @@ def group_lines(words, y_tol=3):
 
 
 def parse_line(line_words, x_var=200):
-    """Producto = X<x_var. Resto: clasificar por valor (G[1-4] / número / texto)."""
     cols = {"producto": [], "variante": [], "grupo": [], "precio": []}
     for w in line_words:
         t = w["text"]
@@ -94,8 +110,7 @@ def parse_line(line_words, x_var=200):
 def parse_price(s):
     if not s:
         return None
-    s = s.replace("€", "").strip()
-    s = s.replace(".", "").replace(",", ".")
+    s = s.replace("€", "").strip().replace(".", "").replace(",", ".")
     try:
         return float(s)
     except ValueError:
@@ -143,7 +158,6 @@ def extract_tarifa(pdf_path):
                 elif p["producto"] and not tiene_grupo and not tiene_precio:
                     page_only.append({"top": top, "producto": p["producto"]})
 
-            # Bloques (cuántas filas pertenecen al mismo producto, según geometría PDF)
             tables = page.extract_tables() or []
             block_sizes = []
             for table in tables:
@@ -161,7 +175,6 @@ def extract_tarifa(pdf_path):
 
             if sum(block_sizes) != len(page_data):
                 print(f"⚠ Página {pg_idx+1} de {pdf_path.name}: descuadre bloques({sum(block_sizes)}) vs DATA({len(page_data)})", file=sys.stderr)
-                # Fallback: tratar cada DATA como su propio bloque
                 block_sizes = [1] * len(page_data)
 
             di = 0
@@ -191,9 +204,6 @@ def extract_tarifa(pdf_path):
 
 
 def assign_ord(rows):
-    """Asigna número de orden 1..N a cada (producto, variante, grupo) repetida.
-    Balliu lista algunos productos con el mismo nombre y variante varias veces;
-    el orden de aparición permite distinguirlos."""
     seen = defaultdict(int)
     for r in rows:
         k = (r["producto"], r["variante"], r["grupo"])
@@ -202,29 +212,37 @@ def assign_ord(rows):
     return rows
 
 
-# ── Construcción del modelo ──────────────────────────────────────────────────
+# ── Modelo de datos ──────────────────────────────────────────────────────────
 
 def build_data(snapshots):
     """
-    snapshots: lista [(fecha, rows)] ordenada por fecha asc.
+    snapshots: lista [(fecha, tipo, rows)] ordenada por fecha asc.
     rows: lista de {producto, variante, grupo, precio, ord}.
-    Devuelve dict clave -> {producto, variante, grupo, ord, fechas: {fecha: precio}}.
+
+    Devuelve dict clave -> {
+        producto, variante, grupo, ord,
+        series: { TIPO_COSTE: {fecha: precio}, TIPO_PVP: {fecha: precio} }
+    }
     """
-    products = defaultdict(lambda: {"producto": None, "variante": None, "grupo": None, "ord": None, "fechas": {}})
-    for fecha, rows in sorted(snapshots, key=lambda x: x[0]):
+    products = defaultdict(lambda: {
+        "producto": None, "variante": None, "grupo": None, "ord": None,
+        "series": {TIPO_COSTE: {}, TIPO_PVP: {}},
+    })
+    for fecha, tipo, rows in sorted(snapshots, key=lambda x: x[0]):
         for r in rows:
             key = (r["producto"], r["variante"], r["grupo"], r["ord"])
             products[key]["producto"] = r["producto"]
             products[key]["variante"] = r["variante"]
             products[key]["grupo"] = r["grupo"]
             products[key]["ord"] = r["ord"]
-            products[key]["fechas"][fecha] = r["precio"]
+            products[key]["series"][tipo][fecha] = r["precio"]
     return products
 
 
-# ── Estilos compartidos ──────────────────────────────────────────────────────
+# ── Estilos ──────────────────────────────────────────────────────────────────
 
-BALLIU_BLUE = "0B5394"   # un poco más oscuro para distinguir de Hevea (1F4E79)
+BALLIU_BLUE = "0B5394"
+BALLIU_TEAL = "0F6B7A"  # para diferenciar tipo COSTE vs PVP
 ROW_A = "DDEEFF"
 ROW_B = "EEF5FF"
 TOTAL_BG = "F5F5DC"
@@ -233,6 +251,7 @@ THIN = Side(style="thin", color="CCCCCC")
 BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 
 BLOCKS = "▁▂▃▄▅▆▇█"
+
 
 def sparkline_text(values):
     nums = [v for v in values if v is not None]
@@ -252,21 +271,19 @@ def sparkline_text(values):
     return out
 
 
-# ── Hoja "Balliu Histórico" (long) ───────────────────────────────────────────
+def variante_display(v, ord_, has_dups):
+    return f"{v} (#{ord_})" if has_dups else v
+
+
+# ── Hoja "Balliu Histórico" (long, una fila por tipo×fecha) ──────────────────
 
 HEADERS_HIST = [
-    "Proveedor", "Producto", "Variante", "Grupo", "Fecha",
-    "Coste neto exworks €", "PVP con IVA €",
-    "Δ Coste €", "Δ Coste %",
+    "Proveedor", "Producto", "Variante", "Grupo",
+    "Tipo tarifa", "Fecha",
+    "Valor sin IVA €", "Valor con IVA €",
+    "Δ vs anterior €", "Δ vs anterior %",
 ]
-WIDTHS_HIST = [10, 32, 38, 8, 12, 18, 16, 12, 12]
-
-
-def variante_display(v, ord_, has_dups):
-    """Si la (producto, variante, grupo) está duplicada, indica el orden con #N
-    en TODAS sus instancias (también la #1) para que el usuario vea desde la
-    primera fila que existen duplicados."""
-    return f"{v} (#{ord_})" if has_dups else v
+WIDTHS_HIST = [10, 30, 36, 8, 18, 12, 16, 16, 14, 14]
 
 
 def write_historico(wb, products):
@@ -282,14 +299,12 @@ def write_historico(wb, products):
         c.border = BORDER
     ws.row_dimensions[1].height = 30
     ws.freeze_panes = "A2"
-
     for ci, w in enumerate(WIDTHS_HIST, 1):
         ws.column_dimensions[get_column_letter(ci)].width = w
 
     thick_top = Side(style="medium", color=BALLIU_BLUE)
     border_group_top = Border(left=THIN, right=THIN, top=thick_top, bottom=THIN)
 
-    # Detectar ord_max por clave (prod, var, grp) para mostrar #N solo cuando hay duplicados
     ord_max = defaultdict(int)
     for k in products:
         prod, var, grp, ord_ = k
@@ -301,50 +316,59 @@ def write_historico(wb, products):
     for key in sorted_keys:
         prod, var, grp, ord_ = key
         info = products[key]
-        prev_precio = None
+        var_disp = variante_display(var, ord_, ord_max[(prod, var, grp)] > 1)
         group_idx += 1
         group_color = ROW_A if group_idx % 2 == 0 else ROW_B
-        var_disp = variante_display(var, ord_, ord_max[(prod, var, grp)] > 1)
-        fechas_ord = sorted(info["fechas"].keys())
-        for i_fecha, fecha in enumerate(fechas_ord):
-            precio = info["fechas"][fecha]
-            pvp = round(precio * IVA, 2) if precio is not None else None
-            d_precio = (precio - prev_precio) if (precio is not None and prev_precio is not None) else None
-            d_precio_pct = (d_precio / prev_precio * 100) if (d_precio is not None and prev_precio) else None
+        is_first_subblock = True
 
-            row_vals = [
-                "Balliu", prod, var_disp, grp, fecha,
-                precio, pvp,
-                d_precio, d_precio_pct,
-            ]
-            fill = PatternFill("solid", fgColor=group_color)
-            row_border = border_group_top if i_fecha == 0 else BORDER
-            es_primera = (i_fecha == 0)
-            for ci, val in enumerate(row_vals, 1):
-                c = ws.cell(row=rn, column=ci, value=val)
-                c.fill = fill
-                c.border = row_border
-                if ci in (1, 2, 3, 4) and es_primera:
-                    c.font = Font(size=9, bold=True, color=BALLIU_BLUE)
-                else:
-                    c.font = Font(size=9)
-                if ci in (6, 7):
-                    c.number_format = '€ #,##0.00'
-                    c.alignment = Alignment(horizontal="right", vertical="center")
-                elif ci == 8:
-                    c.number_format = '+€ #,##0.00;-€ #,##0.00;"—"'
-                    c.alignment = Alignment(horizontal="right", vertical="center")
-                elif ci == 9:
-                    c.number_format = '+0.0"%";-0.0"%";"—"'
-                    c.alignment = Alignment(horizontal="right", vertical="center")
-                elif ci == 5:
-                    c.alignment = Alignment(horizontal="center", vertical="center")
-                elif ci == 4:
-                    c.alignment = Alignment(horizontal="center", vertical="center")
-                else:
-                    c.alignment = Alignment(horizontal="left", vertical="center")
-            rn += 1
-            prev_precio = precio
+        for tipo in (TIPO_COSTE, TIPO_PVP):
+            serie = info["series"].get(tipo, {})
+            if not serie:
+                continue
+            prev = None
+            fechas_ord = sorted(serie.keys())
+            for i_fecha, fecha in enumerate(fechas_ord):
+                v = serie[fecha]
+                vi = round(v * IVA, 2) if v is not None else None
+                d_e = (v - prev) if (v is not None and prev is not None) else None
+                d_pct = (d_e / prev * 100) if (d_e is not None and prev) else None
+                row_vals = [
+                    "Balliu", prod, var_disp, grp,
+                    tipo, fecha,
+                    v, vi,
+                    d_e, d_pct,
+                ]
+                row_border = border_group_top if (is_first_subblock and i_fecha == 0) else BORDER
+                es_primera = (is_first_subblock and i_fecha == 0)
+                for ci, val in enumerate(row_vals, 1):
+                    c = ws.cell(row=rn, column=ci, value=val)
+                    c.fill = PatternFill("solid", fgColor=group_color)
+                    c.border = row_border
+                    if ci in (1, 2, 3, 4) and es_primera:
+                        c.font = Font(size=9, bold=True, color=BALLIU_BLUE)
+                    else:
+                        c.font = Font(size=9)
+                    if ci == 5:
+                        c.alignment = Alignment(horizontal="center", vertical="center")
+                        c.font = Font(size=9, bold=True, color=BALLIU_TEAL if tipo == TIPO_PVP else "1F4E79")
+                    elif ci == 6:
+                        c.alignment = Alignment(horizontal="center", vertical="center")
+                    elif ci in (7, 8):
+                        c.number_format = '€ #,##0.00'
+                        c.alignment = Alignment(horizontal="right", vertical="center")
+                    elif ci == 9:
+                        c.number_format = '+€ #,##0.00;-€ #,##0.00;"—"'
+                        c.alignment = Alignment(horizontal="right", vertical="center")
+                    elif ci == 10:
+                        c.number_format = '+0.0"%";-0.0"%";"—"'
+                        c.alignment = Alignment(horizontal="right", vertical="center")
+                    elif ci == 4:
+                        c.alignment = Alignment(horizontal="center", vertical="center")
+                    else:
+                        c.alignment = Alignment(horizontal="left", vertical="center")
+                rn += 1
+                prev = v
+            is_first_subblock = False
 
     last_row = rn - 1
     if last_row >= 2:
@@ -355,13 +379,15 @@ def write_historico(wb, products):
 # ── Hoja "Balliu Seguimiento" (wide) ─────────────────────────────────────────
 
 HEADERS_SEG = [
-    "Proveedor", "Producto", "Variante", "Grupo",
-    "1ª aparición", "Última aparición", "Estado",
-    "Coste actual €", "PVP con IVA €",
-    "Δ Coste %\nvs anterior", "Δ Coste %\nvs origen",
-    "Nº subidas", "Tendencia",
+    "Proveedor", "Producto", "Variante", "Grupo", "Estado",
+    "Coste sin IVA €", "Última fecha\nCoste",
+    "PVP rec.\nsin IVA €", "PVP\ncon IVA €", "Última fecha\nPVP",
+    "Margen €\n(sin IVA)",
+    "Margen %\nsobre PVP", "Markup %\nsobre coste",
+    "Δ Coste %\nvs anterior", "Δ PVP %\nvs anterior",
+    "Tendencia\nCoste", "Tendencia\nPVP",
 ]
-WIDTHS_SEG = [10, 32, 38, 8, 13, 13, 16, 14, 14, 14, 14, 11, 14]
+WIDTHS_SEG = [10, 30, 34, 7, 16, 13, 13, 13, 13, 13, 13, 12, 13, 13, 13, 12, 12]
 
 
 def write_seguimiento(wb, snapshots, products):
@@ -369,9 +395,10 @@ def write_seguimiento(wb, snapshots, products):
         del wb["Balliu Seguimiento"]
     ws = wb.create_sheet("Balliu Seguimiento")
 
-    fechas = [f for f, _ in snapshots]
-    primera_fecha = fechas[0] if fechas else "—"
-    ultima_fecha = fechas[-1] if fechas else "—"
+    fechas_coste = sorted({f for f, t, _ in snapshots if t == TIPO_COSTE})
+    fechas_pvp = sorted({f for f, t, _ in snapshots if t == TIPO_PVP})
+    ult_coste = fechas_coste[-1] if fechas_coste else None
+    ult_pvp = fechas_pvp[-1] if fechas_pvp else None
 
     title = ws.cell(row=1, column=1, value="Balliu — Seguimiento de tarifas")
     title.font = Font(bold=True, color="FFFFFF", size=14)
@@ -380,14 +407,19 @@ def write_seguimiento(wb, snapshots, products):
     ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=len(HEADERS_SEG))
     ws.row_dimensions[1].height = 30
 
-    ws.cell(row=2, column=1,
-            value=f"Última actualización: {ultima_fecha}  │  Fuente: proveedores_raw/balliu/*.pdf  │  PVP = Coste × 1,21 (IVA)"
-            ).font = Font(italic=True, color="666666", size=10)
+    meta = (
+        f"Última tarifa COSTE: {ult_coste or '—'}  │  "
+        f"Última tarifa PVP RECOMENDADO: {ult_pvp or '—'}  │  "
+        f"PVP con IVA = PVP sin IVA × 1,21  │  Margen € = PVP − Coste (sin IVA)"
+    )
+    ws.cell(row=2, column=1, value=meta).font = Font(italic=True, color="666666", size=10)
     ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=len(HEADERS_SEG))
 
-    ws.cell(row=3, column=1,
-            value=f"Fechas en seguimiento: {' · '.join(fechas)}  ({len(fechas)} snapshots)"
-            ).font = Font(italic=True, color="666666", size=10)
+    fechas_meta = (
+        f"Snapshots COSTE: {' · '.join(fechas_coste) or '(ninguno)'}   "
+        f"|   Snapshots PVP: {' · '.join(fechas_pvp) or '(ninguno)'}"
+    )
+    ws.cell(row=3, column=1, value=fechas_meta).font = Font(italic=True, color="666666", size=10)
     ws.merge_cells(start_row=3, start_column=1, end_row=3, end_column=len(HEADERS_SEG))
 
     HEADER_ROW = 5
@@ -397,7 +429,7 @@ def write_seguimiento(wb, snapshots, products):
         c.fill = PatternFill("solid", fgColor=BALLIU_BLUE)
         c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
         c.border = BORDER
-    ws.row_dimensions[HEADER_ROW].height = 38
+    ws.row_dimensions[HEADER_ROW].height = 42
 
     for ci, w in enumerate(WIDTHS_SEG, 1):
         ws.column_dimensions[get_column_letter(ci)].width = w
@@ -413,44 +445,56 @@ def write_seguimiento(wb, snapshots, products):
         prod, var, grp, ord_ = key
         info = products[key]
         var_disp = variante_display(var, ord_, ord_max[(prod, var, grp)] > 1)
-        fechas_app = sorted(info["fechas"].keys())
-        primera_app, ultima_app = fechas_app[0], fechas_app[-1]
 
-        if ultima_app != ultima_fecha:
-            estado = "DESCATALOGADO"
-        elif primera_app != primera_fecha:
-            estado = "NUEVO"
+        serie_c = info["series"][TIPO_COSTE]
+        serie_p = info["series"][TIPO_PVP]
+        coste = serie_c[ult_coste] if ult_coste and ult_coste in serie_c else None
+        pvp = serie_p[ult_pvp] if ult_pvp and ult_pvp in serie_p else None
+        # Si la última fecha global no aplica al producto, coger la última conocida del producto
+        last_c = sorted(serie_c.keys())[-1] if serie_c else None
+        last_p = sorted(serie_p.keys())[-1] if serie_p else None
+
+        if coste is None and last_c:
+            coste = serie_c[last_c]
+        if pvp is None and last_p:
+            pvp = serie_p[last_p]
+
+        pvp_iva = round(pvp * IVA, 2) if pvp is not None else None
+        margen_e = (pvp - coste) if (pvp is not None and coste is not None) else None
+        margen_pct = (margen_e / pvp * 100) if (margen_e is not None and pvp) else None
+        markup_pct = (margen_e / coste * 100) if (margen_e is not None and coste) else None
+
+        # Estado
+        if coste is not None and pvp is not None:
+            estado = "COMPLETO"
+        elif coste is not None:
+            estado = "SOLO COSTE"
+        elif pvp is not None:
+            estado = "SOLO PVP"
         else:
-            estado = "ACTIVO"
+            estado = "SIN DATOS"
 
-        precio = info["fechas"][ultima_app]
-        pvp = round(precio * IVA, 2) if precio is not None else None
+        # Deltas vs anterior dentro del mismo tipo
+        def delta_pct(serie):
+            fechas = sorted(serie.keys())
+            if len(fechas) < 2:
+                return None
+            p, q = serie[fechas[-2]], serie[fechas[-1]]
+            return ((q - p) / p * 100) if (p and q is not None) else None
+        d_coste = delta_pct(serie_c)
+        d_pvp = delta_pct(serie_p)
 
-        d_pct_anterior = None
-        if len(fechas_app) >= 2:
-            penult = info["fechas"][fechas_app[-2]]
-            if penult and precio is not None:
-                d_pct_anterior = (precio - penult) / penult * 100
-
-        d_pct_origen = None
-        primero = info["fechas"][primera_app]
-        if primero and precio is not None and len(fechas_app) >= 2:
-            d_pct_origen = (precio - primero) / primero * 100
-
-        precios_serie = [info["fechas"][f] for f in fechas_app]
-        n_subidas = sum(
-            1 for i in range(1, len(precios_serie))
-            if precios_serie[i] is not None and precios_serie[i-1] is not None
-            and precios_serie[i] > precios_serie[i-1]
-        )
-        tendencia = sparkline_text(precios_serie)
+        # Tendencias
+        tend_c = sparkline_text([serie_c[f] for f in sorted(serie_c.keys())])
+        tend_p = sparkline_text([serie_p[f] for f in sorted(serie_p.keys())])
 
         row_vals = [
-            "Balliu", prod, var_disp, grp,
-            primera_app, ultima_app, estado,
-            precio, pvp,
-            d_pct_anterior, d_pct_origen,
-            n_subidas, tendencia,
+            "Balliu", prod, var_disp, grp, estado,
+            coste, last_c,
+            pvp, pvp_iva, last_p,
+            margen_e, margen_pct, markup_pct,
+            d_coste, d_pvp,
+            tend_c, tend_p,
         ]
         fill = PatternFill("solid", fgColor=ROW_A if rn % 2 == 0 else ROW_B)
         for ci, val in enumerate(row_vals, 1):
@@ -459,10 +503,13 @@ def write_seguimiento(wb, snapshots, products):
             c.border = BORDER
             c.font = Font(size=9)
 
-            if ci in (8, 9):
+            if ci in (6, 8, 9, 11):
                 c.number_format = '€ #,##0.00'
                 c.alignment = Alignment(horizontal="right", vertical="center")
-            elif ci in (10, 11):
+            elif ci in (12, 13):
+                c.number_format = '0.0"%"'
+                c.alignment = Alignment(horizontal="right", vertical="center")
+            elif ci in (14, 15):
                 c.number_format = '+0.0"%";-0.0"%";"—"'
                 c.alignment = Alignment(horizontal="right", vertical="center")
                 if val is not None:
@@ -470,21 +517,20 @@ def write_seguimiento(wb, snapshots, products):
                         c.font = Font(size=9, color="9C0006", bold=True)
                     elif val < -0.5:
                         c.font = Font(size=9, color="2E7D32", bold=True)
-            elif ci == 12:
+            elif ci in (16, 17):
                 c.alignment = Alignment(horizontal="center", vertical="center")
-            elif ci == 13:
+                c.font = Font(name="Menlo", size=12,
+                              color=BALLIU_TEAL if ci == 17 else BALLIU_BLUE)
+            elif ci in (7, 10):
                 c.alignment = Alignment(horizontal="center", vertical="center")
-                c.font = Font(name="Menlo", size=12, color=BALLIU_BLUE)
-            elif ci in (5, 6):
+            elif ci == 5:
                 c.alignment = Alignment(horizontal="center", vertical="center")
-            elif ci == 7:
-                c.alignment = Alignment(horizontal="center", vertical="center")
-                if estado == "NUEVO":
+                if estado == "COMPLETO":
                     c.font = Font(size=9, color="2E7D32", bold=True)
-                elif estado == "DESCATALOGADO":
-                    c.font = Font(size=9, color="666666", italic=True)
+                elif estado in ("SOLO COSTE", "SOLO PVP"):
+                    c.font = Font(size=9, color="B45309", bold=True)
                 else:
-                    c.font = Font(size=9, color="2E7D32")
+                    c.font = Font(size=9, color="9C0006", italic=True)
             elif ci == 4:
                 c.alignment = Alignment(horizontal="center", vertical="center")
             else:
@@ -493,6 +539,7 @@ def write_seguimiento(wb, snapshots, products):
 
     last_data = rn - 1
 
+    # Fila TOTAL/MEDIA
     total_row = rn
     label = ws.cell(row=total_row, column=2, value="TOTAL / MEDIA")
     label.font = Font(bold=True, size=10)
@@ -508,26 +555,24 @@ def write_seguimiento(wb, snapshots, products):
         c.alignment = Alignment(horizontal="right", vertical="center")
         c.border = BORDER
 
-    for ci in (8, 9):
+    for ci in (6, 8, 9, 11):
         col = get_column_letter(ci)
         total_cell(ci, f"=SUM({col}{HEADER_ROW+1}:{col}{last_data})", '€ #,##0.00')
-    for ci in (10, 11):
+    for ci in (12, 13):
         col = get_column_letter(ci)
-        total_cell(ci, f"=AVERAGE({col}{HEADER_ROW+1}:{col}{last_data})", '+0.0"%";-0.0"%";"—"')
-    col_n = get_column_letter(12)
-    total_cell(12, f"=SUM({col_n}{HEADER_ROW+1}:{col_n}{last_data})", '0')
+        total_cell(ci, f"=AVERAGE({col}{HEADER_ROW+1}:{col}{last_data})", '0.0"%"')
 
     ws.auto_filter.ref = f"A{HEADER_ROW}:{get_column_letter(len(HEADERS_SEG))}{last_data}"
-    ws.freeze_panes = "E6"
+    ws.freeze_panes = "F6"
 
-    # Color scale sobre Δ Coste % vs origen (col 11) — más rojo cuanto más sube
-    delta_col = get_column_letter(11)
+    # Color scale sobre Margen % (col 12) — verde si margen alto, rojo si bajo
+    margen_col = get_column_letter(12)
     ws.conditional_formatting.add(
-        f"{delta_col}{HEADER_ROW+1}:{delta_col}{last_data}",
+        f"{margen_col}{HEADER_ROW+1}:{margen_col}{last_data}",
         ColorScaleRule(
-            start_type="num", start_value="-20", start_color="63BE7B",
-            mid_type="num",   mid_value="0",    mid_color="FFEB84",
-            end_type="num",   end_value="80",   end_color="F8696B",
+            start_type="num", start_value="0",  start_color="F8696B",
+            mid_type="num",   mid_value="35",   mid_color="FFEB84",
+            end_type="num",   end_value="55",   end_color="63BE7B",
         )
     )
 
@@ -549,13 +594,29 @@ def main():
 
     snapshots = []
     for fecha, path in pdfs:
+        tipo = infer_tipo(path.name)
         rows = extract_tarifa(path)
         rows = assign_ord(rows)
-        snapshots.append((fecha, rows))
-        print(f"  {fecha}: {len(rows)} filas  ({path.name})")
+        snapshots.append((fecha, tipo, rows))
+        print(f"  {fecha}  [{tipo:18}]  {len(rows):3} filas  ({path.name})")
 
     products = build_data(snapshots)
     print(f"\n{len(products)} combinaciones únicas (Producto+Variante+Grupo+Ord)")
+    cnt_completo = sum(
+        1 for p in products.values()
+        if p["series"][TIPO_COSTE] and p["series"][TIPO_PVP]
+    )
+    cnt_solo_coste = sum(
+        1 for p in products.values()
+        if p["series"][TIPO_COSTE] and not p["series"][TIPO_PVP]
+    )
+    cnt_solo_pvp = sum(
+        1 for p in products.values()
+        if not p["series"][TIPO_COSTE] and p["series"][TIPO_PVP]
+    )
+    print(f"  con coste y PVP:  {cnt_completo}")
+    print(f"  solo coste:        {cnt_solo_coste}")
+    print(f"  solo PVP:          {cnt_solo_pvp}")
 
     print(f"\nAbriendo {XLSX.name}...")
     wb = openpyxl.load_workbook(XLSX)

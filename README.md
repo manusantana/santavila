@@ -80,6 +80,7 @@ Muebles-Exterior/
 ├── export_tarifas.py                # Genera XLSX con tarifas Hevea+Balliu (requiere openpyxl)
 ├── update_hevea_seguimiento.py      # Regenera hojas "Hevea Seguimiento" y "Hevea Histórico" desde CSVs fechados
 ├── update_balliu_seguimiento.py     # Regenera hojas "Balliu Seguimiento" y "Balliu Histórico" desde PDFs fechados
+├── update_todos_principal.py        # Actualiza la hoja maestra "20260508 -Todos " con costes y PVPs actuales
 ├── upload_blogs.py                  # Sube artículos al blog "News" de la tienda
 │
 ├── get_shopify_token.mjs            # Servidor OAuth para obtener token de acceso
@@ -130,29 +131,38 @@ La mayoría de scripts usan solo la librería estándar (`json`, `urllib`, `csv`
 
 Cada tarifa nueva se guarda en `proveedores_raw/<proveedor>/` con prefijo de fecha `YYYYMMDD …` (Hevea CSV, Balliu PDF). Snapshots descartados se mueven a `proveedores_raw/<proveedor>/_archived/` — el script no los recoge pero quedan recuperables.
 
+**Premisa de IVA**: ambos proveedores envían precios **sin IVA**. El IVA (×1,21) lo aplica el script para mostrar el PVP de cara al cliente.
+
 ```bash
-# Regenerar Hevea Seguimiento + Hevea Histórico
+# 1. Regenerar Hevea Seguimiento + Hevea Histórico
 python3 update_hevea_seguimiento.py
 
-# Regenerar Balliu Seguimiento + Balliu Histórico
+# 2. Regenerar Balliu Seguimiento + Balliu Histórico
 python3 update_balliu_seguimiento.py
+
+# 3. Actualizar la hoja maestra 20260508 -Todos con costes y PVPs actuales
+python3 update_todos_principal.py
 ```
 
-Cada script crea/regenera dos hojas en `Santavila.xlsx`:
+Los dos primeros scripts crean/regeneran dos hojas por proveedor en `Santavila.xlsx`:
 
-- **`<Proveedor> Seguimiento`** — vista de control wide. Una fila por producto con identificación, fechas de aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`), precio/coste actual, PVP, deltas % vs anterior y vs origen, nº de subidas y mini-tendencia (`▁▂▃▄▅▆▇█`).
-- **`<Proveedor> Histórico`** — formato long. Una fila por (producto, fecha) con precio/coste, PVP y deltas vs fecha anterior.
+- **`<Proveedor> Seguimiento`** — vista de control wide. Una fila por producto con identificación, fechas, estado, **Coste sin IVA**, **PVP rec. sin IVA**, **PVP con IVA** (= PVP × 1,21), **Margen €** (sin IVA, = PVP − Coste), **Margen %** (margen bruto sobre PVP), **Markup %** (sobre coste), deltas y mini-tendencia (`▁▂▃▄▅▆▇█`).
+- **`<Proveedor> Histórico`** — formato long. Una fila por (producto, fecha [, tipo]) con todos los valores y deltas vs fecha anterior.
+
+El tercer script actualiza la **hoja maestra `20260508 -Todos `** (sólo columnas E..I, las fórmulas K..N de Margen Real / Max CPA / ROAS / Anunciar se preservan).
 
 Diferencias clave entre proveedores:
 
 | | Hevea | Balliu |
 |---|---|---|
-| Fuente | CSV con SKU + Producto + Coste + PVP recomendado | PDF tabular con Producto + Variante + Grupo + Coste |
-| PVP | Recibido del proveedor | Calculado: Coste × 1,21 (sólo IVA) |
+| Fuente | CSV con SKU + Producto + Coste + PVP recomendado | PDF (dos tipos): Tarifa CLIENT (coste) y Tarifa PVP (recomendado) |
+| Estructura del histórico | 1 serie temporal por SKU | 2 series por producto: tipo `COSTE` y tipo `PVP_RECOMENDADO` |
+| Margen € | PVP del CSV − Coste del CSV (sin IVA) | PVP del PDF tipo "pvp" − Coste del PDF tipo "client" |
 | Identificación | (SKU, primera palabra del Producto) | (Producto, Variante, Grupo, Ord) |
 | Parser | `csv.DictReader` con detección flexible de cabeceras | `pdfplumber` con coordenadas X + agrupación por bloques |
+| Cruce con SKU Shopify | directo por SKU | mapping persistido en `proveedores_raw/balliu/_sku_mapping.json` (cruce por coste de fila) |
 
-Ambos scripts son **idempotentes** y **reversibles** (retira un snapshot del directorio y vuelve a ejecutar — desaparece). Las hojas `Todos`, `Hevea`, `Balliu` no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
+Todos los scripts son **idempotentes** y **reversibles** (retira un snapshot del directorio y vuelve a ejecutar — desaparece). Las hojas `Todos`, `Hevea`, `Balliu` antiguas no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
 
 ---
 

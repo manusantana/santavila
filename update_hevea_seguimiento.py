@@ -232,11 +232,13 @@ BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 
 HEADERS_HIST = [
     "Proveedor", "SKU", "Producto", "Fecha",
-    "Precio neto exworks €", "PVP recomendado €",
-    "Δ Precio €", "Δ Precio %",
+    "Coste sin IVA €", "PVP rec. sin IVA €", "PVP con IVA 21% €",
+    "Margen € (sin IVA)", "Margen % sobre PVP", "Markup % sobre coste",
+    "Δ Coste €", "Δ Coste %",
     "Δ PVP €", "Δ PVP %",
 ]
-WIDTHS_HIST = [10, 14, 45, 12, 16, 16, 12, 12, 12, 12]
+WIDTHS_HIST = [10, 14, 42, 12, 14, 14, 14, 14, 13, 13, 12, 12, 12, 12]
+IVA = 1.21
 
 def write_historico(wb, products):
     if "Hevea Histórico" in wb.sheetnames:
@@ -280,33 +282,39 @@ def write_historico(wb, products):
             d_pvp = (pvp - prev_pvp) if (pvp is not None and prev_pvp is not None) else None
             d_pvp_pct = (d_pvp / prev_pvp * 100) if (d_pvp is not None and prev_pvp) else None
 
+            pvp_con_iva = round(pvp * IVA, 2) if pvp is not None else None
+            margen_e = (pvp - precio) if (pvp is not None and precio is not None) else None
+            margen_pct = (margen_e / pvp * 100) if (margen_e is not None and pvp) else None
+            markup_pct = (margen_e / precio * 100) if (margen_e is not None and precio) else None
+
             row_vals = [
                 "Hevea", sku, producto_en_fecha, fecha,
-                precio, pvp,
+                precio, pvp, pvp_con_iva,
+                margen_e, margen_pct, markup_pct,
                 d_precio, d_precio_pct,
                 d_pvp, d_pvp_pct,
             ]
             fill = PatternFill("solid", fgColor=group_color)
-            # Solo la primera fila del grupo lleva borde superior grueso
             row_border = border_group_top if i_fecha == 0 else BORDER
             es_primera_del_grupo = (i_fecha == 0)
             for ci, val in enumerate(row_vals, 1):
                 c = ws.cell(row=rn, column=ci, value=val)
                 c.fill = fill
                 c.border = row_border
-                # SKU/Producto siempre rellenos (filtros), pero la primera fila del
-                # grupo va en negrita azul para que el ojo perciba el cambio.
                 if ci in (1, 2, 3) and es_primera_del_grupo:
                     c.font = Font(size=9, bold=True, color="1F4E79")
                 else:
                     c.font = Font(size=9)
-                if ci in (5, 6):
+                if ci in (5, 6, 7, 8):
                     c.number_format = '€ #,##0.00'
                     c.alignment = Alignment(horizontal="right", vertical="center")
-                elif ci in (7, 9):
+                elif ci in (9, 10):
+                    c.number_format = '0.0"%"'
+                    c.alignment = Alignment(horizontal="right", vertical="center")
+                elif ci in (11, 13):
                     c.number_format = '+€ #,##0.00;-€ #,##0.00;"—"'
                     c.alignment = Alignment(horizontal="right", vertical="center")
-                elif ci in (8, 10):
+                elif ci in (12, 14):
                     c.number_format = '+0.0"%";-0.0"%";"—"'
                     c.alignment = Alignment(horizontal="right", vertical="center")
                 elif ci == 4:
@@ -326,12 +334,13 @@ def write_historico(wb, products):
 HEADERS_SEG = [
     "Proveedor", "Handle Shopify", "SKU", "Producto",
     "1ª aparición", "Última aparición", "Estado",
-    "Precio actual €", "PVP actual €", "Margen €",
+    "Coste sin IVA €", "PVP rec.\nsin IVA €", "PVP\ncon IVA €",
+    "Margen €\n(sin IVA)",
     "Margen %\nsobre PVP", "Markup %\nsobre coste",
-    "Δ Precio %\nvs anterior", "Δ Precio %\nvs origen",
+    "Δ Coste %\nvs anterior", "Δ Coste %\nvs origen",
     "Nº subidas", "Tendencia",
 ]
-WIDTHS_SEG = [10, 38, 14, 42, 13, 13, 17, 14, 14, 12, 13, 13, 14, 14, 11, 14]
+WIDTHS_SEG = [10, 36, 14, 40, 13, 13, 17, 13, 13, 13, 13, 12, 13, 13, 13, 10, 13]
 
 def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus, sku_to_handle):
     if "Hevea Seguimiento" in wb.sheetnames:
@@ -397,6 +406,7 @@ def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus,
         ult = info["fechas"][ultima_app]
         precio, pvp = ult["precio"], ult["pvp"]
 
+        pvp_con_iva = round(pvp * IVA, 2) if pvp is not None else None
         margen_e = (pvp - precio) if (pvp is not None and precio is not None) else None
         margen_pct = (margen_e / pvp * 100) if (margen_e is not None and pvp) else None
         markup_pct = (margen_e / precio * 100) if (margen_e is not None and precio) else None
@@ -425,8 +435,8 @@ def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus,
         row_vals = [
             "Hevea", handle, sku, producto_nombre,
             primera_app, ultima_app, estado,
-            precio, pvp, margen_e,
-            margen_pct, markup_pct,
+            precio, pvp, pvp_con_iva,
+            margen_e, margen_pct, markup_pct,
             d_pct_anterior, d_pct_origen,
             n_subidas, tendencia,
         ]
@@ -437,13 +447,13 @@ def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus,
             c.border = BORDER
             c.font = Font(size=9)
 
-            if ci in (8, 9, 10):
+            if ci in (8, 9, 10, 11):
                 c.number_format = '€ #,##0.00'
                 c.alignment = Alignment(horizontal="right", vertical="center")
-            elif ci in (11, 12):
+            elif ci in (12, 13):
                 c.number_format = '0.0"%"'
                 c.alignment = Alignment(horizontal="right", vertical="center")
-            elif ci in (13, 14):
+            elif ci in (14, 15):
                 c.number_format = '+0.0"%";-0.0"%";"—"'
                 c.alignment = Alignment(horizontal="right", vertical="center")
                 if val is not None:
@@ -451,16 +461,15 @@ def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus,
                         c.font = Font(size=9, color="9C0006", bold=True)
                     elif val < -0.5:
                         c.font = Font(size=9, color="2E7D32", bold=True)
-            elif ci == 15:
-                c.alignment = Alignment(horizontal="center", vertical="center")
             elif ci == 16:
+                c.alignment = Alignment(horizontal="center", vertical="center")
+            elif ci == 17:
                 c.alignment = Alignment(horizontal="center", vertical="center")
                 c.font = Font(name="Menlo", size=12, color="1F4E79")
             elif ci in (5, 6):
                 c.alignment = Alignment(horizontal="center", vertical="center")
             elif ci == 7:
                 c.alignment = Alignment(horizontal="center", vertical="center")
-                # Color por ciclo de vida; los flags ⚠/⤺ pasan a rojo negrita
                 if estado_base == "NUEVO":
                     c.font = Font(size=9, color="2E7D32", bold=True)
                 elif estado_base == "DESCATALOGADO":
@@ -496,25 +505,25 @@ def write_seguimiento(wb, snapshots, products, duplicated_skus, reassigned_skus,
         c.alignment = Alignment(horizontal="right", vertical="center")
         c.border = BORDER
 
-    for ci in (8, 9, 10):
+    for ci in (8, 9, 10, 11):
         col = get_column_letter(ci)
         total_cell(ci, f"=SUM({col}{HEADER_ROW+1}:{col}{last_data})", '€ #,##0.00')
-    for ci in (11, 12):
+    for ci in (12, 13):
         col = get_column_letter(ci)
         total_cell(ci, f"=AVERAGE({col}{HEADER_ROW+1}:{col}{last_data})", '0.0"%"')
-    for ci in (13, 14):
+    for ci in (14, 15):
         col = get_column_letter(ci)
         total_cell(ci, f"=AVERAGE({col}{HEADER_ROW+1}:{col}{last_data})", '+0.0"%";-0.0"%";"—"')
-    col_o = get_column_letter(15)
-    total_cell(15, f"=SUM({col_o}{HEADER_ROW+1}:{col_o}{last_data})", '0')
+    col_o = get_column_letter(16)
+    total_cell(16, f"=SUM({col_o}{HEADER_ROW+1}:{col_o}{last_data})", '0')
 
     # Filtro automático
     ws.auto_filter.ref = f"A{HEADER_ROW}:{get_column_letter(len(HEADERS_SEG))}{last_data}"
     # Congelar paneles: a la derecha de Producto, debajo de cabecera
     ws.freeze_panes = "E6"
 
-    # Formato condicional sobre Margen % (col K = 11)
-    margen_col = get_column_letter(11)
+    # Formato condicional sobre Margen % sobre PVP (col 12)
+    margen_col = get_column_letter(12)
     ws.conditional_formatting.add(
         f"{margen_col}{HEADER_ROW+1}:{margen_col}{last_data}",
         ColorScaleRule(

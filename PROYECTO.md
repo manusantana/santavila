@@ -83,12 +83,14 @@ Cada CSV de tarifa que envía Hevea se guarda en `proveedores_raw/hevea/` con **
 python3 update_hevea_seguimiento.py
 ```
 
+**Premisa de IVA:** todos los precios del CSV de Hevea (Coste y PVP Recomendado) son **sin IVA**. El script calcula PVP con IVA aparte multiplicando × 1,21.
+
 El script detecta automáticamente todos los CSVs con prefijo de fecha y reconstruye dos hojas en `Santavila.xlsx`:
 
-- **`Hevea Seguimiento`** (formato wide, 16 columnas fijas) — vista de control. Una fila por producto con: identificación, fechas de aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`, marcado con ⚠ si el SKU está reusado por el proveedor), precio y PVP actuales, margen €/% sobre PVP, markup % sobre coste, Δ% vs snapshot anterior, Δ% vs origen, nº de subidas y mini-gráfico de tendencia (`▁▂▃▄▅▆▇█`).
-- **`Hevea Histórico`** (formato long) — una fila por (SKU, Producto, Fecha) con precio, PVP y deltas vs fecha anterior. Crece por filas, nunca por columnas — escala sin problema a 10, 20, 50 fechas.
+- **`Hevea Seguimiento`** (formato wide, 17 columnas) — vista de control. Una fila por producto con: identificación, fechas de aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`, marcado con ⚠ si el SKU está reusado), **Coste sin IVA**, **PVP rec. sin IVA**, **PVP con IVA** (= PVP × 1,21), **Margen € (sin IVA)** = PVP − Coste, **Margen % sobre PVP** (margen bruto), **Markup % sobre coste**, Δ% Coste vs anterior, Δ% Coste vs origen, nº de subidas y mini-gráfico de tendencia (`▁▂▃▄▅▆▇█`).
+- **`Hevea Histórico`** (formato long, 14 columnas) — una fila por (SKU, Producto, Fecha) con Coste, PVP rec, PVP con IVA, Margen €, Margen %, Markup % y deltas vs fecha anterior.
 
-Las hojas `Todos`, `Hevea`, `Balliu` **no se tocan**. El script es **idempotente** (ejecutarlo varias veces da el mismo resultado) y **reversible** (si retiras un CSV de la carpeta y vuelves a ejecutar, ese snapshot desaparece del histórico).
+Las hojas `Todos`, `20260508 -Todos `, `Hevea`, `Balliu` **no se tocan** desde este script. Es **idempotente** (ejecutarlo varias veces da el mismo resultado) y **reversible** (si retiras un CSV de la carpeta y vuelves a ejecutar, ese snapshot desaparece del histórico).
 
 **SKUs reusados por Hevea (estado conocido a 2026-05-07):** `557-010147` (ACAPULCO-3, ACAPULCO-8 ya descatalogado, MANHATAN-1), `557-010884` (LUNA-44 + BRANDON-7), `557-1563` (UNIVERSAL-120 + MESA CENTRO 120). Estos productos quedan marcados con `⚠` en la columna Estado y se desambiguan internamente por la primera palabra del nombre.
 
@@ -109,22 +111,61 @@ Cada PDF de tarifa que envía Balliu se guarda en `proveedores_raw/balliu/` con 
 python3 update_balliu_seguimiento.py
 ```
 
+**Semántica clave:** Balliu emite **dos tipos de tarifa distintos**, ambos sin IVA:
+- **Tarifa CLIENT** (nombre del archivo sin "pvp"): es el **COSTE** que paga Santavila a Balliu.
+- **Tarifa PVP** (nombre del archivo contiene "pvp"): es el **PVP recomendado** sugerido por Balliu (suelo de venta).
+
+No son dos snapshots comparables del mismo dato — son dos cosas distintas. El script clasifica cada PDF por su nombre y construye una serie temporal **por tipo**, no entre tipos.
+
 El script extrae las tarifas con `pdfplumber` (texto + coordenadas + detección de tablas) y reconstruye dos hojas en `Santavila.xlsx`:
 
-- **`Balliu Seguimiento`** (formato wide, 13 columnas) — vista de control. Una fila por (Producto, Variante, Grupo, Ord). KPIs: 1ª/Última aparición, estado (`ACTIVO` / `NUEVO` / `DESCATALOGADO`), Coste actual €, PVP con IVA €, Δ% vs anterior, Δ% vs origen, nº de subidas, mini-gráfico de tendencia.
-- **`Balliu Histórico`** (formato long) — una fila por (Producto, Variante, Grupo, Ord, Fecha) con coste, PVP y deltas vs fecha anterior.
+- **`Balliu Seguimiento`** (formato wide, 17 columnas) — vista de control. Una fila por (Producto, Variante, Grupo, Ord) con: estado (`COMPLETO` / `SOLO COSTE` / `SOLO PVP` / `SIN DATOS`), **Coste sin IVA** + última fecha, **PVP rec. sin IVA** + **PVP con IVA** (= PVP × 1,21) + última fecha, **Margen € (sin IVA)** = PVP − Coste, **Margen % sobre PVP** (margen bruto), **Markup % sobre coste**, Δ% Coste vs anterior, Δ% PVP vs anterior, mini-gráficos de tendencia separados (Coste / PVP).
+- **`Balliu Histórico`** (formato long, 10 columnas) — una fila por (Producto, Variante, Grupo, Ord, **Tipo**, Fecha). El campo Tipo (`COSTE` / `PVP_RECOMENDADO`) permite que el histórico crezca por filas conforme lleguen nuevas tarifas de cualquier tipo, calculando deltas dentro del mismo tipo.
 
 **Diferencias respecto a Hevea:**
 - **Fuente PDF, no CSV.** Balliu envía la tarifa en PDF tabular con foto de producto, texto en tres columnas (Producto / Variante+Grupo / €/u.) y nombre del producto centrado verticalmente sobre N variantes. El parser usa `extract_tables()` para agrupar variantes por bloque y `extract_words()` con coordenadas X para distinguir producto inline (X<200) de variante.
-- **PVP calculado, no recibido.** El PDF sólo da el coste sin IVA (lo que paga Santavila a Balliu). El script calcula `PVP con IVA = Coste × 1,21`. La hoja `Balliu` antigua mantiene su PVP de venta real (con markup propio de Santavila); estas hojas nuevas solo trackean coste y referencia con IVA.
-- **Identificación por (Producto, Variante, Grupo, Ord).** Sin SKU. El cruce con la hoja `Balliu` y los SKUs largos tipo `BALLIU_EVA_PRO_TUMBONA_…_923110D9` queda pendiente para una fase posterior.
-- **Duplicados intencionales del proveedor.** Balliu lista 2 veces algunas (Producto, Variante, Grupo) con precios distintos: actualmente `Bimba Silla / Blanca / G2` y `Capri Mesa / 60X60 Mesa Alta Tablero Hpl Gd / G2`. Se distinguen con sufijo `(#1)`, `(#2)` cuando hay duplicado, asumiendo que el orden de aparición en el PDF se mantiene estable entre snapshots.
+- **Identificación por (Producto, Variante, Grupo, Ord).** Sin SKU en el PDF. El cruce con los SKUs Shopify se hace en `update_todos_principal.py` (ver sección siguiente).
+- **Duplicados intencionales del proveedor.** Balliu lista 2 veces algunas (Producto, Variante, Grupo) con precios distintos: `Bimba Silla / Blanca / G2` y `Capri Mesa / 60X60 Mesa Alta Tablero Hpl Gd / G2`. Se distinguen con sufijo `(#1)`, `(#2)`.
 
-Las hojas `Todos`, `Hevea`, `Balliu`, `Hevea Histórico`, `Hevea Seguimiento` **no se tocan**. El script es **idempotente**.
+Las hojas `Todos`, `20260508 -Todos `, `Hevea`, `Balliu`, `Hevea Histórico`, `Hevea Seguimiento` **no se tocan**. El script es **idempotente**.
 
-**Snapshots vigentes (2026-05-07):** 30/03, 07/05. Subida media del coste 53,8 % entre snapshots; rango +33,3 % a +80,2 %; 0 bajadas, 0 productos sin cambio.
+**Tarifas vigentes (2026-05-07):**
+- COSTE: snapshot 2026-03-30
+- PVP RECOMENDADO: snapshot 2026-05-07
+- 165 combinaciones con coste y PVP completos (estado `COMPLETO`).
+- Margen bruto medio sobre PVP: ~35 % (rango 25 % a 44,5 %). Markup medio sobre coste: ~54 %.
 
-> **Aviso:** las dos hojas Balliu se regeneran desde cero en cada ejecución. Si añades columnas custom a `Balliu Seguimiento` o `Balliu Histórico`, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
+> **Aviso:** las dos hojas Balliu se regeneran desde cero en cada ejecución. Si añades columnas custom, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
+
+#### Hoja maestra `20260508 -Todos `
+
+Vista única consolidada de Hevea + Balliu (282 filas) con datos numéricos actuales y fórmulas de marketing/CPA. La hoja `Todos` antigua queda como **snapshot intocado** (sirve de ground truth para el cruce de costes).
+
+**Comando único para actualizar la hoja maestra:**
+```bash
+python3 update_todos_principal.py
+```
+
+**Lo que actualiza** (sólo columnas E..I; columnas K..N son fórmulas y se preservan):
+- E: **Coste neto sin IVA** — del snapshot más reciente
+- F: **Precio Venta con IVA 21%** = PVP Recomendado sin IVA × 1,21
+- G: **Margen €** = PVP sin IVA − Coste sin IVA (sin IVA, porque IVA no es nuestro)
+- H: **Margen %** = Margen € / PVP sin IVA × 100 (margen bruto sobre PVP, métrica financiera estándar)
+- I: **PVP Recomendado sin IVA** — del proveedor
+
+**Cruce SKU ↔ tarifa:**
+- **Hevea**: por SKU directo contra el CSV más reciente. Para los 3 SKUs reusados por el proveedor (`557-010147`, `557-010884`, `557-1563`), se desambigua por la primera palabra del Producto.
+- **Balliu**: por **(SKU, fila)** usando el coste de la hoja `Todos` antigua como criterio de matching contra el PDF de COSTE más reciente. Esto desambigua los 5 SKUs Shopify que aparecen en ≥2 filas con costes distintos (datos históricos donde el SKU está mal etiquetado o se reusó: `..._TE_B19AF1EA`, `..._BRUNA_..._94B6E5B5`, `..._60X60_..._A3352658`, `..._PARASOL_TELA_ACRILICA_236BD5F0`, `..._PARASOL_TELA_BALLIU_82E48B2D`).
+
+El mapeo Balliu SKU ↔ (Producto, Variante, Grupo, Ord) se persiste en [`proveedores_raw/balliu/_sku_mapping.json`](proveedores_raw/balliu/_sku_mapping.json) para auditoría y reuso.
+
+**Las fórmulas K..N se conservan exactas:**
+- K = `Margen Real` = G − J (Margen € − Coste Envío)
+- L = `Max CPA Objetivo` = K × $L$1 (factor 0,6 en celda L1)
+- M = `ROAS por producto` = F / K
+- N = `Anunciar SI/NO` (decisión basada en M, K y F)
+
+> Si añades nuevos productos a `20260508 -Todos `, basta con que tengan SKU en columna C y Proveedor en columna A para que el script los actualice en la siguiente ejecución.
 
 - **Estado verificado el 24 de abril de 2026:** 137 productos con `vendor = "Balliu"` en Shopify
 - **Borradores actuales verificados:** 4 productos Balliu en `DRAFT`
