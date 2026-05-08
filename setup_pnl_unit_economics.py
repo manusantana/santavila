@@ -210,6 +210,11 @@ SUPUESTOS = [
     ("IVA", "IVA aplicado", 0.21, "%", "%",
      "21% España. Incluido en PVP de la hoja 20260508 -Todos."),
 
+    ("__SECTION", "CATÁLOGO (precalculado al ejecutar el script)", None, None, None, None),
+    ("Margen_bruto_medio", "Margen bruto medio del catálogo (sobre PVP sin IVA)",
+     "__CALC_MARGEN__", "%", "%",
+     "Promedio de Margen % de la hoja 20260508 -Todos en el momento de generar el modelo. Re-ejecutar setup_pnl_unit_economics.py para refrescar tras cambios de tarifa."),
+
     ("__SECTION", "UMBRALES DE CATEGORIZACIÓN SKU", None, None, None, None),
     ("Umbral_PUSH_pct", "PUSH — Margen contributivo % mínimo", 0.30, "%", "%",
      "≥30% margen contributivo → producto a empujar comercialmente."),
@@ -222,7 +227,24 @@ SUPUESTOS = [
 ]
 
 
-def write_supuestos(wb):
+def calc_margen_bruto_medio(wb):
+    """Calcula el margen bruto medio del catálogo desde '20260508 -Todos ' y
+    lo devuelve como ratio (0..1). Se escribe como valor en 00_SUPUESTOS para
+    evitar fórmulas dinámicas que referencien una hoja con espacio en el nombre."""
+    if TODOS_SHEET not in wb.sheetnames:
+        return 0.35
+    ws = wb[TODOS_SHEET]
+    margenes = []
+    for r in range(3, ws.max_row + 1):
+        h = ws.cell(r, 8).value  # Margen % en col H
+        if isinstance(h, (int, float)):
+            margenes.append(h)
+    if not margenes:
+        return 0.35
+    return sum(margenes) / len(margenes) / 100  # H está en %, convertir a ratio
+
+
+def write_supuestos(wb, margen_bruto_medio=0.3545):
     name = "00_SUPUESTOS"
     if name in wb.sheetnames:
         del wb[name]
@@ -254,6 +276,9 @@ def write_supuestos(wb):
             ws.row_dimensions[rn].height = 22
             rn += 1
             continue
+        # Sustitución de placeholder dinámico
+        if default == "__CALC_MARGEN__":
+            default = margen_bruto_medio
 
         ws.cell(row=rn, column=1, value=var).font = Font(name="Menlo", size=9, color="666666")
         ws.cell(row=rn, column=1).alignment = Alignment(horizontal="left", vertical="center")
@@ -380,7 +405,7 @@ def write_pnl(wb):
     note_cell(ws, rn, 5, "21% sobre ingresos brutos. No es ingreso, es de Hacienda.")
     rn += 1
 
-    label_cell(ws, rn, 1, "= Ingresos netos (sin IVA)")
+    label_cell(ws, rn, 1, "› Ingresos netos (sin IVA)")
     for i in range(3):
         col = get_column_letter(2 + i)
         calc_cell(ws, rn, 2 + i, f"={col}{ING_BRUTOS}/(1+IVA)", '€ #,##0.00', bold=True)
@@ -393,11 +418,10 @@ def write_pnl(wb):
     section_cell(ws, rn, 1, "COSTE MERCANCÍA"); rn += 1
 
     label_cell(ws, rn, 1, "Margen bruto medio del catálogo (sobre PVP sin IVA)")
-    # Calculado desde la hoja 20260508 -Todos: AVG(Margen %)
-    f = f"=AVERAGE('{TODOS_SHEET}'!H3:H1000)/100"
+    # Referencia al supuesto editable (calculado al ejecutar el script)
     for i in range(3):
-        calc_cell(ws, rn, 2 + i, f, '0.0%')
-    note_cell(ws, rn, 5, "Promedio simple de Margen % de la hoja del catálogo.")
+        calc_cell(ws, rn, 2 + i, "=Margen_bruto_medio", '0.0%')
+    note_cell(ws, rn, 5, "Calculado al regenerar (00_SUPUESTOS · Margen_bruto_medio).")
     MARGEN_PCT_ROW = rn
     rn += 1
 
@@ -409,7 +433,7 @@ def write_pnl(wb):
     COSTE_MERC_ROW = rn
     rn += 1
 
-    label_cell(ws, rn, 1, "= Margen bruto")
+    label_cell(ws, rn, 1, "› Margen bruto")
     for i in range(3):
         col = get_column_letter(2 + i)
         calc_cell(ws, rn, 2 + i, f"={col}{ING_NETOS}+{col}{COSTE_MERC_ROW}", '€ #,##0.00', bold=True)
@@ -465,7 +489,7 @@ def write_pnl(wb):
     INC_ROW = rn
     rn += 1
 
-    label_cell(ws, rn, 1, "= Margen contributivo (antes de marketing)")
+    label_cell(ws, rn, 1, "› Margen contributivo (antes de marketing)")
     for i in range(3):
         col = get_column_letter(2 + i)
         calc_cell(ws, rn, 2 + i,
@@ -505,7 +529,7 @@ def write_pnl(wb):
         calc_cell(ws, rn, 2 + i, f"=-{col}{MK_ROW}/{col}{ING_BRUTOS}", '0.0%')
     rn += 1
 
-    label_cell(ws, rn, 1, "= EBITDA tras marketing")
+    label_cell(ws, rn, 1, "› EBITDA tras marketing")
     for i in range(3):
         col = get_column_letter(2 + i)
         calc_cell(ws, rn, 2 + i, f"={col}{MC_ROW}+{col}{MK_ROW}", '€ #,##0.00', bold=True)
@@ -675,9 +699,9 @@ def write_unit_economics(wb):
         # Categoría
         cat = (
             f'=IF(N{rn}>=Umbral_PUSH_pct,'
-            f'IF(M{rn}>=Umbral_PUSH_eur,"🟢 PUSH","🟡 NEUTRAL"),'
-            f'IF(N{rn}>=Umbral_NEUTRAL_pct,"🟡 NEUTRAL",'
-            f'IF(N{rn}>=Umbral_WATCH_pct,"🟠 WATCH","🔴 NO ANUNCIAR")))'
+            f'IF(M{rn}>=Umbral_PUSH_eur,"PUSH","NEUTRAL"),'
+            f'IF(N{rn}>=Umbral_NEUTRAL_pct,"NEUTRAL",'
+            f'IF(N{rn}>=Umbral_WATCH_pct,"WATCH","NO ANUNCIAR")))'
         )
         ws.cell(rn, 17, value=cat)
 
@@ -811,7 +835,7 @@ def write_escenarios(wb):
         # MC unitario: AOV - coste mercancía (ya con IVA repartido) - var/pedido
         # Aprox: (PVP_neto × margen_pct_medio) - VAR_COST_PER_ORDER
         f = (f"={col}{PED_A_ROW}*"
-             f"((AOV/(1+IVA))*AVERAGE('{TODOS_SHEET}'!H3:H1000)/100"
+             f"((AOV/(1+IVA))*Margen_bruto_medio"
              f"-VAR_COST_PER_ORDER)")
         calc_cell(ws, rn, 2 + i, f, '€ #,##0.00')
     note_cell(ws, rn, 6, "Pedidos × (margen bruto unitario − coste variable unitario).")
@@ -829,7 +853,7 @@ def write_escenarios(wb):
         calc_cell(ws, rn, 2 + i, "=-TOTAL_FIJOS_MES", '€ #,##0.00')
     rn += 1
 
-    label_cell(ws, rn, 1, "= Beneficio operativo")
+    label_cell(ws, rn, 1, "› Beneficio operativo")
     ws.cell(rn, 1).font = Font(bold=True, size=11)
     for i in range(4):
         col = get_column_letter(2 + i)
@@ -859,8 +883,7 @@ def write_escenarios(wb):
     rn += 1
 
     label_cell(ws, rn, 1, "Margen contributivo €/pedido (medio catálogo)")
-    f = (f"=(AOV/(1+IVA))*AVERAGE('{TODOS_SHEET}'!H3:H1000)/100"
-         f"-VAR_COST_PER_ORDER")
+    f = "=(AOV/(1+IVA))*Margen_bruto_medio-VAR_COST_PER_ORDER"
     for i in range(4):
         calc_cell(ws, rn, 2 + i, f, '€ #,##0.00')
     note_cell(ws, rn, 6, "Margen bruto unitario − coste variable unitario.")
@@ -879,7 +902,7 @@ def write_escenarios(wb):
     for i in range(4):
         col = get_column_letter(2 + i)
         calc_cell(ws, rn, 2 + i,
-                  f'=IF({col}{MC_PED_B}>{col}{CAC_B_ROW},"✅ SÍ","❌ NO")', None)
+                  f'=IF({col}{MC_PED_B}>{col}{CAC_B_ROW},"SI","NO")', None)
         ws.cell(rn, 2 + i).alignment = Alignment(horizontal="center", vertical="center")
         ws.cell(rn, 2 + i).font = Font(size=11, bold=True)
     note_cell(ws, rn, 6, "MC/pedido > CAC máximo → invertir.")
@@ -1048,10 +1071,10 @@ def write_dashboard(wb):
     section_cell(ws, rn, 5, "🎯 BREAK-EVEN", span=2)
     rn += 1
 
-    for cat, color in [("🟢 PUSH", "C6EFCE"), ("🟡 NEUTRAL", "FFEB9C"),
-                       ("🟠 WATCH", "F8CBAD"), ("🔴 NO ANUNCIAR", "FFC7CE")]:
+    for cat, color in [("PUSH", "C6EFCE"), ("NEUTRAL", "FFEB9C"),
+                       ("WATCH", "F8CBAD"), ("NO ANUNCIAR", "FFC7CE")]:
         label_cell(ws, rn, 2, cat, indent=2)
-        c = ws.cell(rn, 3, value=f'=COUNTIF({UE}!$Q$5:$Q$1000,"*{cat[2:]}*")')
+        c = ws.cell(rn, 3, value=f'=COUNTIF({UE}!$Q$5:$Q$1000,"{cat}")')
         c.font = Font(bold=True, size=11)
         c.fill = PatternFill("solid", fgColor=color)
         c.alignment = Alignment(horizontal="right", vertical="center")
@@ -1116,8 +1139,11 @@ def main():
     if TODOS_SHEET not in wb.sheetnames:
         sys.exit(f"  ✗ No existe '{TODOS_SHEET}'")
 
+    margen = calc_margen_bruto_medio(wb)
+    print(f"  · Margen bruto medio del catálogo: {margen*100:.2f}%")
+
     print("\n→ Escribiendo 00_SUPUESTOS...")
-    write_supuestos(wb)
+    write_supuestos(wb, margen_bruto_medio=margen)
     print("→ Escribiendo 01_PNL_SANTAVILA...")
     write_pnl(wb)
     print("→ Escribiendo 02_UNIT_ECONOMICS_SKU...")

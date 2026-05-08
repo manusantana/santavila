@@ -18,7 +18,9 @@
       "Bash(lsof '~$Santavila.xlsx')",
       "Bash(/usr/bin/python3 update_todos_principal.py)",
       "Bash(/usr/bin/python3 setup_pnl_unit_economics.py)",
-      "Read(//Applications/LibreOffice.app/Contents/MacOS/**)"
+      "Read(//Applications/LibreOffice.app/Contents/MacOS/**)",
+      "Bash(brew list *)",
+      "Read(//Applications/**)"
     ]
   },
   "enabledPlugins": {}
