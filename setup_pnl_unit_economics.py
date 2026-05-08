@@ -1130,6 +1130,15 @@ def main():
     print("→ Escribiendo 05_DASHBOARD...")
     write_dashboard(wb)
 
+    # Limpiar DefinedNames duplicados de _xlnm._FilterDatabase que openpyxl
+    # arrastra al recargar (los autofiltros ya se serializan via ws.auto_filter
+    # con localSheetId; los duplicados sin localSheetId rompen el archivo).
+    to_delete = [n for n in wb.defined_names if n.startswith("_xlnm.")]
+    for n in to_delete:
+        del wb.defined_names[n]
+    if to_delete:
+        print(f"  · {len(to_delete)} DefinedNames internos limpiados (autofiltros heredados)")
+
     wb.save(XLSX)
     print(f"\n✅ {XLSX.name} actualizado")
     print(f"   Hojas finales: {wb.sheetnames}")

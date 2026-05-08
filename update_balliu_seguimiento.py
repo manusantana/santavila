@@ -628,6 +628,11 @@ def main():
     n_seg = write_seguimiento(wb, snapshots, products)
     print(f"✓ 'Balliu Seguimiento' regenerado — {n_seg} filas")
 
+    # Limpiar DefinedNames internos duplicados que openpyxl arrastra al recargar
+    # (autofiltros sin localSheetId que rompen el archivo en Excel)
+    for n in [x for x in wb.defined_names if x.startswith("_xlnm.")]:
+        del wb.defined_names[n]
+
     wb.save(XLSX)
     print(f"\n✅ {XLSX.name} actualizado")
     print(f"   Hojas finales: {wb.sheetnames}")

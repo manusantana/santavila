@@ -363,6 +363,10 @@ def main():
         if len(stats["balliu_no_match"]) > 5:
             print(f"    ... y {len(stats['balliu_no_match'])-5} más")
 
+    # Limpiar DefinedNames internos duplicados que openpyxl arrastra al recargar
+    for n in [x for x in wb.defined_names if x.startswith("_xlnm.")]:
+        del wb.defined_names[n]
+
     wb.save(XLSX)
     print(f"\n✅ {XLSX.name} actualizado")
     print(f"   Hoja regenerada: '{TODOS_SHEET}'")
