@@ -16,7 +16,9 @@
       "Bash(/usr/bin/python3 update_balliu_seguimiento.py)",
       "Read(//Users/sergio/Personal/19 - IA/00-Google Antigravity/12 - ULP Santavila/**)",
       "Bash(lsof '~$Santavila.xlsx')",
-      "Bash(/usr/bin/python3 update_todos_principal.py)"
+      "Bash(/usr/bin/python3 update_todos_principal.py)",
+      "Bash(/usr/bin/python3 setup_pnl_unit_economics.py)",
+      "Read(//Applications/LibreOffice.app/Contents/MacOS/**)"
     ]
   },
   "enabledPlugins": {}
