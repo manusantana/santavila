@@ -159,10 +159,10 @@ SUPUESTOS = [
      "0€ por ahora — los socios cobran del beneficio. Editar cuando haya nómina."),
 
     ("__SECTION", "COMISIONES DE PAGO", None, None, None, None),
-    ("Comision_pago_pct", "Comisión Shopify Payments (% sobre venta)", 0.015, "%", "%",
-     "1,5% medio España. Stripe ~1,4%+0,25; PayPal ~3,4%+0,35."),
-    ("Comision_pago_fija", "Comisión fija por transacción", 0.25, "€/pedido", "€",
-     "Coste fijo independiente del importe."),
+    ("Comision_pago_pct", "Comisión Shopify Payments (% sobre venta)", 0.021, "%", "%",
+     "Shopify Payments online España: 2,1% (verificado). En persona: 1,7%. PayPal ~3,4%+0,35; Stripe ~1,4%+0,25."),
+    ("Comision_pago_fija", "Comisión fija por transacción", 0.30, "€/pedido", "€",
+     "Shopify Payments online España: 0,30€ por transacción."),
 
     ("__SECTION", "LOGÍSTICA SALIDA", None, None, None, None),
     ("Hevea_umbral_envio_gratis", "Hevea — umbral envío gratis", 900, "€", "€",
