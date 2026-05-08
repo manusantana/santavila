@@ -144,6 +144,14 @@ python3 update_balliu_seguimiento.py
 
 # 3. Actualizar la hoja maestra 20260508 -Todos con costes y PVPs actuales
 python3 update_todos_principal.py
+
+# 4. (Opcional) Regenerar el modelo financiero (P&L, Unit Economics, Dashboard, etc.)
+python3 setup_pnl_unit_economics.py
+
+# 5. (Opcional) Sincronizar a Shopify — modo dry-run primero
+python3 sync_prices_to_shopify.py
+python3 sync_prices_to_shopify.py --apply --skip-price   # solo costes
+python3 sync_prices_to_shopify.py --apply                # precios + costes
 ```
 
 Los dos primeros scripts crean/regeneran dos hojas por proveedor en `Santavila.xlsx`:
@@ -165,6 +173,44 @@ Diferencias clave entre proveedores:
 | Cruce con SKU Shopify | directo por SKU | mapping persistido en `proveedores_raw/balliu/_sku_mapping.json` (cruce por coste de fila) |
 
 Todos los scripts son **idempotentes** y **reversibles** (retira un snapshot del directorio y vuelve a ejecutar — desaparece). Las hojas `Todos`, `Hevea`, `Balliu` antiguas no se tocan. Detalle completo en [PROYECTO.md](PROYECTO.md#hevea).
+
+### Modelo financiero (P&L, Unit Economics, Escenarios)
+
+`setup_pnl_unit_economics.py` añade 6 hojas a `Santavila.xlsx` con un modelo de control financiero completo, sin tocar las hojas operativas:
+
+- **`00_SUPUESTOS`** — variables editables (amarillo). Una fuente de verdad. Plan Shopify, comisiones, AOV, ROAS objetivos, tasas de devolución/incidencias, márgenes. Al cambiar un valor, todo el modelo recalcula.
+- **`01_PNL_SANTAVILA`** — P&L mensual Conservador/Base/Optimista con break-even y CPA medio.
+- **`02_UNIT_ECONOMICS_SKU`** — los 281 productos con margen contributivo €/%, CAC máximo, ROAS mínimo y categoría comercial (PUSH / NEUTRAL / WATCH / NO ANUNCIAR).
+- **`03_ESCENARIOS_MARKETING`** — calculadora bidireccional: presupuesto ↔ ROAS objetivo.
+- **`04_PRODUCTOS_PRIORIDAD`** — top 30 SKUs por margen contributivo €.
+- **`05_DASHBOARD`** — vista resumen 1 página.
+
+Detalle completo en [PROYECTO.md § 3.b](PROYECTO.md). Backup automático en `.backups/` antes de cada ejecución (gitignored).
+
+### Sincronización con Shopify
+
+`sync_prices_to_shopify.py` actualiza `price` y/o `cost_per_item` de las variantes Shopify desde la hoja maestra `20260508 -Todos `, vía Admin GraphQL API.
+
+```bash
+# Dry-run completo (genera sync_prices_report.csv, NO toca Shopify)
+python3 sync_prices_to_shopify.py
+
+# Aplicar sólo costes (no cambia precios visibles)
+python3 sync_prices_to_shopify.py --apply --skip-price
+
+# Aplicar precio + coste a un solo producto (test)
+python3 sync_prices_to_shopify.py --apply --limit 1
+
+# Aplicar todo
+python3 sync_prices_to_shopify.py --apply
+```
+
+- Cruce por (Handle, SKU). Bulk update con `productVariantsBulkUpdate`.
+- Resolución automática de SKUs reusados por proveedor (Hevea: `557-010884`, `557-010147`, `557-1563` y similar para Balliu): elige la fila cuyo coste es más cercano al actual de Shopify.
+- Throttle-aware (pausa preventiva si bucket < 200 puntos), reintentos con backoff y respeto de `Retry-After`.
+- Reporte CSV detallado por ejecución (gitignored — contiene precios sensibles).
+
+Estado **mayo 2026**: 270 variantes con `cost_per_item` actualizado en Shopify (precios visibles intactos). La política de pricing definitiva (especialmente para los 156 productos Balliu que bajarían de precio si se aplica el PVP recomendado del proveedor) queda diferida hasta tener track record real de paid media. Detalle en [PROYECTO.md § 3.c](PROYECTO.md).
 
 ---
 

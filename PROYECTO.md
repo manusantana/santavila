@@ -41,8 +41,10 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 
 ### Scripts Python
 - **Intérprete:** `/usr/bin/python3` (Python 3.9.6 del sistema). **NO usar el virtualenv** (Python 3.13 de pyenv tiene módulo `_lzma` roto).
-- **Dependencias:** la mayoría usan solo librería estándar (`json`, `urllib`, `csv`, `time`, `pathlib`, `re`). Excepción: `export_tarifas.py` requiere `openpyxl` (instalar con `pip install openpyxl`).
-- **Observación operativa:** el archivo real de secretos del workspace es `.envlocal`, pero varios scripts del repo todavía intentan leer `.env`. `upload_blogs.py` lee el token vía `from config import SHOPIFY_ACCESS_TOKEN` (en lugar de `os.environ`).
+- **Dependencias externas:**
+  - `openpyxl` — todos los scripts que escriben en `Santavila.xlsx` (`update_*_seguimiento.py`, `update_todos_principal.py`, `setup_pnl_unit_economics.py`)
+  - `pdfplumber` — `update_balliu_seguimiento.py` (parser de tarifas Balliu)
+- **Observación operativa:** el archivo real de secretos del workspace es `.envlocal`. El nuevo `sync_prices_to_shopify.py` lo lee directamente. Los scripts antiguos (`upload_blogs.py`, `sync_shopify_catalog.py`) usan `from config import SHOPIFY_ACCESS_TOKEN` que apunta a `.env` (no funcionaría sin migración).
 
 ### Herramientas externas
 - **remove.bg** API key `[REDACTED_VER_ENV_LOCAL]` — eliminación de fondo. Límite: 50 créditos/mes (plan gratuito). Rate limit: ~12 req seguidas → `sleep(3)` entre peticiones.
@@ -182,6 +184,89 @@ El mapeo Balliu SKU ↔ (Producto, Variante, Grupo, Ord) se persiste en [`provee
 
 ---
 
+## 3.b · Modelo financiero (P&L, Unit Economics, Escenarios)
+
+Modelo completo de control financiero generado por `setup_pnl_unit_economics.py`, que crea 6 hojas dentro de `Santavila.xlsx` sin tocar las hojas operativas:
+
+| Hoja | Contenido |
+|---|---|
+| **`00_SUPUESTOS`** | 27 variables editables (amarillo). Única fuente de verdad. Cada celda es un DefinedName, las fórmulas dicen `=AOV` en vez de referencias absolutas. |
+| **`01_PNL_SANTAVILA`** | P&L mensual Conservador / Base / Optimista con break-even, CPA medio, sesiones web necesarias. |
+| **`02_UNIT_ECONOMICS_SKU`** | 281 productos con margen contributivo €/% por unidad, CAC máximo, ROAS mínimo, categoría (PUSH / NEUTRAL / WATCH / NO ANUNCIAR). Logística asignada por proveedor (Hevea gratis >900€, Balliu siempre con coste). |
+| **`03_ESCENARIOS_MARKETING`** | Calculadora bidireccional. Modo A: dado un presupuesto → pedidos/sesiones/AOV. Modo B: dado un ROAS → inversión sostenible. |
+| **`04_PRODUCTOS_PRIORIDAD`** | Top 30 SKUs por margen contributivo €. |
+| **`05_DASHBOARD`** | Vista resumen 1 página: KPIs catálogo + P&L base + break-even + top 5 productos. |
+
+**Fórmulas profesionales (mismas para Hevea y Balliu):**
+- Coste sin IVA + PVP recomendado sin IVA del proveedor
+- PVP con IVA = PVP sin IVA × 1,21
+- Margen € = PVP sin IVA − Coste (el IVA no es nuestro)
+- Margen % bruto = Margen € / PVP sin IVA (métrica financiera estándar)
+- Markup % sobre coste = Margen € / Coste (lectura pricing)
+
+**Defaults verificados:**
+- Plan Shopify Basic 29€/mes
+- Comisión Shopify Payments online España: **2,1% + 0,30€** (verificado por usuario)
+- AOV objetivo 500€
+- ROAS objetivos: Conservador 5x, Base 4x, Optimista 3x
+- Tasa devolución 4% × coste 50€/devolución (mobiliario premium)
+- Tasa incidencia 2% × coste 80€/incidencia
+- Personal fijo 0€ (los socios cobran del beneficio)
+
+**Hallazgos del modelo (validados manualmente):**
+- Margen bruto medio del catálogo: **35,4 %** (rango 25-44,5 %)
+- Distribución: 28 % PUSH, 47 % NEUTRAL, 11 % WATCH, 15 % NO ANUNCIAR
+- Escenario BASE (30 pedidos, AOV 500, ROAS 4x) **pierde 507 €/mes**
+- Para break-even: ROAS ≥ 5x **o** subir AOV a 600€+
+- Combo viable: AOV 800€ + ROAS 5x → **+891 €/mes**
+
+**Backup automático**: cada ejecución guarda copia en `.backups/` antes de regenerar (gitignored).
+
+```bash
+# Regenerar todo el modelo financiero
+python3 setup_pnl_unit_economics.py
+```
+
+> **Aviso**: las 6 hojas se regeneran desde cero en cada ejecución. Si añades columnas custom, se perderán. Para añadir información derivada permanente, hazlo en otra hoja que referencie a estas con fórmulas.
+
+---
+
+## 3.c · Sincronización con Shopify (precio + coste)
+
+`sync_prices_to_shopify.py` lee la hoja maestra `20260508 -Todos ` y actualiza Shopify vía Admin GraphQL API 2026-01:
+
+- Cruce por `(Handle, SKU)`
+- Mutación `productVariantsBulkUpdate` con `price` (col F) e `inventoryItem.cost` (col E)
+- **Modo `--dry-run` por defecto** (NO toca Shopify, genera reporte CSV)
+- `--apply` ejecuta cambios reales
+- `--skip-cost` o `--skip-price` para granularidad
+- `--limit N` o `--only-handles a,b,c` para tests parciales
+- Throttle-aware (pausa preventiva si bucket < 200 puntos), reintentos con backoff
+
+**Resolución de SKUs reusados** (Hevea: `557-010884`, `557-010147`, `557-1563`; Balliu: 5 SKUs históricos): cuando un handle tiene >1 fila con el mismo SKU, el script elige la fila cuyo coste es **más cercano al coste actual de Shopify** — es la única señal fiable de qué producto está realmente vivo en la tienda. Las descartadas se reportan como `DUPLICADO_DESCARTADO`.
+
+```bash
+# Workflow completo cuando llega una tarifa nueva:
+python3 update_hevea_seguimiento.py        # 1. Actualiza histórico Hevea
+python3 update_balliu_seguimiento.py       # 2. Actualiza histórico Balliu
+python3 update_todos_principal.py          # 3. Actualiza hoja maestra
+python3 sync_prices_to_shopify.py          # 4. Dry-run del cambio (revisar reporte)
+python3 sync_prices_to_shopify.py --apply --skip-price   # 5. Aplicar SOLO costes
+python3 sync_prices_to_shopify.py --apply  # 6. Aplicar precios cuando decidas pricing
+```
+
+**Aplicación inicial realizada (mayo 2026, modo `--skip-price`):**
+- 270 variantes con `cost_per_item` actualizado en Shopify (antes muchas estaban vacías)
+- 0 errores
+- Precios visibles al cliente intactos
+- Resultado: los reportes de margen / profit / COGS de Shopify ahora reflejan el coste real
+
+**Pendiente — política de pricing**: 156 productos Balliu **bajarían de precio** si aplicas el PVP recomendado del proveedor × 1,21 (tu hoja antigua usaba un markup propio mayor, ~2,05× sobre coste, vs ~1,6× del PVP recomendado). Decisión comercial diferida hasta tener tracking real de conversión.
+
+> Reporte detallado de cada ejecución en `sync_prices_report.csv` (gitignored — contiene precios sensibles).
+
+---
+
 ## 4. Convenciones de Producto
 
 - **Títulos SEO descriptivos** sin nombres de colección del proveedor ni nombres propios de la marca.
@@ -312,6 +397,30 @@ Tras ese cambio, ejecutar: `python3 balliu_full_images.py --remap` y luego sin f
   - `balliu-limpiador-para-mobiliario-exterior-d0d3fc26`
 - Desviación detectada: la convención documentada de `vendor = "Muebles Exterior"` no coincide con el estado actual de la tienda
 
+### Fase 9 — Modelo financiero y sincronización Shopify (mayo 2026)
+
+**Objetivo:** dar al equipo herramientas de controller para decidir con datos.
+
+**Acciones:**
+1. Refactor de las hojas operativas con fórmulas profesionales (Margen € sin IVA, Margen % bruto, Markup %, PVP con IVA = ×1,21).
+2. Tarifas nuevas incorporadas: Hevea 07/05/2026, Balliu PDF Tarifa CLIENT (30/03) + Tarifa PVP recomendado (07/05).
+3. Hoja maestra `20260508 -Todos ` actualizada con costes y PVPs reales (281 filas, 116 Hevea + 165 Balliu).
+4. Generación de modelo financiero: 6 hojas (`00_SUPUESTOS` a `05_DASHBOARD`) con DefinedNames y fórmulas conectadas — el controller cambia un valor en `00_SUPUESTOS` y todo recalcula.
+5. **Sincronización con Shopify (modo costes)**: `sync_prices_to_shopify.py --apply --skip-price` → 270 variantes con `cost_per_item` actualizado en Shopify, 0 errores. Precios visibles al cliente intactos.
+
+**Hallazgos financieros**:
+- Margen bruto medio del catálogo: 35,4 % (rango 25-44,5 %).
+- Con tarifas reales de Shopify Payments (2,1 % + 0,30 €), AOV 500 € y ROAS 4×, el negocio **pierde 507 €/mes** a 30 pedidos/mes.
+- Para break-even: ROAS ≥ 5× **o** subir AOV a 600 €+. Combo viable AOV 800 € + ROAS 5× → +891 €/mes.
+- Distribución del catálogo por categoría comercial: 28 % PUSH, 47 % NEUTRAL, 11 % WATCH, 15 % NO ANUNCIAR.
+
+**Bugs resueltos en el camino**:
+- openpyxl arrastraba `_xlnm._FilterDatabase` sin `localSheetId` al recargar archivos con autofiltros → Excel los rechazaba como "archivo dañado". Solución: limpiar antes de `wb.save()`.
+- Etiquetas tipo `"= Margen bruto"` interpretadas como fórmulas inválidas. Sustituidas por `"› ..."`.
+- Emojis (🟢🟡🟠🔴✅❌) dentro de strings de fórmulas IF rechazados por el schema OOXML estricto. Sustituidos por texto plano (`PUSH`, `NEUTRAL`, etc.).
+- Fórmulas dinámicas a la hoja `'20260508 -Todos '` (con espacio final) → sustituidas por supuesto `Margen_bruto_medio` precalculado al ejecutar.
+- 5 SKUs Balliu históricos aparecen en >1 fila con costes distintos (datos antiguos donde el SKU está mal etiquetado). Resolución en `sync_prices_to_shopify.py`: matching por (SKU, fila) usando coste actual de Shopify como tiebreaker.
+
 ---
 
 ## 6. Errores Conocidos y Soluciones
@@ -391,6 +500,12 @@ Header:   X-Shopify-Access-Token: [REDACTED_VER_ENV_LOCAL]
 - `productUpdate` — actualizar campos (título, descripción, precio, etc.)
 - `productOptionsCreate(productId, options, variantStrategy: "LEAVE_AS_IS")` — añadir opciones/variantes
 - `productVariantsBulkCreate(productId, variants: [{inventoryItem: {sku: "..."}}])` — crear variantes
+- `productVariantsBulkUpdate(productId, variants: [{id, price, inventoryItem: {cost}}])` — actualizar precio + coste de varias variantes en una sola llamada (usado por `sync_prices_to_shopify.py`)
+
+### Throttle / rate limiting
+- Bucket inicial: **2.000 puntos** · restore rate: **100 puntos/seg**
+- Cada query de producto cuesta ~8-12 puntos; cada `productVariantsBulkUpdate` ~10-15 puntos
+- `sync_prices_to_shopify.py` pausa preventivamente si el bucket cae por debajo de 200 puntos y respeta `Retry-After` en errores 429.
 
 ---
 
@@ -430,6 +545,8 @@ Header:   X-Shopify-Access-Token: [REDACTED_VER_ENV_LOCAL]
 - [ ] **Ejecutar `python3 balliu_full_images.py`** para descargar (~84 imágenes únicas) y subir galerías
 
 ### Alta prioridad
+- [ ] **Decisión política de pricing Balliu**: 156 productos Balliu **bajarían** de precio si aplicas el PVP recomendado del proveedor × 1,21 (markup actual de Santavila ~2,05× vs ~1,6× del PVP recomendado). Decidir: aplicar recomendado del proveedor o mantener markup propio. Ejecución: `sync_prices_to_shopify.py --apply` (sin `--skip-price`).
+- [ ] **Aplicar palancas para break-even**: el modelo financiero indica que con AOV 500 € + ROAS 4× se pierde 507 €/mes. Acciones recomendadas: (1) bundles + cross-sell para subir AOV a 600-800 €, (2) ROAS objetivo a 5× hasta tener track record de paid media, (3) empujar comercialmente los 78 SKUs PUSH (ver hoja `04_PRODUCTOS_PRIORIDAD`).
 - [ ] **Consolidar variantes Balliu:** Productos con mismo diseño y distinto tamaño/color están como productos separados. Ejemplo: "Sofá exterior 3 plazas · estilo contemporáneo | 77 cm" aparece 3 veces (Individual / Doble / Triple Acrílico) — deberían ser variantes de 1 producto
 - [ ] **Colecciones / navegación:** Ninguna colección configurada (por tipo: tumbonas, sillas, mesas, sofás, parasoles, accesorios)
 - [ ] **B2B pricing:** App "Wholesale Pricing Discount B2B" + customer tag `wholesale` — no configurada
