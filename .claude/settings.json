@@ -20,7 +20,10 @@
       "Bash(/usr/bin/python3 setup_pnl_unit_economics.py)",
       "Read(//Applications/LibreOffice.app/Contents/MacOS/**)",
       "Bash(brew list *)",
-      "Read(//Applications/**)"
+      "Read(//Applications/**)",
+      "Bash(/usr/bin/python3 sync_prices_to_shopify.py --limit 3)",
+      "Bash(/usr/bin/python3 sync_prices_to_shopify.py --quiet)",
+      "Bash(/usr/bin/python3 sync_prices_to_shopify.py --apply --skip-price --only-handles \"sillon-exterior-aluminio-estilo-envolvente-9890-cm\")"
     ]
   },
   "enabledPlugins": {}

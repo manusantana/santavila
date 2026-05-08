@@ -81,6 +81,8 @@ Muebles-Exterior/
 ├── update_hevea_seguimiento.py      # Regenera hojas "Hevea Seguimiento" y "Hevea Histórico" desde CSVs fechados
 ├── update_balliu_seguimiento.py     # Regenera hojas "Balliu Seguimiento" y "Balliu Histórico" desde PDFs fechados
 ├── update_todos_principal.py        # Actualiza la hoja maestra "20260508 -Todos " con costes y PVPs actuales
+├── sync_prices_to_shopify.py        # Sincroniza precio venta y/o coste de la hoja maestra a Shopify (dry-run por defecto)
+├── setup_pnl_unit_economics.py      # Crea hojas P&L, Unit Economics, Escenarios marketing y Dashboard
 ├── upload_blogs.py                  # Sube artículos al blog "News" de la tienda
 │
 ├── get_shopify_token.mjs            # Servidor OAuth para obtener token de acceso

@@ -8,3 +8,4 @@ __pycache__/
 .cache/
 ~$*
 .backups/
+sync_prices_report.csv
