@@ -25,21 +25,23 @@ Cada tarea tiene un **ID estable** (`F0-01`, `F1-02`…) que se puede citar en c
 
 > Objetivo: dejar de parecer "Shopify con productos cargados" sin tocar arquitectura todavía. Solo cambios visibles que se ejecutan rápido y dan percepción de marca seria.
 
-### F0-01 · Auditar y eliminar `compareAtPrice` permanente en todos los productos
+### F0-01 · ~~Auditar y eliminar~~ Reestructurar `compareAtPrice` con regla psicológica · ✅ HECHO 2026-05-13
 
 - **Prioridad:** P0
-- **Impacto:** Alto (toda la tienda parece "siempre rebajada")
+- **Impacto:** Alto (toda la tienda parecía "siempre rebajada")
 - **Dificultad:** Media (script + criterio comercial)
-- **Riesgo:** Bajo si se hace producto a producto; medio si se hace en bulk
+- **Riesgo:** Bajo — apply controlado tras dry-run con análisis de impacto
 - **Dependencia:** —
 - **Requiere:** Datos · Admin
-- **Archivos:** script Python nuevo (`audit_compare_at_price.py`) + Admin Shopify
-- **Pasos:**
-  1. Listar todos los productos con `variants.compareAtPrice IS NOT NULL` vía Admin GraphQL.
-  2. Determinar criterio: ¿`price` actual es el real Santavila y `compareAtPrice` era el "PVP recomendado" del proveedor? Si sí: vaciar `compareAtPrice` salvo en productos que estén realmente en campaña.
-  3. Pasar `compareAtPrice → null` en bulk con `productVariantsBulkUpdate`.
-- **Validación:** abrir 5 PDPs aleatorios, confirmar que el precio se renderea sin tachado y sin etiqueta "Sale" / "Oferta".
+- **Archivos:** `sync_prices_to_shopify.py` (extendido con `psy_price`/`psy_compare`/`_round_compare_high` y flag `--skip-compare`).
+- **Cambio de criterio respecto al plan original:** El backlog original asumía vaciar `compareAtPrice` en bulk. La decisión tomada el 2026-05-13 fue **reestructurarlo** con números psicológicos limpios:
+  - `compareAtPrice ≈ price_bruto × 1.10` para productos ≥ 50 €.
+  - `compareAtPrice ≈ price_bruto × 1.30` para productos < 50 €.
+  - Redondeo segmentado por **price bruto** (no por coste): `< 50` → .95; `50–500` → .95 con bajada bajo umbral; `> 500` → entero terminación 0/5/9.
+- **Resultado:** 270 variantes actualizadas, 0 errores. Suma agregada de prices subió de 200.711 € a 249.327 € (+24,2 %). BRANDON-1 pasó de `compareAt 980 € / price 809,92 €` a `compareAt 1.300 € / price 1.189 €` (descuento más discreto y coherente con la nueva tarifa).
+- **Validación:** ✅ verificada en `balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1` vía Admin GraphQL (price 1.049 €, compareAt 1.150 €, cost 561,54 €). Pendiente revisión visual ligera del usuario en 4-5 PDPs.
 - **Hallazgo origen:** `AUDITORIA_SANTAVILA.md §1.1#1` — BRANDON-1 con `compareAtPrice=980`, `price=809.92`.
+- **Detalle ejecutivo:** ver entrada `JOURNAL.md` del 2026-05-13 "Sincronización masiva de precios a Shopify con redondeo psicológico".
 
 ### F0-02 · Mover proveedor real a metafield interno y unificar `vendor = "Santavila"`
 

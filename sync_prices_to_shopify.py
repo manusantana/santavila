@@ -2,37 +2,40 @@
 """
 sync_prices_to_shopify.py
 
-Sincroniza precios y costes de la hoja "20260508 -Todos " hacia Shopify.
+Sincroniza precios, costes y precios de comparación de la hoja "20260508 -Todos "
+hacia Shopify, aplicando redondeo psicológico por segmento de coste.
 
 Lee:
   - Handle Shopify (col B), SKU (col C)
-  - Coste sin IVA (col E) → inventoryItem.cost
-  - Precio Venta con IVA 21% (col F) → variant.price
+  - Coste sin IVA (col E)             → inventoryItem.cost (sin redondear)
+  - Precio Venta con IVA 21% (col F)  → variant.price (con redondeo psicológico)
+                                      → variant.compareAtPrice (price_bruto × 1.10
+                                        o × 1.30 si coste < 50€, con redondeo limpio)
 
-Cruza por (Handle, SKU) y hace bulk update por producto.
+Segmentos por COSTE neto:
+  - < 50€  (bajo) : price termina en .95 — compareAt = bruto × 1.30, entero .00
+  - 50-500 (medio): price .95 (umbral 0-5% → bajar bajo umbral, ej. 104 → 99.90)
+                    compareAt = bruto × 1.10 con mismo truco de umbral
+  - > 500€ (alto) : price sin decimales, terminación 0/5/9
+                    compareAt = bruto × 1.10, múltiplo de 100 (≤3%) o 50
 
 Modos:
   --dry-run (default)  → no toca Shopify, solo imprime y genera CSV de cambios
   --apply              → aplica los cambios reales
   --limit N            → procesa solo los primeros N productos (útil para test)
   --only-handles a,b,c → procesa solo handles específicos
-  --skip-cost          → no actualiza el coste (solo el price)
-  --skip-price         → no actualiza el price (solo el coste)
+  --skip-cost          → no actualiza el coste
+  --skip-price         → no actualiza el price ni el compareAtPrice
+  --skip-compare       → no actualiza el compareAtPrice
 
-Output: sync_prices_report.csv con (handle, sku, accion, precio_antes, precio_despues,
-       coste_antes, coste_despues, status, error).
-
-Uso:
-  python3 sync_prices_to_shopify.py                    # dry-run completo
-  python3 sync_prices_to_shopify.py --limit 5          # dry-run de 5 productos
-  python3 sync_prices_to_shopify.py --apply --limit 1  # aplicar a 1 producto (test real)
-  python3 sync_prices_to_shopify.py --apply            # aplicar todo
+Output: sync_prices_report.csv con price/cost/compareAt antes y después.
 """
 from __future__ import annotations
 
 import argparse
 import csv
 import json
+import math
 import re
 import sys
 import time
@@ -152,6 +155,7 @@ query($handle: String!) {
           id
           sku
           price
+          compareAtPrice
           inventoryItem {
             id
             unitCost { amount }
@@ -170,6 +174,7 @@ mutation($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
       id
       sku
       price
+      compareAtPrice
       inventoryItem { id unitCost { amount } }
     }
     userErrors { field message }
@@ -190,10 +195,81 @@ def f_eq(a, b, tol=0.01):
     return abs(float(a) - float(b)) < tol
 
 
+# ── Redondeo psicológico por segmento de coste ───────────────────────────────
+
+UMBRALES = (100, 150, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900,
+            1000, 1200, 1500, 1800, 2000)
+
+
+def _next_high_ticket(p: float) -> float:
+    """Sube al siguiente entero terminado en 0, 5 o 9 (high-ticket > 500€)."""
+    n = math.ceil(p)
+    while n % 10 not in (0, 5, 9):
+        n += 1
+    return float(n)
+
+
+def _round_up_to_95(p: float) -> float:
+    """Devuelve el .X95 más cercano cuyo valor sea ≥ p."""
+    base = math.floor(p)
+    cand = base + 0.95
+    if cand + 1e-9 < p:
+        cand += 1
+    return round(cand, 2)
+
+
+def _below_umbral(p: float, suffix: float) -> float | None:
+    """Si p cae en [u, u*1.05] para algún umbral u, devuelve u - suffix.
+    Si no, None."""
+    for u in UMBRALES:
+        if u <= p <= u * 1.05:
+            return round(u - suffix, 2)
+    return None
+
+
+def _round_compare_high(p_compare: float, p_psy: float) -> float:
+    """High-ticket compareAt: el número MÁS LIMPIO (100 > 50 > 25 > 10) dentro
+    del rango [p_psy*1.05, p_psy*1.12]. Si nada cuela, fallback múltiplo de 10."""
+    lo, hi = p_psy * 1.05, p_psy * 1.12
+    for step in (100, 50, 25, 10):
+        lo_n = math.ceil(lo / step)
+        hi_n = math.floor(hi / step)
+        cands = [n * step for n in range(lo_n, hi_n + 1) if n * step > 0]
+        if cands:
+            return float(min(cands, key=lambda x: abs(x - p_compare)))
+    return float(round(p_compare / 10) * 10)
+
+
+def psy_price(price_bruto: float) -> float:
+    """Redondea price según segmento (definido por el propio PRICE bruto)."""
+    if price_bruto < 50:
+        return _round_up_to_95(price_bruto)
+    if price_bruto <= 500:
+        below = _below_umbral(price_bruto, 0.10)
+        if below is not None:
+            return below
+        return _round_up_to_95(price_bruto)
+    return _next_high_ticket(price_bruto)
+
+
+def psy_compare(price_bruto: float) -> float:
+    """compareAtPrice = price_bruto × (1.30 si bruto < 50€, 1.10 si no), redondeado limpio."""
+    if price_bruto < 50:
+        return float(round(price_bruto * 1.30))  # entero limpio .00
+    if price_bruto <= 500:
+        target = price_bruto * 1.10
+        below = _below_umbral(target, 0.05)
+        if below is not None:
+            return below
+        return _round_up_to_95(target)
+    return _round_compare_high(price_bruto * 1.10, psy_price(price_bruto))
+
+
 # ── Sincronización ───────────────────────────────────────────────────────────
 
 def sync(token, by_handle, *, dry_run=True, limit=None,
-         only_handles=None, skip_cost=False, skip_price=False, verbose=True):
+         only_handles=None, skip_cost=False, skip_price=False, skip_compare=False,
+         verbose=True):
     handles = list(by_handle.keys())
     if only_handles:
         handles = [h for h in handles if h in set(only_handles)]
@@ -214,7 +290,9 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
 
     print(f"\n{'━' * 80}")
     print(f"{'DRY-RUN' if dry_run else 'APPLY'} | {len(handles)} handles | "
-          f"price={'no' if skip_price else 'sí'} | cost={'no' if skip_cost else 'sí'}")
+          f"price={'no' if skip_price else 'sí'} | "
+          f"compare={'no' if skip_compare else 'sí'} | "
+          f"cost={'no' if skip_cost else 'sí'}")
     print('━' * 80)
 
     for i, handle in enumerate(handles, 1):
@@ -296,7 +374,8 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
             for desc, motivo in descartados:
                 report_rows.append({
                     "handle": handle, "sku": desc["sku"], "accion": "DUPLICADO_DESCARTADO",
-                    "precio_antes": "", "precio_despues": fmt_price(desc["precio_iva"]),
+                    "precio_antes": "", "precio_despues": fmt_price(psy_price(desc["precio_iva"])),
+                    "compare_antes": "", "compare_despues": fmt_price(psy_compare(desc["precio_iva"])),
                     "coste_antes": "", "coste_despues": fmt_price(desc["coste"]),
                     "status": "WARN",
                     "error": f"R{desc['fila']} '{desc['producto']}' descartada: {motivo}",
@@ -312,7 +391,8 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                 stats["variants_sin_match_sku"] += 1
                 report_rows.append({
                     "handle": handle, "sku": r["sku"], "accion": "SKU_NO_EN_SHOPIFY",
-                    "precio_antes": "", "precio_despues": fmt_price(r["precio_iva"]),
+                    "precio_antes": "", "precio_despues": fmt_price(psy_price(r["precio_iva"])),
+                    "compare_antes": "", "compare_despues": fmt_price(psy_compare(r["precio_iva"])),
                     "coste_antes": "", "coste_despues": fmt_price(r["coste"]),
                     "status": "WARN",
                     "error": f"SKU {r['sku']} no encontrado en variantes del producto",
@@ -322,22 +402,27 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                 continue
 
             precio_actual = float(v["price"])
+            compare_actual = float(v["compareAtPrice"]) if v.get("compareAtPrice") else None
             coste_actual = (
                 float(v["inventoryItem"]["unitCost"]["amount"])
                 if v["inventoryItem"].get("unitCost") else None
             )
-            precio_nuevo = r["precio_iva"]
+            precio_nuevo = psy_price(r["precio_iva"])
+            compare_nuevo = psy_compare(r["precio_iva"])
             coste_nuevo = r["coste"]
 
             cambia_precio = (not skip_price) and not f_eq(precio_actual, precio_nuevo)
+            cambia_compare = (not skip_compare) and not f_eq(compare_actual, compare_nuevo)
             cambia_coste = (not skip_cost) and not f_eq(coste_actual, coste_nuevo)
 
-            if not cambia_precio and not cambia_coste:
+            if not cambia_precio and not cambia_compare and not cambia_coste:
                 stats["variants_sin_cambios"] += 1
                 report_rows.append({
                     "handle": handle, "sku": r["sku"], "accion": "SIN_CAMBIOS",
                     "precio_antes": fmt_price(precio_actual),
                     "precio_despues": fmt_price(precio_actual),
+                    "compare_antes": fmt_price(compare_actual) if compare_actual is not None else "",
+                    "compare_despues": fmt_price(compare_actual) if compare_actual is not None else "",
                     "coste_antes": fmt_price(coste_actual) if coste_actual is not None else "",
                     "coste_despues": fmt_price(coste_actual) if coste_actual is not None else "",
                     "status": "OK", "error": "",
@@ -347,6 +432,8 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
             inp = {"id": v["id"]}
             if cambia_precio:
                 inp["price"] = fmt_price(precio_nuevo)
+            if cambia_compare:
+                inp["compareAtPrice"] = fmt_price(compare_nuevo)
             if cambia_coste:
                 inp["inventoryItem"] = {"cost": fmt_price(coste_nuevo)}
             variants_input.append(inp)
@@ -354,9 +441,12 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                 "sku": r["sku"],
                 "precio_actual": precio_actual,
                 "precio_nuevo": precio_nuevo if cambia_precio else precio_actual,
+                "compare_actual": compare_actual,
+                "compare_nuevo": compare_nuevo if cambia_compare else compare_actual,
                 "coste_actual": coste_actual,
                 "coste_nuevo": coste_nuevo if cambia_coste else coste_actual,
                 "cambia_precio": cambia_precio,
+                "cambia_compare": cambia_compare,
                 "cambia_coste": cambia_coste,
             })
 
@@ -372,23 +462,31 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                 cambios = []
                 if a["cambia_precio"]:
                     cambios.append(f"price {a['precio_actual']:.2f}→{a['precio_nuevo']:.2f}")
+                if a["cambia_compare"]:
+                    cm_a = f"{a['compare_actual']:.2f}" if a['compare_actual'] is not None else "—"
+                    cambios.append(f"compare {cm_a}→{a['compare_nuevo']:.2f}")
                 if a["cambia_coste"]:
                     co_a = f"{a['coste_actual']:.2f}" if a['coste_actual'] is not None else "—"
                     cambios.append(f"cost {co_a}→{a['coste_nuevo']:.2f}")
                 print(f"   • {a['sku']}: {' | '.join(cambios)}")
 
+        def _action_row(a, accion, status, error=""):
+            return {
+                "handle": handle, "sku": a["sku"], "accion": accion,
+                "precio_antes": fmt_price(a["precio_actual"]),
+                "precio_despues": fmt_price(a["precio_nuevo"]),
+                "compare_antes": fmt_price(a["compare_actual"]) if a["compare_actual"] is not None else "",
+                "compare_despues": fmt_price(a["compare_nuevo"]) if a["compare_nuevo"] is not None else "",
+                "coste_antes": fmt_price(a["coste_actual"]) if a["coste_actual"] is not None else "",
+                "coste_despues": fmt_price(a["coste_nuevo"]),
+                "status": status, "error": error,
+            }
+
         if dry_run:
             stats["handles_ok"] += 1
             for a in actions_per_variant:
                 stats["variants_actualizadas"] += 1
-                report_rows.append({
-                    "handle": handle, "sku": a["sku"], "accion": "DRY_RUN",
-                    "precio_antes": fmt_price(a["precio_actual"]),
-                    "precio_despues": fmt_price(a["precio_nuevo"]),
-                    "coste_antes": fmt_price(a["coste_actual"]) if a["coste_actual"] is not None else "",
-                    "coste_despues": fmt_price(a["coste_nuevo"]),
-                    "status": "PLAN", "error": "",
-                })
+                report_rows.append(_action_row(a, "DRY_RUN", "PLAN"))
             continue
 
         # APPLY: ejecutar mutación
@@ -403,26 +501,12 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                     print(f"   ✗ userErrors: {err_str}")
                 for a in actions_per_variant:
                     stats["variants_error"] += 1
-                    report_rows.append({
-                        "handle": handle, "sku": a["sku"], "accion": "ERROR_MUTATION",
-                        "precio_antes": fmt_price(a["precio_actual"]),
-                        "precio_despues": fmt_price(a["precio_nuevo"]),
-                        "coste_antes": fmt_price(a["coste_actual"]) if a["coste_actual"] is not None else "",
-                        "coste_despues": fmt_price(a["coste_nuevo"]),
-                        "status": "ERROR", "error": err_str,
-                    })
+                    report_rows.append(_action_row(a, "ERROR_MUTATION", "ERROR", err_str))
             else:
                 stats["handles_ok"] += 1
                 for a in actions_per_variant:
                     stats["variants_actualizadas"] += 1
-                    report_rows.append({
-                        "handle": handle, "sku": a["sku"], "accion": "ACTUALIZADO",
-                        "precio_antes": fmt_price(a["precio_actual"]),
-                        "precio_despues": fmt_price(a["precio_nuevo"]),
-                        "coste_antes": fmt_price(a["coste_actual"]) if a["coste_actual"] is not None else "",
-                        "coste_despues": fmt_price(a["coste_nuevo"]),
-                        "status": "OK", "error": "",
-                    })
+                    report_rows.append(_action_row(a, "ACTUALIZADO", "OK"))
                 if verbose:
                     print(f"   ✓ {len(actions_per_variant)} variantes actualizadas")
         except Exception as e:
@@ -431,18 +515,14 @@ def sync(token, by_handle, *, dry_run=True, limit=None,
                 print(f"   ✗ Error mutación: {e}")
             for a in actions_per_variant:
                 stats["variants_error"] += 1
-                report_rows.append({
-                    "handle": handle, "sku": a["sku"], "accion": "ERROR_MUTATION",
-                    "precio_antes": "", "precio_despues": fmt_price(a["precio_nuevo"]),
-                    "coste_antes": "", "coste_despues": fmt_price(a["coste_nuevo"]),
-                    "status": "ERROR", "error": str(e)[:200],
-                })
+                report_rows.append(_action_row(a, "ERROR_MUTATION", "ERROR", str(e)[:200]))
 
     # Escribir reporte
     with open(REPORT_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=[
             "handle", "sku", "accion",
             "precio_antes", "precio_despues",
+            "compare_antes", "compare_despues",
             "coste_antes", "coste_despues",
             "status", "error",
         ])
@@ -478,6 +558,7 @@ def main():
     p.add_argument("--only-handles", default=None, help="Lista CSV de handles a procesar")
     p.add_argument("--skip-cost", action="store_true", help="No actualizar coste")
     p.add_argument("--skip-price", action="store_true", help="No actualizar precio")
+    p.add_argument("--skip-compare", action="store_true", help="No actualizar compareAtPrice")
     p.add_argument("--quiet", action="store_true", help="Menos verbosidad")
     args = p.parse_args()
 
@@ -497,6 +578,7 @@ def main():
         only_handles=only,
         skip_cost=args.skip_cost,
         skip_price=args.skip_price,
+        skip_compare=args.skip_compare,
         verbose=not args.quiet,
     )
     print_stats(stats, dry_run=not args.apply)

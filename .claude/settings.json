@@ -23,7 +23,11 @@
       "Read(//Applications/**)",
       "Bash(/usr/bin/python3 sync_prices_to_shopify.py --limit 3)",
       "Bash(/usr/bin/python3 sync_prices_to_shopify.py --quiet)",
-      "Bash(/usr/bin/python3 sync_prices_to_shopify.py --apply --skip-price --only-handles \"sillon-exterior-aluminio-estilo-envolvente-9890-cm\")"
+      "Bash(/usr/bin/python3 sync_prices_to_shopify.py --apply --skip-price --only-handles \"sillon-exterior-aluminio-estilo-envolvente-9890-cm\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 sync_prices_to_shopify.py --quiet)",
+      "Bash(python3 sync_prices_to_shopify.py --apply --only-handles balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1)",
+      "Bash(python3 sync_prices_to_shopify.py --apply --quiet)"
     ]
   },
   "enabledPlugins": {}

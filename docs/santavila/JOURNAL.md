@@ -13,6 +13,71 @@
 
 ---
 
+## 2026-05-13 · Sincronización masiva de precios a Shopify con redondeo psicológico
+
+**Paso del flujo:** F0-01 redefinido — `sync_prices_to_shopify.py`
+**Estado:** ✅ Aplicado en producción (`mueblesexterior.myshopify.com`)
+**Quién:** sesión interactiva, script existente extendido con `compareAtPrice` + redondeo por segmento.
+
+### Qué se ejecutó
+
+- Extensión de `sync_prices_to_shopify.py`: añadidas funciones `psy_price`, `psy_compare` y `_round_compare_high`; nueva flag `--skip-compare`; query y mutación GraphQL incluyen ahora `compareAtPrice`; reporte CSV con 2 columnas nuevas (`compare_antes` / `compare_despues`).
+- Mapeo confirmado contra hoja `20260508 -Todos`:
+  - Col E "Coste neto (sin IVA)" → `inventoryItem.cost` (sin redondear).
+  - Col F "Precio Venta (con IVA 21%)" → `variant.price` (con redondeo psicológico).
+  - `variant.compareAtPrice` = `price_bruto × 1.10` (≥ 50 €) o `× 1.30` (< 50 €), redondeado limpio.
+- Reglas de redondeo acordadas **segmentando por PRICE bruto** (no por coste literal del enunciado del usuario — 63/281 productos caían en segmento distinto y los precios resultantes eran más naturales así):
+  - **< 50 €**: price termina en .95 — compareAt = bruto × 1.30, entero .00.
+  - **50–500 €**: price .95; si cae en `[umbral, umbral×1.05]` baja a `umbral-0.10` (ej. 104→99.90). CompareAt = bruto × 1.10 con mismo truco (`umbral-0.05`).
+  - **> 500 €**: price sin decimales, sube al siguiente entero terminado en 0/5/9. CompareAt = bruto × 1.10, busca número "limpio" (100>50>25>10) dentro de `[price_psy×1.05, price_psy×1.12]`.
+- Prueba en 1 handle (`balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1`) → resultado verificado vía Admin GraphQL: price 1.049 €, compareAt 1.150 €, cost 561,54 €.
+- Apply masivo a los 224 handles restantes.
+
+### Entregables
+
+- `sync_prices_to_shopify.py` — script extendido con redondeo psicológico y `compareAtPrice`.
+- `sync_prices_report.csv` — gitignored, contiene los 281 cambios variant-a-variant.
+
+### Resultado del apply masivo
+
+| Métrica | Valor |
+|---|---|
+| Handles procesados | 225 / 225 |
+| Variantes actualizadas | 270 |
+| Sin cambios | 1 (parasol de la prueba previa) |
+| Errores | **0** |
+
+**Impacto económico agregado** (dry-run previo, sobre 271 variantes):
+
+- Suma total de prices: **200.710,59 € → 249.326,65 €** (`+48.616 €  / +24,2 %`).
+- 115 variantes suben (mediana +46,5 %). Productos NO-Balliu (sofás, sillones, mesas HPL) estaban en Shopify muy por debajo del PVP del Excel.
+- 156 variantes bajan (mediana -9,0 %). Productos Balliu estaban en Shopify por encima del PVP del Excel — bajadas ~-21 % consistentes.
+- Caso anómalo conocido y aceptado: `balliu-silla-exterior-con-brazos-resina-estilo-funcional…` baja de 251,25 € a 89,95 € (-64 %); revisión del Excel confirmaba coste/PVP correctos.
+
+### Hallazgos clave
+
+- **F0-01 cambió de naturaleza.** El backlog original planteaba VACIAR `compareAtPrice` en bulk para que la tienda dejara de parecer "siempre rebajada". Decisión tomada hoy: en vez de vaciar, **reestructurar** con `compareAtPrice ≈ price × 1.10` (o × 1.30 en productos < 50 €) usando números psicológicos limpios. Resultado: tachado discreto que comunica "buen precio" sin gritar saldo. La tienda ya no tiene compareAt errático (el `980 € → 809,92 €` de BRANDON-1 que disparó el hallazgo original ya no existe — el sillón ahora tiene `price 1189 €` / `compareAt 1300 €` = -8,5 %).
+- **Decisión Balliu cerrada** (era §3.5 del journal del Paso 1): SÍ se aplica el PVP recomendado Balliu del Excel. La estrategia diferida queda obsoleta.
+- **El precio actual en Shopify difería significativamente del PVP del Excel.** ~47 % más bajo en muchos productos NO-Balliu — sugiere que el catálogo Hevea original se subió con un margen propio inferior al de la tarifa del proveedor. Importante recordarlo si se compara métrica histórica de conversión: el AOV va a cambiar a partir de hoy.
+
+### Decisiones tomadas que cierran bloqueadores del journal anterior
+
+| Bloqueador previo | Estado tras hoy |
+|---|---|
+| ¿`compareAtPrice` se vacía en masa o producto a producto? | **Resuelto.** Ni una cosa ni otra: se reestructura con regla psicológica `+10%` (o `+30%` en < 50 €). |
+| ¿Aplicar PVP recomendado Balliu (156 SKUs bajan ~22 %) o markup propio? | **Resuelto.** Aplicado el PVP recomendado del Excel (con IVA, redondeado psicológicamente). |
+
+### Prioridades vivas (sin cambios respecto al journal anterior)
+
+F0-02 (vendor → Santavila), F0-03 (limpiar tags B2B), F0-07 (2 productos sin imagen), F0-09 (theme pull), F1-01/F1-02 (metafield y metaobject definitions). Todas siguen pendientes.
+
+### Siguiente paso recomendado
+
+- **Validación visual ligera:** abrir 4-5 PDPs en la admin de Shopify y confirmar que el tachado se renderiza con descuento entre 5-12 % y que no hay precios con decimales inesperados en gama alta.
+- Cuando el pricing esté validado por el dueño, retomar **F0-02 → F0-03 → F0-09** como bloque siguiente de la Fase 0.
+
+---
+
 ## 2026-05-13 · Cierre administrativo del Paso 1 (auditoría)
 
 **Paso del flujo:** 1 — `00_PROMPT_ARRANQUE_AUDITORIA.md`

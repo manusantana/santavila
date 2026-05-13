@@ -81,7 +81,7 @@ Muebles-Exterior/
 ├── update_hevea_seguimiento.py      # Regenera hojas "Hevea Seguimiento" y "Hevea Histórico" desde CSVs fechados
 ├── update_balliu_seguimiento.py     # Regenera hojas "Balliu Seguimiento" y "Balliu Histórico" desde PDFs fechados
 ├── update_todos_principal.py        # Actualiza la hoja maestra "20260508 -Todos " con costes y PVPs actuales
-├── sync_prices_to_shopify.py        # Sincroniza precio venta y/o coste de la hoja maestra a Shopify (dry-run por defecto)
+├── sync_prices_to_shopify.py        # Sincroniza price + compareAtPrice + cost a Shopify con redondeo psicológico (dry-run por defecto)
 ├── setup_pnl_unit_economics.py      # Crea hojas P&L, Unit Economics, Escenarios marketing y Dashboard
 ├── upload_blogs.py                  # Sube artículos al blog "News" de la tienda
 │
@@ -150,8 +150,8 @@ python3 setup_pnl_unit_economics.py
 
 # 5. (Opcional) Sincronizar a Shopify — modo dry-run primero
 python3 sync_prices_to_shopify.py
-python3 sync_prices_to_shopify.py --apply --skip-price   # solo costes
-python3 sync_prices_to_shopify.py --apply                # precios + costes
+python3 sync_prices_to_shopify.py --apply --skip-price --skip-compare  # solo costes
+python3 sync_prices_to_shopify.py --apply                              # price + compareAtPrice + cost
 ```
 
 Los dos primeros scripts crean/regeneran dos hojas por proveedor en `Santavila.xlsx`:
@@ -189,28 +189,38 @@ Detalle completo en [PROYECTO.md § 3.b](PROYECTO.md). Backup automático en `.b
 
 ### Sincronización con Shopify
 
-`sync_prices_to_shopify.py` actualiza `price` y/o `cost_per_item` de las variantes Shopify desde la hoja maestra `20260508 -Todos `, vía Admin GraphQL API.
+`sync_prices_to_shopify.py` actualiza `price`, `compareAtPrice` y `cost_per_item` de las variantes Shopify desde la hoja maestra `20260508 -Todos `, vía Admin GraphQL API, aplicando redondeo psicológico por segmento de precio.
 
 ```bash
 # Dry-run completo (genera sync_prices_report.csv, NO toca Shopify)
 python3 sync_prices_to_shopify.py
 
 # Aplicar sólo costes (no cambia precios visibles)
-python3 sync_prices_to_shopify.py --apply --skip-price
+python3 sync_prices_to_shopify.py --apply --skip-price --skip-compare
 
-# Aplicar precio + coste a un solo producto (test)
-python3 sync_prices_to_shopify.py --apply --limit 1
+# Aplicar a un solo producto (test)
+python3 sync_prices_to_shopify.py --apply --only-handles balliu-parasol-...
 
-# Aplicar todo
+# Aplicar todo (price + compareAtPrice + cost)
 python3 sync_prices_to_shopify.py --apply
 ```
+
+**Mapeo y reglas de redondeo** (segmentado por **price bruto**, no por coste):
+
+| Segmento (price bruto) | `price` | `compareAtPrice` |
+|---|---|---|
+| < 50 €   | termina en .95 | bruto × 1.30, entero limpio (.00) |
+| 50–500 € | termina en .95 — si cae en `[umbral, umbral×1.05]` baja a `umbral-0.10` (ej. 104→99.90) | bruto × 1.10 con mismo truco (`umbral-0.05`) |
+| > 500 €  | sube al siguiente entero terminado en 0/5/9 | bruto × 1.10, número limpio (múltiplo de 100 > 50 > 25 > 10) dentro de `[price_psy×1.05, price_psy×1.12]` |
+
+`inventoryItem.cost` se sincroniza sin redondear (es lo que se paga al proveedor).
 
 - Cruce por (Handle, SKU). Bulk update con `productVariantsBulkUpdate`.
 - Resolución automática de SKUs reusados por proveedor (Hevea: `557-010884`, `557-010147`, `557-1563` y similar para Balliu): elige la fila cuyo coste es más cercano al actual de Shopify.
 - Throttle-aware (pausa preventiva si bucket < 200 puntos), reintentos con backoff y respeto de `Retry-After`.
-- Reporte CSV detallado por ejecución (gitignored — contiene precios sensibles).
+- Reporte CSV con `price/compare/cost` antes-después por SKU (gitignored — contiene precios sensibles).
 
-Estado **mayo 2026**: 270 variantes con `cost_per_item` actualizado en Shopify (precios visibles intactos). La política de pricing definitiva (especialmente para los 156 productos Balliu que bajarían de precio si se aplica el PVP recomendado del proveedor) queda diferida hasta tener track record real de paid media. Detalle en [PROYECTO.md § 3.c](PROYECTO.md).
+Estado **mayo 2026**: ✅ 270 variantes con `price`, `compareAtPrice` y `cost_per_item` sincronizados en Shopify aplicando la regla psicológica. PVP recomendado del Excel adoptado como fuente única de precio (incluido el PVP Balliu del proveedor). Suma agregada de prices: 200.711 € → 249.327 € (+24,2 %). Cierra la tarea `F0-01` del backlog. Detalle en [`docs/santavila/JOURNAL.md`](docs/santavila/JOURNAL.md).
 
 ---
 
