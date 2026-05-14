@@ -9,3 +9,6 @@ __pycache__/
 ~$*
 .backups/
 sync_prices_report.csv
+shipping_categories_report.csv
+assign_shipping_profiles_report.csv
+drafts_activation_state.json

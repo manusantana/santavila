@@ -13,6 +13,267 @@
 
 ---
 
+## 2026-05-14 · Auditoría de duplicados + 120 productos invisibles + activación parcial
+
+**Paso del flujo:** validación previa al test de checkout
+**Estado:** ⚠️ Hallazgos críticos documentados, decisiones diferidas
+
+### Qué se ejecutó
+
+Mientras se preparaba el test de los 5 escenarios de envío, salieron dos hallazgos importantes que no estaban en la auditoría original (faltaba scope `read_publications`):
+
+#### 1. 120 de 235 productos ACTIVE están publicados a 0 canales (invisibles en la web)
+
+Distribución: **115 productos visibles** (≈ todos los Hevea) y **120 invisibles** (≈ todo el catálogo Balliu). Cuando se importó Balliu se quedaron sin publicar al canal Online Store. La auditoría inicial no lo detectó porque el scope `read_publications` no estaba en el token viejo.
+
+**Acción tomada:** se han publicado **8 productos** al canal Online Store + Shop para desbloquear el test inmediato:
+- 4 fundas protectoras (necesarias para el Escenario 1 XS)
+- 2 parasoles acrílicos (sacados de DRAFT a ACTIVE hoy)
+- 1 cojín exterior (sacado de DRAFT, sin imagen — para test)
+- 1 limpiador para mobiliario (sacado de DRAFT — para test)
+
+**Pendiente:** decidir si publicar los **~106 productos Balliu restantes invisibles**. La tienda está bajo password page → publicar no expone nada al público. Es bug operativo histórico, no decisión deliberada.
+
+#### 2. Duplicados en el catálogo (especialmente parasoles)
+
+Detonante: el dueño vio "el parasol 4 veces" en la búsqueda del Admin. Auditoría completa con tres niveles:
+
+- **Nivel 1 — Duplicados puros (~9 productos eliminables)**: mismo SKU + handle con sufijo `-2/-3` (parasol `236bd5f0`×3, parasol `82e48b2d`×3, mesa alta HPL `a3352658`×2, silla Bruna `94b6e5b5`×2, etc.).
+- **Nivel 2 — Variantes mal modeladas (~70-80 productos en 7-8 familias)**: productos físicamente distintos del proveedor con título genérico repetido (Tumbona resina × 16, Mesa alta HPL × 6, etc.). NO son duplicados — se deben consolidar como variantes en Sprint posterior.
+- **Nivel 3 — SKUs reusados a propósito por Hevea** (`557-010147`, `557-010884`): documentado ya en PROYECTO.md, no se tocan.
+
+**Acción tomada:** documentación completa en [`Agents-IA/auditoria-productos.md`](../../Agents-IA/auditoria-productos.md). Diferido por decisión del dueño — no se aborda en este sprint.
+
+### Activación temporal de DRAFTs para test
+
+Se activaron 4 productos que estaban en DRAFT, **con `inventoryItem.tracked = false`** (stock infinito virtual) para testing. Snapshot del estado previo en `drafts_activation_state.json`. Para revertir cuando termine el test, reaplicar:
+
+```
+status: DRAFT (los 4)
+inventoryItem.tracked: true (los 4)
+```
+
+### Decisiones pendientes que quedan abiertas
+
+1. **¿Publicar los ~106 productos Balliu invisibles ahora?** Recomendado SÍ (bug operativo, tienda bajo password page). Trivial técnicamente.
+2. **¿Eliminar los ~9 duplicados puros (Nivel 1) antes del test de checkout?** Recomendado SÍ, pero el dueño lo difiere.
+3. **¿Cuándo abordar consolidación de variantes (Nivel 2)?** Recomendado antes del Sprint 4 (rediseño home) — sin consolidar la home muestra catálogo redundante.
+
+### Cosas que actualizar en docs cuando se aborden las tareas
+
+- `PROYECTO.md §3 Balliu`: añadir nota sobre el bug "no publicados al Online Store al importar" como aprendizaje operativo.
+- `BACKLOG_SANTAVILA.md`: añadir tarea **F0-08b — Publicar los productos Balliu invisibles al Online Store** + **F0-08c — Eliminar duplicados puros del Nivel 1** + ampliar F0-04 con referencia a `auditoria-productos.md`.
+- `AUDITORIA_SANTAVILA.md`: actualizar §1.5 "Apps instaladas / Channels" para reflejar que `resourcePublicationsCount` ahora sí se audita (scope `read_publications` disponible).
+
+### Siguiente paso recomendado
+
+El test de los 5 escenarios de envío puede continuar tal como estaba previsto. Los productos necesarios están publicados. Los hallazgos no bloquean.
+
+Después del test, decisión por parte del dueño sobre las 3 tareas pendientes arriba.
+
+### Validación del sistema de envío ✅ (final del día)
+
+Tests de los 5 escenarios de envío ejecutados por el dueño vía Draft Orders en Admin. **Resultado: todos OK.** Los 3 shipping profiles (XS / M / L) aplican correctamente, el umbral de envío gratuito > 500€ funciona como esperado, y las 271 variantes asignadas vía API responden con su tarifa correspondiente en checkout preview.
+
+**Estado final del sistema de envío al cierre del día:**
+- 3 shipping profiles vivos en producción.
+- 271 variantes asignadas correctamente por categoría volumétrica.
+- 110 productos Balliu siguen invisibles (0 canales) — diferido.
+- ~9 duplicados puros del Nivel 1 siguen en catálogo — diferido.
+- 4 productos previamente DRAFT siguen ACTIVE con `inventoryItem.tracked=false` (snapshot en `drafts_activation_state.json` para revertir cuando se decida).
+
+### Estado de tareas para la próxima sesión
+
+| Tarea | Estado | Documento |
+|---|---|---|
+| Publicar los ~106 Balliu invisibles | Pendiente decisión | Este journal |
+| Eliminar duplicados puros Nivel 1 | Pendiente decisión | `Agents-IA/auditoria-productos.md` |
+| Consolidar variantes Nivel 2 | Diferido a Sprint posterior | `Agents-IA/auditoria-productos.md` |
+| Decidir status final de los 4 DRAFTs activados (mantener o revertir) | Pendiente | Snapshot en `drafts_activation_state.json` |
+| F0-09 `shopify theme pull` (ya tenemos `read_themes`) | Pendiente | `docs/santavila/BACKLOG_SANTAVILA.md` |
+| F1-01 — 31 metafield definitions restantes | Pendiente | `docs/santavila/DATA_MODEL_SANTAVILA.md` |
+
+---
+
+## 2026-05-14 · Setup completo de Shipping Profiles + nueva app OAuth con scopes amplios
+
+**Paso del flujo:** ejecución de la política de envío + ampliación de capacidad técnica
+**Estado:** ✅ Aplicado en producción
+**Quién:** sesión interactiva, app `Santavila Admin` creada desde cero en Partner Dashboard.
+
+### Qué se ejecutó
+
+**A. Creación de app nueva con scopes amplios.** Tras perder acceso al Partner Dashboard de la cuenta dueña de `API-Products`, se ha creado app nueva `Santavila Admin` (Client ID `1b30f2bd…36126`) con 18 scopes que cubren Sprint 1-2 completo:
+
+```
+read_products, write_products, read_files, write_files,
+read_content, write_content, read_shipping, write_shipping,
+read_themes, write_themes, read_locales,
+read_translations, write_translations,
+read_orders, write_orders, read_inventory, write_inventory,
+read_publications, write_publications
+```
+
+Token capturado vía OAuth flow (`get_shopify_token.mjs` adaptado para leer credentials desde `.env`/`.env.local`). Token formato `shpat_…` (38 chars) guardado en `.env.local` como `SHOPIFY_ACCESS_TOKEN`. El token viejo (`shpca_…`) sigue en `.env` como fallback pero ya no se usa (mi script Python lee primero `.env.local`).
+
+**B. Shipping Profiles creados manualmente en Admin.** 3 custom profiles, cada uno con 1 shipping option flat + checkbox "Offer free shipping" min 500€:
+
+| Profile | Tarifa | Min gratis |
+|---|---|---|
+| `Envío XS - Accesorios` | 9,95€ | 500€ |
+| `Envio M - Mediano` | 29,95€ | 500€ |
+| `Envio L - Voluminoso` | 57,95€ | 500€ |
+
+Zone: `Pen+Baleares · Spain (48 of 52 provinces)`. Canarias, Ceuta y Melilla excluidas (decisión de política).
+
+**C. Asignación masiva de productos vía API.** Script nuevo [`assign_products_to_shipping_profiles.py`](../../assign_products_to_shipping_profiles.py): lee tags `envio:xs|m|l` aplicados ayer, obtiene variant IDs y los asocia al profile correspondiente vía `deliveryProfileUpdate`. Resultado:
+
+| Profile | Variantes asignadas |
+|---|---|
+| Envío XS - Accesorios | 10 |
+| Envio M - Mediano | 116 |
+| Envio L - Voluminoso | 145 |
+| **Total** | **271 variantes** · 0 errores |
+
+### Bugs resueltos en el camino
+
+- **Query Shopify por tag con `:`**: la sintaxis `tag:envio:xs` devolvía 0 resultados porque el parser corta en el primer `:`. Corregido a `tag:'envio:xs'` (comillas simples obligatorias). Documentado en el script.
+- **CLIENT_SECRET literal del placeholder**: por darle un comando con `"el-secreto-que-has-copiado"` como ejemplo, el dueño lo pegó literal en `.env.local`. Reemplazado por el real (`shpss_…`, 38 chars).
+- **App automation token ≠ Admin API token**: el botón "Create token" de Partner Dashboard genera un token de prefix `atkn_` para CI/CD de la app, NO sirve para Admin API. Hay que pasar por OAuth flow → token `shpat_…`. Anotado para no repetir.
+- **Nombre de variable**: el token nuevo se pegó suelto en `.env.local` sin la clave `SHOPIFY_ACCESS_TOKEN=` delante. Renombrado y arreglado.
+- **Error handling de `get_shopify_token.mjs`**: antes crasheaba con `JSON.parse` cuando Shopify devolvía HTML de error. Reescrito para leer el body como texto, detectar content-type no-JSON y reportar un mensaje claro con la primera parte de la respuesta.
+- **Lectura de `.env`/`.env.local`**: scripts y `get_shopify_token.mjs` adaptados para probar 3 nombres por orden de prioridad: `.env.local` (gana) > `.envlocal` > `.env`.
+
+### Decisiones operativas confirmadas
+
+- **Coexistencia de apps**: la app vieja `API-Products` (token `shpca_…`) sigue funcional pero con scopes limitados. La nueva `Santavila Admin` (token `shpat_…`) es la nueva fuente de verdad. El `.env` antiguo se mantiene como red de seguridad mientras dura la transición.
+- **Zone Pen+Baleares**: incluye Baleares al mismo coste que península. **Pendiente**: confirmar con proveedores si el coste real Baleares justifica un recargo (probablemente sí, +20-40€ por ferry). Por ahora se asume internamente.
+- **5 escenarios de validación** del [SHIPPING_PROFILES_SETUP.md](SHIPPING_PROFILES_SETUP.md) pendientes de probar en checkout preview.
+
+### Estado de bloqueadores
+
+| # | Bloqueador | Estado |
+|---|---|---|
+| 1 | Política `compareAtPrice` | ✅ |
+| 2 | PVP Balliu | ✅ |
+| 3 | WhatsApp comercial | ⏸ Esperando SIM |
+| 4 | Política envío Balliu | ✅ Implementada en producción |
+| 5 | Garantía Balliu | ✅ |
+| 6 | Theme versionado dónde | 📝 Se decide al ejecutar F0-09 |
+| 7 | **Scopes OAuth ampliados** | ✅ Resuelto con app nueva |
+
+### Siguiente paso recomendado
+
+Sprint 1 sigue avanzando. Tres tareas siguientes en orden:
+
+1. **Validar 5 escenarios en checkout preview** (Paso 4 del SHIPPING_PROFILES_SETUP.md). Especialmente Escenario 3 (multi-categoría sin llegar a 500€ → confirmar que se suman tarifas) y Escenario 5 (multi-categoría + ≥500€ → gratis).
+2. **F0-09 — `shopify theme pull`** (~20 min). Ya tenemos `read_themes` activo. Desbloquea toda la Fase 0 visible.
+3. **F1-01 — crear los 31 metafield definitions restantes** del namespace `santavila` (`santavila.envio_categoria` ya cuenta como el 1º de 32).
+
+### Reclasificaciones de envío pendientes (anotadas en entrada anterior)
+
+- `balliu-colchoneta-para-tumbona-0e9a3256` (asignada a L, probablemente M)
+- `balliu-base-de-parasol-*` y `balliu-pie-de-parasol-*` (asignadas a L, probablemente M)
+
+Cuando se revisen, basta con relanzar `apply_shipping_categories.py --apply --only-handles ...` y luego `assign_products_to_shipping_profiles.py --by-name --apply` (mueve las variantes al profile correcto).
+
+---
+
+## 2026-05-14 · Decisiones estratégicas cerradas (envío, garantía, WhatsApp)
+
+**Paso del flujo:** desbloqueo de pre-Sprint 1
+**Estado:** ✅ 3 decisiones cerradas · 1 en espera de hardware
+**Quién:** sesión interactiva con dueño del negocio.
+
+### Decisiones cerradas
+
+#### 1. Garantía Balliu = 3 años ✅
+Misma cobertura que Hevea. **F0-12 (página Garantía) desbloqueada.** El texto base puede usar "Garantía 3 años en todo el catálogo, ofrecida por nuestros proveedores españoles" sin diferenciar por marca.
+
+#### 2. Política de envío — tarifas volumétricas
+
+Decidida estructura por **3 tiers + umbral de gratuidad**, basada en clasificación de los 281 SKUs del catálogo (script de análisis ad-hoc sobre hoja `20260508 -Todos `):
+
+| Tier | Tarifa cliente | Cubre | # SKUs | % catálogo |
+|---|---|---|---|---|
+| **XS** | 9,95€ (1 ud) / 14,95€ (2 ud) / 19,95€ (3-4) / 24,95€ (5-8) / 29,95€ (9+) | Cojines, fundas, limpiador, accesorios pequeños | 10 | 4 % |
+| **M** | 29,95€ plano | Mesa auxiliar/centro/lateral, mesa ≤ 80 cm, silla individual, taburete, reposapiés, parasol < 250 cm Ø, accesorios resina | 134 | 48 % |
+| **L** | 57,95€ plano | Mesa comedor, sofá, conjunto, tumbona, banco, balancín, cama balinesa, parasol ≥ 250 cm Ø, pérgola | 137 | 49 % |
+| **Gratis** | 0 € | Pedidos con **subtotal del carrito > 500 €** | — | — |
+
+**Umbral gratuito = 500€** (descartado 400€ para alinear con el AOV objetivo del modelo financiero `00_SUPUESTOS`). Con 500€, **131/281 SKUs (47%)** activan gratis por sí solos, vs 162/281 (58%) con 400€ — diferencia de 31 SKUs en la franja 400-500€ que ahora sí pagan envío. Ese tramo es importante porque es donde está el AOV de campañas Meta/Google y conviene que el cliente lo asuma para que el modelo no pierda margen ahí.
+
+**Validación financiera** (sobre simulación 1 producto/pedido):
+- 53% de los pedidos cobran envío al cliente.
+- 47% activan gratis → coste interno asumido ≈ 49€ medio por pedido.
+- Ratio envío/PVP en el tramo cobrado: 16-30% (coherente con dato real Hevea: mediana 11% a 50€ planos).
+
+**Pendiente operativo:** confirmar tarifa real de Balliu para península. Mientras no llegue, asumimos coste interno ≈ 50€ por pedido Balliu sin gratuidad (mismo orden de magnitud que Hevea). Cuando llegue la tarifa, se rellena la columna `Coste Envío` (J) en `20260508 -Todos ` y el modelo financiero (`02_UNIT_ECONOMICS_SKU`) recalcula automáticamente.
+
+**F0-11 (página Entrega) desbloqueada** con texto definitivo.
+
+#### 3. WhatsApp comercial — en espera ⏸
+
+Pendiente de tarjeta SIM. Cuando llegue, se constata en el proyecto.
+
+**Implicación operativa para Sprint 1:**
+- F0-14 (página Contacto): se crea **con email `hola@santavila.com` + formulario nativo Shopify**, sin botón WhatsApp.
+- F2-10 (CTA flotante WhatsApp): queda diferida hasta que la SIM esté operativa. Sin entrada en el Sprint actual.
+
+Nota recordatoria: cuando llegue el número, hay tres puntos del theme/sitio donde añadirlo — barra de confianza, footer, página Contacto, CTA secundario en PDPs. Anotado para no olvidar.
+
+#### 4. Theme — dónde versionarlo (pendiente)
+
+Sigue sin decidirse. Recomendación de la auditoría: versionar en `theme/` dentro de este mismo repo. Se decide al ejecutar F0-09 (`shopify theme pull`).
+
+### Resumen del estado de los 6 bloqueadores originales
+
+| # | Bloqueador | Estado |
+|---|---|---|
+| 1 | Política `compareAtPrice` | ✅ Resuelto (entrada 2026-05-13) |
+| 2 | PVP Balliu | ✅ Resuelto (entrada 2026-05-13) |
+| 3 | WhatsApp comercial | ⏸ En espera de SIM |
+| 4 | Política envío Balliu | ✅ Resuelto (3 tiers + umbral 500€) |
+| 5 | Garantía Balliu | ✅ Resuelto (3 años, misma que Hevea) |
+| 6 | Theme versionado dónde | 📝 Se decide al ejecutar F0-09 |
+
+### Aplicación técnica de la clasificación de envío (2026-05-14, mismo día)
+
+Tras cerrar la política, se ha ejecutado la parte automatizable:
+
+- **Entregables nuevos:**
+  - [`apply_shipping_categories.py`](../../apply_shipping_categories.py) — script Python, mismo patrón que `sync_prices_to_shopify.py` (dry-run por defecto, `--apply`, `--limit`, `--only-handles`).
+  - [`SHIPPING_PROFILES_SETUP.md`](SHIPPING_PROFILES_SETUP.md) — guía paso a paso para configurar los 4-5 shipping rates en Admin.
+
+- **Metafield definition creada manualmente:** `santavila.envio_categoria` (single_line_text_field, valores controlados `xs|m|l`).
+
+- **Apply ejecutado contra producción:**
+  - 225 productos procesados (los 281 SKUs de la hoja maestra incluyen variantes que comparten handle).
+  - **222 ACTUALIZADO · 3 SIN_CAMBIOS · 0 errores.**
+  - Distribución final: **XS=6, M=93, L=126.**
+  - Cada producto ahora tiene tag `envio:xs|m|l` y el metafield `santavila.envio_categoria`.
+
+- **Reclasificaciones a revisar manualmente (heurística automática es conservadora):**
+  - `balliu-colchoneta-para-tumbona-0e9a3256` → marcado **L**. Por nombre no contiene "cojin"/"funda" así que cae en default. Probablemente debería ser **XS** o **M** según peso real. Validar.
+  - `balliu-base-de-parasol-*` y `balliu-pie-de-parasol-*` → marcado **L**. Una base/pie de parasol típicamente pesa 15-30 kg. Si la mayoría son <20 kg conviene bajar a **M** (29,95€) — más justo para el cliente. Validar.
+
+- **Bug menor encontrado en docs:** PROYECTO.md menciona `.envlocal` pero el archivo real es `.env.local`. El script ahora prueba 3 nombres por compatibilidad. **Pendiente:** actualizar PROYECTO.md para reflejar la realidad y unificar `sync_prices_to_shopify.py` con el mismo patrón.
+
+- **Estado del usuario:** ejecutando Paso 3 del SETUP (crear las 5 rates en Admin Shopify) en paralelo a este apply. Validación de checkout queda como tarea siguiente.
+
+### Siguiente paso recomendado
+
+Con 5 de 6 bloqueadores cerrados y la clasificación de envío ya en producción:
+
+1. **Validar 5 escenarios en checkout preview** (Paso 4 del [SHIPPING_PROFILES_SETUP.md](SHIPPING_PROFILES_SETUP.md)). Confirmar especialmente Escenario 5 (multi-categoría + umbral 500€ → gratis) que es el más sensible.
+2. **Revisar las reclasificaciones marcadas arriba** (colchoneta, bases/pies de parasol). Si hay que mover de L→M, basta `python3 apply_shipping_categories.py --apply --only-handles handle1,handle2` después de editar la heurística.
+3. **F0-09 — `shopify theme pull` (20 min).** Desbloquea Fase 0 visible (footer, barra de confianza, badges).
+4. **F1-01 — crear los 32 metafield definitions vacíos en Admin (45-60 min).** Lista en [`DATA_MODEL_SANTAVILA.md`](DATA_MODEL_SANTAVILA.md). No rompe nada y desbloquea fases 2-7.
+
+> Nota: la metafield definition `santavila.envio_categoria` creada hoy **ya es 1 de los 32** del modelo de datos. Quedan 31.
+
+---
+
 ## 2026-05-13 · Sincronización masiva de precios a Shopify con redondeo psicológico
 
 **Paso del flujo:** F0-01 redefinido — `sync_prices_to_shopify.py`

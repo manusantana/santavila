@@ -20,6 +20,7 @@ Agents-IA/
 ├── 01_PROMPT_MAESTRO_SANTAVILA.md        ← prompt 2: plan completo de transformación
 ├── 02_PROMPT_IMPLEMENTACION_SPRINTS.md   ← prompt 3: ejecución por sprints
 │
+├── auditoria-productos.md                ← hallazgo de duplicados y variantes mal modeladas
 └── shopify-api-setup.md                  ← guía técnica para conectar la Admin API
 ```
 
@@ -35,6 +36,7 @@ Lo que ya existe, lo que se ha hecho, los datos técnicos y financieros actuales
 
 - [PROYECTO.md](PROYECTO.md)
 - [shopify-api-setup.md](shopify-api-setup.md)
+- [auditoria-productos.md](auditoria-productos.md) — duplicados detectados + variantes mal modeladas, sin abordar todavía
 
 ### Bloque B — Estrategia y prompts para agentes IA
 
