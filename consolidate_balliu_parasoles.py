@@ -4,7 +4,7 @@ consolidate_balliu_parasoles.py
 
 Consolida los 15 productos planos de la familia "parasol" Balliu en 10 productos
 con variantes ricas (color, diámetro, faldón, punta de mástil) según se define en
-docs/santavila/auditoria-balliu-parasoles.md.
+docs/santavila/consolidacion-catalogo.md.
 
 Fases:
   1. Backup JSON de los 15 productos actuales en `backups/parasoles_<timestamp>.json`.
@@ -267,18 +267,43 @@ PRODUCTS = [
              "type": "single_line_text_field", "value": color_code(color, 0)}
         ],
     },
-    # 5) Ágora — crear desde cero (pendiente v2)
+    # 5) Ágora — crear desde cero (filas 259 + 260 del Excel)
     {
         "name": "agora",
         "winner_handle": None,
         "create_new": True,
+        "new_handle": "parasol-cuadrado-200x200",
+        "product_type": "Parasol",
         "duplicates_to_delete": [],
         "title": "Parasol cuadrado · 200×200 cm",
+        "description_html": (
+            "<p>Parasol cuadrado de exterior con estructura de acero inoxidable y "
+            "mástil central fijo, 8 varillas de fibra de vidrio. Dos series de "
+            "tejido a elegir: <strong>acrílico</strong> (6 colores) y "
+            "<strong>tela Balliu</strong> (3 colores).</p>"
+            "<ul><li>Dimensiones: 200 × 200 cm</li>"
+            "<li>Tejido resistente al desgarre y a la decoloración por el sol</li>"
+            "<li>Base no incluida — pedir aparte</li></ul>"
+        ),
         "base_sku": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0",
         "options": [{"name": "Color", "values": list(AGORA_COLORS.keys())}],
         "price_fn": lambda color: AGORA_COLORS[color][2],
         "sku_fn": lambda color: f"SV-AGORA-{slug(color)}",
         "envio_tag": "envio:l",
+        "tags": ["envio:l"],
+        "product_metafields": [
+            {"namespace": "santavila", "key": "proveedor_modelo", "type": "single_line_text_field", "value": "Ágora"},
+            {"namespace": "santavila", "key": "proveedor_grupo", "type": "single_line_text_field", "value": "G1"},
+            {"namespace": "santavila", "key": "proveedor_sku_original", "type": "single_line_text_field",
+             "value": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0 (serie 96) + BALLIU_PARASOL_TELA_BALLIU_82E48B2D (serie 00)"},
+            {"namespace": "santavila", "key": "espacio_principal", "type": "list.single_line_text_field",
+             "value": '["balcon", "terraza"]'},
+            {"namespace": "santavila", "key": "envio_categoria", "type": "single_line_text_field", "value": "l"},
+        ],
+        "variant_metafields_fn": lambda color: [
+            {"namespace": "santavila", "key": "color_codigo_proveedor",
+             "type": "single_line_text_field", "value": AGORA_COLORS[color][1]}
+        ],
     },
     # 6) Brisa
     {
@@ -630,9 +655,49 @@ def process_product(token: str, p: dict, dry_run: bool, results: list):
         return
 
     if p.get("create_new"):
-        print(f"   ⚠ create_new=True para {name} — NO implementado en v1. Saltar.")
-        results.append({"name": name, "title": p["title"], "status": "SKIPPED_NEW",
-                        "n_variants": len(variants), "errors": "create_new pendiente v2"})
+        # Verificar que no exista ya (idempotente)
+        existing = find_product(token, p["new_handle"]) if p.get("new_handle") else None
+        if existing:
+            print(f"   · ya existía con handle '{p['new_handle']}', uso ese product_id")
+            winner_id = existing["id"]
+        else:
+            input_data = {
+                "title": p["title"],
+                "handle": p.get("new_handle"),
+                "productType": p.get("product_type", ""),
+                "status": "ACTIVE",
+                "descriptionHtml": p.get("description_html", ""),
+                "tags": p.get("tags", []),
+            }
+            if p.get("product_metafields"):
+                input_data["metafields"] = p["product_metafields"]
+            r = gql(token, '''mutation($input: ProductInput!){
+                productCreate(input:$input){ product{id handle title} userErrors{field message} }
+            }''', {"input": input_data})
+            errs = r["productCreate"]["userErrors"]
+            if errs:
+                print(f"   ✗ productCreate: {errs}")
+                results.append({"name": name, "status": "ERROR_CREATE", "errors": str(errs)}); return
+            winner_id = r["productCreate"]["product"]["id"]
+            print(f"   ✓ producto creado: {winner_id}")
+        # Crear options
+        errs = create_options(token, winner_id, p["options"])
+        if errs:
+            # Si las options ya existen (reejecución), tolerar
+            err_msgs = " ".join(e.get("message", "") for e in errs).lower()
+            if "already" in err_msgs or "exists" in err_msgs:
+                print(f"   · options ya existían, continuo")
+            else:
+                print(f"   ✗ create options: {errs}")
+                results.append({"name": name, "status": "ERROR_OPTIONS", "errors": str(errs)}); return
+        # Crear variantes
+        errs = create_variants(token, winner_id, variants)
+        if errs:
+            print(f"   ✗ create variants: {errs[:2]}")
+            results.append({"name": name, "status": "ERROR_VARIANTS", "errors": str(errs)[:300]}); return
+        print(f"   ✓ {len(variants)} variantes creadas en producto nuevo")
+        results.append({"name": name, "title": p["title"], "status": "CREATED_NEW",
+                        "winner_id": winner_id, "n_variants": len(variants), "errors": ""})
         return
 
     if not p.get("winner_handle"):

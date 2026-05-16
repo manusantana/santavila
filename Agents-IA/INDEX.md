@@ -20,7 +20,8 @@ Agents-IA/
 ├── 01_PROMPT_MAESTRO_SANTAVILA.md        ← prompt 2: plan completo de transformación
 ├── 02_PROMPT_IMPLEMENTACION_SPRINTS.md   ← prompt 3: ejecución por sprints
 │
-├── auditoria-productos.md                ← hallazgo de duplicados y variantes mal modeladas
+├── auditoria-productos.md                ← hallazgo de duplicados y variantes mal modeladas (snapshot)
+├── consolidacion-catalogo.md             ← índice maestro de consolidación del catálogo (vivo)
 └── shopify-api-setup.md                  ← guía técnica para conectar la Admin API
 ```
 
@@ -36,7 +37,8 @@ Lo que ya existe, lo que se ha hecho, los datos técnicos y financieros actuales
 
 - [PROYECTO.md](PROYECTO.md)
 - [shopify-api-setup.md](shopify-api-setup.md)
-- [auditoria-productos.md](auditoria-productos.md) — duplicados detectados + variantes mal modeladas, sin abordar todavía
+- [auditoria-productos.md](auditoria-productos.md) — duplicados detectados + variantes mal modeladas (snapshot del hallazgo)
+- [consolidacion-catalogo.md](consolidacion-catalogo.md) — índice maestro de la consolidación de variantes, una sección por familia (vivo)
 
 ### Bloque B — Estrategia y prompts para agentes IA
 

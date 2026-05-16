@@ -13,6 +13,39 @@
 
 ---
 
+## 2026-05-16 (tarde) · Cierre Familia 1 con Ágora + rename del documento maestro
+
+**Paso del flujo:** completar Familia 1 (Parasoles) + reorganizar la documentación de consolidación
+**Estado:** ✅ Familia 1 cerrada · 153 variantes totales
+
+### Qué se ejecutó
+
+#### Ágora creado desde cero
+- Implementada la rama `create_new=True` en `consolidate_balliu_parasoles.py` (mutación `productCreate`).
+- Bug menor resuelto en el camino: campo `code` no existe en `UserError` para `productCreate` (sí en otros tipos).
+- Producto nuevo creado: `parasol-cuadrado-200x200` con 9 variantes y publicado al Online Store + Shop.
+- Precios por serie de color del Excel: 6 colores serie 96 a 426,22 € + 3 colores serie 00 a 404,20 €.
+- Colisión de "Blanco" resuelta con nombres diferenciados: **"Blanco acrílico"** (96/07) y **"Blanco tela"** (07/00).
+
+#### Documento maestro renombrado
+- `Agents-IA/auditoria-balliu-parasoles.md` → `Agents-IA/consolidacion-catalogo.md` (con `git mv`, historial preservado).
+- Contenido reestructurado como **índice maestro** del catálogo: una sección por familia, plantilla para escalar.
+- Referencias actualizadas en `JOURNAL.md` y `consolidate_balliu_parasoles.py` (docstring).
+- `INDEX.md` actualizado.
+
+### Estado final Familia 1
+
+10 productos · **153 variantes** (24 + 64 + 24 + 19 + **9 Ágora** + 3 + 3 + 3 + 2 + 2).
+
+### Siguiente paso recomendado
+
+- **Familia 2: Tumbonas Balliu** — 16 productos planos → ~5 modelos. WebFetch a cada modelo (EVA PRO, CARMEN, LOLA, NOA, OLIMPIA, IRIS, ETNA, MARINA, ALBA).
+- O **imágenes por variante** de Familia 1 — el dueño dijo "luego revisamos colores".
+
+El usuario priorizó **continuar con la consolidación** antes de los colores, así que la próxima sesión empezará con tumbonas.
+
+---
+
 ## 2026-05-16 · Consolidación piloto Balliu — familia parasoles (9 productos / 144 variantes)
 
 **Paso del flujo:** Sprint adicional — calidad de catálogo (Nivel 2 de la auditoría de duplicados)
@@ -24,7 +57,7 @@
 Auditoría cruzada Shopify ↔ Excel ↔ web Balliu de la familia "parasol" y consolidación: **15 productos planos → 9 productos con variantes ricas**.
 
 **Documentos generados:**
-- [`Agents-IA/auditoria-balliu-parasoles.md`](../../Agents-IA/auditoria-balliu-parasoles.md) — mapeo Excel↔Modelo + 6 decisiones cerradas del dueño.
+- [`Agents-IA/consolidacion-catalogo.md`](../../Agents-IA/consolidacion-catalogo.md) — mapeo Excel↔Modelo + 6 decisiones cerradas del dueño.
 - [`consolidate_balliu_parasoles.py`](../../consolidate_balliu_parasoles.py) — script de consolidación (dry-run por defecto, `--only`, `--skip-delete`, `--skip-publish`).
 - `backups/parasoles_<timestamp>.json` — snapshot completo previo a tocar nada.
 
