@@ -13,6 +13,94 @@
 
 ---
 
+## 2026-05-16 · Consolidación piloto Balliu — familia parasoles (9 productos / 144 variantes)
+
+**Paso del flujo:** Sprint adicional — calidad de catálogo (Nivel 2 de la auditoría de duplicados)
+**Estado:** ✅ Aplicado en producción · piloto exitoso del patrón de consolidación
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_parasoles.py`
+
+### Qué se ejecutó
+
+Auditoría cruzada Shopify ↔ Excel ↔ web Balliu de la familia "parasol" y consolidación: **15 productos planos → 9 productos con variantes ricas**.
+
+**Documentos generados:**
+- [`Agents-IA/auditoria-balliu-parasoles.md`](../../Agents-IA/auditoria-balliu-parasoles.md) — mapeo Excel↔Modelo + 6 decisiones cerradas del dueño.
+- [`consolidate_balliu_parasoles.py`](../../consolidate_balliu_parasoles.py) — script de consolidación (dry-run por defecto, `--only`, `--skip-delete`, `--skip-publish`).
+- `backups/parasoles_<timestamp>.json` — snapshot completo previo a tocar nada.
+
+### Decisiones del dueño aplicadas
+
+1. **Naming Opción C** — sin nombre del proveedor visible, por característica técnica:
+   - `Parasol cuadrado · aluminio 300×300 cm` (Brisa)
+   - `Parasol exterior acrílico · mástil regulable Ø200 cm` (Pamela acrílico)
+   - `Parasol redondo · aluminio Ø300 cm` (Garbí)
+   - `Parasol lateral · aluminio 300×300 cm` (Roma)
+   - etc.
+2. **SKU derivado por variante** (`SV-BRISA-CAQUI`, `SV-PAMELA-ACR-ANTRACITA-CON-F`...) en lugar del SKU autogenerado del Excel, que NO es del proveedor.
+3. **Metafields del producto**:
+   - `santavila.proveedor_modelo` (Brisa / Pamela / Ocean / Garbí / Roma / Pie / Base)
+   - `santavila.proveedor_grupo` (G1)
+   - `santavila.proveedor_sku_original` (preservado para auditoría)
+   - `santavila.espacio_principal` (lista)
+4. **Metafield de variante** `santavila.color_codigo_proveedor` (96/42, 07/00, etc.) — permite reconstruir el código exacto al pasar pedido a Balliu.
+5. **Colores con nombres simples** ("Blanco" en vez de "Blanco (tela Balliu)") — la serie del color queda en el metafield del producto. Excepción: Ágora (cuando se cree en v2) usará "Blanco acrílico" / "Blanco tela" por colisión.
+6. **Bases de hormigón con precios invertidos** según decisión: 25 kg = 51,23 € · 30 kg = 102,16 € (antes estaban al revés).
+
+### Resultado en producción
+
+| Producto Shopify | Variantes | Precio | Canales |
+|---|---|---|---|
+| Parasol cuadrado · aluminio 300×300 cm (Brisa) | 3 | 1.045,32 € | Online Store + Shop |
+| Parasol exterior acrílico · mástil regulable Ø200 cm (Pamela acr.) | 24 | 413,19 € | OS+Shop |
+| Parasol exterior · mástil regulable 16 colores Ø200 cm (Pamela tela) | 64 | 384,37 € | OS+Shop |
+| Parasol exterior acrílico · Ø200 / Ø250 cm (Ocean acr.) | 24 | 398,10 / 414,67 € | OS+Shop |
+| Parasol exterior · 16 colores Ø200 / Ø250 cm (Ocean tela) | 19 | 304,13 / 381,54 € | OS+Shop |
+| Parasol redondo · aluminio Ø300 cm (Garbí) | 3 | 1.045,32 € | OS+Shop |
+| Parasol lateral · aluminio 300×300 cm (Roma) | 3 | 1.897,36 € | OS+Shop |
+| Pie de parasol · 40 kg | 2 | 164,14 / 126,88 € | OS+Shop |
+| Base de hormigón para parasol | 2 | 51,23 / 102,16 € | OS+Shop |
+| **Total** | **144** | | |
+
+**Productos eliminados (6):**
+- 4 duplicados puros (Pamela acrílico `-2/-3`, Pamela tela `-2/-3`).
+- 2 absorbidos como variante (pie RE, base 30 kg).
+
+**Pendiente v2 (Ágora):** producto que existe en el Excel pero no en Shopify. Requiere `productCreate` desde cero. Documentado en el script como `create_new=True`.
+
+### Bugs resueltos en el camino
+
+- **`gql()` doblando `data["data"]`** en mi función helper. Corregido con `sed s|r\["data"\]\["|r\["|`.
+- **Query `tag:envio:xs` devolvía 0** (no por bug previo): aplicado a productos via API.
+- **Option value rename**: el piloto de Brisa quedó con "Blanco (tela Balliu)". Fix vía `productOptionUpdate` con `optionValuesToUpdate`.
+- **`COLOR_CODES` global ambiguo** (Arena y Azul existen en serie 96 y serie 00): refactorizado a `color_code(color, serie)` con la serie definida por producto.
+
+### Lo que NO se ha hecho (queda para próximas sesiones)
+
+- **Ágora** — crear desde cero (9 variantes con precio por serie de color).
+- **Imágenes por variante** — actualmente cada producto mantiene su galería original. Próxima iteración: extraer del JSON scrapeado y mapear color → imagen.
+- **Consolidar otras familias Balliu** — tumbonas (16 productos → ~5 modelos), mesas HPL (varios), mesas auxiliares, sillas Etna/Bruna/Selva. Patrón ya validado.
+- **Limpiar tags antiguos visibles** (`Balliu`, `match-verde`): tarea F0-02/F0-03 del backlog, no parte de la consolidación.
+- **Confirmar peso real de las bases de hormigón con el proveedor** antes del primer pedido (etiquetas físicamente podrían estar invertidas también).
+
+### Patrón validado para escalar
+
+El piloto demuestra que el flujo siguiente funciona end-to-end y se puede aplicar a las otras familias del catálogo:
+
+```
+1. WebFetch a la web del proveedor para extraer matriz de variantes real.
+2. Cruzar SKUs Excel ↔ modelo proveedor por precio + descripción.
+3. Decisiones del dueño sobre naming, ambigüedades y precios.
+4. Script declarativo con productos como `dict` (PRODUCTS).
+5. Dry-run → apply piloto (--only) → apply resto → delete + publish.
+6. Backup previo, reporte CSV, metafields para preservar info original.
+```
+
+### Siguiente paso recomendado
+
+Aplicar el mismo patrón a la próxima familia con duplicación (tumbonas Balliu, 16 productos planos). O bien resolver Ágora (rápido, ~30 min) antes de pasar a la siguiente familia.
+
+---
+
 ## 2026-05-14 · Auditoría de duplicados + 120 productos invisibles + activación parcial
 
 **Paso del flujo:** validación previa al test de checkout
