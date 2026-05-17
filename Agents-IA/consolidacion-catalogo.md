@@ -37,7 +37,7 @@ El piloto de **parasoles Balliu** ya cerrado (2026-05-16) demostró el flujo:
 |---|---|---|---|
 | **Parasoles Balliu** | 15 (parasoles + pies + bases) | **10** (con 153 variantes) | ✅ Completado 2026-05-16 |
 | **Tumbonas Balliu** | 20 (tumbonas + mini + colchonetas) | **19** (con 787 variantes) · 1 a DRAFT (Alba) | ✅ Completado 2026-05-17 |
-| **Mesas HPL Balliu** | ~6 | 2-3 estimado | ⏳ Pendiente |
+| **Mesas HPL Balliu** | ~50 (real) | ~25 estimado (troceado en 4 sub-pilotos) | 🟡 En curso — 3b ✅ |
 | **Mesas auxiliares aluminio Balliu** | ~5 | 1 (Olimpia con variantes) | ⏳ Pendiente |
 | **Sillas Balliu** (Etna, Bruna, Selva, Vera) | 5+ | 4 estimado | ⏳ Pendiente |
 | **Pasarelas resina Balliu** | 2 | 1 con variante | ⏳ Pendiente |
@@ -156,11 +156,60 @@ SKU _ROMA_300X300           → Roma lateral (1.897,36 €)
 
 ---
 
-## Familia 3 — Mesas HPL Balliu ⏳ PENDIENTE
+## Familia 3 — Mesas HPL Balliu 🟡 EN CURSO
 
-Inventario inicial estimado:
-- ~6 productos planos: "Mesa exterior HPL", "Mesa alta exterior HPL", "Mesa exterior aluminio".
-- Modelos detectados en el log: DIAM 70, 60×60, 70×70, SOFIA 80×80, ATLANTA 240×90, JAVA 140-180/200-260, ALTEA.
+**Inventario real:** ~50 productos planos en Shopify (`handle:balliu-mesa*`), no 6 como se estimó inicialmente.
+
+**Decisión:** trocear en **4 sub-pilotos por categoría funcional**, en orden de complejidad creciente.
+
+| Sub-piloto | Categoría | Productos planos | Consolidados | Estado |
+|---|---|---|---|---|
+| **3b** | Mesa alta (Capri Alta) | 6 | 1 (+5 DRAFT) | ✅ 2026-05-17 |
+| **3c** | Mesa centro (Etna, Olimpia) | ~2 | ~2 | ⏳ Siguiente |
+| **3d** | Mesa auxiliar (Eva Pro Mini/BCN, Olimpia, Noa, Etna, Greta) | ~14 | ~7 estimado | ⏳ |
+| **3a** | Mesa comedor (Selva, Brunei, Atlanta, Java, Sofia, Capri, Altea, Ágata, Nora) | ~25 | ~12 estimado | ⏳ |
+
+### Sub-piloto 3b — Mesa alta exterior HPL ✅ COMPLETADO (2026-05-17)
+
+**Origen proveedor:** Mesa Capri Alta (`mesa-de-aluminio-capri-alta`, altura 110 cm, chasis aluminio).
+
+**Script:** [`consolidate_balliu_mesas_altas.py`](../consolidate_balliu_mesas_altas.py).
+**Backup:** `backups/mesas_altas_20260517-082726.json` (gitignored).
+
+**Decisiones del dueño:**
+1. Ø70 cm (mesa redonda) → DRAFT (no figura en web actual del proveedor, no se elimina).
+2. HPL Gran Densidad → DRAFT (no figura en web actual).
+3. Precios desde Excel pestaña `20260508 -Todos ` (única fiable).
+4. Chasis Aluminio como descripción de producto, no como opción.
+
+**Resultado:**
+
+| | Antes | Después |
+|---|---|---|
+| ACTIVE | 6 productos planos · 1 variante c/u | **1 consolidado** · 2 variantes |
+| DRAFT | 0 | **5** (Ø70 HPL, Ø70 HPL GD, 60×60 HPL GD, 70×70 HPL GD, duplicado 60×60) |
+| Naming | `Mesa alta exterior HPL` × 6 | `Mesa alta exterior · aluminio HPL 110 cm` |
+| Precios 60×60 | €449,90 / €502,93 | **€456,69** (Excel) |
+| Precios 70×70 | €529,00 | **€528,46** (Excel) |
+| Winner Shopify | — | `balliu-mesa-alta-exterior-hpl-94512eab` |
+| Tag legacy | — | `legacy-balliu-consolidado-2026-05` para los 5 DRAFT |
+
+**Variantes ACTIVE finales:**
+- 60×60 cm — SKU `SV-MESAALTA-60-HPL` — €456,69
+- 70×70 cm — SKU `SV-MESAALTA-70-HPL` — €528,46
+
+### Hallazgo crítico sobre precios del Excel
+
+Solo la pestaña **`20260508 -Todos `** (con espacio al final) tiene precios consistentes:
+- Columna F = "Precio Venta (con IVA 21%)" — IVA incluido
+- Columna I = "PVP Recomendado" — sin IVA
+- F = I × 1,21 ✓ en todas las filas
+
+Las pestañas `Balliu` y `Todos` tienen F = I (no separadas IVA/sin IVA), por lo que **no son fiables como fuente de precios**. Memorizado en la memoria persistente del proyecto.
+
+### Anomalía en Excel (filas 222-223)
+
+Mismo SKU `BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658` aparece en dos filas con costes distintos (245,33€ / 263,01€). Por el patrón HPL → HPL GD de otros tamaños, se deduce que la fila 222 es **HPL standard mal etiquetado**. Se aplica como tal a la variante 60×60 activa.
 
 ---
 

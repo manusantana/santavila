@@ -13,6 +13,81 @@
 
 ---
 
+## 2026-05-17 · Sub-piloto 3b cerrado — Mesa alta exterior HPL (1 producto / 2 variantes + 5 DRAFT)
+
+**Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3b (Mesa alta)
+**Estado:** ✅ Aplicado en producción · consolidado publicado en Online Store + Shop
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_mesas_altas.py`
+
+### Decisión de partida: trocear la Familia 3 en sub-pilotos
+
+Familia 3 (Mesas HPL) tiene ~50 productos planos en Shopify. Se decide trocear en 4 sub-pilotos por complejidad creciente y reducir el blast radius:
+
+- **3b · Mesa alta** ← este sub-piloto
+- **3c · Mesa centro**
+- **3d · Mesa auxiliar**
+- **3a · Mesa comedor** (el más complejo, último)
+
+### Qué se ejecutó
+
+Auditoría cruzada Shopify ↔ Excel ↔ web Balliu (Capri Alta). 6 productos planos en Shopify, todos ACTIVE con 1 variante "Default Title". Web del proveedor confirma que solo siguen vigentes 2 tamaños (60×60, 70×70) en HPL standard.
+
+### Decisiones del dueño aplicadas
+
+1. **Ø70 cm (mesa redonda)**: no figura en web actual del proveedor → **DRAFT**, no se elimina.
+2. **HPL Gran Densidad**: no figura en web actual del proveedor → **DRAFT** las 4 SKUs HPL_GD.
+3. **Precios desde Excel pestaña `20260508 -Todos `** (la única con IVA bien calculado en columna F y sin IVA en columna I). Se descarta usar otras pestañas (`Balliu`, `Todos`) — tienen columnas F = I (no separadas), no fiables.
+4. **Chasis Aluminio**: como descripción de producto, **no como opción** visible.
+5. **Naming Opción C**: sin nombre del modelo proveedor (Capri Alta) visible al cliente.
+
+### Resultado
+
+| | Antes (Shopify plano) | Después (consolidado) |
+|---|---|---|
+| Productos ACTIVE | 6 (con 1 variante c/u) | **1** consolidado con 2 variantes |
+| Productos DRAFT | 0 | **5** (Ø70 HPL, Ø70 HPL GD, 60×60 HPL GD, 70×70 HPL GD, duplicado 60×60) |
+| Naming | `Mesa alta exterior HPL` × 6 | `Mesa alta exterior · aluminio HPL 110 cm` |
+| Tags duplicados | `match-rojo`, `envio:l` | Limpiados; legacy con `legacy-balliu-consolidado-2026-05` |
+| Precio 60×60 HPL | €449,90 / €502,93 (caos) | **€456,69** (Excel × 1.21) |
+| Precio 70×70 HPL | €529,00 (desactualizado) | **€528,46** (Excel × 1.21) |
+| Winner Shopify | — | `balliu-mesa-alta-exterior-hpl-94512eab` |
+
+Variantes ACTIVE finales:
+- 60×60 cm — SKU `SV-MESAALTA-60-HPL` — €456,69
+- 70×70 cm — SKU `SV-MESAALTA-70-HPL` — €528,46
+
+### Hallazgo importante sobre pestañas del Excel
+
+Solo **`20260508 -Todos `** (con espacio al final) tiene precios correctos:
+- Columna F = "Precio Venta (con IVA 21%)" — IVA incluido ✓
+- Columna I = "PVP Recomendado" — sin IVA; F = I × 1.21 ✓
+
+Las pestañas `Balliu` y `Todos` tienen F = I (no separadas) → **no usar para precios**. Se memoriza.
+
+### Anomalía detectada en Excel
+
+Filas 222 y 223 del Excel comparten el mismo SKU `BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658` pero con costes distintos (245,33€ vs 263,01€). Por diferencial de precio (HPL → HPL GD ≈ +7-12% en otros tamaños) se deduce que la fila 222 es **HPL standard mal etiquetado como GD**. Se trata como HPL standard para la variante 60×60 activa.
+
+### Cómo se ejecutó
+
+```bash
+python3 consolidate_balliu_mesas_altas.py            # dry-run
+python3 consolidate_balliu_mesas_altas.py --apply    # backup + apply + publish
+```
+
+Backup: `backups/mesas_altas_20260517-082726.json` (6 productos).
+
+### Pendientes que arrastra al repaso final
+
+- Confirmar con proveedor si Ø70 y HPL GD son legacy definitivos o pueden volver a venta.
+- Decidir si el handle del winner se renombra a algo más limpio (`mesa-alta-exterior-aluminio-hpl`) en el repaso final con redirect 301.
+
+### Siguiente paso
+
+- **Sub-piloto 3c · Mesa centro** (Etna central, Olimpia central — ~2 modelos).
+
+---
+
 ## 2026-05-17 · Familia 2 cerrada — Tumbonas Balliu (19 productos / 787 variantes)
 
 **Paso del flujo:** Sprint adicional — calidad de catálogo (continuación del plan de consolidación)
