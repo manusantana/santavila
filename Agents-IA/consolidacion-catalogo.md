@@ -165,7 +165,7 @@ SKU _ROMA_300X300           → Roma lateral (1.897,36 €)
 | Sub-piloto | Categoría | Productos planos | Consolidados | Estado |
 |---|---|---|---|---|
 | **3b** | Mesa alta (Capri Alta) | 6 | 1 (+5 DRAFT) | ✅ 2026-05-17 |
-| **3c** | Mesa centro (Etna, Olimpia) | ~2 | ~2 | ⏳ Siguiente |
+| **3c** | Mesa centro (Etna) | 1 (con 2 variantes) | 1 ACTIVE 15v · 1 DRAFT 1v | ✅ 2026-05-17 |
 | **3d** | Mesa auxiliar (Eva Pro Mini/BCN, Olimpia, Noa, Etna, Greta) | ~14 | ~7 estimado | ⏳ |
 | **3a** | Mesa comedor (Selva, Brunei, Atlanta, Java, Sofia, Capri, Altea, Ágata, Nora) | ~25 | ~12 estimado | ⏳ |
 
@@ -210,6 +210,32 @@ Las pestañas `Balliu` y `Todos` tienen F = I (no separadas IVA/sin IVA), por lo
 ### Anomalía en Excel (filas 222-223)
 
 Mismo SKU `BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658` aparece en dos filas con costes distintos (245,33€ / 263,01€). Por el patrón HPL → HPL GD de otros tamaños, se deduce que la fila 222 es **HPL standard mal etiquetado**. Se aplica como tal a la variante 60×60 activa.
+
+### Sub-piloto 3c — Mesa de centro exterior HPL ✅ COMPLETADO (2026-05-17)
+
+**Origen proveedor:** Etna Mesa Central (`etna-mesa-central`, 110×60×44,5 cm, aluminio mate).
+
+**Script:** [`consolidate_balliu_mesas_centro.py`](../consolidate_balliu_mesas_centro.py).
+**Backup:** `backups/mesas_centro_20260517-084523.json` (gitignored).
+
+**Decisiones del dueño:**
+1. HPL Gran Densidad no figura en web actual → producto DRAFT separado nuevo (pendiente confirmación con proveedor).
+2. Chasis (Blanco / Tórtola / Aluminio): **opción visible** (regla UX nueva — si N≥2 valores reales → opción).
+3. Color tablero HPL (Gris / Blanco / Moonwalk / Skyline / Prado): opción visible.
+4. Naming Opción C.
+
+**Resultado:**
+
+| | Antes | Después |
+|---|---|---|
+| ACTIVE | 1 producto, 2 variantes Hpl/Hpl Gd | **1 consolidado** · **15 variantes** (Chasis × Color tablero) |
+| DRAFT | 0 | **1 nuevo** `mesa-de-centro-exterior-aluminio-hpl-gd-110x60` · 1 variante HPL Gran Densidad |
+| Naming | "Mesa de centro exterior aluminio \| 60 cm" | "Mesa de centro exterior · aluminio HPL 110×60 cm" |
+| Precio HPL | 349,90 € | **362,44 €** (las 15) |
+| Precio HPL GD | 421,95 € | **421,95 €** (en DRAFT) |
+| SKU pattern | BALLIU_ETNA_MESA_CENTRAL_* | `SV-MESACENTRO-<chasis>-<color>` |
+
+**Regla UX nueva (descubierta y memorizada):** opción solo si N≥2 valores. Si una característica tiene 1 solo valor (como el chasis Aluminio en 3b) → descripción, no opción.
 
 ---
 

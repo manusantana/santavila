@@ -13,6 +13,64 @@
 
 ---
 
+## 2026-05-17 · Sub-piloto 3c cerrado — Mesa de centro exterior HPL (1 consolidado / 15 variantes + 1 DRAFT)
+
+**Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3c (Mesa centro)
+**Estado:** ✅ Aplicado en producción · consolidado publicado en Online Store + Shop
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_mesas_centro.py`
+
+### Origen y estado previo
+
+- **Proveedor:** Etna Mesa Central (110×60×44,5 cm, aluminio mate).
+- **Shopify previo:** 1 producto ya consolidado `balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e` ACTIVE con 2 variantes "Tablero Hpl" / "Tablero Hpl Gd" (349,90 € / 421,95 €). SKUs BALLIU_ETNA_MESA_CENTRAL_*.
+
+### Decisiones del dueño aplicadas
+
+1. **HPL Gran Densidad no aparece en web actual del proveedor** → producto DRAFT separado nuevo, pendiente confirmación con proveedor.
+2. **Chasis (3 colores: Blanco / Tórtola / Aluminio)** → opción visible al cliente.
+3. **Color tablero HPL (5: Gris / Blanco / Moonwalk / Skyline / Prado)** → opción visible.
+4. **Naming Opción C**: `Mesa de centro exterior · aluminio HPL 110×60 cm`.
+
+### Regla UX descubierta (memorizada)
+
+> Si una característica tiene un único valor, no se añade como opción seleccionable — ir a descripción del producto. Caso 3b mesa alta (chasis único = descripción) vs 3c mesa centro (3 chasis = opción).
+
+### Resultado
+
+| | Antes | Después |
+|---|---|---|
+| Productos ACTIVE | 1 con 2 variantes Hpl/Hpl Gd | **1 consolidado** con **15 variantes** (Chasis × Color tablero) |
+| Productos DRAFT | 0 | **1 nuevo** (HPL Gran Densidad), 1 variante a 421,95 € |
+| Opciones | 1 (Tablero) | 2 (Chasis × Color tablero) |
+| Naming | "Mesa de centro exterior aluminio \| 60 cm" | "Mesa de centro exterior · aluminio HPL 110×60 cm" |
+| Tags duplicados | `match-verde` | Limpiados |
+| SKU pattern | BALLIU_ETNA_MESA_CENTRAL_* | `SV-MESACENTRO-<chasis>-<color>` |
+| Precio HPL | 349,90 € (desactualizado) | **362,44 €** (Excel × 1.21) en las 15 variantes |
+| Precio HPL GD | 421,95 € | **421,95 €** (en DRAFT) |
+
+### Productos resultantes
+
+- **ACTIVE** `balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e`
+  - 15 variantes Chasis(3) × Color tablero(5), todas a 362,44 €.
+- **DRAFT** `mesa-de-centro-exterior-aluminio-hpl-gd-110x60` (handle nuevo)
+  - 1 variante "HPL Gran Densidad" a 421,95 €.
+  - Tags: `pendiente-confirmar-proveedor`, `legacy-balliu-consolidado-2026-05`.
+
+### Cómo se ejecutó
+
+```bash
+python3 consolidate_balliu_mesas_centro.py            # dry-run
+python3 consolidate_balliu_mesas_centro.py --apply    # backup + apply + publish
+```
+
+Backup: `backups/mesas_centro_20260517-084523.json`.
+
+### Siguiente paso
+
+- **Sub-piloto 3d · Mesa auxiliar** (Eva Pro Mini/BCN, Olimpia, Noa aux, Etna aux, Greta — ~14 productos planos).
+
+---
+
 ## 2026-05-17 · Sub-piloto 3b cerrado — Mesa alta exterior HPL (1 producto / 2 variantes + 5 DRAFT)
 
 **Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3b (Mesa alta)
