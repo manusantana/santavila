@@ -166,7 +166,7 @@ SKU _ROMA_300X300           → Roma lateral (1.897,36 €)
 |---|---|---|---|---|
 | **3b** | Mesa alta (Capri Alta) | 6 | 1 (+5 DRAFT) | ✅ 2026-05-17 |
 | **3c** | Mesa centro (Etna) | 1 (con 2 variantes) | 1 ACTIVE 15v · 1 DRAFT 1v | ✅ 2026-05-17 |
-| **3d** | Mesa auxiliar (Eva Pro Mini/BCN, Olimpia, Noa, Etna, Greta) | ~14 | ~7 estimado | ⏳ |
+| **3d** | Mesa auxiliar (Eva Pro Mini/BCN, Olimpia, Noa, Etna, Mini Prestige) | 14 + 1 ya consol. | 7 ACTIVE 98v · 10 DRAFT | ✅ 2026-05-17 |
 | **3a** | Mesa comedor (Selva, Brunei, Atlanta, Java, Sofia, Capri, Altea, Ágata, Nora) | ~25 | ~12 estimado | ⏳ |
 
 ### Sub-piloto 3b — Mesa alta exterior HPL ✅ COMPLETADO (2026-05-17)
@@ -236,6 +236,35 @@ Mismo SKU `BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658` aparece en dos filas 
 | SKU pattern | BALLIU_ETNA_MESA_CENTRAL_* | `SV-MESACENTRO-<chasis>-<color>` |
 
 **Regla UX nueva (descubierta y memorizada):** opción solo si N≥2 valores. Si una característica tiene 1 solo valor (como el chasis Aluminio en 3b) → descripción, no opción.
+
+### Sub-piloto 3d — Mesa auxiliar Balliu ✅ COMPLETADO (2026-05-17)
+
+**Script:** [`consolidate_balliu_mesas_auxiliares.py`](../consolidate_balliu_mesas_auxiliares.py).
+**Backup:** `backups/mesas_auxiliares_20260517-090517.json` (15 productos, gitignored).
+
+**Inventario inicial:** 14 productos planos + 1 ya consolidado (Etna aux con 3 variantes).
+
+**Decisiones del dueño:**
+1. Patrón Blanco/Prestige aplicado a Eva Pro Mini, Eva Pro BCN, Noa aux, Mini Prestige.
+2. Precio Olimpia aux tela según Excel (157,63 €), no según web (149,34 €).
+3. **Naming refinado (regla nueva)**: Opción C + sufijo ` · <Modelo>` para diferenciar productos similares. Ejemplo "Mesa auxiliar exterior resina · 48×48 cm · Eva Pro Mini" vs "… · Eva Pro BCN".
+4. HPL Gran Densidad, Werzalit, Olimpia Esquinera, Mesa Greta → DRAFT (no en web).
+
+**Resultado:** **7 productos ACTIVE consolidados (98 variantes) + 10 productos DRAFT**.
+
+| # | ACTIVE | Variantes |
+|---|---|---|
+| 1 | Mesa auxiliar exterior resina · 48×48 cm · Eva Pro Mini | 5 (Color: Blanco 33,43€ / Prestige 34,41€) |
+| 2 | Mesa auxiliar exterior resina · 48×48 cm · Eva Pro BCN | 5 (Blanco 35,99€ / Prestige 37,79€) |
+| 3 | Mesa auxiliar exterior aluminio · 48×48 cm tejido · Olimpia | **48** (Chasis 3 × Color tejido 16) — 157,63 € |
+| 4 | Mesa de centro exterior · aluminio HPL 74×54 cm · Olimpia Central | 15 (Chasis 3 × Color tablero 5) — 227,18 € |
+| 5 | Mesa auxiliar exterior aluminio · Ø42 cm · Noa | 5 (Blanco 130,24€ / Prestige 136,98€) |
+| 6 | Mesa auxiliar exterior · aluminio HPL 45×45 cm · Etna | 15 (Chasis 3 × Color tablero 5) — 167 € |
+| 7 | Mesa auxiliar exterior resina decorativa · 48×48 cm · Mini Prestige | 5 (Blanco 27,66€ / Prestige 29,17€) |
+
+**DRAFT (10):**
+- 8 existentes a DRAFT (4 duplicados Prestige + Olimpia Central HPL_GD + 2 Olimpia Esquinera + Mesa Greta).
+- 2 nuevos creados: Etna HPL Gran Densidad y Etna Werzalit Ø60 (con tag `pendiente-confirmar-proveedor`).
 
 ---
 
