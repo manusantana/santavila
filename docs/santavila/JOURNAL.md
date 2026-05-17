@@ -13,6 +13,86 @@
 
 ---
 
+## 2026-05-17 · Sub-piloto 3a cerrado — Mesa comedor Balliu (9 consolidados / 240 variantes + 34 DRAFT)
+
+**Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3a (Mesa comedor — el más complejo y último)
+**Estado:** ✅ Aplicado en producción · 9 consolidados publicados en Online Store + Shop
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_mesas_comedor.py`
+
+### Cierre de la Familia 3 (Mesas HPL)
+
+Con 3a se completan las 4 fases del sub-piloto Familia 3. **Resumen Familia 3 completa**:
+
+| Sub-piloto | Modelos | ACTIVE | Variantes | DRAFT |
+|---|---|---|---|---|
+| 3b · Mesa alta | Capri Alta | 1 | 2 | 5 |
+| 3c · Mesa centro | Etna Central | 1 | 15 | 1 |
+| 3d · Mesa auxiliar | Eva Pro Mini/BCN, Olimpia, Noa, Etna, Mini Prestige | 7 | 98 | 10 |
+| 3a · Mesa comedor | Selva, Brunei, Atlanta, Java, Capri, Capri Doble, Altea, Ágata, Nora | 9 | 240 | 34 |
+| **Total Familia 3** | | **18** | **355** | **50** |
+
+### Decisiones del dueño en 3a (confirmadas con capturas web)
+
+1. **HPL Gran Densidad** → siempre DRAFT separado (regla aplicada a Brunei, Java, Capri, Altea, Capri Doble extras, Ágata extras).
+2. **Brunei**: 4 tamaños × 3 chasis × 5 colores HPL = 60 variantes ACTIVE. HPL_GD a DRAFT.
+3. **Altea como la web**: solo 70×70 y 80×80, 2 chasis (Blanco/Tórtola), 5 HPL = 20 variantes. Resto (Ø80, 120×80, HPL_GD) a DRAFT. Precio 70×70 HPL = 421,43 € (precio mínimo del rango web).
+4. **Capri Doble**: producto APARTE, no variante del Capri principal.
+5. **Nora**: dimensión 72×72 cm (web), no Ø70 (Excel).
+6. **Sofia, Ágata L, Atlanta 240×90**: NO están en web → todos DRAFT.
+
+### Resultado 3a · 9 productos ACTIVE consolidados
+
+| # | Consolidado ACTIVE | Variantes | Estructura | Precio base (€ IVA) |
+|---|---|---|---|---|
+| 1 | Mesa exterior resina · Werzalit · **Selva** | 6 | Tamaño 6 | 181,58 – 315,80 |
+| 2 | Mesa exterior aluminio · HPL · **Brunei** | **60** | Tamaño 4 × Chasis 3 × HPL 5 | 478,77 – 943,15 según tamaño |
+| 3 | Mesa extensible exterior aluminio · HPL · **Atlanta** | 30 | Tamaño 2 × Chasis 3 × HPL 5 | 1.274,08 / 1.669,81 |
+| 4 | Mesa extensible exterior aluminio · HPL · **Java** | 30 | Tamaño 2 × Chasis 3 × HPL 5 | 1.573,34 / 2.016,97 |
+| 5 | Mesa exterior aluminio · HPL · **Capri** | **75** | Tamaño 5 × Chasis 3 × HPL 5 | 349,19 – 406,34 según tamaño |
+| 6 | Mesa exterior aluminio · HPL 120×80 cm · **Capri Doble** | 15 | Chasis 3 × HPL 5 | 531,53 |
+| 7 | Mesa exterior aluminio · HPL · **Altea** | 20 | Tamaño 2 × Chasis 2 × HPL 5 | 421,43 / 422,17 |
+| 8 | Mesa exterior aluminio · 75×75 cm · **Ágata** | 2 | Color 2 | 347,39 |
+| 9 | Mesa exterior aluminio · 72×72 cm · **Nora** | 2 | Color 2 | 224,10 |
+
+### DRAFT (34 productos)
+
+**28 productos planos legacy pasados a DRAFT**:
+- 5 Selva (legacy del consolidado)
+- 3 Atlanta (240×90 HPL + HPL_GD + 200/260×100 secundario)
+- 3 Java (140/180 HPL_GD + 200/260 secundario + HPL_GD)
+- 5 Capri (Capri Ø90 + 4 DIAM HPL/HPL_GD)
+- 5 Altea (80×80 HPL/HPL_GD, Ø80 HPL/HPL_GD, 120×80 HPL)
+- 2 Ágata (120×80 HPL GD, 180×90 encimera = Ágata L)
+- 5 Sofia (no en web actual del proveedor)
+
+**6 productos DRAFT nuevos** con tag `pendiente-confirmar-proveedor`:
+- Brunei HPL Gran Densidad (4 variantes tamaño)
+- Java HPL Gran Densidad (2 variantes)
+- Capri HPL Gran Densidad (5 variantes)
+- Capri Doble · HPL GD / pie alto (3 variantes)
+- Altea · variantes extras (5 variantes: HPL_GD, Ø80, 120×80)
+- Ágata · variantes extras (2 variantes: 120×80 HPL_GD, 180×90 encimera)
+
+### Cómo se ejecutó
+
+```bash
+python3 consolidate_balliu_mesas_comedor.py            # dry-run
+python3 consolidate_balliu_mesas_comedor.py --apply    # backup 36 productos + apply + publish
+```
+
+Backup: `backups/mesas_comedor_20260517-105449.json` (36 productos).
+
+### Siguientes pasos
+
+1. **Repaso final de precios** de todos los productos consolidados (1+2+1+7+9 = 20 productos consolidados activos en total tras Familias 1, 2 y 3).
+2. **Familia 5: Sillas Balliu** (Etna, Bruna, Selva, Vera, Mila…).
+3. **Familia 6: Pasarelas resina Balliu**.
+4. **Hevea**: auditoría completa pendiente.
+5. **Imágenes por variante** (todas las familias).
+6. **Confirmar con proveedor Balliu**: HPL Gran Densidad, Sofia, Olimpia Esquinera, Mesa Greta, Ágata L, Atlanta 240×90 — todos en DRAFT con tag `pendiente-confirmar-proveedor`.
+
+---
+
 ## 2026-05-17 · Sub-piloto 3d cerrado — Mesa auxiliar Balliu (7 consolidados / 98 variantes + 10 DRAFT)
 
 **Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3d (Mesa auxiliar)

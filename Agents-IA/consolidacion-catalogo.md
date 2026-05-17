@@ -37,7 +37,7 @@ El piloto de **parasoles Balliu** ya cerrado (2026-05-16) demostró el flujo:
 |---|---|---|---|
 | **Parasoles Balliu** | 15 (parasoles + pies + bases) | **10** (con 153 variantes) | ✅ Completado 2026-05-16 |
 | **Tumbonas Balliu** | 20 (tumbonas + mini + colchonetas) | **19** (con 787 variantes) · 1 a DRAFT (Alba) | ✅ Completado 2026-05-17 |
-| **Mesas HPL Balliu** | ~50 (real) | ~25 estimado (troceado en 4 sub-pilotos) | 🟡 En curso — 3b ✅ |
+| **Mesas Balliu** (familia 3 completa) | ~50 planos + 1 consolidado | **18 ACTIVE / 355 variantes + 50 DRAFT** | ✅ Completado 2026-05-17 (4 sub-pilotos 3b/3c/3d/3a) |
 | **Mesas auxiliares aluminio Balliu** | ~5 | 1 (Olimpia con variantes) | ⏳ Pendiente |
 | **Sillas Balliu** (Etna, Bruna, Selva, Vera) | 5+ | 4 estimado | ⏳ Pendiente |
 | **Pasarelas resina Balliu** | 2 | 1 con variante | ⏳ Pendiente |
@@ -166,6 +166,7 @@ SKU _ROMA_300X300           → Roma lateral (1.897,36 €)
 |---|---|---|---|---|
 | **3b** | Mesa alta (Capri Alta) | 6 | 1 (+5 DRAFT) | ✅ 2026-05-17 |
 | **3c** | Mesa centro (Etna) | 1 (con 2 variantes) | 1 ACTIVE 15v · 1 DRAFT 1v | ✅ 2026-05-17 |
+| **3a** | Mesa comedor (Selva, Brunei, Atlanta, Java, Capri, Capri Doble, Altea, Ágata, Nora; Sofia DRAFT) | ~36 planos | 9 ACTIVE 240v · 34 DRAFT | ✅ 2026-05-17 |
 | **3d** | Mesa auxiliar (Eva Pro Mini/BCN, Olimpia, Noa, Etna, Mini Prestige) | 14 + 1 ya consol. | 7 ACTIVE 98v · 10 DRAFT | ✅ 2026-05-17 |
 | **3a** | Mesa comedor (Selva, Brunei, Atlanta, Java, Sofia, Capri, Altea, Ágata, Nora) | ~25 | ~12 estimado | ⏳ |
 
@@ -265,6 +266,39 @@ Mismo SKU `BALLIU_60X60_MESA_ALTA_TABLERO_HPL_GD_A3352658` aparece en dos filas 
 **DRAFT (10):**
 - 8 existentes a DRAFT (4 duplicados Prestige + Olimpia Central HPL_GD + 2 Olimpia Esquinera + Mesa Greta).
 - 2 nuevos creados: Etna HPL Gran Densidad y Etna Werzalit Ø60 (con tag `pendiente-confirmar-proveedor`).
+
+### Sub-piloto 3a — Mesa comedor Balliu ✅ COMPLETADO (2026-05-17)
+
+**Script:** [`consolidate_balliu_mesas_comedor.py`](../consolidate_balliu_mesas_comedor.py).
+**Backup:** `backups/mesas_comedor_20260517-105449.json` (36 productos, gitignored).
+
+**Decisiones del dueño (confirmadas con capturas web del proveedor):**
+1. HPL Gran Densidad nunca como opción visible → DRAFT separado por modelo.
+2. Brunei según matriz web: 4 tamaños × 3 chasis × 5 colores HPL standard = 60v.
+3. Altea según web: solo 70×70 y 80×80, 2 chasis (Blanco/Tórtola), 5 HPL = 20v.
+4. Capri Doble producto aparte (no variante del Capri principal).
+5. Nora dimensión web 72×72 cm (no Ø70 del Excel).
+6. Sofia, Atlanta 240×90, Ágata L, Olimpia Esquinera, Mesa Greta → DRAFT (no en web).
+
+**Resultado: 9 productos ACTIVE consolidados (240 variantes) + 34 DRAFT:**
+
+| # | ACTIVE | Variantes |
+|---|---|---|
+| 1 | Mesa exterior resina · Werzalit · Selva | 6 (Tamaño) |
+| 2 | Mesa exterior aluminio · HPL · Brunei | **60** (Tamaño 4 × Chasis 3 × HPL 5) |
+| 3 | Mesa extensible exterior aluminio · HPL · Atlanta | 30 (Tamaño 2 × Chasis 3 × HPL 5) |
+| 4 | Mesa extensible exterior aluminio · HPL · Java | 30 (Tamaño 2 × Chasis 3 × HPL 5) |
+| 5 | Mesa exterior aluminio · HPL · Capri | **75** (Tamaño 5 × Chasis 3 × HPL 5) |
+| 6 | Mesa exterior aluminio · HPL 120×80 cm · Capri Doble | 15 (Chasis 3 × HPL 5) |
+| 7 | Mesa exterior aluminio · HPL · Altea | 20 (Tamaño 2 × Chasis 2 × HPL 5) |
+| 8 | Mesa exterior aluminio · 75×75 cm · Ágata | 2 (Color) |
+| 9 | Mesa exterior aluminio · 72×72 cm · Nora | 2 (Color) |
+
+**DRAFT (34):**
+- 28 productos planos legacy a DRAFT (Selva ×5, Atlanta ×3, Java ×3, Capri ×5, Altea ×5, Ágata ×2, Sofia ×5).
+- 6 productos DRAFT nuevos con tag `pendiente-confirmar-proveedor` (Brunei HPL_GD, Java HPL_GD, Capri HPL_GD, Capri Doble extras, Altea extras, Ágata extras).
+
+**Hallazgo sobre Altea:** Excel no tiene precio para 70×70 HPL standard. Se usa **421,43€** (precio mínimo del rango web del proveedor) por consistencia con la matriz. 80×80 HPL = 422,17€ (Excel directo).
 
 ---
 
