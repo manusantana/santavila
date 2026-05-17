@@ -13,6 +13,78 @@
 
 ---
 
+## 2026-05-17 · Familia 5 cerrada — Sillas Balliu (10 consolidados / 168 variantes + 5 DRAFT)
+
+**Paso del flujo:** Sprint catálogo — Familia 5 (Sillas)
+**Estado:** ✅ Aplicado en producción · 10 consolidados publicados en Online Store + Shop
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_sillas.py`
+
+### Qué se ejecutó
+
+Inspección Excel + Shopify + web Balliu de 21 SKUs sillas/taburetes/sillones repartidos en 11 modelos. WebFetch a 12 modelos para confirmar matriz.
+
+### Decisiones del dueño aplicadas
+
+1. **Patrón Blanco/Prestige** para Bimba, Duna (3 colores: Blanco/Negro/Tórtola).
+2. **Selva** solo 2 colores (Blanco/Arena), sin la nota "para más colores consultar".
+3. **Venus** sin opción Color (solo Tórtola en web → regla UX N=1).
+4. **Vera** consolidado con opciones [Configuración(3) × Color(2)] = 6 variantes.
+5. **Bruna** consolidado con [Brazos(2) × Color(2)] = 4 variantes.
+6. **Silla/Etna Alta/Taburete Etna**: Chasis(3) × Tejido Balliu(16) = 48 variantes c/u, precio único.
+7. **Mila** con Chasis(2) × Tejido(2) = 4 variantes.
+8. **Taburete Etna**: precio Excel (186,62€), no web (188,63€).
+9. **Silla Greta** y **Bruna 197,73€ misteriosa** → DRAFT con tag `pendiente-confirmar-proveedor`.
+
+### Resultado (10 ACTIVE + 5 DRAFT)
+
+| # | ACTIVE | Variantes | Precio (€) |
+|---|---|---|---|
+| 1 | Silla exterior resina · estilo clásico · **Bimba** | 3 (Color B/N/T) | 102,03 / 103,56 |
+| 2 | Silla exterior resina · estilo minimalista · **Duna** | 3 (Color B/N/T) | 77,39 / 81,76 |
+| 3 | Silla exterior resina apilable · **Selva** | 2 (Color B/A) | 33,50 / 40,52 |
+| 4 | Silla exterior resina · **Bruna** | 4 (Brazos × Color) | 70,81 / 84,19 |
+| 5 | Silla exterior resina · **Vera** | 6 (Configuración × Color) | 77,97 / 79,76 / 115,08 |
+| 6 | Silla exterior resina · **Venus** | 2 (Brazos) | 65,42 / 70,71 |
+| 7 | Silla exterior aluminio · tejido Balliu · **Etna** | **48** (Chasis × Tejido 16) | 181,89 |
+| 8 | Silla exterior aluminio alta · tejido Balliu · **Etna Alta** | **48** | 190,20 |
+| 9 | Taburete exterior aluminio · tejido Balliu · **Etna** | **48** | 186,62 |
+| 10 | Silla exterior aluminio · tejido Balliu · **Mila** | 4 (Chasis 2 × Tejido 2) | 97,88 |
+
+**Total ACTIVE: 10 productos · 168 variantes.**
+
+**DRAFT (5):**
+- 4 existentes: Venus con brazos (consolidado), Silla Greta (no en web), 2 duplicados Bruna misteriosos.
+- 1 nuevo: `silla-exterior-resina-bruna-precio-alto-pendiente` (197,73€) — `pendiente-confirmar-proveedor`.
+
+### Hallazgo Bruna misteriosa
+
+El SKU `BALLIU_BRUNA_SILLA_CON_BRAZ_94B6E5B5` aparece dos veces en Excel con precios muy distintos (89,55€ y 197,73€) y dos productos planos en Shopify con el mismo SKU (113,80€ y 89,95€). La web del proveedor solo tiene Bruna sin/con brazos a 70,81€ / 84,19€. **No identificado** qué modelo es la variante 197,73€. Documentado en `PENDIENTES_PROVEEDOR.md`.
+
+### Pendientes documentados
+
+Archivo nuevo `docs/santavila/PENDIENTES_PROVEEDOR.md` (creado en esta sesión) acumula todo lo que hay que confirmar con Balliu:
+- HPL Gran Densidad (10 modelos)
+- Sofia, Ágata L, Olimpia Esquinera, Mesa Greta, Silla Greta, Atlanta 240×90, Werzalit Ø60, Capri Doble pie alto, Mesa alta Ø70
+- Discrepancias precio: Olimpia aux tela, Altea 70×70 HPL, Taburete Etna
+- SKU duplicado Bruna 197,73€
+
+### Cómo se ejecutó
+
+```bash
+python3 consolidate_balliu_sillas.py            # dry-run
+python3 consolidate_balliu_sillas.py --apply    # backup + apply + publish
+```
+
+Backup: `backups/sillas_<timestamp>.json`.
+
+### Siguiente paso
+
+- **Repaso final de precios y nombres** de todos los productos consolidados (47 + 10 = 57 productos · ~1.460 variantes).
+- **Familia 6 · Pasarelas resina Balliu** (~2 modelos).
+- **Hevea**: auditoría completa pendiente.
+
+---
+
 ## 2026-05-17 · Sub-piloto 3a cerrado — Mesa comedor Balliu (9 consolidados / 240 variantes + 34 DRAFT)
 
 **Paso del flujo:** Sprint catálogo — Familia 3 (Mesas HPL), sub-piloto 3a (Mesa comedor — el más complejo y último)

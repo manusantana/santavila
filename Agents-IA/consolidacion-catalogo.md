@@ -39,7 +39,7 @@ El piloto de **parasoles Balliu** ya cerrado (2026-05-16) demostró el flujo:
 | **Tumbonas Balliu** | 20 (tumbonas + mini + colchonetas) | **19** (con 787 variantes) · 1 a DRAFT (Alba) | ✅ Completado 2026-05-17 |
 | **Mesas Balliu** (familia 3 completa) | ~50 planos + 1 consolidado | **18 ACTIVE / 355 variantes + 50 DRAFT** | ✅ Completado 2026-05-17 (4 sub-pilotos 3b/3c/3d/3a) |
 | **Mesas auxiliares aluminio Balliu** | ~5 | 1 (Olimpia con variantes) | ⏳ Pendiente |
-| **Sillas Balliu** (Etna, Bruna, Selva, Vera) | 5+ | 4 estimado | ⏳ Pendiente |
+| **Sillas Balliu** (Bimba, Duna, Selva, Bruna, Vera, Venus, Etna, Etna Alta, Taburete Etna, Mila) | 14 planos/parcial | 10 ACTIVE 168v · 5 DRAFT | ✅ Completado 2026-05-17 |
 | **Pasarelas resina Balliu** | 2 | 1 con variante | ⏳ Pendiente |
 | **Imágenes por variante (todas las familias)** | — | — | ⏳ Pendiente — atacar tras completar consolidaciones |
 | **Hevea** | 115 | TBD — la mayoría sets/conjuntos sin variantes | 🟦 Auditoría pendiente |
@@ -310,9 +310,37 @@ Inventario inicial estimado:
 
 ---
 
-## Familia 5 — Sillas Balliu ⏳ PENDIENTE
+## Familia 5 — Sillas Balliu ✅ COMPLETADO (2026-05-17)
 
-Modelos detectados: ETNA, ETNA ALTA, BRUNA, SELVA, VERA. ~5 productos planos.
+**Script:** [`consolidate_balliu_sillas.py`](../consolidate_balliu_sillas.py).
+**Backup:** `backups/sillas_<timestamp>.json` (gitignored).
+
+**11 modelos detectados** en Excel + web Balliu. **10 modelos ACTIVE consolidados** (Bruna 197,73€ misteriosa a DRAFT pendiente).
+
+**Decisiones del dueño:**
+- Patrón Blanco/Prestige en Bimba, Duna, Selva.
+- Venus solo Tórtola (regla UX N=1, sin opción Color).
+- Vera consolidado con [Configuración(3) × Color(2)] = 6v.
+- Bruna consolidado con [Brazos(2) × Color(2)] = 4v.
+- Etna/Etna Alta/Taburete Etna: Chasis(3) × Tejido(16) = 48v c/u.
+- Mila: Chasis(2) × Tejido(2) = 4v.
+
+**Resultado: 10 productos ACTIVE / 168 variantes + 5 DRAFT.**
+
+| # | ACTIVE | Variantes |
+|---|---|---|
+| 1 | Silla exterior resina · estilo clásico · Bimba | 3 (Color) |
+| 2 | Silla exterior resina · estilo minimalista · Duna | 3 (Color) |
+| 3 | Silla exterior resina apilable · Selva | 2 (Color) |
+| 4 | Silla exterior resina · Bruna | 4 (Brazos × Color) |
+| 5 | Silla exterior resina · Vera | 6 (Configuración × Color) |
+| 6 | Silla exterior resina · Venus | 2 (Brazos) |
+| 7 | Silla exterior aluminio · tejido Balliu · Etna | **48** |
+| 8 | Silla exterior aluminio alta · tejido Balliu · Etna Alta | **48** |
+| 9 | Taburete exterior aluminio · tejido Balliu · Etna | **48** |
+| 10 | Silla exterior aluminio · tejido Balliu · Mila | 4 |
+
+**DRAFT (5):** Venus con brazos (consolidado), Silla Greta (no en web), 2 duplicados Bruna misteriosos, 1 DRAFT nuevo Bruna 197,73€ (pendiente confirmar).
 
 ---
 
