@@ -13,6 +13,66 @@
 
 ---
 
+## 2026-05-17 · Familia 2 cerrada — Tumbonas Balliu (19 productos / 787 variantes)
+
+**Paso del flujo:** Sprint adicional — calidad de catálogo (continuación del plan de consolidación)
+**Estado:** ✅ Aplicado en producción · todos los productos publicados
+**Quién:** sesión interactiva con dueño · script `consolidate_balliu_tumbonas.py`
+
+### Qué se ejecutó
+
+Auditoría cruzada Shopify ↔ Excel ↔ web Balliu de la familia "tumbona". 20 productos planos → **19 productos con variantes ricas** + 1 a DRAFT (Alba).
+
+**Documentos:**
+- [`Agents-IA/consolidacion-catalogo.md`](../../Agents-IA/consolidacion-catalogo.md) — actualizado con la Familia 2 completada.
+- [`consolidate_balliu_tumbonas.py`](../../consolidate_balliu_tumbonas.py) — nuevo script siguiendo el patrón de parasoles.
+- `backups/tumbonas_<timestamp>.json` — snapshots previos (gitignored).
+
+### Decisiones del dueño aplicadas
+
+1. **Chasis con valores reales** (Opción A): cada modelo define sus 1-5 colores reales del proveedor.
+2. **Precio Blanco vs "Prestige"** (= cualquier color no-Blanco, más caro).
+3. **16 colores tejido como option visible** al cliente.
+4. **Tablillas → producto separado** (Carmen T, Lola T, Eva Pro T) en lugar de variante. Carmen T y Lola T se crearon desde cero.
+5. **Alba a DRAFT** (no existe en la web Balliu — pendiente verificar).
+6. **Naming Opción C**: sin marca proveedor visible.
+
+### Resultado
+
+| Producto | Variantes |
+|---|---|
+| Eva Pro (tela / tablillas) | 80 + 5 |
+| Eva RG / Eva RTG | 32 + 1 |
+| Carmen (tela / tablillas) | 80 + 5 |
+| Lola (tela / tablillas) | 80 + 5 |
+| Noa | 80 |
+| Olimpia / Etna / Etna Alta (con ruedas Sí/No) | 96 × 3 = 288 |
+| Iris / Marina | 16 + 16 |
+| Mini Cannes / Bristol / Marina | 48 + 16 + 32 |
+| Colchoneta (3 tejidos) | 3 |
+| Alba | DRAFT |
+| **Total** | **787 variantes en 19 productos** |
+
+Todos los productos vivos publicados a Online Store + Shop.
+
+### Bugs resueltos
+
+- **Productos con options legacy** (`Color chasis`, `Configuración`): 7 productos tenían options con nombres viejos. `productOptionsCreate` falla en silencio y luego `productVariantsBulkCreate` da `NEED_TO_ADD_OPTION_VALUES`. **Fix**: borrar variantes con `productVariantsBulkDelete`, luego borrar options con `productOptionsDelete strategy:POSITION`, luego re-aplicar consolidación normal.
+- **SSL EOF intermitente**: añadidos retries con backoff exponencial.
+- **`strategy: DEFAULT` no borra options con múltiples valores** — usar `strategy: POSITION` después de borrar variantes.
+
+### Pendientes
+
+- ⏳ Verificar Alba con el proveedor (descatalogado o nombre antiguo).
+- ⏳ Imágenes por variante (todas las familias) — diferido.
+- ⏳ Olimpia/Etna/Etna Alta con 96 variantes están al filo del límite Shopify (100/producto).
+
+### Siguiente paso recomendado
+
+**Familia 3 — Mesas HPL Balliu** (~6 productos planos → 2-3 modelos: SOFIA, ATLANTA, JAVA, DIAM, ALTEA). Patrón idéntico al usado en tumbonas.
+
+---
+
 ## 2026-05-16 (tarde) · Cierre Familia 1 con Ágora + rename del documento maestro
 
 **Paso del flujo:** completar Familia 1 (Parasoles) + reorganizar la documentación de consolidación

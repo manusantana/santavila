@@ -36,7 +36,7 @@ El piloto de **parasoles Balliu** ya cerrado (2026-05-16) demostró el flujo:
 | Familia | Productos planos hoy | Modelos consolidados | Estado |
 |---|---|---|---|
 | **Parasoles Balliu** | 15 (parasoles + pies + bases) | **10** (con 153 variantes) | ✅ Completado 2026-05-16 |
-| **Tumbonas Balliu** | ~16 | ~5 estimado | ⏳ Pendiente |
+| **Tumbonas Balliu** | 20 (tumbonas + mini + colchonetas) | **19** (con 787 variantes) · 1 a DRAFT (Alba) | ✅ Completado 2026-05-17 |
 | **Mesas HPL Balliu** | ~6 | 2-3 estimado | ⏳ Pendiente |
 | **Mesas auxiliares aluminio Balliu** | ~5 | 1 (Olimpia con variantes) | ⏳ Pendiente |
 | **Sillas Balliu** (Etna, Bruna, Selva, Vera) | 5+ | 4 estimado | ⏳ Pendiente |
@@ -95,21 +95,64 @@ SKU _ROMA_300X300           → Roma lateral (1.897,36 €)
 
 ---
 
-## Familia 2 — Tumbonas Balliu ⏳ PENDIENTE
+## Familia 2 — Tumbonas Balliu ✅ COMPLETADO (2026-05-17)
 
-> Próxima familia a auditar siguiendo el mismo patrón.
+**Resultado:** 20 productos planos → 19 productos con **787 variantes** + Alba a DRAFT.
+**Script:** [`consolidate_balliu_tumbonas.py`](../consolidate_balliu_tumbonas.py).
+**Backup:** `backups/tumbonas_<timestamp>.json` (gitignored).
 
-**Inventario inicial estimado** (de la auditoría anterior):
-- 16 productos planos con título genérico "Tumbona de exterior resina" / "Tumbona de exterior" / "Tumbona de exterior aluminio".
-- Modelos detectados: EVA PRO, EVA RG, EVA RTG, CARMEN, LOLA, NOA, ALBA, OLIMPIA, IRIS, ETNA, ETNA ALTA, MARINA.
-- Probablemente ~5 modelos base con variantes de chasis/tablillas/tela.
+### Decisiones del dueño aplicadas (2026-05-17)
 
-**Pasos al abordar:**
-1. WebFetch a cada URL de tumbona en balliuexport.com.
-2. Cruce Excel ↔ modelo (por precio + nombre).
-3. Decisiones del dueño sobre ambigüedades.
-4. Añadir entries `PRODUCTS` a un nuevo script (o extender el actual con un módulo).
-5. Dry-run → piloto → resto.
+1. **Chasis con valores reales** (Opción A): cada modelo define sus 1-5 colores reales (Blanco / Arena / Bronce / Gris Oscuro / Madera / Tórtola / Antracita / Aluminio).
+2. **Precio Blanco vs "Prestige"**: Blanco = precio base · cualquier otro color = +precio Prestige (más caro).
+3. **16 colores de tejido como option visible al cliente** (mismo precio, todas las combinaciones).
+4. **Tablillas → producto separado** (Carmen T, Lola T, Eva Pro T) en lugar de variante.
+5. **Alba a DRAFT** (no existe en la web actual de Balliu — pendiente verificar con proveedor).
+6. **Mini tumbonas** verificadas en la web: Cannes (3 chasis), Bristol (madera teca), Marina mini (2 chasis), todos con 16 colores tejido.
+
+### Resultado final (19 productos Shopify)
+
+| # | Producto Shopify | Variantes | Precio IVA |
+|---|---|---|---|
+| 1 | Tumbona resina · respaldo regulable Ø73 cm tela (Eva Pro) | 80 (5 chasis × 16 tejido) | 228,44 / 242,13 € |
+| 2 | Tumbona resina · respaldo regulable Ø73 cm tablillas (Eva Pro T, Mario Eskenazi) | 5 (5 chasis) | 219,66 / 242,13 € |
+| 3 | Tumbona resina playa · 73 cm tela (Eva RG) | 32 (2 chasis × 16 tejido) | 184,83 / 192,27 € |
+| 4 | Tumbona resina jardín · 73 cm tablillas (Eva RTG) | 1 | 190,14 € |
+| 5 | Tumbona resina · respaldo regulable 75 cm tela (Carmen) | 80 | 183,23 / 188,28 € |
+| 6 | Tumbona resina · respaldo regulable 75 cm tablillas (Carmen T) ⭐ creado nuevo | 5 | 209,03 / 219,66 € |
+| 7 | Tumbona resina · respaldo regulable playa 75 cm tela (Lola) | 80 | 182,17 / 187,74 € |
+| 8 | Tumbona resina · respaldo regulable playa 75 cm tablillas (Lola T) ⭐ creado nuevo | 5 | 208,76 / 212,34 € |
+| 9 | Tumbona resina premium · respaldo regulable (Noa) | 80 | 400,68 / 419,31 € |
+| 10 | Tumbona aluminio · respaldo regulable con/sin ruedas (Olimpia) | 96 (Ruedas × Chasis × Tejido) | 535,45 / 587,56 € |
+| 11 | Tumbona aluminio · respaldo regulable (Etna) | 96 | 426,44 / 470,48 € |
+| 12 | Tumbona aluminio alta · respaldo regulable acceso fácil (Etna Alta) | 96 | 463,07 / 496,21 € |
+| 13 | Tumbona aluminio · con ruedas integradas 58 cm (Iris) | 16 (color tejido) | 628,76 € |
+| 14 | Tumbona aluminio apilable · 68 cm (Marina) | 16 | 323,76 € |
+| 15 | Mini tumbona aluminio plegable · 62 cm (Cannes) | 48 (3 chasis × 16 tejido) | 262,28 € |
+| 16 | Mini tumbona madera teca plegable · 59 cm (Bristol) | 16 | 304,51 € |
+| 17 | Mini tumbona aluminio apilable · 57 cm (Mini Marina) | 32 (2 chasis × 16 tejido) | 213,34 € |
+| 18 | Colchoneta para tumbona | 3 (Tela Balliu / Acrílico / Dry Feel) | 115,55 / 131,37 / 190,88 € |
+| 19 | Tumbona Alba ⏸ **DRAFT** (pendiente verificar con proveedor) | — | — |
+| **Total** | | **787 variantes** | |
+
+### Bugs resueltos en el camino
+
+- **Productos con options legacy** (`Color chasis`, `Configuración`): 7 productos (eva_rg, carmen_tela, lola_tela, noa, olimpia, etna, etna_alta) tenían options con nombres viejos del estado original. La mutación `productOptionsCreate` falla en silencio al detectar duplicado, pero luego `productVariantsBulkCreate` falla con `NEED_TO_ADD_OPTION_VALUES`.
+  - **Fix**: borrar variantes (`productVariantsBulkDelete` dejando 1 Default Title) → borrar options (`productOptionsDelete` con `strategy: POSITION`) → re-crear options + variantes con el script normal.
+- **SSL EOF intermitente** en mitad del fix masivo: añadir retries con backoff exponencial al wrapper `gql()`.
+- **Productos creados desde cero** (Carmen T, Lola T): el script ya soportaba `create_new=True` del piloto de Ágora, funcionó al primer intento.
+
+### Pendientes operativos
+
+- ⏳ **Verificar Alba con el proveedor**: no aparece en balliuexport.com. ¿Está descatalogado? ¿Es nombre antiguo de otro modelo? Mientras tanto en DRAFT.
+- ⏳ **Imágenes por variante** (mapear color del tejido → swatch del proveedor).
+- ⏳ **Olimpia/Etna/Etna Alta tienen 96 variantes**, al filo del límite Shopify (100/producto). Si en futuro hay que añadir alguna option más, considerar separar en 2 productos.
+
+---
+
+## Familia 2 — Tumbonas Balliu — ESPECIFICACIÓN ORIGINAL (referencia)
+
+> Histórico de cómo se planificó. La sección de arriba refleja el resultado final.
 
 ---
 
