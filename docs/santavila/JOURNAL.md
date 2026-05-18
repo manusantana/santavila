@@ -13,6 +13,51 @@
 
 ---
 
+## 2026-05-18 · Costes Shopify + sync Hevea completo
+
+**Paso del flujo:** Pricing — costes unitarios y datos de proveedor sincronizados.
+**Estado:** ✅ Completado.
+**Quién:** sesión interactiva con dueño · scripts `set_unit_costs.py` + `sync_hevea_full.py`.
+
+### Qué se hizo
+
+**1. Costes BRUNEI + Capri fijados en Shopify** (`set_unit_costs.py --apply`):
+- 89 variantes actualizadas con coste real por variante (fin de los falsos CRÍTICO del auditor).
+- BRUNEI: 80×80=257.19€ · 130×80=342.68€ · 160×90=412.95€ · 190×90=506.65€
+- Capri cuadrada: 70×70=203.29€ · 80×80=218.28€
+- Técnica: `productVariantsBulkUpdate` con `inventoryItem.cost` (scope `write_products`, no necesita `write_inventory`).
+
+**2. Sync completo Hevea CSV → Excel + Shopify** (`sync_hevea_full.py --apply`):
+- Fuente de verdad: `proveedores_raw/hevea/20260507 ▶️CSV hevea 07_05_25.csv` (110 SKUs únicos).
+- **Excel** (hoja `20260508 -Todos `): 47 filas actualizadas — carrier_cost corregido (regla: <500€ IVA → 50€, ≥500€ → 0€).
+- **Shopify**: 106 productos actualizados — price (PSY), compareAtPrice, unitCost, descriptionHtml (descripción + tabla dimensiones).
+- 3 SKUs duplicados en CSV omitidos para revisión manual: `557-010147`, `557-010884`, `557-1563`.
+- Bug corregido en compareAtPrice: solo se activa cuando `pvp_iva > psy` (precio rebajado real). Segunda pasada eliminó ~100 compareAtPrice que eran menores que el price.
+
+**3. ACAPULCO-3 corregido manualmente** (SKU `557-010147`, handle `sofa-terraza-3-plazas-estilo-moderno-18570-cm`):
+- El sofá había sido subido a 819€ durante la auditoría basándose en un coste incorrecto (523€).
+- Datos correctos del CSV: exworks=599€, pvp=950 sin IVA → pvp_iva=1149.50€ → PSY=1150€.
+- Shopify: **819€ → 1150€**, coste **523€ → 599€**, compareAtPrice eliminado.
+- Excel fila 86: handle corregido a `sofa-terraza-3-plazas-estilo-moderno-18570-cm`.
+- Excel fila 90 (ACAPULCO-8 set, mismo SKU): datos restaurados (coste=1440€, pvp=2764.85€, psy=2765€).
+
+### Pendiente · SKUs duplicados en CSV
+
+| SKU | Producto A | Producto B |
+|---|---|---|
+| `557-010147` | ACAPULCO-3 sofá 3P (exworks=599) | ACAPULCO-8 set 3P (exworks=1440) |
+| `557-010884` | LUNA-44 (handle desconocido) | BRANDON-7 set (handle a verificar) |
+| `557-1563` | Mesa centro 120cm (×2 versiones) | — |
+
+Hevea debe asignar SKUs únicos a estos productos. Mientras tanto los handles en Shopify/Excel son correctos pero el CSV no se puede usar como fuente de verdad para ellos.
+
+### Entregables
+
+- `set_unit_costs.py` — setea unitCost para cualquier handle/psy del Excel
+- `sync_hevea_full.py` — sync completo CSV→Excel→Shopify para Hevea; reutilizable
+
+---
+
 ## 2026-05-18 · Auditoría financiera completa + corrección precio sofá
 
 **Paso del flujo:** Pricing — revisión de márgenes post-shipping.
