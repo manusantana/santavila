@@ -13,6 +13,55 @@
 
 ---
 
+## 2026-05-18 · Auditoría financiera completa + corrección precio sofá
+
+**Paso del flujo:** Pricing — revisión de márgenes post-shipping.
+**Estado:** ✅ Auditoría ejecutada. ✅ Corrección aplicada. ⏳ Costes pendientes de completar en Shopify.
+**Quién:** sesión interactiva con dueño · script `audit_financiero.py`.
+
+### Qué se hizo
+
+Auditoría de 1.596 variantes / 177 productos ACTIVOS: márgenes netos con coste real de producto + comisión Shopify Payments (2.1%+0.30€) + coste de envío real según categoría XS/M/L.
+
+**Resultado:**
+- **CRÍTICO real: 0** — los 16 flags CRÍTICO eran falsos positivos (coste estimado por promedio de handle en Excel vs coste real por variante).
+- **AVISO real: 1** → sofá 789€ con margen 17.2% (coste verificado en Shopify: 523€).
+- **SIN_COSTE: 202 variantes** (7 handles) sin coste en Shopify ni en Excel — no auditables hasta completar datos.
+
+**Corrección ejecutada:**
+- `sofa-terraza-3-plazas-estilo-moderno-18570-cm`: precio **789€ → 819€** (compareAtPrice 850€ mantenido). Margen neto resultante: ~20.1%.
+
+### Falsos positivos detectados — causa raíz
+
+| Handle | Variantes | Coste estimado (avg) | Coste real (Excel) | Margen real |
+|---|---|---|---|---|
+| BRUNEI 80×80 (ef580ae2) | 15 var · 478.95€ | 411€ | 257€ | ~40% ✅ |
+| BRUNEI 130×80 (ef580ae2) | 15 var · 639€ | 411€ | 343€ | ~32% ✅ |
+| Capri Ø70 (724b0db0) | 15 var · 349.95€ | 273€ | ~203€ | ~37% ✅ |
+| Capri 70×70 (724b0db0) | 15 var · 378.95€ | 273€ | ~203€ | ~33% ✅ |
+| Base parasol 25kg (3ee8b72d) | 1 var · 51.95€ | 54.88€ (cruzado) | ~27€ | ~36% ✅ |
+
+El auditor usa la media de costes del handle Excel cuando Shopify no tiene el coste individual. Para eliminar estos falsos positivos: **meter costes reales por variante en Shopify Admin → Productos → Variante → Coste por artículo**.
+
+### SIN_COSTE — pendiente
+
+| Handle | Variantes | Rango precio |
+|---|---|---|
+| Tumbona resina (b19af1ea) | 80 | 228–242€ |
+| Parasol acrílico (236bd5f0) | 24 | 399€ |
+| Parasol (82e48b2d) | 64 | 384€ |
+| Parasol cuadrado 200×200 | 9 | 399–426€ |
+| Tumbona Carmen tablillas | 5 | 199–219€ |
+| Tumbona Lola tablillas | 5 | 199–212€ |
+| Mesa Capri Doble 120×80 | 15 | 535€ |
+
+### Entregables
+
+- `audit_financiero.py` — script reutilizable para futuras auditorías
+- `audit_financiero.csv` — 1.596 filas con margen neto por variante
+
+---
+
 ## 2026-05-18 · Categorías de envío aplicadas + metafield definition creada
 
 **Paso del flujo:** Shipping — categorización volumétrica XS/M/L.
