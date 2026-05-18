@@ -13,6 +13,36 @@
 
 ---
 
+## 2026-05-18 · Categorías de envío aplicadas + metafield definition creada
+
+**Paso del flujo:** Shipping — categorización volumétrica XS/M/L.
+**Estado:** ✅ Metafield + tags aplicados. ⏳ Tarifas en Admin pendientes (manual).
+**Quién:** sesión interactiva con dueño · script `apply_shipping_categories.py`.
+
+### Qué se hizo
+
+1. **Metafield definition creada via API**: `santavila.envio_categoria` (single_line_text_field, choices: xs/m/l). Id: `gid://shopify/MetafieldDefinition/319933219140`.
+
+2. **`apply_shipping_categories.py --apply`** — Clasifica los 225 handles únicos del Excel en XS/M/L y aplica metafield + tag `envio:xs|m|l`:
+   - **72 actualizados · 149 sin cambios · 4 no encontrados** (DRAFTs eliminados).
+   - Distribución final: XS=6 · M=87 · L=132.
+
+3. **Bug corregido** en `categorize()`: sets de sofás y rinconeras con "mesa de centro" en el nombre se clasificaban como M → añadida regla prioritaria para "sofa"/"rinconera" → L. 6 sets corregidos.
+
+### Reglas de clasificación aplicadas
+
+| Categoría | Criterio |
+|---|---|
+| XS | cojín, funda, limpiador |
+| M | silla/sillón individual, taburete, reposapiés, mesa auxiliar/centro/baja/lateral, mesa ≤80cm, accesorio resina, parasol <250cm |
+| L | sofá, rinconera, tumbona, mesa grande, conjunto, parasol ≥250cm, default |
+
+### Pendiente — Paso 3: crear tarifas en Shopify Admin
+
+Las zonas de envío existen (España, UE, Internacional, Pen+Baleares) pero sin tarifas. Hay que crearlas manualmente en **Admin → Settings → Shipping and delivery** según `SHIPPING_PROFILES_SETUP.md` Paso 3.
+
+---
+
 ## 2026-05-18 · Precios psicológicos aplicados a TODO el catálogo activo
 
 **Paso del flujo:** Pricing — redondeo psicológico.

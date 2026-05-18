@@ -160,6 +160,10 @@ def categorize(producto: str, handle: str) -> str:
     if "limpiador" in text:
         return "xs"
 
+    # L prioritario — sofá o rinconera (antes de cualquier regla M)
+    if "sofa" in text or "sofá" in text or "rinconera" in text:
+        return "l"
+
     # M — silla / taburete / reposapiés
     if "taburete" in text or "reposapi" in text:
         return "m"
@@ -186,7 +190,7 @@ def categorize(producto: str, handle: str) -> str:
             return "l"
         return "m" if m else "l"
 
-    # L — todo lo demás (mesa grande, sofá, conjunto, tumbona, etc.)
+    # L — todo lo demás (mesa grande, conjunto, tumbona, etc.)
     return "l"
 
 
