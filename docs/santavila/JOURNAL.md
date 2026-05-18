@@ -13,6 +13,69 @@
 
 ---
 
+## 2026-05-17 · Repaso final — precios, nombres y limpieza legacy
+
+**Paso del flujo:** Cierre y QA tras consolidar Familias 1, 2, 3 y 5.
+**Estado:** ✅ Aplicado en producción.
+**Quién:** sesión interactiva con dueño · scripts ad-hoc.
+
+### Repaso de precios — 0 discrepancias
+
+Cruce automático Excel pestaña `20260508 -Todos ` col F (PVP IVA) ↔ Shopify para los **1.444 variantes con SKU `SV-*`** (productos consolidados). Resultado:
+
+- ✅ **512 variantes-base** matchean exactamente con Excel (±0,05 €).
+- ✅ **931 variantes derivadas** (Chasis × Color, Tamaño × Color, etc.) comparten precio con la variante base.
+- ✅ **0 discrepancias**. Catalogación totalmente sincronizada con el Excel maestro.
+
+### Productos legacy adicionales pasados a DRAFT
+
+Detectados durante el repaso (productos ACTIVE Balliu sin consolidar todavía):
+
+- **Pasarelas resina B2B** (2 productos): no encaja con el perfil residencial. Tags: `producto-b2b`, `pendiente-confirmar-proveedor`, `legacy-balliu-consolidado-2026-05`.
+- **Eva Pro tumbonas legacy** (3 productos): duplicados de la consolidación Familia 2 (`ddeeef3f`, `b19af1ea con 73-cm`, `32a6c0ea con 73-cm`).
+- **Parasoles legacy sin modelo** (3 productos): `parasol-para-terraza-300-cm`, `-300-cm-2`, `-350-cm`.
+- **Tumbona legacy sin modelo** (1 producto): `tumbona-de-exterior`.
+
+**Total**: 9 productos legacy pasados a DRAFT.
+
+### Refactor de nombres — Familias 1 y 2
+
+Aplicada regla **"Opción C + sufijo Modelo"** (introducida en sub-piloto 3d) retroactivamente a Familias 1 Parasoles y 2 Tumbonas. Script: [`refactor_nombres_balliu_familias_1_2.py`](../../refactor_nombres_balliu_familias_1_2.py).
+
+**26 productos renombrados.** Ejemplos:
+
+| Antes | Después |
+|---|---|
+| Parasol cuadrado · aluminio 300×300 cm | **Parasol cuadrado exterior · aluminio 300×300 cm · Brisa** |
+| Parasol exterior · 16 colores Ø200 cm | **Parasol exterior tela · Ø200 cm · Pamela tela** |
+| Parasol exterior acrílico · mástil regulable Ø200 cm | **Parasol exterior acrílico · Ø200 cm · Pamela acrílico** |
+| Tumbona resina · respaldo regulable Ø73 cm tablillas (Mario Eskenazi) | **Tumbona exterior resina · Ø73 cm tablillas · Eva Pro T** |
+| Tumbona resina premium · respaldo regulable | **Tumbona exterior resina · Noa** |
+| Mini tumbona aluminio plegable · 62 cm | **Mini tumbona exterior aluminio plegable · 62 cm · Cannes** |
+
+**Limpiezas aplicadas:**
+- Quitado `(Mario Eskenazi)` del título Eva Pro T (queda para descripción).
+- Quitado `premium` de Noa.
+- Quitado `16 colores` (no es atributo de producto) — cambiado a `tela` cuando aplica.
+- Añadido `exterior` consistentemente.
+- Pamela y Ocean diferenciados con sufijo `tela`/`acrílico` ya que el mismo modelo se vende en dos materiales.
+
+### Ágora — verificada y completada
+
+`parasol-cuadrado-200x200` (Ágora, 9 variantes ACTIVE) **no tenía tag `Balliu`** y por eso no aparecía en mis listados anteriores. Corregido: tags `Balliu`, `envio:l` añadidos.
+
+### Backup
+
+`backups/refactor_nombres_<timestamp>.json` con snapshot previo de todos los productos renombrados.
+
+### Siguientes pasos
+
+- **Hevea**: auditoría completa (115 SKUs en pestaña `Hevea`).
+- **Familia 7 estimada**: Camas balinesas, Sofás Olimpia/Etna, Fundas protectoras, Cojines, Weguard (productos ACTIVE legacy sin consolidar que el dueño decidirá si consolidar).
+- **Imágenes por variante** (todas las familias).
+
+---
+
 ## 2026-05-17 · Familia 5 cerrada — Sillas Balliu (10 consolidados / 168 variantes + 5 DRAFT)
 
 **Paso del flujo:** Sprint catálogo — Familia 5 (Sillas)
