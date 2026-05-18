@@ -13,6 +13,38 @@
 
 ---
 
+## 2026-05-18 · Precios psicológicos aplicados a TODO el catálogo activo
+
+**Paso del flujo:** Pricing — redondeo psicológico.
+**Estado:** ✅ Aplicado en producción.
+**Quién:** sesión interactiva con dueño · scripts `fill_psy_column.py` + `sync_all_psy_prices.py`.
+
+### Qué se hizo
+
+1. **`fill_psy_column.py --apply`** — Rellena col G "Precio Venta Psicológico (con IVA 21%)" en la hoja `20260508 -Todos ` de `Santavila.xlsx`. 281 filas procesadas con las reglas segmentadas por price bruto.
+
+2. **`sync_all_psy_prices.py --apply`** — Aplica precios psicológicos a todos los productos con `status:active` de Shopify:
+   - **177 productos · 1.479 variantes actualizadas · 0 errores.**
+   - Fuente `excel_col_G` para los 263 SKUs con correspondencia única en el Excel (productos originales Balliu).
+   - Fuente `psy(shopify)` para los ~1.216 SKUs `SV-*` (consolidados) y Hevea sin correspondencia única.
+   - Delta agregado en catálogo: **−0,60%** (normal — umbral-trick baja precios justo por encima de 150/200/300/450 €).
+
+### Reglas de redondeo aplicadas
+
+| Segmento (price bruto) | Precio | CompareAt |
+|---|---|---|
+| < 50 € | termina en .95 | × 1.30, entero |
+| 50–500 € | termina en .95; si en [umbral, umbral×1.05] → umbral − 0.10 | × 1.10, misma lógica |
+| > 500 € | entero con terminación 0/5/9 (ceil) | × 1.10, múltiplo más limpio en [psy×1.05, psy×1.12] |
+
+### Decisiones tomadas
+
+- **Solo productos `status:active`**: los DRAFTs y pendientes-proveedor se excluyen automáticamente.
+- **SKUs duplicados en Excel** (mismo handle+sku en múltiples filas): excluidos del mapping → se aplica `psy(shopify)` sobre el precio actual de Shopify. Afecta a 8 SKUs (principalmente conjuntos Hevea y un caso EVA PRO con dato incorrecto en fila 130).
+- **Reporte**: `psy_prices_report.csv` con columnas `fuente/price_antes/price_despues/compare_antes/compare_despues/status`.
+
+---
+
 ## 2026-05-17 · Repaso final — precios, nombres y limpieza legacy
 
 **Paso del flujo:** Cierre y QA tras consolidar Familias 1, 2, 3 y 5.
