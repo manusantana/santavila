@@ -37,9 +37,23 @@
 | M | silla/sillón individual, taburete, reposapiés, mesa auxiliar/centro/baja/lateral, mesa ≤80cm, accesorio resina, parasol <250cm |
 | L | sofá, rinconera, tumbona, mesa grande, conjunto, parasol ≥250cm, default |
 
-### Pendiente — Paso 3: crear tarifas en Shopify Admin
+### Estado final — Tarifas configuradas en Shopify Admin
 
-Las zonas de envío existen (España, UE, Internacional, Pen+Baleares) pero sin tarifas. Hay que crearlas manualmente en **Admin → Settings → Shipping and delivery** según `SHIPPING_PROFILES_SETUP.md` Paso 3.
+Perfiles creados y tarifas verificadas:
+
+| Perfil | Productos | Tarifa España |
+|---|---|---|
+| Envío XS - Accesorios | 10 | 9,95€ plano + gratis >500€ |
+| Envío M - Mediano | 70 | 29,95€ plano + gratis >500€ |
+| Envío L - Voluminoso | 105 | 57,95€ plano + gratis >500€ |
+| Perfil general (fallback) | todos los demás | 57,95€ (€0–€499) + gratis ≥€500 |
+
+"Gestionar envío dividido" activado.
+
+3 productos ACTIVE no estaban en el Excel (fuera del alcance del script) → etiquetados manualmente y pendientes de mover a perfil L/M:
+- `set-jardin-contemporaneo-sofa-2-plazas-2-sillones-mesa` → L
+- `sofa-terraza-3-plazas-estilo-moderno-18570-cm` → L
+- `mesa-de-centro-exterior-120-cm-altura-40-cm` → M
 
 ---
 
