@@ -1,9 +1,11 @@
 # Auditoría de productos duplicados — Santavila
 
-> **Estado:** documentado, sin abordar todavía.
-> **Snapshot:** 2026-05-14
+> **Estado:** ✅ **Fase A y Fase B mayormente completadas para Balliu** (2026-05-17/18). Hevea pendiente.
+> **Snapshot inicial:** 2026-05-14 · **Última actualización:** 2026-05-18
 > **Fuente:** query GraphQL completa contra `mueblesexterior.myshopify.com` (235 productos ACTIVE) con app `Santavila Admin` (scopes ampliados).
 > **Detonante:** el dueño vio "el parasol 4 veces" en la búsqueda del Admin.
+>
+> **Cierre:** ver sección [Estado actual 2026-05-18](#estado-actual-2026-05-18--cierre-fase-b-balliu) al final del documento para resumen de qué se ha resuelto y qué queda. Las secciones originales (snapshot 2026-05-14) se mantienen como referencia histórica.
 
 ---
 
@@ -156,3 +158,94 @@ Cuando se decida ejecutar:
 ## Histórico
 
 - 2026-05-14 — auditoría inicial detectada al ver el caso "parasol × 4" durante prep de test de envío. Documentado aquí. Sin acción inmediata, prioridad media-alta.
+- 2026-05-16 — arranque Fase B: Familia 1 Parasoles consolidada (Pamela, Ocean, Brisa, Roma, Garbí, Ágora = 10 productos / 153 variantes). Resuelve "parasol × 4".
+- 2026-05-17 — Familia 2 Tumbonas (19 productos / 787 variantes), Familia 3 Mesas completa (3b/3c/3d/3a · 18 productos / 355 variantes), Familia 5 Sillas (10 productos / 168 variantes).
+- 2026-05-18 — Repaso final precios (0 discrepancias en 1.444 variantes) + refactor nombres Familias 1-2 (26 productos uniformados) + limpieza 9 legacy a DRAFT.
+
+---
+
+## Estado actual 2026-05-18 — Cierre Fase B Balliu
+
+> Esta sección refleja el estado tras los sprints de consolidación 2026-05-16/18.
+
+### Resumen de impacto
+
+| Métrica | Snapshot 2026-05-14 | Estado 2026-05-18 |
+|---|---|---|
+| Productos ACTIVE Balliu | ~235 (con duplicados y planos) | **57 consolidados** + 13 legacy sin consolidar (camas, sofás, fundas, cojín, Weguard) |
+| Variantes ACTIVE Balliu | irregular, mayoría 1v | **~1.460 variantes ricas** (Tamaño / Chasis / Color / Tablero…) |
+| Productos DRAFT | 0 | **~80** (legacy duplicados + HPL_GD + variantes no-web + sofás/fundas/cojines/sets) |
+| Naming uniforme | ❌ | ✅ "Opción C + sufijo Modelo" en las 5 familias consolidadas |
+| Precios sincronizados con Excel | desactualizados / dispares | ✅ 0 discrepancias en 1.444 variantes |
+| Caso "parasol × 4" | abierto | ✅ resuelto (Familia 1) |
+| Pendientes con proveedor | implícitos | ✅ documentados en [`docs/santavila/PENDIENTES_PROVEEDOR.md`](../docs/santavila/PENDIENTES_PROVEEDOR.md) |
+
+### Estado por nivel
+
+#### Nivel 1 — Duplicados puros (Fase A) ✅ Cerrado para Balliu
+
+| SKU / familia | Estado | Resolución |
+|---|---|---|
+| Parasol acrílico `236BD5F0` (Pamela) | ✅ Resuelto | Winner `236bd5f0` consolidado con 24v · `-2` y `-3` pasados a DRAFT (legacy) durante Familia 1 |
+| Parasol tela `82E48B2D` (Pamela tela) | ✅ Resuelto | Winner `82e48b2d` consolidado con 64v · `-2` y `-3` a DRAFT |
+| Mesa alta HPL `A3352658` (60×60) | ✅ Resuelto | Sub-piloto 3b · winner `94512eab` con 2v ACTIVE · `a3352658` y `-2` a DRAFT |
+| Silla Bruna `94B6E5B5` | ⚠ Parcial | Bruna estándar consolidada en Familia 5; pero el SKU duplicado a 89,95€ / 113,80€ / 197,73€ está en DRAFT con tag `pendiente-confirmar-proveedor` — caso documentado en `PENDIENTES_PROVEEDOR.md §3.1-bis` |
+| Tumbona Eva Pro `B19AF1EA` | ✅ Resuelto | Winner consolidado en Familia 2 con 80v · duplicado `73-cm-b19af1ea` a DRAFT durante repaso final |
+| Mesa centro Hevea `557-1563` | ⏳ Pendiente | Es Hevea, no se ha tocado todavía. Va con auditoría Hevea. |
+
+#### Nivel 2 — Variantes mal modeladas (Fase B) ✅ Cerrado para Balliu
+
+| Familia original | Productos planos en 2026-05-14 | Resultado tras consolidación |
+|---|---|---|
+| Tumbona de exterior resina | 16 modelos | ✅ **Familia 2**: 19 productos consolidados / 787 variantes (incluye Alba a DRAFT) |
+| Mesa alta exterior HPL | 6 SKUs | ✅ **Sub-piloto 3b**: 1 ACTIVE (60×60 + 70×70 HPL std) · 5 DRAFT (Ø70, HPL GD) |
+| Mesa auxiliar aluminio 54 cm Olimpia | 5 SKUs | ✅ **Sub-piloto 3d**: Olimpia tela 48v + Olimpia Central 15v · Esquinera y HPL_GD a DRAFT |
+| Mesa auxiliar resina 48 cm Eva Pro | 4 SKUs | ✅ **3d**: Eva Pro Mini 5v + Eva Pro BCN 5v |
+| Mesa exterior HPL (varios tamaños) | 4+3+2+2+2 = 13 SKUs | ✅ **3a**: Selva, Brunei 60v, Atlanta 30v, Java 30v, Capri 75v, Capri Doble 15v, Altea 20v, Ágata, Nora. Sofia → DRAFT (no en web) |
+| Mesa exterior aluminio Altea Ø80 / 80×80 | 4 SKUs | ✅ **3a**: Altea 20v (70×70 + 80×80) · resto a DRAFT |
+| Parasol terraza aluminio 300 cm (Brisa, Roma, Garbí) | 2+ | ✅ **Familia 1**: Brisa 3v, Roma 3v, Garbí 3v |
+| Silla aluminio 56 cm (Etna, Etna Alta) | 2 SKUs | ✅ **Familia 5**: Silla Etna 48v + Etna Alta 48v + Taburete Etna 48v |
+| Mesa exterior mini (Mini Prestige) | 2 SKUs | ✅ **3d**: Mini Prestige 5v |
+| Mesa auxiliar aluminio Noa | 2 SKUs | ✅ **3d**: Noa Mesa Auxiliar 5v |
+| Accesorio exterior resina (Pasarelas) | 2 SKUs | ⚠ DRAFT B2B — no encaja perfil residencial Santavila (decidido 2026-05-18) |
+| Pie de parasol 40 kg / 40 kg RE | 2 SKUs | ⏳ Aún ACTIVE sin consolidar (productos auxiliares, prioridad baja) |
+| Base de parasol hormigón | 2 SKUs | ⏳ Aún ACTIVE sin consolidar |
+| Sets de jardín Hevea | varios | ⏳ Pendiente Hevea |
+
+#### Nivel 3 — SKUs Hevea reusados (NO duplicados) ⏳ Pendiente
+
+No se ha abordado. La mayoría son Hevea — irá con el sprint Hevea cuando se aborde.
+
+### Lo que queda abierto
+
+1. **Hevea** entero (115 SKUs en `Santavila.xlsx` pestaña `Hevea`): auditoría completa pendiente. Cubre:
+   - Mesa centro `557-1563` (Nivel 1 puro)
+   - Sets de jardín (Nivel 2)
+   - SKUs reusados intencionalmente (Nivel 3)
+2. **Familia 7 estimada** (Balliu): productos ACTIVE legacy sin consolidar todavía:
+   - 2 camas balinesas (Aura, Alma)
+   - 2 sofás (Olimpia, Etna)
+   - 3 fundas protectoras
+   - 1 cojín 40×40
+   - 1 caja seguridad Weguard
+   - Pie de parasol, Base de hormigón
+   Decidir si se consolidan en categorías "Sofás", "Fundas", "Accesorios" o se dejan como están.
+3. **Pendientes con proveedor**: documentados en `docs/santavila/PENDIENTES_PROVEEDOR.md` (HPL_GD, Sofia, Ágata L, Olimpia Esquinera, Mesa/Silla Greta, Atlanta 240×90, Werzalit Ø60, Capri Doble pie alto, Mesa alta Ø70, Bruna 197,73€, discrepancias precio).
+4. **Imágenes por variante** en las 5 familias consolidadas: deferido a próxima iteración.
+
+### Scripts aplicados (referencia)
+
+- [`consolidate_balliu_parasoles.py`](../consolidate_balliu_parasoles.py) — Familia 1
+- [`consolidate_balliu_tumbonas.py`](../consolidate_balliu_tumbonas.py) — Familia 2
+- [`consolidate_balliu_mesas_altas.py`](../consolidate_balliu_mesas_altas.py) — 3b
+- [`consolidate_balliu_mesas_centro.py`](../consolidate_balliu_mesas_centro.py) — 3c
+- [`consolidate_balliu_mesas_auxiliares.py`](../consolidate_balliu_mesas_auxiliares.py) — 3d
+- [`consolidate_balliu_mesas_comedor.py`](../consolidate_balliu_mesas_comedor.py) — 3a
+- [`consolidate_balliu_sillas.py`](../consolidate_balliu_sillas.py) — Familia 5
+- [`refactor_nombres_balliu_familias_1_2.py`](../refactor_nombres_balliu_familias_1_2.py) — repaso final naming
+- [`consolidacion-catalogo.md`](consolidacion-catalogo.md) — índice maestro vivo
+- [`docs/santavila/JOURNAL.md`](../docs/santavila/JOURNAL.md) — bitácora detallada por sprint
+
+### Backups
+
+Todos los snapshots previos a cada consolidación están en `backups/<familia>_<timestamp>.json` (gitignored). Permiten recrear cualquier producto si fuera necesario.
