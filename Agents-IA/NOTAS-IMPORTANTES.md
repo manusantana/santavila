@@ -68,6 +68,8 @@ El renderizado **parte** la descripción por esa cadena: lo de antes = intro, lo
 ```
 El JSON-LD se genera parseando `<h3>pregunta</h3><p>respuesta</p>` → depende también de la convención del §1. Script que lo aplicó: `scripts/add_faq_schema.py`.
 
+**`sections/article-faq-schema.liquid`** (solo JSON-LD, sin HTML visible) + añadida a `templates/article.json` (`order: ["section","article-faq"]`). Genera **FAQPage** en los posts del blog parseando `article.content` por el mismo separador `<h2>Preguntas frecuentes</h2>`. La FAQ visible ya está en el cuerpo del artículo; esta sección solo emite el schema. Script: `scripts/add_article_faq_schema.py`. **Se pierde al cambiar de tema → re-aplicar.**
+
 ### Cambios en `templates/collection.json`
 - Se **eliminó** el bloque de texto manual de la cabecera (mostraba la descripción entera).
 - Se **añadieron** las dos secciones nuevas al `order`, quedando:
