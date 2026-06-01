@@ -50,6 +50,26 @@ Actualmente en construcción y protegida con contraseña de Shopify.
 - **remove.bg** API key `[REDACTED_VER_ENV_LOCAL]` — eliminación de fondo. Límite: 50 créditos/mes (plan gratuito). Rate limit: ~12 req seguidas → `sleep(3)` entre peticiones.
 - **Hugging Face** token `[REDACTED_VER_ENV_LOCAL]` — generación de imágenes con FLUX.1-schnell (endpoint: `https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell`)
 
+### Apps y tokens de Shopify — cuál usar para cada cosa ⚠️ (actualizado 2026-05-31)
+
+Hay **dos apps/tokens de Shopify distintos** en el repo. Cada uno habilita cosas diferentes; **no confundirlos**:
+
+| Archivo | Token (huella) | Capacidades | Lo usa |
+|---|---|---|---|
+| **`.env`** | `shpca_…bd8c` | **Catálogo**: productos, colecciones, archivos (`read/write_products`, `write_files`). **NO temas.** | `config.py` → todos los scripts de catálogo/SEO (`apply_descriptions.py`, `apply_collections.py`, `audit_products.py`, etc.) |
+| **`.env.local`** | `shpat_…5b65` | **Temas**: `read_themes` + `write_themes` → **leer y editar el código del tema** (Liquid, JSON, secciones). (+ catálogo) | Trabajo de tema: plantillas, secciones, schema JSON-LD, meta tags |
+
+**Reglas operativas:**
+- `config.py` lee **solo `.env`** (token `shpca_`). Por eso todo el catálogo se ha hecho con esa app. Los scripts que hacen `from config import SHOPIFY_ACCESS_TOKEN` usan ese token.
+- Para **editar el tema** (código) hay que usar el token de **`.env.local`** (`shpat_`), que es el único con `read_themes`/`write_themes`.
+- **Tema publicado (main):** `Dwell 3.5.1` — id `188231123268`. Otros temas (Horizon, Dwell, exports de espejoled/juliabaker) están **sin publicar → no tocar**.
+- Acceso a código del tema por **Admin API** (no por CLI): REST `/admin/api/2026-01/themes/{id}/assets.json` · GraphQL campo `themes` / `OnlineStoreTheme` (requiere `read_themes`).
+
+> **Aislamiento:** el CLI de Shopify (`shopify theme pull`) usa una sesión de cuenta cacheada de **otra tienda** y NO tiene acceso a mueblesexterior. Por eso el trabajo de tema se hace por **Admin API con el token de `.env.local`**, no por CLI.
+
+### Google (GSC / GA4 / Merchant) — ver memoria del proyecto
+La conexión con Google está documentada en la memoria (`reference_seo_tooling`). Resumen: OAuth desktop aislado (proyecto GCP `santavila-muebles-exteriores`, cuenta `ubicuolibrespensadores@gmail.com`), `.venv` + `scripts/google_auth.py` (token en `token.json`). **Cuenta Merchant de Santavila = `5781655181`** (santavila.com); GA4 = `393664201`; GSC = `sc-domain:santavila.com`.
+
 ---
 
 ## 3. Proveedores

@@ -1,0 +1,6473 @@
+{
+  "tumbona-carmen-tablillas": {
+    "handle": "tumbona-carmen-tablillas",
+    "title": "Tumbona exterior resina · 75 cm tablillas · Carmen T",
+    "productType": "Tumbona",
+    "vendor": "santavila",
+    "tags": [
+      "envio:l"
+    ],
+    "descriptionHtml": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "featuredImage": null,
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Madera"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "199.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "219.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Carmen T",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_CARMEN_TUMBONA_CHASIS_BLANCO_TA_ADD04DFC + Prestige",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"piscina\"]",
+          "type": "list.single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Blanco",
+          "sku": "SV-CARMEN-T-BLANCO",
+          "price": "199.90",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Arena",
+          "sku": "SV-CARMEN-T-ARENA",
+          "price": "219.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Arena"
+            }
+          ]
+        },
+        {
+          "title": "Bronce",
+          "sku": "SV-CARMEN-T-BRONCE",
+          "price": "219.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Bronce"
+            }
+          ]
+        },
+        {
+          "title": "Gris Oscuro",
+          "sku": "SV-CARMEN-T-GRIS-OSC",
+          "price": "219.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Gris Oscuro"
+            }
+          ]
+        },
+        {
+          "title": "Madera",
+          "sku": "SV-CARMEN-T-MADERA",
+          "price": "219.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Madera"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "tumbona-lola-tablillas": {
+    "handle": "tumbona-lola-tablillas",
+    "title": "Tumbona exterior resina playa · 75 cm tablillas · Lola T",
+    "productType": "Tumbona",
+    "vendor": "santavila",
+    "tags": [
+      "envio:l"
+    ],
+    "descriptionHtml": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "featuredImage": null,
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Madera"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "199.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "212.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Lola T",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_LOLA_TUMBONA_CHASIS_BLANCO_TA_3D8CA52F + Prestige",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"piscina\",\"jardin\"]",
+          "type": "list.single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Blanco",
+          "sku": "SV-LOLA-T-BLANCO",
+          "price": "199.90",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Arena",
+          "sku": "SV-LOLA-T-ARENA",
+          "price": "212.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Arena"
+            }
+          ]
+        },
+        {
+          "title": "Bronce",
+          "sku": "SV-LOLA-T-BRONCE",
+          "price": "212.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Bronce"
+            }
+          ]
+        },
+        {
+          "title": "Gris Oscuro",
+          "sku": "SV-LOLA-T-GRIS-OSC",
+          "price": "212.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Gris Oscuro"
+            }
+          ]
+        },
+        {
+          "title": "Madera",
+          "sku": "SV-LOLA-T-MADERA",
+          "price": "212.95",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Madera"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mesa-exterior-aluminio-hpl-120x80-capri-doble": {
+    "handle": "mesa-exterior-aluminio-hpl-120x80-capri-doble",
+    "title": "Mesa exterior aluminio · HPL 120×80 cm · Capri Doble",
+    "productType": "Mesa",
+    "vendor": "santavila",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "descriptionHtml": "",
+    "seo": {
+      "title": null,
+      "description": null
+    },
+    "featuredImage": null,
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tablero",
+        "values": [
+          "Gris",
+          "Blanco",
+          "Moonwalk",
+          "Skyline",
+          "Prado"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "535.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "535.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Capri Doble",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_CAPRI_MESA_120X80_PIE_DOBLE_5C848C82",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"terraza\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Blanco / Gris",
+          "sku": "SV-CAPRI-DOBLE-BLANCO-GRIS",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Blanco",
+          "sku": "SV-CAPRI-DOBLE-BLANCO-BLANCO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Moonwalk",
+          "sku": "SV-CAPRI-DOBLE-BLANCO-MOONWALK",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Skyline",
+          "sku": "SV-CAPRI-DOBLE-BLANCO-SKYLINE",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Prado",
+          "sku": "SV-CAPRI-DOBLE-BLANCO-PRADO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "Tórtola / Gris",
+          "sku": "SV-CAPRI-DOBLE-TORTOLA-GRIS",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "Tórtola / Blanco",
+          "sku": "SV-CAPRI-DOBLE-TORTOLA-BLANCO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Tórtola / Moonwalk",
+          "sku": "SV-CAPRI-DOBLE-TORTOLA-MOONWALK",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "Tórtola / Skyline",
+          "sku": "SV-CAPRI-DOBLE-TORTOLA-SKYLINE",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "Tórtola / Prado",
+          "sku": "SV-CAPRI-DOBLE-TORTOLA-PRADO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "Aluminio / Gris",
+          "sku": "SV-CAPRI-DOBLE-ALUMINIO-GRIS",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "Aluminio / Blanco",
+          "sku": "SV-CAPRI-DOBLE-ALUMINIO-BLANCO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Aluminio / Moonwalk",
+          "sku": "SV-CAPRI-DOBLE-ALUMINIO-MOONWALK",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "Aluminio / Skyline",
+          "sku": "SV-CAPRI-DOBLE-ALUMINIO-SKYLINE",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "Aluminio / Prado",
+          "sku": "SV-CAPRI-DOBLE-ALUMINIO-PRADO",
+          "price": "535.00",
+          "selectedOptions": [
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-parasol-para-terraza-acrilico-236bd5f0": {
+    "handle": "balliu-parasol-para-terraza-acrilico-236bd5f0",
+    "title": "Parasol exterior acrílico · Ø200 cm · Pamela acrílico",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Parasol</p>",
+    "seo": {
+      "title": "Parasol para terraza acrílico",
+      "description": "Parasol"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Azul",
+          "Blanco",
+          "Crudo",
+          "Mineral"
+        ]
+      },
+      {
+        "name": "Punta de mástil",
+        "values": [
+          "Cónica",
+          "Plana"
+        ]
+      },
+      {
+        "name": "Faldón",
+        "values": [
+          "Sí",
+          "No"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Parasol para terraza acrílico",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Pamela",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"terraza\",\"atico\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Antracita / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-ANTRACITA-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Antracita / Cónica / No",
+          "sku": "SV-PAMELA-ACR-ANTRACITA-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Antracita / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-ANTRACITA-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Antracita / Plana / No",
+          "sku": "SV-PAMELA-ACR-ANTRACITA-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-ARENA-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Cónica / No",
+          "sku": "SV-PAMELA-ACR-ARENA-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-ARENA-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Plana / No",
+          "sku": "SV-PAMELA-ACR-ARENA-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-AZUL-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Cónica / No",
+          "sku": "SV-PAMELA-ACR-AZUL-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-AZUL-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Plana / No",
+          "sku": "SV-PAMELA-ACR-AZUL-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-BLANCO-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Cónica / No",
+          "sku": "SV-PAMELA-ACR-BLANCO-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-BLANCO-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Plana / No",
+          "sku": "SV-PAMELA-ACR-BLANCO-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Crudo / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-CRUDO-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Crudo / Cónica / No",
+          "sku": "SV-PAMELA-ACR-CRUDO-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Crudo / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-CRUDO-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Crudo / Plana / No",
+          "sku": "SV-PAMELA-ACR-CRUDO-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Mineral / Cónica / Sí",
+          "sku": "SV-PAMELA-ACR-MINERAL-CON-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Mineral / Cónica / No",
+          "sku": "SV-PAMELA-ACR-MINERAL-CON-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Mineral / Plana / Sí",
+          "sku": "SV-PAMELA-ACR-MINERAL-PLA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Mineral / Plana / No",
+          "sku": "SV-PAMELA-ACR-MINERAL-PLA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-parasol-para-terraza-82e48b2d": {
+    "handle": "balliu-parasol-para-terraza-82e48b2d",
+    "title": "Parasol exterior tela · Ø200 cm · Pamela tela",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Parasol</p>",
+    "seo": {
+      "title": "Parasol para terraza",
+      "description": "Parasol"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      },
+      {
+        "name": "Punta de mástil",
+        "values": [
+          "Cónica",
+          "Plana"
+        ]
+      },
+      {
+        "name": "Faldón",
+        "values": [
+          "Sí",
+          "No"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "384.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "384.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Parasol para terraza",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Pamela",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_PARASOL_TELA_BALLIU_82E48B2D",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"terraza\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Azul / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-AZUL-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Cónica / No",
+          "sku": "SV-PAMELA-BAL-AZUL-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-AZUL-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul / Plana / No",
+          "sku": "SV-PAMELA-BAL-AZUL-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Amarillo / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-AMARILLO-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Amarillo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Amarillo / Cónica / No",
+          "sku": "SV-PAMELA-BAL-AMARILLO-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Amarillo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Amarillo / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-AMARILLO-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Amarillo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Amarillo / Plana / No",
+          "sku": "SV-PAMELA-BAL-AMARILLO-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Amarillo"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Naranja / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-NARANJA-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Naranja"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Naranja / Cónica / No",
+          "sku": "SV-PAMELA-BAL-NARANJA-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Naranja"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Naranja / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-NARANJA-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Naranja"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Naranja / Plana / No",
+          "sku": "SV-PAMELA-BAL-NARANJA-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Naranja"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Verde claro / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-VERDE-CLARO-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde claro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Verde claro / Cónica / No",
+          "sku": "SV-PAMELA-BAL-VERDE-CLARO-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde claro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Verde claro / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-VERDE-CLARO-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde claro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Verde claro / Plana / No",
+          "sku": "SV-PAMELA-BAL-VERDE-CLARO-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde claro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-BLANCO-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Cónica / No",
+          "sku": "SV-PAMELA-BAL-BLANCO-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-BLANCO-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Blanco / Plana / No",
+          "sku": "SV-PAMELA-BAL-BLANCO-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Natural / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-NATURAL-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Natural"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Natural / Cónica / No",
+          "sku": "SV-PAMELA-BAL-NATURAL-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Natural"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Natural / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-NATURAL-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Natural"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Natural / Plana / No",
+          "sku": "SV-PAMELA-BAL-NATURAL-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Natural"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Capuchino / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-CAPUCHINO-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Capuchino"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Capuchino / Cónica / No",
+          "sku": "SV-PAMELA-BAL-CAPUCHINO-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Capuchino"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Capuchino / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-CAPUCHINO-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Capuchino"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Capuchino / Plana / No",
+          "sku": "SV-PAMELA-BAL-CAPUCHINO-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Capuchino"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Caqui / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-CAQUI-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Caqui"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Caqui / Cónica / No",
+          "sku": "SV-PAMELA-BAL-CAQUI-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Caqui"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Caqui / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-CAQUI-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Caqui"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Caqui / Plana / No",
+          "sku": "SV-PAMELA-BAL-CAQUI-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Caqui"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Marrón oscuro / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-MARRON-OSC-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Marrón oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Marrón oscuro / Cónica / No",
+          "sku": "SV-PAMELA-BAL-MARRON-OSC-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Marrón oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Marrón oscuro / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-MARRON-OSC-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Marrón oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Marrón oscuro / Plana / No",
+          "sku": "SV-PAMELA-BAL-MARRON-OSC-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Marrón oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-ARENA-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Cónica / No",
+          "sku": "SV-PAMELA-BAL-ARENA-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-ARENA-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Arena / Plana / No",
+          "sku": "SV-PAMELA-BAL-ARENA-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Verde oscuro / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-VERDE-OSC-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Verde oscuro / Cónica / No",
+          "sku": "SV-PAMELA-BAL-VERDE-OSC-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Verde oscuro / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-VERDE-OSC-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Verde oscuro / Plana / No",
+          "sku": "SV-PAMELA-BAL-VERDE-OSC-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Verde oscuro"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Azul celeste / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-AZUL-CEL-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul celeste"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul celeste / Cónica / No",
+          "sku": "SV-PAMELA-BAL-AZUL-CEL-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul celeste"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Azul celeste / Plana / Sí",
+          "sku": "SV-PAMELA-BAL-AZUL-CEL-PLA-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul celeste"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Azul celeste / Plana / No",
+          "sku": "SV-PAMELA-BAL-AZUL-CEL-PLA-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Azul celeste"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Plana"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "Ceniza / Cónica / Sí",
+          "sku": "SV-PAMELA-BAL-CENIZA-CON-F",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Ceniza"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "Ceniza / Cónica / No",
+          "sku": "SV-PAMELA-BAL-CENIZA-CON-NF",
+          "price": "384.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Ceniza"
+            },
+            {
+              "name": "Punta de mástil",
+              "value": "Cónica"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-parasol-para-terraza-f1ed8b8b": {
+    "handle": "balliu-parasol-para-terraza-f1ed8b8b",
+    "title": "Parasol exterior tela · Ø200/Ø250 cm · Ocean tela",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Parasol</p>",
+    "seo": {
+      "title": "Parasol para terraza",
+      "description": "Parasol"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Diámetro",
+        "values": [
+          "200 cm",
+          "250 cm"
+        ]
+      },
+      {
+        "name": "Color",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "299.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "381.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Parasol para terraza",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Ocean",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_PARASOL_TELA_BALLIU_82E48B2D (Ø200) + BALLIU_PARASOL_TELA_BALLIU_250__F1ED8B8B (Ø250)",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "200 cm / Azul",
+          "sku": "SV-OCEAN-BAL-200-AZUL",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Amarillo",
+          "sku": "SV-OCEAN-BAL-200-AMARILLO",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Amarillo"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Naranja",
+          "sku": "SV-OCEAN-BAL-200-NARANJA",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Naranja"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Verde claro",
+          "sku": "SV-OCEAN-BAL-200-VERDE-CLARO",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Verde claro"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Blanco",
+          "sku": "SV-OCEAN-BAL-200-BLANCO",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Natural",
+          "sku": "SV-OCEAN-BAL-200-NATURAL",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Natural"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Capuchino",
+          "sku": "SV-OCEAN-BAL-200-CAPUCHINO",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Capuchino"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Caqui",
+          "sku": "SV-OCEAN-BAL-200-CAQUI",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Caqui"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Marrón oscuro",
+          "sku": "SV-OCEAN-BAL-200-MARRON-OSC",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Marrón oscuro"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Arena",
+          "sku": "SV-OCEAN-BAL-200-ARENA",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Arena"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Verde oscuro",
+          "sku": "SV-OCEAN-BAL-200-VERDE-OSC",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Verde oscuro"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Azul celeste",
+          "sku": "SV-OCEAN-BAL-200-AZUL-CEL",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul celeste"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Ceniza",
+          "sku": "SV-OCEAN-BAL-200-CENIZA",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Ceniza"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Azul marino",
+          "sku": "SV-OCEAN-BAL-200-AZUL-MAR",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul marino"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Gris oscuro",
+          "sku": "SV-OCEAN-BAL-200-GRIS-OSC",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Gris oscuro"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Azul acero",
+          "sku": "SV-OCEAN-BAL-200-AZUL-ACERO",
+          "price": "299.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul acero"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Blanco",
+          "sku": "SV-OCEAN-BAL-250-BLANCO",
+          "price": "381.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Caqui",
+          "sku": "SV-OCEAN-BAL-250-CAQUI",
+          "price": "381.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Caqui"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Gris oscuro",
+          "sku": "SV-OCEAN-BAL-250-GRIS-OSC",
+          "price": "381.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Gris oscuro"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-parasol-para-terraza-acrilico-c8dd492d": {
+    "handle": "balliu-parasol-para-terraza-acrilico-c8dd492d",
+    "title": "Parasol exterior acrílico · Ø200/Ø250 cm · Ocean acrílico",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Parasol</p>",
+    "seo": {
+      "title": "Parasol para terraza acrílico",
+      "description": "Parasol"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Diámetro",
+        "values": [
+          "200 cm",
+          "250 cm"
+        ]
+      },
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Azul",
+          "Blanco",
+          "Crudo",
+          "Mineral"
+        ]
+      },
+      {
+        "name": "Faldón",
+        "values": [
+          "Sí",
+          "No"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "398.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Parasol para terraza acrílico",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Ocean",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_PARASOL_TELA_ACRILICA_236BD5F0 (Ø200) + BALLIU_PARASOL_TELA_ACRILICA_25_C8DD492D (Ø250)",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"terraza\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "200 cm / Antracita / Sí",
+          "sku": "SV-OCEAN-ACR-200-ANTRACITA-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Antracita / No",
+          "sku": "SV-OCEAN-ACR-200-ANTRACITA-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Arena / Sí",
+          "sku": "SV-OCEAN-ACR-200-ARENA-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Arena / No",
+          "sku": "SV-OCEAN-ACR-200-ARENA-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Azul / Sí",
+          "sku": "SV-OCEAN-ACR-200-AZUL-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Azul / No",
+          "sku": "SV-OCEAN-ACR-200-AZUL-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Blanco / Sí",
+          "sku": "SV-OCEAN-ACR-200-BLANCO-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Blanco / No",
+          "sku": "SV-OCEAN-ACR-200-BLANCO-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Crudo / Sí",
+          "sku": "SV-OCEAN-ACR-200-CRUDO-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Crudo / No",
+          "sku": "SV-OCEAN-ACR-200-CRUDO-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Mineral / Sí",
+          "sku": "SV-OCEAN-ACR-200-MINERAL-F",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "200 cm / Mineral / No",
+          "sku": "SV-OCEAN-ACR-200-MINERAL-NF",
+          "price": "398.95",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "200 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Antracita / Sí",
+          "sku": "SV-OCEAN-ACR-250-ANTRACITA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Antracita / No",
+          "sku": "SV-OCEAN-ACR-250-ANTRACITA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Antracita"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Arena / Sí",
+          "sku": "SV-OCEAN-ACR-250-ARENA-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Arena / No",
+          "sku": "SV-OCEAN-ACR-250-ARENA-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Arena"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Azul / Sí",
+          "sku": "SV-OCEAN-ACR-250-AZUL-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Azul / No",
+          "sku": "SV-OCEAN-ACR-250-AZUL-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Azul"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Blanco / Sí",
+          "sku": "SV-OCEAN-ACR-250-BLANCO-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Blanco / No",
+          "sku": "SV-OCEAN-ACR-250-BLANCO-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Blanco"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Crudo / Sí",
+          "sku": "SV-OCEAN-ACR-250-CRUDO-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Crudo / No",
+          "sku": "SV-OCEAN-ACR-250-CRUDO-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Crudo"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Mineral / Sí",
+          "sku": "SV-OCEAN-ACR-250-MINERAL-F",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Faldón",
+              "value": "Sí"
+            }
+          ]
+        },
+        {
+          "title": "250 cm / Mineral / No",
+          "sku": "SV-OCEAN-ACR-250-MINERAL-NF",
+          "price": "399.90",
+          "selectedOptions": [
+            {
+              "name": "Diámetro",
+              "value": "250 cm"
+            },
+            {
+              "name": "Color",
+              "value": "Mineral"
+            },
+            {
+              "name": "Faldón",
+              "value": "No"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-mesa-exterior-5d0fb586": {
+    "handle": "balliu-mesa-exterior-5d0fb586",
+    "title": "Mesa auxiliar exterior resina decorativa · 48×48 cm · Mini Prestige",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "descriptionHtml": "<p>Mini Mesa</p>",
+    "seo": {
+      "title": "Mesa exterior",
+      "description": "Mini Mesa"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris oscuro",
+          "Madera"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "27.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "29.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Mesa exterior",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Mini Mesa",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Mini Prestige",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_MINI_MESA_*_5D0FB586/1CF4D3D5",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"terraza\",\"balcon\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Blanco",
+          "sku": "SV-MINIPRESTIGE-BLANCO",
+          "price": "27.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "Arena",
+          "sku": "SV-MINIPRESTIGE-ARENA",
+          "price": "29.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Arena"
+            }
+          ]
+        },
+        {
+          "title": "Bronce",
+          "sku": "SV-MINIPRESTIGE-BRONCE",
+          "price": "29.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Bronce"
+            }
+          ]
+        },
+        {
+          "title": "Gris oscuro",
+          "sku": "SV-MINIPRESTIGE-GRIS-OSC",
+          "price": "29.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Gris oscuro"
+            }
+          ]
+        },
+        {
+          "title": "Madera",
+          "sku": "SV-MINIPRESTIGE-MADERA",
+          "price": "29.95",
+          "selectedOptions": [
+            {
+              "name": "Color",
+              "value": "Madera"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-mesa-exterior-140-18090-cm-e4ec7d7c": {
+    "handle": "balliu-mesa-exterior-140-18090-cm-e4ec7d7c",
+    "title": "Mesa extensible exterior aluminio · HPL · Atlanta",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "descriptionHtml": "<p>Atlanta Mesa</p>",
+    "seo": {
+      "title": "Mesa exterior | 140/180×90 cm",
+      "description": "Atlanta Mesa"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "140/180×90 cm",
+          "200/260×100 cm"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tablero",
+        "values": [
+          "Gris",
+          "Blanco",
+          "Moonwalk",
+          "Skyline",
+          "Prado"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1275.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1670.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Mesa exterior | 140/180×90 cm",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Atlanta Mesa",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Atlanta",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_ATLANTA_MESA_*_EXTEN",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"terraza\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "140/180×90 cm / Blanco / Gris",
+          "sku": "SV-ATLANTA-140-180X90-BLANCO-GRIS",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Blanco / Blanco",
+          "sku": "SV-ATLANTA-140-180X90-BLANCO-BLANCO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Blanco / Moonwalk",
+          "sku": "SV-ATLANTA-140-180X90-BLANCO-MOONWALK",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Blanco / Skyline",
+          "sku": "SV-ATLANTA-140-180X90-BLANCO-SKYLINE",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Blanco / Prado",
+          "sku": "SV-ATLANTA-140-180X90-BLANCO-PRADO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Tórtola / Gris",
+          "sku": "SV-ATLANTA-140-180X90-TORTOLA-GRIS",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Tórtola / Blanco",
+          "sku": "SV-ATLANTA-140-180X90-TORTOLA-BLANCO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Tórtola / Moonwalk",
+          "sku": "SV-ATLANTA-140-180X90-TORTOLA-MOONWALK",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Tórtola / Skyline",
+          "sku": "SV-ATLANTA-140-180X90-TORTOLA-SKYLINE",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Tórtola / Prado",
+          "sku": "SV-ATLANTA-140-180X90-TORTOLA-PRADO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Aluminio / Gris",
+          "sku": "SV-ATLANTA-140-180X90-ALUMINIO-GRIS",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Aluminio / Blanco",
+          "sku": "SV-ATLANTA-140-180X90-ALUMINIO-BLANCO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Aluminio / Moonwalk",
+          "sku": "SV-ATLANTA-140-180X90-ALUMINIO-MOONWALK",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Aluminio / Skyline",
+          "sku": "SV-ATLANTA-140-180X90-ALUMINIO-SKYLINE",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×90 cm / Aluminio / Prado",
+          "sku": "SV-ATLANTA-140-180X90-ALUMINIO-PRADO",
+          "price": "1275.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×90 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Gris",
+          "sku": "SV-ATLANTA-200-260X100-BLANCO-GRIS",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Blanco",
+          "sku": "SV-ATLANTA-200-260X100-BLANCO-BLANCO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Moonwalk",
+          "sku": "SV-ATLANTA-200-260X100-BLANCO-MOONWALK",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Skyline",
+          "sku": "SV-ATLANTA-200-260X100-BLANCO-SKYLINE",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Prado",
+          "sku": "SV-ATLANTA-200-260X100-BLANCO-PRADO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Gris",
+          "sku": "SV-ATLANTA-200-260X100-TORTOLA-GRIS",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Blanco",
+          "sku": "SV-ATLANTA-200-260X100-TORTOLA-BLANCO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Moonwalk",
+          "sku": "SV-ATLANTA-200-260X100-TORTOLA-MOONWALK",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Skyline",
+          "sku": "SV-ATLANTA-200-260X100-TORTOLA-SKYLINE",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Prado",
+          "sku": "SV-ATLANTA-200-260X100-TORTOLA-PRADO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Gris",
+          "sku": "SV-ATLANTA-200-260X100-ALUMINIO-GRIS",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Blanco",
+          "sku": "SV-ATLANTA-200-260X100-ALUMINIO-BLANCO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Moonwalk",
+          "sku": "SV-ATLANTA-200-260X100-ALUMINIO-MOONWALK",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Skyline",
+          "sku": "SV-ATLANTA-200-260X100-ALUMINIO-SKYLINE",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Prado",
+          "sku": "SV-ATLANTA-200-260X100-ALUMINIO-PRADO",
+          "price": "1670.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab": {
+    "handle": "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab",
+    "title": "Mesa extensible exterior aluminio · HPL · Java",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "descriptionHtml": "<p>Mesa Java</p>",
+    "seo": {
+      "title": "Mesa exterior HPL | 140/180×100 cm",
+      "description": "Mesa Java"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "140/180×100 cm",
+          "200/260×100 cm"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tablero",
+        "values": [
+          "Gris",
+          "Blanco",
+          "Moonwalk",
+          "Skyline",
+          "Prado"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1575.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2019.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Mesa exterior HPL | 140/180×100 cm",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Mesa Java",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Java",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_MESA_JAVA_*_EXTE",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"terraza\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "140/180×100 cm / Blanco / Gris",
+          "sku": "SV-JAVA-140-180X100-BLANCO-GRIS",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Blanco / Blanco",
+          "sku": "SV-JAVA-140-180X100-BLANCO-BLANCO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Blanco / Moonwalk",
+          "sku": "SV-JAVA-140-180X100-BLANCO-MOONWALK",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Blanco / Skyline",
+          "sku": "SV-JAVA-140-180X100-BLANCO-SKYLINE",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Blanco / Prado",
+          "sku": "SV-JAVA-140-180X100-BLANCO-PRADO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Tórtola / Gris",
+          "sku": "SV-JAVA-140-180X100-TORTOLA-GRIS",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Tórtola / Blanco",
+          "sku": "SV-JAVA-140-180X100-TORTOLA-BLANCO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Tórtola / Moonwalk",
+          "sku": "SV-JAVA-140-180X100-TORTOLA-MOONWALK",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Tórtola / Skyline",
+          "sku": "SV-JAVA-140-180X100-TORTOLA-SKYLINE",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Tórtola / Prado",
+          "sku": "SV-JAVA-140-180X100-TORTOLA-PRADO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Aluminio / Gris",
+          "sku": "SV-JAVA-140-180X100-ALUMINIO-GRIS",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Aluminio / Blanco",
+          "sku": "SV-JAVA-140-180X100-ALUMINIO-BLANCO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Aluminio / Moonwalk",
+          "sku": "SV-JAVA-140-180X100-ALUMINIO-MOONWALK",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Aluminio / Skyline",
+          "sku": "SV-JAVA-140-180X100-ALUMINIO-SKYLINE",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "140/180×100 cm / Aluminio / Prado",
+          "sku": "SV-JAVA-140-180X100-ALUMINIO-PRADO",
+          "price": "1575.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "140/180×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Gris",
+          "sku": "SV-JAVA-200-260X100-BLANCO-GRIS",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Blanco",
+          "sku": "SV-JAVA-200-260X100-BLANCO-BLANCO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Moonwalk",
+          "sku": "SV-JAVA-200-260X100-BLANCO-MOONWALK",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Skyline",
+          "sku": "SV-JAVA-200-260X100-BLANCO-SKYLINE",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Blanco / Prado",
+          "sku": "SV-JAVA-200-260X100-BLANCO-PRADO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Blanco"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Gris",
+          "sku": "SV-JAVA-200-260X100-TORTOLA-GRIS",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Blanco",
+          "sku": "SV-JAVA-200-260X100-TORTOLA-BLANCO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Moonwalk",
+          "sku": "SV-JAVA-200-260X100-TORTOLA-MOONWALK",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Skyline",
+          "sku": "SV-JAVA-200-260X100-TORTOLA-SKYLINE",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Tórtola / Prado",
+          "sku": "SV-JAVA-200-260X100-TORTOLA-PRADO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Tórtola"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Gris",
+          "sku": "SV-JAVA-200-260X100-ALUMINIO-GRIS",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Gris"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Blanco",
+          "sku": "SV-JAVA-200-260X100-ALUMINIO-BLANCO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Blanco"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Moonwalk",
+          "sku": "SV-JAVA-200-260X100-ALUMINIO-MOONWALK",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Moonwalk"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Skyline",
+          "sku": "SV-JAVA-200-260X100-ALUMINIO-SKYLINE",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Skyline"
+            }
+          ]
+        },
+        {
+          "title": "200/260×100 cm / Aluminio / Prado",
+          "sku": "SV-JAVA-200-260X100-ALUMINIO-PRADO",
+          "price": "2019.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "200/260×100 cm"
+            },
+            {
+              "name": "Chasis",
+              "value": "Aluminio"
+            },
+            {
+              "name": "Color tablero",
+              "value": "Prado"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-colchoneta-para-tumbona-0e9a3256": {
+    "handle": "balliu-colchoneta-para-tumbona-0e9a3256",
+    "title": "Colchoneta exterior para tumbona",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Colchoneta Tumbona</p>",
+    "seo": {
+      "title": "Colchoneta para tumbona",
+      "description": "Colchoneta Tumbona"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Tejido",
+        "values": [
+          "Tela Balliu / Guata",
+          "Tejido acrilico",
+          "Tela Balliu / Dryfeel",
+          "Tela Balliu",
+          "Acrílico",
+          "Dry Feel"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "115.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "190.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Colchoneta para tumbona",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Colchoneta Tumbona",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Colchoneta Dry Feel",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_COLCHONETA_TUMBONA_*",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"piscina\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Tela Balliu / Guata",
+          "sku": "BALLIU_COLCHONETA_TUMBONA_TELA_BALLIU_GUAT_0E9A3256",
+          "price": "115.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Tela Balliu / Guata"
+            }
+          ]
+        },
+        {
+          "title": "Tejido acrilico",
+          "sku": "BALLIU_COLCHONETA_TUMBONA_TEJIDO_ACRILICO_26977CB8",
+          "price": "131.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Tejido acrilico"
+            }
+          ]
+        },
+        {
+          "title": "Tela Balliu / Dryfeel",
+          "sku": "BALLIU_COLCHONETA_TUMBONA_TELA_BALLIU_DRYF_41269616",
+          "price": "190.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Tela Balliu / Dryfeel"
+            }
+          ]
+        },
+        {
+          "title": "Tela Balliu",
+          "sku": "SV-COLCHONETA-TELA-BALLIU",
+          "price": "115.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Tela Balliu"
+            }
+          ]
+        },
+        {
+          "title": "Acrílico",
+          "sku": "SV-COLCHONETA-ACRILICO",
+          "price": "131.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Acrílico"
+            }
+          ]
+        },
+        {
+          "title": "Dry Feel",
+          "sku": "SV-COLCHONETA-DRY-FEEL",
+          "price": "190.95",
+          "selectedOptions": [
+            {
+              "name": "Tejido",
+              "value": "Dry Feel"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-funda-protectora-exterior-686cc405": {
+    "handle": "balliu-funda-protectora-exterior-686cc405",
+    "title": "Funda protectora para tumbona exterior",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Funda Tumbona</p>",
+    "seo": {
+      "title": "Funda protectora exterior",
+      "description": "Funda Tumbona"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Pack",
+        "values": [
+          "2 Unidades",
+          "12 Unidades",
+          "24 Unidades"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "79.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "329.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Funda protectora exterior",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Funda Tumbona",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "xs",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "2 Unidades",
+          "sku": "BALLIU_FUNDA_TUMBONA_2_UNIDADES_686CC405",
+          "price": "79.95",
+          "selectedOptions": [
+            {
+              "name": "Pack",
+              "value": "2 Unidades"
+            }
+          ]
+        },
+        {
+          "title": "12 Unidades",
+          "sku": "BALLIU_FUNDA_TUMBONA_12_UNIDADES_D7D20AB0",
+          "price": "249.90",
+          "selectedOptions": [
+            {
+              "name": "Pack",
+              "value": "12 Unidades"
+            }
+          ]
+        },
+        {
+          "title": "24 Unidades",
+          "sku": "BALLIU_FUNDA_TUMBONA_24_UNIDADES_287BB1C0",
+          "price": "329.95",
+          "selectedOptions": [
+            {
+              "name": "Pack",
+              "value": "24 Unidades"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-funda-protectora-exterior-acrilico-a1c16324": {
+    "handle": "balliu-funda-protectora-exterior-acrilico-a1c16324",
+    "title": "Funda protectora exterior acrílico",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Funda Parasol</p>",
+    "seo": {
+      "title": "Funda protectora exterior acrílico",
+      "description": "Funda Parasol"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "36.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "36.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Funda protectora exterior acrílico",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Funda Parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "xs",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "BALLIU_FUNDA_PARASOL_1_UNIDADES_ACRIL_A1C16324",
+          "price": "36.95",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-funda-protectora-exterior-6f6d4953": {
+    "handle": "balliu-funda-protectora-exterior-6f6d4953",
+    "title": "Funda protectora para sofá exterior",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Funda sofá</p>",
+    "seo": {
+      "title": "Funda protectora exterior",
+      "description": "Funda sofá"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "Sofá individual",
+          "Sofá doble",
+          "sofá triple"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "129.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "227.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Funda protectora exterior",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Funda sofá",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "xs",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Sofá individual",
+          "sku": "BALLIU_FUNDA_SOFA_SOFA_INDIVIDUAL_6F6D4953",
+          "price": "129.95",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "Sofá individual"
+            }
+          ]
+        },
+        {
+          "title": "Sofá doble",
+          "sku": "BALLIU_FUNDA_SOFA_SOFA_DOBLE_0595C4C0",
+          "price": "186.95",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "Sofá doble"
+            }
+          ]
+        },
+        {
+          "title": "sofá triple",
+          "sku": "BALLIU_FUNDA_SOFA_SOFA_TRIPLE_852AF1C6",
+          "price": "227.95",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "sofá triple"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-funda-protectora-exterior-340b2844": {
+    "handle": "balliu-funda-protectora-exterior-340b2844",
+    "title": "Funda protectora exterior",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Funda Silla</p>",
+    "seo": {
+      "title": "Funda protectora exterior",
+      "description": "Funda Silla"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "84.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "84.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Funda protectora exterior",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Funda Silla",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "xs",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "BALLIU_FUNDA_SILLA_6_UNIDADES_340B2844",
+          "price": "84.95",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-cojin-exterior-523e5ae9": {
+    "handle": "balliu-cojin-exterior-523e5ae9",
+    "title": "Cojín exterior",
+    "productType": "Accesorio",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Cojin 40X40</p>",
+    "seo": {
+      "title": "Cojín exterior",
+      "description": "Cojin 40X40"
+    },
+    "featuredImage": null,
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "53.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "53.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Cojín exterior",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Cojin 40X40",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "xs",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "BALLIU_COJIN_40X40_COJIN_CUADRAL_523E5AE9",
+          "price": "53.95",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-mesa-alta-exterior-hpl-94512eab": {
+    "handle": "balliu-mesa-alta-exterior-hpl-94512eab",
+    "title": "Mesa alta exterior · aluminio HPL 110 cm",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "descriptionHtml": "<p>70X70 Mesa Alta</p>",
+    "seo": {
+      "title": "Mesa alta exterior HPL",
+      "description": "70X70 Mesa Alta"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "60×60 cm",
+          "70×70 cm"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "529.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Mesa alta exterior HPL",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "70X70 Mesa Alta",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Capri Alta",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_*_MESA_ALTA_TABLERO_HPL_*",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"terraza\",\"balcon\",\"jardin\",\"hosteleria\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "60×60 cm",
+          "sku": "SV-MESAALTA-60-HPL",
+          "price": "449.90",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "60×60 cm"
+            }
+          ]
+        },
+        {
+          "title": "70×70 cm",
+          "sku": "SV-MESAALTA-70-HPL",
+          "price": "529.00",
+          "selectedOptions": [
+            {
+              "name": "Tamaño",
+              "value": "70×70 cm"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-pie-de-parasol-c2147052": {
+    "handle": "balliu-pie-de-parasol-c2147052",
+    "title": "Pie de parasol · 40 kg",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Pie Parasol 40 kg</p>",
+    "seo": {
+      "title": "Pie de parasol",
+      "description": "Pie Parasol 40 kg"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Acabado",
+        "values": [
+          "Estándar",
+          "RE"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "126.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "164.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Pie de parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Pie Parasol 40 kg",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Pie 40 kg",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_PIE_PARASOL_40_KG_C2147052 (Est.) + BALLIU_PIE_PARASOL_40_KG_RE_FAB3CAC6 (RE)",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Estándar",
+          "sku": "SV-PIE-40KG-ESTANDAR",
+          "price": "164.95",
+          "selectedOptions": [
+            {
+              "name": "Acabado",
+              "value": "Estándar"
+            }
+          ]
+        },
+        {
+          "title": "RE",
+          "sku": "SV-PIE-40KG-RE",
+          "price": "126.95",
+          "selectedOptions": [
+            {
+              "name": "Acabado",
+              "value": "RE"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-base-de-parasol-3ee8b72d": {
+    "handle": "balliu-base-de-parasol-3ee8b72d",
+    "title": "Base de hormigón para parasol",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "descriptionHtml": "<p>Base Hormigón 25 Kg</p>",
+    "seo": {
+      "title": "Base de parasol",
+      "description": "Base Hormigón 25 Kg"
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Peso",
+        "values": [
+          "25 kg",
+          "30 kg"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "51.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "99.9"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Base de parasol",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Base Hormigón 25 Kg",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Base de hormigón",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_BASE_HORMIGON_25_KG_3EE8B72D + BALLIU_BASE_HORMIGON_30_KG_890A4CD4",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "25 kg",
+          "sku": "SV-BASE-25KG",
+          "price": "51.95",
+          "selectedOptions": [
+            {
+              "name": "Peso",
+              "value": "25 kg"
+            }
+          ]
+        },
+        {
+          "title": "30 kg",
+          "sku": "SV-BASE-30KG",
+          "price": "99.90",
+          "selectedOptions": [
+            {
+              "name": "Peso",
+              "value": "30 kg"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6": {
+    "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+    "title": "Silla exterior resina · Venus",
+    "productType": "Silla",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "descriptionHtml": "<p>Dimensiones: Largo: 59 cm | Ancho: 53 cm | Alto: 36 cm | Peso: 5 kg</p>",
+    "seo": {
+      "title": "Silla exterior sin brazos · estilo contemporáneo | 53 cm",
+      "description": "Dimensiones: Largo: 59 cm | Ancho: 53 cm | Alto: 36 cm | Peso: 5 kg"
+    },
+    "featuredImage": {
+      "altText": "Silla exterior sin brazos · estilo contemporáneo | 53 cm"
+    },
+    "options": [
+      {
+        "name": "Brazos",
+        "values": [
+          "Sin brazos",
+          "Con brazos"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "65.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "70.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Silla exterior sin brazos · estilo contemporáneo | 53 cm",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "Dimensiones: Largo: 59 cm | Ancho: 53 cm | Alto: 36 cm | Peso: 5 kg",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "m",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_modelo",
+          "value": "Venus",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_grupo",
+          "value": "G1",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "proveedor_sku_original",
+          "value": "BALLIU_SILLA_VENUS_*",
+          "type": "single_line_text_field"
+        },
+        {
+          "namespace": "santavila",
+          "key": "espacio_principal",
+          "value": "[\"jardin\",\"terraza\",\"hosteleria\",\"balcon\"]",
+          "type": "list.single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Sin brazos",
+          "sku": "SV-VENUS-SIN-BRAZOS",
+          "price": "65.95",
+          "selectedOptions": [
+            {
+              "name": "Brazos",
+              "value": "Sin brazos"
+            }
+          ]
+        },
+        {
+          "title": "Con brazos",
+          "sku": "SV-VENUS-CON-BRAZOS",
+          "price": "70.95",
+          "selectedOptions": [
+            {
+              "name": "Brazos",
+              "value": "Con brazos"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro": {
+    "handle": "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro",
+    "title": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centro",
+    "productType": "Conjunto rinconera",
+    "vendor": "Hevea",
+    "tags": [
+      "conjunto rinconera",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "HPL",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set LOIRA-30 HPL destaca por su gran formato y estilo moderno. Ideal para terrazas espaciosas, combina amplitud, funcionalidad y resistencia.</p>",
+    "seo": {
+      "title": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centr",
+      "description": "El Set HPL destaca por su gran formato y estilo moderno. Ideal para terrazas espaciosas, combina amplitud, funcionalidad y resistencia."
+    },
+    "featuredImage": {
+      "altText": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centro"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "4225.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "4225.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centr",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set HPL destaca por su gran formato y estilo moderno. Ideal para terrazas espaciosas, combina amplitud, funcionalidad y resistencia.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-010123",
+          "price": "4225.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-3": {
+    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-3",
+    "title": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa 3",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set MANHATAN 7 incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto equilibrado ideal para terrazas contemporáneas.</p>",
+    "seo": {
+      "title": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mes",
+      "description": "El Set incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto equilibrado ideal para terrazas contemporáneas."
+    },
+    "featuredImage": {
+      "altText": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa 3"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1995.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1995.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mes",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto equilibrado ideal para terrazas contemporáneas.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-01954",
+          "price": "1995.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro": {
+    "handle": "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro",
+    "title": "Set rinconera exterior HPL · elegante | sofá de esquina + mesa de centro",
+    "productType": "Conjunto rinconera",
+    "vendor": "Hevea",
+    "tags": [
+      "conjunto rinconera",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "HPL",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set LOIRA-8 HPL ofrece una composición de esquina amplia y elegante. Su diseño contemporáneo y materiales resistentes garantizan durabilidad y confort en exteriores.</p>",
+    "seo": {
+      "title": "Set rinconera exterior HPL · elegante | sofá de esquina + mesa de cent",
+      "description": "El Set HPL ofrece una composición de esquina amplia y elegante. Su diseño contemporáneo y materiales resistentes garantizan durabilidad y confort en exteriores."
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "3795.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "3795.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set rinconera exterior HPL · elegante | sofá de esquina + mesa de cent",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set HPL ofrece una composición de esquina amplia y elegante. Su diseño contemporáneo y materiales resistentes garantizan durabilidad y confort en exteriores.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-010026",
+          "price": "3795.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro": {
+    "handle": "set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro",
+    "title": "Set rinconera exterior HPL · sofisticado | sofá de esquina + mesa de centro | Blanco - Beige",
+    "productType": "Conjunto rinconera",
+    "vendor": "Hevea",
+    "tags": [
+      "conjunto rinconera",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "HPL",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set LOIRA-7 HPL es una rinconera moderna con tablero HPL resistente. Perfecta para optimizar el espacio exterior y crear un ambiente amplio, cómodo y sofisticado.</p>",
+    "seo": {
+      "title": "Set rinconera exterior HPL · sofisticado | sofá de esquina + mesa de c",
+      "description": "El Set HPL es una rinconera moderna con tablero HPL resistente. Perfecta para optimizar el espacio exterior y crear un ambiente amplio, cómodo y sofisticado."
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2899.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2899.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set rinconera exterior HPL · sofisticado | sofá de esquina + mesa de c",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set HPL es una rinconera moderna con tablero HPL resistente. Perfecta para optimizar el espacio exterior y crear un ambiente amplio, cómodo y sofisticado.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-010705",
+          "price": "2899.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4": {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4",
+    "title": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 4",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set ACAPULCO 7 incluye sofá de 2 plazas, sillones y mesa de centro en una composición equilibrada y moderna. Perfecto para crear terrazas acogedoras y funcionales.</p>",
+    "seo": {
+      "title": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 4",
+      "description": "El Set incluye sofá de 2 plazas, sillones y mesa de centro en una composición equilibrada y moderna. Perfecto para crear terrazas acogedoras y funcionales."
+    },
+    "featuredImage": {
+      "altText": null
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2349.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2349.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 4",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set incluye sofá de 2 plazas, sillones y mesa de centro en una composición equilibrada y moderna. Perfecto para crear terrazas acogedoras y funcionales.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-010149",
+          "price": "2349.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-3-plazas-urbano-sofa-3-plazas-2-sillones-mesa": {
+    "handle": "set-jardin-3-plazas-urbano-sofa-3-plazas-2-sillones-mesa",
+    "title": "Set jardín 3 plazas · urbano | sofá 3 plazas + 2 sillones + mesa",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set MANHATAN 8 ofrece una solución amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar estilo urbano y confort en exterior.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · urbano | sofá 3 plazas + 2 sillones + mesa",
+      "description": "El Set ofrece una solución amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar estilo urbano y confort en exterior."
+    },
+    "featuredImage": {
+      "altText": "Set jardín 3 plazas · urbano | sofá 3 plazas + 2 sillones + mesa"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2405.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2405.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 3 plazas · urbano | sofá 3 plazas + 2 sillones + mesa",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set ofrece una solución amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar estilo urbano y confort en exterior.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-01955",
+          "price": "2405.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "base-de-parasol-25-kg": {
+    "handle": "base-de-parasol-25-kg",
+    "title": "Base de parasol 25 kg",
+    "productType": "Accesorios",
+    "vendor": "Hevea",
+    "tags": [
+      "accesorios",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>La base de parasol 25kg garantiza estabilidad y seguridad para sombrillas de exterior. Compacta y resistente, es el complemento esencial para asegurar el parasol en todo momento.</p>",
+    "seo": {
+      "title": "Base de parasol 25 kg",
+      "description": "La base de parasol 25kg garantiza estabilidad y seguridad para sombrillas de exterior. Compacta y resistente, es el complemento esencial para asegurar el parasol en todo momento."
+    },
+    "featuredImage": {
+      "altText": "Base de parasol 25 kg"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "78.95"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Base de parasol 25 kg",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "La base de parasol 25kg garantiza estabilidad y seguridad para sombrillas de exterior. Compacta y resistente, es el complemento esencial para asegurar el parasol en todo momento.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "921-0026",
+          "price": "78.95",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa": {
+    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+    "title": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set LEISA 7 incluye sofá de 2 plazas, sillones y mesa de centro en una composición armoniosa y moderna. Ideal para crear terrazas acogedoras con diseño contemporáneo.</p>",
+    "seo": {
+      "title": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mes",
+      "description": "El Set incluye sofá de 2 plazas, sillones y mesa de centro en una composición armoniosa y moderna. Ideal para crear terrazas acogedoras con diseño contemporáneo."
+    },
+    "featuredImage": {
+      "altText": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2535.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2535.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mes",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set incluye sofá de 2 plazas, sillones y mesa de centro en una composición armoniosa y moderna. Ideal para crear terrazas acogedoras con diseño contemporáneo.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-010719",
+          "price": "2535.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4": {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4",
+    "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 4",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set HASTON 8 ofrece una composición amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar confort, resistencia y estilo en terrazas actuales.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mes",
+      "description": "El Set ofrece una composición amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar confort, resistencia y estilo en terrazas actuales."
+    },
+    "featuredImage": {
+      "altText": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 4"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2755.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2755.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mes",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set ofrece una composición amplia con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar confort, resistencia y estilo en terrazas actuales.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-0799",
+          "price": "2755.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3": {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3",
+    "title": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set HASTON 7 incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto moderno y funcional. Perfecto para crear un ambiente exterior acogedor y armonioso.</p>",
+    "seo": {
+      "title": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3",
+      "description": "El Set incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto moderno y funcional. Perfecto para crear un ambiente exterior acogedor y armonioso."
+    },
+    "featuredImage": {
+      "altText": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2355.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2355.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set incluye sofá de 2 plazas, sillones y mesa de centro, formando un conjunto moderno y funcional. Perfecto para crear un ambiente exterior acogedor y armonioso.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-0798",
+          "price": "2355.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro": {
+    "handle": "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro",
+    "title": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de centro",
+    "productType": "Conjunto rinconera",
+    "vendor": "Hevea",
+    "tags": [
+      "conjunto rinconera",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "descriptionHtml": "<p>El Set ADEL-7 es una rinconera diseñada para crear un salón exterior amplio y acogedor. Su estructura resistente y diseño contemporáneo ofrecen comodidad y elegancia en jardines y terrazas.</p>",
+    "seo": {
+      "title": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de cen",
+      "description": "El Set es una rinconera diseñada para crear un salón exterior amplio y acogedor. Su estructura resistente y diseño contemporáneo ofrecen comodidad y elegancia en jardines y terrazas."
+    },
+    "featuredImage": {
+      "altText": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de centro"
+    },
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2579.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2579.0"
+      }
+    },
+    "metafields": {
+      "nodes": [
+        {
+          "namespace": "global",
+          "key": "title_tag",
+          "value": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de cen",
+          "type": "string"
+        },
+        {
+          "namespace": "global",
+          "key": "description_tag",
+          "value": "El Set es una rinconera diseñada para crear un salón exterior amplio y acogedor. Su estructura resistente y diseño contemporáneo ofrecen comodidad y elegancia en jardines y terrazas.",
+          "type": "string"
+        },
+        {
+          "namespace": "santavila",
+          "key": "envio_categoria",
+          "value": "l",
+          "type": "single_line_text_field"
+        }
+      ]
+    },
+    "variants": {
+      "nodes": [
+        {
+          "title": "Default Title",
+          "sku": "557-1164",
+          "price": "2579.00",
+          "selectedOptions": [
+            {
+              "name": "Title",
+              "value": "Default Title"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,13 @@ node_modules/
 .env.local
 .envlocal
 .DS_Store
+# Credenciales Google (OAuth client secret + tokens) — NUNCA commitear
+*client_secret*.json
+.client_secret*.json
+token*.json
+google-token.json
+credentials/
+.venv/
 __pycache__/
 *.pyc
 .cache/
