@@ -49,18 +49,24 @@ El renderizado **parte** la descripción por esa cadena: lo de antes = intro, lo
 {% endschema %}
 ```
 
-**`sections/collection-faq.liquid`** (FAQ, al final del listado):
+**`sections/collection-faq.liquid`** (FAQ al final + **JSON-LD FAQPage** dinámico):
 ```liquid
 {%- assign _parts = collection.description | split: '<h2>Preguntas frecuentes</h2>' -%}
 {%- if _parts.size > 1 -%}
+  {%- assign _faq = _parts | last -%}
   <div class="page-width" style="max-width:820px;margin-inline:auto;padding-block:40px;">
-    <h2>Preguntas frecuentes</h2>{{ _parts | last }}
+    <h2>Preguntas frecuentes</h2>{{ _faq }}
   </div>
+  {%- assign _items = _faq | split: '<h3>' -%}
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- assign _first = true -%}{%- for _it in _items -%}{%- if _it contains '</h3>' -%}{%- assign _q = _it | split: '</h3>' | first | strip_html | strip -%}{%- assign _a = _it | split: '</h3>' | last | split: '<p>' | last | split: '</p>' | first | strip_html | strip -%}{%- unless _first %},{% endunless -%}{%- assign _first = false -%}{"@type":"Question","name":{{ _q | json }},"acceptedAnswer":{"@type":"Answer","text":{{ _a | json }}}}{%- endif -%}{%- endfor -%}]}
+  </script>
 {%- endif -%}
 {% schema %}
 {"name":"Collection FAQ","settings":[]}
 {% endschema %}
 ```
+El JSON-LD se genera parseando `<h3>pregunta</h3><p>respuesta</p>` → depende también de la convención del §1. Script que lo aplicó: `scripts/add_faq_schema.py`.
 
 ### Cambios en `templates/collection.json`
 - Se **eliminó** el bloque de texto manual de la cabecera (mostraba la descripción entera).
@@ -98,6 +104,7 @@ El renderizado **parte** la descripción por esa cadena: lo de antes = intro, lo
 
 ## 4. Pendiente que también tocará el tema (para no olvidar)
 
-- **FAQPage schema (JSON-LD)** de las FAQ de colección/producto → se añadirá en el tema; **se perderá** al cambiar de theme, re-aplicar.
+- ~~FAQPage schema de colección~~ ✅ **Hecho** (en `collection-faq.liquid`, ver §1). **Se perderá al cambiar de theme → re-aplicar.**
+- **FAQPage schema en producto** (si añadimos FAQ a fichas) → pendiente.
 - Breadcrumbs, ItemList y otros schema que se decidan → igual, son del tema.
 - `llms.txt` ampliado → vive en Shopify (template/redirect), confirmar si depende del tema al migrar.
