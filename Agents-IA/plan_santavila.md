@@ -19,10 +19,11 @@
 - **Fichas de producto:** 31 descripciones vacías/cortas **reescritas** (citables) + meta descriptions vía API. Carmen/Lola/Capri corregidas con datos reales de Balliu + **imágenes oficiales subidas** (Carmen, Lola, Capri Doble, Parasol Ágora). Cojín 40×40 sin imagen → **DRAFT**.
 - **Colecciones (Bloque 1.1):** las 6 (sillas, sofás, tumbonas, mesas, parasoles, accesorios) con **intro + FAQ + SEO title + meta description** (antes 0 texto).
 - **Tema conectado** (Dwell 3.5.1) y editado: creadas `sections/collection-intro.liquid` y `sections/collection-faq.liquid`; `templates/collection.json` muestra ahora **intro arriba + FAQ al final del listado**, dinámico por colección. Backups en `content/theme_backups/`.
+- **FAQPage schema (JSON-LD)** dinámico en colecciones (en `collection-faq.liquid`).
+- **Blog (Bloque 1.2):** los 6 posts con **SEO title + meta description + autor real** (antes "Shopify API"); post de materiales **ampliado a ~730 palabras** (tabla comparativa + FAQ). Script `scripts/apply_blog.py`.
 
 ### Pendiente (orden sugerido)
-- **FAQPage schema (JSON-LD)** para las FAQ de colección/producto (rich results) — aprovechando el acceso al tema.
-- **Bloque 1.2 — Blog:** publicar el post de materiales ya optimizado (`content/blog/materiales-aluminio-teca-ratan.md`) + optimizar los otros 5 posts (rankean en pos 4-10).
+- **Blog (profundizar):** ampliar cuerpo + añadir FAQ a los otros 5 posts (hoy 200-270 palabras) y FAQPage schema en artículos (mismo patrón que colecciones).
 - **Bloque 1.3 — Página "Sobre Santavila"** (NAP Vigo, historia, confianza → E-E-A-T).
 - **Autoridad de marca** (categoría más baja, 12/100): reseñas (Judge.me → AggregateRating), Google Business Profile, perfiles (Trustpilot/Pinterest/YouTube).
 - **De tu lado (no-código):** ajustar **Mercados de Shopify** (dejar solo ES/EUR/español → caen los avisos de idioma) y poner **Nombre de empresa visible = Santavila** en Merchant (la razón social `Ubicuo Libres Pensadores S.L.` se mantiene como dato legal).
