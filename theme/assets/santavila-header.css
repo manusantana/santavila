@@ -1,0 +1,29 @@
+/* ============================================================
+   SANTAVILA · Capa visual del header group sobre Dwell
+   (announcement bar + header). NO toca la fontanería de Dwell
+   (cart/search/drawer); solo reviste. Tokens exactos: store.css.
+   Se carga tras santavila-tokens.css en layout/theme.liquid.
+   ============================================================ */
+
+/* ===== Announcement bar =====================================
+   Estructura/colores por settings (scheme-5 sage-900, fuente
+   accent=mono, uppercase). Aquí solo el calibre fino del README:
+   11.5px y tracking 0.14em (el bloque solo ofrece "loose"=0.03em). */
+.announcement-bar__text {
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  line-height: 1;
+}
+
+/* Móvil: una sola línea con elipsis, como el prototipo (.ann nowrap) */
+@media screen and (max-width: 749px) {
+  .announcement-bar__slides {
+    max-width: 100%;
+  }
+  .announcement-bar__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.1em;
+  }
+}
