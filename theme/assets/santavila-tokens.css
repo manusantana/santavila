@@ -1,0 +1,90 @@
+/* ============================================================
+   SANTAVILA · Design tokens (Fase 0 — cimientos)
+   Fuente canónica: design_handoff_shopify_theme/store.css (:root)
+   Regla: tokens EXACTOS, nunca aproximar colores.
+
+   Este archivo NO rediseña secciones. Solo:
+   1) Expone la paleta + tipografía + layout de marca como custom
+      properties globales (las consumirán las secciones al portarlas).
+   2) Reasigna las 4 familias tipográficas base de Dwell a las
+      fuentes de marca. Como las CSS vars se resuelven en uso, esto
+      propaga la marca a TODA la fontanería de Dwell (presets de
+      heading, botones, carrito, búsqueda, drawer) sin tocar settings.
+
+   Se carga desde layout/theme.liquid DESPUÉS de los snippets
+   theme-styles-variables y color-schemes para ganar la cascada.
+   Las fuentes (Google Fonts) se enlazan desde theme.liquid <head>.
+   ============================================================ */
+
+:root {
+  /* ---- Neutros cálidos (cal / piedra / blanco roto) ---- */
+  --paper:   #F7F4EC; /* Fondo base */
+  --paper-2: #FCFAF3; /* Superficie elevada */
+  --bone:    #EEE8DA; /* Fondos de imagen / media vacía */
+  --sand:    #E4DCCB; /* Neutro cálido */
+  --stone:   #D6D2C6; /* Piedra fría */
+
+  /* ---- Tinta ---- */
+  --ink:   #23251D; /* Texto principal */
+  --ink-2: #4B4E41; /* Texto secundario */
+  --ink-3: #767869; /* Texto terciario / metadatos */
+
+  /* ---- Sage (marca) ---- */
+  --sage:      #687060; /* Color de marca (medido del logo) */
+  --sage-deep: #474B3D; /* Marca oscura / hover */
+  --sage-900:  #2C2F26; /* Fondos oscuros */
+  --sage-soft: #DCDFD4; /* Tinte de marca claro */
+  --sage-50:   #EEF0E9; /* Fondo de badge */
+
+  /* ---- Acento arcilla (susurro · <5% de superficie) ---- */
+  --clay:      #B27A5B;
+  --clay-deep: #8E5E42;
+
+  /* ---- Estados semánticos ---- */
+  --ok:      #5E7350;  --ok-bg:    #e8eedf;
+  --warn:    #B98A3E;  --warn-bg:  #f4ead3;
+  --error:   #A85440;
+
+  /* ---- Líneas ---- */
+  --line:       rgba(35,37,29,0.13);
+  --line-2:     rgba(35,37,29,0.07);
+  --line-light: rgba(255,255,255,0.22);
+
+  /* ---- Tipografía de marca ---- */
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans:  "Hanken Grotesk", -apple-system, sans-serif;
+  --mono:  "JetBrains Mono", ui-monospace, monospace;
+
+  /* ---- Layout / ritmo / easing ---- */
+  --maxw: 1480px;
+  --gut:  clamp(20px, 5vw, 76px);
+  --ann-h: 39px;
+  --ease:      cubic-bezier(.22, 1, .36, 1);
+  --ease-soft: cubic-bezier(.4, 0, .2, 1);
+
+  /* ========================================================
+     Override de la fontanería tipográfica de Dwell.
+     Dwell deriva los presets (--font-h1--family … ), los botones
+     (--button-font-family-*) y el carrito (--cart-*-font-family)
+     de estas 4 familias. Reasignarlas aquí basta para vestir todo.
+     Roles (ver README):
+       serif (Cormorant) → titulares, nombres de producto, citas
+       sans  (Hanken)    → cuerpo, UI, botones, navegación
+       mono  (JetBrains) → eyebrows, precios meta, etiquetas, breadcrumbs
+     ======================================================== */
+  --font-body--family: var(--sans);
+  --font-body--style: normal;
+  --font-body--weight: 400;
+
+  --font-subheading--family: var(--serif);
+  --font-subheading--style: normal;
+  --font-subheading--weight: 500;
+
+  --font-heading--family: var(--serif);
+  --font-heading--style: normal;
+  --font-heading--weight: 500;
+
+  --font-accent--family: var(--mono);
+  --font-accent--style: normal;
+  --font-accent--weight: 500;
+}
