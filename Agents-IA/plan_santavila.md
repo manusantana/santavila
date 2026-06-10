@@ -7,6 +7,34 @@
 
 ---
 
+## ⚙️ Estado de ejecución — SEO/GEO (actualizado 2026-05-31)
+
+> Registro vivo de lo ejecutado con Claude Code. Detalle técnico de apps/tokens y conexión Google en `Agents-IA/PROYECTO.md`. Informes en la raíz: `GEO-AUDIT-REPORT.md`, `KEYWORD-RESEARCH.md`, `SEO-BASELINE.md`.
+
+### Hecho ✅
+- **Auditoría GEO/SEO** inicial → `GEO-AUDIT-REPORT.md` (GEO Score ≈37/100; mayores carencias: citabilidad, autoridad de marca, E-E-A-T; base técnica fuerte).
+- **Keyword research** ES (Google Autocomplete) → `KEYWORD-RESEARCH.md`. Aprendizaje: el genérico lo dominan IKEA/Leroy/Jysk; Santavila gana en long-tail por **material/espacio** + **contenido informacional**.
+- **Google conectado** (OAuth aislado): Search Console (sitemap enviado + baseline en `SEO-BASELINE.md`), GA4 y Merchant. Scripts en `scripts/` (ejecutar con `.venv/bin/python`).
+- **Merchant auditado** — cuenta correcta = **`5781655181`** (santavila.com): **0 productos rechazados, feed sano**. El "problema del GTIN" era **falsa alarma** (Google acepta mobiliario sin GTIN si hay marca). Único aviso real: `language_mismatch` (~668) por **Mercados de Shopify** internacionales publicando en inglés → pendiente ajustar en Shopify → Mercados.
+- **Fichas de producto:** 31 descripciones vacías/cortas **reescritas** (citables) + meta descriptions vía API. Carmen/Lola/Capri corregidas con datos reales de Balliu + **imágenes oficiales subidas** (Carmen, Lola, Capri Doble, Parasol Ágora). Cojín 40×40 sin imagen → **DRAFT**.
+- **Colecciones (Bloque 1.1):** las 6 (sillas, sofás, tumbonas, mesas, parasoles, accesorios) con **intro + FAQ + SEO title + meta description** (antes 0 texto).
+- **Tema conectado** (Dwell 3.5.1) y editado: creadas `sections/collection-intro.liquid` y `sections/collection-faq.liquid`; `templates/collection.json` muestra ahora **intro arriba + FAQ al final del listado**, dinámico por colección. Backups en `content/theme_backups/`.
+- **FAQPage schema (JSON-LD)** dinámico en colecciones (en `collection-faq.liquid`).
+- **Blog (Bloque 1.2):** los 6 posts con **SEO title + meta description + autor real** (antes "Shopify API"); post de materiales **ampliado a ~730 palabras** (tabla comparativa + FAQ). Script `scripts/apply_blog.py`.
+
+### Pendiente (orden sugerido)
+- **Blog (profundizar):** ampliar cuerpo + añadir FAQ a los otros 5 posts (hoy 200-270 palabras) y FAQPage schema en artículos (mismo patrón que colecciones).
+- **Bloque 1.3 — Página "Sobre Santavila"** (NAP Vigo, historia, confianza → E-E-A-T).
+- **Autoridad de marca** (categoría más baja, 12/100): reseñas (Judge.me → AggregateRating), Google Business Profile, perfiles (Trustpilot/Pinterest/YouTube).
+- **De tu lado (no-código):** ajustar **Mercados de Shopify** (dejar solo ES/EUR/español → caen los avisos de idioma) y poner **Nombre de empresa visible = Santavila** en Merchant (la razón social `Ubicuo Libres Pensadores S.L.` se mantiene como dato legal).
+
+### Notas para trabajar en paralelo
+- **Dos apps/tokens Shopify** (ver `PROYECTO.md` §2): `.env` (`shpca_…`) = **catálogo**; `.env.local` (`shpat_…`) = **tema/código** (read/write_themes). Los scripts de catálogo usan `config.py` → `.env`.
+- Cuentas Google: Merchant `5781655181`, GA4 `393664201`, GSC `sc-domain:santavila.com`. **Ignorar** la cuenta Merchant `515612993` (de la agencia, controlada).
+- Todos los cambios de catálogo/colección se aplicaron con **backup previo** (`content/descriptions/`), reversibles.
+
+---
+
 ## 0. Decisiones de partida
 
 Estas decisiones se toman como base del plan:
