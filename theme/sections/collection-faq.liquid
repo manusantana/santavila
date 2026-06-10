@@ -1,0 +1,14 @@
+{%- assign _parts = collection.description | split: '<h2>Preguntas frecuentes</h2>' -%}
+{%- if _parts.size > 1 -%}
+  {%- assign _faq = _parts | last -%}
+  <div class="page-width" style="max-width:820px;margin-inline:auto;padding-block:40px;">
+    <h2>Preguntas frecuentes</h2>{{ _faq }}
+  </div>
+  {%- assign _items = _faq | split: '<h3>' -%}
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{%- assign _first = true -%}{%- for _it in _items -%}{%- if _it contains '</h3>' -%}{%- assign _q = _it | split: '</h3>' | first | strip_html | strip -%}{%- assign _a = _it | split: '</h3>' | last | split: '<p>' | last | split: '</p>' | first | strip_html | strip -%}{%- unless _first %},{% endunless -%}{%- assign _first = false -%}{"@type":"Question","name":{{ _q | json }},"acceptedAnswer":{"@type":"Answer","text":{{ _a | json }}}}{%- endif -%}{%- endfor -%}]}
+  </script>
+{%- endif -%}
+{% schema %}
+{"name":"Collection FAQ","settings":[]}
+{% endschema %}

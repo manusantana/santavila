@@ -1,0 +1,9 @@
+{%- assign _intro = collection.description | split: '<h2>Preguntas frecuentes</h2>' | first -%}
+{%- if _intro != blank -%}
+  <div class="page-width" style="max-width:760px;margin-inline:auto;text-align:center;padding-block:0 16px;">
+    {{ _intro }}
+  </div>
+{%- endif -%}
+{% schema %}
+{"name":"Collection intro","settings":[]}
+{% endschema %}
