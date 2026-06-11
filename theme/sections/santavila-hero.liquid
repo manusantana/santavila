@@ -1,0 +1,417 @@
+{%- liquid
+  assign s = section.settings
+  assign seal_id = 'sealpath-' | append: section.id
+-%}
+
+<div class="sv-hero" style="--sv-hero-minh: {{ s.min_height | default: 100 }}svh;">
+  {%- if s.image != blank -%}
+    <div class="sv-hero__media">
+      {{
+        s.image
+        | image_url: width: 2400
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          sizes: '100vw',
+          widths: '600, 900, 1200, 1600, 2000, 2400',
+          alt: s.image.alt | default: shop.name
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="sv-hero__inner">
+    {%- if s.eyebrow != blank -%}
+      <p class="sv-hero__eyebrow">{{ s.eyebrow }}</p>
+    {%- endif -%}
+
+    {%- if s.heading_line1 != blank or s.heading_line2 != blank -%}
+      <h1 class="sv-hero__title">
+        {{- s.heading_line1 -}}
+        {%- if s.heading_line2 != blank -%}
+          <br><em>{{ s.heading_line2 }}</em>
+        {%- endif -%}
+      </h1>
+    {%- endif -%}
+
+    <div class="sv-hero__row">
+      {%- if s.subheading != blank -%}
+        <p class="sv-hero__sub">{{ s.subheading }}</p>
+      {%- endif -%}
+
+      <div class="sv-hero__right">
+        {%- if s.show_seal -%}
+          <div class="sv-hero__seal" aria-hidden="true">
+            <svg class="sv-hero__seal-ring" viewBox="0 0 160 160">
+              <defs>
+                <path id="{{ seal_id }}" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path>
+              </defs>
+              <text><textPath href="#{{ seal_id }}" startOffset="0">{{ s.seal_text }}</textPath></text>
+            </svg>
+            <span class="sv-hero__seal-mark">
+              <svg width="34" height="55" viewBox="0 0 100 162" fill="none" aria-hidden="true">
+                <path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.25)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path>
+                <path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
+              </svg>
+            </span>
+          </div>
+        {%- endif -%}
+
+        {%- if s.cta1_label != blank or s.cta2_label != blank -%}
+          <div class="sv-hero__cta">
+            {%- if s.cta1_label != blank -%}
+              <a href="{{ s.cta1_link | default: '#' }}" class="sv-btn sv-btn--light">
+                {{ s.cta1_label }}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            {%- endif -%}
+            {%- if s.cta2_label != blank -%}
+              <a href="{{ s.cta2_link | default: '#' }}" class="sv-btn sv-btn--ghost">{{ s.cta2_label }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- if s.show_scroll -%}
+    <div class="sv-hero__scroll" aria-hidden="true"><span>{{ s.scroll_label }}</span><i></i></div>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+  .sv-hero {
+    position: relative;
+    min-height: var(--sv-hero-minh, 100svh);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(150deg, #4f5447 0%, #2c2f26 55%, #3a3f31 100%);
+  }
+
+  .sv-hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .sv-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Velo para legibilidad del header y del texto inferior */
+  .sv-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 22, 16, 0.42) 0%,
+      rgba(20, 22, 16, 0.05) 32%,
+      rgba(20, 22, 16, 0.08) 60%,
+      rgba(20, 22, 16, 0.66) 100%
+    );
+  }
+
+  .sv-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--maxw, 1480px);
+    margin-inline: auto;
+    padding-inline: var(--gut, clamp(20px, 5vw, 76px));
+    padding-bottom: clamp(48px, 8vh, 104px);
+    padding-top: clamp(120px, 18vh, 200px);
+  }
+
+  .sv-hero__eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 26px;
+  }
+
+  .sv-hero__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(54px, 9vw, 148px);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    max-width: 14ch;
+    margin: 0;
+  }
+  .sv-hero__title em {
+    font-style: italic;
+  }
+
+  .sv-hero__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 38px;
+    flex-wrap: wrap;
+  }
+  .sv-hero__sub {
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 40ch;
+    opacity: 0.94;
+    margin: 0;
+  }
+  .sv-hero__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px;
+  }
+
+  /* Sello rotatorio */
+  .sv-hero__seal {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex: none;
+  }
+  .sv-hero__seal-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: sv-sealspin 30s linear infinite;
+  }
+  .sv-hero__seal-ring text {
+    font-family: var(--mono);
+    font-size: 9.2px;
+    letter-spacing: 0.16em;
+    fill: #fff;
+    text-transform: uppercase;
+  }
+  .sv-hero__seal-mark {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+  @keyframes sv-sealspin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* CTAs (pill) */
+  .sv-hero__cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .sv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 15px 30px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.35s var(--ease, ease);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .sv-btn svg {
+    transition: transform 0.35s var(--ease, ease);
+  }
+  .sv-btn:hover svg {
+    transform: translateX(4px);
+  }
+  .sv-btn--light {
+    background: #fff;
+    color: var(--ink, #23251d);
+  }
+  .sv-btn--light:hover {
+    background: var(--bone, #eee8da);
+  }
+  .sv-btn--ghost {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .sv-btn--ghost:hover {
+    background: #fff;
+    color: var(--ink, #23251d);
+    border-color: #fff;
+  }
+
+  /* Indicador "Descubre" */
+  .sv-hero__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 26px;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  .sv-hero__scroll i {
+    width: 1px;
+    height: 42px;
+    background: linear-gradient(#fff, transparent);
+    animation: sv-scrolldrop 2.4s var(--ease-soft, ease) infinite;
+  }
+  @keyframes sv-scrolldrop {
+    0% { transform: scaleY(0); transform-origin: top; }
+    45% { transform: scaleY(1); transform-origin: top; }
+    55% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  @media screen and (max-width: 680px) {
+    .sv-hero__right {
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .sv-hero__seal {
+      width: 118px;
+      height: 118px;
+    }
+  }
+
+  /* Regla de oro: el contenido nunca depende de animación para verse.
+     Solo desactivamos los movimientos como mejora progresiva. */
+  @media (prefers-reduced-motion: reduce) {
+    .sv-hero__seal-ring,
+    .sv-hero__scroll i {
+      animation: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Hero",
+  "tag": "section",
+  "class": "sv-hero-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de fondo",
+      "info": "Opcional. Sin imagen se usa el degradado sage de marca."
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "label": "Altura (svh)",
+      "min": 60,
+      "max": 100,
+      "step": 1,
+      "unit": "svh",
+      "default": 100
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Diseño español para vivir fuera"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Titular · línea 1",
+      "default": "El exterior,"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Titular · línea 2 (itálica)",
+      "default": "bien vivido."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subtítulo",
+      "default": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real."
+    },
+    {
+      "type": "header",
+      "content": "Llamadas a la acción"
+    },
+    {
+      "type": "text",
+      "id": "cta1_label",
+      "label": "CTA principal · texto",
+      "default": "Explorar colecciones"
+    },
+    {
+      "type": "url",
+      "id": "cta1_link",
+      "label": "CTA principal · enlace"
+    },
+    {
+      "type": "text",
+      "id": "cta2_label",
+      "label": "CTA secundaria · texto",
+      "default": "Amueblar por espacio"
+    },
+    {
+      "type": "url",
+      "id": "cta2_link",
+      "label": "CTA secundaria · enlace"
+    },
+    {
+      "type": "header",
+      "content": "Sello rotatorio"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_seal",
+      "label": "Mostrar sello",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "seal_text",
+      "label": "Texto del sello (orbita)",
+      "default": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · "
+    },
+    {
+      "type": "header",
+      "content": "Indicador de scroll"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scroll",
+      "label": "Mostrar indicador",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "scroll_label",
+      "label": "Texto del indicador",
+      "default": "Descubre"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila Hero"
+    }
+  ]
+}
+{% endschema %}

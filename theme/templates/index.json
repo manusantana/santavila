@@ -9,85 +9,22 @@
  */
 {
   "sections": {
-    "hero_G7CAX9": {
-      "type": "hero",
-      "blocks": {
-        "text_KJqzT8": {
-          "type": "text",
-          "settings": {
-            "text": "<h2><em>Colección de verano</em></h2>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "h1",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground-heading)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 16,
-            "padding-inline-end": 16
-          },
-          "blocks": {}
-        },
-        "button_cTVbXA": {
-          "type": "button",
-          "name": "Button",
-          "settings": {
-            "label": "VER COLECCIÓN",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "link",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_KJqzT8",
-        "button_cTVbXA"
-      ],
-      "name": "t:names.hero",
+    "santavila_hero": {
+      "type": "santavila-hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "image_2": "shopify://shop_images/2019_jmf3615_v2_5dc80320-7ad9-4468-a9b2-095ff3523b88.jpg",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "full-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#00000030",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "min_height": 100,
+        "eyebrow": "Diseño español para vivir fuera",
+        "heading_line1": "El exterior,",
+        "heading_line2": "bien vivido.",
+        "subheading": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real.",
+        "cta1_label": "Explorar colecciones",
+        "cta1_link": "shopify://collections/all",
+        "cta2_label": "Amueblar por espacio",
+        "cta2_link": "",
+        "show_seal": true,
+        "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · ",
+        "show_scroll": true,
+        "scroll_label": "Descubre"
       }
     },
     "section": {
@@ -1179,7 +1116,7 @@
     }
   },
   "order": [
-    "hero_G7CAX9",
+    "santavila_hero",
     "section",
     "product_list_YidTcf",
     "section_BkdmxX",
