@@ -27,3 +27,50 @@
     letter-spacing: 0.1em;
   }
 }
+
+/* ===== Header ===============================================
+   Layout (logo izq / nav centro / iconos dcha), sticky y la
+   conmutación de logo se resuelven por settings de Dwell. Aquí
+   solo el revestimiento visual del README (.hdr--solid / nav).
+   La transparencia sobre hero se enciende en Fase 2. */
+
+/* Estado sólido: papel translúcido + desenfoque (README .hdr--solid:
+   background rgba(247,244,236,0.86) + blur 16px). En Dwell el fondo
+   del header lo pinta el underlay; lo volvemos translúcido y borroso. */
+.header:not([transparent]) .header__underlay-closed,
+.header[data-sticky-state='active'] .header__underlay-closed {
+  background: rgba(247, 244, 236, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Navegación: Hanken 14px / 500, con subrayado que crece en hover
+   (README .hdr__nav a). Base siempre visible: el subrayado es solo
+   refuerzo de hover, no condiciona la legibilidad del enlace. */
+.header-menu .menu-list__link {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.header-menu .menu-list__link {
+  position: relative;
+}
+
+.header-menu .menu-list__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  height: 1px;
+  width: 0;
+  background: currentColor;
+  transition: width 0.4s var(--ease, ease);
+}
+
+@media (hover: hover) {
+  .header-menu .menu-list__link:hover::after {
+    width: 100%;
+  }
+}
