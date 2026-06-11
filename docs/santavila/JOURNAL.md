@@ -13,6 +13,55 @@
 
 ---
 
+## 2026-06-11 · Rediseño del tema (Dwell) — Fases 0–2
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, tema base **Dwell 3.5.1**.
+**Estado:** 🔄 En curso (Fases 0, 1, 2 ✅; siguen 3+).
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8) · Shopify CLI 3.94.3.
+
+### Qué se ejecutó
+
+**Setup**
+- `git pull` (merge limpio de 7 commits de origin, sin conflictos → `474da1d`).
+- `shopify theme pull --live` del tema publicado a `theme/` (423 archivos). Baseline commiteado (`619c772`).
+- Token de `.envlocal` regenerado a `shpat_…` (app nueva, client_id `1b30f2bd…`) con `read_themes`/`write_themes`. Sigue con read/write de products+files (scripts Python intactos). Desapareció `HF_TOKEN` del `.envlocal`.
+- Dev theme de trabajo **#189114876228** (`shopify theme dev`). El live es **#188231123268** — NUNCA se le hace push.
+
+**Fase 0 — Cimientos de tokens** (`6e9247e`)
+- `assets/santavila-tokens.css`: paleta exacta de `store.css :root` + reasigna las 4 familias base de Dwell → Hanken (body) / Cormorant (heading+subheading) / JetBrains Mono (accent). Se propaga a presets, botones, carrito y búsqueda.
+- `layout/theme.liquid`: Google Fonts (preconnect + display=swap) y carga de los CSS de marca tras `color-schemes`.
+- `config/settings_data.json`: 7 color schemes remapeados a la paleta de marca (paper, sage, sage-900, bone, arcilla).
+
+**Fase 1 — Announcement + Header** (`1266528`, `f061556`)
+- Announcement: 3 mensajes `·` en un bloque (scheme-5 sage-900, JetBrains Mono uppercase, 11.5px / 0.14em).
+- Header: layout logo-izq / nav-centro / iconos-dcha, sticky always, papel translúcido + blur 16px en sólido, nav en Hanken con subrayado en hover. Conserva cart/search/drawer de Dwell.
+
+**Fase 2 — Hero + header transparente** (`0188013`)
+- `sections/santavila-hero.liquid`: sección bespoke OS 2.0 (100svh, eyebrow + H1 "El exterior, bien vivido." con em, sello rotatorio textPath, 2 CTAs pill, indicador "Descubre"). Degradado sage si no hay foto.
+- Header transparente encendido en home (logo blanco/nav sobre hero → sólido papel al scroll).
+
+### Entregables
+- `theme/assets/santavila-tokens.css`, `theme/assets/santavila-header.css`, `theme/sections/santavila-hero.liquid`.
+- `theme/layout/theme.liquid`, `theme/config/settings_data.json`, `theme/sections/header-group.json`, `theme/templates/index.json` (modificados).
+
+### Hallazgos clave
+- Colores → por **settings de Dwell** (color schemes); fuentes → por **CSS** (no garantizadas en la librería de Shopify). Sobrescribir 4 vars de fuente viste toda la fontanería.
+- `theme dev` local (127.0.0.1) **no** funciona con token Admin API por la contraseña de escaparate → se usa **login OAuth del CLI** + `--store-password`. Preview por navegador (preview_theme_id / editor) funciona siempre con sesión admin.
+- La conmutación de logo blanco↔verde y el header transparente son **nativos** de Dwell (settings), no requieren JS propio.
+
+### Prioridades vivas
+- Verificación visual fina del hero bajo el header transparente (posición/offset) en navegador.
+- Nav del header: los 7 labels del README (Colecciones, Áticos y terrazas, Balcón…) son **contenido** del menú `main-menu` en Admin → Navegación; dependen de que existan las colecciones por escenario.
+
+### Decisiones pendientes
+- Reponer `HF_TOKEN` en `.envlocal` si se usan los scripts de imágenes.
+- Crear colecciones por escenario + reescribir menú `main-menu`.
+
+### Siguiente paso recomendado
+- **Fase 3**: Manifesto + Escenarios (4 cards) + Colección destacada, siguiendo el orden del README (`design_handoff_shopify_theme/README.md`).
+
+---
+
 ## 2026-05-18 · Costes Shopify + sync Hevea completo
 
 **Paso del flujo:** Pricing — costes unitarios y datos de proveedor sincronizados.
