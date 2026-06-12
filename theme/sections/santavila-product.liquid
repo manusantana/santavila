@@ -256,14 +256,18 @@
       });
     }
 
-    // Solo la opción de COLOR (por el título) se convierte en swatches.
-    // Chasis y cualquier otro atributo quedan como botones de texto.
+    // Solo la opción de COLOR se convierte en swatches. Chasis y otros atributos
+    // quedan como texto. ROBUSTO ante el re-render de Dwell (que recrea el HTML de
+    // las opciones al cambiar de variante y borraba la marca): re-aplicamos vía
+    // MutationObserver. Las operaciones son idempotentes (sin bucles).
     var vWrap = document.querySelector('.sv-pdp__variant');
     if (vWrap) {
-      vWrap.querySelectorAll('fieldset.variant-option').forEach(function (fs) {
-        var legend = fs.querySelector('legend');
-        if (legend && /color/i.test(legend.textContent || '')) fs.classList.add('sv-sw-color');
-      });
+      var markColor = function () {
+        vWrap.querySelectorAll('fieldset.variant-option').forEach(function (fs) {
+          var legend = fs.querySelector('legend');
+          if (legend && /color/i.test(legend.textContent || '')) fs.classList.add('sv-sw-color');
+        });
+      };
       var swNames = function () {
         vWrap.querySelectorAll('fieldset.sv-sw-color').forEach(function (fs) {
           fs.querySelectorAll('label.variant-option__button-label').forEach(function (lb) {
@@ -275,12 +279,22 @@
           if (checked && legend) {
             var span = legend.querySelector('.sv-sw-name');
             if (!span) { span = document.createElement('span'); span.className = 'sv-sw-name'; legend.appendChild(span); }
-            span.textContent = ': ' + (checked.getAttribute('value') || checked.getAttribute('aria-label') || '');
+            var t = ': ' + (checked.getAttribute('value') || checked.getAttribute('aria-label') || '');
+            if (span.textContent !== t) span.textContent = t;
           }
         });
       };
-      vWrap.addEventListener('change', swNames);
-      swNames();
+      var applying = false;
+      var apply = function () {
+        if (applying) return;
+        applying = true;
+        markColor();
+        swNames();
+        applying = false;
+      };
+      apply();
+      var mo = new MutationObserver(function () { if (!applying) apply(); });
+      mo.observe(vWrap, { childList: true, subtree: true });
     }
   })();
 </script>
