@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-12 · Fase 8a (pase 1) — PDP restyle sobre Dwell
+
+**Estado:** 🔄 En curso (primer pase aplicado y verificado en render local).
+**Arquitectura (confirmada por el dueño):** reestilizar `product-information` de Dwell (galería + columna de compra con su carrito/variantes/Shop Pay/sticky-bar nativos) + bloques bespoke + galería/contenido a medida. NO hand-roll del form.
+
+### Qué se ejecutó
+- Reconocimiento: Dwell trae todo el core funcionando (gallery carousel+thumbnails, `product-details` sticky, `product-form-component`, add-to-cart, y **sticky-add-to-cart bar nativo**). Clases reales mapeadas.
+- `assets/santavila-product.css`: H1 serif, precio prominente, add-to-cart pill ≥56px, swatches 44px, media redondeada (--radius-media), sticky bar en papel+blur.
+- `product.json`: galería rail vertical + media_radius 14; título serif.
+
+### Siguiente
+- 8a (sig): bloques bespoke en la columna (USP 1 línea, línea BNPL SeQura, "IVA incluido · envío gratis", risk-remover "30 días", chips USP).
+- 8b: promise + beneficios + características + emocional + review. 8c: acordeones (medidas/specs, envío, devoluciones, FAQ) + guía de medidas. 8d: social proof + related + sticky bar afinado.
+- Recordatorio: sin montaje a domicilio.
+
+---
+
 ## 2026-06-12 · Patrón de altura de hero (token --hero-h)
 
 **Estado:** ✅ Aplicado y verificado en render local.
