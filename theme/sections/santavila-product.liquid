@@ -20,9 +20,7 @@
           {%- if low_stock -%}<span class="sv-pdp__tag sv-pdp__tag--low">Pocas unidades</span>{%- endif -%}
         </div>
         {%- assign mcount = product.media.size -%}
-        {%- assign gcols = s.gallery_columns | default: 2 | plus: 0 -%}
-        {%- if mcount < 2 -%}{%- assign gcols = 1 -%}{%- endif -%}
-        <div class="sv-gal{% if mcount < 2 %} sv-gal--single{% elsif gcols == 2 %} sv-gal--grid{% endif %}" data-gallery>
+        <div class="sv-gal{% if mcount < 2 %} sv-gal--single{% endif %}" data-gallery>
           {%- if mcount > 1 -%}
           <div class="sv-gal__rail" aria-label="Miniaturas">
             {%- for media in product.media -%}
@@ -33,9 +31,9 @@
             {%- endfor -%}
           </div>
           {%- endif -%}
-          <div class="sv-gal__stage" data-gal-stage style="--gal-cols: {{ gcols }};">
+          <div class="sv-gal__stage" data-gal-stage>
             {%- for media in product.media -%}
-              <figure class="sv-gal__slide" data-gal-slide data-idx="{{ forloop.index0 }}">
+              <figure class="sv-gal__slide{% if forloop.first %} is-active{% endif %}" data-gal-slide data-idx="{{ forloop.index0 }}">
                 {%- case media.media_type -%}
                   {%- when 'video' -%}
                     {{ media | media_tag: controls: true, autoplay: false, loop: false }}
@@ -110,9 +108,19 @@
           </ul>
 
           {%- if shop.enabled_payment_types.size > 0 -%}
-            <div class="sv-pdp__pay">
-              {%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag: class: 'sv-pdp__payicon' }}{%- endfor -%}
-            </div>
+            <details class="sv-pdp__payment">
+              <summary class="sv-pdp__payment-q">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <span>Métodos de pago aceptados</span>
+                <span class="sv-pdp__payment-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="sv-pdp__payment-a">
+                <p>Pago 100&nbsp;% seguro a través de la pasarela cifrada de Shopify. Aceptamos:</p>
+                <div class="sv-pdp__pay">
+                  {%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag: class: 'sv-pdp__payicon' }}{%- endfor -%}
+                </div>
+              </div>
+            </details>
           {%- endif -%}
         </div>
       </div>
@@ -187,26 +195,19 @@
       dlg.addEventListener('click', function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
     }
 
-    // Gallery rail → stage
+    // Gallery: miniatura → cambia la foto principal (visor de 1 foto)
     var gal = document.querySelector('[data-gallery]');
     if (gal) {
       var thumbs = [].slice.call(gal.querySelectorAll('[data-gal-thumb]'));
       var slides = [].slice.call(gal.querySelectorAll('[data-gal-slide]'));
-      function setActive(idx) { thumbs.forEach(function (t) { t.classList.toggle('is-active', t.getAttribute('data-idx') === String(idx)); }); }
-      thumbs.forEach(function (t) {
-        t.addEventListener('click', function () {
-          var idx = t.getAttribute('data-idx');
-          var slide = gal.querySelector('[data-gal-slide][data-idx="' + idx + '"]');
-          if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          setActive(idx);
-        });
-      });
-      if ('IntersectionObserver' in window) {
-        var sio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) { if (en.isIntersecting) setActive(en.target.getAttribute('data-idx')); });
-        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
-        slides.forEach(function (s) { sio.observe(s); });
+      function setActive(idx) {
+        idx = String(idx);
+        slides.forEach(function (s) { s.classList.toggle('is-active', s.getAttribute('data-idx') === idx); });
+        thumbs.forEach(function (t) { t.classList.toggle('is-active', t.getAttribute('data-idx') === idx); });
       }
+      thumbs.forEach(function (t) {
+        t.addEventListener('click', function () { setActive(t.getAttribute('data-idx')); });
+      });
     }
 
     // Lightbox
@@ -442,12 +443,54 @@
     color: var(--ink);
   }
 
+  .sv-pdp__payment {
+    border-top: 1px solid var(--line);
+    margin-top: 18px;
+  }
+  .sv-pdp__payment-q {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .sv-pdp__payment-q::-webkit-details-marker { display: none; }
+  .sv-pdp__payment-q > svg { color: var(--sage); flex: none; }
+  .sv-pdp__payment-toggle {
+    margin-left: auto;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex: none;
+  }
+  .sv-pdp__payment-toggle::before,
+  .sv-pdp__payment-toggle::after {
+    content: "";
+    position: absolute;
+    background: var(--ink-2);
+    transition: transform 0.3s var(--ease, ease), opacity 0.3s var(--ease, ease);
+  }
+  .sv-pdp__payment-toggle::before { top: 50%; left: 0; right: 0; height: 1.5px; transform: translateY(-50%); }
+  .sv-pdp__payment-toggle::after { left: 50%; top: 0; bottom: 0; width: 1.5px; transform: translateX(-50%); }
+  .sv-pdp__payment[open] .sv-pdp__payment-toggle::after { opacity: 0; transform: translateX(-50%) rotate(90deg); }
+  .sv-pdp__payment-a { padding-bottom: 16px; }
+  .sv-pdp__payment-a > p {
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0 0 12px;
+  }
   .sv-pdp__pay {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     align-items: center;
-    margin-top: 18px;
   }
   .sv-pdp__pay .sv-pdp__payicon {
     width: 36px;
@@ -647,11 +690,10 @@
     z-index: 1;
   }
   .sv-gal__stage {
-    display: grid;
-    grid-template-columns: repeat(var(--gal-cols, 2), 1fr);
-    gap: 10px;
+    position: relative;
   }
   .sv-gal__slide {
+    display: none;
     position: relative;
     margin: 0;
     border-radius: var(--radius-media);
@@ -659,6 +701,11 @@
     background: var(--bone);
     aspect-ratio: 4 / 5;
   }
+  .sv-gal__slide.is-active {
+    display: block;
+    animation: sv-gal-fade 0.4s var(--ease, ease);
+  }
+  @keyframes sv-gal-fade { from { opacity: 0; } to { opacity: 1; } }
   .sv-gal__slide img,
   .sv-gal__slide video,
   .sv-gal__slide iframe {
@@ -687,13 +734,6 @@
     pointer-events: none;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-  }
-  /* Última foto impar a ancho completo en el mosaico 2-up (editorial) */
-  @media screen and (min-width: 861px) {
-    .sv-gal--grid .sv-gal__slide:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-      aspect-ratio: 3 / 2;
-    }
   }
   @media (hover: hover) {
     .sv-gal__slide:hover .sv-gal__img { transform: scale(1.045); }
@@ -791,7 +831,7 @@
       order: 2;
       margin-top: 10px;
     }
-    .sv-gal__stage { grid-template-columns: 1fr; order: 1; }
+    .sv-gal__stage { order: 1; }
   }
   @media screen and (max-width: 560px) {
     .sv-sticky__actions { gap: 8px; }
@@ -813,7 +853,6 @@
   ],
   "settings": [
     { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
-    { "type": "select", "id": "gallery_columns", "label": "Fotos por fila (galería)", "options": [ { "value": "1", "label": "1 foto" }, { "value": "2", "label": "2 fotos" } ], "default": "2" },
     { "type": "richtext", "id": "size_guide", "label": "Guía de medidas (modal)", "info": "Tabla o texto con medidas. Vacío = no muestra el enlace.", "default": "<p>Consulta las medidas exactas en las especificaciones del producto. ¿Dudas con tu espacio? Escríbenos por WhatsApp y te ayudamos a acertar.</p>" }
   ]
 }

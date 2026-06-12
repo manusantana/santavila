@@ -13,6 +13,26 @@
 
 ---
 
+## 2026-06-12 · PDP — feedback dueño: galería 1-foto + recorte + pago informativo
+
+**Estado:** ✅ Aplicado y sincronizado (dev == disco). Pendiente SOLO de colores (esperando captura del dueño).
+
+### Feedback del dueño y decisiones
+- **Galería interminable** (apilaba las 10 fotos en grid) → **visor de 1 foto principal grande + miniaturas que la cambian** (clic) + lightbox para ampliar + carga diferida. Se elimina el modelo grid/mosaico y el setting `gallery_columns`.
+- **PDP demasiado larga/"interminable y fea"** → recortada a lo esencial: **producto → Por qué Santavila (highlights) → Confianza (sellos)**. Quitadas del template (siguen disponibles como presets reactivables): promise, emocional, servicios/usps (duplicaba sellos), acordeones, recomendaciones.
+- **"Más opciones de pago" llevaba directo a comprar** → eliminado el bloque `accelerated-checkout` (dynamic checkout). En su lugar, **collapse informativo** "Métodos de pago aceptados" con los iconos reales (`payment_type_svg_tag`) + texto "pago 100% seguro". NOTA: esto también quita los botones tipo Shop Pay (suben conversión) — reactivar si el dueño los quiere.
+- Producto de 1 foto: validado por el dueño (bien).
+
+### Técnico
+- Shopify exige que toda sección de `sections` esté en `order` (422 si no) → las secciones recortadas se ELIMINAN del template (no basta sacarlas del order).
+- JS galería: miniatura → `setActive` (toggle `.is-active` en slide+thumb); se retira el IntersectionObserver de scroll. Lightbox intacto.
+- Validado (Liquid+JSON), subido Asset API (200), re-pull diff = dev idéntico a disco.
+
+### Pendiente
+- **Colores** (esperando captura del dueño) · importe envío gratis · nº WhatsApp.
+
+---
+
 ## 2026-06-12 · PDP nivel-10 — CIERRE (reveals + variant-picker + tipografía)
 
 **Estado:** ✅ Terminado, validado y sincronizado (re-pull + diff = dev idéntico a disco). PDP nivel-10 cerrada.
