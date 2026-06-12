@@ -63,6 +63,12 @@
   /* Radio de media: patrón global de redondeo para TODA imagen/card
      contenida (no full-bleed). Botones/badges siguen siendo pill. */
   --radius-media: 14px;
+
+  /* Altura de los heroes (patrón común de la tienda). svh = estable en
+     móvil (no salta con la barra). Home = entera; colección/otras =
+     casi entera (deja asomar el contenido de debajo). */
+  --hero-h: 100svh;
+  --hero-h-secondary: 80svh;
   --ease:      cubic-bezier(.22, 1, .36, 1);
   --ease-soft: cubic-bezier(.4, 0, .2, 1);
 

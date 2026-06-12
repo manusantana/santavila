@@ -13,7 +13,7 @@
   endif
 -%}
 
-<div class="sv-chero" style="--sv-chero-h: {{ s.height | default: 56 }}vh;">
+<div class="sv-chero" style="--sv-chero-h: {% if s.hero_size == 'full' %}var(--hero-h){% else %}var(--hero-h-secondary){% endif %};">
   {%- if img != blank -%}
     <div class="sv-chero__media">
       {{ img | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800,1200,1600,2000,2400', alt: title }}
@@ -38,7 +38,7 @@
 {% stylesheet %}
   .sv-chero {
     position: relative;
-    min-height: var(--sv-chero-h, 56vh);
+    min-height: var(--sv-chero-h, var(--hero-h-secondary));
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -120,7 +120,16 @@
   "tag": "section",
   "class": "sv-chero-wrapper",
   "settings": [
-    { "type": "range", "id": "height", "label": "Altura (vh)", "min": 40, "max": 80, "step": 1, "unit": "vh", "default": 56 },
+    {
+      "type": "select",
+      "id": "hero_size",
+      "label": "Altura",
+      "options": [
+        { "value": "full", "label": "Pantalla completa" },
+        { "value": "secondary", "label": "Casi completa (deja asomar)" }
+      ],
+      "default": "secondary"
+    },
     { "type": "image_picker", "id": "image", "label": "Imagen de fondo", "info": "Opcional. Por defecto usa la imagen de la colección; si no hay, degradado sage." },
     { "type": "richtext", "id": "description", "label": "Descripción (override)", "info": "Vacío = usa la descripción de la colección." }
   ],

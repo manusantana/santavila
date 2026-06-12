@@ -3,7 +3,7 @@
   assign seal_id = 'sealpath-' | append: section.id
 -%}
 
-<div class="sv-hero" style="--sv-hero-minh: {{ s.min_height | default: 100 }}svh;">
+<div class="sv-hero" style="--sv-hero-h: {% if s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %};">
   {%- if s.image != blank -%}
     <div class="sv-hero__media">
       {{
@@ -81,7 +81,7 @@
 {% stylesheet %}
   .sv-hero {
     position: relative;
-    min-height: var(--sv-hero-minh, 100svh);
+    min-height: var(--sv-hero-h, var(--hero-h));
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -277,14 +277,14 @@
       "info": "Opcional. Sin imagen se usa el degradado sage de marca."
     },
     {
-      "type": "range",
-      "id": "min_height",
-      "label": "Altura (svh)",
-      "min": 60,
-      "max": 100,
-      "step": 1,
-      "unit": "svh",
-      "default": 100
+      "type": "select",
+      "id": "hero_size",
+      "label": "Altura",
+      "options": [
+        { "value": "full", "label": "Pantalla completa" },
+        { "value": "secondary", "label": "Casi completa (deja asomar)" }
+      ],
+      "default": "full"
     },
     {
       "type": "text",
