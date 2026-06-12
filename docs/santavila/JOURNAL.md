@@ -13,6 +13,27 @@
 
 ---
 
+## 2026-06-12 · PDP nivel-10 — CIERRE (reveals + variant-picker + tipografía)
+
+**Estado:** ✅ Terminado, validado y sincronizado (re-pull + diff = dev idéntico a disco). PDP nivel-10 cerrada.
+
+### Qué se añadió (todo seguro y degradable)
+- **Reveals al scroll (CSS PURO)** en `santavila-components.css`: `@keyframes sv-rise-in` + `animation-timeline: view()`, envuelto en `@supports (animation-timeline: view())` y `prefers-reduced-motion: no-preference`. Aplica a bloques de contenido (promise, highlights items/feats, emocional, sellos, acordeones, servicios). **Sin soporte o con reduced-motion → contenido visible normal; nunca depende de JS.**
+- **Variant-picker**: dropdowns con tipografía de marca (`--sans`), radio 12px y altura 48px. Selectores defensivos (no rompen si la estructura difiere).
+- **Tipografía fina**: `text-wrap: balance` en el H1 del producto.
+
+### Verificación
+Balance Liquid + schema JSON OK; llaves CSS balanceadas (44=44); subida Asset API (200×2); `diff -rq` dev vs disco = idéntico salvo triviales (markets.json, orden de claves index.json).
+
+### Enlace de revisión (dueño, logueado en admin)
+- Editor: `https://mueblesexterior.myshopify.com/admin/themes/189114876228/editor`
+- PDP directa (10 fotos): `https://santavila.com/products/balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a?preview_theme_id=189114876228`
+
+### Pendiente (datos del negocio, no técnico)
+- Importe envío gratis (Excel de costes) · nº de WhatsApp.
+
+---
+
 ## 2026-06-12 · Auditoría nivel-10 PDP (2/2): estética + conversión
 
 **Estado:** ✅ Aplicado, validado y sincronizado en dev (re-pull + diff = idéntico a disco). Revisión íntegra OK.

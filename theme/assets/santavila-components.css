@@ -261,3 +261,31 @@
     transition: none;
   }
 }
+
+/* ===== Reveal al hacer scroll (scroll-driven, CSS PURO) =========
+   Aparición suave de los bloques de contenido al entrar en pantalla.
+   SEGURIDAD: solo se activa si el navegador soporta animation-timeline
+   Y el usuario no pide menos movimiento. En cualquier otro caso el
+   contenido se muestra en su estado final (visible) — NUNCA depende de
+   JS ni queda oculto. Los elementos ya visibles al cargar (above-the-fold)
+   se posicionan directamente en el estado final, sin parpadeo. */
+@keyframes sv-rise-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sv-promise__statement,
+    .sv-hl__item,
+    .sv-hl__feat,
+    .sv-emo__inner,
+    .sv-trust__item,
+    .sv-trust__includes,
+    .sv-acc__item,
+    .sv-svc__item {
+      animation: sv-rise-in linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 46%;
+    }
+  }
+}
