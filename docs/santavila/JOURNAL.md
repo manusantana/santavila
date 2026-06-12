@@ -13,6 +13,38 @@
 
 ---
 
+## 2026-06-12 · Rediseño tema — Fase 3 (banda editorial home)
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
+**Estado:** ✅ Fase 3 completada (`a0a8d16`).
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8) · Shopify CLI 3.94.3.
+
+### Qué se ejecutó
+- `assets/santavila-components.css`: primitivas compartidas del design system (botones pill `sv-btn` + variantes, `sv-ulink`, `sv-eyebrow`, `sv-container`, `sv-section`). El hero se refactorizó para consumirlas.
+- `sections/santavila-manifesto.liquid`: statement serif a 2 columnas (parte destacada + continuación atenuada) + párrafo + ulink.
+- `sections/santavila-scenarios.liquid`: header + 4 cards de escenario (bloques repetibles: imagen, número mono, nombre serif con flecha en hover, enlace). Áticos y terrazas / Balcón / Jardín y porche / Comedores.
+- `sections/santavila-featured.liquid`: Colección Cala (media 4/4.6 con tag, eyebrow, H2, 3 métricas: desde 779€ / 7-10 días / 5 años, CTAs).
+- `templates/index.json`: las 3 secciones insertadas tras el hero.
+
+### Entregables
+- 3 secciones nuevas + `santavila-components.css` (todas bajo `theme/`).
+
+### Hallazgos clave
+- **Límite de 25 caracteres** en el `name` de un `{% schema %}` (y de presets/bloques). "Santavila Colección destacada" (29) rompía el build → renombrado a "Santavila Destacada".
+- **La sesión OAuth de `shopify theme dev` caduca entre fases** ("CLI credentials are invalid") y corta la sincronización. Workaround robusto sin re-login: `shopify theme push --theme 189114876228 --nodelete` con `SHOPIFY_CLI_THEME_TOKEN` (el token `shpat_` SÍ vale para push/validación de schema). El push valida el schema antes de subir. Preview por navegador con el shareable link `?preview_theme_id=189114876228`.
+
+### Prioridades vivas
+- Imágenes reales (image_picker) de hero / escenarios / destacada: pendientes de foto del cliente (mientras, degradado/bone de marca).
+- Enlaces de los 4 escenarios → dependen de crear las colecciones por escenario.
+
+### Decisiones pendientes
+- ¿Mantener `theme dev` (OAuth, hot-reload pero re-login cada sesión) o flujo `theme push` por token + shareable link (estable, sin hot-reload)?
+
+### Siguiente paso recomendado
+- **Fase 4**: "Lo más deseado" (grid de 4 product cards) o Materiales (bloque oscuro), siguiendo el orden del README.
+
+---
+
 ## 2026-06-11 · Rediseño del tema (Dwell) — Fases 0–2
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, tema base **Dwell 3.5.1**.
