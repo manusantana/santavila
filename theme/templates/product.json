@@ -37,7 +37,7 @@
         "variant-picker": {
           "type": "variant-picker",
           "settings": {
-            "variant_style": "dropdowns",
+            "variant_style": "buttons",
             "show_swatches": true,
             "alignment": "left",
             "padding-block-start": 12,
@@ -144,64 +144,40 @@
     },
     "santavila_pdp_social": {
       "type": "santavila-pdp-social",
-      "settings": {},
+      "settings": {
+        "eyebrow": "",
+        "heading": "Compra con tranquilidad"
+      },
       "blocks": {
         "seal1": {
           "type": "seal",
           "settings": {
             "icon": "spain",
             "title": "Hecho en España",
-            "text": "Diseño y fabricación españoles, pensados para nuestro clima."
+            "text": "Diseño y fabricación en España, pensados para nuestro sol y nuestra costa."
           }
         },
         "seal2": {
           "type": "seal",
           "settings": {
-            "icon": "secure",
-            "title": "Pago 100% seguro",
-            "text": "Pasarela de pago de Shopify, cifrada."
+            "icon": "warranty",
+            "title": "Garantía legal",
+            "text": "De verdad, sin letra pequeña ni sorpresas raras."
           }
         },
         "seal3": {
           "type": "seal",
           "settings": {
-            "icon": "warranty",
-            "title": "Garantía legal",
-            "text": "Cubierta por la garantía legal, sin letra pequeña."
-          }
-        },
-        "seal4": {
-          "type": "seal",
-          "settings": {
-            "icon": "returns",
-            "title": "Devolución legal",
-            "text": "Derecho de desistimiento según la ley."
-          }
-        },
-        "seal5": {
-          "type": "seal",
-          "settings": {
             "icon": "support",
-            "title": "Atención personalizada",
-            "text": "Escríbenos a hola@santavila.com, o por WhatsApp y chat, para acertar con medidas y combinaciones."
-          }
-        },
-        "seal6": {
-          "type": "seal",
-          "settings": {
-            "icon": "assembly",
-            "title": "Fácil de montar en casa",
-            "text": "Pocos bultos, instrucciones ilustradas; lo montas tú."
+            "title": "Detrás hay personas",
+            "text": "Escríbenos a hola@santavila.com, por WhatsApp o por el chat y te ayudamos de tú a tú."
           }
         }
       },
       "block_order": [
         "seal1",
         "seal2",
-        "seal3",
-        "seal4",
-        "seal5",
-        "seal6"
+        "seal3"
       ]
     }
   },

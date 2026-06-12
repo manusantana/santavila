@@ -13,6 +13,27 @@
 
 ---
 
+## 2026-06-12 · PDP — feedback (captura): galería alineada + sellos humanos + color
+
+**Estado:** ✅ Aplicado y sincronizado (dev == disco). Color = solución de tema (orientativa); fidelidad real pendiente.
+
+### Feedback del dueño (con capturas) y solución
+1. **Galería desalineada** (la foto principal más corta que la columna; las miniaturas sobresalían) → **rail de miniaturas en `position:absolute` con `top/bottom:0`**, igualado a la altura exacta de la foto principal; scroll interno si hay muchas (nunca sobresale). Móvil: rail horizontal debajo.
+2. **Sellos "parecen muy IA"** → reducidos de **6 a 3** (Hecho en España · Garantía legal · Detrás hay personas) con **copy humano**, título "Compra con tranquilidad" sin eyebrow. Rejilla centrada (max-width 1040).
+3. **Color en botones de texto** (no convertía; el dueño quiere swatches como Sklum) → Dwell solo pinta swatch si el valor tiene `swatch.color` (dato de Shopify, ausente). Solución inmediata: **mapa de color en el tema** (`:has(input[value="…"])` → círculo de color antes del nombre) + `variant_style: buttons`. Seguro: valor sin mapa → círculo 0px (no se ve).
+
+### Honestidad / límites
+- Los colores del mapa son **ORIENTATIVOS** (aproximados por nombre). Fidelidad 100% = imágenes/hex reales de las telas Balliu cargadas como **swatches nativos de Shopify** (Settings → Swatches) — pendiente, idealmente con las fichas reales de tela.
+- El mapa cubre los nombres vistos (Balliu); otros productos con otros nombres degradan a texto sin romper.
+
+### Verificación
+Liquid + JSON válidos; subida Asset API (200×3); re-pull diff = dev idéntico a disco.
+
+### Pendiente
+- **Colores fieles** (telas reales) · importe envío gratis (Excel) · nº WhatsApp.
+
+---
+
 ## 2026-06-12 · PDP — feedback dueño: galería 1-foto + recorte + pago informativo
 
 **Estado:** ✅ Aplicado y sincronizado (dev == disco). Pendiente SOLO de colores (esperando captura del dueño).

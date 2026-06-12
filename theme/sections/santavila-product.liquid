@@ -367,6 +367,42 @@
     --variant-picker-swatch-width: 44px;
     --variant-picker-swatch-height: 44px;
   }
+  /* ===== Muestras de color en los botones de variante (estilo tienda pro)
+     Pinta un círculo de color antes del nombre. Colores ORIENTATIVOS
+     (mapa por nombre); pendientes de afinar con las telas reales.
+     Seguro: si un valor no está en el mapa, el círculo mide 0 (no se ve). */
+  .sv-pdp__variant .variant-option__button-label__text {
+    display: inline-flex;
+    align-items: center;
+  }
+  .sv-pdp__variant .variant-option__button-label__text::before {
+    content: "";
+    width: var(--sw-size, 0px);
+    height: var(--sw-size, 0px);
+    margin-right: var(--sw-gap, 0px);
+    border-radius: 50%;
+    background: var(--sw, transparent);
+    box-shadow: inset 0 0 0 1px rgba(35, 37, 29, 0.2);
+    flex: none;
+  }
+  .sv-pdp__variant label:has(input[value="Blanco"]) { --sw: #f4f2ec; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Tórtola"]) { --sw: #b8a890; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Aluminio"]) { --sw: #a9abae; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Azul"]) { --sw: #2f4a6b; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Amarillo"]) { --sw: #e3c44e; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Naranja"]) { --sw: #d3793c; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Verde claro"]) { --sw: #9aae82; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Natural"]) { --sw: #d9ccb0; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Capuchino"]) { --sw: #a98c6e; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Caqui"]) { --sw: #8e8560; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Marrón oscuro"]) { --sw: #5a4636; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Arena"]) { --sw: #d7c8a6; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Verde oscuro"]) { --sw: #495a43; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Azul celeste"]) { --sw: #9cc1d9; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Ceniza"]) { --sw: #8d8d86; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Azul marino"]) { --sw: #283750; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Gris oscuro"]) { --sw: #5b5b5b; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant label:has(input[value="Azul acero"]) { --sw: #59708a; --sw-size: 15px; --sw-gap: 8px; }
   .sv-pdp__stock {
     display: flex;
     align-items: center;
@@ -643,25 +679,28 @@
 
   /* ===== Galería bespoke (rail + stage 2-up) ===== */
   .sv-gal {
-    display: grid;
-    grid-template-columns: 78px 1fr;
-    gap: 14px;
-    align-items: start;
+    position: relative;
+    padding-left: 92px; /* 78 rail + 14 gap: deja sitio al rail absoluto */
   }
   .sv-gal--single {
-    grid-template-columns: 1fr;
+    padding-left: 0;
   }
   .sv-gal--single .sv-gal__slide {
     aspect-ratio: 1 / 1;
   }
+  /* Rail absoluto: top/bottom 0 lo iguala a la altura de la foto principal;
+     si hay más miniaturas de las que caben, scroll interno (nunca sobresale). */
   .sv-gal__rail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 78px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    position: sticky;
-    top: calc(var(--header-height, 64px) + 20px);
-    max-height: calc(100svh - var(--header-height, 64px) - 40px);
     overflow-y: auto;
+    overscroll-behavior: contain;
     scrollbar-width: none;
   }
   .sv-gal__rail::-webkit-scrollbar { display: none; }
@@ -822,10 +861,11 @@
     .sv-pdp__grid { grid-template-columns: 1fr; gap: 28px; }
     .sv-pdp__buy { position: static; }
     .sv-pdp__buyinner { max-width: none; }
-    .sv-gal { grid-template-columns: 1fr; }
+    .sv-gal { padding-left: 0; display: flex; flex-direction: column; }
     .sv-gal__rail {
-      flex-direction: row;
       position: static;
+      width: auto;
+      flex-direction: row;
       max-height: none;
       overflow-x: auto;
       order: 2;
