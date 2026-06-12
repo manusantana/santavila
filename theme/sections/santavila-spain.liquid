@@ -1,0 +1,124 @@
+{%- liquid
+  assign s = section.settings
+  assign provinces = s.provinces | newline_to_br | split: '<br />'
+-%}
+
+<div class="sv-section sv-spain-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    {%- if s.show_arch -%}
+      <div class="sv-spain__arch">
+        <svg width="58" height="92" viewBox="0 0 100 162" fill="none" aria-hidden="true">
+          <path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="#D6D2C6" stroke="#687060" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#687060" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+      </div>
+    {%- endif -%}
+
+    {%- if s.heading != blank -%}
+      <h2 class="sv-spain__title">{{ s.heading }}</h2>
+    {%- endif -%}
+    {%- if s.body != blank -%}
+      <p class="sv-spain__body">{{ s.body }}</p>
+    {%- endif -%}
+
+    {%- if provinces.size > 0 -%}
+      <div class="sv-spain__provs">
+        {%- for prov in provinces -%}
+          {%- assign p = prov | strip -%}
+          {%- if p != blank -%}<span class="sv-spain__prov">{{ p }}</span>{%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-spain-section {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    text-align: center;
+  }
+  .sv-spain__arch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .sv-spain__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 4.4vw, 56px);
+    line-height: 1.04;
+    max-width: 18ch;
+    margin: 0 auto 22px;
+  }
+  .sv-spain__body {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    max-width: 54ch;
+    margin: 0 auto 38px;
+  }
+  .sv-spain__provs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 12px;
+  }
+  .sv-spain__prov {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 8px 16px;
+    background: var(--paper-2);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila España",
+  "tag": "section",
+  "class": "sv-spain-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arch",
+      "label": "Mostrar arco de marca",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titular",
+      "default": "Diseñado y fabricado en España"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Texto",
+      "default": "Trabajamos con talleres y proveedores españoles verificados. En cada pieza indicamos la provincia de fabricación: origen real, trazabilidad y servicio de proximidad —no solo una etiqueta."
+    },
+    {
+      "type": "textarea",
+      "id": "provinces",
+      "label": "Provincias / regiones (una por línea)",
+      "default": "Comunidad Valenciana\nRegión de Murcia\nCataluña\nAndalucía\nIslas Baleares"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila España"
+    }
+  ]
+}
+{% endschema %}

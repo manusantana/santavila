@@ -1,0 +1,241 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class="sv-section sv-materials-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-materials__grid">
+      <div class="sv-materials__media">
+        {%- if s.image != blank -%}
+          {{
+            s.image
+            | image_url: width: 1200
+            | image_tag:
+              loading: 'lazy',
+              sizes: '(max-width: 860px) 100vw, 50vw',
+              widths: '500, 800, 1100, 1200',
+              alt: s.image.alt | default: s.heading_line1
+          }}
+        {%- endif -%}
+      </div>
+
+      <div class="sv-materials__content">
+        {%- if s.eyebrow != blank -%}
+          <p class="sv-eyebrow sv-materials__eyebrow">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        {%- if s.heading_line1 != blank or s.heading_line2 != blank -%}
+          <h2 class="sv-materials__title">
+            {{- s.heading_line1 -}}
+            {%- if s.heading_line2 != blank -%}<br>{{ s.heading_line2 }}{%- endif -%}
+          </h2>
+        {%- endif -%}
+        {%- if s.intro != blank -%}
+          <p class="sv-materials__intro">{{ s.intro }}</p>
+        {%- endif -%}
+
+        <div class="sv-mat-list">
+          {%- for block in section.blocks -%}
+            <div class="sv-mat-item" {{ block.shopify_attributes }}>
+              <span class="sv-mat-item__sw" style="background: {{ block.settings.swatch }}"></span>
+              <div>
+                <h4>{{ block.settings.name }}</h4>
+                {%- if block.settings.description != blank -%}<p>{{ block.settings.description }}</p>{%- endif -%}
+              </div>
+              {%- if block.settings.tag != blank -%}<div class="sv-mat-item__tag">{{ block.settings.tag }}</div>{%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-materials-section {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  .sv-materials__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 96px);
+    align-items: center;
+  }
+  .sv-materials__media {
+    aspect-ratio: 1 / 1.08;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .sv-materials__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sv-materials__eyebrow {
+    color: var(--sage-soft);
+  }
+  .sv-materials__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 4.4vw, 58px);
+    color: #fff;
+    line-height: 1;
+    margin: 20px 0 24px;
+  }
+  .sv-materials__intro {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.85;
+    max-width: 46ch;
+    margin: 0 0 34px;
+  }
+  .sv-mat-list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--line-light);
+  }
+  .sv-mat-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 18px;
+    align-items: center;
+    padding: 20px 4px;
+    border-bottom: 1px solid var(--line-light);
+    transition: padding-left 0.4s var(--ease, ease);
+  }
+  .sv-mat-item:hover {
+    padding-left: 14px;
+  }
+  .sv-mat-item__sw {
+    width: 36px;
+    height: 36px;
+    border-radius: 99px;
+    flex: none;
+  }
+  .sv-mat-item h4 {
+    font-family: var(--sans);
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+  }
+  .sv-mat-item p {
+    font-family: var(--sans);
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 2px 0 0;
+  }
+  .sv-mat-item__tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    text-align: right;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 860px) {
+    .sv-materials__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sv-mat-item {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Materiales",
+  "tag": "section",
+  "class": "sv-materials-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen (detalle de material)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Materiales con criterio"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Titular · línea 1",
+      "default": "Preparados"
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Titular · línea 2",
+      "default": "para durar."
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Introducción",
+      "default": "No usamos descripciones de proveedor sin editar. Explicamos cómo se comporta cada material en exterior real español: radiación UV, lluvia, salitre de costa."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "material",
+      "name": "Material",
+      "settings": [
+        {
+          "type": "color",
+          "id": "swatch",
+          "label": "Color del swatch",
+          "default": "#9c9a86"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nombre",
+          "default": "Cuerda náutica"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Descripción",
+          "default": "Polietileno trenzado, tacto textil, color estable al sol."
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Etiqueta",
+          "default": "Costa"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila Materiales",
+      "blocks": [
+        { "type": "material", "settings": { "swatch": "#9c9a86", "name": "Cuerda náutica", "description": "Polietileno trenzado, tacto textil, color estable al sol.", "tag": "Costa" } },
+        { "type": "material", "settings": { "swatch": "#8a8d80", "name": "Aluminio termolacado", "description": "Estructura ligera que no se oxida. Anticorrosión real.", "tag": "Todo clima" } },
+        { "type": "material", "settings": { "swatch": "#7d6a4f", "name": "Teca FSC", "description": "Madera noble de origen responsable. Envejece con nobleza.", "tag": "Cálido" } },
+        { "type": "material", "settings": { "swatch": "#b9b4a6", "name": "Piedra y hormigón", "description": "Sobres y bases con peso y permanencia. Cero plástico.", "tag": "Permanencia" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

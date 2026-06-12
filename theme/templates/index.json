@@ -85,6 +85,58 @@
         "link_label": "Ver toda la tienda"
       }
     },
+    "santavila_materials": {
+      "type": "santavila-materials",
+      "blocks": {
+        "m1": {
+          "type": "material",
+          "settings": {
+            "swatch": "#9c9a86",
+            "name": "Cuerda náutica",
+            "description": "Polietileno trenzado, tacto textil, color estable al sol.",
+            "tag": "Costa"
+          }
+        },
+        "m2": {
+          "type": "material",
+          "settings": {
+            "swatch": "#8a8d80",
+            "name": "Aluminio termolacado",
+            "description": "Estructura ligera que no se oxida. Anticorrosión real.",
+            "tag": "Todo clima"
+          }
+        },
+        "m3": {
+          "type": "material",
+          "settings": {
+            "swatch": "#7d6a4f",
+            "name": "Teca FSC",
+            "description": "Madera noble de origen responsable. Envejece con nobleza.",
+            "tag": "Cálido"
+          }
+        },
+        "m4": {
+          "type": "material",
+          "settings": {
+            "swatch": "#b9b4a6",
+            "name": "Piedra y hormigón",
+            "description": "Sobres y bases con peso y permanencia. Cero plástico.",
+            "tag": "Permanencia"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4"
+      ],
+      "settings": {}
+    },
+    "santavila_spain": {
+      "type": "santavila-spain",
+      "settings": {}
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -1179,6 +1231,8 @@
     "santavila_scenarios",
     "santavila_featured",
     "santavila_product_row",
+    "santavila_materials",
+    "santavila_spain",
     "section",
     "product_list_YidTcf",
     "section_BkdmxX",
