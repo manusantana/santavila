@@ -19,7 +19,37 @@
           <span class="sv-pdp__tag sv-pdp__tag--es">Hecho en España</span>
           {%- if low_stock -%}<span class="sv-pdp__tag sv-pdp__tag--low">Pocas unidades</span>{%- endif -%}
         </div>
-        {%- content_for 'block', type: '_product-media-gallery', id: 'media-gallery', closest.product: closest.product -%}
+        <div class="sv-gal" data-gallery>
+          <div class="sv-gal__rail" aria-label="Miniaturas">
+            {%- for media in product.media -%}
+              <button type="button" class="sv-gal__thumb{% if forloop.first %} is-active{% endif %}" data-gal-thumb data-idx="{{ forloop.index0 }}" aria-label="Ver imagen {{ forloop.index }}">
+                {%- unless media.media_type == 'image' -%}<span class="sv-gal__play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>{%- endunless -%}
+                <img src="{{ media.preview_image | image_url: width: 180 }}" alt="" width="90" height="90" loading="lazy">
+              </button>
+            {%- endfor -%}
+          </div>
+          <div class="sv-gal__stage" data-gal-stage style="--gal-cols: {{ s.gallery_columns | default: 2 }};">
+            {%- for media in product.media -%}
+              <figure class="sv-gal__slide" data-gal-slide data-idx="{{ forloop.index0 }}">
+                {%- case media.media_type -%}
+                  {%- when 'video' -%}
+                    {{ media | media_tag: controls: true, autoplay: false, loop: false }}
+                  {%- when 'external_video' -%}
+                    {{ media | external_video_tag }}
+                  {%- else -%}
+                    <img class="sv-gal__img"
+                      src="{{ media.preview_image | image_url: width: 1400 }}"
+                      srcset="{{ media.preview_image | image_url: width: 700 }} 700w, {{ media.preview_image | image_url: width: 1100 }} 1100w, {{ media.preview_image | image_url: width: 1600 }} 1600w"
+                      sizes="(max-width: 860px) 100vw, 40vw"
+                      alt="{{ media.preview_image.alt | default: product.title | escape }}"
+                      width="{{ media.preview_image.width }}" height="{{ media.preview_image.height }}"
+                      data-gal-zoom data-full="{{ media.preview_image | image_url: width: 2400 }}" data-idx="{{ forloop.index0 }}"
+                      loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+                {%- endcase -%}
+              </figure>
+            {%- endfor -%}
+          </div>
+        </div>
       </div>
 
       <div class="sv-pdp__buy">
@@ -113,12 +143,38 @@
         <p class="sv-sticky__price">{{ variant.price | money_without_trailing_zeros }}</p>
       </div>
     </div>
-    <button type="button" class="sv-btn sv-btn--solid sv-sticky__cta" data-sticky-add>Añadir a la cesta</button>
+    <div class="sv-sticky__actions">
+      <div class="sv-qty">
+        <button type="button" class="sv-qty__btn" data-qty-dec aria-label="Quitar uno">
+          <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg>
+        </button>
+        <input class="sv-qty__input" type="number" min="1" value="1" data-sticky-qty inputmode="numeric" aria-label="Cantidad">
+        <button type="button" class="sv-qty__btn" data-qty-inc aria-label="Añadir uno">
+          <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </button>
+      </div>
+      <button type="button" class="sv-btn sv-btn--solid sv-sticky__cta" data-sticky-add>Añadir a la cesta</button>
+    </div>
   </div>
 </div>
 
+<dialog class="sv-lightbox" data-lightbox>
+  <button type="button" class="sv-lightbox__close" data-lb-close aria-label="Cerrar">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button type="button" class="sv-lightbox__nav sv-lightbox__nav--prev" data-lb-prev aria-label="Anterior">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <img class="sv-lightbox__img" data-lb-img alt="">
+  <button type="button" class="sv-lightbox__nav sv-lightbox__nav--next" data-lb-next aria-label="Siguiente">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="sv-lightbox__count" data-lb-count></div>
+</dialog>
+
 <script>
   (function () {
+    // Size guide
     var dlg = document.querySelector('[data-sizeguide]');
     if (dlg) {
       document.querySelectorAll('[data-sizeguide-open]').forEach(function (b) {
@@ -130,17 +186,69 @@
       dlg.addEventListener('click', function (e) { if (e.target === dlg && dlg.close) dlg.close(); });
     }
 
+    // Gallery rail → stage
+    var gal = document.querySelector('[data-gallery]');
+    if (gal) {
+      var thumbs = [].slice.call(gal.querySelectorAll('[data-gal-thumb]'));
+      var slides = [].slice.call(gal.querySelectorAll('[data-gal-slide]'));
+      function setActive(idx) { thumbs.forEach(function (t) { t.classList.toggle('is-active', t.getAttribute('data-idx') === String(idx)); }); }
+      thumbs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          var idx = t.getAttribute('data-idx');
+          var slide = gal.querySelector('[data-gal-slide][data-idx="' + idx + '"]');
+          if (slide) slide.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setActive(idx);
+        });
+      });
+      if ('IntersectionObserver' in window) {
+        var sio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) setActive(en.target.getAttribute('data-idx')); });
+        }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+        slides.forEach(function (s) { sio.observe(s); });
+      }
+    }
+
+    // Lightbox
+    var lb = document.querySelector('[data-lightbox]');
+    if (lb && gal) {
+      var imgs = [].slice.call(gal.querySelectorAll('[data-gal-zoom]'));
+      var fulls = imgs.map(function (i) { return i.getAttribute('data-full'); });
+      var lbImg = lb.querySelector('[data-lb-img]');
+      var lbCount = lb.querySelector('[data-lb-count]');
+      var cur = 0;
+      function show(i) { cur = (i + fulls.length) % fulls.length; lbImg.src = fulls[cur]; if (lbCount) lbCount.textContent = (cur + 1) + ' / ' + fulls.length; }
+      imgs.forEach(function (im, i) { im.addEventListener('click', function () { show(i); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); }); });
+      lb.querySelector('[data-lb-close]').addEventListener('click', function () { lb.close && lb.close(); });
+      lb.querySelector('[data-lb-prev]').addEventListener('click', function () { show(cur - 1); });
+      lb.querySelector('[data-lb-next]').addEventListener('click', function () { show(cur + 1); });
+      lb.addEventListener('click', function (e) { if (e.target === lb && lb.close) lb.close(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lb.open) return;
+        if (e.key === 'ArrowLeft') show(cur - 1);
+        else if (e.key === 'ArrowRight') show(cur + 1);
+      });
+    }
+
+    // Sticky bar + qty
     var bar = document.querySelector('[data-sticky]');
     var buyblock = document.querySelector('.sv-pdp__cart');
     if (bar && buyblock && 'IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          bar.hidden = en.isIntersecting || en.boundingClientRect.top > 0;
-        });
+        entries.forEach(function (en) { bar.hidden = en.isIntersecting || en.boundingClientRect.top > 0; });
       }, { threshold: 0 });
       io.observe(buyblock);
+    }
+    if (bar) {
+      var qtyInput = bar.querySelector('[data-sticky-qty]');
+      var dec = bar.querySelector('[data-qty-dec]');
+      var inc = bar.querySelector('[data-qty-inc]');
+      if (dec) dec.addEventListener('click', function () { qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1); });
+      if (inc) inc.addEventListener('click', function () { qtyInput.value = (parseInt(qtyInput.value, 10) || 1) + 1; });
       var add = bar.querySelector('[data-sticky-add]');
       if (add) add.addEventListener('click', function () {
+        var q = Math.max(1, parseInt(qtyInput && qtyInput.value, 10) || 1);
+        var mainQty = document.querySelector('.sv-pdp__cart input[name="quantity"], .sv-pdp__cart [name="quantity"]');
+        if (mainQty) { mainQty.value = q; mainQty.dispatchEvent(new Event('input', { bubbles: true })); mainQty.dispatchEvent(new Event('change', { bubbles: true })); }
         var m = document.querySelector('.sv-pdp__cart button[name="add"], .sv-pdp__cart .add-to-cart-button');
         if (m) m.click();
       });
@@ -470,10 +578,166 @@
     .sv-sticky__name { max-width: 40vw; }
   }
 
+  /* ===== Galería bespoke (rail + stage 2-up) ===== */
+  .sv-gal {
+    display: grid;
+    grid-template-columns: 78px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .sv-gal__rail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: sticky;
+    top: calc(var(--header-height, 64px) + 20px);
+    max-height: calc(100svh - var(--header-height, 64px) - 40px);
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .sv-gal__rail::-webkit-scrollbar { display: none; }
+  .sv-gal__thumb {
+    position: relative;
+    width: 78px;
+    height: 78px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bone);
+    cursor: pointer;
+    padding: 0;
+    flex: none;
+    transition: border-color 0.2s var(--ease, ease);
+  }
+  .sv-gal__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sv-gal__thumb.is-active { border-color: var(--ink); }
+  .sv-gal__play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: rgba(20, 22, 16, 0.28);
+    z-index: 1;
+  }
+  .sv-gal__stage {
+    display: grid;
+    grid-template-columns: repeat(var(--gal-cols, 2), 1fr);
+    gap: 10px;
+  }
+  .sv-gal__slide {
+    margin: 0;
+    border-radius: var(--radius-media);
+    overflow: hidden;
+    background: var(--bone);
+    aspect-ratio: 4 / 5;
+  }
+  .sv-gal__slide img,
+  .sv-gal__slide video,
+  .sv-gal__slide iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sv-gal__img { cursor: zoom-in; }
+
+  /* ===== Lightbox ===== */
+  .sv-lightbox {
+    border: none;
+    padding: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-width: 100vw;
+    max-height: 100dvh;
+    background: transparent;
+  }
+  .sv-lightbox::backdrop { background: rgba(20, 22, 16, 0.93); }
+  .sv-lightbox[open] { display: flex; align-items: center; justify-content: center; }
+  .sv-lightbox__img { max-width: 88vw; max-height: 86dvh; object-fit: contain; border-radius: 6px; }
+  .sv-lightbox__close,
+  .sv-lightbox__nav {
+    position: fixed;
+    z-index: 2;
+    background: rgba(247, 244, 236, 0.12);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 99px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: background 0.2s var(--ease, ease);
+  }
+  .sv-lightbox__close:hover,
+  .sv-lightbox__nav:hover { background: rgba(247, 244, 236, 0.26); }
+  .sv-lightbox__close { top: 22px; right: 22px; }
+  .sv-lightbox__nav--prev { left: 22px; top: 50%; transform: translateY(-50%); }
+  .sv-lightbox__nav--next { right: 22px; top: 50%; transform: translateY(-50%); }
+  .sv-lightbox__count {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ===== Qty stepper (sticky) ===== */
+  .sv-sticky__actions { display: flex; align-items: center; gap: 12px; flex: none; }
+  .sv-qty {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper-2);
+  }
+  .sv-qty__btn {
+    width: 40px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .sv-qty__input {
+    width: 34px;
+    text-align: center;
+    border: none;
+    background: none;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    -moz-appearance: textfield;
+  }
+  .sv-qty__input::-webkit-outer-spin-button,
+  .sv-qty__input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
   @media screen and (max-width: 860px) {
     .sv-pdp__grid { grid-template-columns: 1fr; gap: 28px; }
     .sv-pdp__buy { position: static; }
     .sv-pdp__buyinner { max-width: none; }
+    .sv-gal { grid-template-columns: 1fr; }
+    .sv-gal__rail {
+      flex-direction: row;
+      position: static;
+      max-height: none;
+      overflow-x: auto;
+      order: 2;
+      margin-top: 10px;
+    }
+    .sv-gal__stage { grid-template-columns: 1fr; order: 1; }
+  }
+  @media screen and (max-width: 560px) {
+    .sv-sticky__actions { gap: 8px; }
+    .sv-qty__btn { width: 34px; }
   }
 {% endstylesheet %}
 
@@ -491,6 +755,7 @@
   ],
   "settings": [
     { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "select", "id": "gallery_columns", "label": "Fotos por fila (galería)", "options": [ { "value": "1", "label": "1 foto" }, { "value": "2", "label": "2 fotos" } ], "default": "2" },
     { "type": "richtext", "id": "size_guide", "label": "Guía de medidas (modal)", "info": "Tabla o texto con medidas. Vacío = no muestra el enlace.", "default": "<p>Consulta las medidas exactas en las especificaciones del producto. ¿Dudas con tu espacio? Escríbenos por WhatsApp y te ayudamos a acertar.</p>" }
   ]
 }
