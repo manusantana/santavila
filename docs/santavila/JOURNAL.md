@@ -13,6 +13,29 @@
 
 ---
 
+## 2026-06-12 · Rediseño tema — Fase 5 (Materiales + Fabricado en España)
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
+**Estado:** ✅ Completada (`fd6c452`).
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8). Premisa: "la mejor tienda online de home del mundo".
+
+### Qué se ejecutó
+- `sections/santavila-materials.liquid`: bloque oscuro sage-900 (scheme-5), media + lista de 4 materiales en bloques repetibles (swatch de color, nombre, descripción, tag mono) con hover de sangrado. Copy: cuerda náutica / aluminio termolacado / teca FSC / piedra y hormigón.
+- `sections/santavila-spain.liquid`: banda bone centrada (scheme-4) con el arco SVG de marca (un único gesto), H2 serif, texto y provincias en chips mono pill (textarea, una por línea).
+- `templates/index.json`: insertadas tras "Lo más deseado". Sincronizado con `theme push` (token).
+
+### Hallazgos clave
+- Las secciones con esquema no-default (dark/bone) deben fijar `background-color: var(--color-background)` y `color: var(--color-foreground)` en su wrapper: la clase `.color-scheme-N` define las CSS vars pero no pinta el fondo del elemento por sí sola.
+
+### Prioridades vivas
+- Imágenes reales (hero, escenarios, destacada, materiales) — foto del cliente.
+- Data model de metafields `santavila.*` (alimenta cards, badges, plazos, filtros).
+
+### Siguiente paso recomendado
+- **Fase 6**: Editorial "El exterior bien vivido" (1 card grande + 2 pequeñas) + Profesionales (CTA sage) + Servicios (4 columnas) + Newsletter + Footer, cerrando la home. Después: plantillas de Colección y Ficha de producto (PDP).
+
+---
+
 ## 2026-06-12 · Rediseño tema — Fase 4 ("Lo más deseado")
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
