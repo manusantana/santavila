@@ -204,7 +204,7 @@
             "sv_risk": {
               "type": "text",
               "settings": {
-                "text": "<p>Recíbelo en 3–5 días laborables · Fácil de montar en casa.</p>",
+                "text": "<p>Pago seguro · Fácil de montar en casa.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -558,7 +558,7 @@
           "type": "row",
           "settings": {
             "heading": "Envío y entrega",
-            "content": "<p>Lo recibes en 3–5 días laborables a península. El envío lo gestionamos nosotros y llega listo para montar tú mismo.</p>"
+            "content": "<p>El envío lo gestionamos nosotros a España península. Plazo estimado de entrega: hasta 30 días según disponibilidad del proveedor. Llega listo para montar tú mismo.</p>"
           }
         },
         "r3": {
