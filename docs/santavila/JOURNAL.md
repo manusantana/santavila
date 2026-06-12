@@ -13,6 +13,28 @@
 
 ---
 
+## 2026-06-12 · Revisión colección — UX de filtros + radio global + sin FAQ
+
+**Estado:** ✅ Aplicado (`37a0324`). Pendiente verificación visual del dueño.
+**Quién/qué:** revisión del dueño sobre la colección + Claude (Opus 4.8).
+
+### Qué se ejecutó (feedback del dueño)
+- **Filtros apelotonados → desplegables por faceta**: cada filtro (`Material ▾`, `Precio ▾`, `Disponibilidad ▾`…) abre un panel con checkboxes, contador por opción, contador de activos en el chip, "Limpiar" y caret animado. JS: cierra al abrir otro / clic fuera / Esc. Mucho mejor UX que los chips planos.
+- **Radio de imagen global**: nuevo token `--radius-media: 14px` aplicado a TODAS las cards/media (pcard, escenarios, destacada, materiales, editorial, banda). Patrón de diseño consistente. Heroes full-bleed sin radio (a propósito). Footer payicon conserva 4px.
+- **FAQ fuera de sitio** (estrecha, en Accesorios) → eliminada de `collection.json`. La colección queda hero + grid limpio.
+
+### Hallazgos clave / honestidad
+- **No puedo verificar visualmente el dev theme por curl** (el `preview_theme_id` exige sesión de admin; el muro de contraseña bloquea el render anónimo). Solo valido sintaxis/schema en `theme push`. Por eso se colaron detalles de UX (filtros apelotonados, FAQ) que el dueño sí vio. **Para QA visual: el dueño revisa o reactivamos `theme dev` (OAuth) en ciclos de iteración.**
+
+### Prioridades vivas
+- Verificación visual del dueño de la colección revisada.
+- Metafields `santavila.*` + Search & Discovery → activan los filtros de marca (material, quick ship).
+
+### Siguiente paso recomendado
+- Cerrar la revisión de colección con el dueño; luego **Fase 8 — PDP**.
+
+---
+
 ## 2026-06-12 · Rediseño tema — Fase 7 (plantilla de Colección)
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
