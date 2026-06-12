@@ -13,6 +13,34 @@
 
 ---
 
+## 2026-06-12 · Auditoría nivel-10 PDP (2/2): estética + conversión
+
+**Estado:** ✅ Aplicado, validado y sincronizado en dev (re-pull + diff = idéntico a disco). Revisión íntegra OK.
+
+### Mejoras aplicadas (todas seguras: hover/spacing/jerarquía; sin JS frágil ni animaciones que oculten contenido)
+- **Galería:**
+  - Zoom suave al hover sobre la foto (scale 1.045, solo `hover:hover`).
+  - Indicador "ampliar" (lupa) en la esquina de cada imagen ampliable (`:has()` + data-uri SVG; degrada sin romper si el navegador no soporta `:has`).
+  - **Mosaico editorial**: la última foto impar ocupa el ancho completo en el stage 2-up (clase `sv-gal--grid`, solo desktop). `gallery_columns` ahora se castea a int (`| plus: 0`).
+- **Columna de compra:**
+  - Precio con `tabular-nums` (cifras alineadas).
+  - CTA add-to-cart: sombra al hover + micro-scale en `:active`.
+  - Barra sticky: sombra superior para despegarla del contenido.
+- **Confianza (sellos):** elevación sutil al hover (borde sage + translateY).
+- **Highlights:** hover-zoom en la imagen, coherente con galería y cards de home.
+
+### Decisión consciente (no romper)
+NO se añadieron animaciones de entrada por scroll que pongan el contenido en `opacity:0` dependiendo de JS (violaría "contenido visible sin JS" y es lo más propenso a romperse). Si se quiere ese nivel de "wow", la vía segura es scroll-driven CSS puro (`animation-timeline: view()`), que degrada a contenido visible — pendiente de decisión del dueño.
+
+### Verificación
+Balance Liquid + schema JSON OK en los 3 archivos; subida por Asset API (200); re-pull + `diff -rq` confirma dev == disco salvo trivialidades (markets.json, orden de claves en index.json).
+
+### Pendiente
+- Importe envío gratis (del Excel de costes) y nº de WhatsApp.
+- Si el dueño lo quiere: reveals scroll-driven CSS-puras; pulido del variant-picker de Dwell.
+
+---
+
 ## 2026-06-12 · Auditoría nivel-10 PDP (1/2): saneamiento de claims falsos
 
 **Estado:** ✅ Aplicado y subido a dev (Asset API, 200). Pendiente: 2 datos del dueño (importe envío gratis, contactos) y mejoras estéticas (parte 2).

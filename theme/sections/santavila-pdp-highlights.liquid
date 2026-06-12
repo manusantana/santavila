@@ -48,7 +48,8 @@
   .sv-hl-section { background-color: var(--color-background); color: var(--color-foreground); }
   .sv-hl__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,6vw,90px); align-items: center; }
   .sv-hl__media { aspect-ratio: 4/4.6; position: relative; overflow: hidden; border-radius: var(--radius-media); background: var(--bone); }
-  .sv-hl__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .sv-hl__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease,ease); }
+  @media (hover: hover) { .sv-hl__media:hover img { transform: scale(1.04); } }
   .sv-hl__title { font-family: var(--serif); font-weight: 500; font-size: clamp(28px,3.6vw,46px); line-height: 1.04; margin: 12px 0 28px; }
   .sv-hl__item { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 18px 0; border-top: 1px solid var(--line); }
   .sv-hl__item:first-of-type { border-top: none; }
