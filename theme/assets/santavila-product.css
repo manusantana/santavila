@@ -1,0 +1,115 @@
+/* ============================================================
+   SANTAVILA · PDP (ficha) — capa visual sobre product-information
+   de Dwell. NO toca la fontanería (form, variantes, add-to-cart,
+   Shop Pay, drawer): solo reviste. Tokens exactos.
+   Primer pase (8a): tipografía, precio, add-to-cart, media
+   redondeada, swatches, sticky bar. Se afina por sub-fases.
+   ============================================================ */
+
+/* ---- Columna de compra: tipografía de marca ---- */
+.product-information .view-product-title,
+.product-details h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.product-details {
+  font-family: var(--sans);
+}
+
+/* Reseñas (rating) en tono de marca */
+.product-details .rating,
+.product-details .review {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+/* ---- Precio prominente ---- */
+.product-details .price,
+.product-details [class*="price"]:not(.price--compare):not([class*="installment"]) {
+  font-family: var(--sans);
+}
+.product-details .price .price__regular,
+.product-details .price__container,
+.product-details .price {
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 600;
+  color: var(--ink);
+}
+.product-details .price--on-sale .price__sale {
+  color: var(--clay-deep);
+}
+
+/* ---- Swatches de variante a 44px (README) ---- */
+.product-details .variant-option__swatch,
+.product-details [class*="swatch"] {
+  --variant-picker-swatch-width: 44px;
+  --variant-picker-swatch-height: 44px;
+}
+
+/* ---- "Añadir a la cesta" — pill grande de alto contraste (≥56px) ---- */
+.product-details .add-to-cart-button,
+.product-details button[name="add"],
+.product-details .product-form__submit {
+  min-height: 56px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+/* Shop Pay / acelerado: que respire bajo el CTA principal */
+.product-details .shopify-payment-button {
+  margin-top: 10px;
+}
+.product-details .shopify-payment-button__button {
+  border-radius: 999px !important;
+  min-height: 52px;
+}
+
+/* ---- Cantidad: pill coherente ---- */
+.product-details .quantity-selector,
+.product-details quantity-selector {
+  border-radius: 999px;
+}
+
+/* ---- Galería: media redondeada (patrón global) ---- */
+.product-information__media .media-gallery img,
+.product-information__media .product-media-gallery img,
+.product-information__media img {
+  border-radius: var(--radius-media);
+}
+/* Miniaturas: redondeo menor y coherente */
+.product-information__media [class*="thumbnail"] img,
+.product-information__media [class*="thumb"] img {
+  border-radius: 8px;
+}
+
+/* ---- Acordeones de la columna: tipografía de marca ---- */
+.product-details .accordion__title,
+.product-details summary {
+  font-family: var(--serif);
+  font-weight: 500;
+}
+
+/* ---- Sticky add-to-cart bar nativo → papel translúcido + blur ---- */
+.sticky-add-to-cart,
+.sticky-add-to-cart__bar {
+  background: rgba(247, 244, 236, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+}
+.sticky-add-to-cart__button,
+.sticky-add-to-cart .add-to-cart-button {
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 600;
+}
