@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-06-12 · PDP nivel-10 — galería bespoke + sticky qty
+
+**Estado:** ✅ Construida, schema-válida y en dev theme (push token + verificación API). Falta confirmación VISUAL del dueño (theme dev se atascó).
+
+### Qué se ejecutó (feedback dueño: Zara Home/Sklum/Westwing)
+- **Galería bespoke** (`product.media`): rail vertical de miniaturas (clic→scroll+activo), **stage 2 fotos por fila** (setting `gallery_columns`), vídeo soportado. Reemplaza la galería de Dwell (perdemos su auto-sync por variante; aceptado).
+- **Lightbox full-screen** (prev/next, contador, teclado, clic-fuera) → arregla el zoom "fuera de contexto".
+- **Sticky add-to-cart con stepper de cantidad**: setea la cantidad real del form de Dwell antes de proxy-clicar el add. Carrito intacto.
+
+### Hallazgos / incidencias
+- `range` de Shopify exige **≥3 valores** (min/max/step) → para 1–2 usar `select`.
+- **theme dev se atasca con su fichero `.tmp` al guardar rápido** ("contains illegal characters" / 500). Solución: parar theme dev + `theme push` por token (estable). Confirmado en memoria [[shopify_two_auth_rails]].
+
+### Pendiente
+- Confirmación visual del dueño (re-activar theme dev OAuth o revisar shareable link).
+- Specs metafields + reseñas (app) con su OK.
+
+---
+
 ## 2026-06-12 · PDP nivel-10 — pulido UI (tags, guía medidas, sticky bar)
 
 **Estado:** ✅ Pulido UI aplicado y verificado en render local.
