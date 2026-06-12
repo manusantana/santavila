@@ -1,0 +1,283 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class="sv-section sv-featured-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-feat {% if s.media_position == 'right' %}sv-feat--rev{% endif %}">
+      <div class="sv-feat__media">
+        {%- if s.tag != blank -%}
+          <span class="sv-feat__tag">{{ s.tag }}</span>
+        {%- endif -%}
+        {%- if s.image != blank -%}
+          {{
+            s.image
+            | image_url: width: 1400
+            | image_tag:
+              loading: 'lazy',
+              sizes: '(max-width: 860px) 100vw, 55vw',
+              widths: '500, 800, 1100, 1400',
+              alt: s.image.alt | default: s.heading
+          }}
+        {%- endif -%}
+      </div>
+
+      <div class="sv-feat__content">
+        {%- if s.eyebrow != blank -%}
+          <p class="sv-eyebrow">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        {%- if s.heading != blank -%}
+          <h2 class="sv-feat__title">{{ s.heading }}</h2>
+        {%- endif -%}
+        {%- if s.body != blank -%}
+          <p class="sv-feat__body">{{ s.body }}</p>
+        {%- endif -%}
+
+        {%- if s.meta1_value != blank or s.meta2_value != blank or s.meta3_value != blank -%}
+          <div class="sv-feat__meta">
+            {%- if s.meta1_value != blank -%}
+              <div><b>{{ s.meta1_value }}</b><span>{{ s.meta1_label }}</span></div>
+            {%- endif -%}
+            {%- if s.meta2_value != blank -%}
+              <div><b>{{ s.meta2_value }}</b><span>{{ s.meta2_label }}</span></div>
+            {%- endif -%}
+            {%- if s.meta3_value != blank -%}
+              <div><b>{{ s.meta3_value }}</b><span>{{ s.meta3_label }}</span></div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- if s.cta1_label != blank or s.cta2_label != blank -%}
+          <div class="sv-feat__cta">
+            {%- if s.cta1_label != blank -%}
+              <a href="{{ s.cta1_link | default: '#' }}" class="sv-btn sv-btn--solid">
+                {{ s.cta1_label }}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            {%- endif -%}
+            {%- if s.cta2_label != blank -%}
+              <a href="{{ s.cta2_link | default: '#' }}" class="sv-btn sv-btn--line">{{ s.cta2_label }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-feat {
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    gap: clamp(28px, 5vw, 72px);
+    align-items: center;
+  }
+  .sv-feat--rev {
+    direction: rtl;
+  }
+  .sv-feat--rev > * {
+    direction: ltr;
+  }
+  .sv-feat__media {
+    position: relative;
+    aspect-ratio: 4 / 4.6;
+    overflow: hidden;
+    background: var(--bone);
+    border-radius: 4px;
+  }
+  .sv-feat__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sv-feat__tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(247, 244, 236, 0.92);
+    color: var(--sage-deep);
+    padding: 5px 10px;
+    border-radius: 99px;
+  }
+  .sv-feat__title {
+    font-family: var(--serif);
+    font-size: clamp(34px, 4.6vw, 64px);
+    font-weight: 500;
+    line-height: 1;
+    margin: 18px 0 22px;
+  }
+  .sv-feat__body {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    max-width: 46ch;
+    margin: 0 0 30px;
+  }
+  .sv-feat__meta {
+    display: flex;
+    gap: 34px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .sv-feat__meta b {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+  }
+  .sv-feat__meta span {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .sv-feat__cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 860px) {
+    .sv-feat {
+      grid-template-columns: 1fr;
+    }
+    .sv-feat--rev {
+      direction: ltr;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Destacada",
+  "tag": "section",
+  "class": "sv-featured-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Posición de la imagen",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Etiqueta sobre la imagen",
+      "default": "Colección destacada"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Salones de exterior"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titular",
+      "default": "Colección Cala"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Descripción",
+      "default": "Un sistema modular de cuerda náutica sobre aluminio termolacado. Líneas serenas, asiento profundo y cojines desenfundables. Pensada para costa: resiste sol, lluvia y salitre sin perder la calma."
+    },
+    {
+      "type": "header",
+      "content": "Métricas (3)"
+    },
+    {
+      "type": "text",
+      "id": "meta1_value",
+      "label": "Métrica 1 · valor",
+      "default": "desde 779 €"
+    },
+    {
+      "type": "text",
+      "id": "meta1_label",
+      "label": "Métrica 1 · etiqueta",
+      "default": "Sofá 3 plazas"
+    },
+    {
+      "type": "text",
+      "id": "meta2_value",
+      "label": "Métrica 2 · valor",
+      "default": "7–10 días"
+    },
+    {
+      "type": "text",
+      "id": "meta2_label",
+      "label": "Métrica 2 · etiqueta",
+      "default": "Quick ship"
+    },
+    {
+      "type": "text",
+      "id": "meta3_value",
+      "label": "Métrica 3 · valor",
+      "default": "5 años"
+    },
+    {
+      "type": "text",
+      "id": "meta3_label",
+      "label": "Métrica 3 · etiqueta",
+      "default": "Garantía"
+    },
+    {
+      "type": "header",
+      "content": "Llamadas a la acción"
+    },
+    {
+      "type": "text",
+      "id": "cta1_label",
+      "label": "CTA principal · texto",
+      "default": "Ver la colección"
+    },
+    {
+      "type": "url",
+      "id": "cta1_link",
+      "label": "CTA principal · enlace"
+    },
+    {
+      "type": "text",
+      "id": "cta2_label",
+      "label": "CTA secundaria · texto",
+      "default": "Pedir muestras de tejido"
+    },
+    {
+      "type": "url",
+      "id": "cta2_link",
+      "label": "CTA secundaria · enlace"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila Destacada"
+    }
+  ]
+}
+{% endschema %}

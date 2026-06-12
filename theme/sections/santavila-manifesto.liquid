@@ -1,0 +1,109 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class="sv-section sv-manifesto-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-manifesto">
+      {%- if s.statement_lead != blank or s.statement_muted != blank -%}
+        <h2 class="sv-manifesto__big">
+          {{- s.statement_lead }}
+          {% if s.statement_muted != blank %}<span class="sv-manifesto__muted">{{ s.statement_muted }}</span>{% endif -%}
+        </h2>
+      {%- endif -%}
+      <div class="sv-manifesto__side">
+        {%- if s.paragraph != blank -%}
+          <p>{{ s.paragraph }}</p>
+        {%- endif -%}
+        {%- if s.link_label != blank -%}
+          <a href="{{ s.link_url | default: '#' }}" class="sv-ulink">
+            {{ s.link_label }}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-manifesto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 90px);
+    align-items: end;
+  }
+  .sv-manifesto__big {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 3.6vw, 52px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .sv-manifesto__muted {
+    color: var(--ink-3);
+  }
+  .sv-manifesto__side p {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 0 0 22px;
+  }
+  @media screen and (max-width: 860px) {
+    .sv-manifesto {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Manifiesto",
+  "tag": "section",
+  "class": "sv-manifesto-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Esquema de color",
+      "default": "scheme-1"
+    },
+    {
+      "type": "textarea",
+      "id": "statement_lead",
+      "label": "Statement · parte destacada",
+      "default": "No vendemos un sueño inalcanzable."
+    },
+    {
+      "type": "textarea",
+      "id": "statement_muted",
+      "label": "Statement · continuación (atenuada)",
+      "default": "Vendemos una mejora tangible del modo de vivir: el patio con sombra, la mesa larga de domingo, el ático entre semana."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Párrafo lateral",
+      "default": "En España el exterior nunca fue un lujo: fue una forma de vivir. Seleccionamos mobiliario fabricado aquí, lo explicamos con honestidad —materiales, medidas, entrega, mantenimiento— y lo ponemos al servicio de la vivienda real."
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Enlace · texto",
+      "default": "La forma seria de amueblar fuera"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Enlace · destino"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila Manifiesto"
+    }
+  ]
+}
+{% endschema %}

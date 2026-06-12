@@ -27,6 +27,54 @@
         "scroll_label": "Descubre"
       }
     },
+    "santavila_manifesto": {
+      "type": "santavila-manifesto",
+      "settings": {}
+    },
+    "santavila_scenarios": {
+      "type": "santavila-scenarios",
+      "blocks": {
+        "sc1": {
+          "type": "scenario",
+          "settings": {
+            "name": "Áticos y terrazas",
+            "number": "01"
+          }
+        },
+        "sc2": {
+          "type": "scenario",
+          "settings": {
+            "name": "Balcón",
+            "number": "02"
+          }
+        },
+        "sc3": {
+          "type": "scenario",
+          "settings": {
+            "name": "Jardín y porche",
+            "number": "03"
+          }
+        },
+        "sc4": {
+          "type": "scenario",
+          "settings": {
+            "name": "Comedores",
+            "number": "04"
+          }
+        }
+      },
+      "block_order": [
+        "sc1",
+        "sc2",
+        "sc3",
+        "sc4"
+      ],
+      "settings": {}
+    },
+    "santavila_featured": {
+      "type": "santavila-featured",
+      "settings": {}
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -1117,6 +1165,9 @@
   },
   "order": [
     "santavila_hero",
+    "santavila_manifesto",
+    "santavila_scenarios",
+    "santavila_featured",
     "section",
     "product_list_YidTcf",
     "section_BkdmxX",

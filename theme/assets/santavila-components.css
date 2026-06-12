@@ -1,0 +1,117 @@
+/* ============================================================
+   SANTAVILA · Primitivas compartidas del design system
+   (botones pill, ulink, eyebrow, contenedor y ritmo de sección).
+   Fuente exacta: store.css. Las consumen las secciones santavila-*.
+   Carga global desde layout/theme.liquid (tras santavila-tokens.css).
+   ============================================================ */
+
+/* Contenedor + ritmo vertical (README: maxw 1480, gutter, secciones) */
+.sv-container {
+  max-width: var(--maxw, 1480px);
+  margin-inline: auto;
+  padding-inline: var(--gut, clamp(20px, 5vw, 76px));
+}
+.sv-section {
+  padding-block: clamp(64px, 10vw, 150px);
+}
+
+/* Eyebrow: mono 11.5px, tracking 0.28em, uppercase, sage */
+.sv-eyebrow {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Enlace subrayado tipo "ver más" (mono uppercase con flecha) */
+.sv-ulink {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+  transition: gap 0.35s var(--ease, ease);
+  color: inherit;
+}
+.sv-ulink:hover {
+  gap: 15px;
+}
+
+/* Botones pill */
+.sv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 15px 30px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.35s var(--ease, ease);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sv-btn svg {
+  transition: transform 0.35s var(--ease, ease);
+}
+.sv-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.sv-btn--solid {
+  background: var(--ink);
+  color: var(--paper);
+}
+.sv-btn--solid:hover {
+  background: var(--sage-deep);
+}
+
+.sv-btn--sage {
+  background: var(--sage);
+  color: #fff;
+}
+.sv-btn--sage:hover {
+  background: var(--sage-deep);
+}
+
+.sv-btn--light {
+  background: #fff;
+  color: var(--ink);
+}
+.sv-btn--light:hover {
+  background: var(--bone);
+}
+
+.sv-btn--line {
+  background: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+.sv-btn--line:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.sv-btn--ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.sv-btn--ghost:hover {
+  background: #fff;
+  color: var(--ink);
+  border-color: #fff;
+}
