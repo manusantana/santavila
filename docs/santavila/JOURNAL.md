@@ -13,6 +13,38 @@
 
 ---
 
+## 2026-06-12 · Rediseño tema — Fase 6 (cierre de la HOME)
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
+**Estado:** ✅ Home 100% Santavila (`6a0aaec` + `381e53a`).
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8). Premisa: la mejor tienda de decoración exterior del mundo (Shopify-native, responsive, cero errores de maquetado).
+
+### Qué se ejecutó
+**6a — cuerpo de la home** (`6a0aaec`)
+- `santavila-editorial.liquid`: revista 1 card grande + 2 pequeñas (bloques de artículo).
+- `santavila-pro.liquid`: Profesionales, reutiliza el componente global `.sv-feat` (espejado) + botón sage.
+- `santavila-services.liquid`: 4 columnas (icono por `select` + título + texto).
+- `santavila-newsletter.liquid`: sage-900 + `{% form 'customer' %}` real con estados éxito/error.
+- `index.json`: insertadas en orden README y **eliminadas las 7 secciones demo de Dwell** → la home renderiza solo las 11 secciones Santavila.
+
+**6b — footer** (`381e53a`)
+- `santavila-footer.liquid`: marca (logo del tema + eslogan + social en pills) · 3 columnas por `link_list` (menús reales colecciones/información/condiciones) · copyright + **iconos de pago reales** (`shop.enabled_payment_types | payment_type_svg_tag`).
+- `footer-group.json`: reemplazado el footer de Dwell + email-signup redundante por la sección Santavila.
+
+### Hallazgos clave
+- `tag: null` no es válido en el schema de una sección (debe ser string u omitirse). En bloques sí se permite.
+- Reutilizar clases CSS entre secciones funciona porque Dwell agrega todos los `{% stylesheet %}` en un único CSS global (Profesionales reusa `.sv-feat` del destacado).
+- El footer de Dwell ya traía menús reales (colecciones, footer, información) → el footer bespoke los reaprovecha vía `link_list`.
+
+### Prioridades vivas
+- **Imágenes**: hero, escenarios, destacada, materiales, editorial — pendientes de foto del cliente (empty-states con fondo bone/sage cuidados).
+- **Contenido**: nav del header y columnas del footer dependen de menús + colecciones por escenario; data model de metafields `santavila.*` para cards/PDP/filtros.
+
+### Siguiente paso recomendado
+- **Fase 7**: plantilla de **Colección** (`collection.json`): hero de colección, filter bar sticky (Search & Discovery), grid 3 col con banda editorial intercalada. Luego **Ficha de producto (PDP)** — la más compleja (Perfect Product Page).
+
+---
+
 ## 2026-06-12 · Rediseño tema — Fase 5 (Materiales + Fabricado en España)
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
