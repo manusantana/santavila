@@ -59,6 +59,10 @@
   --maxw: 1480px;
   --gut:  clamp(20px, 5vw, 76px);
   --ann-h: 39px;
+
+  /* Radio de media: patrón global de redondeo para TODA imagen/card
+     contenida (no full-bleed). Botones/badges siguen siendo pill. */
+  --radius-media: 14px;
   --ease:      cubic-bezier(.22, 1, .36, 1);
   --ease-soft: cubic-bezier(.4, 0, .2, 1);
 

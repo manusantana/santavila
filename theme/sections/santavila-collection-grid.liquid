@@ -37,38 +37,57 @@
 <div class="sv-coll color-{{ s.color_scheme }}">
   <div class="sv-filterbar">
     <div class="sv-container sv-filterbar__in">
-      <div class="sv-chips">
-        <a href="{{ collection.url }}" class="sv-chip {% unless has_active %}is-on{% endunless %}">Todo</a>
+      <div class="sv-facets" data-facets>
         {%- for filter in collection.filters -%}
-          {%- case filter.type -%}
-            {%- when 'boolean', 'list' -%}
-              {%- for value in filter.values -%}
-                <a
-                  href="{% if value.active %}{{ value.url_to_remove }}{% else %}{{ value.url_to_add }}{% endif %}"
-                  class="sv-chip {% if value.active %}is-on{% endif %}"
-                  {% if value.count == 0 and value.active == false %}aria-disabled="true" tabindex="-1"{% endif %}
-                >{{ value.label }}</a>
-              {%- endfor -%}
-            {%- when 'price_range' -%}
-              <details class="sv-chip-pop">
-                <summary class="sv-chip {% if filter.min_value.value != null or filter.max_value.value != null %}is-on{% endif %}">
-                  {{ filter.label }}
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-                </summary>
-                <div class="sv-chip-pop__panel">
-                  <form method="get" action="{{ collection.url }}">
+          {%- liquid
+            assign active_n = filter.active_values.size
+            assign price_active = false
+            if filter.type == 'price_range'
+              if filter.min_value.value != null or filter.max_value.value != null
+                assign price_active = true
+              endif
+            endif
+          -%}
+          <details class="sv-facet">
+            <summary class="sv-chip {% if active_n > 0 or price_active %}is-on{% endif %}">
+              {{ filter.label }}{% if active_n > 0 %} · {{ active_n }}{% endif %}
+              <svg class="sv-facet__caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="sv-facet__panel">
+              {%- case filter.type -%}
+                {%- when 'boolean', 'list' -%}
+                  <ul class="sv-facet__opts">
+                    {%- for value in filter.values -%}
+                      <li>
+                        <a
+                          href="{% if value.active %}{{ value.url_to_remove }}{% else %}{{ value.url_to_add }}{% endif %}"
+                          class="sv-facet__opt {% if value.active %}is-active{% endif %}"
+                          {% if value.count == 0 and value.active == false %}aria-disabled="true" tabindex="-1"{% endif %}
+                        >
+                          <span class="sv-facet__box">{% if value.active %}<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>{% endif %}</span>
+                          <span class="sv-facet__lbl">{{ value.label }}</span>
+                          <span class="sv-facet__count">{{ value.count }}</span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- when 'price_range' -%}
+                  <form method="get" action="{{ collection.url }}" class="sv-facet__price">
                     {{ hidden_lists }}
                     <div class="sv-price-row">
-                      <input type="number" inputmode="numeric" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value }}" placeholder="{{ filter.range_min | money_without_trailing_zeros | strip_html }}" min="0">
+                      <input type="number" inputmode="numeric" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value }}" placeholder="{{ filter.range_min | money_without_trailing_zeros | strip_html }}" min="0" aria-label="Precio mínimo">
                       <span aria-hidden="true">–</span>
-                      <input type="number" inputmode="numeric" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value }}" placeholder="{{ filter.range_max | money_without_trailing_zeros | strip_html }}" min="0">
+                      <input type="number" inputmode="numeric" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value }}" placeholder="{{ filter.range_max | money_without_trailing_zeros | strip_html }}" min="0" aria-label="Precio máximo">
                     </div>
                     <button type="submit" class="sv-btn sv-btn--line sv-btn--sm">Aplicar</button>
                   </form>
-                </div>
-              </details>
-          {%- endcase -%}
+              {%- endcase -%}
+            </div>
+          </details>
         {%- endfor -%}
+        {%- if has_active -%}
+          <a href="{{ collection.url }}" class="sv-facets__clear">Limpiar</a>
+        {%- endif -%}
       </div>
 
       <div class="sv-sortwrap">
@@ -152,6 +171,26 @@
         .catch(function () { btn.removeAttribute('aria-busy'); window.location.href = url; });
     });
   })();
+
+  (function () {
+    var facets = Array.prototype.slice.call(document.querySelectorAll('[data-facets] .sv-facet'));
+    if (!facets.length) return;
+    facets.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (d.open) {
+          facets.forEach(function (o) { if (o !== d) o.open = false; });
+        }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      facets.forEach(function (d) {
+        if (d.open && !d.contains(e.target)) d.open = false;
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') facets.forEach(function (d) { d.open = false; });
+    });
+  })();
 </script>
 {%- endpaginate -%}
 
@@ -217,26 +256,110 @@
     opacity: 0.6;
   }
 
-  .sv-chip-pop {
+  .sv-facets {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .sv-facet {
     position: relative;
   }
-  .sv-chip-pop > summary {
+  .sv-facet > summary {
     list-style: none;
   }
-  .sv-chip-pop > summary::-webkit-details-marker {
+  .sv-facet > summary::-webkit-details-marker {
     display: none;
   }
-  .sv-chip-pop__panel {
+  .sv-facet__caret {
+    transition: transform 0.25s var(--ease, ease);
+  }
+  .sv-facet[open] > summary .sv-facet__caret {
+    transform: rotate(180deg);
+  }
+  .sv-facet[open] > summary {
+    border-color: var(--sage);
+    color: var(--ink);
+  }
+  .sv-facet__panel {
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    z-index: 5;
+    z-index: 6;
     background: var(--paper-2);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 16px;
-    box-shadow: 0 10px 30px rgba(35, 37, 29, 0.12);
-    min-width: 220px;
+    padding: 8px;
+    box-shadow: 0 14px 40px rgba(35, 37, 29, 0.14);
+    min-width: 240px;
+    max-width: calc(100vw - 40px);
+    max-height: 340px;
+    overflow-y: auto;
+  }
+  .sv-facet__opts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sv-facet__opt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 9px;
+    color: var(--ink-2);
+    font-family: var(--sans);
+    font-size: 14px;
+    transition: background 0.2s var(--ease, ease);
+  }
+  .sv-facet__opt:hover {
+    background: var(--bone);
+    color: var(--ink);
+  }
+  .sv-facet__opt[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .sv-facet__box {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    color: var(--paper);
+  }
+  .sv-facet__opt.is-active .sv-facet__box {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+  .sv-facet__lbl {
+    flex: 1;
+  }
+  .sv-facet__opt.is-active .sv-facet__lbl {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .sv-facet__count {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+  }
+  .sv-facet__price {
+    padding: 6px;
+  }
+  .sv-facets__clear {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-left: 4px;
+    white-space: nowrap;
   }
   .sv-price-row {
     display: flex;
@@ -332,7 +455,7 @@
     grid-column: 1 / -1;
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: var(--radius-media);
     min-height: 300px;
     display: flex;
     align-items: center;
@@ -396,15 +519,8 @@
     .sv-filterbar__in {
       gap: 12px;
     }
-    .sv-chips {
+    .sv-facets {
       width: 100%;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
-      padding-bottom: 2px;
-    }
-    .sv-chips::-webkit-scrollbar {
-      display: none;
     }
   }
 {% endstylesheet %}
