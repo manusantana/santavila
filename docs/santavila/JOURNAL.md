@@ -13,6 +13,30 @@
 
 ---
 
+## 2026-06-12 · Rediseño tema — Fase 4 ("Lo más deseado")
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
+**Estado:** ✅ Completada (`dbc2a22`).
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8).
+
+### Qué se ejecutó
+- `sections/santavila-product-row.liquid`: grid de product cards con **datos reales** (loop sobre colección). Card de marca: media 4/5 + hover zoom, badge opcional (`metafield santavila.badge`), categoría mono (`product.type`), nombre serif, precio `money_without_trailing_zeros` + compare_at tachado, plazo desde `santavila.lead_time_type/label` (Quick ship / Bajo pedido en arcilla), swatches desde `value.swatch.color`. Corazón de favoritos opcional (off; requiere app wishlist).
+- `templates/index.json`: insertada tras la destacada, colección `frontpage` (8 productos), 4 columnas.
+- Sincronizado al dev theme con `theme push` (token) — flujo de preview elegido por el dueño.
+
+### Hallazgos clave
+- La colección `frontpage` ("Home page") tiene 8 productos → el grid renderiza 4 reales.
+- Catálogo sin metafields `santavila.*` todavía → badge/plazo/swatches degradan a vacío. Cuando se cree el data model (README) las cards se completan solas.
+
+### Prioridades vivas
+- Data model de producto (metafields `santavila.*`: material, lead_time, origin, warranty, scenario, product_usp, badge) — alimenta cards, PDP y filtros.
+- Imágenes reales del hero/escenarios/destacada (foto cliente).
+
+### Siguiente paso recomendado
+- **Fase 5**: Materiales (bloque oscuro sage-900: media + 4 materiales con swatch) y/o "Fabricado en España" (banda bone con arco + provincias).
+
+---
+
 ## 2026-06-12 · Rediseño tema — Fase 3 (banda editorial home)
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
