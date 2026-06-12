@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-06-12 · Patrón de altura de hero (token --hero-h)
+
+**Estado:** ✅ Aplicado y verificado en render local.
+
+### Qué se ejecutó (feedback del dueño)
+- Heroes con altura inconsistente (home 100svh, colección 56vh). Definido patrón común por **token**: `--hero-h: 100svh` (pantalla completa) y `--hero-h-secondary: 80svh` (casi completa, deja asomar el grid). `svh` = estable en móvil.
+- Home usa `--hero-h`; colección usa `--hero-h-secondary`. Selector "Pantalla completa / Casi completa" por instancia. Decisión del dueño: home entera + colección casi entera.
+
+### Siguiente
+- Más revisión visual de la tienda con el dueño; luego Fase 8 (PDP).
+
+---
+
 ## 2026-06-12 · Colección — fix hero + FAQ bespoke (full-width + JSON-LD)
 
 **Estado:** ✅ Aplicado y verificado en render local (theme dev OAuth activo).
