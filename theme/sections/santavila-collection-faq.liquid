@@ -1,0 +1,185 @@
+{%- liquid
+  assign s = section.settings
+  comment
+    La FAQ vive en collection.description como <h2>Preguntas frecuentes</h2>
+    + pares <h3>Pregunta</h3><p>Respuesta</p>. Parseamos por <h3>.
+  endcomment
+  assign chunks = collection.description | split: '<h3'
+  assign has_faq = false
+  if chunks.size > 1
+    assign has_faq = true
+  endif
+-%}
+
+{%- if has_faq -%}
+  <div class="sv-section sv-faq-section color-{{ s.color_scheme }}">
+    <div class="sv-container">
+      <div class="sv-faq__grid">
+        <div class="sv-faq__head">
+          {%- if s.eyebrow != blank -%}<p class="sv-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+          {%- if s.heading != blank -%}<h2 class="sv-faq__title">{{ s.heading }}</h2>{%- endif -%}
+        </div>
+
+        <div class="sv-faq__list">
+          {%- for chunk in chunks -%}
+            {%- unless forloop.first -%}
+              {%- assign q = chunk | split: '</h3>' | first | split: '>' | last | strip_html | strip -%}
+              {%- assign a = chunk | split: '</h3>' | last | strip_html | strip -%}
+              {%- if q != blank -%}
+                <details class="sv-faq__item">
+                  <summary class="sv-faq__q">
+                    <span>{{ q }}</span>
+                    <span class="sv-faq__icon" aria-hidden="true"></span>
+                  </summary>
+                  <div class="sv-faq__a"><p>{{ a }}</p></div>
+                </details>
+              {%- endif -%}
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- assign done = false -%}
+        {%- for chunk in chunks -%}
+          {%- unless forloop.first -%}
+            {%- assign q = chunk | split: '</h3>' | first | split: '>' | last | strip_html | strip -%}
+            {%- assign a = chunk | split: '</h3>' | last | strip_html | strip -%}
+            {%- if q != blank -%}
+              {%- if done %},{% endif -%}
+              { "@type": "Question", "name": {{ q | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ a | json }} } }
+              {%- assign done = true -%}
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+
+{% stylesheet %}
+  .sv-faq-section {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  .sv-faq__grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: clamp(28px, 5vw, 80px);
+    align-items: start;
+  }
+  .sv-faq__head {
+    position: sticky;
+    top: calc(var(--header-height, 64px) + 24px);
+  }
+  .sv-faq__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    margin: 12px 0 0;
+    max-width: 12ch;
+  }
+  .sv-faq__list {
+    border-top: 1px solid var(--line);
+  }
+  .sv-faq__item {
+    border-bottom: 1px solid var(--line);
+  }
+  .sv-faq__q {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 4px;
+    font-family: var(--serif);
+    font-size: clamp(19px, 1.8vw, 24px);
+    font-weight: 500;
+    color: var(--ink);
+    transition: color 0.25s var(--ease, ease);
+  }
+  .sv-faq__q::-webkit-details-marker {
+    display: none;
+  }
+  .sv-faq__q:hover {
+    color: var(--sage-deep);
+  }
+  .sv-faq__icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex: none;
+  }
+  .sv-faq__icon::before,
+  .sv-faq__icon::after {
+    content: "";
+    position: absolute;
+    background: var(--ink-2);
+    transition: transform 0.3s var(--ease, ease), opacity 0.3s var(--ease, ease);
+  }
+  .sv-faq__icon::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    transform: translateY(-50%);
+  }
+  .sv-faq__icon::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    transform: translateX(-50%);
+  }
+  .sv-faq__item[open] .sv-faq__icon::after {
+    opacity: 0;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .sv-faq__a {
+    overflow: hidden;
+    padding: 0 4px 26px;
+    max-width: 60ch;
+  }
+  .sv-faq__a p {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    margin: 0;
+    text-wrap: pretty;
+  }
+  @media screen and (max-width: 860px) {
+    .sv-faq__grid {
+      grid-template-columns: 1fr;
+    }
+    .sv-faq__head {
+      position: static;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Coll. FAQ",
+  "tag": "section",
+  "class": "sv-faq-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-4" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Dudas habituales" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Preguntas frecuentes" },
+    { "type": "paragraph", "content": "Las preguntas se leen automáticamente de la descripción de la colección (bloque <h2>Preguntas frecuentes</h2> con pares pregunta/respuesta). Si la colección no tiene FAQ, la sección no se muestra." }
+  ],
+  "presets": [
+    { "name": "Santavila Coll. FAQ" }
+  ]
+}
+{% endschema %}

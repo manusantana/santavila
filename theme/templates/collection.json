@@ -16,10 +16,15 @@
     "santavila_coll_grid": {
       "type": "santavila-collection-grid",
       "settings": {}
+    },
+    "santavila_coll_faq": {
+      "type": "santavila-collection-faq",
+      "settings": {}
     }
   },
   "order": [
     "santavila_coll_hero",
-    "santavila_coll_grid"
+    "santavila_coll_grid",
+    "santavila_coll_faq"
   ]
 }
