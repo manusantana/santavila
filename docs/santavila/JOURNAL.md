@@ -13,6 +13,29 @@
 
 ---
 
+## 2026-06-12 · Fix galería 1-imagen + announcement SLIDER (ñ resuelta)
+
+**Estado:** ✅ Aplicado y subido a dev theme #189114876228 (push token, theme dev parado).
+
+### Qué se ejecutó (feedback dueño con captura)
+- **Galería adaptativa por nº de fotos** (`product.media.size`): si el producto tiene **1 sola imagen** → `.sv-gal--single` (sin rail de miniaturas, 1 columna, slide cuadrado a ancho completo). Arregla la foto "partida en dos / a media anchura con hueco" que se veía en productos de 1 imagen. Con ≥2 fotos sigue el rail + columnas (`gallery_columns`).
+- **Announcement convertido en SLIDER** de 3 mensajes que rotan (auto-play nativo de Dwell, `blocks.size > 1`, speed 4s):
+  1. `FABRICADO EN ESPAÑA` → 2. `FÁCIL DE MONTAR EN CASA` → 3. `ATENCIÓN PERSONALIZADA` → vuelve a empezar.
+- **Flechas chevron de Dwell ocultas** (`slideshow-arrows`/`.slideshow-control { display:none }`): rota solo, sin controles; slides a ancho completo y centrados.
+
+### Cómo se resolvió la "ñ" (España sin ñ → "ESPANA")
+- Causa raíz: el `text-transform: uppercase` sobre la fuente mono se comía la Ñ.
+- Fix: el texto se escribe **ya en mayúsculas con Ñ explícita** (U+00D1) y el bloque va con **`case: none`** → no hay `text-transform`, el carácter Ñ se pasa tal cual a la fuente y se renderiza. Mantiene el look uppercase del README sin el bug.
+- Bonus: cada mensaje es corto → entra en **una sola línea** (con `nowrap` + elipsis de respaldo). Resuelve el salto a 2 líneas.
+
+### Decisión de copy
+- Se simplificó "Atención personalizada para tu terraza" → **"ATENCIÓN PERSONALIZADA"** (el dueño dijo "con atención personalizada sobra"). Sin claims inventados — ver [[santavila_facts]].
+
+### Pendiente
+- Confirmación visual del dueño del slider + galería 1-imagen.
+
+---
+
 ## 2026-06-12 · PDP nivel-10 — galería bespoke + sticky qty
 
 **Estado:** ✅ Construida, schema-válida y en dev theme (push token + verificación API). Falta confirmación VISUAL del dueño (theme dev se atascó).

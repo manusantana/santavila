@@ -19,7 +19,11 @@
           <span class="sv-pdp__tag sv-pdp__tag--es">Hecho en España</span>
           {%- if low_stock -%}<span class="sv-pdp__tag sv-pdp__tag--low">Pocas unidades</span>{%- endif -%}
         </div>
-        <div class="sv-gal" data-gallery>
+        {%- assign mcount = product.media.size -%}
+        {%- assign gcols = s.gallery_columns | default: 2 -%}
+        {%- if mcount < 2 -%}{%- assign gcols = 1 -%}{%- endif -%}
+        <div class="sv-gal{% if mcount < 2 %} sv-gal--single{% endif %}" data-gallery>
+          {%- if mcount > 1 -%}
           <div class="sv-gal__rail" aria-label="Miniaturas">
             {%- for media in product.media -%}
               <button type="button" class="sv-gal__thumb{% if forloop.first %} is-active{% endif %}" data-gal-thumb data-idx="{{ forloop.index0 }}" aria-label="Ver imagen {{ forloop.index }}">
@@ -28,7 +32,8 @@
               </button>
             {%- endfor -%}
           </div>
-          <div class="sv-gal__stage" data-gal-stage style="--gal-cols: {{ s.gallery_columns | default: 2 }};">
+          {%- endif -%}
+          <div class="sv-gal__stage" data-gal-stage style="--gal-cols: {{ gcols }};">
             {%- for media in product.media -%}
               <figure class="sv-gal__slide" data-gal-slide data-idx="{{ forloop.index0 }}">
                 {%- case media.media_type -%}
@@ -584,6 +589,12 @@
     grid-template-columns: 78px 1fr;
     gap: 14px;
     align-items: start;
+  }
+  .sv-gal--single {
+    grid-template-columns: 1fr;
+  }
+  .sv-gal--single .sv-gal__slide {
+    aspect-ratio: 1 / 1;
   }
   .sv-gal__rail {
     display: flex;

@@ -5,15 +5,27 @@
    Se carga tras santavila-tokens.css en layout/theme.liquid.
    ============================================================ */
 
-/* ===== Announcement bar =====================================
-   Estructura/colores por settings (scheme-5 sage-900, fuente
-   accent=mono, uppercase). Aquí solo el calibre fino del README:
-   11.5px y tracking 0.14em (el bloque solo ofrece "loose"=0.03em). */
-/* Una sola línea siempre: quitamos el límite de 680px de Dwell y forzamos
-   nowrap; si no cabe (móvil estrecho), recorta con elipsis. */
+/* ===== Announcement bar (SLIDER) ============================
+   3 mensajes rotando (auto-play de Dwell, blocks.size > 1):
+   "FABRICADO EN ESPAÑA" · "FÁCIL DE MONTAR EN CASA" · "ATENCIÓN PERSONALIZADA".
+   Texto pre-escrito en mayúsculas con Ñ explícita + case:none en el bloque,
+   para NO depender del text-transform:uppercase (que se comía la ñ en mono).
+   Calibre fino del README: 11.5px, tracking 0.14em. */
+
+/* Ocultamos las flechas chevron de Dwell: el slider rota solo, sin controles.
+   Al no haber flechas, los slides ocupan el ancho completo y van centrados. */
+.announcement-bar__slider slideshow-arrows,
+.announcement-bar__slider .slideshow-control {
+  display: none !important;
+}
 .announcement-bar__slides {
   max-width: none;
-  width: 100%;
+  width: 100% !important;
+  margin-inline: auto;
+}
+.announcement-bar__slide {
+  place-content: center;
+  text-align: center;
 }
 .announcement-bar__text {
   font-size: 11.5px;
