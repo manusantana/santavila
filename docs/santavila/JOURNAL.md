@@ -13,6 +13,34 @@
 
 ---
 
+## 2026-06-12 · 🚨 INCIDENCIA: PDP "sin producto" — 5 archivos nunca llegaron al tema dev
+
+**Estado:** ✅ Resuelto. Causa raíz encontrada y archivos re-subidos vía Asset API (todos 200).
+
+### Síntoma (dueño)
+"Te has cargado el announcement y cuando entras en una página de producto no se ve el producto."
+
+### Causa raíz (la importante)
+El tema vive en **`theme/`**, no en la raíz del repo. Hice los `shopify theme push --only ...` **desde la raíz, sin `--path theme`**. El CLI avisó "doesn't seem like you're running this command in a theme directory", resolvió `sections/...` contra la raíz (no existen ahí), **subió 0 archivos y aun así imprimió "pushed successfully"**.
+Consecuencia: el tema dev #189114876228 quedó **sin 5 archivos** (404 confirmado vía Asset API):
+`sections/santavila-product.liquid`, `sections/header-announcements.liquid`, `sections/header-group.json`, `assets/santavila-header.css`, `assets/santavila-product.css`.
+Como `templates/product.json` apunta a `santavila-product` y **el archivo de la sección no existía → la PDP se renderizaba vacía** ("no se ve el producto"). El announcement, igual.
+
+### Diagnóstico ejecutado
+- `shopify theme pull --path /tmp/devtheme` + `diff -rq` → reveló los archivos disk-only.
+- Asset API `GET assets.json?asset[key]=...` → 404 en los 5; 200 en santavila-tokens.css (ese sí estaba).
+- Confirmado que el preview anónimo (`?preview_theme_id=`) **siempre sirve el tema live**, no el dev → no sirve para verificar; hay que mirar vía Asset API / editor.
+
+### Solución
+- Subidos los 5 archivos vía **Asset API (PUT)**, leyendo de `theme/…` (determinista). Verificado 200 en los 5.
+- Re-pull + `diff -rq`: remoto == disco salvo trivialidades (`config/markets.json` y orden de claves en `index.json` — sin efecto en render).
+- Validado: Liquid de la PDP balanceado (if 14/14, for 3/3, case 1/1, unless 1/1) y schema JSON válido.
+
+### Lección (memoria [[shopify_push_path_trap]])
+`push`/`pull`/`dev` SIEMPRE con `--path theme`. Nunca fiarse del "success": verificar existencia real vía Asset API.
+
+---
+
 ## 2026-06-12 · Fix galería 1-imagen + announcement SLIDER (ñ resuelta)
 
 **Estado:** ✅ Aplicado y subido a dev theme #189114876228 (push token, theme dev parado).
