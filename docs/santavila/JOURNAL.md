@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-12 · Fase 8 — PDP completa (estructura + contenido)
+
+**Estado:** ✅ Estructura completa y verificada en render local (HTTP 200, carrito intacto). Falta pase de calidad "nivel-10" (lo hará el dueño con referencias tipo Sklum).
+
+### Qué se ejecutó
+- Buy column: reordenada al README (rating→H1→precio→IVA/BNPL→variantes→add-to-cart→risk-remover) reusando bloques de Dwell + text blocks de valor.
+- Secciones bespoke: `santavila-pdp-promise`, `-highlights` (3 beneficios + 3 características), `-emotional` (sage-900 + review), `-accordions` (medidas/envío/devoluciones/FAQ), `-social` (prensa + 3 testimonios + UGC + qué incluye). Company USPs reusando `santavila-services`. Related = product-recommendations de Dwell.
+
+### Hallazgos clave
+- **El `text` block de Dwell es richtext sanitizado**: elimina `class`, `<div>`, `<span>` y Liquid al inicio. → No sirve para chips/USP con clases. Pendiente nivel-10: columna de compra bespoke propia.
+- **NO mezclar `theme dev` (OAuth) con `theme push` (token)** sobre el mismo dev theme: chocan y theme dev muestra "Failed to Upload" (500). Con theme dev activo, sincronizar SOLO guardando archivos (hot-reload).
+
+### Siguiente
+- **Pase nivel-10 de la PDP** (cercanía a la venta, conversión, referencias del dueño): columna de compra bespoke (USP, BNPL real, chips, guía de medidas modal, sticky bar afinado), galería rail+stage fiel, micro-UX.
+
+---
+
 ## 2026-06-12 · Fase 8a (pase 1) — PDP restyle sobre Dwell
 
 **Estado:** 🔄 En curso (primer pase aplicado y verificado en render local).
