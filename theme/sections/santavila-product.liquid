@@ -1,0 +1,244 @@
+{%- liquid
+  assign product = closest.product
+  assign variant = product.selected_or_first_available_variant
+  assign s = section.settings
+-%}
+
+<script type="application/ld+json">{{ closest.product | structured_data }}</script>
+
+<div class="sv-pdp color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-pdp__grid">
+
+      <div class="sv-pdp__gallery">
+        {%- content_for 'block', type: '_product-media-gallery', id: 'media-gallery', closest.product: closest.product -%}
+      </div>
+
+      <div class="sv-pdp__buy">
+        <div class="sv-pdp__buyinner">
+          <div class="sv-pdp__rating">
+            {%- content_for 'block', type: 'review', id: 'review', closest.product: closest.product -%}
+          </div>
+
+          <h1 class="sv-pdp__title">{{ product.title }}</h1>
+
+          {%- assign usp = product.metafields.santavila.product_usp -%}
+          {%- if usp != blank -%}<p class="sv-pdp__usp">{{ usp }}</p>{%- endif -%}
+
+          <div class="sv-pdp__pricerow">
+            <div class="sv-pdp__price">
+              {%- content_for 'block', type: 'price', id: 'price', closest.product: closest.product -%}
+            </div>
+            <span class="sv-pdp__tax">IVA incluido</span>
+          </div>
+
+          <div class="sv-pdp__variant">
+            {%- content_for 'block', type: 'variant-picker', id: 'variant-picker', closest.product: closest.product -%}
+          </div>
+
+          {%- if variant.inventory_management != blank and variant.available and variant.inventory_quantity > 0 and variant.inventory_quantity <= 6 -%}
+            <p class="sv-pdp__stock"><span class="sv-pdp__stockdot"></span>Pocas unidades · quedan {{ variant.inventory_quantity }}</p>
+          {%- endif -%}
+
+          <div class="sv-pdp__cart">
+            {%- content_for 'block', type: 'buy-buttons', id: 'buy-buttons', closest.product: closest.product -%}
+          </div>
+
+          <ul class="sv-pdp__trust">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+              <span>Envío gestionado por nosotros. Plazo estimado: hasta 30 días según disponibilidad del proveedor.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15l12-12 6 6L9 21z"/><path d="M7.5 10.5l2 2"/></svg>
+              <span>Fácil de montar en casa, con instrucciones ilustradas.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg>
+              <span>Atención personalizada por teléfono y WhatsApp.</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>
+              <span>Pago seguro · garantía legal.</span>
+            </li>
+          </ul>
+
+          {%- if shop.enabled_payment_types.size > 0 -%}
+            <div class="sv-pdp__pay">
+              {%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag: class: 'sv-pdp__payicon' }}{%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-pdp {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    padding-block: clamp(20px, 3vw, 40px);
+  }
+  .sv-pdp__grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: clamp(24px, 4vw, 64px);
+    align-items: start;
+  }
+  .sv-pdp__buy {
+    position: sticky;
+    top: calc(var(--header-height, 64px) + 20px);
+  }
+  .sv-pdp__buyinner {
+    max-width: 480px;
+  }
+  .sv-pdp__rating {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-3);
+    margin-bottom: 12px;
+  }
+  .sv-pdp__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 0 0 10px;
+  }
+  .sv-pdp__usp {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    margin: 0 0 18px;
+  }
+  .sv-pdp__pricerow {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .sv-pdp__price :is(.price, [class*="price"]) {
+    font-family: var(--sans);
+    font-size: clamp(26px, 2.8vw, 34px);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .sv-pdp__tax {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .sv-pdp__variant {
+    margin: 22px 0 6px;
+  }
+  .sv-pdp__variant [class*="swatch"] {
+    --variant-picker-swatch-width: 44px;
+    --variant-picker-swatch-height: 44px;
+  }
+  .sv-pdp__stock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--clay-deep);
+    margin: 4px 0 16px;
+  }
+  .sv-pdp__stockdot {
+    width: 7px;
+    height: 7px;
+    border-radius: 99px;
+    background: var(--clay);
+    animation: sv-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes sv-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .sv-pdp__cart {
+    margin-top: 8px;
+  }
+  .sv-pdp__cart .add-to-cart-button,
+  .sv-pdp__cart button[name="add"] {
+    min-height: 58px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+  .sv-pdp__cart .shopify-payment-button__button {
+    border-radius: 999px !important;
+    min-height: 52px;
+  }
+
+  .sv-pdp__trust {
+    list-style: none;
+    margin: 22px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 12px;
+  }
+  .sv-pdp__trust li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .sv-pdp__trust svg {
+    color: var(--sage);
+    margin-top: 1px;
+  }
+
+  .sv-pdp__pay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .sv-pdp__pay .sv-pdp__payicon {
+    width: 36px;
+    height: 23px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--paper-2);
+  }
+
+  @media screen and (max-width: 860px) {
+    .sv-pdp__grid { grid-template-columns: 1fr; gap: 28px; }
+    .sv-pdp__buy { position: static; }
+    .sv-pdp__buyinner { max-width: none; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Producto",
+  "tag": "section",
+  "class": "sv-pdp-wrapper",
+  "blocks": [
+    { "type": "_product-media-gallery" },
+    { "type": "review" },
+    { "type": "price" },
+    { "type": "variant-picker" },
+    { "type": "buy-buttons" }
+  ],
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" }
+  ]
+}
+{% endschema %}
