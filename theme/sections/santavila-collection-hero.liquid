@@ -1,0 +1,127 @@
+{%- liquid
+  assign s = section.settings
+  assign col = collection
+  assign img = s.image | default: col.image
+  assign title = col.title | default: 'Colección'
+  assign desc = s.description
+  if desc == blank
+    assign desc = col.description
+  endif
+-%}
+
+<div class="sv-chero" style="--sv-chero-h: {{ s.height | default: 56 }}vh;">
+  {%- if img != blank -%}
+    <div class="sv-chero__media">
+      {{ img | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800,1200,1600,2000,2400', alt: title }}
+    </div>
+  {%- endif -%}
+
+  <div class="sv-container sv-chero__in">
+    <nav class="sv-crumb" aria-label="Migas de pan">
+      <a href="{{ routes.root_url }}">Inicio</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ routes.collections_url }}">Colecciones</a>
+      <span aria-hidden="true">/</span>
+      <span class="sv-crumb__current">{{ title }}</span>
+    </nav>
+    <h1 class="sv-chero__title">{{ title }}</h1>
+    {%- if desc != blank -%}
+      <div class="sv-chero__desc">{{ desc }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-chero {
+    position: relative;
+    min-height: var(--sv-chero-h, 56vh);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(150deg, #4f5447 0%, #2c2f26 60%, #3a3f31 100%);
+  }
+  .sv-chero__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .sv-chero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sv-chero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(20, 22, 16, 0.45) 0%, rgba(20, 22, 16, 0.12) 40%, rgba(20, 22, 16, 0.62) 100%);
+  }
+  .sv-chero__in {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: clamp(120px, 16vh, 190px);
+    padding-bottom: clamp(36px, 6vh, 70px);
+  }
+  .sv-crumb {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .sv-crumb a {
+    color: inherit;
+    transition: color 0.25s var(--ease, ease);
+  }
+  .sv-crumb a:hover {
+    color: #fff;
+  }
+  .sv-crumb__current {
+    color: #fff;
+  }
+  .sv-chero__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 84px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 16ch;
+  }
+  .sv-chero__desc {
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 56ch;
+    margin-top: 20px;
+    text-wrap: pretty;
+  }
+  .sv-chero__desc > * {
+    margin: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Coll. Hero",
+  "tag": "section",
+  "class": "sv-chero-wrapper",
+  "settings": [
+    { "type": "range", "id": "height", "label": "Altura (vh)", "min": 40, "max": 80, "step": 1, "unit": "vh", "default": 56 },
+    { "type": "image_picker", "id": "image", "label": "Imagen de fondo", "info": "Opcional. Por defecto usa la imagen de la colección; si no hay, degradado sage." },
+    { "type": "richtext", "id": "description", "label": "Descripción (override)", "info": "Vacío = usa la descripción de la colección." }
+  ],
+  "presets": [
+    { "name": "Santavila Coll. Hero" }
+  ]
+}
+{% endschema %}

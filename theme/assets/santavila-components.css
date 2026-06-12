@@ -139,3 +139,123 @@
 .sv-mag__title {
   text-wrap: balance;
 }
+
+/* ===== Product card (compartida: home + colección) ==========
+   Markup en snippets/santavila-product-card.liquid. */
+.sv-pcard {
+  display: block;
+  color: inherit;
+}
+.sv-pcard__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bone);
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.sv-pcard__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.1s var(--ease, ease);
+}
+.sv-pcard:hover .sv-pcard__media img {
+  transform: scale(1.04);
+}
+.sv-pcard__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(247, 244, 236, 0.92);
+  color: var(--sage-deep);
+  padding: 5px 10px;
+  border-radius: 99px;
+}
+.sv-pcard__fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 99px;
+  background: rgba(247, 244, 236, 0.9);
+  display: grid;
+  place-items: center;
+  color: var(--ink-2);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.4s var(--ease, ease);
+}
+.sv-pcard:hover .sv-pcard__fav {
+  opacity: 1;
+  transform: none;
+}
+.sv-pcard__cat {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.sv-pcard__name {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 5px 0 9px;
+}
+.sv-pcard__foot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sv-pcard__price {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+}
+.sv-pcard__price s {
+  color: var(--ink-3);
+  font-weight: 400;
+  margin-left: 6px;
+}
+.sv-pcard__ship {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  white-space: nowrap;
+}
+.sv-pcard__ship--clay {
+  color: var(--clay-deep);
+}
+.sv-pcard__swatches {
+  display: flex;
+  gap: 5px;
+  margin-top: 11px;
+}
+.sv-pcard__swatches i {
+  width: 14px;
+  height: 14px;
+  border-radius: 99px;
+  border: 1px solid var(--line);
+  display: inline-block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sv-pcard__media img,
+  .sv-pcard__fav {
+    transition: none;
+  }
+}

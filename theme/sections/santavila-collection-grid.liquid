@@ -1,0 +1,433 @@
+{%- liquid
+  assign s = section.settings
+  assign per_page = s.products_per_page | default: 12
+
+  assign has_active = false
+  for f in collection.filters
+    if f.active_values.size > 0
+      assign has_active = true
+    endif
+    if f.type == 'price_range'
+      if f.min_value.value != null or f.max_value.value != null
+        assign has_active = true
+      endif
+    endif
+  endfor
+-%}
+
+{%- capture hidden_all -%}
+  {%- for f in collection.filters -%}
+    {%- if f.type == 'price_range' -%}
+      {%- if f.min_value.value != null -%}<input type="hidden" name="{{ f.min_value.param_name }}" value="{{ f.min_value.value }}">{%- endif -%}
+      {%- if f.max_value.value != null -%}<input type="hidden" name="{{ f.max_value.param_name }}" value="{{ f.max_value.value }}">{%- endif -%}
+    {%- else -%}
+      {%- for v in f.active_values -%}<input type="hidden" name="{{ v.param_name }}" value="{{ v.value }}">{%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- capture hidden_lists -%}
+  {%- for f in collection.filters -%}
+    {%- unless f.type == 'price_range' -%}
+      {%- for v in f.active_values -%}<input type="hidden" name="{{ v.param_name }}" value="{{ v.value }}">{%- endfor -%}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- paginate collection.products by per_page -%}
+<div class="sv-coll color-{{ s.color_scheme }}">
+  <div class="sv-filterbar">
+    <div class="sv-container sv-filterbar__in">
+      <div class="sv-chips">
+        <a href="{{ collection.url }}" class="sv-chip {% unless has_active %}is-on{% endunless %}">Todo</a>
+        {%- for filter in collection.filters -%}
+          {%- case filter.type -%}
+            {%- when 'boolean', 'list' -%}
+              {%- for value in filter.values -%}
+                <a
+                  href="{% if value.active %}{{ value.url_to_remove }}{% else %}{{ value.url_to_add }}{% endif %}"
+                  class="sv-chip {% if value.active %}is-on{% endif %}"
+                  {% if value.count == 0 and value.active == false %}aria-disabled="true" tabindex="-1"{% endif %}
+                >{{ value.label }}</a>
+              {%- endfor -%}
+            {%- when 'price_range' -%}
+              <details class="sv-chip-pop">
+                <summary class="sv-chip {% if filter.min_value.value != null or filter.max_value.value != null %}is-on{% endif %}">
+                  {{ filter.label }}
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </summary>
+                <div class="sv-chip-pop__panel">
+                  <form method="get" action="{{ collection.url }}">
+                    {{ hidden_lists }}
+                    <div class="sv-price-row">
+                      <input type="number" inputmode="numeric" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value }}" placeholder="{{ filter.range_min | money_without_trailing_zeros | strip_html }}" min="0">
+                      <span aria-hidden="true">–</span>
+                      <input type="number" inputmode="numeric" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value }}" placeholder="{{ filter.range_max | money_without_trailing_zeros | strip_html }}" min="0">
+                    </div>
+                    <button type="submit" class="sv-btn sv-btn--line sv-btn--sm">Aplicar</button>
+                  </form>
+                </div>
+              </details>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="sv-sortwrap">
+        <span class="sv-count">{{ collection.products_count }} producto{% if collection.products_count != 1 %}s{% endif %}</span>
+        {%- if collection.sort_options.size > 0 -%}
+          <form method="get" action="{{ collection.url }}" class="sv-sortform">
+            {{ hidden_all }}
+            <div class="sv-sortsel">
+              <span>Ordenar</span>
+              <select name="sort_by" aria-label="Ordenar por" onchange="this.form.submit()">
+                {%- for option in collection.sort_options -%}
+                  <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{{ option.name }}</option>
+                {%- endfor -%}
+              </select>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </form>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="sv-container sv-coll__body">
+    {%- if collection.products.size > 0 -%}
+      <div class="sv-cgrid" id="sv-cgrid">
+        {%- for product in collection.products -%}
+          {%- render 'santavila-product-card', product: product, sizes: '(max-width: 749px) 50vw, (max-width: 989px) 50vw, 33vw' -%}
+          {%- if paginate.current_page == 1 and forloop.index == s.band_after and s.band_heading != blank -%}
+            <div class="sv-cband">
+              {%- if s.band_image != blank -%}
+                <div class="sv-cband__media">{{ s.band_image | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: '100vw', widths: '600,1000,1400,1600', alt: s.band_heading }}</div>
+              {%- endif -%}
+              <div class="sv-cband__in">
+                {%- if s.band_eyebrow != blank -%}<p class="sv-eyebrow" style="color:var(--sage-soft)">{{ s.band_eyebrow }}</p>{%- endif -%}
+                <h3 class="sv-cband__title">{{ s.band_heading }}</h3>
+                {%- if s.band_text != blank -%}<p class="sv-cband__text">{{ s.band_text }}</p>{%- endif -%}
+                {%- if s.band_cta_label != blank -%}
+                  <a href="{{ s.band_cta_link | default: '#' }}" class="sv-btn sv-btn--light">{{ s.band_cta_label }}
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 and paginate.next -%}
+        <div class="sv-loadmore">
+          <a href="{{ paginate.next.url }}" class="sv-btn sv-btn--line" data-loadmore>Cargar más</a>
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <p class="sv-coll__empty">No hay productos que coincidan con estos filtros. <a href="{{ collection.url }}">Quitar filtros</a>.</p>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function () {
+    var btn = document.querySelector('[data-loadmore]');
+    var grid = document.getElementById('sv-cgrid');
+    if (!btn || !grid) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var url = btn.getAttribute('href');
+      if (!url) return;
+      btn.setAttribute('aria-busy', 'true');
+      fetch(url)
+        .then(function (r) { return r.text(); })
+        .then(function (html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var newGrid = doc.getElementById('sv-cgrid');
+          var newBtn = doc.querySelector('[data-loadmore]');
+          if (newGrid) {
+            while (newGrid.firstElementChild) { grid.appendChild(newGrid.firstElementChild); }
+          }
+          if (newBtn) { btn.setAttribute('href', newBtn.getAttribute('href')); btn.removeAttribute('aria-busy'); }
+          else { var w = btn.parentNode; if (w) w.parentNode.removeChild(w); }
+        })
+        .catch(function () { btn.removeAttribute('aria-busy'); window.location.href = url; });
+    });
+  })();
+</script>
+{%- endpaginate -%}
+
+{% stylesheet %}
+  .sv-coll {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  /* Filter bar sticky bajo el header */
+  .sv-filterbar {
+    position: sticky;
+    top: var(--header-height, 64px);
+    z-index: var(--layer-sticky, 8);
+    background: rgba(247, 244, 236, 0.9);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .sv-filterbar__in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-block: 16px;
+    flex-wrap: wrap;
+  }
+  .sv-chips {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .sv-chip {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid var(--line);
+    background: var(--paper-2);
+    border-radius: 99px;
+    padding: 9px 16px;
+    color: var(--ink-2);
+    transition: all 0.25s var(--ease, ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .sv-chip:hover {
+    border-color: var(--sage);
+    color: var(--ink);
+  }
+  .sv-chip.is-on {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .sv-chip[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .sv-chip svg {
+    opacity: 0.6;
+  }
+
+  .sv-chip-pop {
+    position: relative;
+  }
+  .sv-chip-pop > summary {
+    list-style: none;
+  }
+  .sv-chip-pop > summary::-webkit-details-marker {
+    display: none;
+  }
+  .sv-chip-pop__panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 5;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(35, 37, 29, 0.12);
+    min-width: 220px;
+  }
+  .sv-price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .sv-price-row input {
+    width: 100%;
+    min-width: 0;
+    font-family: var(--sans);
+    font-size: 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: #fff;
+    color: var(--ink);
+  }
+  .sv-price-row input:focus {
+    outline: none;
+    border-color: var(--sage);
+  }
+  .sv-btn--sm {
+    font-size: 12.5px;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sv-sortwrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .sv-count {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .sv-sortsel {
+    position: relative;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    border: 1px solid var(--line);
+    background: var(--paper-2);
+    border-radius: 99px;
+    padding: 9px 16px;
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sv-sortsel select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding-right: 2px;
+  }
+  .sv-sortsel select:focus {
+    outline: none;
+  }
+
+  /* Grid */
+  .sv-coll__body {
+    padding-top: clamp(40px, 5vw, 64px);
+    padding-bottom: clamp(48px, 7vw, 96px);
+  }
+  .sv-cgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(18px, 2.4vw, 40px) clamp(16px, 2vw, 28px);
+  }
+  .sv-coll__empty {
+    font-family: var(--sans);
+    color: var(--ink-2);
+    padding-block: 40px;
+  }
+  .sv-coll__empty a {
+    color: var(--sage);
+    text-decoration: underline;
+  }
+
+  /* Banda editorial intercalada */
+  .sv-cband {
+    grid-column: 1 / -1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(150deg, #5a5f4e, #2c2f26);
+    padding: clamp(28px, 5vw, 64px);
+    color: #fff;
+  }
+  .sv-cband__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .sv-cband__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .sv-cband::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(20, 22, 16, 0.66), rgba(20, 22, 16, 0.15));
+  }
+  .sv-cband__in {
+    position: relative;
+    z-index: 2;
+    max-width: 42ch;
+  }
+  .sv-cband__title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 44px);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 12px 0 18px;
+  }
+  .sv-cband__text {
+    font-family: var(--sans);
+    line-height: 1.6;
+    opacity: 0.9;
+    margin: 0 0 24px;
+  }
+
+  .sv-loadmore {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(36px, 5vw, 64px);
+  }
+  .sv-loadmore [aria-busy="true"] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 989px) {
+    .sv-cgrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 749px) {
+    .sv-filterbar__in {
+      gap: 12px;
+    }
+    .sv-chips {
+      width: 100%;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+    .sv-chips::-webkit-scrollbar {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Coll. Grid",
+  "tag": "section",
+  "class": "sv-coll-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "range", "id": "products_per_page", "label": "Productos por página", "min": 6, "max": 24, "step": 1, "default": 12 },
+    { "type": "header", "content": "Banda editorial intercalada" },
+    { "type": "range", "id": "band_after", "label": "Insertar tras N productos", "min": 2, "max": 12, "step": 1, "default": 6 },
+    { "type": "image_picker", "id": "band_image", "label": "Imagen de la banda" },
+    { "type": "text", "id": "band_eyebrow", "label": "Eyebrow", "default": "¿No sabes por dónde empezar?" },
+    { "type": "text", "id": "band_heading", "label": "Titular", "default": "Te ayudamos a elegir" },
+    { "type": "textarea", "id": "band_text", "label": "Texto", "default": "Cuéntanos tu espacio y te proponemos la combinación que encaja: medidas, materiales y plazo. Asesoría humana, sin compromiso." },
+    { "type": "text", "id": "band_cta_label", "label": "CTA · texto", "default": "Hablar con un experto" },
+    { "type": "url", "id": "band_cta_link", "label": "CTA · enlace" }
+  ],
+  "presets": [
+    { "name": "Santavila Coll. Grid" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+{%- comment -%}
+  Card de producto Santavila — compartida (home "Lo más deseado" + grid de colección).
+  Params:
+    product       (obligatorio)
+    show_wishlist (opcional, bool) — corazón de favoritos (requiere app wishlist)
+    sizes         (opcional) — atributo sizes para la imagen
+  CSS en assets/santavila-components.css (.sv-pcard*).
+{%- endcomment -%}
+{%- liquid
+  assign p = product
+  assign img_sizes = sizes | default: '(max-width: 749px) 50vw, (max-width: 989px) 33vw, 25vw'
+  assign lt = p.metafields.santavila.lead_time_type
+  assign ltlabel = p.metafields.santavila.lead_time_label
+  assign badge = p.metafields.santavila.badge
+  assign material = p.metafields.santavila.material
+  assign ship = ''
+  assign ship_clay = false
+  if lt == 'made_to_order'
+    assign ship = 'Bajo pedido'
+    assign ship_clay = true
+  elsif lt == 'quick_ship'
+    assign ship = ltlabel | default: 'Quick ship'
+  elsif ltlabel != blank
+    assign ship = ltlabel
+  endif
+  assign cat = p.type
+  if material != blank and cat != blank
+    assign cat = cat | append: ' · ' | append: material
+  elsif material != blank
+    assign cat = material
+  endif
+-%}
+<a class="sv-pcard" href="{{ p.url }}">
+  <div class="sv-pcard__media">
+    {%- if badge != blank -%}<span class="sv-pcard__badge">{{ badge }}</span>{%- endif -%}
+    {%- if show_wishlist -%}
+      <span class="sv-pcard__fav" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg>
+      </span>
+    {%- endif -%}
+    {%- if p.featured_media -%}
+      {{
+        p.featured_media
+        | image_url: width: 800
+        | image_tag: loading: 'lazy', sizes: img_sizes, widths: '300, 450, 600, 800', alt: p.featured_media.alt | default: p.title
+      }}
+    {%- endif -%}
+  </div>
+  {%- if cat != blank -%}<div class="sv-pcard__cat">{{ cat }}</div>{%- endif -%}
+  <div class="sv-pcard__name">{{ p.title }}</div>
+  <div class="sv-pcard__foot">
+    <span class="sv-pcard__price">
+      {{- p.price | money_without_trailing_zeros -}}
+      {%- if p.compare_at_price > p.price -%}<s>{{ p.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+    </span>
+    {%- if ship != blank -%}<span class="sv-pcard__ship{% if ship_clay %} sv-pcard__ship--clay{% endif %}">{{ ship }}</span>{%- endif -%}
+  </div>
+  {%- capture swatches -%}
+    {%- for option in p.options_with_values -%}
+      {%- for value in option.values -%}
+        {%- if value.swatch.color and forloop.index <= 6 -%}<i style="background: {{ value.swatch.color }}"></i>{%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- assign swatches_clean = swatches | strip -%}
+  {%- if swatches_clean != '' -%}<div class="sv-pcard__swatches">{{ swatches_clean }}</div>{%- endif -%}
+</a>
