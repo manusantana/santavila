@@ -9,22 +9,25 @@
    Estructura/colores por settings (scheme-5 sage-900, fuente
    accent=mono, uppercase). Aquí solo el calibre fino del README:
    11.5px y tracking 0.14em (el bloque solo ofrece "loose"=0.03em). */
+/* Una sola línea siempre: quitamos el límite de 680px de Dwell y forzamos
+   nowrap; si no cabe (móvil estrecho), recorta con elipsis. */
+.announcement-bar__slides {
+  max-width: none;
+  width: 100%;
+}
 .announcement-bar__text {
   font-size: 11.5px;
   letter-spacing: 0.14em;
   line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Móvil: una sola línea con elipsis, como el prototipo (.ann nowrap) */
 @media screen and (max-width: 749px) {
-  .announcement-bar__slides {
-    max-width: 100%;
-  }
   .announcement-bar__text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: 0.1em;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
   }
 }
 

@@ -115,3 +115,27 @@
   color: var(--ink);
   border-color: #fff;
 }
+
+/* ===== Pulido de composición ================================
+   Rag limpio: evita líneas huérfanas y los pequeños "saltos" al
+   final de los párrafos; titulares equilibrados a varias líneas.
+   Aplica a todas las secciones santavila-* sin tocar Dwell. */
+[class*="sv-"][class*="-section"] p,
+.sv-hero__inner p,
+.sv-feat__body,
+.sv-materials__intro,
+.sv-news__body,
+.sv-spain__body,
+.sv-mag-card__ex {
+  text-wrap: pretty;
+}
+
+.sv-hero__title,
+[class*="sv-"][class*="-section"] :is(h1, h2, h3),
+.sv-feat__title,
+.sv-materials__title,
+.sv-spain__title,
+.sv-news__title,
+.sv-mag__title {
+  text-wrap: balance;
+}
