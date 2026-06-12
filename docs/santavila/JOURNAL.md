@@ -13,6 +13,24 @@
 
 ---
 
+## 2026-06-12 · Limpieza de claims falsos + espaciado (feedback dueño)
+
+**Estado:** ✅ Corregido y verificado en render local.
+
+### Qué se ejecutó
+- **CRÍTICO — claims inventados eliminados de TODO el tema** (announcement, home services, PDP buy column + USPs + acordeones, featured, collection band): "enviado en 24h", "7–10 días", "30 días de prueba en casa", "SeQura / a plazos", "garantía 3/5 años", "asesoría humana".
+- **Hechos reales (dueño 2026-06-12):** envío **deslocalizado** (un tercero lo gestiona), recepción **3–5 días** laborables península. Sin prueba 30 días. Sin financiación confirmada. Garantía → "garantía legal" (sin años inventados). "Asesoría humana" → **"Atención personalizada"**. Guardado en memoria `santavila_facts` como regla DURA.
+- **Espaciado apretado:** `.sv-section` padding-block `clamp(64,10vw,150)` → `clamp(40,5vw,76)` (el dueño veía demasiado hueco en blanco entre secciones).
+
+### Decisiones pendientes / a confirmar
+- **Conflicto de plazo de envío:** el dueño dice 3–5 días; `Agents-IA/plan_santavila.md` decía "hasta 30 días según proveedor". Confirmar cuál es canónico.
+- **Casing** (mayúsculas/minúsculas): el dueño nota mezcla; revisar con ejemplos concretos.
+
+### Siguiente
+- Pase nivel-10 de la PDP (referencia Sklum del dueño): conversión, cercanía a la venta, columna de compra bespoke.
+
+---
+
 ## 2026-06-12 · Fase 8 — PDP completa (estructura + contenido)
 
 **Estado:** ✅ Estructura completa y verificada en render local (HTTP 200, carrito intacto). Falta pase de calidad "nivel-10" (lo hará el dueño con referencias tipo Sklum).
