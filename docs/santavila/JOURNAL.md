@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-06-12 · PDP nivel-10 — sección de producto bespoke (validada)
+
+**Estado:** 🔄 Foundation validada (carrito vivo). Sigue el pulido de conversión.
+**Decisión dueño:** buy-box bespoke máximo techo. Referencias: Sklum, Zara Home, Westwing (Westwing analizado vía WebFetch; los otros 403 bot).
+
+### Hallazgo clave (desbloquea todo)
+- Una **sección propia** puede reusar los bloques reales de Dwell con `{%- content_for 'block', type: 'X', id: 'Y', closest.product: closest.product -%}` (galería, review, price, variant-picker, buy-buttons). → maquetado 100% propio + carrito/variantes/Shop Pay intactos. Los ids del content_for deben existir como bloques en product.json. Verificado: HTTP 200, carrito vivo.
+
+### Qué se ejecutó
+- `sections/santavila-product.liquid`: columna de compra bespoke (rating, H1 serif, USP metafield, precio grande+IVA, escasez real por inventory, trust row honesto, iconos de pago reales) + bloques Dwell por content_for. product.json: `main` → `santavila_product`.
+
+### Síntesis de conversión (referencias)
+- Above-the-fold que vende: precio prominente, swatches visibles, escasez real, plazo claro, add-to-cart enorme, trust + iconos de pago, atención personalizada. Specs estructuradas (metafields, pendiente). Prueba social (reseñas/app, pendiente).
+
+### Siguiente (pulido nivel-10)
+- Galería rail+stage fiel (tags, zoom, contador) · specs estructuradas (metafields `santavila.*`) · reseñas reales (app) · micro-UX · guía de medidas modal · sticky bar afinado.
+
+---
+
 ## 2026-06-12 · Limpieza de claims falsos + espaciado (feedback dueño)
 
 **Estado:** ✅ Corregido y verificado en render local.
