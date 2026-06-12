@@ -99,6 +99,56 @@
   font-weight: 500;
 }
 
+/* ---- Bloques bespoke de la columna de compra ---- */
+.product-details .sv-buy__usp {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin: 0;
+}
+.product-details .sv-buy__tax {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 6px 0 0;
+}
+.product-details .sv-buy__bnpl {
+  font-family: var(--sans);
+  font-size: 13.5px;
+  color: var(--ink-2);
+  margin: 6px 0 0;
+}
+.product-details .sv-buy__bnpl strong {
+  color: var(--ink);
+}
+.product-details .sv-buy__risk {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin: 12px 0 0;
+}
+.product-details .sv-buy__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.product-details .sv-buy__chips span {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  background: var(--sage-50);
+  border-radius: 99px;
+  padding: 6px 12px;
+}
+
 /* ---- Sticky add-to-cart bar nativo → papel translúcido + blur ---- */
 .sticky-add-to-cart,
 .sticky-add-to-cart__bar {

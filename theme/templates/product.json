@@ -176,159 +176,65 @@
               },
               "block_order": []
             },
-            "accordion_Yd4U4w": {
-              "type": "accordion",
-              "name": "Accordion",
+            "sv_tax": {
+              "type": "text",
               "settings": {
-                "icon": "plus",
-                "dividers": true,
-                "type_preset": "h6",
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
+                "text": "<p>IVA incluido · envío a península gratis. O a plazos sin intereses con SeQura.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {
-                "accordion_row_P46NdC": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "Details",
-                    "open_by_default": true,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "product_description_TH8Net": {
-                      "type": "product-description",
-                      "name": "t:names.product_description",
-                      "settings": {
-                        "text": "{{ closest.product.description }}<p></p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-primary--family)",
-                        "font_size": "",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "product_description_TH8Net"
-                  ]
-                },
-                "accordion_row_HUWbDi": {
-                  "type": "_accordion-row",
-                  "disabled": true,
-                  "settings": {
-                    "heading": "Materials + Care",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_wMFRAi": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We prioritize quality in selecting the materials for our items, choosing premium fabrics and finishings that ensure durability, comfort, and timeless appeal.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-primary--family)",
-                        "font_size": "",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_wMFRAi"
-                  ]
-                },
-                "accordion_row_GTWFgP": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "envio y devoluciones",
-                    "open_by_default": false,
-                    "icon": "box",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_Nrxfg8": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Trabajamos para procesar y enviar su pedido lo antes posible, asegurando un tratamiento diligente de cada uno de sus artículos desde el momento de la compra.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-primary--family)",
-                        "font_size": "",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_Nrxfg8"
-                  ]
-                }
+              "blocks": {}
+            },
+            "sv_risk": {
+              "type": "text",
+              "settings": {
+                "text": "<p>30 días de prueba en casa · Enviado en 24&nbsp;h · Fácil de montar en casa.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
-              "block_order": [
-                "accordion_row_P46NdC",
-                "accordion_row_HUWbDi",
-                "accordion_row_GTWFgP"
-              ]
+              "blocks": {}
             }
           },
           "block_order": [
-            "text_WE3K4w",
             "reviews",
+            "text_WE3K4w",
             "price_a7krng",
+            "sv_tax",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "accordion_Yd4U4w"
+            "sv_risk"
           ]
         }
       },
@@ -528,188 +434,205 @@
         "padding-block-end": 48
       }
     },
-    "media_with_content_9rDKpN": {
-      "type": "media-with-content",
+    "santavila_pdp_promise": {
+      "type": "santavila-pdp-promise",
+      "settings": {}
+    },
+    "santavila_pdp_highlights": {
+      "type": "santavila-pdp-highlights",
+      "settings": {},
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "static": true,
+        "b1": {
+          "type": "benefit",
           "settings": {
-            "media_type": "image",
-            "link": "",
-            "video_loop": true,
-            "video_autoplay": false,
-            "image_position": "cover",
-            "video_position": "cover"
-          },
-          "blocks": {}
+            "title": "Resiste sol, lluvia y salitre",
+            "text": "Materiales probados en exterior real español."
+          }
         },
-        "content": {
-          "type": "_content-without-appearance",
-          "static": true,
+        "b2": {
+          "type": "benefit",
           "settings": {
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24
-          },
-          "blocks": {
-            "product_card_KR93DH": {
-              "type": "product-card",
-              "name": "t:names.product_card",
-              "settings": {
-                "product": "",
-                "product_card_gap": 16,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "product_card_gallery_mwMkXB": {
-                  "type": "_product-card-gallery",
-                  "settings": {
-                    "image_ratio": "portrait",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "group_Hxjm3h": {
-                  "type": "_product-card-group",
-                  "settings": {
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "center",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
-                    "width": "fill",
-                    "custom_width": 100,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "product_title_cJY6KQ": {
-                      "type": "product-title",
-                      "name": "t:names.product_title",
-                      "settings": {
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "h5",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "price_JM9QjE": {
-                      "type": "price",
-                      "settings": {
-                        "show_sale_price_first": true,
-                        "show_installments": false,
-                        "show_tax_info": false,
-                        "type_preset": "",
-                        "width": "100%",
-                        "alignment": "center",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "color": "var(--color-foreground)",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "product_title_cJY6KQ",
-                    "price_JM9QjE"
-                  ]
-                }
-              },
-              "block_order": [
-                "product_card_gallery_mwMkXB",
-                "group_Hxjm3h"
-              ]
-            }
-          },
-          "block_order": [
-            "product_card_KR93DH"
-          ]
+            "title": "Asiento profundo, fundas lavables",
+            "text": "Comodidad de salón y cojines desenfundables."
+          }
+        },
+        "b3": {
+          "type": "benefit",
+          "settings": {
+            "title": "Fácil de montar en casa",
+            "text": "Pocos bultos, instrucciones claras; lo montas tú."
+          }
+        },
+        "f1": {
+          "type": "feature",
+          "settings": {
+            "title": "Aluminio termolacado",
+            "text": "Ligero, no se oxida."
+          }
+        },
+        "f2": {
+          "type": "feature",
+          "settings": {
+            "title": "Cuerda náutica PE",
+            "text": "Tacto textil, color estable al sol."
+          }
+        },
+        "f3": {
+          "type": "feature",
+          "settings": {
+            "title": "Modular",
+            "text": "Combina según tu espacio."
+          }
         }
       },
-      "disabled": true,
-      "name": "t:names.media_with_text",
-      "settings": {
-        "media_position": "right",
-        "media_width": "medium",
-        "media_height": "50svh",
-        "section_width": "full-width",
-        "extend_media": true,
-        "color_scheme": "scheme-5",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "f1",
+        "f2",
+        "f3"
+      ]
+    },
+    "santavila_pdp_emotional": {
+      "type": "santavila-pdp-emotional",
+      "settings": {}
+    },
+    "santavila_pdp_usps": {
+      "type": "santavila-services",
+      "blocks": {
+        "u1": {
+          "type": "service",
+          "settings": {
+            "icon": "support",
+            "title": "Asesoría humana",
+            "text": "Teléfono y WhatsApp. Te ayudamos con medidas y combinaciones."
+          }
+        },
+        "u2": {
+          "type": "service",
+          "settings": {
+            "icon": "delivery",
+            "title": "Entrega clara",
+            "text": "Plazo exacto por producto antes de comprar. Envío gratis a península."
+          }
+        },
+        "u3": {
+          "type": "service",
+          "settings": {
+            "icon": "warranty",
+            "title": "Garantía 3–5 años",
+            "text": "Pública y clara, no en letra pequeña."
+          }
+        },
+        "u4": {
+          "type": "service",
+          "settings": {
+            "icon": "assembly",
+            "title": "Fácil de montar",
+            "text": "Llega en pocos bultos con instrucciones; lo montas tú."
+          }
+        }
+      },
+      "block_order": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "settings": {}
+    },
+    "santavila_pdp_accordions": {
+      "type": "santavila-pdp-accordions",
+      "settings": {},
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "heading": "Medidas y materiales",
+            "open": true,
+            "content": "<p>Estructura de aluminio termolacado y cuerda náutica PE. Cojines desenfundables. Consulta la guía de medidas.</p>"
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "heading": "Envío y entrega",
+            "content": "<p>Enviado en 24&nbsp;h. En casa en 7–10 días laborables a península (gratis). Llega listo para montar tú mismo.</p>"
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "heading": "Devoluciones y garantía",
+            "content": "<p>30 días de prueba en casa. Garantía de 3 años (5 en familias selectas).</p>"
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "heading": "Preguntas frecuentes",
+            "content": "<p>¿Aguanta la lluvia? Sí. ¿Es fácil de montar? Sí, sin herramientas especiales. ¿Hay asesoría? Sí.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "santavila_pdp_social": {
+      "type": "santavila-pdp-social",
+      "settings": {},
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "El asesoramiento por WhatsApp fue clave para acertar con la medida. Montaje muy fácil entre dos.",
+            "author": "Javier R.",
+            "location": "Ático en Málaga",
+            "verified": true,
+            "stars": 5
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Un verano usándolo a diario y sigue como el primer día.",
+            "author": "Lucía M.",
+            "location": "Jardín en Sevilla",
+            "verified": true,
+            "stars": 5
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Diseño precioso y muy cómodo. Pensado para durar fuera.",
+            "author": "Andrés P.",
+            "location": "Terraza en Madrid",
+            "verified": true,
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ]
     }
   },
   "order": [
     "main",
-    "product_recommendations_xmXAhw",
-    "media_with_content_9rDKpN"
+    "santavila_pdp_promise",
+    "santavila_pdp_highlights",
+    "santavila_pdp_emotional",
+    "santavila_pdp_usps",
+    "santavila_pdp_accordions",
+    "santavila_pdp_social",
+    "product_recommendations_xmXAhw"
   ]
 }

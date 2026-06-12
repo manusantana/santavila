@@ -1,0 +1,76 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="sv-section sv-acc-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-acc__grid">
+      <div class="sv-acc__head">
+        {%- if s.eyebrow != blank -%}<p class="sv-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.heading != blank -%}<h2 class="sv-acc__title">{{ s.heading }}</h2>{%- endif -%}
+      </div>
+      <div class="sv-acc__list">
+        {%- for block in section.blocks -%}
+          <details class="sv-acc__item" {% if block.settings.open %}open{% endif %} {{ block.shopify_attributes }}>
+            <summary class="sv-acc__q">
+              <span>{{ block.settings.heading }}</span>
+              <span class="sv-acc__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="sv-acc__a">{{ block.settings.content }}</div>
+          </details>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-acc-section { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-acc__grid { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: clamp(28px,5vw,80px); align-items: start; }
+  .sv-acc__head { position: sticky; top: calc(var(--header-height,64px) + 24px); }
+  .sv-acc__title { font-family: var(--serif); font-weight: 500; font-size: clamp(28px,3.6vw,46px); line-height: 1.04; margin: 12px 0 0; max-width: 12ch; }
+  .sv-acc__list { border-top: 1px solid var(--line); }
+  .sv-acc__item { border-bottom: 1px solid var(--line); }
+  .sv-acc__q { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px 4px; font-family: var(--serif); font-size: clamp(18px,1.7vw,23px); font-weight: 500; color: var(--ink); }
+  .sv-acc__q::-webkit-details-marker { display: none; }
+  .sv-acc__q:hover { color: var(--sage-deep); }
+  .sv-acc__icon { position: relative; width: 16px; height: 16px; flex: none; }
+  .sv-acc__icon::before, .sv-acc__icon::after { content: ""; position: absolute; background: var(--ink-2); transition: transform 0.3s var(--ease,ease), opacity 0.3s var(--ease,ease); }
+  .sv-acc__icon::before { top: 50%; left: 0; right: 0; height: 1.5px; transform: translateY(-50%); }
+  .sv-acc__icon::after { left: 50%; top: 0; bottom: 0; width: 1.5px; transform: translateX(-50%); }
+  .sv-acc__item[open] .sv-acc__icon::after { opacity: 0; transform: translateX(-50%) rotate(90deg); }
+  .sv-acc__a { padding: 0 4px 26px; max-width: 64ch; }
+  .sv-acc__a, .sv-acc__a p, .sv-acc__a li { font-family: var(--sans); font-size: 15.5px; line-height: 1.65; color: var(--ink-2); }
+  .sv-acc__a :first-child { margin-top: 0; }
+  .sv-acc__a table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14px; }
+  .sv-acc__a td, .sv-acc__a th { padding: 8px 0; border-bottom: 1px solid var(--line); text-align: left; }
+  @media screen and (max-width: 860px) { .sv-acc__grid { grid-template-columns: 1fr; } .sv-acc__head { position: static; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila PDP Acordeones",
+  "tag": "section",
+  "class": "sv-acc-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Todo claro antes de comprar" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Detalles" }
+  ],
+  "blocks": [
+    { "type": "row", "name": "Fila", "settings": [
+      { "type": "text", "id": "heading", "label": "Título", "default": "Medidas y materiales" },
+      { "type": "richtext", "id": "content", "label": "Contenido", "default": "<p>Indica aquí medidas, materiales y cuidados.</p>" },
+      { "type": "checkbox", "id": "open", "label": "Abierto por defecto", "default": false }
+    ]}
+  ],
+  "presets": [ {
+    "name": "Santavila PDP Acordeones",
+    "blocks": [
+      { "type": "row", "settings": { "heading": "Medidas y materiales", "open": true, "content": "<p>Estructura de aluminio termolacado y cuerda náutica PE. Cojines desenfundables. Consulta la guía de medidas para tu espacio.</p>" } },
+      { "type": "row", "settings": { "heading": "Envío y entrega", "content": "<p>Enviado en 24 h. En casa en 7–10 días laborables a península (envío gratis). Llega listo para montar tú mismo, con instrucciones ilustradas.</p>" } },
+      { "type": "row", "settings": { "heading": "Devoluciones y garantía", "content": "<p>30 días de prueba en casa. Garantía de 3 años (5 en familias selectas) frente a defectos de fabricación.</p>" } },
+      { "type": "row", "settings": { "heading": "Preguntas frecuentes", "content": "<p>¿Aguanta la lluvia? Sí. ¿Es fácil de montar? Sí, en casa y sin herramientas especiales. ¿Tiene asesoría? Sí, por teléfono y WhatsApp.</p>" } }
+    ]
+  } ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="sv-section sv-emo-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-emo__grid">
+      <div class="sv-emo__statement">
+        {%- if s.eyebrow != blank -%}<p class="sv-eyebrow" style="color:var(--sage-soft)">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.statement != blank -%}<p class="sv-emo__text">{{ s.statement }}</p>{%- endif -%}
+      </div>
+      {%- if s.quote != blank -%}
+        <figure class="sv-emo__review">
+          <div class="sv-emo__stars" aria-label="{{ s.stars }} de 5">{% for i in (1..s.stars) %}★{% endfor %}</div>
+          <blockquote>{{ s.quote }}</blockquote>
+          <figcaption>
+            <strong>{{ s.author }}</strong>{% if s.location != blank %} · {{ s.location }}{% endif %}
+            {%- if s.verified -%}<span class="sv-emo__ver">Verificada</span>{%- endif -%}
+          </figcaption>
+        </figure>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-emo-section { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-emo__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(32px,6vw,90px); align-items: center; }
+  .sv-emo__text { font-family: var(--serif); font-weight: 500; font-size: clamp(28px,3.6vw,48px); line-height: 1.1; color: #fff; max-width: 18ch; margin: 14px 0 0; text-wrap: balance; }
+  .sv-emo__review { margin: 0; border-left: 2px solid var(--line-light); padding-left: clamp(20px,3vw,36px); }
+  .sv-emo__stars { color: var(--clay); letter-spacing: 2px; font-size: 16px; margin-bottom: 16px; }
+  .sv-emo__review blockquote { font-family: var(--serif); font-style: italic; font-size: clamp(19px,2vw,26px); line-height: 1.4; color: #fff; margin: 0 0 18px; }
+  .sv-emo__review figcaption { font-family: var(--sans); font-size: 14px; color: var(--sage-soft); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .sv-emo__review figcaption strong { color: #fff; font-weight: 600; }
+  .sv-emo__ver { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ok); background: rgba(255,255,255,0.1); border-radius: 99px; padding: 4px 10px; }
+  @media screen and (max-width: 860px) { .sv-emo__grid { grid-template-columns: 1fr; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila PDP Emocional",
+  "tag": "section",
+  "class": "sv-emo-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-5" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "El exterior bien vivido" },
+    { "type": "textarea", "id": "statement", "label": "Statement", "default": "El sitio donde la casa respira y los domingos duran más." },
+    { "type": "header", "content": "Reseña destacada" },
+    { "type": "range", "id": "stars", "label": "Estrellas", "min": 1, "max": 5, "step": 1, "default": 5 },
+    { "type": "textarea", "id": "quote", "label": "Reseña", "default": "Llevamos un verano entero usándolo a diario y sigue impecable. El asesoramiento para acertar con la medida fue clave." },
+    { "type": "text", "id": "author", "label": "Autor", "default": "Marta G." },
+    { "type": "text", "id": "location", "label": "Ubicación", "default": "Ático en Valencia" },
+    { "type": "checkbox", "id": "verified", "label": "Compra verificada", "default": true }
+  ],
+  "presets": [ { "name": "Santavila PDP Emocional" } ]
+}
+{% endschema %}

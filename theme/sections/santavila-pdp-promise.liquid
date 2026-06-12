@@ -1,0 +1,45 @@
+{%- liquid
+  assign s = section.settings
+-%}
+<div class="sv-section sv-promise-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    {%- if s.eyebrow != blank -%}<p class="sv-eyebrow sv-promise__eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+    {%- if s.statement != blank -%}<p class="sv-promise__statement">{{ s.statement }}</p>{%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-promise-section {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    text-align: center;
+  }
+  .sv-promise__eyebrow {
+    margin: 0 auto 22px;
+  }
+  .sv-promise__statement {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.6vw, 50px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    max-width: 22ch;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila PDP Promise",
+  "tag": "section",
+  "class": "sv-promise-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "La promesa Santavila" },
+    { "type": "textarea", "id": "statement", "label": "Statement", "default": "Una terraza que se usa todo el año empieza por un asiento en el que de verdad apetece quedarse." }
+  ],
+  "presets": [ { "name": "Santavila PDP Promise" } ]
+}
+{% endschema %}

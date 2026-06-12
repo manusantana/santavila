@@ -1,0 +1,109 @@
+{%- liquid
+  assign s = section.settings
+  assign press = s.press | newline_to_br | split: '<br />'
+  assign testimonials = section.blocks
+-%}
+<div class="sv-section sv-social-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    {%- if s.press != blank -%}
+      <div class="sv-social__press">
+        <span class="sv-eyebrow">{{ s.press_label }}</span>
+        <div class="sv-social__logos">
+          {%- for p in press -%}{%- assign pn = p | strip -%}{%- if pn != blank -%}<span>{{ pn }}</span>{%- endif -%}{%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if testimonials.size > 0 -%}
+      {%- if s.heading != blank -%}<h2 class="sv-social__title">{{ s.heading }}</h2>{%- endif -%}
+      <div class="sv-social__grid">
+        {%- for b in testimonials -%}
+          <figure class="sv-tcard" {{ b.shopify_attributes }}>
+            <div class="sv-tcard__stars" aria-hidden="true">{% for i in (1..b.settings.stars) %}★{% endfor %}</div>
+            <blockquote>{{ b.settings.quote }}</blockquote>
+            <figcaption><strong>{{ b.settings.author }}</strong>{% if b.settings.location != blank %} · {{ b.settings.location }}{% endif %}{% if b.settings.verified %}<span class="sv-tcard__ver">Verificada</span>{% endif %}</figcaption>
+          </figure>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if s.ugc_heading != blank -%}
+      <div class="sv-social__ugc">
+        <h3 class="sv-social__ugc-title">{{ s.ugc_heading }}</h3>
+        <div class="sv-social__ugc-grid">
+          {%- for i in (1..5) -%}<div class="sv-social__ugc-tile"></div>{%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if s.includes != blank -%}
+      <div class="sv-social__includes">
+        <div>
+          {%- if s.includes_heading != blank -%}<h3 class="sv-social__inc-title">{{ s.includes_heading }}</h3>{%- endif -%}
+          <div class="sv-social__inc-body">{{ s.includes }}</div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-social-section { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-social__press { text-align: center; padding-bottom: clamp(40px,6vw,72px); border-bottom: 1px solid var(--line); margin-bottom: clamp(40px,6vw,72px); }
+  .sv-social__logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 40px; margin-top: 22px; }
+  .sv-social__logos span { font-family: var(--serif); font-style: italic; font-size: clamp(20px,2.4vw,30px); color: var(--ink-3); }
+  .sv-social__title { font-family: var(--serif); font-weight: 500; font-size: clamp(28px,3.6vw,48px); line-height: 1.04; text-align: center; max-width: 18ch; margin: 0 auto clamp(36px,5vw,56px); text-wrap: balance; }
+  .sv-social__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(16px,2vw,28px); }
+  .sv-tcard { margin: 0; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius-media); padding: clamp(22px,2.4vw,32px); }
+  .sv-tcard__stars { color: var(--clay); letter-spacing: 2px; margin-bottom: 14px; }
+  .sv-tcard blockquote { font-family: var(--serif); font-style: italic; font-size: 18px; line-height: 1.45; color: var(--ink); margin: 0 0 16px; }
+  .sv-tcard figcaption { font-family: var(--sans); font-size: 13.5px; color: var(--ink-3); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .sv-tcard figcaption strong { color: var(--ink); font-weight: 600; }
+  .sv-tcard__ver { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ok); }
+  .sv-social__ugc { margin-top: clamp(48px,7vw,96px); }
+  .sv-social__ugc-title { font-family: var(--serif); font-weight: 500; font-size: clamp(24px,2.6vw,34px); text-align: center; margin: 0 0 28px; }
+  .sv-social__ugc-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: clamp(10px,1.4vw,18px); }
+  .sv-social__ugc-tile { aspect-ratio: 1; background: var(--bone); border-radius: var(--radius-media); }
+  .sv-social__includes { margin-top: clamp(48px,7vw,96px); background: var(--bone); border-radius: var(--radius-media); padding: clamp(28px,4vw,56px); }
+  .sv-social__inc-title { font-family: var(--serif); font-weight: 500; font-size: clamp(24px,2.6vw,34px); margin: 0 0 16px; }
+  .sv-social__inc-body, .sv-social__inc-body p, .sv-social__inc-body li { font-family: var(--sans); font-size: 16px; line-height: 1.65; color: var(--ink-2); }
+  @media screen and (max-width: 860px) { .sv-social__grid { grid-template-columns: 1fr; } .sv-social__ugc-grid { grid-template-columns: repeat(3,1fr); } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila PDP Social",
+  "tag": "section",
+  "class": "sv-social-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "header", "content": "Prensa" },
+    { "type": "text", "id": "press_label", "label": "Etiqueta", "default": "Hablan de nosotros" },
+    { "type": "textarea", "id": "press", "label": "Medios (uno por línea)", "default": "El País\nArchitectural Digest\nNuevo Estilo\nElle Decor" },
+    { "type": "header", "content": "Testimonios" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Lo que dicen quienes ya viven fuera" },
+    { "type": "header", "content": "UGC" },
+    { "type": "text", "id": "ugc_heading", "label": "Titular UGC", "default": "#SantavilaEnCasa" },
+    { "type": "header", "content": "Qué incluye" },
+    { "type": "text", "id": "includes_heading", "label": "Titular", "default": "Llega listo en 2 bultos" },
+    { "type": "richtext", "id": "includes", "label": "Contenido", "default": "<p>Sofá modular, cojines de asiento y respaldo desenfundables, instrucciones ilustradas y kit de montaje. Sin servicio de montaje: lo montas tú, fácil.</p>" }
+  ],
+  "blocks": [
+    { "type": "testimonial", "name": "Testimonio", "settings": [
+      { "type": "range", "id": "stars", "label": "Estrellas", "min": 1, "max": 5, "step": 1, "default": 5 },
+      { "type": "textarea", "id": "quote", "label": "Reseña", "default": "Cumple lo que promete y el trato fue cercano de principio a fin." },
+      { "type": "text", "id": "author", "label": "Autor", "default": "Cliente" },
+      { "type": "text", "id": "location", "label": "Ubicación" },
+      { "type": "checkbox", "id": "verified", "label": "Verificada", "default": true }
+    ]}
+  ],
+  "presets": [ {
+    "name": "Santavila PDP Social",
+    "blocks": [
+      { "type": "testimonial", "settings": { "quote": "El asesoramiento por WhatsApp fue clave para acertar con la medida. Entrega puntual y montaje muy fácil entre dos.", "author": "Javier R.", "location": "Ático en Málaga" } },
+      { "type": "testimonial", "settings": { "quote": "Llevamos un verano usándolo a diario y sigue como el primer día. Calidad real.", "author": "Lucía M.", "location": "Jardín en Sevilla" } },
+      { "type": "testimonial", "settings": { "quote": "Diseño precioso y muy cómodo. Se nota que está pensado para durar fuera.", "author": "Andrés P.", "location": "Terraza en Madrid" } }
+    ]
+  } ]
+}
+{% endschema %}
