@@ -5,7 +5,11 @@
   assign title = col.title | default: 'Colección'
   assign desc = s.description
   if desc == blank
-    assign desc = col.description
+    comment
+      La descripción de colección puede traer cuerpo SEO (intro + <h2>FAQ</h2>…).
+      En el hero mostramos SOLO la intro: cortamos antes del primer <h2> y limpiamos.
+    endcomment
+    assign desc = col.description | split: '<h2' | first | strip_html | truncatewords: 45 | strip
   endif
 -%}
 
