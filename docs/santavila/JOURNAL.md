@@ -13,6 +13,32 @@
 
 ---
 
+## 2026-06-12 · Rediseño tema — Fase 7 (plantilla de Colección)
+
+**Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
+**Estado:** ✅ Completada (`35975df`). Pendiente verificación visual del dueño.
+**Quién/qué:** sesión interactiva con dueño · Claude (Opus 4.8). Decisión: bespoke + filtros nativos de Shopify.
+
+### Qué se ejecutó
+- **Card compartida (DRY):** `snippets/santavila-product-card.liquid` (home + colección). El CSS `.sv-pcard*` se movió a `santavila-components.css` (global, disponible en ambas plantillas). `santavila-product-row.liquid` ahora hace `render` del snippet.
+- **`santavila-collection-hero.liquid`:** hero 56vh — breadcrumb mono (Inicio / Colecciones / título), H1 serif = `collection.title`, descripción (`collection.description` o override); imagen de colección o degradado sage; bajo el header transparente.
+- **`santavila-collection-grid.liquid`:** filter bar **sticky** (top = `--header-height`) con chips desde `collection.filters` (faceted, Search & Discovery), popover de **precio** (min/max), **orden** nativo (`sort_by` preservando filtros) + contador; grid 3 col con la card Santavila; **banda editorial** intercalada (`grid-column:1/-1`, solo en página 1); **"Cargar más"** con mejora progresiva AJAX (append sin recarga; fallback a navegación si falla JS).
+- **`collection.json`:** hero + grid Santavila + `collection-faq` (se conserva por su JSON-LD/SEO).
+
+### Hallazgos clave
+- Filtrado server-side Shopify-native vía `collection.filters` (URLs `url_to_add`/`url_to_remove`) + `paginate`. Robusto y SEO-friendly; el AJAX de "Cargar más" es solo mejora progresiva.
+- Los chips de **marca** (material, Quick ship) sólo aparecerán cuando existan los **metafields `santavila.*` + configuración de Search & Discovery**. El grid los renderiza automáticamente en cuanto existan (ahora muestra los filtros nativos: disponibilidad, precio, opciones).
+
+### Prioridades vivas
+- Configurar Search & Discovery + metafields para los filtros de marca.
+- Imágenes (hero de colección, banda editorial) — cliente.
+- Verificación visual del dueño en una colección real.
+
+### Siguiente paso recomendado
+- **Fase 8**: Ficha de producto (PDP) — la "Perfect Product Page" del README (la más rica: galería, columna de compra sticky, acordeones, social proof, sticky add-to-cart). Recordar: **sin montaje a domicilio** ([[santavila_no_assembly]]).
+
+---
+
 ## 2026-06-12 · Revisión home — modelo self-assembly + pulido
 
 **Estado:** ✅ Correcciones aplicadas y pusheadas al dev theme.
