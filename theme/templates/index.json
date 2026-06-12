@@ -75,6 +75,16 @@
       "type": "santavila-featured",
       "settings": {}
     },
+    "santavila_product_row": {
+      "type": "santavila-product-row",
+      "settings": {
+        "heading": "Lo más deseado",
+        "collection": "frontpage",
+        "max_products": 4,
+        "columns": 4,
+        "link_label": "Ver toda la tienda"
+      }
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -1168,6 +1178,7 @@
     "santavila_manifesto",
     "santavila_scenarios",
     "santavila_featured",
+    "santavila_product_row",
     "section",
     "product_list_YidTcf",
     "section_BkdmxX",
