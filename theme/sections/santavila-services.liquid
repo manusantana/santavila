@@ -1,0 +1,107 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div class="sv-section sv-services-section color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-svc">
+      {%- for block in section.blocks -%}
+        <div class="sv-svc__item" {{ block.shopify_attributes }}>
+          <span class="sv-svc__icon" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'delivery' -%}
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+              {%- when 'assembly' -%}
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l12-12 6 6L9 21z"/><path d="M7.5 10.5l2 2"/></svg>
+              {%- when 'warranty' -%}
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>
+              {%- when 'support' -%}
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg>
+            {%- endcase -%}
+          </span>
+          {%- if block.settings.title != blank -%}<h4>{{ block.settings.title }}</h4>{%- endif -%}
+          {%- if block.settings.text != blank -%}<p>{{ block.settings.text }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-svc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 48px);
+  }
+  .sv-svc__item {
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+  .sv-svc__icon {
+    color: var(--sage);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .sv-svc__item h4 {
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .sv-svc__item p {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0;
+  }
+  @media screen and (max-width: 860px) {
+    .sv-svc {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Servicios",
+  "tag": "section",
+  "class": "sv-services-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "service",
+      "name": "Servicio",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            { "value": "delivery", "label": "Entrega" },
+            { "value": "assembly", "label": "Montaje" },
+            { "value": "warranty", "label": "Garantía" },
+            { "value": "support", "label": "Asesoría" }
+          ],
+          "default": "delivery"
+        },
+        { "type": "text", "id": "title", "label": "Título", "default": "Entrega clara" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "Plazo exacto por producto antes de comprar." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Santavila Servicios",
+      "blocks": [
+        { "type": "service", "settings": { "icon": "delivery", "title": "Entrega clara", "text": "Plazo exacto por producto antes de comprar. Quick ship o fabricación bajo pedido, siempre visible." } },
+        { "type": "service", "settings": { "icon": "assembly", "title": "Montaje a domicilio", "text": "Opción de montaje y retirada de embalaje. Tu exterior listo para usar, sin trabajo extra." } },
+        { "type": "service", "settings": { "icon": "warranty", "title": "Garantía 3 años", "text": "Mínimo tres años, hasta cinco en familias selectas. Pública y clara, no en letra pequeña." } },
+        { "type": "service", "settings": { "icon": "support", "title": "Asesoría humana", "text": "Teléfono y WhatsApp. Te ayudamos con medidas, combinaciones y proyectos de terraza." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
