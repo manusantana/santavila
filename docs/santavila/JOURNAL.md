@@ -13,6 +13,24 @@
 
 ---
 
+## 2026-06-12 · PDP — swatches de color LIMPIOS + ocultar "retiro"
+
+**Estado:** ✅ Aplicado y sincronizado (dev == disco).
+
+### Feedback dueño (captura): "muchos círculos queda feo / horrible" + "¿qué es el retiro?"
+- **Color**: los círculos dentro de botones de texto quedaban recargados. **HALLAZGO técnico:** la Admin API NO permite asignar `swatch.color` por mutation (no existe el campo en `OptionValueUpdateInput` en 2024-10/2025-01/04/07; solo `linkedMetafieldValue`). Los swatches nativos se gestionan en **Configuración → Swatches** (global, admite **foto real de tela**) o vía metaobjects+linkedMetafield (complejo, por producto).
+- **Solución entregada (tema):** swatches **LIMPIOS** = el botón ES el círculo de color (oculto texto y pill), nombre del color elegido junto al título (JS `.sv-sw-name`, event-delegation robusto a re-render) + tooltip `title`. Mapa de color por nombre (orientativo). Visualmente como la nativa.
+- **"El retiro no está disponible"** = aviso de recogida en tienda (pickup) de Dwell. Oculto vía CSS (`pickup-availability-component`, `[class*="pickup-availability"]`) — Santavila es envío, no recogida.
+
+### Límite / nota
+- Mapa de color cubre los nombres de Balliu; un valor sin color cae a círculo `--bone` (productos solo-color OK; si hubiera tallas, revisar).
+- **Fidelidad real de color** = Configuración → Swatches con las fotos/hex reales de las telas Balliu (global, 1 vez). Pendiente de las telas reales del dueño.
+
+### Verificación
+Liquid + JSON + balance JS/CSS OK; Asset API 200; re-pull diff = dev == disco.
+
+---
+
 ## 2026-06-12 · PDP — feedback (captura): galería alineada + sellos humanos + color
 
 **Estado:** ✅ Aplicado y sincronizado (dev == disco). Color = solución de tema (orientativa); fidelidad real pendiente.

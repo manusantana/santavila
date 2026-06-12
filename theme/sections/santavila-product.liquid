@@ -255,6 +255,28 @@
         if (m) m.click();
       });
     }
+
+    // Swatches de color: nombre del valor elegido junto al título + tooltip al hover
+    var vWrap = document.querySelector('.sv-pdp__variant');
+    if (vWrap) {
+      var swNames = function () {
+        vWrap.querySelectorAll('fieldset.variant-option').forEach(function (fs) {
+          fs.querySelectorAll('label.variant-option__button-label').forEach(function (lb) {
+            var inp = lb.querySelector('input');
+            if (inp && !lb.title) lb.title = inp.getAttribute('value') || inp.getAttribute('aria-label') || '';
+          });
+          var checked = fs.querySelector('input:checked');
+          var legend = fs.querySelector('legend');
+          if (checked && legend) {
+            var span = legend.querySelector('.sv-sw-name');
+            if (!span) { span = document.createElement('span'); span.className = 'sv-sw-name'; legend.appendChild(span); }
+            span.textContent = ': ' + (checked.getAttribute('value') || checked.getAttribute('aria-label') || '');
+          }
+        });
+      };
+      vWrap.addEventListener('change', swNames);
+      swNames();
+    }
   })();
 </script>
 
@@ -371,38 +393,54 @@
      Pinta un círculo de color antes del nombre. Colores ORIENTATIVOS
      (mapa por nombre); pendientes de afinar con las telas reales.
      Seguro: si un valor no está en el mapa, el círculo mide 0 (no se ve). */
-  .sv-pdp__variant .variant-option__button-label__text {
-    display: inline-flex;
-    align-items: center;
+  /* ===== Swatches de color LIMPIOS: el botón ES el círculo de color (sin texto).
+     El nombre del color elegido aparece junto al título (JS → .sv-sw-name) y como
+     tooltip al hover. Colores ORIENTATIVOS por nombre; la fidelidad real se logra
+     con swatches nativos de Shopify (Configuración → Swatches) y la foto de tela. */
+  .sv-pdp__variant fieldset.variant-option { border: 0; padding: 0; margin: 0 0 20px; }
+  .sv-pdp__variant fieldset.variant-option legend {
+    font-family: var(--sans); font-size: 14px; font-weight: 600; color: var(--ink);
+    margin-bottom: 11px; padding: 0;
   }
-  .sv-pdp__variant .variant-option__button-label__text::before {
-    content: "";
-    width: var(--sw-size, 0px);
-    height: var(--sw-size, 0px);
-    margin-right: var(--sw-gap, 0px);
+  .sv-pdp__variant legend .sv-sw-name { font-weight: 400; color: var(--ink-3); }
+  .sv-pdp__variant .variant-option__button-label {
+    display: inline-flex; vertical-align: middle;
+    width: 32px; height: 32px; padding: 0; margin: 0 9px 9px 0;
     border-radius: 50%;
-    background: var(--sw, transparent);
-    box-shadow: inset 0 0 0 1px rgba(35, 37, 29, 0.2);
-    flex: none;
+    background: var(--sw, var(--bone));
+    box-shadow: inset 0 0 0 1px rgba(35, 37, 29, 0.18);
+    cursor: pointer;
+    transition: box-shadow 0.18s var(--ease, ease), transform 0.18s var(--ease, ease);
   }
-  .sv-pdp__variant label:has(input[value="Blanco"]) { --sw: #f4f2ec; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Tórtola"]) { --sw: #b8a890; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Aluminio"]) { --sw: #a9abae; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Azul"]) { --sw: #2f4a6b; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Amarillo"]) { --sw: #e3c44e; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Naranja"]) { --sw: #d3793c; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Verde claro"]) { --sw: #9aae82; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Natural"]) { --sw: #d9ccb0; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Capuchino"]) { --sw: #a98c6e; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Caqui"]) { --sw: #8e8560; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Marrón oscuro"]) { --sw: #5a4636; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Arena"]) { --sw: #d7c8a6; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Verde oscuro"]) { --sw: #495a43; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Azul celeste"]) { --sw: #9cc1d9; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Ceniza"]) { --sw: #8d8d86; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Azul marino"]) { --sw: #283750; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Gris oscuro"]) { --sw: #5b5b5b; --sw-size: 15px; --sw-gap: 8px; }
-  .sv-pdp__variant label:has(input[value="Azul acero"]) { --sw: #59708a; --sw-size: 15px; --sw-gap: 8px; }
+  .sv-pdp__variant .variant-option__button-label__text,
+  .sv-pdp__variant .variant-option__button-label__pill { display: none; }
+  @media (hover: hover) {
+    .sv-pdp__variant .variant-option__button-label:hover { transform: scale(1.1); }
+  }
+  .sv-pdp__variant label.variant-option__button-label:has(input:checked) {
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
+  }
+  .sv-pdp__variant label:has(input[value="Blanco"]) { --sw: #F4F2EC; }
+  .sv-pdp__variant label:has(input[value="Tórtola"]) { --sw: #B8A890; }
+  .sv-pdp__variant label:has(input[value="Aluminio"]) { --sw: #A9ABAE; }
+  .sv-pdp__variant label:has(input[value="Azul"]) { --sw: #2F4A6B; }
+  .sv-pdp__variant label:has(input[value="Amarillo"]) { --sw: #E3C44E; }
+  .sv-pdp__variant label:has(input[value="Naranja"]) { --sw: #D3793C; }
+  .sv-pdp__variant label:has(input[value="Verde claro"]) { --sw: #9AAE82; }
+  .sv-pdp__variant label:has(input[value="Natural"]) { --sw: #D9CCB0; }
+  .sv-pdp__variant label:has(input[value="Capuchino"]) { --sw: #A98C6E; }
+  .sv-pdp__variant label:has(input[value="Caqui"]) { --sw: #8E8560; }
+  .sv-pdp__variant label:has(input[value="Marrón oscuro"]) { --sw: #5A4636; }
+  .sv-pdp__variant label:has(input[value="Arena"]) { --sw: #D7C8A6; }
+  .sv-pdp__variant label:has(input[value="Verde oscuro"]) { --sw: #495A43; }
+  .sv-pdp__variant label:has(input[value="Azul celeste"]) { --sw: #9CC1D9; }
+  .sv-pdp__variant label:has(input[value="Ceniza"]) { --sw: #8D8D86; }
+  .sv-pdp__variant label:has(input[value="Azul marino"]) { --sw: #283750; }
+  .sv-pdp__variant label:has(input[value="Gris oscuro"]) { --sw: #5B5B5B; }
+  .sv-pdp__variant label:has(input[value="Azul acero"]) { --sw: #59708A; }
+  /* Ocultar el aviso de recogida en tienda (no aplica: envío) */
+  .sv-pdp__cart pickup-availability-component,
+  .sv-pdp__cart [class*="pickup-availability"] { display: none !important; }
   .sv-pdp__stock {
     display: flex;
     align-items: center;
