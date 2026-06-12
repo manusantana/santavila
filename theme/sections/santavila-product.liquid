@@ -11,6 +11,14 @@
     <div class="sv-pdp__grid">
 
       <div class="sv-pdp__gallery">
+        {%- assign badge = product.metafields.santavila.badge -%}
+        {%- assign low_stock = false -%}
+        {%- if variant.inventory_management != blank and variant.available and variant.inventory_quantity > 0 and variant.inventory_quantity <= 6 -%}{%- assign low_stock = true -%}{%- endif -%}
+        <div class="sv-pdp__tags" aria-hidden="true">
+          {%- if badge != blank -%}<span class="sv-pdp__tag sv-pdp__tag--best">{{ badge }}</span>{%- endif -%}
+          <span class="sv-pdp__tag sv-pdp__tag--es">Hecho en España</span>
+          {%- if low_stock -%}<span class="sv-pdp__tag sv-pdp__tag--low">Pocas unidades</span>{%- endif -%}
+        </div>
         {%- content_for 'block', type: '_product-media-gallery', id: 'media-gallery', closest.product: closest.product -%}
       </div>
 
@@ -87,6 +95,45 @@
     gap: clamp(24px, 4vw, 64px);
     align-items: start;
   }
+  .sv-pdp__gallery {
+    position: relative;
+  }
+  .sv-pdp__tags {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: flex-end;
+    pointer-events: none;
+  }
+  .sv-pdp__tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 11px;
+    border-radius: 99px;
+    white-space: nowrap;
+    line-height: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .sv-pdp__tag--best {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .sv-pdp__tag--es {
+    background: rgba(247, 244, 236, 0.92);
+    color: var(--sage-deep);
+  }
+  .sv-pdp__tag--low {
+    background: var(--warn);
+    color: #fff;
+  }
+
   .sv-pdp__buy {
     position: sticky;
     top: calc(var(--header-height, 64px) + 20px);
