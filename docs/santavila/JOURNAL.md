@@ -13,6 +13,27 @@
 
 ---
 
+## 2026-06-12 · Revisión home — modelo self-assembly + pulido
+
+**Estado:** ✅ Correcciones aplicadas y pusheadas al dev theme.
+**Quién/qué:** revisión del dueño sobre la home + Claude (Opus 4.8).
+
+### Qué se ejecutó
+- **CRÍTICO — modelo de negocio:** Santavila **NO ofrece montaje a domicilio** (self-assembly: el cliente lo monta en casa). Eliminado de todo el proyecto:
+  - **Tema:** announcement ("Fabricado en España · **Fácil de montar en casa** · Asesoría humana…") y sección Servicios (col. montaje → "Fácil de montar en casa / llega en pocos bultos con instrucciones ilustradas; lo montas tú").
+  - **Handoff:** `README.md` (nota de modelo destacada + línea Servicios + ejemplo metafield `assembly`) y los 3 prototipos (`Santavila Tienda/Coleccion/Producto.html`, este último con 2 referencias de envío).
+  - `Agents-IA/*` ya estaba correcto ("no incluye montaje") — el error venía solo del handoff de diseño. Regla en memoria `santavila_no_assembly`.
+- **Announcement a una sola línea**: eliminado el límite de 680px de Dwell; `nowrap` + elipsis en `santavila-header.css` (antes saltaba a 2 líneas).
+- **Pulido de composición**: `text-wrap: pretty` en párrafos y `balance` en titulares de todas las secciones (`santavila-components.css`) → rag limpio, sin huérfanas ni "saltitos".
+
+### Hallazgos clave
+- El handoff de diseño **contradecía** el modelo de negocio ya documentado en el plan. Lección: validar copy del handoff contra `Agents-IA/plan_santavila.md`.
+
+### Siguiente paso recomendado
+- Verificación visual del dueño (announcement en una línea, alineación). Luego **Fase 7** (plantilla de Colección).
+
+---
+
 ## 2026-06-12 · Rediseño tema — Fase 6 (cierre de la HOME)
 
 **Paso del flujo:** Theme rebuild — rama `redesign`, dev theme #189114876228.
