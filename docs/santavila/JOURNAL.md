@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-12 · Colección — fix hero + FAQ bespoke (full-width + JSON-LD)
+
+**Estado:** ✅ Aplicado y verificado en render local (theme dev OAuth activo).
+
+### Qué se ejecutó (feedback del dueño)
+- **Hero volcaba toda la `collection.description`** (intro + `<h2>Preguntas frecuentes</h2>` + FAQ) → salía un "título pequeño" (h2) y la FAQ dentro del hero. Fix: el hero corta antes del primer `<h2>`, limpia HTML y trunca → solo la intro.
+- **FAQ recuperada como sección bespoke** (`santavila-collection-faq.liquid`): parsea pares pregunta/respuesta de la descripción, acordeones on-brand a ancho completo (heading sticky izq + acordeones dcha), y emite **JSON-LD FAQPage** (SEO/GEO). Se oculta si no hay FAQ. collection.json: hero + grid + FAQ.
+
+### Hallazgos / método
+- **QA visual ahora vía inspección del render local** (`curl http://127.0.0.1:9292/...`) con theme dev (OAuth). Permite verificar estructura real (encabezados en hero, acordeones, JSON-LD) aunque no pixeles.
+- Las capturas headless con Chrome NO funcionaron aquí; además un `pkill` amplio cerró el Chrome del dueño (error, registrado en memoria `no_broad_process_kill`).
+
+### Siguiente
+- Más revisión de colección con el dueño (vía su ojo + inspección local). Luego Fase 8 (PDP).
+
+---
+
 ## 2026-06-12 · Revisión colección — UX de filtros + radio global + sin FAQ
 
 **Estado:** ✅ Aplicado (`37a0324`). Pendiente verificación visual del dueño.
