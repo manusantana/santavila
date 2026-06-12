@@ -13,6 +13,22 @@
 
 ---
 
+## 2026-06-12 · PDP nivel-10 — pulido UI (tags, guía medidas, sticky bar)
+
+**Estado:** ✅ Pulido UI aplicado y verificado en render local.
+
+### Qué se ejecutó
+- **Tags de galería** honestos (Hecho en España, badge metafield, "Pocas unidades" si inventory<=6).
+- **Guía de medidas (modal `<dialog>`)** con setting richtext `size_guide`; enlace bajo variantes; cierre botón/fuera/Esc.
+- **Sticky add-to-cart bar** propio (thumb+nombre+precio+CTA) que **proxy-clica el add-to-cart real de Dwell** (al perder de vista la buy-box vía IntersectionObserver). Carrito intacto.
+
+### Pendiente (con tu OK / apps)
+- Specs estructuradas → metafields `santavila.*` (toca productos).
+- Reseñas reales → app (Judge.me).
+- Galería rail+stage 100% fiel (miniatura vídeo, contador) — opcional.
+
+---
+
 ## 2026-06-12 · PDP nivel-10 — sección de producto bespoke (validada)
 
 **Estado:** 🔄 Foundation validada (carrito vivo). Sigue el pulido de conversión.
