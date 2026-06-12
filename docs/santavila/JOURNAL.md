@@ -13,6 +13,35 @@
 
 ---
 
+## 2026-06-12 · Auditoría nivel-10 PDP (1/2): saneamiento de claims falsos
+
+**Estado:** ✅ Aplicado y subido a dev (Asset API, 200). Pendiente: 2 datos del dueño (importe envío gratis, contactos) y mejoras estéticas (parte 2).
+
+### Por qué (la prioridad real del nivel-10)
+La PDP estaba llena de **afirmaciones inventadas** que chocan con la regla de no falsear nada y con riesgo legal (reseñas/prensa falsas = publicidad engañosa). Antes de pulir estética, había que sanear. Ver [[santavila_facts]].
+
+### Decisiones del dueño (2026-06-12)
+- **Atención:** email, **WhatsApp** y **chat (Shopify Inbox, se activará)**. NO teléfono.
+- **Envío:** gratis **desde un importe** (umbral pendiente de confirmar). Mientras tanto, solo se afirma el plazo.
+- **Reseñas:** sin reales aún → fuera nombres ficticios, estrellas y "Verificada". Prueba social genérica/honesta.
+- **Prensa:** sustituir medios inventados por **sellos reales**.
+
+### Qué se saneó
+- **Cabecera PDP:** eliminado el rating de estrellas inventado (bloque `review` fuera de la cabecera y del `product.json`). Trust row: envío sin "lo gestionamos nosotros" (es deslocalizado), atención por "email, WhatsApp y chat".
+- **Emocional:** eliminada la reseña ficticia (Marta G.); reconvertida a statement de marca a pantalla completa + texto de apoyo. 100% honesto.
+- **Social → reescrita como "Confianza":** fuera prensa inventada (El País/AD/Elle Decor…), testimonios ficticios y UGC vacío. Ahora 6 **sellos reales** (Hecho en España, Pago seguro, Garantía legal, Devolución legal, Atención personalizada, Fácil de montar) + bloque "Qué incluye" sin nº de bultos inventado.
+- **Servicios + Acordeones (`.liquid` y `product.json`):** envío "deslocalizado (proveedor logístico externo)", quitado "Envío gratis a península", "asesoría"→"atención personalizada", teléfono→email/WhatsApp/chat.
+
+### Vía técnica
+Subida **archivo por archivo vía Asset API** (no `--only`), con validación previa de balance Liquid + schema JSON. Lección [[shopify_push_path_trap]].
+
+### Pendiente (para cerrar honestidad)
+- **Importe del envío gratis** (umbral €) → para añadir el claim "envío gratis desde X".
+- **Email de contacto + número/enlace de WhatsApp** → para enlazar la atención.
+- Parte 2: mejoras estéticas/conversión nivel-10 (jerarquía, galería, microinteracciones).
+
+---
+
 ## 2026-06-12 · 🚨 INCIDENCIA: PDP "sin producto" — 5 archivos nunca llegaron al tema dev
 
 **Estado:** ✅ Resuelto. Causa raíz encontrada y archivos re-subidos vía Asset API (todos 200).

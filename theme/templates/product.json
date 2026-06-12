@@ -12,18 +12,6 @@
     "santavila_product": {
       "type": "santavila-product",
       "blocks": {
-        "review": {
-          "type": "review",
-          "settings": {
-            "stars_style": "shaded",
-            "show_number": true,
-            "rating_color": "primary",
-            "type_preset": "paragraph",
-            "width": "100%",
-            "alignment": "left"
-          },
-          "blocks": {}
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -96,7 +84,6 @@
         }
       },
       "block_order": [
-        "review",
         "price",
         "variant-picker",
         "buy-buttons"
@@ -361,7 +348,7 @@
           "settings": {
             "icon": "support",
             "title": "Atención personalizada",
-            "text": "Teléfono y WhatsApp. Te ayudamos con medidas y combinaciones."
+            "text": "Email, WhatsApp y chat. Te ayudamos con medidas y combinaciones."
           }
         },
         "u2": {
@@ -369,7 +356,7 @@
           "settings": {
             "icon": "delivery",
             "title": "Entrega clara",
-            "text": "Plazo exacto por producto antes de comprar. Envío gratis a península."
+            "text": "Plazo exacto por producto antes de comprar."
           }
         },
         "u3": {
@@ -413,7 +400,7 @@
           "type": "row",
           "settings": {
             "heading": "Envío y entrega",
-            "content": "<p>El envío lo gestionamos nosotros a España península. Plazo estimado de entrega: hasta 30 días según disponibilidad del proveedor. Llega listo para montar tú mismo.</p>"
+            "content": "<p>El envío lo realiza un proveedor logístico externo. Plazo estimado de entrega: hasta 30 días según disponibilidad del proveedor. Llega listo para montar tú mismo, con instrucciones ilustradas.</p>"
           }
         },
         "r3": {
@@ -427,7 +414,7 @@
           "type": "row",
           "settings": {
             "heading": "Preguntas frecuentes",
-            "content": "<p>¿Aguanta la lluvia? Sí. ¿Es fácil de montar? Sí, sin herramientas especiales. ¿Hay asesoría? Sí.</p>"
+            "content": "<p>¿Aguanta la lluvia? Sí. ¿Es fácil de montar? Sí, en casa y sin herramientas especiales. ¿Hay atención personalizada? Sí, por email, WhatsApp y chat.</p>"
           }
         }
       },
@@ -442,41 +429,62 @@
       "type": "santavila-pdp-social",
       "settings": {},
       "blocks": {
-        "t1": {
-          "type": "testimonial",
+        "seal1": {
+          "type": "seal",
           "settings": {
-            "quote": "El asesoramiento por WhatsApp fue clave para acertar con la medida. Montaje muy fácil entre dos.",
-            "author": "Javier R.",
-            "location": "Ático en Málaga",
-            "verified": true,
-            "stars": 5
+            "icon": "spain",
+            "title": "Hecho en España",
+            "text": "Diseño y fabricación españoles, pensados para nuestro clima."
           }
         },
-        "t2": {
-          "type": "testimonial",
+        "seal2": {
+          "type": "seal",
           "settings": {
-            "quote": "Un verano usándolo a diario y sigue como el primer día.",
-            "author": "Lucía M.",
-            "location": "Jardín en Sevilla",
-            "verified": true,
-            "stars": 5
+            "icon": "secure",
+            "title": "Pago 100% seguro",
+            "text": "Pasarela de pago de Shopify, cifrada."
           }
         },
-        "t3": {
-          "type": "testimonial",
+        "seal3": {
+          "type": "seal",
           "settings": {
-            "quote": "Diseño precioso y muy cómodo. Pensado para durar fuera.",
-            "author": "Andrés P.",
-            "location": "Terraza en Madrid",
-            "verified": true,
-            "stars": 5
+            "icon": "warranty",
+            "title": "Garantía legal",
+            "text": "Cubierta por la garantía legal, sin letra pequeña."
+          }
+        },
+        "seal4": {
+          "type": "seal",
+          "settings": {
+            "icon": "returns",
+            "title": "Devolución legal",
+            "text": "Derecho de desistimiento según la ley."
+          }
+        },
+        "seal5": {
+          "type": "seal",
+          "settings": {
+            "icon": "support",
+            "title": "Atención personalizada",
+            "text": "Email, WhatsApp y chat para acertar con medidas y combinaciones."
+          }
+        },
+        "seal6": {
+          "type": "seal",
+          "settings": {
+            "icon": "assembly",
+            "title": "Fácil de montar en casa",
+            "text": "Pocos bultos, instrucciones ilustradas; lo montas tú."
           }
         }
       },
       "block_order": [
-        "t1",
-        "t2",
-        "t3"
+        "seal1",
+        "seal2",
+        "seal3",
+        "seal4",
+        "seal5",
+        "seal6"
       ]
     }
   },
