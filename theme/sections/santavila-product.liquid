@@ -256,11 +256,16 @@
       });
     }
 
-    // Swatches de color: nombre del valor elegido junto al título + tooltip al hover
+    // Solo la opción de COLOR (por el título) se convierte en swatches.
+    // Chasis y cualquier otro atributo quedan como botones de texto.
     var vWrap = document.querySelector('.sv-pdp__variant');
     if (vWrap) {
+      vWrap.querySelectorAll('fieldset.variant-option').forEach(function (fs) {
+        var legend = fs.querySelector('legend');
+        if (legend && /color/i.test(legend.textContent || '')) fs.classList.add('sv-sw-color');
+      });
       var swNames = function () {
-        vWrap.querySelectorAll('fieldset.variant-option').forEach(function (fs) {
+        vWrap.querySelectorAll('fieldset.sv-sw-color').forEach(function (fs) {
           fs.querySelectorAll('label.variant-option__button-label').forEach(function (lb) {
             var inp = lb.querySelector('input');
             if (inp && !lb.title) lb.title = inp.getAttribute('value') || inp.getAttribute('aria-label') || '';
@@ -403,7 +408,24 @@
     margin-bottom: 11px; padding: 0;
   }
   .sv-pdp__variant legend .sv-sw-name { font-weight: 400; color: var(--ink-3); }
-  .sv-pdp__variant .variant-option__button-label {
+  /* Botones de texto (Chasis y demás atributos NO-color): pill limpio */
+  .sv-pdp__variant fieldset:not(.sv-sw-color) .variant-option__button-label {
+    display: inline-flex; align-items: center; vertical-align: middle;
+    padding: 9px 16px; margin: 0 8px 8px 0;
+    border: 1px solid var(--line); border-radius: 999px;
+    font-family: var(--sans); font-size: 13.5px; color: var(--ink); cursor: pointer;
+    transition: border-color 0.18s var(--ease, ease), background 0.18s var(--ease, ease);
+  }
+  .sv-pdp__variant fieldset:not(.sv-sw-color) .variant-option__button-label__pill { display: none; }
+  .sv-pdp__variant fieldset:not(.sv-sw-color) label.variant-option__button-label:has(input:checked) {
+    background: var(--ink); color: var(--paper); border-color: var(--ink);
+  }
+  @media (hover: hover) {
+    .sv-pdp__variant fieldset:not(.sv-sw-color) .variant-option__button-label:hover { border-color: var(--ink); }
+  }
+
+  /* SOLO opciones de COLOR (marcadas por JS) → swatches (círculo = botón) */
+  .sv-pdp__variant .sv-sw-color .variant-option__button-label {
     display: inline-flex; vertical-align: middle;
     width: 32px; height: 32px; padding: 0; margin: 0 9px 9px 0;
     border-radius: 50%;
@@ -412,32 +434,32 @@
     cursor: pointer;
     transition: box-shadow 0.18s var(--ease, ease), transform 0.18s var(--ease, ease);
   }
-  .sv-pdp__variant .variant-option__button-label__text,
-  .sv-pdp__variant .variant-option__button-label__pill { display: none; }
+  .sv-pdp__variant .sv-sw-color .variant-option__button-label__text,
+  .sv-pdp__variant .sv-sw-color .variant-option__button-label__pill { display: none; }
   @media (hover: hover) {
-    .sv-pdp__variant .variant-option__button-label:hover { transform: scale(1.1); }
+    .sv-pdp__variant .sv-sw-color .variant-option__button-label:hover { transform: scale(1.1); }
   }
-  .sv-pdp__variant label.variant-option__button-label:has(input:checked) {
+  .sv-pdp__variant .sv-sw-color label.variant-option__button-label:has(input:checked) {
     box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px var(--paper), 0 0 0 4px var(--ink);
   }
-  .sv-pdp__variant label:has(input[value="Blanco"]) { --sw: #F4F2EC; }
-  .sv-pdp__variant label:has(input[value="Tórtola"]) { --sw: #B8A890; }
-  .sv-pdp__variant label:has(input[value="Aluminio"]) { --sw: #A9ABAE; }
-  .sv-pdp__variant label:has(input[value="Azul"]) { --sw: #2F4A6B; }
-  .sv-pdp__variant label:has(input[value="Amarillo"]) { --sw: #E3C44E; }
-  .sv-pdp__variant label:has(input[value="Naranja"]) { --sw: #D3793C; }
-  .sv-pdp__variant label:has(input[value="Verde claro"]) { --sw: #9AAE82; }
-  .sv-pdp__variant label:has(input[value="Natural"]) { --sw: #D9CCB0; }
-  .sv-pdp__variant label:has(input[value="Capuchino"]) { --sw: #A98C6E; }
-  .sv-pdp__variant label:has(input[value="Caqui"]) { --sw: #8E8560; }
-  .sv-pdp__variant label:has(input[value="Marrón oscuro"]) { --sw: #5A4636; }
-  .sv-pdp__variant label:has(input[value="Arena"]) { --sw: #D7C8A6; }
-  .sv-pdp__variant label:has(input[value="Verde oscuro"]) { --sw: #495A43; }
-  .sv-pdp__variant label:has(input[value="Azul celeste"]) { --sw: #9CC1D9; }
-  .sv-pdp__variant label:has(input[value="Ceniza"]) { --sw: #8D8D86; }
-  .sv-pdp__variant label:has(input[value="Azul marino"]) { --sw: #283750; }
-  .sv-pdp__variant label:has(input[value="Gris oscuro"]) { --sw: #5B5B5B; }
-  .sv-pdp__variant label:has(input[value="Azul acero"]) { --sw: #59708A; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Blanco"]) { --sw: #F4F2EC; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Tórtola"]) { --sw: #B8A890; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Aluminio"]) { --sw: #A9ABAE; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Azul"]) { --sw: #2F4A6B; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Amarillo"]) { --sw: #E3C44E; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Naranja"]) { --sw: #D3793C; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Verde claro"]) { --sw: #9AAE82; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Natural"]) { --sw: #D9CCB0; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Capuchino"]) { --sw: #A98C6E; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Caqui"]) { --sw: #8E8560; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Marrón oscuro"]) { --sw: #5A4636; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Arena"]) { --sw: #D7C8A6; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Verde oscuro"]) { --sw: #495A43; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Azul celeste"]) { --sw: #9CC1D9; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Ceniza"]) { --sw: #8D8D86; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Azul marino"]) { --sw: #283750; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Gris oscuro"]) { --sw: #5B5B5B; }
+  .sv-pdp__variant .sv-sw-color label:has(input[value="Azul acero"]) { --sw: #59708A; }
   /* Ocultar el aviso de recogida en tienda (no aplica: envío) */
   .sv-pdp__cart pickup-availability-component,
   .sv-pdp__cart [class*="pickup-availability"] { display: none !important; }
