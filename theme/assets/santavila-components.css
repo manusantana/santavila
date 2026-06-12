@@ -12,7 +12,9 @@
   padding-inline: var(--gut, clamp(20px, 5vw, 76px));
 }
 .sv-section {
-  padding-block: clamp(64px, 10vw, 150px);
+  /* Ritmo más apretado (densidad de tienda, menos huecos en blanco).
+     Antes clamp(64,10vw,150) → demasiado aire. */
+  padding-block: clamp(40px, 5vw, 76px);
 }
 
 /* Eyebrow: mono 11.5px, tracking 0.28em, uppercase, sage */

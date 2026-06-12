@@ -179,7 +179,7 @@
             "sv_tax": {
               "type": "text",
               "settings": {
-                "text": "<p>IVA incluido · envío a península gratis. O a plazos sin intereses con SeQura.</p>",
+                "text": "<p>IVA incluido. Envío a península.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -204,7 +204,7 @@
             "sv_risk": {
               "type": "text",
               "settings": {
-                "text": "<p>30 días de prueba en casa · Enviado en 24&nbsp;h · Fácil de montar en casa.</p>",
+                "text": "<p>Recíbelo en 3–5 días laborables · Fácil de montar en casa.</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -505,7 +505,7 @@
           "type": "service",
           "settings": {
             "icon": "support",
-            "title": "Asesoría humana",
+            "title": "Atención personalizada",
             "text": "Teléfono y WhatsApp. Te ayudamos con medidas y combinaciones."
           }
         },
@@ -521,7 +521,7 @@
           "type": "service",
           "settings": {
             "icon": "warranty",
-            "title": "Garantía 3–5 años",
+            "title": "Garantía legal",
             "text": "Pública y clara, no en letra pequeña."
           }
         },
@@ -558,14 +558,14 @@
           "type": "row",
           "settings": {
             "heading": "Envío y entrega",
-            "content": "<p>Enviado en 24&nbsp;h. En casa en 7–10 días laborables a península (gratis). Llega listo para montar tú mismo.</p>"
+            "content": "<p>Lo recibes en 3–5 días laborables a península. El envío lo gestionamos nosotros y llega listo para montar tú mismo.</p>"
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "heading": "Devoluciones y garantía",
-            "content": "<p>30 días de prueba en casa. Garantía de 3 años (5 en familias selectas).</p>"
+            "content": "<p>Devoluciones según el derecho legal de desistimiento. Garantía legal frente a defectos.</p>"
           }
         },
         "r4": {

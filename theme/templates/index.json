@@ -182,7 +182,7 @@
           "settings": {
             "icon": "delivery",
             "title": "Entrega clara",
-            "text": "Plazo exacto por producto antes de comprar. Quick ship o fabricación bajo pedido, siempre visible."
+            "text": "Lo recibes en 3–5 días laborables a península. Plazo claro antes de comprar."
           }
         },
         "s2": {
@@ -197,15 +197,15 @@
           "type": "service",
           "settings": {
             "icon": "warranty",
-            "title": "Garantía 3 años",
-            "text": "Mínimo tres años, hasta cinco en familias selectas. Pública y clara, no en letra pequeña."
+            "title": "Garantía legal",
+            "text": "Cubierta por la garantía legal, clara y sin letra pequeña."
           }
         },
         "s4": {
           "type": "service",
           "settings": {
             "icon": "support",
-            "title": "Asesoría humana",
+            "title": "Atención personalizada",
             "text": "Teléfono y WhatsApp. Te ayudamos con medidas, combinaciones y proyectos de terraza."
           }
         }
