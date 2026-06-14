@@ -326,14 +326,14 @@
   }
   .sv-pdp__grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: clamp(24px, 4vw, 64px);
-    align-items: stretch;
+    align-items: start;
   }
   .sv-pdp__gallery {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    position: sticky;
+    top: calc(var(--header-height, 64px) + 20px);
+    align-self: start;
     min-width: 0;
   }
   .sv-pdp__tags {
@@ -776,8 +776,6 @@
   .sv-gal {
     position: relative;
     padding-left: 92px; /* 78 rail + 14 gap: deja sitio al rail absoluto */
-    flex: 1; /* la galería iguala la altura de la columna de compra (alineación) */
-    min-height: 0;
   }
   .sv-gal--single {
     padding-left: 0;
@@ -808,13 +806,13 @@
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
-    background: var(--bone);
+    background: #fff;
     cursor: pointer;
     padding: 0;
     flex: none;
     transition: border-color 0.2s var(--ease, ease);
   }
-  .sv-gal__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sv-gal__thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .sv-gal__thumb.is-active { border-color: var(--ink); }
   .sv-gal__play {
     position: absolute;
@@ -827,7 +825,6 @@
   }
   .sv-gal__stage {
     position: relative;
-    height: 100%; /* el visor ocupa la altura de la galería (alineada con la columna) */
   }
   .sv-gal__slide {
     display: none;
@@ -836,11 +833,10 @@
     border-radius: var(--radius-media);
     overflow: hidden;
     background: #fff; /* product-fit sobre blanco: la foto se ve entera, sin bordes raros */
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
   }
   .sv-gal__slide.is-active {
     display: block;
-    height: 100%;
     animation: sv-gal-fade 0.4s var(--ease, ease);
   }
   @keyframes sv-gal-fade { from { opacity: 0; } to { opacity: 1; } }
@@ -960,7 +956,7 @@
     .sv-pdp__gallery { position: static; }
     .sv-pdp__buy { position: static; }
     .sv-pdp__buyinner { max-width: none; }
-    .sv-gal { padding-left: 0; display: flex; flex-direction: column; flex: none; }
+    .sv-gal { padding-left: 0; display: flex; flex-direction: column; }
     .sv-gal__rail {
       position: static;
       width: auto;
@@ -970,8 +966,7 @@
       order: 2;
       margin-top: 10px;
     }
-    .sv-gal__stage { order: 1; height: auto; }
-    .sv-gal__slide.is-active { height: auto; }
+    .sv-gal__stage { order: 1; }
   }
   @media screen and (max-width: 560px) {
     .sv-sticky__actions { gap: 8px; }
