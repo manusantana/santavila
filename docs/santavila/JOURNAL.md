@@ -13,6 +13,29 @@
 
 ---
 
+## 2026-06-13 · PDP — VALIDACIÓN de precio por variante (crítico)
+
+**Estado:** ✅ Validado (datos + mecanismo + E2E). Bug de la sticky bar corregido. Falta confirmación visual del dueño.
+
+### Por qué (petición dueño)
+"Asegúrate de que la variante tiene el precio correcto; no vender a precio incorrecto."
+
+### Hallazgos
+- **43 de 243 productos tienen precio VARIABLE por variante** (rangos grandes: una mesa 478,95 €→945 €; otra 1.575 €→2.019 €). El riesgo es real, no teórico.
+- **Mecanismo Dwell (confirmado por código):** el variant-picker dispara `variant:update` (bubbles) → el bloque `product-price` lo escucha en su `.shopify-section` y reemplaza `[ref="priceContainer"]` buscando `product-price[data-block-id=…]` en el HTML re-fetcheado. En la PDP custom, price y variant-picker están en la **misma** `.shopify-section` con id de bloque consistente → **se actualiza correctamente**.
+- **E2E (datos reales):** pedir `?variant=ID` devuelve el precio EXACTO de esa variante (478,95 / 945 / 181,95 / 315,95 — todos OK).
+
+### Bug encontrado y corregido
+- La **barra sticky** tenía el precio en Liquid (estático = primera variante) → en productos de precio variable habría mostrado un precio engañoso al cambiar de variante. **Fix:** JS escucha `variant:update` en la sección y clona el precio real del bloque principal a la sticky (también al cargar). 
+
+### Verificación
+Liquid + JSON + balance JS/CSS OK; Asset API 200; dev == disco.
+
+### Pendiente
+- Confirmación VISUAL del dueño en un producto de precio variable (cambiar tamaño y ver precio + sticky).
+
+---
+
 ## 2026-06-12 · PDP — swatches de color LIMPIOS + ocultar "retiro"
 
 **Estado:** ✅ Aplicado y sincronizado (dev == disco).

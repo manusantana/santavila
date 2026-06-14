@@ -296,6 +296,25 @@
       var mo = new MutationObserver(function () { if (!applying) apply(); });
       mo.observe(vWrap, { childList: true, subtree: true });
     }
+
+    // Barra sticky: refleja SIEMPRE el precio de la variante seleccionada (no el inicial).
+    // Clona el precio del bloque principal (que Dwell ya actualiza con la variante real).
+    (function () {
+      var mainPriceEl = document.querySelector('.sv-pdp__price');
+      var stickyPriceEl = document.querySelector('.sv-sticky__price');
+      if (!mainPriceEl || !stickyPriceEl) return;
+      var pdp = document.querySelector('.sv-pdp');
+      var sectionEl = pdp && pdp.closest('.shopify-section');
+      var sync = function () {
+        var pc = mainPriceEl.querySelector('[ref="priceContainer"]') || mainPriceEl;
+        var clone = pc.cloneNode(true);
+        clone.querySelectorAll('.visually-hidden').forEach(function (e) { e.remove(); });
+        var txt = (clone.textContent || '').replace(/\s+/g, ' ').trim();
+        if (txt) stickyPriceEl.textContent = txt;
+      };
+      sync();
+      if (sectionEl) sectionEl.addEventListener('variant:update', function () { requestAnimationFrame(sync); });
+    })();
   })();
 </script>
 
