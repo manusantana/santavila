@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-06-14 · Shop the Look (hotspots) — revestido + activado
+
+**Estado:** ✅ Disponible en cualquier página + demo clonada en el home del dev.
+
+### Qué se hizo (petición dueño)
+- Revisada la función nativa de Dwell ya presente en el tema: `sections/product-hotspots.liquid`, `blocks/_hotspot-product.liquid`, `assets/product-hotspot.js`. Atributos documentados en [`GUIA_DISENO.md`](GUIA_DISENO.md) §8.
+  - Sección: imagen de ambiente, ancho/alto, overlay, `hotspot_color`/`bullseye_color`, color_scheme, tipografía popover.
+  - Bloque por punto: `product` + `x-position`/`y-position` (0–100 %). Popover con foto + precio real + quick-add. Desktop popover / móvil quick-add modal.
+- **Revestimiento Santavila** `assets/santavila-hotspots.css` (cargado en theme.liquid): popover tarjeta papel + redondeo + sombra, título serif, precio sans tabular, punto con pulso sage. Solo estilo; fontanería intacta.
+- **Clonado el del live** (`bolonia-xl-1.jpg` + 3 productos: sofá 3 plazas, set jardín, mesa de centro) al **home del dev** tras "Escenarios" (id `santavila_shop_the_look`).
+
+### Cómo reutilizarlo
+Añadir la sección "Shop the Look" en cualquier página desde el editor → elegir imagen de ambiente → añadir bloques de producto y colocar cada punto (x/y) sobre su producto.
+
+### Verificación
+Asset API 200 (css/theme.liquid/index.json); re-pull confirma sección + css en remoto.
+
+---
+
 ## 2026-06-14 · Auditoría de coherencia (todas las páginas) + GUÍA DE DISEÑO
 
 **Estado:** ✅ Auditoría hecha, claims corregidos y guía documentada ([`GUIA_DISENO.md`](GUIA_DISENO.md)).

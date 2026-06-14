@@ -49,7 +49,17 @@ Prohibido inventar afirmaciones. Solo lo confirmado por el dueño. En concreto *
 ## 7. Animaciones
 - El contenido SIEMPRE visible sin JS. Reveals al scroll solo como mejora CSS pura (`animation-timeline: view()` bajo `@supports` + `prefers-reduced-motion`). Nada que oculte contenido esperando JS.
 
-## 8. Operativa (técnico)
+## 8. Shop the Look (hotspots) — disponible en CUALQUIER página
+Función nativa de Dwell, ya en el tema. Revestida con estilo Santavila (`santavila-hotspots.css`).
+- **Sección:** `product-hotspots` (preset, categoría "Productos"). Se añade desde el editor en cualquier template (home, página, colección…).
+  - Settings: **imagen** de ambiente, ancho (página/completo), altura (auto/21:9/16:9/4:3), overlay opcional, **`hotspot_color`** + **`bullseye_color`** (marca: sage `#737666` + crema `#ede6de`), color_scheme, tipografía del popover, padding.
+  - Bloque **título** estático ("Shop the look").
+- **Bloque `_hotspot-product`** (un punto = un producto): `product` (selector), `x-position` y `y-position` (0–100 % sobre la imagen).
+- **Comportamiento (nativo, no tocar):** desktop = popover con foto + título + **precio real** + **añadir al carrito** (quick-add), posicionamiento automático sin salirse de pantalla; móvil = abre el quick-add modal. Punto con pulso sutil (CSS Santavila).
+- **Revestimiento Santavila** (`santavila-hotspots.css`, solo estilo): popover = tarjeta papel + redondeo + sombra; título serif; precio sans tabular. La fontanería (posición, quick-add) es de Dwell.
+- **Demo activa:** clonado el del live en el HOME del dev (tras "Escenarios"): imagen `bolonia-xl-1.jpg` + 3 productos. Para reutilizar: añadir la sección "Shop the Look" en la página que sea, elegir imagen y colocar los puntos sobre los productos.
+
+## 9. Operativa (técnico)
 - Tema vive en `theme/`. `push`/`pull`/`dev` SIEMPRE con `--path theme`. Subir archivos concretos por **Asset API** (no `--only`) y verificar 200. Tras subir, `pull` a /tmp + `diff -rq` (dev == disco).
 - Dev theme: **#189114876228**. Live (NO tocar): #188231123268.
 - Documentar cada hito en `JOURNAL.md`.

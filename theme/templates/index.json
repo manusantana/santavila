@@ -223,12 +223,96 @@
     "santavila_newsletter": {
       "type": "santavila-newsletter",
       "settings": {}
+    },
+    "santavila_shop_the_look": {
+      "type": "product-hotspots",
+      "blocks": {
+        "hotspot_product_qLcTTX": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm",
+            "x-position": 40,
+            "y-position": 40
+          },
+          "blocks": {}
+        },
+        "hotspot_product_8MNtcN": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2",
+            "x-position": 40,
+            "y-position": 20
+          },
+          "blocks": {}
+        },
+        "hotspot_product_KKDhz4": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "mesa-de-centro-exterior-125-cm-altura-42-cm",
+            "x-position": 46,
+            "y-position": 52
+          },
+          "blocks": {}
+        },
+        "heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "text": "<p>Shop the look</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h4",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hotspot_product_qLcTTX",
+        "hotspot_product_8MNtcN",
+        "hotspot_product_KKDhz4"
+      ],
+      "name": "Hotspots",
+      "settings": {
+        "image": "shopify://shop_images/bolonia-xl-1.jpg",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "section_width": "full-width",
+        "section_height": "auto",
+        "hotspot_color": "#737666",
+        "bullseye_color": "#ede6de",
+        "color_scheme": "scheme-1",
+        "product_title_gap": 8,
+        "product_title_preset": "",
+        "product_price_preset": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
     "santavila_hero",
     "santavila_manifesto",
     "santavila_scenarios",
+    "santavila_shop_the_look",
     "santavila_featured",
     "santavila_product_row",
     "santavila_materials",
