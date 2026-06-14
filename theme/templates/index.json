@@ -135,7 +135,9 @@
     },
     "santavila_spain": {
       "type": "santavila-spain",
-      "settings": {}
+      "settings": {
+        "provinces": ""
+      }
     },
     "santavila_editorial": {
       "type": "santavila-editorial",

@@ -32,9 +32,8 @@ Prohibido inventar afirmaciones. Solo lo confirmado por el dueño. En concreto *
 - Las rejillas de contenido ocupan **el ancho completo** del container (NO meter `max-width` que las estreche y rompa la alineación con las vecinas). El `max-width` solo se usa en **ch** para que los textos no sean líneas eternas (legibilidad), nunca para encoger una rejilla.
 
 ## 4. Imágenes (regla clave: PRODUCTO vs AMBIENTE)
-- **Imagen de PRODUCTO** (ficha, tarjetas de producto): **`object-fit: contain`** sobre **fondo blanco** = product-fit, el producto se ve **completo, nunca recortado por los lados**. Aspecto **1:1**.
-- **Imagen de AMBIENTE / editorial** (hero, escenarios, materiales, editorial, featured, collection-hero): **`object-fit: cover`** = llena el espacio (recorte aceptable, son fotos de estilo de vida).
-- ⚠️ PENDIENTE de aplicar contain a las **tarjetas de producto** (`.sv-pcard__media img` en `santavila-components.css` y `santavila-collection-grid`) para igualarlas a la PDP — confirmar con el dueño (cambia la estética de los grids).
+- **Imagen de PRODUCTO** (ficha + tarjetas de producto): **`object-fit: contain`** sobre **fondo blanco** = product-fit, el producto se ve **completo, nunca recortado por los lados**. PDP: aspecto **1:1**; tarjetas (`.sv-pcard__media`): **4:5**. Sin hover-zoom (recortaría). ✅ Aplicado en PDP y en todas las tarjetas (`santavila-product-card` → home + colección).
+- **Imagen de AMBIENTE / editorial** (hero, escenarios, materiales, editorial, featured, collection-hero, bandas `.sv-cband`): **`object-fit: cover`** = llena el espacio (recorte aceptable, son fotos de estilo de vida).
 
 ## 5. PDP (santavila-product) — patrón de referencia
 - **Galería:** 1 foto principal **cuadrada (1:1) contain** sobre blanco + **miniaturas a la izquierda** (rail absoluto, scroll interno) que cambian la principal + **lightbox** para ampliar. Galería **sticky**. En móvil: apilado, miniaturas en fila abajo.
