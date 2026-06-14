@@ -60,3 +60,35 @@ button[name="checkout"] {
 
 /* Vaciar / acciones secundarias del carrito vacío */
 .cart-items__empty-button { border-radius: 999px; font-family: var(--sans); }
+
+/* ===== Aceptación de políticas (RGPD / comercio electrónico) ===== */
+.sv-cart-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.sv-cart-terms__check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--sage-deep);
+  cursor: pointer;
+}
+.sv-cart-terms__text a {
+  color: var(--sage-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sv-cart-terms__text a:hover { color: var(--ink); }
+/* Botón de pago deshabilitado hasta aceptar */
+.cart__checkout-button:disabled,
+button[name="checkout"]:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

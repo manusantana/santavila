@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-15 · LEGAL — aceptación de políticas + enlaces legales
+
+**Estado:** ✅ Implementado. Pendiente confirmación visual del dueño.
+
+### Contexto
+Por RGPD + comercio electrónico (España): el cliente debe **aceptar** privacidad + condiciones de venta antes de comprar, y las políticas deben ser **accesibles**.
+
+### Hecho
+- **Las políticas YA existen con contenido** en Shopify (Aviso legal, Privacidad, Condiciones de venta, Devoluciones, Envío, Contacto) — no se redacta nada legal aquí.
+- **Checkbox obligatorio en el carrito** (`cart-summary.liquid`, página /cart + drawer): "He leído y acepto la [política de privacidad] y las [condiciones de venta]" con enlaces reales. JS (`santavila-cart.js`) **deshabilita "Finalizar compra" y el pago acelerado hasta marcarlo**. Robusto al re-render AJAX (cart:update + MutationObserver, sin IDs duplicados).
+- **Enlaces legales fijos en el footer** (`sv-ft__legal`): Aviso legal · Privacidad · Condiciones · Devoluciones · Envío → URLs `/policies/...` reales.
+
+### Límite honesto (técnico/legal)
+El checkbox del TEMA cubre el flujo normal (carrito → pagar). NO es infalible al 100%: un cliente que vaya directo a `/checkout` por URL podría saltárselo, porque el **checkout de Shopify no es editable sin Shopify Plus**. Para 100% blindado: Shopify Plus (checkout UI extensions) o app de consentimiento. Recomendable validar con asesoría legal.
+
+---
+
 ## 2026-06-14 · CARRITO — revestido con estilo Santavila
 
 **Estado:** ✅ Capa de estilo aplicada. Falta confirmación VISUAL del dueño + (opcional) mensajes de envío/confianza y upsell.
