@@ -13,6 +13,20 @@
 
 ---
 
+## 2026-06-15 · CARRITO — franja de confianza + upsell "Completa el conjunto"
+
+**Estado:** ✅ Implementado. Arranca con `related`; el "completa el conjunto" real necesita config del dueño.
+
+### Franja de confianza (cart-summary)
+Bajo los botones de pago: entrega "hasta 30 días según disponibilidad", "pago 100% seguro · garantía legal", "devolución por desistimiento legal". Honesto, reduce ansiedad antes de pagar.
+
+### Upsell (nueva sección `santavila-cart-upsell`, en /cart)
+- Reemplaza el `product-list` genérico (colección "all") por recomendaciones basadas en el producto del carrito. **Reutiliza el componente `product-recommendations` de Dwell** (fetch a `/recommendations/products` + `morphSection`) pero con la **tarjeta santavila-product-card** (product-fit). Quick-add incluido.
+- **Hallazgo:** `intent=complementary` devuelve **0 productos** (no hay complementarios configurados); `related` devuelve 4. Por eso el `intent` es un **setting** (default `related`) → muestra productos YA.
+- **Para el "Completa el conjunto" REAL** (cojines/mesa/parasol para un sofá): configurar **Productos complementarios** en la app **Search & Discovery** (gratis de Shopify) y cambiar el setting a *Complementarios* + titular "Completa el conjunto". Convierte 3–5× en carrito (investigación).
+
+---
+
 ## 2026-06-15 · LEGAL — aceptación de políticas + enlaces legales
 
 **Estado:** ✅ Implementado. Pendiente confirmación visual del dueño.
