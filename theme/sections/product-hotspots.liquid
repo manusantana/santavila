@@ -58,8 +58,62 @@
         {% content_for 'blocks' %}
       </div>
     </div>
+
+    {%- comment -%} Santavila · lista de productos del look + "comprar el conjunto completo" {%- endcomment -%}
+    {%- assign sv_stl = section.blocks | where: 'type', '_hotspot-product' -%}
+    {%- if sv_stl.size > 0 -%}
+      <div class="sv-stl">
+        <ol class="sv-stl__list">
+          {%- for block in sv_stl -%}
+            {%- assign sp = block.settings.product -%}
+            {%- if sp != blank -%}
+              <li class="sv-stl__item">
+                <a class="sv-stl__link" href="{{ sp.url }}">
+                  <span class="sv-stl__num" aria-hidden="true">{{ forloop.index }}</span>
+                  <span class="sv-stl__media">{%- if sp.featured_image != blank -%}<img src="{{ sp.featured_image | image_url: width: 200 }}" alt="" width="92" height="92" loading="lazy">{%- endif -%}</span>
+                  <span class="sv-stl__info">
+                    <span class="sv-stl__name">{{ sp.title }}</span>
+                    <span class="sv-stl__price">{%- render 'price', product_resource: sp -%}</span>
+                  </span>
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ol>
+        <button type="button" class="sv-btn sv-btn--solid sv-stl__addall" data-sv-stl-addall data-variants="{%- for block in sv_stl -%}{%- assign sp = block.settings.product -%}{%- if sp != blank and sp.available -%}{{ sp.selected_or_first_available_variant.id }},{%- endif -%}{%- endfor -%}">
+          Comprar el conjunto completo
+        </button>
+      </div>
+    {%- endif -%}
   </div>
 </div>
+
+<script>
+  (function () {
+    document.querySelectorAll('[data-sv-stl-addall]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var ids = (btn.getAttribute('data-variants') || '').split(',').filter(Boolean);
+        if (!ids.length) return;
+        var items = ids.map(function (id) { return { id: parseInt(id, 10), quantity: 1 }; });
+        var orig = btn.textContent;
+        btn.setAttribute('disabled', '');
+        btn.textContent = 'Añadiendo…';
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ items: items })
+        })
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (!res.ok) { btn.removeAttribute('disabled'); btn.textContent = orig; return; }
+            btn.textContent = 'Añadido ✓';
+            window.location.href = '/cart';
+          })
+          .catch(function () { btn.removeAttribute('disabled'); btn.textContent = orig; });
+      });
+    });
+  })();
+</script>
 
 {% stylesheet %}
   /* Section layout */

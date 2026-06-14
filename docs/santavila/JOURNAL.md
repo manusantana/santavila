@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-14 · Shop the Look — mejoras de conversión (investigación aplicada)
+
+**Estado:** ✅ Implementadas las 2 de mayor impacto (tras investigar competidores — ver [`INVESTIGACION_SHOP_THE_LOOK.md`](INVESTIGACION_SHOP_THE_LOOK.md)).
+
+### Qué se construyó (en `sections/product-hotspots.liquid` + `santavila-hotspots.css`)
+1. **Lista de productos del look** bajo la imagen (numerada, reutiliza los mismos productos de los puntos): foto product-fit + nombre serif + precio real. Garantiza que el 100% vea/compre las piezas aunque no descubra los puntos (clave en móvil). Grid responsive (1 col en móvil).
+2. **Botón "Comprar el conjunto completo"**: JS recoge los `selected_or_first_available_variant.id` de todos los productos disponibles del look y hace `POST /cart/add.js` con todos → redirige a /cart. Palanca de AOV (benchmarks +15–39%).
+
+### Técnico
+- Itera `section.blocks | where: 'type', '_hotspot-product'` para la lista y los IDs del bundle. Solo estilo/markup Santavila; la fontanería de hotspots de Dwell intacta.
+- Validado (Liquid+JS+CSS+schema), Asset API 200, dev == disco.
+
+### Pendiente (Tier 1/2 restante, si se quiere)
+- Variantes en botones dentro del quick-add · precio tachado en popover · puntos numerados vinculados a la lista · página dedicada "Ambientes" por escenario · lazy-load/WebP.
+
+---
+
 ## 2026-06-14 · Shop the Look (hotspots) — revestido + activado
 
 **Estado:** ✅ Disponible en cualquier página + demo clonada en el home del dev.
