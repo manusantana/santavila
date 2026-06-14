@@ -291,6 +291,23 @@
   {% endif %}
 </div>
 
+{%- unless cart == empty -%}
+  <ul class="sv-cart-trust">
+    <li>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+      <span>Entrega estimada: hasta 30 días según disponibilidad del proveedor.</span>
+    </li>
+    <li>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <span>Pago 100&nbsp;% seguro · garantía legal.</span>
+    </li>
+    <li>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-7 3.4"/><path d="M4 3v4h4"/></svg>
+      <span>Devolución según el derecho legal de desistimiento.</span>
+    </li>
+  </ul>
+{%- endunless -%}
+
 {% stylesheet %}
   .cart-actions {
     display: flex;
