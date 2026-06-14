@@ -19,13 +19,12 @@
         required
       >
       <button type="submit" class="sv-btn sv-btn--light">{{ s.button_label | default: 'Suscribirme' }}</button>
+      {%- if form.posted_successfully? -%}
+        <p class="sv-news__note sv-news__note--ok">{{ s.success_text | default: '¡Gracias! Te has suscrito.' }}</p>
+      {%- elsif form.errors -%}
+        <p class="sv-news__note sv-news__note--err">{{ form.errors | default_errors }}</p>
+      {%- endif -%}
     {%- endform -%}
-
-    {%- if form.posted_successfully? -%}
-      <p class="sv-news__note sv-news__note--ok">{{ s.success_text | default: '¡Gracias! Te has suscrito.' }}</p>
-    {%- elsif form.errors -%}
-      <p class="sv-news__note sv-news__note--err">{{ form.errors | default_errors }}</p>
-    {%- endif -%}
   </div>
 </div>
 

@@ -102,7 +102,7 @@
           "settings": {
             "swatch": "#8a8d80",
             "name": "Aluminio termolacado",
-            "description": "Estructura ligera que no se oxida. Anticorrosión real.",
+            "description": "Estructura ligera que no se oxida.",
             "tag": "Todo clima"
           }
         },
@@ -110,8 +110,8 @@
           "type": "material",
           "settings": {
             "swatch": "#7d6a4f",
-            "name": "Teca FSC",
-            "description": "Madera noble de origen responsable. Envejece con nobleza.",
+            "name": "Teca",
+            "description": "Madera noble que envejece con nobleza.",
             "tag": "Cálido"
           }
         },
@@ -120,7 +120,7 @@
           "settings": {
             "swatch": "#b9b4a6",
             "name": "Piedra y hormigón",
-            "description": "Sobres y bases con peso y permanencia. Cero plástico.",
+            "description": "Sobres y bases con peso y permanencia.",
             "tag": "Permanencia"
           }
         }
