@@ -28,6 +28,15 @@ button[name="checkout"] {
 }
 .shopify-payment-button__button { border-radius: 999px !important; }
 
+/* Botones de pago acelerado (Shop Pay, Google Pay, Apple Pay, PayPal) → pill de marca.
+   Shopify ataba su radio al botón del tema (no pill); lo forzamos a pill. */
+shopify-accelerated-checkout-cart,
+shopify-accelerated-checkout,
+.additional-checkout-buttons,
+.cart__additional-checkout-buttons {
+  --shopify-accelerated-checkout-button-border-radius: 999px !important;
+}
+
 /* Totales: titular serif, importe sans tabular */
 .cart-totals__total-label { font-family: var(--serif); font-weight: 500; color: var(--ink); }
 .cart-totals__total-value,

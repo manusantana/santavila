@@ -27,6 +27,13 @@ Prohibido inventar afirmaciones. Solo lo confirmado por el dueño. En concreto *
 - Pocos elementos, copy cercano y real. Evitar rejillas de 6 cards iguales con copy de marketing vacío.
 - Máx 3 sellos de confianza. Titulares simples y honestos ("Compra con tranquilidad", no "Razones reales para confiar").
 
+## 3a. Botones (regla fija)
+**TODOS los botones son pill (redondeo `999px`)** — primitiva `.sv-btn` y derivados. Esto incluye:
+- Botón "Finalizar compra"/"Pagar" (`.cart__checkout-button`), add-to-cart, CTAs.
+- **Botones de pago acelerado** (Shop Pay, Google Pay, Apple Pay, PayPal): Shopify ataba su radio al botón del tema (no pill) → se fuerza con `--shopify-accelerated-checkout-button-border-radius: 999px` (en `santavila-cart.css`).
+- `.shopify-payment-button__button` también pill.
+Nunca dejar un botón con esquinas rectas.
+
 ## 3. Anchos / layout
 - TODA sección usa **`.sv-container`** (maxw 1480, gutter `clamp(20px,5vw,76px)`) → mismo ancho de página.
 - Las rejillas de contenido ocupan **el ancho completo** del container (NO meter `max-width` que las estreche y rompa la alineación con las vecinas). El `max-width` solo se usa en **ch** para que los textos no sean líneas eternas (legibilidad), nunca para encoger una rejilla.
