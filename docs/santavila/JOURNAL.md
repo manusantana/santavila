@@ -13,6 +13,22 @@
 
 ---
 
+## 2026-06-14 · PDP — alineación DEFINITIVA: contain + stretch
+
+**Estado:** ✅ Aplicado y sincronizado.
+
+### Clave que faltaba (feedback dueño)
+La imagen debe ser **PRODUCT-FIT (no recortar por los lados)** Y estar alineada con la columna. El intento previo usó `object-fit: cover` (recorta/amplía → mesa gigante). La combinación correcta es **`contain` + `stretch`**:
+- `align-items: stretch` + `.sv-pdp__gallery` flex + `.sv-gal` `flex:1` + stage/slide `height:100%` → el contenedor se iguala a la altura de la columna (alineación total).
+- **`object-fit: contain`** → la foto se ve **completa, nunca recortada**.
+- Fondo del visor `#fff` (las fotos de producto son sobre blanco → se funden).
+- Quitado el hover-zoom (recortaba, contradecía el product-fit). Móvil: proporción natural.
+
+### Efecto secundario conocido
+Con columna muy alta + foto muy horizontal (ambiente), puede quedar banda blanca arriba/abajo. Aceptable (prioridad: no recortar). Si molesta, opciones: limitar altura o fondo por tipo de foto.
+
+---
+
 ## 2026-06-14 · PDP — alineación foto↔columna + nota precio "lento al inicio"
 
 **Estado:** ✅ Alineación aplicada y sincronizada. Precio lento = hidratación/preview (no es bug).
