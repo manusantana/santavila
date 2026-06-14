@@ -7,8 +7,8 @@
   <div class="sv-container">
     <div class="sv-mag__head">
       {%- if s.heading != blank -%}<h2 class="sv-mag__title">{{ s.heading }}</h2>{%- endif -%}
-      {%- if s.link_label != blank -%}
-        <a href="{{ s.link_url | default: '#' }}" class="sv-ulink">{{ s.link_label }}</a>
+      {%- if s.link_label != blank and s.link_url != blank -%}
+        <a href="{{ s.link_url }}" class="sv-ulink">{{ s.link_label }}</a>
       {%- endif -%}
     </div>
 
@@ -46,6 +46,8 @@
 </div>
 
 {% stylesheet %}
+  /* Tarjetas sin artículo todavía: no parecen clicables (no prometer enlace) */
+  .sv-mag-card:not([href]) { cursor: default; }
   .sv-mag__head {
     display: flex;
     align-items: flex-end;

@@ -20,7 +20,7 @@
         "cta1_label": "Explorar colecciones",
         "cta1_link": "shopify://collections/all",
         "cta2_label": "Amueblar por espacio",
-        "cta2_link": "",
+        "cta2_link": "/collections/all",
         "show_seal": true,
         "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · ",
         "show_scroll": true,
@@ -29,7 +29,9 @@
     },
     "santavila_manifesto": {
       "type": "santavila-manifesto",
-      "settings": {}
+      "settings": {
+        "link_url": "/collections/all"
+      }
     },
     "santavila_scenarios": {
       "type": "santavila-scenarios",
@@ -38,28 +40,32 @@
           "type": "scenario",
           "settings": {
             "name": "Áticos y terrazas",
-            "number": "01"
+            "number": "01",
+            "link": "/collections/sillones-de-exterior"
           }
         },
         "sc2": {
           "type": "scenario",
           "settings": {
             "name": "Balcón",
-            "number": "02"
+            "number": "02",
+            "link": "/collections/sillas-de-exterior"
           }
         },
         "sc3": {
           "type": "scenario",
           "settings": {
             "name": "Jardín y porche",
-            "number": "03"
+            "number": "03",
+            "link": "/collections/tumbonas"
           }
         },
         "sc4": {
           "type": "scenario",
           "settings": {
             "name": "Comedores",
-            "number": "04"
+            "number": "04",
+            "link": "/collections/mesas"
           }
         }
       },
@@ -69,11 +75,31 @@
         "sc3",
         "sc4"
       ],
-      "settings": {}
+      "settings": {
+        "link_url": "/collections/all"
+      }
     },
     "santavila_featured": {
       "type": "santavila-featured",
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-1",
+        "media_position": "left",
+        "image": "",
+        "tag": "Lo más elegido",
+        "eyebrow": "Sofás de exterior",
+        "heading": "El salón, pero fuera",
+        "body": "Sofás y conjuntos modulares para vivir la terraza de verdad: asiento profundo, fundas desenfundables y materiales que aguantan sol, lluvia y salitre.",
+        "meta1_value": "Asiento",
+        "meta1_label": "profundo",
+        "meta2_value": "Fabricado",
+        "meta2_label": "en España",
+        "meta3_value": "Montaje fácil",
+        "meta3_label": "en casa",
+        "cta1_label": "Ver sofás de exterior",
+        "cta1_link": "/collections/sillones-de-exterior",
+        "cta2_label": "",
+        "cta2_link": ""
+      }
     },
     "santavila_product_row": {
       "type": "santavila-product-row",
@@ -82,7 +108,8 @@
         "collection": "frontpage",
         "max_products": 4,
         "columns": 4,
-        "link_label": "Ver toda la tienda"
+        "link_label": "Ver toda la tienda",
+        "link_url": "/collections/all"
       }
     },
     "santavila_materials": {
@@ -170,10 +197,6 @@
         "a2",
         "a3"
       ],
-      "settings": {}
-    },
-    "santavila_pro": {
-      "type": "santavila-pro",
       "settings": {}
     },
     "santavila_services": {
@@ -318,7 +341,6 @@
     "santavila_materials",
     "santavila_spain",
     "santavila_editorial",
-    "santavila_pro",
     "santavila_services",
     "santavila_newsletter"
   ]

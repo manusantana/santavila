@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-06-14 · Auditoría y saneamiento del HOME
+
+**Estado:** ✅ Estructura y honestidad saneadas (2 subagentes auditaron las 11 secciones). Pendiente: imágenes del dueño ([`IMAGENES_HOME_PENDIENTES.md`](IMAGENES_HOME_PENDIENTES.md)).
+
+### Honestidad (corregido)
+- **Materiales**: fuera "Teca **FSC**", "**Anticorrosión** real", "**Cero plástico**" (greenwashing sin respaldo); intro reescrito.
+- **Profesionales (B2B)**: claims no confirmados (doc técnica, packs, volumen) + CTA a `#` → **sección quitada del home** (reactivable como /profesionales si hay oferta real).
+- **Destacada**: placeholder "Colección Cala" + "muestras de tejido" (no confirmado) → reconfigurada a **Sofás de exterior** (88 productos, la categoría más fuerte) con copy honesto y CTA real.
+
+### Bugs / CTAs
+- **Newsletter**: el mensaje éxito/error estaba FUERA del `{% form %}` → nunca se mostraba. Movido dentro.
+- **CTAs rotos a `#`**: hero CTA2, manifiesto, "ver toda la tienda" → `/collections/all`; **4 escenarios** enlazados a su colección (Áticos→Sofás, Balcón→Sillas, Jardín→Tumbonas, Comedores→Mesas).
+- **Editorial**: mantenida (habrá blog); cabecera solo si hay destino + tarjetas no-clicables hasta que existan los artículos.
+
+### Pendiente del dueño
+Imágenes de ambiente (hero, 4 escenarios, destacada, materiales, editorial) — documentado. + nº WhatsApp + envío gratis (Excel).
+
+---
+
 ## 2026-06-14 · Shop the Look — mejoras de conversión (investigación aplicada)
 
 **Estado:** ✅ Implementadas las 2 de mayor impacto (tras investigar competidores — ver [`INVESTIGACION_SHOP_THE_LOOK.md`](INVESTIGACION_SHOP_THE_LOOK.md)).
