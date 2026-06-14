@@ -13,6 +13,28 @@
 
 ---
 
+## 2026-06-14 · CARRITO — revestido con estilo Santavila
+
+**Estado:** ✅ Capa de estilo aplicada. Falta confirmación VISUAL del dueño + (opcional) mensajes de envío/confianza y upsell.
+
+### Hallazgo
+El **carrito y el cart drawer usaban el estilo de Dwell** (no había sección ni capa Santavila). Heredaban las fuentes/colores de marca (vía tokens globales) pero el **layout/botones específicos** eran de Dwell → incoherencia con el resto.
+
+### Hecho
+- Nueva capa **`assets/santavila-cart.css`** (cargada en theme.liquid) sobre las clases de Dwell:
+  - **"Finalizar compra"** → pill de marca (fondo ink, hover sage-deep), `.shopify-payment-button` pill.
+  - **Totales**: titular serif, importes sans **tabular**; nota de IVA en mono.
+  - **Líneas**: títulos de producto serif, precios tabular, variantes en `--ink-3`.
+  - **Imágenes del carrito** → **product-fit** (contain sobre blanco), coherente con PDP/tarjetas.
+  - Descuentos y botones secundarios con redondeo/tipografía de marca.
+- Solo estilo; la fontanería de Dwell (cantidades, AJAX, descuentos, checkout) intacta.
+
+### Pendiente
+- Confirmación visual del dueño (página /cart + abrir el drawer).
+- Opcional (mejora): mensaje de **entrega honesto** ("hasta 30 días…") + **pago seguro** en el carrito, y **upsell "completa el conjunto"** (cross-sell, convierte 3–5× en carrito).
+
+---
+
 ## 2026-06-14 · Revisión de la COLECCIÓN
 
 **Estado:** ✅ Auditada. Estaba casi perfecta; solo se ajustó la banda de ayuda.
