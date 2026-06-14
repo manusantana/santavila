@@ -13,6 +13,26 @@
 
 ---
 
+## 2026-06-14 · Auditoría de coherencia (todas las páginas) + GUÍA DE DISEÑO
+
+**Estado:** ✅ Auditoría hecha, claims corregidos y guía documentada ([`GUIA_DISENO.md`](GUIA_DISENO.md)).
+
+### Qué se revisó (home, colección, contacto, PDP)
+- **Honestidad:** NO hay reseñas/prensa/testimonios falsos en home ni colección (limpio). Corregido:
+  - Home `santavila_services` s4: "**Teléfono** y WhatsApp" → "**Email, WhatsApp y chat**".
+  - `santavila-spain` default: "en cada pieza indicamos la provincia de fabricación / proveedores verificados" → "Diseño y fabricación en España, con proveedores nacionales…". ⚠️ La **lista de 5 provincias** del home sigue: PENDIENTE confirmar con el dueño cuáles son reales.
+  - `santavila-services` schema: etiqueta de icono "Asesoría" → "Atención".
+- **Anchos:** coherentes — todas las secciones usan `.sv-container`; los `max-width` que hay son en `ch` (legibilidad de texto), no estrechan rejillas. (El de los sellos ya se quitó.)
+- **Imágenes:** ambiente = `cover` (OK); **tarjetas de producto = `cover`** (recortan) → incoherente con el product-fit de la PDP. PENDIENTE de decisión del dueño aplicar `contain` a las tarjetas.
+
+### Entregable
+- **`GUIA_DISENO.md`**: estándares vivos (honestidad, tono, anchos, imágenes producto/ambiente, PDP, swatches, precio, tokens, animaciones, operativa). Referencia para no desviarse.
+
+### Pendiente (dueño)
+- Provincias reales de fabricación · aplicar contain a tarjetas de producto (sí/no) · nº WhatsApp · envío gratis (Excel).
+
+---
+
 ## 2026-06-14 · PDP — alineación DEFINITIVA: contain + stretch
 
 **Estado:** ✅ Aplicado y sincronizado.
