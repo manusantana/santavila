@@ -13,6 +13,20 @@
 
 ---
 
+## 2026-06-14 · PDP — alineación foto↔columna + nota precio "lento al inicio"
+
+**Estado:** ✅ Alineación aplicada y sincronizada. Precio lento = hidratación/preview (no es bug).
+
+### Alineación (feedback dueño: la foto queda más corta que la columna de compra)
+- `.sv-pdp__grid` → `align-items: stretch` + `1.3fr 1fr`; `.sv-pdp__gallery` flex column; `.sv-gal` `flex:1`; `.sv-gal__stage` y `.sv-gal__slide.is-active` a `height:100%` (object-fit cover) → la foto principal **se estira a la altura exacta de la columna de compra**. En móvil se resetea a aspect-ratio natural.
+- Nota: en productos con columna muy corta la foto podría quedar baja; revisar si aparece algún caso.
+
+### Precio "cacheado/lento las primeras veces" (diagnóstico)
+- NO es un bug ni hay caché que limpiar. Causas: (1) **hidratación** de los web components (variant-picker / product-price cargan como módulos con prioridad baja; hasta que hidratan, los primeros clics solo marcan el radio); (2) el **preview** `?preview_theme_id` va al origen sin caché de CDN → cada Section Rendering tarda más que en producción.
+- En el tema publicado será notablemente más fluido. Mejora opcional posible: actualización de precio client-side instantánea (sin esperar al fetch) — pendiente de decisión (añade complejidad).
+
+---
+
 ## 2026-06-13 · PDP — VALIDACIÓN de precio por variante (crítico)
 
 **Estado:** ✅ Validado (datos + mecanismo + E2E). Bug de la sticky bar corregido. Falta confirmación visual del dueño.
