@@ -15,7 +15,10 @@
     },
     "santavila_coll_grid": {
       "type": "santavila-collection-grid",
-      "settings": {}
+      "settings": {
+        "band_cta_label": "Escríbenos",
+        "band_cta_link": "mailto:hola@santavila.com"
+      }
     },
     "santavila_coll_faq": {
       "type": "santavila-collection-faq",

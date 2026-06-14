@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-14 · Revisión de la COLECCIÓN
+
+**Estado:** ✅ Auditada. Estaba casi perfecta; solo se ajustó la banda de ayuda.
+
+### Hallazgos
+- **Grid** (`santavila-collection-grid`): EXCELENTE — filtros faceted (chips + contador + price range), "Limpiar", contador de productos, **Ordenar** (sort), grid product-fit (tarjeta compartida), **"Cargar más"** (paginación), estado vacío honesto ("No hay productos… Quitar filtros"). No tocar.
+- **Hero** (`santavila-collection-hero`): MUY BIEN — imagen (s.image o `collection.image`), **migas de pan** (Inicio/Colecciones/Título, bueno SEO), título, e **intro de la descripción SEO** de la colección (corta antes del FAQ). No tocar.
+- **FAQ** (`santavila-collection-faq`): bien diseñada — **extrae las preguntas de `collection.description`** (`<h3>P</h3><p>R</p>`) y **NO se muestra si la colección no tiene FAQ** (degradación elegante, cero claims inventados). No tocar.
+
+### Corregido
+- **Banda de ayuda** (`.sv-cband`): CTA **"Hablar con un experto"** (sobre-promete + caía a `#`) → **"Escríbenos"** con destino real **`mailto:hola@santavila.com`**; el CTA solo se muestra si tiene enlace. Texto ya honesto ("atención personalizada, sin compromiso").
+
+### Pendiente del dueño (datos, no técnico)
+- Imagen de cada **colección** (Shopify admin → la usa el hero). · Imagen opcional de la banda. · FAQ por colección (añadir `<h3>/<p>` en la descripción) si se quiere.
+
+---
+
 ## 2026-06-14 · Auditoría y saneamiento del HOME
 
 **Estado:** ✅ Estructura y honestidad saneadas (2 subagentes auditaron las 11 secciones). Pendiente: imágenes del dueño ([`IMAGENES_HOME_PENDIENTES.md`](IMAGENES_HOME_PENDIENTES.md)).
