@@ -19,7 +19,7 @@
           "settings": {
             "text": "FABRICADO EN ESPAÑA",
             "link": "",
-            "font": "var(--font-accent--family)",
+            "font": "var(--font-body--family)",
             "font_size": "",
             "weight": "",
             "letter_spacing": "loose",
@@ -32,7 +32,7 @@
           "settings": {
             "text": "FÁCIL DE MONTAR EN CASA",
             "link": "",
-            "font": "var(--font-accent--family)",
+            "font": "var(--font-body--family)",
             "font_size": "",
             "weight": "",
             "letter_spacing": "loose",
@@ -45,7 +45,7 @@
           "settings": {
             "text": "ATENCIÓN PERSONALIZADA",
             "link": "",
-            "font": "var(--font-accent--family)",
+            "font": "var(--font-body--family)",
             "font_size": "",
             "weight": "",
             "letter_spacing": "loose",
