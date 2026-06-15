@@ -27,6 +27,12 @@
         "scroll_label": "Descubre"
       }
     },
+    "santavila_trust": {
+      "type": "santavila-trust",
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
     "santavila_manifesto": {
       "type": "santavila-manifesto",
       "settings": {
@@ -333,6 +339,7 @@
   },
   "order": [
     "santavila_hero",
+    "santavila_trust",
     "santavila_manifesto",
     "santavila_scenarios",
     "santavila_shop_the_look",

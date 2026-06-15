@@ -88,6 +88,18 @@
             {%- content_for 'block', type: 'buy-buttons', id: 'buy-buttons', closest.product: closest.product -%}
           </div>
 
+          {%- comment -%} CTA secundario: asesoría humana (pilar de marca) {%- endcomment -%}
+          <a class="sv-pdp__advisor" href="mailto:hola@santavila.com?subject=Consulta: {{ product.title | escape }}">
+            <span class="sv-pdp__advisor-ic" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2Z"/></svg>
+            </span>
+            <span class="sv-pdp__advisor-txt">
+              <strong>¿Dudas sobre medidas, materiales o tu espacio?</strong>
+              <span>Te asesoramos personalmente, sin compromiso.</span>
+            </span>
+            <span class="sv-pdp__advisor-arrow" aria-hidden="true">→</span>
+          </a>
+
           <ul class="sv-pdp__trust">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
@@ -550,6 +562,39 @@
     border-radius: 999px !important;
     min-height: 52px;
   }
+
+  /* CTA secundario de asesoramiento (asesoría humana = pilar de marca) */
+  .sv-pdp__advisor {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 14px;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    background: var(--paper-2);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s var(--ease, ease), transform 0.2s var(--ease, ease);
+  }
+  @media (hover: hover) {
+    .sv-pdp__advisor:hover { border-color: var(--sage); transform: translateY(-1px); }
+    .sv-pdp__advisor:hover .sv-pdp__advisor-arrow { transform: translateX(3px); }
+  }
+  .sv-pdp__advisor-ic {
+    flex: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--sage-50, #EEF0E9);
+    color: var(--sage-deep);
+  }
+  .sv-pdp__advisor-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+  .sv-pdp__advisor-txt strong { font-family: var(--sans); font-weight: 600; font-size: 13.5px; color: var(--ink); line-height: 1.3; }
+  .sv-pdp__advisor-txt > span { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); line-height: 1.35; }
+  .sv-pdp__advisor-arrow { flex: none; margin-left: auto; color: var(--sage-deep); font-size: 17px; transition: transform 0.2s var(--ease, ease); }
 
   .sv-pdp__trust {
     list-style: none;

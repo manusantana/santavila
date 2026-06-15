@@ -1,0 +1,98 @@
+{%- comment -%}
+  Santavila · Franja de CONFIANZA (4 pilares de la estrategia, visibles arriba —
+  no en el pie). Texto HONESTO y fijo (evita que se cuele un claim falso):
+  logística · origen España · garantía legal · asesoría humana.
+{%- endcomment -%}
+<div class="sv-trust color-{{ section.settings.color_scheme }}">
+  <div class="sv-container">
+    <ul class="sv-trust__row">
+      <li class="sv-trust__item">
+        <span class="sv-trust__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg>
+        </span>
+        <span class="sv-trust__b">
+          <span class="sv-trust__t">Envío a toda España</span>
+          <span class="sv-trust__d">Entrega según disponibilidad del proveedor.</span>
+        </span>
+      </li>
+      <li class="sv-trust__item">
+        <span class="sv-trust__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg>
+        </span>
+        <span class="sv-trust__b">
+          <span class="sv-trust__t">Fabricado en España</span>
+          <span class="sv-trust__d">Diseño y fabricación nacional.</span>
+        </span>
+      </li>
+      <li class="sv-trust__item">
+        <span class="sv-trust__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <span class="sv-trust__b">
+          <span class="sv-trust__t">Garantía legal</span>
+          <span class="sv-trust__d">Cobertura legal y devolución por desistimiento.</span>
+        </span>
+      </li>
+      <li class="sv-trust__item">
+        <span class="sv-trust__ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2Z"/></svg>
+        </span>
+        <span class="sv-trust__b">
+          <span class="sv-trust__t">Atención personalizada</span>
+          <span class="sv-trust__d">Email, WhatsApp y chat. Detrás hay personas.</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-trust {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    padding-block: clamp(28px, 3.6vw, 48px);
+    border-block: 1px solid var(--line);
+  }
+  .sv-trust__row {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 46px);
+  }
+  .sv-trust__item { display: flex; align-items: flex-start; gap: 14px; }
+  .sv-trust__ic {
+    flex: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--sage-50, #EEF0E9);
+    color: var(--sage-deep);
+  }
+  .sv-trust__ic svg { width: 21px; height: 21px; }
+  .sv-trust__b { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .sv-trust__t { font-family: var(--sans); font-weight: 600; font-size: 15px; color: var(--ink); letter-spacing: 0; }
+  .sv-trust__d { font-family: var(--sans); font-size: 12.5px; line-height: 1.45; color: var(--ink-3); }
+
+  @media screen and (max-width: 860px) {
+    .sv-trust__row { grid-template-columns: repeat(2, 1fr); gap: 24px 28px; }
+  }
+  @media screen and (max-width: 480px) {
+    .sv-trust__row { grid-template-columns: 1fr; gap: 18px; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Confianza",
+  "tag": "section",
+  "class": "sv-trust-section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" }
+  ],
+  "presets": [ { "name": "Santavila Confianza" } ]
+}
+{% endschema %}

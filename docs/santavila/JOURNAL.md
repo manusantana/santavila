@@ -13,6 +13,24 @@
 
 ---
 
+## 2026-06-15 · CONFIANZA visible (estrategia) — franja home + CTA de asesoría en PDP
+
+Aplicando el PDF de estrategia ([[santavila_strategy_docs]]): "la confianza es ventaja visible, no pie de página" + "CTA principal + CTA secundario para asesoramiento". Datos 100% HONESTOS (sin teléfono, garantía legal, envío deslocalizado). Aditivo, no rompe nada.
+
+### Franja de confianza en el HOME (nueva `santavila-trust.liquid`)
+- 4 pilares de la estrategia, visibles JUSTO tras el hero (posición 1 del orden): **Envío a toda España · Fabricado en España · Garantía legal · Atención personalizada**. Iconos sage, título sans + sublínea honesta. Texto FIJO (evita que se cuele un claim falso). Responsive 4→2→1 col.
+- Insertado en `index.json` order: hero → **trust** → manifesto.
+
+### CTA secundario de asesoramiento en la PDP (`santavila-product.liquid`)
+- Tras el botón de compra: bloque "¿Dudas sobre medidas, materiales o tu espacio? Te asesoramos personalmente, sin compromiso." → mailto con el producto en el asunto. Activa el pilar diferencial (asesoría humana) justo donde se decide la compra.
+- La PDP YA tenía el bloque de confianza (entrega/montaje/atención/garantía) — se respeta, solo se añade el CTA.
+
+### Pendiente del dueño (para completar la estrategia, son datos, no código)
+- Plazos y **garantía reales por familia** (el PDF sugiere 3-5 años como ideal; hoy solo mostramos garantía legal).
+- Nº de **WhatsApp** (para activar el canal en contacto y poder enlazarlo desde el CTA de asesoría).
+
+---
+
 ## 2026-06-15 · CONTACTO a medida (nivel top, según estrategia) + memoria del PDF
 
 El dueño recordó que YA tenemos el PDF de estrategia/competencia (`docs/Santavila como líder…pdf`). Guardado en memoria [[santavila_strategy_docs]] para no volver a buscar en web. Clave aplicada: tono **consultivo y cálido**, **asesoría humana = pilar de marca**.
