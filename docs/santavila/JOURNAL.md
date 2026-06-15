@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-15 · CONTACTO a medida (nivel top, según estrategia) + memoria del PDF
+
+El dueño recordó que YA tenemos el PDF de estrategia/competencia (`docs/Santavila como líder…pdf`). Guardado en memoria [[santavila_strategy_docs]] para no volver a buscar en web. Clave aplicada: tono **consultivo y cálido**, **asesoría humana = pilar de marca**.
+
+### Nueva sección `santavila-contact.liquid` (reemplaza main-page + form genérico)
+- **Mantiene el texto del dueño** intacto (`{{ page.content }}`) como intro centrada (serif + lead).
+- **Canales**: Email (hola@santavila.com), WhatsApp (setting `whatsapp`; oculto si vacío), Chat en directo (Shopify Inbox). Tarjetas con icono, hover, honestas. SIN teléfono (no lo tenemos).
+- **Canal de Proyectos/Profesionales** (el 20% B2B que la estrategia subraya): callout "¿Un proyecto o varias piezas?" → mailto con asunto.
+- **Formulario real** `{% raw %}{% form 'contact' %}{% endraw %}` (Nombre, Email, Teléfono opcional, Mensaje) con inputs redondeados (radio 10), botón pill, feedback ok/err, enlace a privacidad.
+- **Atajos de ayuda**: Envíos, Devoluciones, Condiciones, Privacidad.
+- Móvil: canales primero (1 toque), luego formulario. `page.contact.json` → solo `santavila_contact`.
+- Settings editables: eyebrow, email, whatsapp, chat on/off. **Pendiente dueño: rellenar nº WhatsApp.**
+
+### Nota: 422 de Shopify por `default:""` en setting de texto → se quita el default (text settings no admiten default en blanco).
+
+---
+
 ## 2026-06-15 · HOTSPOTS móvil — el quick-add se renderizaba roto → navegar a la ficha
 
 El dueño confirmó que en móvil, al tocar un punto, abría "una cajita modal rota abajo".

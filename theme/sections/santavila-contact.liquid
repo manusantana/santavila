@@ -1,0 +1,225 @@
+{%- comment -%}
+  Santavila · Página de CONTACTO a medida.
+  Tono consultivo y cálido (estrategia: asesoría humana = pilar de marca).
+  Mantiene el texto del dueño (page.content) + canales + formulario real de
+  contacto + atajos de ayuda + canal de proyectos/profesionales.
+{%- endcomment -%}
+
+{%- liquid
+  assign email = section.settings.email | default: 'hola@santavila.com'
+  assign wa = section.settings.whatsapp | remove: '+' | remove: ' ' | remove: '-'
+-%}
+
+<div class="sv-contact color-{{ section.settings.color_scheme }}">
+  <div class="sv-container">
+
+    <header class="sv-contact__intro">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv-contact__eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <div class="sv-contact__lead rte">
+        {{ page.content }}
+      </div>
+    </header>
+
+    <div class="sv-contact__grid">
+
+      {%- comment -%} Canales directos {%- endcomment -%}
+      <aside class="sv-contact__channels">
+        <h2 class="sv-contact__h">Habla con una persona</h2>
+        <p class="sv-contact__h-sub">Sin centralitas ni respuestas de plantilla. Detrás hay personas que conocen el producto.</p>
+
+        <ul class="sv-chan-list">
+          <li>
+            <a class="sv-chan" href="mailto:{{ email }}">
+              <span class="sv-chan__ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <span class="sv-chan__body">
+                <span class="sv-chan__label">Email</span>
+                <span class="sv-chan__value">{{ email }}</span>
+                <span class="sv-chan__desc">Para cualquier consulta, con calma.</span>
+              </span>
+            </a>
+          </li>
+          {%- if wa != blank -%}
+            <li>
+              <a class="sv-chan" href="https://wa.me/{{ wa }}" target="_blank" rel="noopener">
+                <span class="sv-chan__ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.2-5.2A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 9.5c0 4 2.5 6 5.5 6 .6 0 1-.4 1-1v-1l-2-1-1 1c-1 0-2-1-2-2l1-1-1-2H9c-.3 0-.5.4-.5 1Z"/></svg>
+                </span>
+                <span class="sv-chan__body">
+                  <span class="sv-chan__label">WhatsApp</span>
+                  <span class="sv-chan__value">Asesoramiento rápido</span>
+                  <span class="sv-chan__desc">Resolvemos dudas al momento, también con fotos.</span>
+                </span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if section.settings.show_chat -%}
+            <li>
+              <div class="sv-chan sv-chan--static">
+                <span class="sv-chan__ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2Z"/></svg>
+                </span>
+                <span class="sv-chan__body">
+                  <span class="sv-chan__label">Chat en directo</span>
+                  <span class="sv-chan__value">Estamos al otro lado</span>
+                  <span class="sv-chan__desc">Abre la burbuja de chat, abajo a la derecha.</span>
+                </span>
+              </div>
+            </li>
+          {%- endif -%}
+        </ul>
+
+        <div class="sv-contact__proj">
+          <p class="sv-contact__proj-h">¿Un proyecto o varias piezas?</p>
+          <p class="sv-contact__proj-t">Para áticos, terrazas grandes, hostelería o pedidos de volumen, te preparamos asesoramiento y presupuesto a medida.</p>
+          <a class="sv-ulink" href="mailto:{{ email }}?subject=Proyecto%20Santavila">Escríbenos tu proyecto →</a>
+        </div>
+
+        <nav class="sv-contact__help" aria-label="Ayuda rápida">
+          <p class="sv-contact__help-h">¿Buscas algo concreto?</p>
+          <a href="{{ routes.root_url }}policies/shipping-policy">Envíos y plazos</a>
+          <a href="{{ routes.root_url }}policies/refund-policy">Devoluciones</a>
+          <a href="{{ routes.root_url }}policies/terms-of-service">Condiciones de venta</a>
+          <a href="{{ routes.root_url }}policies/privacy-policy">Privacidad</a>
+        </nav>
+      </aside>
+
+      {%- comment -%} Formulario real de contacto {%- endcomment -%}
+      <div class="sv-contact__formwrap">
+        <h2 class="sv-contact__h">Déjanos tus datos</h2>
+        <p class="sv-contact__h-sub">Cuéntanos qué necesitas y te respondemos personalmente.</p>
+
+        {%- form 'contact', class: 'sv-contact__form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="sv-contact__ok" role="status">Gracias, hemos recibido tu mensaje. Te respondemos personalmente lo antes posible.</p>
+          {%- elsif form.errors -%}
+            <p class="sv-contact__err" role="alert">{{ form.errors | default_errors }}</p>
+          {%- endif -%}
+          <div class="sv-field">
+            <label for="SvContactName">Nombre</label>
+            <input type="text" id="SvContactName" name="contact[name]" value="{{ form.name }}" autocomplete="name" placeholder="Tu nombre">
+          </div>
+          <div class="sv-field">
+            <label for="SvContactEmail">Email</label>
+            <input type="email" id="SvContactEmail" name="contact[email]" value="{{ form.email }}" autocomplete="email" required placeholder="tucorreo@email.com">
+          </div>
+          <div class="sv-field">
+            <label for="SvContactPhone">Teléfono <span>(opcional)</span></label>
+            <input type="tel" id="SvContactPhone" name="contact[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="Para llamarte si lo prefieres">
+          </div>
+          <div class="sv-field">
+            <label for="SvContactBody">¿En qué te ayudamos?</label>
+            <textarea id="SvContactBody" name="contact[body]" rows="5" required placeholder="Cuéntanos tu duda, tu espacio o tu proyecto…">{{ form.body }}</textarea>
+          </div>
+          <button type="submit" class="sv-btn sv-btn--solid sv-contact__submit">Enviar consulta</button>
+          <p class="sv-contact__legal">Al enviar aceptas nuestra <a href="{{ routes.root_url }}policies/privacy-policy" target="_blank" rel="noopener">política de privacidad</a>.</p>
+        {%- endform -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .sv-contact { background-color: var(--color-background); color: var(--color-foreground); padding-block: clamp(56px, 8vw, 110px); }
+
+  .sv-contact__intro { max-width: 64ch; margin: 0 auto clamp(40px, 5vw, 70px); text-align: center; }
+  .sv-contact__eyebrow {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--sage-deep); margin: 0 0 18px;
+  }
+  .sv-contact__lead :is(h1,h2,h3) {
+    font-family: var(--serif); font-weight: 500; color: var(--ink);
+    font-size: clamp(30px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -0.01em;
+    margin: 0 0 18px; text-wrap: balance;
+  }
+  .sv-contact__lead p {
+    font-family: var(--sans); font-size: clamp(15px, 1.5vw, 17px); line-height: 1.6;
+    color: var(--ink-2); margin: 0 0 12px;
+  }
+  .sv-contact__lead p strong { color: var(--ink); font-weight: 600; }
+
+  .sv-contact__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: start;
+  }
+
+  .sv-contact__h { font-family: var(--serif); font-weight: 500; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.1; color: var(--ink); margin: 0 0 8px; }
+  .sv-contact__h-sub { font-family: var(--sans); font-size: 14px; line-height: 1.5; color: var(--ink-3); margin: 0 0 24px; max-width: 46ch; }
+
+  /* Canales */
+  .sv-chan-list { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 12px; }
+  .sv-chan {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius-media);
+    background: var(--paper-2); color: inherit; text-decoration: none;
+    transition: border-color 0.2s var(--ease, ease), transform 0.2s var(--ease, ease), box-shadow 0.2s var(--ease, ease);
+  }
+  a.sv-chan:hover { border-color: var(--sage); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(35,37,29,0.08); }
+  .sv-chan--static { cursor: default; }
+  .sv-chan__ic { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--sage-50, #EEF0E9); color: var(--sage-deep); }
+  .sv-chan__ic svg { width: 20px; height: 20px; }
+  .sv-chan__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .sv-chan__label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+  .sv-chan__value { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink); }
+  .sv-chan__desc { font-family: var(--sans); font-size: 13px; color: var(--ink-3); line-height: 1.4; }
+
+  /* Proyectos / profesionales */
+  .sv-contact__proj { padding: 22px 22px; border: 1px solid var(--line); border-left: 3px solid var(--sage); border-radius: var(--radius-media); background: var(--paper); margin-bottom: 26px; }
+  .sv-contact__proj-h { font-family: var(--serif); font-weight: 500; font-size: 18px; color: var(--ink); margin: 0 0 6px; }
+  .sv-contact__proj-t { font-family: var(--sans); font-size: 13.5px; line-height: 1.55; color: var(--ink-2); margin: 0 0 12px; }
+  .sv-ulink { font-family: var(--sans); font-size: 13.5px; font-weight: 600; color: var(--sage-deep); text-decoration: none; }
+  .sv-ulink:hover { color: var(--ink); }
+
+  /* Ayuda */
+  .sv-contact__help { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+  .sv-contact__help-h { width: 100%; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 4px; }
+  .sv-contact__help a { font-family: var(--sans); font-size: 13.5px; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); padding-block: 4px; }
+  .sv-contact__help a:hover { color: var(--ink); text-decoration-color: var(--sage); }
+
+  /* Formulario */
+  .sv-contact__formwrap { background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius-media); padding: clamp(24px, 3vw, 40px); }
+  .sv-contact__form { display: grid; gap: 16px; margin-top: 6px; }
+  .sv-field { display: grid; gap: 7px; }
+  .sv-field label { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--ink); }
+  .sv-field label span { font-weight: 400; color: var(--ink-3); }
+  .sv-field input, .sv-field textarea {
+    font-family: var(--sans); font-size: 15px; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 13px 15px; width: 100%; transition: border-color 0.2s var(--ease, ease), box-shadow 0.2s var(--ease, ease);
+  }
+  .sv-field textarea { resize: vertical; min-height: 120px; }
+  .sv-field input::placeholder, .sv-field textarea::placeholder { color: var(--ink-3); opacity: 0.7; }
+  .sv-field input:focus, .sv-field textarea:focus { outline: none; border-color: var(--sage); box-shadow: 0 0 0 3px var(--sage-50, #EEF0E9); }
+  .sv-contact__submit { margin-top: 4px; justify-self: start; }
+  .sv-contact__legal { font-family: var(--sans); font-size: 12px; color: var(--ink-3); margin: 2px 0 0; }
+  .sv-contact__legal a { color: var(--sage-deep); text-decoration: underline; text-underline-offset: 2px; }
+  .sv-contact__ok { font-family: var(--sans); font-size: 14px; color: var(--ink); background: var(--ok-bg, #e8eedf); border: 1px solid var(--ok, #5E7350); border-radius: 10px; padding: 14px 16px; }
+  .sv-contact__err { font-family: var(--sans); font-size: 14px; color: var(--error, #A85440); background: #f6e9e6; border: 1px solid var(--error, #A85440); border-radius: 10px; padding: 14px 16px; }
+
+  @media screen and (max-width: 860px) {
+    .sv-contact__grid { grid-template-columns: 1fr; gap: 34px; }
+    /* en móvil: primero los canales (1 toque), luego el formulario */
+    .sv-contact__channels { order: 1; }
+    .sv-contact__formwrap { order: 2; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Contacto",
+  "tag": "section",
+  "class": "sv-contact-section",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Hablemos" },
+    { "type": "text", "id": "email", "label": "Email de contacto", "default": "hola@santavila.com" },
+    { "type": "text", "id": "whatsapp", "label": "WhatsApp (con prefijo, ej. 34600000000)", "info": "Déjalo vacío para ocultar la tarjeta de WhatsApp." },
+    { "type": "checkbox", "id": "show_chat", "label": "Mostrar tarjeta de chat en directo", "default": true }
+  ],
+  "presets": [ { "name": "Santavila Contacto" } ]
+}
+{% endschema %}
