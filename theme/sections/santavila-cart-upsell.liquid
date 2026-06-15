@@ -1,39 +1,38 @@
 {%- comment -%}
-  Santavila · "Completa el conjunto" (cart upsell).
-  Reutiliza el componente product-recommendations de Dwell (fetch + morphSection)
-  pero con la tarjeta santavila-product-card y basado en el producto del carrito.
-  Intent: complementary (configurar complementarios en Search & Discovery para fidelidad).
+  Santavila · "Completa el conjunto" / upsell del carrito.
+  Server-side y robusto: muestra productos de la MISMA colección que el primer
+  producto del carrito (excluyéndolo). No depende de JS ni de la Recommendations API
+  (que para sets/bundles puede venir vacía). Si quieres recomendaciones dinámicas
+  reales, configura complementarios en Search & Discovery (ver JOURNAL).
 {%- endcomment -%}
-<script src="{{ 'product-recommendations.js' | asset_url }}" type="module" fetchpriority="low"></script>
-{% render 'quick-add-styles' %}
-{% render 'quick-add-modal-styles' %}
+{%- liquid
+  assign up_product = cart.items.first.product
+  assign up_coll = blank
+  for c in up_product.collections
+    if c.handle != 'frontpage' and c.all_products_count > 1
+      assign up_coll = c
+      break
+    endif
+  endfor
+-%}
 
-{%- assign up_product = cart.items.first.product -%}
-{%- if up_product != blank or recommendations.performed -%}
-  <product-recommendations
-    id="sv-cart-upsell-{{ section.id }}"
-    class="sv-upsell-wrap"
-    data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.max_products | default: 4 }}"
-    data-section-id="{{ section.id }}"
-    data-product-id="{{ up_product.id }}"
-    data-intent="{{ section.settings.intent | default: 'related' }}"
-    data-recommendations-performed="{{ recommendations.performed }}"
-    {{ section.shopify_attributes }}
-  >
-    {%- if recommendations.performed and recommendations.products.size > 0 -%}
-      <div class="sv-section sv-upsell color-{{ section.settings.color_scheme }}">
-        <div class="sv-container">
-          {%- if section.settings.eyebrow != blank -%}<p class="sv-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
-          {%- if section.settings.heading != blank -%}<h2 class="sv-upsell__title">{{ section.settings.heading }}</h2>{%- endif -%}
-          <div class="sv-upsell__grid">
-            {%- for product in recommendations.products -%}
-              {%- render 'santavila-product-card', product: product, sizes: '(max-width: 749px) 50vw, (max-width: 989px) 33vw, 25vw' -%}
-            {%- endfor -%}
-          </div>
-        </div>
+{%- if up_product != blank and up_coll != blank -%}
+  <div class="sv-section sv-upsell color-{{ section.settings.color_scheme }}">
+    <div class="sv-container">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      {%- if section.settings.heading != blank -%}<h2 class="sv-upsell__title">{{ section.settings.heading }}</h2>{%- endif -%}
+      <div class="sv-upsell__grid">
+        {%- assign shown = 0 -%}
+        {%- assign max = section.settings.max_products | default: 4 -%}
+        {%- for product in up_coll.products -%}
+          {%- if product.id != up_product.id and shown < max -%}
+            {%- render 'santavila-product-card', product: product, sizes: '(max-width: 749px) 50vw, (max-width: 989px) 33vw, 25vw' -%}
+            {%- assign shown = shown | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
       </div>
-    {%- endif -%}
-  </product-recommendations>
+    </div>
+  </div>
 {%- endif -%}
 
 {% stylesheet %}
@@ -67,7 +66,6 @@
   "class": "sv-upsell-section",
   "settings": [
     { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
-    { "type": "select", "id": "intent", "label": "Tipo de recomendación", "info": "Para 'Completa el conjunto' real (complementos), configura Productos complementarios en la app Search & Discovery y elige Complementarios.", "options": [ { "value": "related", "label": "Relacionados (similares)" }, { "value": "complementary", "label": "Complementarios (completa el conjunto)" } ], "default": "related" },
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "También te puede gustar" },
     { "type": "text", "id": "heading", "label": "Titular", "default": "Más para tu exterior" },
     { "type": "range", "id": "max_products", "label": "Nº de productos", "min": 2, "max": 8, "step": 1, "default": 4 }
