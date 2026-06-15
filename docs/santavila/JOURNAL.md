@@ -13,6 +13,16 @@
 
 ---
 
+## 2026-06-15 · HOTSPOTS móvil — el quick-add se renderizaba roto → navegar a la ficha
+
+El dueño confirmó que en móvil, al tocar un punto, abría "una cajita modal rota abajo".
+
+**Causa:** en móvil `product-hotspot.js` llama a `#openQuickAddModal()` (quick-add nativo de Dwell). Ese modal en `≤749px` es `position:fixed; margin:auto 0 0 0` **sin `width`** → un `<dialog>` con ancho `fit-content` que queda como una cajita abajo-izquierda.
+
+**Fix (fiable, no a ciegas):** en `product-hotspot.js`, `handleHotspotClick` en móvil/táctil ahora **navega a la ficha del producto** (`data-product-url` del bloque, con fallback a `productLink`) en vez de abrir el modal. Es determinista y la lista "Comprar el conjunto" de abajo cubre la compra del look completo. Desktop sigue con el popover.
+
+---
+
 ## 2026-06-15 · MÓVIL 2ª ronda — menú hamburguesa, redondez global, hotspots
 
 Tras probar en móvil el dueño reportó: menú hamburguesa con letras gigantes y "falta info"; campos/botón de contacto sin redondez; Shop the look no se ve.

@@ -264,6 +264,14 @@ export class ProductHotspotComponent extends Component {
     if (isMobileBreakpoint() || isTouchDevice()) {
       e.preventDefault();
       e.stopPropagation();
+      // Santavila: en móvil/táctil navegamos a la ficha del producto. El quick-add
+      // modal nativo se renderizaba como una cajita rota abajo; navegar es fiable
+      // y la lista "Comprar el conjunto" de abajo cubre la compra del look.
+      const url = this.dataset.productUrl || (this.getHotspotProductLink() && this.getHotspotProductLink().href);
+      if (url) {
+        window.location.href = url;
+        return;
+      }
       this.#openQuickAddModal();
     } else {
       this.showDialog();
