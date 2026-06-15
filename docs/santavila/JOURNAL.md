@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-06-15 · CARRITO — afinado (alineación de fila, hueco del resumen, raya única) + MONEDA UE
+
+**Estado:** ✅ Implementado lo del tema. ⏳ El símbolo € a la derecha depende de un ajuste **global** que cambia el dueño a mano.
+
+### Afinado del carrito (2ª pasada sobre feedback con captura)
+- **Fila desalineada (texto arriba, no centrado con la imagen):** la imagen ocupaba 2 filas del grid y el sobrante caía en la fila del error. → **Fix:** fila a **una sola línea** (`grid-template-areas: 'media details quantity price'`), miniatura **cuadrada 96px** product-fit, `align-items: center` → todo centrado vertical con la imagen.
+- **Hueco enorme sobre el panel "SANTAVILA" (derecha):** `.cart-summary__inner` tenía `grid-row: 2 / -1` (empezaba en la fila 2 del subgrid → fila del título vacía). → **Fix:** se **aplana** toda la cadena `subgrid`/`--extend` de Dwell (`.cart-summary`, `--extend`, `__inner` a `display:block`/`flex`, `grid-row:auto`), resumen pegado arriba y sticky en `.cart-page__summary`.
+- **Doble raya ("raya, espacio, raya") bajo el panel:** el panel tenía borde inferior y `.cart-actions` borde superior. → **Fix:** divisor **único** = borde inferior del panel; se quita `border-top` de `.cart-actions`.
+
+### MONEDA — formato España/UE (afecta a TODA la tienda)
+- **Problema:** mostraba `€9.418,00 EUR` (símbolo a la izquierda + "EUR"). Convención correcta: **`9.418,00 €`** (símbolo a la derecha; o palabra EUR sin símbolo, nunca ambos).
+- **`money_format` es global y NO editable por API** (PUT /shop.json → **406**; sin mutación GraphQL). → El dueño lo cambia en **Ajustes → Datos de la tienda → Moneda → Editar formato**:
+  - HTML sin divisa: `{{amount_with_comma_separator}}&nbsp;€`
+  - HTML con divisa: `{{amount_with_comma_separator}}&nbsp;EUR`
+- **Lado tema (hecho):** desactivado `currency_code_enabled_cart_items` y `cart_total` en `settings_data.json` (ya estaban los de product). Así el carrito no duplica "EUR"; en cuanto se ajuste el formato global mostrará `9.418,00 €`.
+- Regla guardada en memoria [[pricing_currency_format_eu]] + `GUIA_DISENO §3b`.
+
+---
+
 ## 2026-06-15 · CARRITO — rediseño integral del sistema (tipografía + alineación + resumen)
 
 **Estado:** ✅ Implementado. El dueño señaló (con captura) "un desastre de tipografías, tamaños y alineaciones" en `/cart`. Se rehace el sistema, no más parches.

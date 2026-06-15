@@ -34,6 +34,13 @@ Prohibido inventar afirmaciones. Solo lo confirmado por el dueño. En concreto *
 - `.shopify-payment-button__button` también pill.
 Nunca dejar un botón con esquinas rectas.
 
+## 3b. Precios / moneda (España·UE — regla fija)
+- **Símbolo € SIEMPRE a la derecha**, con espacio: `1.234,56 €`. Nunca a la izquierda. Miles con punto, decimales con coma.
+- Si se usa la palabra **"EUR"**, no se pone símbolo. **Prohibido** el combo `€1.234,56 EUR`.
+- La posición del símbolo es **global** y se fija en Admin → **Ajustes → Datos de la tienda → Moneda → Editar formato** (`money_format` = `{{amount_with_comma_separator}}&nbsp;€`). **NO editable por API** (PUT /shop.json → 406; sin mutación GraphQL).
+- En el tema, `currency_code_enabled_*` (fichas, tarjetas, carrito) están **desactivados** en `config/settings_data.json` para no duplicar "EUR".
+- Redondeo psicológico de precios: ver memoria de pricing. (En el carrito todos los importes van en **sans tabular**, una sola familia.)
+
 ## 3. Anchos / layout
 - TODA sección usa **`.sv-container`** (maxw 1480, gutter `clamp(20px,5vw,76px)`) → mismo ancho de página.
 - Las rejillas de contenido ocupan **el ancho completo** del container (NO meter `max-width` que las estreche y rompa la alineación con las vecinas). El `max-width` solo se usa en **ch** para que los textos no sean líneas eternas (legibilidad), nunca para encoger una rejilla.
