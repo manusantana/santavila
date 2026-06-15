@@ -5,6 +5,18 @@
   @param {string} [section_id] - The section ID for cart discount component.
 {%- enddoc -%}
 
+{%- unless cart == empty -%}
+  <div class="sv-cart-brand">
+    <p class="sv-cart-brand__eyebrow">Santavila</p>
+    <p class="sv-cart-brand__lead">Decoración de exterior pensada para durar, fácil de montar en casa.</p>
+    <ul class="sv-cart-brand__list">
+      <li>Fabricado en España</li>
+      <li>Fácil de montar en casa, sin instaladores</li>
+      <li>Atención personalizada: email, WhatsApp y chat</li>
+    </ul>
+  </div>
+{%- endunless -%}
+
 <div class="cart-totals">
   {% # We need to keep this node in place to allow morphing to work properly # %}
   <div class="cart-totals__original-container cart-primary-typography">

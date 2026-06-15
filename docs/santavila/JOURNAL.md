@@ -13,6 +13,27 @@
 
 ---
 
+## 2026-06-15 · CARRITO — rediseño integral del sistema (tipografía + alineación + resumen)
+
+**Estado:** ✅ Implementado. El dueño señaló (con captura) "un desastre de tipografías, tamaños y alineaciones" en `/cart`. Se rehace el sistema, no más parches.
+
+### Causas raíz diagnosticadas (en el markup de Dwell)
+- **Precios con dos tipografías:** el precio **unitario** (bajo el título) hereda `cart-primary-typography` y el de **línea** (derecha) usa `cart-secondary-typography` → dos familias del tema. → **Fix:** TODOS los importes forzados a `var(--sans)` + `tabular-nums`.
+- **Texto "flotando arriba" / imagen desalineada:** la fila (`.cart-items__table-row`) usa `align-items: start` con imagen de 7.5rem. → **Fix:** en la página, `align-items: center` + columnas `92px | 1fr | auto | auto` + divisores `1px var(--line)` y ritmo `24px`.
+- **Hueco enorme sobre "Descuento" (derecha):** `.cart-page__summary` usaba `subgrid` + `align-self: stretch` (se estiraba). → **Fix:** `display:block` + `align-self:start` + `position:sticky; top:20px`. Resumen pegado arriba y que sigue al hacer scroll (escala con 1 o 200 líneas).
+- **Tamaños sin criterio:** jerarquía fijada → título serif 18px · variantes sans 13px muted · precio línea 16px/600 · total 27px/700 tabular.
+
+### Añadido
+- **Panel de marca** al inicio del resumen (llena el hueco que pedía el dueño): eyebrow "Santavila" + lead serif + 3 valores **honestos** (Fabricado en España · Fácil de montar en casa, sin instaladores · Atención personalizada: email, WhatsApp y chat). Oculto en el drawer.
+- Resumen como **tarjeta** (`--paper-2` + borde + `--radius-media`).
+
+### Archivos
+- `assets/santavila-cart.css` — reescrito entero (sistema unificado, 8 bloques).
+- `snippets/cart-summary.liquid` — panel `.sv-cart-brand` antes de `.cart-totals`.
+- Subidos vía Asset API (200) + verificado local↔remoto idéntico (md5).
+
+---
+
 ## 2026-06-15 · CARRITO — franja de confianza + upsell "Completa el conjunto"
 
 **Estado:** ✅ Implementado. Arranca con `related`; el "completa el conjunto" real necesita config del dueño.
