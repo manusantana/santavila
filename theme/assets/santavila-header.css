@@ -89,3 +89,78 @@
     width: 100%;
   }
 }
+
+/* ===== Menú hamburguesa (drawer) — tipografía de marca ======
+   Dwell ponía las opciones de 1er nivel a tamaño 2XL
+   (var(--menu-font-2xl--size)) → se veían gigantes. Las llevamos
+   a un calibre cómodo y a la sans de marca. */
+.menu-drawer__menu-item--mainlist {
+  font-family: var(--sans) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: var(--ink) !important;
+}
+.menu-drawer__menu-item--parent {
+  font-family: var(--sans) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--ink-2) !important;
+}
+.menu-drawer__menu-item--child {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  color: var(--ink-3) !important;
+}
+/* alto de ítem contenido pero táctil (≈52px) */
+.menu-drawer__menu > .menu-drawer__list-item,
+.menu-drawer__list-item--divider .menu-drawer__menu-item:not(.menu-drawer__menu-item--child) {
+  min-height: 52px;
+}
+/* la zona de utilidades de Dwell queda vacía (sin localización): que no robe el margen */
+.menu-drawer__utility-links { margin-top: 0; }
+
+/* Pie de marca del drawer: enlaces útiles + valores (la "info que faltaba") */
+.sv-drawer-foot {
+  margin-top: auto;
+  padding: 18px var(--drawer-padding, 24px) 26px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sv-drawer-foot__link {
+  padding: 11px 0;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+.sv-drawer-foot__link:hover { color: var(--ink); }
+.sv-drawer-foot__values {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+}
+.sv-drawer-foot__values li {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--ink-3);
+  padding-left: 18px;
+  position: relative;
+}
+.sv-drawer-foot__values li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 9px;
+  height: 5px;
+  border-left: 1.5px solid var(--sage);
+  border-bottom: 1.5px solid var(--sage);
+  transform: rotate(-45deg);
+}

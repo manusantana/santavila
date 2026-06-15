@@ -756,6 +756,19 @@
           </ul>
         </div>
       {% endif %}
+      {%- comment -%} Santavila: pie del drawer — enlaces útiles + valores de marca {%- endcomment -%}
+      <div class="sv-drawer-foot">
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{{ routes.account_url }}" class="sv-drawer-foot__link">Mi cuenta</a>
+        {%- endif -%}
+        <a href="{{ routes.search_url }}" class="sv-drawer-foot__link">Buscar</a>
+        <a href="{{ routes.root_url }}pages/contacto" class="sv-drawer-foot__link">Contacto y ayuda</a>
+        <ul class="sv-drawer-foot__values">
+          <li>Fabricado en España</li>
+          <li>Fácil de montar en casa, sin instaladores</li>
+          <li>Atención personalizada: email, WhatsApp y chat</li>
+        </ul>
+      </div>
     </div>
     <div
       class="menu-drawer__backdrop"

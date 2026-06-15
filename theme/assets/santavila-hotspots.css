@@ -134,6 +134,13 @@
   .sv-stl__addall { width: 100%; justify-content: center; }
 }
 
+/* Móvil: la imagen del look pasa a vertical (en horizontal quedaba como una
+   franja fina y los puntos se amontonaban). La lista de productos de abajo
+   (1 columna) es la vía de compra robusta en móvil. */
+@media screen and (max-width: 749px) {
+  .section-product-hotspots__content { aspect-ratio: 4 / 5 !important; }
+}
+
 /* ===== Puntos NUMERADOS (conectan con la lista de productos de abajo) ===== */
 .hotspots-container { counter-reset: sv-hs; }
 .hotspot { counter-increment: sv-hs; }

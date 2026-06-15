@@ -13,6 +13,28 @@
 
 ---
 
+## 2026-06-15 · MÓVIL 2ª ronda — menú hamburguesa, redondez global, hotspots
+
+Tras probar en móvil el dueño reportó: menú hamburguesa con letras gigantes y "falta info"; campos/botón de contacto sin redondez; Shop the look no se ve.
+
+### Menú hamburguesa (drawer)
+- **Letras gigantes:** Dwell ponía el 1er nivel a `var(--menu-font-2xl--size)`. Override en `santavila-header.css`: sans, 18px/500 (parent 15px, child 14px), `text-transform:none`, alto de ítem ≈52px.
+- **"Falta info":** añadido **pie de marca** en `header-drawer.liquid` (`.sv-drawer-foot`): Mi cuenta · Buscar · Contacto y ayuda + 3 valores (Fabricado en España · Fácil de montar · Atención personalizada). El menú es `main-menu` (mismas 7 categorías que escritorio); con la letra corregida se ven todas.
+
+### Redondez de marca GLOBAL (ajustes de Dwell estaban a 0)
+- `button_border_radius_primary` y `_secondary`: **0 → 100** (pill). Era el default de Dwell; alguien lo había puesto a 0. Ahora **todos** los botones del tema son pill nativamente (incluido el de contacto, 404, etc.), no solo los forzados por CSS.
+- `inputs_border_radius`: **0 → 10** → todos los campos de texto (contacto, newsletter, búsqueda, descuento) con la redondez de marca.
+- Resuelve el feedback del contacto ("campos y botón con la redondez de siempre") y da coherencia en toda la tienda.
+
+### Shop the look (hotspots) en móvil
+- El home SÍ tiene imagen (`bolonia-xl-1.jpg`) + 3 hotspots, pero en horizontal quedaba una franja fina con los puntos amontonados (y: 20/40/52). Fix en `santavila-hotspots.css`: en ≤749px la imagen pasa a **4/5 (vertical)**. La lista de productos de abajo (1 col + "Comprar el conjunto") es la vía de compra robusta en móvil.
+- **PENDIENTE de verificar en móvil real:** que al tocar un punto se abra el **quick-add** (es JS nativo de Dwell, no comprobable por CSS). Si no abre, ajustar `product-hotspot.js`.
+
+### Confirmado bien por el dueño en móvil
+Home, contacto (salvo redondez, ya corregida), colecciones y producto se ven bien. Tráfico ~95% móvil → foco máximo aquí.
+
+---
+
 ## 2026-06-15 · AUDITORÍA MÓVIL COMPLETA (≤749px) — 5 auditores en paralelo + fixes
 
 **Estado:** ✅ Fixes reales + pulido aplicados (10 archivos, subidos 200 + verificados idénticos). Base sólida confirmada: sin desbordamientos masivos, heroes en `svh`, rejillas que colapsan.
