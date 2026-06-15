@@ -21,9 +21,10 @@
 Bajo los botones de pago: entrega "hasta 30 días según disponibilidad", "pago 100% seguro · garantía legal", "devolución por desistimiento legal". Honesto, reduce ansiedad antes de pagar.
 
 ### Upsell (nueva sección `santavila-cart-upsell`, en /cart)
-- Reemplaza el `product-list` genérico (colección "all") por recomendaciones basadas en el producto del carrito. **Reutiliza el componente `product-recommendations` de Dwell** (fetch a `/recommendations/products` + `morphSection`) pero con la **tarjeta santavila-product-card** (product-fit). Quick-add incluido.
-- **Hallazgo:** `intent=complementary` devuelve **0 productos** (no hay complementarios configurados); `related` devuelve 4. Por eso el `intent` es un **setting** (default `related`) → muestra productos YA.
-- **Para el "Completa el conjunto" REAL** (cojines/mesa/parasol para un sofá): configurar **Productos complementarios** en la app **Search & Discovery** (gratis de Shopify) y cambiar el setting a *Complementarios* + titular "Completa el conjunto". Convierte 3–5× en carrito (investigación).
+- Reemplaza el `product-list` genérico (colección "all") por productos relacionados con el producto del carrito, con la **tarjeta santavila-product-card** (product-fit).
+- **Iteración 1 (fetch dinámico, descartada 2026-06-15):** usaba el componente `product-recommendations` de Dwell (fetch a `/recommendations/products` + `morphSection`). **No mostraba nada para sets/bundles**: `related` venía vacío para el "Set jardín" y el fetch JS añadía fragilidad.
+- **Iteración 2 (ACTUAL, server-side robusto):** la sección recorre `cart.items.first.product.collections`, toma la primera colección no-`frontpage` con >1 producto y renderiza hasta N tarjetas (excluyendo el propio). **Sin JS, sin API → siempre se ve.** Verificado: el "Set jardín" está en `sillones-de-exterior` (88 productos) → muestra 4 sofás.
+- **Para el "Completa el conjunto" REAL** (cojines/mesa/parasol para un sofá, en vez de "más de lo mismo"): configurar **Productos complementarios** en la app **Search & Discovery** (gratis de Shopify). Convierte 3–5× en carrito (investigación). Pendiente del dueño.
 
 ---
 
