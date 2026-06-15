@@ -79,16 +79,23 @@
 /* Tachado de comparación */
 .cart-items .compare-at-price { color: var(--ink-3); opacity: 0.8; }
 
-/* Imagen → product-fit sobre blanco (nunca recortar el producto) */
+/* Imagen → miniatura CUADRADA, product-fit sobre blanco (nunca recorta) */
 .cart-items__media-container {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
+  aspect-ratio: 1;
+  padding: 5px;
+}
+.cart-page .cart-items__media-container { width: 100%; }
+@media screen and (min-width: 750px) {
+  .cart-page .cart-items__media-container { width: 96px; height: 96px; }
 }
 .cart-items__media-image {
   object-fit: contain !important;
-  padding: 6px;
+  width: 100%;
+  height: 100%;
 }
 
 /* Botón eliminar */
@@ -96,33 +103,25 @@
 .cart-items__remove:hover { color: var(--ink); }
 
 /* ---- Layout de fila en la PÁGINA (≥750px) ----
-   media | details | quantity | price, todo centrado vertical. */
+   UNA sola fila → media | details | quantity | price, centrado vertical
+   contra la miniatura (antes la imagen ocupaba 2 filas y el texto quedaba
+   arriba). El error, si aparece, baja a ancho completo. */
 @media screen and (min-width: 750px) {
   .cart-page .cart-items__table-row {
-    grid-template-columns: 92px minmax(0, 1fr) auto minmax(6rem, auto);
-    grid-template-areas:
-      'media details quantity price'
-      'media error   error    error';
+    grid-template-columns: 96px minmax(0, 1fr) auto minmax(6rem, auto);
+    grid-template-areas: 'media details quantity price';
+    grid-template-rows: auto;
     align-items: center;
-    column-gap: clamp(16px, 2.2vw, 30px);
-    padding-block: 24px;
+    column-gap: clamp(18px, 2.2vw, 34px);
+    padding-block: 26px;
     margin-bottom: 0;
     border-bottom: 1px solid var(--line);
   }
-  .cart-page .cart-items__table-row:first-child { padding-top: 0; }
-  .cart-page .cart-items__table-row:last-child {
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
-  /* el bloque de detalles centra su contenido junto a la imagen */
-  .cart-page .cart-items__details {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .cart-page .cart-items__quantity { margin-top: 0; align-self: center; }
-  .cart-page .cart-items__price { align-self: center; }
+  .cart-page .cart-items__table-row:first-child { padding-top: 4px; }
+  .cart-page .cart-items__table-row:last-child { border-bottom: 0; padding-bottom: 4px; }
+  .cart-page .cart-items__error { grid-area: auto; grid-column: 2 / -1; }
+  .cart-page .cart-items__details { display: flex; flex-direction: column; gap: 3px; }
+  .cart-page .cart-items__quantity { margin-top: 0; }
 }
 
 /* ---- Móvil: divisores limpios + ritmo ---- */
@@ -143,9 +142,10 @@
    3 · COLUMNA RESUMEN — panel de marca, pegado arriba y sticky
    ============================================================ */
 @media screen and (min-width: 750px) {
-  .cart-page__summary {
-    display: block;            /* cancela subgrid → sin estiramiento */
-    align-self: start;         /* pegado arriba, altura = contenido */
+  /* Tarjeta del resumen: pegada arriba y sticky */
+  .cart-page .cart-page__summary {
+    display: block;
+    align-self: start;
     height: auto;
     padding: 28px 26px;
     background: var(--paper-2);
@@ -154,22 +154,50 @@
     position: sticky;
     top: 20px;
   }
+  /* Aplana la cadena subgrid/extend de Dwell que dejaba el hueco superior
+     (.cart-summary__inner empezaba en grid-row 2 → fila del título vacía) */
+  .cart-page .cart-summary,
+  .cart-page .cart-summary--extend {
+    display: block;
+    grid-template-rows: none;
+    grid-row: auto;
+    height: auto;
+    width: auto;
+    border: none;
+    padding: 0;
+  }
+  .cart-page .cart-summary__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    grid-row: auto;
+    width: auto;
+    padding: 0;
+    position: static;
+    top: auto;
+  }
 }
 @media screen and (max-width: 749px) {
-  .cart-page__summary {
+  .cart-page .cart-page__summary {
     padding: 24px 20px;
     background: var(--paper-2);
     border: 1px solid var(--line);
     border-radius: var(--radius-media);
     margin-top: var(--margin-lg, 24px);
   }
+  .cart-page .cart-summary__inner {
+    align-items: stretch;
+    gap: 16px;
+    padding: 0;
+  }
 }
 
 /* ---- Panel de marca (llena el hueco superior) ---- */
 .sv-cart-brand {
   padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--line); /* divisor ÚNICO bajo el panel */
 }
 .sv-cart-brand__eyebrow {
   font-family: var(--mono);
@@ -216,6 +244,14 @@
    4 · TOTALES + ACCIONES (descuento / nota)
    ============================================================ */
 .cart-page .cart-totals { gap: 18px; }
+
+/* Quita el borde superior de la sección de descuento (evita la "raya,
+   espacio, raya": el único divisor es el borde inferior del panel de marca) */
+.cart-page .cart-actions {
+  border-top: none;
+  border-bottom-color: var(--line);
+  margin-block-start: 0;
+}
 
 /* Etiquetas de descuento / nota → sans, legibles */
 .cart-discount__label,
