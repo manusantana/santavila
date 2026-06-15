@@ -521,6 +521,17 @@
     }
     .sv-facets {
       width: 100%;
+      position: relative; /* ancla el panel a la fila completa, no al chip */
+    }
+    /* El panel de filtro deja de anclarse a un chip suelto (que desbordaba por
+       la derecha con min-width:240px) y pasa a ocupar el ancho de la fila. */
+    .sv-facet { position: static; }
+    .sv-facet__panel {
+      left: 0;
+      right: 0;
+      min-width: 0;
+      max-width: none;
+      width: auto;
     }
   }
 {% endstylesheet %}

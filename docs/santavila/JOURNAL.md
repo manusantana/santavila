@@ -13,6 +13,28 @@
 
 ---
 
+## 2026-06-15 · AUDITORÍA MÓVIL COMPLETA (≤749px) — 5 auditores en paralelo + fixes
+
+**Estado:** ✅ Fixes reales + pulido aplicados (10 archivos, subidos 200 + verificados idénticos). Base sólida confirmada: sin desbordamientos masivos, heroes en `svh`, rejillas que colapsan.
+
+**Método:** 5 subagentes auditaron en paralelo el código responsive (no visual; el preview anónimo sirve el live) de: Header/announcement · Home A (hero, manifesto, scenarios, featured, product-row) · Home B (materials, spain, editorial, services, newsletter, hotspots) · PDP · Colección+Footer+Upsell.
+
+### Fallos REALES corregidos
+- **Tarjeta de producto compartida** (`santavila-components.css`): `.sv-pcard__name` 23px fijo → 19px en ≤749px (descuadraba rejillas en home/colección/upsell). `.sv-pcard__foot` → `flex-wrap:wrap` y `.sv-pcard__ship` deja de ser `nowrap` (precio + envío se solapaban en 2-col a 375px). **Un fix arregla 3 zonas.**
+- **Panel de filtros de colección** (`santavila-collection-grid.liquid`): `min-width:240px` + `position:absolute left:0` anclado al chip → **scroll horizontal** cuando el chip estaba a la derecha. Fix: en ≤749px el panel se ancla a la fila completa (`.sv-facets{position:relative}`, `.sv-facet{position:static}`, panel `left:0;right:0;min-width:0`).
+- **Hero home** (`santavila-hero.liquid`): breakpoint 680→749px; padding-top y mínimo del título (54→40px) reducidos para no exceder `100svh`; flecha "Descubre" oculta en móvil (solapaba los CTAs).
+- **Barra sticky PDP** (`santavila-product.liquid`): `padding-bottom: env(safe-area-inset-bottom)` (home-indicator iPhone); CTA más compacto a ≤560px; **swatches 32→40px** y pills de variante ~44px de área táctil en móvil.
+
+### Pulido aplicado
+- Footer: enlaces con `padding-block` (área táctil) + 1 columna en ≤480px.
+- Editorial: colapso a 1 col 620→749px. · Services: 1 col en ≤480px. · `.sv-prow__head` (scenarios + product-row): `flex-wrap:wrap`. · Hero colección: padding-top mínimo 120→92px.
+
+### Pendiente de verificar EN TU MÓVIL (no por código)
+- **Hotspots / Shop the Look:** en ≤749px el popover se oculta y el toque debe abrir el **quick-add nativo** de Dwell. Si al tocar un punto no pasa nada en móvil real, hay que ajustar el JS. Único punto potencialmente bloqueante no verificable por CSS.
+- Deuda menor (no rompe): token `--ann-h` huérfano; `santavila-product.css` apunta al PDP nativo (no a `.sv-pdp`, código muerto); announcement 10.5px y truncado por elipsis (ok para los 3 textos actuales).
+
+---
+
 ## 2026-06-15 · CARRITO — afinado (alineación de fila, hueco del resumen, raya única) + MONEDA UE
 
 **Estado:** ✅ Implementado lo del tema. ⏳ El símbolo € a la derecha depende de un ajuste **global** que cambia el dueño a mano.

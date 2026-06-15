@@ -243,7 +243,13 @@
     100% { transform: scaleY(0); transform-origin: bottom; }
   }
 
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 749px) {
+    /* el bloque cabía justo en 100svh: bajamos paddings y el mínimo del título */
+    .sv-hero__inner {
+      padding-top: clamp(92px, 13vh, 140px);
+      padding-bottom: clamp(36px, 6vh, 80px);
+    }
+    .sv-hero__title { font-size: clamp(40px, 11vw, 76px); }
     .sv-hero__right {
       align-items: flex-start;
       gap: 20px;
@@ -252,6 +258,8 @@
       width: 118px;
       height: 118px;
     }
+    /* la flecha "Descubre" (absolute bottom) se solapaba con los CTAs en móvil */
+    .sv-hero__scroll { display: none; }
   }
 
   /* Regla de oro: el contenido nunca depende de animación para verse.

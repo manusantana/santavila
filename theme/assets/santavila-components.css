@@ -239,6 +239,13 @@
 .sv-pcard__ship--clay {
   color: var(--clay-deep);
 }
+/* ---- Móvil (≤749px): la tarjeta vive en 2 columnas estrechas ---- */
+@media screen and (max-width: 749px) {
+  .sv-pcard__name { font-size: 19px; line-height: 1.12; margin: 4px 0 7px; }
+  /* el pie envuelve y el envío deja de forzar una sola línea (evita solape con el precio) */
+  .sv-pcard__foot { flex-wrap: wrap; gap: 4px 10px; }
+  .sv-pcard__ship { white-space: normal; font-size: 9.5px; }
+}
 .sv-pcard__swatches {
   display: flex;
   gap: 5px;

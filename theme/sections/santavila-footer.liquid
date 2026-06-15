@@ -179,6 +179,15 @@
       grid-column: 1 / -1;
     }
   }
+  @media screen and (max-width: 749px) {
+    /* área táctil cómoda en los enlaces (antes solo la altura del texto) */
+    .sv-ft__col a { padding-block: 5px; margin-bottom: 4px; }
+    .sv-ft__legal { gap: 4px 16px; }
+    .sv-ft__legal a { padding-block: 5px; }
+  }
+  @media screen and (max-width: 480px) {
+    .sv-ft__top { grid-template-columns: 1fr; } /* 1 columna en teléfonos pequeños */
+  }
 {% endstylesheet %}
 
 {% schema %}
