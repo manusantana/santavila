@@ -13,6 +13,35 @@
 
 ---
 
+## 2026-06-16 · ESTADO + SIGUIENTES PASOS (snapshot de cierre)
+
+> Punto de control. Todo lo de abajo está en la rama `redesign` y subido a `origin`. Tema dev #189114876228 (NUNCA tocar el live #188231123268).
+
+### ✅ Hecho y verificado
+- **Páginas vestidas Santavila:** Home, Colección (hero/grid/FAQ), PDP (galería 1+miniaturas, swatches color, precio por variante, barra sticky), Carrito (rediseño integral: tipografía única, alineación, resumen sticky, aceptación legal, upsell, franja confianza), **Contacto a medida** (canales + form + proyectos), Header/announcement (slider, ñ), Footer (legal).
+- **Auditoría móvil completa** (5 auditores) + fixes reales + pulido. Menú hamburguesa (tipografía + pie de marca). Hotspots móvil → navegan a la ficha.
+- **Redondez global** restaurada: botones pill + inputs 10px (contacto y todo).
+- **Moneda España/UE**: símbolo € a la derecha (ajuste global del dueño) + sin "EUR" duplicado.
+- **Confianza visible (estrategia):** franja de 4 pilares tras el hero + CTA de asesoramiento en la PDP. Datos 100% honestos.
+- **Memoria** actualizada: [[santavila_strategy_docs]] (PDF de estrategia/competencia — no buscar en web), [[pricing_currency_format_eu]], [[announcement_n_tilde_font]], etc.
+
+### ⏭️ SIGUIENTES PASOS
+1. **SIGUIENTE FASE (decisión del dueño) — Dato de producto:**
+   - Renombrar ~243 productos con **sistema de marca** (quitar "estilo X"/adjetivos de proveedor, "Set"→"Conjunto", "de exterior" sistemático, medidas limpias). 2 estilos propuestos (descriptivo con medida / limpio). **Plan seguro:** preview completo de los 243 + backup de títulos originales + aplicar por lotes; handle/URL y `global.title_tag` (SEO) intactos.
+   - Reescribir **descripciones** hacia consultivo/concreto (hoy son de proveedor, vendor=**Hevea**).
+   - **Ocultar el vendor "Hevea"** si se muestra en algún sitio (una sola voz).
+2. **Búsqueda + 404** (investigado, pendiente): la búsqueda usa la tarjeta de **Dwell**, no `santavila-product-card` → incoherente. Vestir resultados + estado "sin resultados" + 404 con estilo Santavila.
+3. **Menú "compra por espacio" + Proyectos/Profesionales** (estrategia: vender por escenario + canal B2B).
+4. **Contacto a fondo** (iteración futura) · **Revisión global QA** antes de producción.
+
+### 🙋 Pendiente del DUEÑO (datos, no código)
+- **Nº de WhatsApp** → activa el canal en Contacto y permite enlazarlo desde el CTA de asesoría de la PDP.
+- **Plazos y garantía REALES por familia** (el PDF aspira a 3-5 años / 7-10 días; hoy solo mostramos garantía legal y "según disponibilidad").
+- **Imágenes reales** (home + cabeceras de colección) — escenas españolas creíbles (ático/patio/balcón), no resort.
+- Configurar **Productos complementarios** en Search & Discovery (para el "Completa el conjunto" real del carrito).
+
+---
+
 ## 2026-06-15 · CONFIANZA visible (estrategia) — franja home + CTA de asesoría en PDP
 
 Aplicando el PDF de estrategia ([[santavila_strategy_docs]]): "la confianza es ventaja visible, no pie de página" + "CTA principal + CTA secundario para asesoramiento". Datos 100% HONESTOS (sin teléfono, garantía legal, envío deslocalizado). Aditivo, no rompe nada.
