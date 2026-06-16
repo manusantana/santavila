@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Santavila · Fundamentos · Overview, Iconografía, Gráficos y Layout</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="assets/favicon-180.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="components.css" />
+<link rel="stylesheet" href="extra.css" />
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#687060"/><path d="M37 56 C37 42 44 35 50 35 C56 35 64 42 64 56 L65 80 L36 80 Z" fill="none" stroke="#F5F2E9" stroke-width="3.4" stroke-linejoin="round"/></svg>
+</template>
+<style>
+  /* Overview one-pager */
+  .ov-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:var(--sp-4); }
+  .ov-cell { background:var(--bg-paper); border:1px solid var(--line); border-radius:var(--r-lg); padding:var(--sp-6); }
+  .ov-cell .eyebrow { margin-bottom:12px; }
+  .ov-essence { grid-column:span 7; background:var(--oliva-900); color:#fff; border:none; display:flex; flex-direction:column; justify-content:center; }
+  .ov-logo { grid-column:span 5; display:flex; align-items:center; justify-content:center; gap:18px; }
+  .ov-logo img { height:38px; }
+  .ov-pos { grid-column:span 5; }
+  .ov-pers { grid-column:span 4; }
+  .ov-prom { grid-column:span 3; }
+  .ov-pal { grid-column:span 7; }
+  .ov-type { grid-column:span 5; }
+  .ov-swatches { display:flex; gap:8px; margin-top:6px; flex-wrap:wrap; }
+  .ov-sw { flex:1; min-width:54px; height:54px; border-radius:var(--r-sm); display:flex; align-items:flex-end; padding:5px; font-family:var(--font-mono); font-size:9px; }
+  @media (max-width:900px){ .ov-grid{ grid-template-columns:1fr; } .ov-grid > *{ grid-column:auto !important; } }
+
+  /* Icon library */
+  .ic-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+  .ic-tile { background:var(--bg-paper); border:1px solid var(--line); border-radius:var(--r-md); aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--oliva-700); padding:8px; }
+  .ic-tile span { font-family:var(--font-mono); font-size:9.5px; color:var(--ink-muted); letter-spacing:0.02em; text-align:center; }
+  @media (max-width:720px){ .ic-grid{ grid-template-columns:repeat(3,1fr); } }
+  .ic-construct { display:grid; grid-template-columns:200px 1fr; gap:var(--sp-6); align-items:center; }
+  .ic-gridbox { width:170px; height:170px; border:1px solid var(--line); border-radius:var(--r-md); position:relative; background:
+    repeating-linear-gradient(0deg, transparent 0 calc(170px/12 - 1px), var(--line-soft) calc(170px/12 - 1px) calc(170px/12)),
+    repeating-linear-gradient(90deg, transparent 0 calc(170px/12 - 1px), var(--line-soft) calc(170px/12 - 1px) calc(170px/12)); display:grid; place-items:center; color:var(--oliva-600); }
+  .ic-gridbox .pad { position:absolute; inset:14px; border:1px dashed var(--oliva-300); border-radius:6px; }
+  @media (max-width:620px){ .ic-construct{ grid-template-columns:1fr; } }
+  .ic-sizes { display:flex; align-items:flex-end; gap:var(--sp-6); }
+  .ic-size { display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--oliva-700); }
+  .ic-size span { font-family:var(--font-mono); font-size:11px; color:var(--ink-muted); }
+
+  /* Graphic elements */
+  .ge-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); }
+  @media (max-width:860px){ .ge-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .ge-grid{ grid-template-columns:1fr; } }
+  .ge-tile { background:var(--bg-paper); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
+  .ge-stage { height:220px; display:grid; place-items:center; position:relative; overflow:hidden; }
+  .ge-stage--ink { background:var(--oliva-900); }
+  .ge-stage--arena { background:var(--arena-200); }
+  .ge-stage--paper { background:var(--bg-paper); border-bottom:1px solid var(--line); }
+  .ge-cap { padding:14px 18px; }
+  .ge-cap h4 { font-size:var(--fs-base); margin-bottom:4px; }
+  .ge-cap p { font-size:13px; color:var(--ink-muted); }
+  .arch-frame-img { width:120px; height:150px; border-radius:9999px 9999px 0 0; background:linear-gradient(160deg,var(--oliva-400),var(--oliva-600)); }
+  .seal-spin { width:150px; height:150px; position:relative; }
+  .ge-divider { width:80%; display:flex; align-items:center; gap:14px; color:var(--oliva-400); }
+  .ge-divider .line { flex:1; height:1px; background:var(--oliva-200); }
+  .ge-pattern { position:absolute; inset:0; opacity:0.5; }
+
+  /* Layout templates */
+  .tpl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); }
+  @media (max-width:860px){ .tpl-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .tpl-grid{ grid-template-columns:1fr; } }
+  .tpl { background:var(--bg-paper); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; }
+  .tpl__wire { aspect-ratio:4/3; background:var(--arena-50); padding:14px; display:flex; flex-direction:column; gap:7px; border-bottom:1px solid var(--line); }
+  .wb { background:var(--oliva-100); border-radius:3px; }
+  .wb--accent { background:var(--oliva-300); }
+  .wb--line { background:var(--arena-300); }
+  .tpl__cap { padding:14px 18px; }
+  .tpl__cap h4 { font-size:var(--fs-base); margin-bottom:4px; }
+  .tpl__cap p { font-size:13px; color:var(--ink-muted); }
+  .gridcols { display:grid; grid-template-columns:repeat(12,1fr); gap:6px; }
+  .gridcols span { height:50px; background:var(--oliva-100); border-radius:4px; }
+  .rhythm { display:flex; align-items:flex-end; gap:10px; }
+  .rhythm div { background:var(--oliva-300); width:30px; border-radius:4px 4px 0 0; display:flex; align-items:flex-start; justify-content:center; padding-top:4px; font-family:var(--font-mono); font-size:9px; color:#fff; }
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="sidenav">
+    <div class="sidenav__brand"><img src="assets/logo-santavila-blanco.png" alt="Santavila" /></div>
+    <div class="sidenav__scroll">
+      <div class="nav-group">
+        <div class="nav-group__label">Fundamentos</div>
+        <a class="nav-link is-active" href="#overview"><span class="nav-link__num">00</span><span>Brand Overview</span></a>
+        <a class="nav-link" href="#iconografia"><span class="nav-link__num">13</span><span>Iconografía</span></a>
+        <a class="nav-link" href="#graficos"><span class="nav-link__num">14</span><span>Elementos gráficos</span></a>
+        <a class="nav-link" href="#layout"><span class="nav-link__num">17</span><span>Layout</span></a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group__label">Documentos</div>
+        <a class="nav-link" href="Santavila Brand System.html"><span class="nav-link__num">↗</span><span>Brand System</span></a>
+        <a class="nav-link" href="Santavila Sistema Maestro.html"><span class="nav-link__num">99</span><span>Sistema maestro</span></a>
+        <a class="nav-link" href="Santavila Tienda.html"><span class="nav-link__num">↗</span><span>Tienda</span></a>
+      </div>
+    </div>
+    <div class="sidenav__foot">Fundamentos · v1.2 · 2026<br />Módulos 00 · 13 · 14 · 17</div>
+  </nav>
+
+  <main class="main">
+    <!-- 00 OVERVIEW -->
+    <section id="overview" class="section section--raised" data-screen-label="00 Brand Overview" style="padding-top:clamp(56px,8vw,110px)">
+      <div class="section__inner">
+        <header class="sec-head"><span class="sec-head__num">00 · Brand Overview</span><h2>La marca de un vistazo</h2><p class="sec-head__lead">El resumen operativo de Santavila: lo esencial para que cualquier persona —interna o externa— entienda la marca en treinta segundos. Síntesis, no sustituto, del Brand System completo.</p></header>
+        <div class="ov-grid">
+          <div class="ov-cell ov-essence">
+            <div class="eyebrow" style="color:var(--oliva-200)">Esencia</div>
+            <p class="serif" style="font-size:clamp(28px,3.4vw,44px);line-height:1.05;color:#fff">Diseño español para vivir fuera.</p>
+            <p style="color:var(--oliva-100);margin-top:14px;font-size:var(--fs-sm)">El exterior bien vivido: el patio con sombra, la mesa larga de domingo, el ático entre semana.</p>
+          </div>
+          <div class="ov-cell ov-logo">
+            <img src="assets/logo-santavila.png" alt="Santavila" />
+          </div>
+          <div class="ov-cell ov-pos">
+            <div class="eyebrow">Posicionamiento</div>
+            <p style="font-size:var(--fs-base)">La forma seria de amueblar terraza, ático y jardín <strong>sin pagar lujo de firma</strong>. Premium accesible: nivel sin exclusión.</p>
+          </div>
+          <div class="ov-cell ov-pers">
+            <div class="eyebrow">Personalidad</div>
+            <p style="font-size:var(--fs-sm);color:var(--ink-soft)">El Sabio + el Esteta. Serena, experta, cálida y segura. Elegancia tranquila, nunca ruido.</p>
+          </div>
+          <div class="ov-cell ov-prom">
+            <div class="eyebrow">Promesa</div>
+            <p style="font-size:var(--fs-sm);color:var(--ink-soft)">Esto eleva tu casa y te dura.</p>
+          </div>
+          <div class="ov-cell ov-pal">
+            <div class="eyebrow">Paleta</div>
+            <div class="ov-swatches">
+              <span class="ov-sw" style="background:#687060;color:#fff">Sage</span>
+              <span class="ov-sw" style="background:#4C5142;color:#fff">Oliva 700</span>
+              <span class="ov-sw" style="background:#F5F2E9;color:#6A6E60">Arena</span>
+              <span class="ov-sw" style="background:#C8C8C2;color:#42463" >Piedra</span>
+              <span class="ov-sw" style="background:#22241C;color:#fff">Tinta</span>
+              <span class="ov-sw" style="background:#B27A5B;color:#fff">Arcilla</span>
+            </div>
+          </div>
+          <div class="ov-cell ov-type">
+            <div class="eyebrow">Tipografía</div>
+            <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+              <span class="serif" style="font-size:30px">Cormorant</span>
+              <span style="font-family:var(--font-sans);font-weight:700;font-size:20px">Hanken Grotesk</span>
+              <span class="mono" style="font-size:14px">JetBrains</span>
+            </div>
+            <p style="font-size:12.5px;color:var(--ink-muted);margin-top:8px">Display · Texto/UI · Datos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13 ICONOGRAFÍA -->
+    <section id="iconografia" class="section section--paper" data-screen-label="13 Iconografía">
+      <div class="section__inner">
+        <header class="sec-head"><span class="sec-head__num">13 · Sistema de iconografía</span><h2>Iconos que explican, no que adornan</h2><p class="sec-head__lead">Trazo lineal, formas suaves y propósito funcional. Los iconos sirven para aclarar (material, plazo, garantía, escenario), nunca para decorar.</p></header>
+
+        <h3 class="subhead">Construcción</h3>
+        <div class="card card--raised" style="padding:var(--sp-8)">
+          <div class="ic-construct">
+            <div class="ic-gridbox">
+              <span class="pad"></span>
+              <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+            </div>
+            <div>
+              <p style="color:var(--ink-soft);margin-bottom:var(--sp-4)">Retícula de <strong>24 px</strong>, área visible (padding) de <strong>2 px</strong> por lado. Trazo de <strong>1,6–1,8 px</strong>, terminaciones y uniones redondeadas. Geometría simple, una sola idea por icono.</p>
+              <div class="ic-sizes">
+                <div class="ic-size"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg><span>16</span></div>
+                <div class="ic-size"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg><span>20</span></div>
+                <div class="ic-size"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg><span>24</span></div>
+                <div class="ic-size"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg><span>32</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Librería · UI y navegación</h3>
+        <div class="ic-grid">
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>ico-ui-buscar</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0112 8a3.5 3.5 0 017 2.5C19 15.5 12 20 12 20z"/></svg><span>ico-ui-favorito</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7zM9 8a3 3 0 016 0"/></svg><span>ico-ui-cesta</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg><span>ico-ui-menu</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>ico-ui-flecha</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg><span>ico-ui-chevron</span></div>
+        </div>
+
+        <h3 class="subhead">Librería · servicio y confianza</h3>
+        <div class="ic-grid">
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg><span>ico-serv-envio</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg><span>ico-serv-garantia</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1-4.5A8 8 0 1121 12z"/></svg><span>ico-serv-asesoria</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ico-serv-origen</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>ico-serv-check</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l12-12 6 6L9 21z"/><path d="M7.5 10.5l2 2"/></svg><span>ico-serv-montaje</span></div>
+        </div>
+
+        <h3 class="subhead">Librería · material y escenario</h3>
+        <div class="ic-grid">
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-13 14-13 0 8-5 14-13 14-1 0-1-1-1-1z"/><path d="M5 19c3-4 6-6 9-7"/></svg><span>ico-mat-tejido</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 0016 0M8 12h8"/></svg><span>ico-mat-aluminio</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M5 19l1.4-1.4M17.6 6.4L19 5"/></svg><span>ico-mat-sol-uv</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15l12-12 6 6L9 21z"/><path d="M7.5 10.5l2 2M11 7l2 2"/></svg><span>ico-mat-medidas</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6"/></svg><span>ico-esc-atico</span></div>
+          <div class="ic-tile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a2 2 0 012-2h12a2 2 0 012 2v15M4 21h16M9 21v-5h6v5M8 8h8M8 12h8"/></svg><span>ico-esc-balcon</span></div>
+        </div>
+
+        <h3 class="subhead">Naming y reglas</h3>
+        <div class="grid g2" style="align-items:start">
+          <div class="card">
+            <div class="eyebrow" style="margin-bottom:14px">Convención de nombres</div>
+            <p style="font-size:var(--fs-sm);color:var(--ink-soft);margin-bottom:14px">Todo icono se nombra <code class="tok">ico-[categoría]-[nombre]</code>, en minúsculas y sin tildes. Categorías: <strong>ui</strong>, <strong>serv</strong> (servicio), <strong>mat</strong> (material), <strong>esc</strong> (escenario).</p>
+            <p class="mono" style="font-size:12.5px;color:var(--oliva-700)">ico-serv-envio · ico-mat-tejido · ico-esc-atico</p>
+          </div>
+          <div>
+            <div class="do-dont">
+              <div class="dd dd--do">
+                <div class="dd__tag"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Sí</div>
+                <ul><li>Trazo uniforme y heredando el color del contexto.</li><li>Un icono por idea; tamaño desde 16 px.</li></ul>
+              </div>
+              <div class="dd dd--dont">
+                <div class="dd__tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg> No</div>
+                <ul><li>Iconos rellenos, multicolor o con sombra.</li><li>Decorar sin función ni mezclar grosores.</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 ELEMENTOS GRÁFICOS -->
+    <section id="graficos" class="section" data-screen-label="14 Elementos gráficos">
+      <div class="section__inner">
+        <header class="sec-head"><span class="sec-head__num">14 · Sistema de elementos gráficos</span><h2>El arco como firma</h2><p class="sec-head__lead">El pórtico mediterráneo del imagotipo es el único recurso gráfico propio de la marca. Se usa con contención —marco, sello, divisor o patrón sutil— nunca saturado.</p></header>
+
+        <div class="ge-grid">
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--arena"><div class="arch-frame-img"></div></div>
+            <div class="ge-cap"><h4>Marco de imagen</h4><p>Foto recortada con la parte superior en arco. Para retratos de escena y producto destacado.</p></div>
+          </div>
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--ink">
+              <div class="seal-spin">
+                <svg viewBox="0 0 160 160" width="150" height="150"><defs><path id="sp" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path></defs><text style="font-family:var(--font-mono);font-size:9.2px;letter-spacing:0.16em;fill:#fff;text-transform:uppercase"><textPath href="#sp" startOffset="0">FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · </textPath></text></svg>
+                <span style="position:absolute;inset:0;display:grid;place-items:center"><svg width="32" height="52" viewBox="0 0 100 162" fill="none"><path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.22)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path><path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path></svg></span>
+              </div>
+            </div>
+            <div class="ge-cap"><h4>Sello circular</h4><p>Texto orbitando el arco. Para «Fabricado en España» y momentos de marca.</p></div>
+          </div>
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--paper">
+              <div class="ge-divider"><span class="line"></span><svg width="22" height="34" viewBox="0 0 100 162" fill="none"><path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"></path></svg><span class="line"></span></div>
+            </div>
+            <div class="ge-cap"><h4>Divisor de sección</h4><p>El arco en miniatura entre dos líneas finas. Pausa editorial entre bloques.</p></div>
+          </div>
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--arena">
+              <svg class="ge-pattern" viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <g fill="none" stroke="#9CA391" stroke-width="3" stroke-linejoin="round">
+                  <path d="M20 90 C20 65 33 52 46 52 C59 52 72 65 72 90 L72 130 L20 130 Z"/>
+                  <path d="M110 90 C110 65 123 52 136 52 C149 52 162 65 162 90 L162 130 L110 130 Z"/>
+                  <path d="M200 90 C200 65 213 52 226 52 C239 52 252 65 252 90 L252 130 L200 130 Z"/>
+                </g>
+              </svg>
+            </div>
+            <div class="ge-cap"><h4>Patrón sutil</h4><p>Repetición de arcos a baja opacidad. Fondos de packaging o secciones, nunca sobre texto.</p></div>
+          </div>
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--ink"><svg width="70" height="113" viewBox="0 0 100 162" fill="none"><path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.18)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path><path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path></svg></div>
+            <div class="ge-cap"><h4>Imagotipo / sello</h4><p>El arco aislado como marca de agua, avatar o esquina. Versión con o sin profundidad.</p></div>
+          </div>
+          <div class="ge-tile">
+            <div class="ge-stage ge-stage--paper" style="align-items:flex-end;justify-content:flex-start;padding:0">
+              <div style="width:100%;height:100%;border-radius:9999px 9999px 0 0;border:2px solid var(--oliva-400);border-bottom:none;margin:18px 18px 0;background:var(--oliva-50)"></div>
+            </div>
+            <div class="ge-cap"><h4>Contenedor en arco</h4><p>Tarjetas y bloques con el borde superior arqueado. Uso muy puntual, como acento.</p></div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Reglas de uso del arco</h3>
+        <div class="do-dont">
+          <div class="dd dd--do">
+            <div class="dd__tag"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Sí</div>
+            <ul><li>Un solo gesto de arco por composición; aire alrededor.</li><li>Trazo coherente con la iconografía o relleno sólido de marca.</li><li>Proporción original (alto ≈ 1,6 × ancho).</li></ul>
+          </div>
+          <div class="dd dd--dont">
+            <div class="dd__tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg> No</div>
+            <ul><li>Saturar la página de arcos o usarlo como textura sobre texto.</li><li>Deformar la proporción o inclinarlo.</li><li>Mezclar varios colores de arco en una misma pieza.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17 LAYOUT -->
+    <section id="layout" class="section section--paper" data-screen-label="17 Layout">
+      <div class="section__inner">
+        <header class="sec-head"><span class="sec-head__num">17 · Sistema de layout</span><h2>Rejilla, ritmo y plantillas</h2><p class="sec-head__lead">Composición serena y editorial: rejilla de 12 columnas, mucho aire y un puñado de arquetipos de página que cubren todo el ecosistema.</p></header>
+
+        <h3 class="subhead">Rejilla y ritmo vertical</h3>
+        <div class="grid g2" style="align-items:start">
+          <div class="card card--raised">
+            <div class="eyebrow" style="margin-bottom:14px">12 columnas · gutter 24 px · máx 1280 px</div>
+            <div class="gridcols">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p style="font-size:12.5px;color:var(--ink-muted);margin-top:14px">Móvil 4 col · tablet 8 col · escritorio 12 col. Contenido de lectura limitado a ~70 caracteres.</p>
+          </div>
+          <div class="card card--raised">
+            <div class="eyebrow" style="margin-bottom:14px">Ritmo de sección</div>
+            <div class="rhythm">
+              <div style="height:40px">48</div><div style="height:64px">80</div><div style="height:88px">120</div><div style="height:64px">80</div><div style="height:40px">48</div>
+            </div>
+            <p style="font-size:12.5px;color:var(--ink-muted);margin-top:14px">Padding vertical de sección entre 48 y 120 px (clamp responsivo). El aire es deliberado: comunica calma y categoría.</p>
+          </div>
+        </div>
+
+        <h3 class="subhead">Arquetipos de página</h3>
+        <div class="tpl-grid">
+          <div class="tpl">
+            <div class="tpl__wire">
+              <div class="wb" style="height:14px"></div>
+              <div class="wb wb--accent" style="flex:1"></div>
+              <div style="display:flex;gap:7px"><div class="wb wb--line" style="flex:1;height:20px"></div><div class="wb" style="width:34px;height:20px"></div></div>
+            </div>
+            <div class="tpl__cap"><h4>Home / Landing</h4><p>Hero a sangre + sello, navegación por escenario, bloques alternos.</p></div>
+          </div>
+          <div class="tpl">
+            <div class="tpl__wire" style="flex-direction:row">
+              <div style="display:flex;flex-direction:column;gap:7px;flex:1.2"><div class="wb wb--accent" style="flex:1"></div></div>
+              <div style="display:flex;flex-direction:column;gap:7px;flex:1"><div class="wb wb--line" style="height:12px"></div><div class="wb" style="height:24px"></div><div class="wb wb--line" style="height:10px;width:70%"></div><div class="wb" style="margin-top:auto;height:26px"></div></div>
+            </div>
+            <div class="tpl__cap"><h4>Ficha de producto</h4><p>Galería + columna de compra sticky. Anatomía del Perfect Product Page.</p></div>
+          </div>
+          <div class="tpl">
+            <div class="tpl__wire">
+              <div class="wb wb--line" style="height:12px;width:50%"></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;flex:1"><div class="wb"></div><div class="wb"></div><div class="wb"></div><div class="wb"></div><div class="wb"></div><div class="wb"></div></div>
+            </div>
+            <div class="tpl__cap"><h4>Colección / listado</h4><p>Filtros sticky + grid con banda editorial intercalada.</p></div>
+          </div>
+          <div class="tpl">
+            <div class="tpl__wire">
+              <div class="wb wb--line" style="height:10px;width:40%"></div>
+              <div class="wb wb--accent" style="height:26px"></div>
+              <div style="display:flex;gap:7px;flex:1"><div class="wb wb--line" style="width:30%"></div><div class="wb" style="flex:1"></div></div>
+            </div>
+            <div class="tpl__cap"><h4>Editorial / artículo</h4><p>Una columna estrecha de lectura, imágenes a sangre intercaladas.</p></div>
+          </div>
+          <div class="tpl">
+            <div class="tpl__wire" style="flex-direction:row">
+              <div class="wb" style="width:30%"></div>
+              <div style="display:flex;flex-direction:column;gap:7px;flex:1"><div class="wb wb--line" style="height:12px;width:50%"></div><div class="wb wb--line" style="height:8px"></div><div class="wb wb--line" style="height:8px"></div><div class="wb" style="height:18px;width:40%;margin-top:auto"></div></div>
+            </div>
+            <div class="tpl__cap"><h4>Documento de marca</h4><p>Sidenav oscura + contenido. Como este Brand System.</p></div>
+          </div>
+          <div class="tpl">
+            <div class="tpl__wire">
+              <div class="wb wb--accent" style="height:20px"></div>
+              <div style="display:flex;gap:7px;flex:1"><div class="wb" style="flex:1"></div><div class="wb wb--line" style="flex:1"></div></div>
+              <div class="wb" style="height:14px"></div>
+            </div>
+            <div class="tpl__cap"><h4>Página de contenido</h4><p>Sobre la marca, ayuda, profesionales. Bloques 1–2 columnas.</p></div>
+          </div>
+        </div>
+
+        <h3 class="subhead">Principios de composición</h3>
+        <div class="grid g3">
+          <div class="card"><h4 style="font-size:var(--fs-base);margin-bottom:8px">Margen generoso</h4><p style="font-size:var(--fs-sm);color:var(--ink-soft)">El espacio en blanco es parte del lujo. Antes quitar que apretar.</p></div>
+          <div class="card"><h4 style="font-size:var(--fs-base);margin-bottom:8px">Alineación editorial</h4><p style="font-size:var(--fs-sm);color:var(--ink-soft)">Texto a la izquierda, jerarquía clara, una idea principal por pantalla.</p></div>
+          <div class="card"><h4 style="font-size:var(--fs-base);margin-bottom:8px">Imagen que respira</h4><p style="font-size:var(--fs-sm);color:var(--ink-soft)">Fotografía a sangre o en arco; nunca apelmazada ni con texto encima sin contraste.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-link[href^="#"]'));
+    var ids = links.map(function(l){ return l.getAttribute('href').slice(1); });
+    function onScroll(){
+      var best = ids[0], bestTop = -Infinity;
+      ids.forEach(function(id){ var el = document.getElementById(id); if(!el) return; var top = el.getBoundingClientRect().top; if(top < window.innerHeight*0.4 && top > bestTop){ bestTop = top; best = id; } });
+      links.forEach(function(l){ l.classList.toggle('is-active', l.getAttribute('href')==='#'+best); });
+    }
+    links.forEach(function(l){ l.addEventListener('click', function(e){ var id=l.getAttribute('href').slice(1); var el=document.getElementById(id); if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); } }); });
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+</script>
+</body>
+</html>
