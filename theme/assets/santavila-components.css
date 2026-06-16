@@ -292,3 +292,20 @@
     }
   }
 }
+
+/* ============================================================
+   Coherencia de las tarjetas NATIVAS de Dwell (.card-gallery)
+   — solo aparecen en Búsqueda, 404 y predictive; NO chocan con
+   nuestras .sv-pcard. Las vestimos en product-fit (producto sobre
+   blanco, sin recortar) y título serif, como las nuestras.
+   ============================================================ */
+.card-gallery { background: #fff; }
+.card-gallery img,
+.card-gallery picture img {
+  object-fit: contain !important;
+}
+.product-card product-title,
+.product-card .product-card-gallery__title-placeholder {
+  font-family: var(--serif);
+  font-weight: 500;
+}

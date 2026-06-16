@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-16 · BÚSQUEDA + 404 vestidos + QA de lanzamiento
+
+Cierra los puntos "Búsqueda + 404" de los siguientes pasos. Tema renombrado a **"Santavila Theme by Ubicuo Libres Pensadores"** (dev #189114876228, rol `development`).
+
+### Búsqueda + 404
+- **404 traducido a español + tono Santavila** (`404.json`): "No encontramos esta página" · "El enlace puede estar mal… tu próximo rincón de exterior te sigue esperando" · botón "Volver a la tienda" · lista "Quizá esto te inspire".
+- **Tarjetas nativas de Dwell** (`.card-gallery`, usadas SOLO en búsqueda/404/predictive — no chocan con `.sv-pcard`) vestidas **product-fit** (producto sobre blanco, sin recortar) + título serif, en `santavila-components.css`. Coherencia sin tocar la fontanería de búsqueda.
+
+### QA de lanzamiento (verificado por API)
+- ✅ Tienda EUR · santavila.com · **idioma español** (principal/publicado).
+- ✅ **Email de contacto = hola@santavila.com** (destino del formulario).
+- ✅ 243 productos · 6 políticas legales con contenido · todos los assets del tema presentes.
+- ⚠️ **Manual (no verificable por API):** pasarela de pago activa (Ajustes→Pagos), pedido de prueba completo, que el checkbox legal no bloquee compra legítima, mensaje de prueba del formulario de contacto, pasada visual en móvil real.
+- ⏳ **Antes de publicar:** imágenes reales (home/colección) + decisión naming (#4) + duplicar el tema `development` a uno permanente para publicar.
+
+---
+
 ## 2026-06-16 · ESTADO + SIGUIENTES PASOS (snapshot de cierre)
 
 > Punto de control. Todo lo de abajo está en la rama `redesign` y subido a `origin`. Tema dev #189114876228 (NUNCA tocar el live #188231123268).

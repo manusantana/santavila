@@ -15,7 +15,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>Page not found</h1>",
+            "text": "<h1>No encontramos esta página</h1>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -41,7 +41,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<p>El enlace puede estar mal o la página ya no existe. Pero tu próximo rincón de exterior te sigue esperando.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -67,7 +67,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
+            "label": "Volver a la tienda",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button",
@@ -136,7 +136,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Discover something new</h2>",
+                "text": "<h2>Quizá esto te inspire</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
