@@ -104,10 +104,10 @@
   height: 58px;
   border-radius: 9px;
   overflow: hidden;
-  background: #fff;
+  background: var(--bone, #EEE8DA);
   flex: none;
 }
-.sv-stl__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.sv-stl__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .sv-stl__info { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .sv-stl__name {
   font-family: var(--serif);

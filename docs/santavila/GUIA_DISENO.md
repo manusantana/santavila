@@ -45,12 +45,14 @@ Nunca dejar un botón con esquinas rectas.
 - TODA sección usa **`.sv-container`** (maxw 1480, gutter `clamp(20px,5vw,76px)`) → mismo ancho de página.
 - Las rejillas de contenido ocupan **el ancho completo** del container (NO meter `max-width` que las estreche y rompa la alineación con las vecinas). El `max-width` solo se usa en **ch** para que los textos no sean líneas eternas (legibilidad), nunca para encoger una rejilla.
 
-## 4. Imágenes (regla clave: PRODUCTO vs AMBIENTE)
-- **Imagen de PRODUCTO** (ficha + tarjetas de producto): **`object-fit: contain`** sobre **fondo blanco** = product-fit, el producto se ve **completo, nunca recortado por los lados**. PDP: aspecto **1:1**; tarjetas (`.sv-pcard__media`): **4:5**. Sin hover-zoom (recortaría). ✅ Aplicado en PDP y en todas las tarjetas (`santavila-product-card` → home + colección).
-- **Imagen de AMBIENTE / editorial** (hero, escenarios, materiales, editorial, featured, collection-hero, bandas `.sv-cband`): **`object-fit: cover`** = llena el espacio (recorte aceptable, son fotos de estilo de vida).
+## 4. Imágenes — REGLA ACTUAL (2026-06-16): TODO `cover`
+- **Decisión del dueño (revierte el product-fit anterior):** TODA imagen colocada **RELLENA su cuadro** con **`object-fit: cover`** — como el tema publicado (Dwell). El `contain` dejaba **bandas blancas** arriba/abajo que el dueño rechazó ("queda rarísimo").
+- **Producto** (PDP principal+miniaturas, tarjetas `.sv-pcard__media` 4:5, carrito, shop-the-look, búsqueda/404 `.card-gallery`): **`cover`**. Fondo neutro `var(--bone)` por si la foto no cubre del todo (no blanco puro). Aspectos: PDP **1:1**, tarjetas **4:5**.
+- **Ambiente/editorial** (hero, escenarios, materiales, editorial, featured, collection-hero): **`cover`** (ya estaba).
+- **ÚNICA excepción `contain`:** el **lightbox/zoom** de la PDP (`.sv-lightbox__img`) — al ampliar se quiere ver el producto **entero**.
 
 ## 5. PDP (santavila-product) — patrón de referencia
-- **Galería:** 1 foto principal **cuadrada (1:1) contain** sobre blanco + **miniaturas a la izquierda** (rail absoluto, scroll interno) que cambian la principal + **lightbox** para ampliar. Galería **sticky**. En móvil: apilado, miniaturas en fila abajo.
+- **Galería:** 1 foto principal **cuadrada (1:1) cover** (rellena) + **miniaturas a la izquierda** (rail absoluto, scroll interno) que cambian la principal + **lightbox** para ampliar. Galería **sticky**. En móvil: apilado, miniaturas en fila abajo.
 - **Variantes de color = swatches** (círculo de color) SOLO en la opción cuyo título contiene "color" (detección por JS → clase `.sv-sw-color`); **el resto de atributos (Chasis, etc.) = botones de texto**. Nombre del color elegido junto al título + tooltip. Robusto al re-render de Dwell (MutationObserver). Colores = mapa orientativo (la fidelidad real = Configuración → Swatches con foto de tela).
 - **Precio:** se actualiza por variante (mecanismo nativo de Dwell, validado E2E). La **barra sticky** clona el precio real (no estático). 43/243 productos tienen precio variable → crítico que funcione.
 - **Pago:** sin atajos; collapse informativo "Métodos de pago aceptados" con iconos reales. Oculto el aviso de "recogida en tienda" (es envío).

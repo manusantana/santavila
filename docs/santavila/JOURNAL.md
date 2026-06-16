@@ -13,6 +13,20 @@
 
 ---
 
+## 2026-06-16 · IMÁGENES → COVER en toda la tienda (revierte product-fit)
+
+El dueño comparó con el tema publicado y rechazó el `contain`: las bandas blancas "quedan rarísimas". **Decisión: todas las imágenes RELLENAN su cuadro (`object-fit: cover`)**, como el live. Revierte la regla "product-fit/contain" del 2026-06-12. Memoria [[santavila_images_cover]] + `GUIA §4` actualizadas.
+
+**Cambiado `contain`→`cover` (revisión integral):**
+- `santavila-components.css`: tarjetas `.sv-pcard__media` (home/colección/upsell) + `.card-gallery` (búsqueda/404). Fondo de respaldo `--bone`.
+- `santavila-cart.css`: `.cart-items__media` (quitado también el `padding:5px` que dejaba borde).
+- `santavila-hotspots.css`: `.sv-stl__media` (lista shop-the-look).
+- `santavila-product.liquid`: galería principal `.sv-gal__slide` + miniaturas `.sv-gal__thumb`.
+- **Excepción mantenida en `contain`:** lightbox/zoom de la PDP (`.sv-lightbox__img`) → al ampliar se ve el producto entero.
+- Subido a STAGING #189222715716 **y** dev #189114876228 (200 en ambos). Ambiente/editorial ya estaban en cover.
+
+---
+
 ## 2026-06-16 · BÚSQUEDA + 404 vestidos + QA de lanzamiento
 
 Cierra los puntos "Búsqueda + 404" de los siguientes pasos. Tema renombrado a **"Santavila Theme by Ubicuo Libres Pensadores"** (dev #189114876228, rol `development`).

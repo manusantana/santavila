@@ -864,13 +864,13 @@
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
-    background: #fff;
+    background: var(--bone, #EEE8DA);
     cursor: pointer;
     padding: 0;
     flex: none;
     transition: border-color 0.2s var(--ease, ease);
   }
-  .sv-gal__thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .sv-gal__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .sv-gal__thumb.is-active { border-color: var(--ink); }
   .sv-gal__play {
     position: absolute;
@@ -890,7 +890,7 @@
     margin: 0;
     border-radius: var(--radius-media);
     overflow: hidden;
-    background: #fff; /* product-fit sobre blanco: la foto se ve entera, sin bordes raros */
+    background: var(--bone, #EEE8DA);
     aspect-ratio: 1 / 1;
   }
   .sv-gal__slide.is-active {
@@ -903,7 +903,7 @@
   .sv-gal__slide iframe {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* PRODUCT FIT: la foto se ve completa, nunca recortada */
+    object-fit: cover; /* la foto RELLENA el cuadro (como el tema publicado); el zoom/lightbox la muestra entera */
     display: block;
   }
   .sv-gal__img {
