@@ -13,6 +13,58 @@
 
 ---
 
+## 2026-06-18 · AUDITORÍA DE IMÁGENES (producto ↔ imagen) — fase de revisión
+
+Arranca el proyecto de imágenes con una auditoría en profundidad en 3 capas: estado **live** vía Admin API + **cruce determinista** archivo↔producto + **inspección visual** de 161 imágenes por agentes que las vieron. Informe completo: [`AUDITORIA_IMAGENES.md`](AUDITORIA_IMAGENES.md).
+
+**Hallazgos clave:**
+- **Asociación resuelta:** de 409 imágenes locales, 352 ya subidas (match por nombre en CDN), 45 cutouts por handle, 6 Balliu por slug; solo **6 huérfanas**.
+- **El hueco es Hevea:** **87 de 115** productos con **1 sola foto** (media 1,3). Balliu sobra-cubierto (media 8). Ningún producto ACTIVO vacío (los 12 sin foto son DRAFT).
+- **Calidad (161 inspeccionadas):** 43% apta para catálogo; Hevea sólida (76% apta — su problema es cantidad, no calidad); Balliu a dos velocidades; **cutouts 100% baja-res** (≈500px, archivos de trabajo); lifestyle = R&D.
+- **Problemas:** 45% del material ≤800px; ~25% no encaja limpio (sobre todo fotos de detalle mal colocadas y solapamiento sets 2↔3 plazas); 4 con logo de tercero (Balliu/GUESS); fondos mezclados (sin sistema visual único).
+
+**Entregables (solo lectura):** `auditoria_imagenes.py`, `_estado_imagenes.json`, `auditoria_imagenes_report.csv` (fila/producto), `auditoria_imagenes_orphans.csv`, `_visual_imagenes.json`.
+
+**Pendiente / siguiente paso:** planificar 5 frentes — (1) enriquecer Hevea, (2) subir resolución, (3) estandarizar sistema visual, (4) limpiar integridad/matching, (5) ambiente de marca (enlaza con HOME pendiente). Decisión de medios por definir: alta del proveedor vs. generación IA vs. foto real.
+
+---
+
+## 2026-06-18 · AUDITORÍA INTEGRAL DE PRECIOS + herramienta blindada (`precios_santavila.py`)
+
+Revisión total de precios tras la consolidación de Balliu (flat→variantes), que rompió el mapeo precio/coste. Objetivo del dueño: 100% seguro de NO vender por debajo de coste, y dejarlo preparado para cualquier cambio futuro (subida/bajada).
+
+**Diagnóstico (verificado por 4 vías independientes + workflow adversarial):**
+- **0 variantes por debajo de coste. CERO pérdidas.** La "pérdida" inicial de base-parasol-25kg (51,95€) fue **falso positivo de mi propio matcher** (le pegó el coste de la base de 25kg=54,88 cuando en realidad es la base barata: Excel `...890a4cd4` 30kg coste 27,52 / psy_G 51,95 → margen 36%). La verificación lo cazó **antes** de aplicar un fix erróneo.
+- **Trampa evitada:** aplicar Col G por handle a lo bruto habría regalado cientos de € (p.ej. tirar mesas ATLANTA/JAVA 200-260×100 de 1.670/2.019€ a 1.275/1.575€, porque el Excel solo tiene la talla pequeña de ese producto). **Solo se corrige donde la talla/SKU coincide EXACTO.**
+- **Único infravalorado genuino:** ALTEA 70×70 (handle `balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6`) a 421,95€ cuando Col G = 480,95€ (×10 variantes tela). Decisión pendiente: subir crea incoherencia con la 80×80 (422,95€, sin fila Excel).
+- **5 SKU duplicados en >1 producto** (incl. set contemporáneo 349,9€ que comparte SKU 557-010884 con el set de 2 plazas 4.679€; y 557-010147 compartido entre un set y un sofá). Decisión pendiente (borrar/recolocar SKU = irreversible, no se toca sin OK).
+- El "escalonado por color" (chasis blanco más barato que prestige) es **intencionado** — son precios reales del Excel, no errores.
+
+**Hecho:**
+- `precios_santavila.py` — herramienta autoritativa: `--audit` (informe + CSV `precios_auditoria.csv`), `--set-price`/`--set-cost`/`--backfill-costs`. **Guardia anti-pérdida fail-closed** (no escribe un precio cuyo neto quede < coste; si no conoce el coste, bloquea salvo `--allow-no-cost`), **aborta con SKU duplicado**, suelo de coste conservador (MAX), matcher de coste por SKU/talla/precio-en-handle/precio-en-familia. A correr **antes de cada publicación**.
+- **Backfill de costes aplicado a Shopify:** de 278 → **1.334/1.678 variantes con coste real**. Permite ver margen en Admin y blinda la guardia en vivo.
+- `dump_estado_precios.py` (volcado live → `_estado_tienda.json`) + `_excel_precios.json`.
+
+**Aplicado (con OK del dueño):**
+- **ALTEA 70×70 + 80×80 → 480,95€** (×20 variantes; coherente, margen ~35%). Verificado en vivo.
+- **Dedup SKU:** set contemporáneo 349,90€ (SKU 557-010884) → **DRAFT** (despublicado; era riesgo de pérdida); set 3 plazas → SKU `557-010147-SET` (separado del sofá ACAPULCO-3); mesa centro A → SKU `557-1563-B` (separado de la `-2` canónica); **borradas** las 2 copias `-2` (BRUNA silla y mesa alta 60×60), corregidos los que se quedan a Excel (89,95€/coste 55,51 y 449,90€/coste 245,33).
+- Auditoría de cierre (estado vivo): **0 bajo coste, 0 infra, 0 sobre, 1 SKU dup restante** (solo 557-010884, ya DRAFT).
+
+**Política "sin coste → no se publica" + "sin foto → no se publica" (decisión del dueño 2026-06-18):**
+- **Productos enteros sin coste → DRAFT.** Despublicados los que no tienen coste en ningún sitio (1 Balliu + santavila marca propia). 2 que sí tenían coste (varía por chasis blanco/prestige: tumbona NOA, silla BIMBA) se re-activaron con su coste.
+- **Variantes/tallas añadidas sin coste:** de 126, **92 recuperables** (su precio casa con un coste único de Balliu en el Excel bajo otro handle — mesas 200-260×100 a 1.670/2.019€, resina, CAPRI Ø70/Ø90, parasol acrílico…) → costeadas y mantenidas. **34 sin coste en ningún sitio → borradas** (CAPRI Ø80, parasol Ocean 200cm, etc.). Salvaguarda: nunca borrar la última variante.
+- **Premisa de FOTO (dueño, no negociable):** ningún producto/variante PUBLICADO sin foto. Auditado: **0 productos ACTIVE sin foto** (los 12 sin imagen están todos en DRAFT).
+
+**VERIFICACIÓN DURA FINAL (contra coste VIVO de Shopify, no inferido) — 1.462 variantes ACTIVE:**
+`sin coste vivo: 0 ✅ · precio neto < coste: 0 ✅ · productos ACTIVE sin foto: 0 ✅` → **todo lo PUBLICADO tiene coste, foto y margen positivo** (mínimo 19,4%, mediana 35%).
+- ⚠️ Esta verificación destapó un hueco que las auditorías "resoluble" ocultaban: las **10 variantes ALTEA 80×80** estaban ACTIVE a 480,95€ **sin coste** (las subí con `--allow-no-cost`). Cero riesgo de pérdida (HPL 80×80 ≈ 258€; comparable balliu 0a3ee957 a 481,95€ cuesta 258,75€). Fijado **coste provisional 258,75€** (= la 80×80 comparable, margen 35%). **PENDIENTE: confirmar el coste real de la ALTEA 80×80 con Balliu.**
+
+**Estado de cierre: 1.642 variantes totales · 1 SKU dup (set 349,90€ en DRAFT).**
+
+**Pendiente (dueño):** `productos_pendientes_publicar.csv` = **17 productos en BORRADOR** (3 Balliu + 14 santavila marca propia) que necesitan **coste** (15) y/o **foto** (12) para poder publicarse. + aclarar el set 349,90€ (DRAFT). Ver memoria [[pricing_audit_santavila_2026_06]].
+
+---
+
 ## 2026-06-16 · IMÁGENES → COVER en toda la tienda (revierte product-fit)
 
 El dueño comparó con el tema publicado y rechazó el `contain`: las bandas blancas "quedan rarísimas". **Decisión: todas las imágenes RELLENAN su cuadro (`object-fit: cover`)**, como el live. Revierte la regla "product-fit/contain" del 2026-06-12. Memoria [[santavila_images_cover]] + `GUIA §4` actualizadas.
