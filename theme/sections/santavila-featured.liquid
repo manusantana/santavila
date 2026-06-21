@@ -1,36 +1,47 @@
 {%- liquid
   assign s = section.settings
+  assign prod = closest.product
+  assign feat_img = s.image
+  assign mf_img = prod.metafields.santavila.featured_image
+  if mf_img != blank
+    assign feat_img = mf_img.value
+  endif
+  # un MediaImage (metafield file_reference) expone .image; un image_picker YA es Image → default
+  assign feat_src = feat_img.image | default: feat_img
+  assign feat_tag = prod.metafields.santavila.featured_tag | default: s.tag
+  assign feat_eyebrow = prod.metafields.santavila.featured_eyebrow | default: s.eyebrow
+  assign feat_heading = prod.metafields.santavila.featured_heading | default: s.heading
+  assign feat_body = prod.metafields.santavila.featured_body | default: s.body
 -%}
 
+{%- if feat_src != blank -%}
 <div class="sv-section sv-featured-section color-{{ s.color_scheme }}">
   <div class="sv-container">
     <div class="sv-feat {% if s.media_position == 'right' %}sv-feat--rev{% endif %}">
       <div class="sv-feat__media">
-        {%- if s.tag != blank -%}
-          <span class="sv-feat__tag">{{ s.tag }}</span>
+        {%- if feat_tag != blank -%}
+          <span class="sv-feat__tag">{{ feat_tag }}</span>
         {%- endif -%}
-        {%- if s.image != blank -%}
-          {{
-            s.image
-            | image_url: width: 1400
-            | image_tag:
-              loading: 'lazy',
-              sizes: '(max-width: 860px) 100vw, 55vw',
-              widths: '500, 800, 1100, 1400',
-              alt: s.image.alt | default: s.heading
-          }}
-        {%- endif -%}
+        {{
+          feat_src
+          | image_url: width: 1400
+          | image_tag:
+            loading: 'lazy',
+            sizes: '(max-width: 860px) 100vw, 55vw',
+            widths: '500, 800, 1100, 1400',
+            alt: feat_heading
+        }}
       </div>
 
       <div class="sv-feat__content">
-        {%- if s.eyebrow != blank -%}
-          <p class="sv-eyebrow">{{ s.eyebrow }}</p>
+        {%- if feat_eyebrow != blank -%}
+          <p class="sv-eyebrow">{{ feat_eyebrow }}</p>
         {%- endif -%}
-        {%- if s.heading != blank -%}
-          <h2 class="sv-feat__title">{{ s.heading }}</h2>
+        {%- if feat_heading != blank -%}
+          <h2 class="sv-feat__title">{{ feat_heading }}</h2>
         {%- endif -%}
-        {%- if s.body != blank -%}
-          <p class="sv-feat__body">{{ s.body }}</p>
+        {%- if feat_body != blank -%}
+          <p class="sv-feat__body">{{ feat_body }}</p>
         {%- endif -%}
 
         {%- if s.meta1_value != blank or s.meta2_value != blank or s.meta3_value != blank -%}
@@ -64,6 +75,7 @@
     </div>
   </div>
 </div>
+{%- endif -%}
 
 {% stylesheet %}
   .sv-feat {

@@ -86,6 +86,26 @@
         "color_scheme": "scheme-1"
       }
     },
+    "santavila_featured": {
+      "type": "santavila-featured",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "media_position": "right",
+        "tag": "",
+        "eyebrow": "",
+        "heading": "",
+        "body": "",
+        "meta1_value": "",
+        "meta1_label": "",
+        "meta2_value": "",
+        "meta2_label": "",
+        "meta3_value": "",
+        "meta3_label": "",
+        "cta1_label": "",
+        "cta2_label": ""
+      },
+      "blocks": {}
+    },
     "santavila_pdp_highlights": {
       "type": "santavila-pdp-highlights",
       "settings": {},
@@ -183,6 +203,7 @@
   },
   "order": [
     "santavila_product",
+    "santavila_featured",
     "santavila_pdp_highlights",
     "santavila_pdp_social"
   ]
