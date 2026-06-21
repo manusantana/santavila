@@ -13,6 +13,22 @@
 
 ---
 
+## 2026-06-19/21 · ROL FOTÓGRAFO + GALERÍA LEISA EN VIVO (Fase 0 de imagen)
+
+Se valida el **proyecto de imagen de producto con Higgsfield**. Piloto: **LEISA** (conjunto 3 plazas antracita).
+
+**Rol del fotógrafo (documento maestro §0–§13):** [`ROL_FOTOGRAFO_SENIOR.md`](ROL_FOTOGRAFO_SENIOR.md) — leyes (fidelidad absoluta), pilares con specs medibles, 5 tomas, QA, prompt-recipe; §8 hiperrealismo "foto no render" + escenas de toda España + emparejamiento por paleta; §9 ASMR (consumible+aperitivo rotados, no siempre alcohol); §10 avatares regionales VIVOS (no de espaldas) + anti-fallo anatómico (multi-candidato + QA 4K); tells de IA (lógica de props/placement, peso, escena vacía sin vapor); §11 roster ~20 localizaciones de España + rotación; §12 Master QA; **§13 Proporcionalidad (línea roja)** con anclas antropométricas. Runbook: [`FLUJO_IMAGEN_PRODUCTO.md`](FLUJO_IMAGEN_PRODUCTO.md) + [`SET_GALERIA_PREMIUM.md`](SET_GALERIA_PREMIUM.md).
+
+**Mecánica Higgsfield (validada):** `media_import_url`(foto real) → `generate_image` (nano_banana, **prompt CORTO en modo edición**) **a 1k** (2k/4k directos salen en blanco) → `upscale_image` 4K → personas en 2 pasos. A Shopify: **JPG por staged upload** (PNG 4K >20MB los rechaza la ingesta).
+
+**Galería LEISA EN VIVO** (5×4K, escenarios ROTADOS): hero estudio · Cantabria (pareja, café) · Madrid noble (vermut) · Toledo (en reposo) · sensorial. Archivo maestro local en `images_generated/leisa/`.
+
+**Tema:** arreglado el label **"Hecho en España"** descolocado en móvil (PDP: `position: relative` en el media query) → dev + LIVE (Asset API, verificado). IDs: DEV `189114876228` / LIVE `189222715716` [[santavila_theme_ids]].
+
+**Pendiente:** "Destacada" por producto (metafield + Madrid) · barrido responsive · escalar a 2º producto.
+
+---
+
 ## 2026-06-18 · AUDITORÍA DE IMÁGENES (producto ↔ imagen) — fase de revisión
 
 Arranca el proyecto de imágenes con una auditoría en profundidad en 3 capas: estado **live** vía Admin API + **cruce determinista** archivo↔producto + **inspección visual** de 161 imágenes por agentes que las vieron. Informe completo: [`AUDITORIA_IMAGENES.md`](AUDITORIA_IMAGENES.md).

@@ -77,5 +77,5 @@ Función nativa de Dwell, ya en el tema. Revestida con estilo Santavila (`santav
 
 ## 9. Operativa (técnico)
 - Tema vive en `theme/`. `push`/`pull`/`dev` SIEMPRE con `--path theme`. Subir archivos concretos por **Asset API** (no `--only`) y verificar 200. Tras subir, `pull` a /tmp + `diff -rq` (dev == disco).
-- Dev theme: **#189114876228**. Live (NO tocar): #188231123268.
+- Dev theme: **#189114876228** (role `development`). **Live (NO tocar directo): #189222715716** (role `main`, "Santavila Theme by Ubicuo Libres Pensadores"). *(El antiguo #188231123268 ya NO es el live — ahora es un "Dwell 3.5.1" sin publicar.)* Verificar siempre con `GET /themes.json` antes de subir.
 - Documentar cada hito en `JOURNAL.md`.
