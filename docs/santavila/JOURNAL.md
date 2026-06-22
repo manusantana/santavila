@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-06-22 (tarde-4) · TUMBONA (2º producto) + LÍNEA ROJA de texturas (§15)
+
+Validado el sistema en una **tipología nueva**: Tumbona Hevea "Brescia" (DRAFT, era 1-foto), en **Verano Costero**.
+
+- **Galería (5) aplicada a la ficha** (sigue DRAFT, falta coste para publicar): packshot estudio → ambiente piscina costera (mujer reclinada, **§13.bis pasado** con un solo cuerpo: hombros ≈0,85 del ancho de 53 cm, manos correctas) → **detalle de estructura/mecanismo reclinable** → ASMR agua+sombrero → ASMR toalla+gafas+libro. Eliminada la foto real antigua.
+- **Dim. reales:** 53 ancho · 136 fondo · 105 alto cm (ancla §13.bis adaptada a tumbona).
+- **NUEVA LÍNEA ROJA (rol §15):** en ASMR/detalle **prohibido inventar material/textura**. El primer macro de "tejido" **fabricó un tweed grueso** que no es el sling fino real → rechazado y regenerado como **detalle fiel** (estructura+mecanismo), anclado a la **foto real** y a escala moderada. QA = recorte lado a lado contra la foto real. Memoria [[higgsfield_image_flow]] actualizada.
+- **Flujo Python a prueba de erratas** para subir media (staged+POST+create+delete+reorder sin copiar firmas a mano).
+
+**Estado:** parar y revisar (decisión del dueño) antes de producir en lote.
+
+---
+
 ## 2026-06-22 (tarde-3) · SISTEMA VISUAL POR TEMPORADAS (marco de marca)
 
 Decidido con el dueño el **modelo visual de toda la tienda** (rol §14):

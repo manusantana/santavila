@@ -1348,3 +1348,15 @@ RH/Kettal/Gandia Blasco disparan **fotografía real** → no pueden refrescar to
 | **Referencia validada** | Galería **LEISA** (ambiente costero recompuesto + ASMR té helado/material) |
 
 > **Regla de la temporada activa:** todos los productos que produzcamos AHORA usan "Verano Costero" → tienda cohesiva. La rotación a **"Otoño cálido (Madrid noble / Toledo)"** se hará como cambio de campaña, tocando solo la capa de temporada.
+
+---
+
+## 15. LÍNEA ROJA — materiales y texturas REALES (nunca inventar)
+
+> Añadido **2026-06-22** tras la tumbona. En los **ASMR y detalles**, está **PROHIBIDO inventar materiales o texturas que no sean los reales del producto.** Es línea roja, como la proporción.
+
+- **El enemigo es el MACRO EXTREMO de textura.** Pedir *"extreme macro del tejido"* empuja al modelo a **fabricar** un tejido (p. ej. un tweed/arpillera grueso) que no existe. En la tumbona el sling real es una **malla técnica fina y lisa**; el macro inventó un tejido grueso → **rechazado**.
+- **Regla:** los ASMR de material se anclan SIEMPRE a la **foto REAL** del producto (no al packshot IA, que ya puede haber derivado) y a **escala MODERADA** (no macro extremo), para que el material se lea como el real.
+- **Mejor que el macro de textura:** mostrar **features REALES** (mecanismo reclinable, unión estructura↔tela, curva del aluminio, costura real, nudo de cuerda real). Da "detalle premium" sin inventar nada.
+- **Si el material real es liso/fino, NO fabricar un tejido visible.** Si es cuerda/teca/ratán real, reproducir ESE patrón exacto, no otro.
+- **QA obligatorio:** comparar el detalle generado contra la foto real (**recorte lado a lado**). ¿La textura coincide con el material real? Si no → regenerar. Aplica también al **ambiente** (tela bajo la persona) y al **styling** (tela bajo los props).
