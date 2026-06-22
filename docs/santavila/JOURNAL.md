@@ -13,6 +13,20 @@
 
 ---
 
+## 2026-06-22 (tarde-2) · GALERÍA LEISA ASMR-FIRST RECONSTRUIDA Y EN VIVO
+
+Aplicada la receta nueva (**1 producto + 1 ambiente + 3 ASMR**) a LEISA, generando con Higgsfield bajo §13.bis.
+
+- **Ambiente costero (recompuesto):** generado con swap de fondo desde Madrid (hereda la composición que SÍ pasa) → costa cantábrica. 4K, QA-limpio (escala + composición + anatomía + lógica de bebida). Reemplaza a la Cantabria mal compuesta.
+- **ASMR (3):** café (la 05 que gustó) + **macro de material** (tejido + estructura, mar en bokeh) + **té helado** con menta/almendras (sin alcohol). Sin personas/manos → inmunes a escala. Consumible rotado.
+- **Galería EN VIVO (pública):** Hero → ambiente costero → ASMR café → ASMR material → ASMR té helado (todas READY, reordenadas). Eliminadas Cantabria vieja, Madrid y Toledo de la ficha.
+- **Destacada (dev):** PDP de LEISA y home actualizadas al **ambiente costero** (File `leisa_destacada_costero.jpg`; metafield + image_picker).
+- **Masters locales 4K:** `images_generated/leisa/` → `02_ambiente_costero_v2.jpg`, `06_asmr_material.jpg`, `07_asmr_te_helado.jpg`.
+
+**Flujo validado (replicable):** swap de fondo desde una toma de composición correcta = camino seguro para el ÚNICO plano con cuerpo entero; ASMR sin personas para el resto. Créditos Higgsfield: ~saldo 89→~70.
+
+---
+
 ## 2026-06-22 (tarde) · AUDITORÍA DE ESCALA + GIRO DE RECETA A "ASMR-FIRST"
 
 El dueño detecta que en la galería LEISA las personas leen **más grandes en Cantabria que en Madrid** respecto al asiento (línea roja §13). Se **frena** todo (nada de 2º producto, nada a vivo) y se audita.
