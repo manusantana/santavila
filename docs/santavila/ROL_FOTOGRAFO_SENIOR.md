@@ -1304,3 +1304,47 @@ El paisaje **enmarca y da escala; no empequeñece al producto.** El mueble es el
 - **ASMR de detalle (2–3)** → la escala se ancla **exclusivamente** con objetos cotidianos y **manos a 18 cm**. Mano gigante o taza desproporcionada = invalida el ASMR aunque la textura sea perfecta. *(Estos planos evitan por diseño el problema de cuerpo-entero.)*
 - **Ambiente / escena (ÚNICO plano con cuerpo entero)** → **chequeo MÉTRICA + COMPOSICIÓN OBLIGATORIO antes de subir.** Si falla cualquiera, **se regenera**; la galería no sube con el ambiente suspendido aunque packshot y ASMR estén impecables.
 - Como solo hay un plano con persona por producto, la **consistencia se traslada entre PRODUCTOS** de la misma colección: la modelo no cambia de tamaño ni de "sensación" de una ficha a otra.
+
+---
+
+## 14. Sistema de temporadas (modelo visual de la tienda)
+
+> Decidido **2026-06-22** con el dueño. Es el marco que ordena TODAS las imágenes de Santavila y permite refrescar la tienda como una marca de moda **sin re-fotografiar el catálogo entero**.
+
+### 14.0 Las dos capas (no confundir — es la clave de todo)
+- **Backbone de producto — ESTABLE todo el año.** Packshot (pos-1) + 2–3 **ASMR** (material/detalle/consumible). Es la *verdad* del producto: lo que necesitan Google Shopping, el SEO y el reconocimiento. **No se re-hace por temporada.**
+- **Capa de temporada — ROTA.** El **1 ambiente** por producto + home + heroes de colección + Destacada + social. Aquí viven la **estación, el lugar y la campaña**.
+
+### 14.1 Principio rector
+- **Eje = TEMPORADA** (el calendario manda; el exterior es brutalmente estacional).
+- **El LUGAR es el TEMA de la temporada, NO una etiqueta permanente del producto.** El mismo SKU debe vendérsele igual al cliente de Madrid que al de la costa; no se encadena a un sitio para siempre.
+- **El tipo de producto define la ESCENA** (comedor de teca ≠ lounge de cuerda ≠ tumbona) → *craft* dentro del tema (§8/§11). Resultado: **cohesión por temporada + diferenciación por tipo de producto.**
+
+### 14.2 Guardarraíl operativo (PM)
+- **pos-1 (packshot) NO cambia entre temporadas** — es la imagen de Google/`og:image`; estabilidad de feed y reconocimiento.
+- El cambio estacional vive en **pos-2 (ambiente)** + editorial + **un acento estacional ligero en UN ASMR** (consumible/luz: té helado en verano → café + manta de lana en otoño).
+- **Cadencia inicial: 2 temporadas/año** — Primavera-Verano (la grande, pico) y Otoño-Invierno (cálido/cobijo). Ampliable a micro-refrescos.
+
+### 14.3 El foso (por qué podemos y los gigantes no)
+RH/Kettal/Gandia Blasco disparan **fotografía real** → no pueden refrescar todo el catálogo cada temporada (coste). Con el flujo validado (**swap de fondo desde una composición fija correcta**, §13.bis) **Santavila sí puede** → más viva y más estacional que los gigantes. **Ventaja competitiva real.**
+
+### 14.4 Plantilla de brief de temporada
+| Campo | Qué fija |
+|---|---|
+| **Tema / lugar** | La región protagonista de la temporada |
+| **Paleta** | Colores de fondo/atrezzo (deben CONVERSAR con el textil/chasis, §8) |
+| **Luz / hora** | Tipo de luz y momento del día (física, no adjetivos) |
+| **Consumible / styling** | Qué se bebe/come y cómo se viste la escena (rotando, §9) |
+| **Props / vegetación** | Plantas y objetos coherentes con lugar y estación |
+
+### 14.5 TEMPORADA ACTIVA — "Verano Costero" (Cantábrico / Levante)
+| Campo | Definición |
+|---|---|
+| **Tema / lugar** | Costa del norte (Cantábrico: piedra, hortensias, mar gris-azul, colinas verdes); Levante/Mediterráneo cuando el producto pide luz más cálida |
+| **Paleta** | Gris-azul marino, verde costero, piedra, cal, blanco roto; hortensia azul/blanca |
+| **Luz / hora** | Suave de mañana/tarde; día algo cubierto del norte (fría, difusa) o dorada baja en Levante |
+| **Consumible / styling** | Rotar: café de mañana · té helado con menta · vermut + aceitunas · aperitivo ligero; lino natural, ropa clara |
+| **Props / vegetación** | Hortensias, helechos, olivo/yuca en barro, muro de piedra; **nada tropical genérico** |
+| **Referencia validada** | Galería **LEISA** (ambiente costero recompuesto + ASMR té helado/material) |
+
+> **Regla de la temporada activa:** todos los productos que produzcamos AHORA usan "Verano Costero" → tienda cohesiva. La rotación a **"Otoño cálido (Madrid noble / Toledo)"** se hará como cambio de campaña, tocando solo la capa de temporada.

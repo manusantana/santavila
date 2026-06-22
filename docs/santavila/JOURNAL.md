@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-06-22 (tarde-3) · SISTEMA VISUAL POR TEMPORADAS (marco de marca)
+
+Decidido con el dueño el **modelo visual de toda la tienda** (rol §14):
+- **Dos capas:** *backbone de producto* (packshot + ASMR) **estable** todo el año; *capa de temporada* (1 ambiente por producto + home + heroes + Destacada + social) que **rota**.
+- **Eje = temporada**; el **lugar es el tema rotativo** de cada temporada, no una etiqueta fija del producto; el **tipo de producto define la escena** (craft). Cohesión por temporada + diferenciación por tipo.
+- **Guardarraíl PM:** pos-1 packshot NO cambia (Google/og:image); el cambio vive en pos-2 + editorial + acento estacional ligero en un ASMR. Cadencia: 2 temporadas/año.
+- **Foso:** con el flujo IA (swap de fondo) podemos refrescar todo el catálogo cada temporada; RH/Kettal (foto real) no.
+- **TEMPORADA ACTIVA = "Verano Costero" (Cantábrico/Levante):** todos los productos se producen ahora en ella → tienda cohesiva. Brief en §14.5. Memorias: [[santavila_visual_season_system]], [[santavila_scale_standard]].
+
+**Siguiente:** escalar al 2º producto con este marco + el flujo validado.
+
+---
+
 ## 2026-06-22 (tarde-2) · GALERÍA LEISA ASMR-FIRST RECONSTRUIDA Y EN VIVO
 
 Aplicada la receta nueva (**1 producto + 1 ambiente + 3 ASMR**) a LEISA, generando con Higgsfield bajo §13.bis.
