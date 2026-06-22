@@ -13,6 +13,21 @@
 
 ---
 
+## 2026-06-22 (tarde) · AUDITORÍA DE ESCALA + GIRO DE RECETA A "ASMR-FIRST"
+
+El dueño detecta que en la galería LEISA las personas leen **más grandes en Cantabria que en Madrid** respecto al asiento (línea roja §13). Se **frena** todo (nada de 2º producto, nada a vivo) y se audita.
+
+**Auditoría rigurosa (workflow `audit-escala-leisa`, 7 agentes):** medición por imagen + comparación **lado a lado** + verificación. Resultado contraintuitivo y **honesto**:
+- **Escala MÉTRICA del cuerpo = correcta en ambas** (hombros 0,75–0,80 de cojín, factor ~1,0, estatura implícita ~173 cm en las dos). El cuerpo **no** es más grande en Cantabria.
+- **La diferencia real es COMPOSICIÓN/OCUPACIÓN:** Cantabria mete **2 personas juntas** que **llenan el sofá** (0 cojines libres) + postura inclinada a cámara + plano abierto → leen "enormes". Madrid: 1 persona + **1 cojín vacío** + reclinada + plano cerrado → "holgado". Viola la regla **ya existente** §13.7-B ("deja sitio para otras dos"); el fallo fue de **enforcement**, no de la herramienta. El mueble y los cuerpos son **dimensionalmente fieles** (refuerza el "100% real").
+- **Fix correcto:** no encoger personas → **separar figuras (cojín visible), enderezar espalda, plano más cerrado.**
+
+**Estándar grabado:** [`ROL_FOTOGRAFO_SENIOR.md`](ROL_FOTOGRAFO_SENIOR.md) **§13.bis** — la **doble puerta** (escala métrica + composición/ocupación), anclas verificables (cojín 60 · sillón 76 · asiento 44 · respaldo 85 · taza 8 · libro 30 · copa 22 · mano 18), protocolo, umbrales y reglas de ocupación.
+
+**Giro de estrategia (dueño):** menos ambientes, **mucho más ASMR/detalle** (como la 05 sensorial: "hay vida", escala anclada por objetos cotidianos → inmune al problema de cuerpo entero). **Nueva receta por producto:** 1 foto de producto + 1 ambiente/escena (con check de escala obligatorio) + **2–3 ASMR**. Cantabria revertida ya del home; pendiente reconstruir galería LEISA (drop Cantabria + 2 ASMR nuevos), a confirmar receta.
+
+---
+
 ## 2026-06-22 · DESTACADA POR PRODUCTO + BARRIDO RESPONSIVE (tema)
 
 Cerrados dos pendientes del hito anterior, sobre el **tema dev** (`189114876228`).

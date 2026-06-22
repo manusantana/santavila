@@ -1239,3 +1239,68 @@ El paisaje **enmarca y da escala; no empequeñece al producto.** El mueble es el
 ---
 
 > **Veredicto de proporción:** ¿algún `BLOQUEANTE` en ❌? → **regenerar, NO subir** (anota la causa: "persona gigante" / "mueble diminuto" / "prop sobredimensionado" / "perspectiva incoherente"). La proporción es **línea roja**: por encima del "más espectacular". Las tres fuerzas conviven — **ASMR** (vive), **LANDSCAPE** (encaja la escena), **PROPORCIÓN** (todo a su tamaño real). Una toma bellísima en la que la persona encoge el sofá **falla y se regenera**.
+
+---
+
+## 13.bis Estándar de escalabilidad: escala MÉTRICA + COMPOSICIÓN (lección Cantabria)
+
+> **Auditoría 2026-06-22** (medición por imagen + comparación lado a lado, verificada). **Conclusión clave:** la escala **métrica** del cuerpo puede *pasar* y aun así la toma leerse "personas enormes". El segundo filtro —**COMPOSICIÓN / OCUPACIÓN**— es el que de verdad falló en Cantabria. **Son dos puertas; suben solo las tomas que pasan LAS DOS.**
+
+### 13.bis.0 La doble puerta (ambas BLOQUEANTES)
+1. **Escala métrica** (§13.7): hombros, cabeza, postura y props contra la **vara del mueble**.
+2. **Composición / ocupación**: aunque cada cuerpo esté a escala real, el **encuadre** y la **ocupación del asiento** pueden hacerlo leer gigante. Esta es la que se nos escapó.
+
+### 13.bis.1 Caso Cantabria — qué aprendimos (no repetir)
+- **Medición:** hombros mujer **0,80 cojín**, factor **~1,0**, estatura implícita **~173 cm** → *escala métrica = PASS*.
+- **Lado a lado contra Madrid** (0,75 cojín, **misma** escala): la diferencia **NO es tamaño de cuerpo**, es **composición**:
+  - 2 personas juntas, codo con codo → **sofá lleno, 0 cojines libres** (viola §13.7-B "deja sitio para otras dos").
+  - **postura inclinada hacia cámara** → acerca torsos → los infla.
+  - **encuadre más abierto/lejano** → comprime el sofá.
+- **Madrid (referencia correcta):** 1 persona + **1 cojín vacío visible** + postura reclinada + plano más cerrado → "holgado y real".
+- **Fix correcto (literal del análisis):** *no* encoger personas → **separar las figuras dejando un cojín visible, enderezar la espalda, plano más cerrado.**
+
+### 13.bis.2 Reglas de composición / ocupación — BLOQUEANTE (lo que faltaba enforce)
+- [ ] **Aire en el asiento:** en sofá de 3 plazas, **máx. 2 personas** y SIEMPRE con **≥1 cojín visible libre**. Nunca dos cuerpos "codo con codo" llenando el centro.
+- [ ] **Respira el mueble:** debe verse asiento/mueble libre alrededor de la persona. Si el cuerpo toca **los dos extremos** del asiento → recomponer.
+- [ ] **Postura que no infla:** evitar la inclinación fuerte hacia cámara; preferir reclinado/abierto. La masa corporal no se concentra en primer plano.
+- [ ] **Distancia y focal CONSISTENTES** entre el ambiente de un producto y el de otro de la misma colección (no uno comprimido y otro abierto): la "sensación de tamaño" debe ser **constante entre fichas**.
+
+### 13.bis.3 Anclas verificables (regla del set)
+| Ancla | Cota real | Para qué sirve |
+|---|---|---|
+| Cojín de asiento del sofá | **60 cm** (3 = 196 cm) | Regla primaria. Todo se mide como fracción de cojín. |
+| Sillón (ancho) | **76 cm** | Verificación cruzada (~0,39 del sofá). 2ª regla para hombros. |
+| Altura de asiento | **44 cm** | Postura: rodillas a 90° + pies planos. |
+| Altura de respaldo | **85 cm** | Coronilla a/por debajo del respaldo. |
+| Taza de cerámica | **8 cm Ø** | Ancla cotidiana principal en ASMR. |
+| Libro abierto | **30 cm** | Ancla 2ª. Taza ≈ 1/3,4 del libro. |
+| Copa de vino (balón) | **22 cm alto** | Ancla de sobremesa/ambiente. |
+| Mano humana | **18 cm largo** | Ancla **obligatoria** en ASMR con manos. |
+
+### 13.bis.4 Protocolo de medición (repetible)
+1. **Identificar la regla** en el encuadre (cojín 60 cm → sillón 76 cm → taza/libro en ASMR).
+2. **Medir hombros** como fracción de cojín (esperado **0,70–0,80**).
+3. **Calcular factor** = implícito ÷ real esperado (promedio hombros/cabeza/asiento).
+4. **Derivar estatura** de pie (banda objetivo **160–188 cm**).
+5. **Verificación cruzada** con anclas cotidianas (taza 8, libro 30, copa 22, mano 18).
+6. **Postura:** rodillas 90° + pies planos (asiento 44 cm); coronilla ≤ respaldo (85 cm).
+7. **Composición:** aplicar §13.bis.2 (aire, ocupación, postura, focal).
+8. **Consistencia entre tomas/productos:** misma estatura implícita y misma "sensación de tamaño" en todo el set.
+9. **Veredicto:** pasa métrica **Y** composición → *sube*; falla una → *regenera*.
+
+### 13.bis.5 Umbrales
+| Métrica | Umbral | Acción |
+|---|---|---|
+| Factor de escala | **0,92–1,10** | Fuera → regenerar |
+| Hombros / cojín | **≤ 0,80** (sano 0,70–0,80) | Regenerar |
+| Estatura implícita de pie | **160–188 cm** | Regenerar |
+| Altura sentada vs respaldo | **≤ 85 cm** (tol. 88) | Regenerar |
+| Ocupación sofá 3 plazas | **≤ 2 personas + ≥1 cojín libre** | Recomponer |
+| Consistencia entre tomas | **variación ≤ 5 %** | Revisar ambas |
+| Anclas cotidianas | taza 8±1 · libro 30±2 · copa 22±2 · mano 18±2 | Regenerar ASMR |
+
+### 13.bis.6 Implicaciones de la receta ASMR-first (1 producto + 1 ambiente + 2–3 ASMR)
+- **Packshot de producto** → *na* antropométrico; validar solo coherencia mueble/objeto (sofá 196 = 3 cojines, sillón 76, mesa < 44 cm).
+- **ASMR de detalle (2–3)** → la escala se ancla **exclusivamente** con objetos cotidianos y **manos a 18 cm**. Mano gigante o taza desproporcionada = invalida el ASMR aunque la textura sea perfecta. *(Estos planos evitan por diseño el problema de cuerpo-entero.)*
+- **Ambiente / escena (ÚNICO plano con cuerpo entero)** → **chequeo MÉTRICA + COMPOSICIÓN OBLIGATORIO antes de subir.** Si falla cualquiera, **se regenera**; la galería no sube con el ambiente suspendido aunque packshot y ASMR estén impecables.
+- Como solo hay un plano con persona por producto, la **consistencia se traslada entre PRODUCTOS** de la misma colección: la modelo no cambia de tamaño ni de "sensación" de una ficha a otra.
