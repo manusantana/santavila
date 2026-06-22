@@ -13,6 +13,26 @@
 
 ---
 
+## 2026-06-22 · DESTACADA POR PRODUCTO + BARRIDO RESPONSIVE (tema)
+
+Cerrados dos pendientes del hito anterior, sobre el **tema dev** (`189114876228`).
+
+**Sección "Destacada" por producto** ([`sections/santavila-featured.liquid`](../../theme/sections/santavila-featured.liquid)): ahora es **metafield-aware** vía `closest.product`. Lee `santavila.featured_image` (file_reference) + `featured_tag/eyebrow/heading/body`, con `section.settings` como _fallback_. Detalles:
+- **Resolución robusta de imagen:** `feat_src = feat_img.image | default: feat_img` → sirve para `MediaImage` (metafield) **y** para `image_picker` (home), sin romper ninguno.
+- **Guard `if feat_src != blank`:** la sección solo renderiza si hay imagen → aparece **solo donde hay metafield**; en productos sin foto (y en el home sin imagen) queda **oculta** en vez de mostrar una caja vacía.
+- **Colocación:** insertada en [`templates/product.json`](../../theme/templates/product.json) entre `santavila_product` y `santavila_pdp_highlights` ("Por qué Santavila"), imagen a la derecha, métricas/CTAs ocultas por ahora (hasta tener colecciones).
+- **LEISA:** imagen **Madrid noble** subida como _File_ (`gid://shopify/MediaImage/70834392596804`, 4096²) + copy honesto (sin inventar materiales) fijado por `metafieldsSet`. **Verificado en preview dev**: render + `srcset` + orden + eyebrow/tag/body correctos.
+- ⚠️ **Decisión pendiente del dueño:** el `santavila_featured` del **home** no tiene imagen → ahora queda oculto por el guard. Decidir si darle una imagen (p. ej. Cantabria) o dejarlo oculto.
+
+**Barrido responsive (auditoría CSS estática, sin bugs nuevos):**
+- Clase del bug "Hecho en España" (`position:absolute` que pierde su ancla en móvil): **no se repite**. Los 6 `position:static` en media queries son el fix intencionado o `sticky→static` seguros (sin hijos absolutos).
+- `min-width:240px` del panel de filtros ya se anula en móvil; títulos `nowrap` se truncan con `ellipsis` (no desbordan); sin anchos fijos grandes.
+- Todos los grids colapsan bien en teléfono (1 col o 2 col en tarjetas/escenarios/upsell); ninguno se queda en 3–4 columnas.
+
+**Commit:** `bbe924f` (rama `redesign`). **Siguiente:** decidir Destacada del home + **escalar imágenes a un 2º producto** con escenarios rotados (confirmar SKU; consume créditos Higgsfield).
+
+---
+
 ## 2026-06-19/21 · ROL FOTÓGRAFO + GALERÍA LEISA EN VIVO (Fase 0 de imagen)
 
 Se valida el **proyecto de imagen de producto con Higgsfield**. Piloto: **LEISA** (conjunto 3 plazas antracita).
