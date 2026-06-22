@@ -13,6 +13,18 @@
 
 ---
 
+## 2026-06-22 (tarde-6) · NO-REBAJA + TRANSPORTE VALIDADO + DESTACADA GENERAL
+
+Tres cosas a raíz de la revisión del dueño en móvil:
+
+- **Rebajas (compare-at) eliminadas de TODO el catálogo:** 1.515 variantes en **130 productos** tenían `compareAtPrice` (lo ponía el sync `psy_compare` = price×1,10) → borradas (directiva "precios definitivos, sin rebaja"). **Ningún `price` ni `cost` tocado.** Backup reversible en `compare_at_backup.csv`. ⚠️ Si se re-ejecuta `sync_prices_to_shopify.py`, vuelven; para cerrarlo del todo habría que desactivar `psy_compare` (el dueño lo deja para más adelante).
+- **Pricing re-auditado (en vivo, `precios_santavila.py --audit`):** **0 bajo coste · 0 infra/sobre vs Col G · 100% terminaciones ,95/,90/,00 · 0 ACTIVE sin coste.** Márgenes ACTIVE: mediana 35,1%, mín 19,4% (mesa centro 120). Verificado además que los 1.515 precios afectados por el borrado **no cambiaron** (0/1.515).
+- **Regla del transporte VALIDADA (no rota):** vive en el Excel (Col K "Coste Envío" 50€ en 26 voluminosos) y en los **perfiles de envío de Shopify**: **gratis ≥500 €**, y por debajo el cliente paga por tamaño (XS 9,95 · M 29,95 · L 57,95 · Hevea 50). Como el cliente cubre el transporte por debajo de 500€ y por encima el pedido lo absorbe, **la ganancia final está protegida**. El borrado de compare-at no toca nada de esto.
+- **Destacada GENERAL para todos los productos:** generada imagen de marca (terraza costera española al atardecer, olivo + mar, fotorreal, sin muebles/personas) → `santavila_destacada_general.jpg` (File). Puesta como **imagen por defecto** del `santavila_featured` en `product.json` (live + dev + local) + copy de marca ("Hecho en España" / "Pensado para vivirse fuera"). Verificado: sale en la tumbona y en todos; **LEISA mantiene su imagen propia** por metafield. Master: `images_generated/brand/`.
+- Bug del sticky cart (3 precios) era el compare-at → resuelto al borrarlo (queda 1 precio).
+
+---
+
 ## 2026-06-22 (tarde-5) · TODO A LIVE (Destacada + tumbona publicada)
 
 Subido todo a la tienda pública (autorizado por el dueño):
