@@ -13,6 +13,17 @@
 
 ---
 
+## 2026-06-22 (tarde-5) · TODO A LIVE (Destacada + tumbona publicada)
+
+Subido todo a la tienda pública (autorizado por el dueño):
+- **Destacada al tema LIVE** (`189222715716`) de forma **quirúrgica** (no se pisó el live): sección `santavila-featured.liquid` (versión metafield-aware + guard) wholesale; `product.json` → insertada la Destacada tras `santavila_product` sobre la versión del live; `index.json` → solo cambiada la imagen del featured del home a la costera (dev/live divergían en otras cosas, no se tocaron). Verificado en público: PDP de LEISA y home muestran la Destacada costera; **el guard funciona en producción** (no aparece en productos sin metafield, p. ej. la tumbona).
+- **Tumbona PUBLICADA** (DRAFT→ACTIVE): cumple la regla [[santavila_publish_requires_cost_and_photo]] — coste 101 € + precio 193,95 € (margen ~48%) + 5 fotos. URL pública `santavila.com/products/tumbona-de-exterior`. Reversible a DRAFT si se quiere.
+- LEISA ya era ACTIVE → su galería costera ya era pública.
+
+**Pendiente futuro:** reconciliar divergencia dev↔live de `index.json` (escapado/`min_height`) en algún momento; decidir producción en lote.
+
+---
+
 ## 2026-06-22 (tarde-4) · TUMBONA (2º producto) + LÍNEA ROJA de texturas (§15)
 
 Validado el sistema en una **tipología nueva**: Tumbona Hevea "Brescia" (DRAFT, era 1-foto), en **Verano Costero**.
