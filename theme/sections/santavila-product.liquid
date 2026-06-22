@@ -322,6 +322,9 @@
         var clone = pc.cloneNode(true);
         clone.querySelectorAll('.visually-hidden').forEach(function (e) { e.remove(); });
         var txt = (clone.textContent || '').replace(/\s+/g, ' ').trim();
+        // Dwell duplica el precio cuando no hay compare-at → toma SOLO el primer importe.
+        var m = txt.match(/\d[\d.,]*\s*€|€\s*\d[\d.,]*/);
+        if (m) txt = m[0].trim();
         if (txt) stickyPriceEl.textContent = txt;
       };
       sync();

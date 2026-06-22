@@ -13,6 +13,15 @@
 
 ---
 
+## 2026-06-22 (noche) · PDP TOP: cross-sell relacionados + fix sticky
+
+Revisión del dueño en móvil → dos arreglos en la PDP (todo a live):
+- **Sticky cart duplicaba el precio:** el JS clonaba el bloque de precio de Dwell que, **sin compare-at**, escribe el importe dos veces. Fix en `santavila-product.liquid`: el clon ahora extrae **solo el primer importe** (regex `\d[\d.,]*\s*€`).
+- **Quitada la "Destacada" (imagen genérica en blanco) de la PDP** y sustituida por un módulo premium de **cross-sell / relacionados** ([`sections/santavila-related.liquid`](../../theme/sections/santavila-related.liquid)): reutiliza el motor de Dwell (`product-recommendations.js` + objeto `recommendations`, `morphSection` async) pero con la **tarjeta Santavila** (`santavila-product-card`). Fallback robusto: si no hay recomendaciones → productos de la misma colección → catálogo (nunca sale vacía). Colocada **al final** de la ficha (producto → por qué → confianza → relacionados).
+- Verificado en vivo (tumbona): muestra "Colchoneta exterior para tumbona" (complementario) + mini-tumbonas. La `santavila-featured` sigue en el home; solo se quitó de la PDP.
+
+---
+
 ## 2026-06-22 (tarde-6) · NO-REBAJA + TRANSPORTE VALIDADO + DESTACADA GENERAL
 
 Tres cosas a raíz de la revisión del dueño en móvil:

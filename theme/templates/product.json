@@ -171,31 +171,21 @@
         "heading": "Compra con tranquilidad"
       }
     },
-    "santavila_featured": {
-      "type": "santavila-featured",
+    "santavila_related": {
+      "type": "santavila-related",
       "settings": {
-        "color_scheme": "scheme-1",
-        "media_position": "right",
-        "tag": "",
-        "eyebrow": "Hecho en España",
-        "heading": "Pensado para vivirse fuera",
-        "body": "Diseño y fabricación en España para tu terraza y tu jardín. Mobiliario de exterior con carácter, hecho para vivir el aire libre.",
-        "meta1_value": "",
-        "meta1_label": "",
-        "meta2_value": "",
-        "meta2_label": "",
-        "meta3_value": "",
-        "meta3_label": "",
-        "cta1_label": "",
-        "cta2_label": "",
-        "image": "shopify:\/\/shop_images\/santavila_destacada_general.jpg"
+        "recommendation_type": "related",
+        "eyebrow": "Para tu espacio",
+        "heading": "También te puede gustar",
+        "max_products": 4,
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "santavila_product",
-    "santavila_featured",
     "santavila_pdp_highlights",
-    "santavila_pdp_social"
+    "santavila_pdp_social",
+    "santavila_related"
   ]
 }

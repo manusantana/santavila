@@ -1,0 +1,109 @@
+{%- comment -%}
+  Santavila · Relacionados / cross-sell para la PDP.
+  Reutiliza el motor de Dwell (product-recommendations.js + objeto `recommendations`)
+  pero renderiza la TARJETA premium Santavila (snippet santavila-product-card).
+  Fallback robusto: si no hay recomendaciones, muestra productos de la misma colección
+  (y, en último caso, del catálogo) → nunca sale vacía.
+{%- endcomment -%}
+<script
+  src="{{ 'product-recommendations.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+{%- liquid
+  assign s = section.settings
+  assign prod = s.product | default: closest.product | default: product
+  assign maxp = s.max_products | default: 4
+-%}
+
+<product-recommendations
+  id="sv-related-{{ section.id }}"
+  class="sv-related-wrap"
+  data-url="{{ routes.product_recommendations_url }}?limit={{ maxp }}"
+  data-section-id="{{ section.id }}"
+  data-product-id="{{ prod.id }}"
+  data-intent="{{ s.recommendation_type }}"
+  data-recommendations-performed="{{ recommendations.performed }}"
+  {{ section.shopify_attributes }}
+>
+  {%- liquid
+    # fuente: recomendaciones reales si las hay; si no, misma colección; si no, catálogo
+    if recommendations.performed and recommendations.products_count > 0
+      assign items = recommendations.products
+    else
+      assign items = blank
+      for c in prod.collections
+        if items == blank and c.handle != 'frontpage' and c.handle != 'all'
+          assign items = c.products
+        endif
+      endfor
+      if items == blank
+        assign items = collections.all.products
+      endif
+    endif
+  -%}
+  {%- assign count = 0 -%}
+  {%- capture cards -%}
+    {%- for product in items -%}
+      {%- if product.id != prod.id and count < maxp -%}
+        {%- render 'santavila-product-card', product: product, sizes: '(max-width: 749px) 50vw, (max-width: 989px) 33vw, 25vw' -%}
+        {%- assign count = count | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  {%- if count > 0 -%}
+    <div class="sv-section sv-related color-{{ s.color_scheme }}">
+      <div class="sv-container">
+        {%- if s.eyebrow != blank -%}<p class="sv-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.heading != blank -%}<h2 class="sv-related__title">{{ s.heading }}</h2>{%- endif -%}
+        <div class="sv-related__grid">{{ cards }}</div>
+      </div>
+    </div>
+  {%- endif -%}
+</product-recommendations>
+
+{% stylesheet %}
+  .sv-related { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-related__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(26px, 3.4vw, 42px);
+    line-height: 1.04;
+    margin: 6px 0 clamp(26px, 3vw, 44px);
+  }
+  .sv-related__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 2vw, 30px);
+  }
+  @media screen and (max-width: 989px) {
+    .sv-related__grid { grid-template-columns: repeat(2, 1fr); gap: 16px 14px; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila Relacionados",
+  "tag": "section",
+  "class": "sv-related-section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Producto (auto en la ficha)" },
+    {
+      "type": "select",
+      "id": "recommendation_type",
+      "label": "Tipo de recomendación",
+      "options": [
+        { "value": "related", "label": "Relacionados (automático)" },
+        { "value": "complementary", "label": "Complementarios (comprados juntos)" }
+      ],
+      "default": "related"
+    },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Para tu espacio" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "También te puede gustar" },
+    { "type": "range", "id": "max_products", "label": "Nº de productos", "min": 2, "max": 8, "step": 1, "default": 4 },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" }
+  ],
+  "presets": [ { "name": "Santavila Relacionados" } ]
+}
+{% endschema %}
