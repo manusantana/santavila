@@ -106,6 +106,10 @@
               <span>Entrega estimada: hasta 30 días según disponibilidad del proveedor.</span>
             </li>
             <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+              <span>Envío gratis a partir de 500&nbsp;€.</span>
+            </li>
+            <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15l12-12 6 6L9 21z"/><path d="M7.5 10.5l2 2"/></svg>
               <span>Fácil de montar en casa, con instrucciones ilustradas.</span>
             </li>
@@ -341,7 +345,7 @@
   }
   .sv-pdp__grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: clamp(24px, 4vw, 64px);
     align-items: start;
   }
@@ -863,14 +867,15 @@
   .sv-gal__thumb {
     position: relative;
     width: 78px;
-    height: 78px;
+    height: auto;
+    flex: 1 1 0;
+    min-height: 60px;
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
     background: var(--bone, #EEE8DA);
     cursor: pointer;
     padding: 0;
-    flex: none;
     transition: border-color 0.2s var(--ease, ease);
   }
   .sv-gal__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -1029,6 +1034,8 @@
       order: 2;
       margin-top: 10px;
     }
+    /* En móvil el rail es una fila horizontal: miniaturas cuadradas fijas (no estirar). */
+    .sv-gal__thumb { flex: 0 0 auto; width: 72px; height: 72px; min-height: 0; }
     .sv-gal__stage { order: 1; }
   }
   @media screen and (max-width: 560px) {

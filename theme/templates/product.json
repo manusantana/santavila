@@ -74,7 +74,8 @@
         "buy-buttons"
       ],
       "settings": {
-        "color_scheme": "scheme-1"
+        "color_scheme": "scheme-1",
+        "size_guide": "<p>Antes de elegir, mide el espacio donde la colocarás y deja paso para moverte con holgura (40–60&nbsp;cm alrededor).</p><p>Las medidas exactas (ancho, fondo y alto) están en la descripción. ¿Dudas con tu espacio? Escríbenos por WhatsApp o a hola@santavila.com y te ayudamos.</p>"
       }
     },
     "santavila_pdp_highlights": {
@@ -83,55 +84,35 @@
         "b1": {
           "type": "benefit",
           "settings": {
-            "title": "Resiste sol, lluvia y salitre",
-            "text": "Materiales probados en exterior real español."
+            "title": "Diseño y fabricación en España",
+            "text": "Pensado aquí, para nuestro clima y nuestra forma de vivir el exterior."
           }
         },
         "b2": {
           "type": "benefit",
           "settings": {
-            "title": "Asiento profundo, fundas lavables",
-            "text": "Comodidad de salón y cojines desenfundables."
+            "title": "Hecho para el exterior",
+            "text": "Materiales pensados para vivir a la intemperie durante todo el año."
           }
         },
         "b3": {
           "type": "benefit",
           "settings": {
             "title": "Fácil de montar en casa",
-            "text": "Pocos bultos, instrucciones claras; lo montas tú."
-          }
-        },
-        "f1": {
-          "type": "feature",
-          "settings": {
-            "title": "Aluminio termolacado",
-            "text": "Ligero, no se oxida."
-          }
-        },
-        "f2": {
-          "type": "feature",
-          "settings": {
-            "title": "Cuerda náutica PE",
-            "text": "Tacto textil, color estable al sol."
-          }
-        },
-        "f3": {
-          "type": "feature",
-          "settings": {
-            "title": "Modular",
-            "text": "Combina según tu espacio."
+            "text": "Llega en pocos bultos, con instrucciones claras; lo montas tú."
           }
         }
       },
       "block_order": [
         "b1",
         "b2",
-        "b3",
-        "f1",
-        "f2",
-        "f3"
+        "b3"
       ],
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/santavila_pdp_brand.jpg",
+        "eyebrow": "Por qué Santavila",
+        "heading": "Pensado para durar fuera"
+      }
     },
     "santavila_pdp_social": {
       "type": "santavila-pdp-social",
@@ -168,7 +149,9 @@
       ],
       "settings": {
         "eyebrow": "",
-        "heading": "Compra con tranquilidad"
+        "heading": "Compra con tranquilidad",
+        "includes_heading": "Llega listo para montar",
+        "includes": "<p>En pocos bultos, con instrucciones ilustradas y todo lo necesario para el montaje. Sin servicio de montaje a domicilio: lo montas tú, sin herramientas especiales.</p>"
       }
     },
     "santavila_related": {

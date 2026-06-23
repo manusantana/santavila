@@ -2,14 +2,20 @@
   assign s = section.settings
   assign benefits = section.blocks | where: 'type', 'benefit'
   assign features = section.blocks | where: 'type', 'feature'
+  # Imagen del bloque = el AMBIENTE del propio producto (2ª foto) si existe; si no, la imagen de marca (s.image).
+  assign hl_img = s.image
+  assign hl_prod = closest.product
+  if hl_prod.images.size > 1
+    assign hl_img = hl_prod.images[1]
+  endif
 -%}
 <div class="sv-section sv-hl-section color-{{ s.color_scheme }}">
   <div class="sv-container">
     {%- if benefits.size > 0 -%}
       <div class="sv-hl__grid">
         <div class="sv-hl__media">
-          {%- if s.image != blank -%}
-            {{ s.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(max-width: 860px) 100vw, 50vw', widths: '500,800,1100,1200', alt: s.heading }}
+          {%- if hl_img != blank -%}
+            {{ hl_img | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(max-width: 860px) 100vw, 50vw', widths: '500,800,1100,1200', alt: s.heading }}
           {%- endif -%}
         </div>
         <div class="sv-hl__list">

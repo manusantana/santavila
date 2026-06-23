@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-06-23 · PDP INTEGRAL VERIFICADA (galería, imagen-ambiente, honestidad)
+
+Pasada **integral y verificada al 100%** de la PDP (con auditoría adversarial independiente), tras feedback del dueño sobre errores cíclicos. Todo a live + verificado:
+
+- **Galería:** rejilla `1.2fr 1fr`→`1fr 1fr` (imagen más pequeña) + miniaturas `flex:1 1 0` que **llenan el rail** (alineadas con la foto); en móvil quedan cuadradas fijas.
+- **"Por qué Santavila":** la caja estaba **vacía** (era la imagen del highlights, no la Destacada). Ahora muestra **el AMBIENTE del propio producto** (`closest.product.images[1]`), con imagen de marca de lujo (`santavila_pdp_brand.jpg`, File verificado que SÍ sirve) como **fallback** para productos de 1 foto.
+- **Honestidad (líneas rojas) — falsas eliminadas:**
+  - Highlights: fuera "Asiento profundo, fundas lavables", "Cuerda náutica PE", "Modular", "Aluminio termolacado" (LEISA-específicas aplicadas a todos) → copy genérico honesto.
+  - Confianza (`santavila-pdp-social`): default "cojines desenfundables" → "todo lo necesario para el montaje". Titular default "Razones reales para confiar" (prohibido por GUÍA) → "Compra con tranquilidad".
+  - **Descripción de la tumbona** reescrita: material real (aluminio + textileno), reclinable, dimensiones; **fuera** "Resistente a rayos UV" y "no requiere almacenamiento en invierno" (absolutos no verificables).
+- **Mejoras premium:** material declarado; "**Envío gratis a partir de 500 €**" en iconos de confianza; modal "Guía de medidas" deja de ser placeholder; sticky a un solo precio.
+- **Honestidad global:** 0 frases prohibidas; métodos de pago dinámicos (`shop.enabled_payment_types`) = reales.
+
+**⚠️ PENDIENTE GRANDE (línea roja, catálogo):** la **descripción tipo** de MUCHOS productos (importadas) repite "Resistente a rayos UV, lluvia y humedad" y "no requiere almacenamiento en invierno" — **afirmaciones no verificables**. Corregida solo la tumbona; **falta una pasada honesta a todas las descripciones del catálogo.**
+
+---
+
 ## 2026-06-22 (noche) · PDP TOP: cross-sell relacionados + fix sticky
 
 Revisión del dueño en móvil → dos arreglos en la PDP (todo a live):
