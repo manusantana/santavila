@@ -696,6 +696,20 @@ Cada tarea tiene un **ID estable** (`F0-01`, `F1-02`…) que se puede citar en c
 
 ---
 
+### F5-06 · Honestidad de las descripciones del catálogo (FUSIONAR con el rework SEO) ⚠️
+
+- **Prioridad:** P1 (línea roja de honestidad — riesgo legal y de confianza)
+- **Impacto:** Alto (afecta a ~200 fichas publicadas)
+- **Dificultad:** Media (por producto; automatizable en la misma pasada SEO)
+- **Riesgo:** Bajo (solo texto)
+- **Dependencia:** la **herramienta/tarea SEO** que va a reescribir descripciones + URLs de producto (decisión del dueño 2026-06-23: NO tocar descripciones por separado para no duplicar trabajo).
+- **Requiere:** Contenido · App/Tarea SEO · Datos (material real por SKU)
+- **Pasos:** al reescribir descripciones para SEO, **limpiar también la honestidad**. Quitar de TODAS las descripciones los claims no verificables del bloque importado del proveedor: *"Resistente a rayos UV"*, *"no requiere tratamientos ni almacenamiento en invierno"*, y atributos que NO apliquen a la pieza (cojines/fundas desenfundables, cuerda náutica, modular, "asiento profundo" en productos que no los tienen). **Declarar el MATERIAL REAL por producto** (aluminio / textileno / teca / resina / cuerda, según el SKU). Solo afirmar lo confirmado (GUÍA §1 + memoria `santavila_facts`).
+- **Validación:** ninguna descripción ACTIVE contiene "rayos UV" ni "almacenamiento en invierno" como absolutos; cada ficha declara su material real. (El copy de las SECCIONES de la PDP — highlights/confianza — ya se hizo genérico-honesto el 2026-06-23.)
+- **Hallazgo origen:** JOURNAL 2026-06-23 (auditoría adversarial de la PDP) + memoria `santavila_catalog_descriptions_honesty`. **Solo se corrigió `tumbona-de-exterior`**; el resto del catálogo, pendiente de esta pasada SEO.
+
+---
+
 ## Resumen por fase
 
 | Fase | Tareas | P0 | P1 | P2 | P3 | Esfuerzo total |

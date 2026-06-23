@@ -28,6 +28,8 @@ Pasada **integral y verificada al 100%** de la PDP (con auditoría adversarial i
 
 **⚠️ PENDIENTE GRANDE (línea roja, catálogo):** la **descripción tipo** de MUCHOS productos (importadas) repite "Resistente a rayos UV, lluvia y humedad" y "no requiere almacenamiento en invierno" — **afirmaciones no verificables**. Corregida solo la tumbona; **falta una pasada honesta a todas las descripciones del catálogo.**
 
+> **HANDOFF (decisión del dueño, 2026-06-23):** viene una **herramienta/tarea SEO** que reescribirá **descripciones + URLs** de producto. **NO tocar descripciones por separado** (evitar trabajo doble); esa pasada SEO debe **limpiar también la honestidad**. Documentado como tarea [`BACKLOG_SANTAVILA.md` → **F5-06**](BACKLOG_SANTAVILA.md) + memoria `santavila_catalog_descriptions_honesty`.
+
 ---
 
 ## 2026-06-22 (noche) · PDP TOP: cross-sell relacionados + fix sticky
