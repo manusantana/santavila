@@ -247,6 +247,23 @@
       });
     }
 
+    // Zoom premium: la foto principal amplía y sigue al cursor (solo desktop con ratón).
+    if (gal && window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var zStage = gal.querySelector('[data-gal-stage]');
+      if (zStage) {
+        zStage.addEventListener('mouseenter', function () { zStage.classList.add('is-zoom'); });
+        zStage.addEventListener('mouseleave', function () {
+          zStage.classList.remove('is-zoom');
+          zStage.style.removeProperty('--zx'); zStage.style.removeProperty('--zy');
+        });
+        zStage.addEventListener('mousemove', function (e) {
+          var r = zStage.getBoundingClientRect();
+          zStage.style.setProperty('--zx', (((e.clientX - r.left) / r.width) * 100) + '%');
+          zStage.style.setProperty('--zy', (((e.clientY - r.top) / r.height) * 100) + '%');
+        });
+      }
+    }
+
     // Sticky bar + qty
     var bar = document.querySelector('[data-sticky]');
     var buyblock = document.querySelector('.sv-pdp__cart');
@@ -916,8 +933,16 @@
   }
   .sv-gal__img {
     cursor: zoom-in;
-    transition: transform 0.95s var(--ease, ease);
+    transition: transform 0.4s var(--ease, ease);
+    will-change: transform;
   }
+  /* Zoom premium: al pasar el ratón, la foto principal amplía y sigue al cursor (solo desktop).
+     transform-origin se mueve al instante con el cursor (paneo); la escala entra/sale suave. */
+  .sv-gal__stage.is-zoom .sv-gal__slide.is-active .sv-gal__img {
+    transform: scale(2.1);
+    transform-origin: var(--zx, 50%) var(--zy, 50%);
+  }
+  .sv-gal__stage.is-zoom .sv-gal__slide::after { opacity: 0; }
   /* Indicador "ampliar" (lupa) — solo en imágenes ampliables */
   .sv-gal__slide:has(.sv-gal__img)::after {
     content: "";
