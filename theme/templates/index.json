@@ -1,26 +1,16 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "santavila_hero": {
       "type": "santavila-hero",
       "settings": {
-        "min_height": 100,
         "eyebrow": "Diseño español para vivir fuera",
         "heading_line1": "El exterior,",
         "heading_line2": "bien vivido.",
         "subheading": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real.",
         "cta1_label": "Explorar colecciones",
-        "cta1_link": "shopify://collections/all",
+        "cta1_link": "shopify:\/\/collections\/all",
         "cta2_label": "Amueblar por espacio",
-        "cta2_link": "/collections/all",
+        "cta2_link": "\/collections\/all",
         "show_seal": true,
         "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · ",
         "show_scroll": true,
@@ -36,7 +26,7 @@
     "santavila_manifesto": {
       "type": "santavila-manifesto",
       "settings": {
-        "link_url": "/collections/all"
+        "link_url": "\/collections\/all"
       }
     },
     "santavila_scenarios": {
@@ -45,33 +35,33 @@
         "sc1": {
           "type": "scenario",
           "settings": {
-            "name": "Áticos y terrazas",
             "number": "01",
-            "link": "/collections/sillones-de-exterior"
+            "name": "Áticos y terrazas",
+            "link": "\/collections\/sillones-de-exterior"
           }
         },
         "sc2": {
           "type": "scenario",
           "settings": {
-            "name": "Balcón",
             "number": "02",
-            "link": "/collections/sillas-de-exterior"
+            "name": "Balcón",
+            "link": "\/collections\/sillas-de-exterior"
           }
         },
         "sc3": {
           "type": "scenario",
           "settings": {
-            "name": "Jardín y porche",
             "number": "03",
-            "link": "/collections/tumbonas"
+            "name": "Jardín y porche",
+            "link": "\/collections\/tumbonas"
           }
         },
         "sc4": {
           "type": "scenario",
           "settings": {
-            "name": "Comedores",
             "number": "04",
-            "link": "/collections/mesas"
+            "name": "Comedores",
+            "link": "\/collections\/mesas"
           }
         }
       },
@@ -82,7 +72,7 @@
         "sc4"
       ],
       "settings": {
-        "link_url": "/collections/all"
+        "link_url": "\/collections\/all"
       }
     },
     "santavila_featured": {
@@ -90,7 +80,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "media_position": "left",
-        "image": "shopify://shop_images/leisa_destacada_costero.jpg",
+        "image": "shopify:\/\/shop_images\/leisa_destacada_costero.jpg",
         "tag": "Lo más elegido",
         "eyebrow": "Sofás de exterior",
         "heading": "El salón, pero fuera",
@@ -102,7 +92,7 @@
         "meta3_value": "Montaje fácil",
         "meta3_label": "en casa",
         "cta1_label": "Ver sofás de exterior",
-        "cta1_link": "/collections/sillones-de-exterior",
+        "cta1_link": "\/collections\/sillones-de-exterior",
         "cta2_label": "",
         "cta2_link": ""
       }
@@ -115,7 +105,7 @@
         "max_products": 4,
         "columns": 4,
         "link_label": "Ver toda la tienda",
-        "link_url": "/collections/all"
+        "link_url": "\/collections\/all"
       }
     },
     "santavila_materials": {
@@ -289,7 +279,7 @@
           "disabled": true,
           "static": true,
           "settings": {
-            "text": "<p>Shop the look</p>",
+            "text": "<p>Shop the look<\/p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -319,7 +309,7 @@
       ],
       "name": "Hotspots",
       "settings": {
-        "image": "shopify://shop_images/bolonia-xl-1.jpg",
+        "image": "shopify:\/\/shop_images\/bolonia-xl-1.jpg",
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",

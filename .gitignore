@@ -27,3 +27,10 @@ consolidate_balliu_mesas_centro_report.csv
 consolidate_balliu_mesas_auxiliares_report.csv
 consolidate_balliu_mesas_comedor_report.csv
 consolidate_balliu_sillas_report.csv
+/_*
+*.log
+/precios_auditoria.csv
+/dump_estado_precios.py
+/_estado_tienda.json
+.claude/settings.json
+.claude/settings.local.json
