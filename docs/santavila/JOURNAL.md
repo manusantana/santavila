@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-06-24 · CIERRE DE FASE: todo a `main`, temas sincronizados, documentado
+
+Cierre limpio para arrancar la siguiente fase (SEO) sin dudas:
+
+- **Git:** todo el trabajo de la sesión está en **`main`** y **`redesign`** (ambas en el mismo commit `a121b88`) y **subido a GitHub** — `origin/main = origin/redesign = a121b88`. Remoto: `github.com/manusantana/santavila`.
+- **Temas Shopify SINCRONIZADOS:** **DEV (`189114876228`) = LIVE (`189222715716`)**, **454/454 assets idénticos** (verificado por checksum MD5 del Asset API). El único que divergía (`templates/index.json`, por re-serialización) se igualó escribiendo el mismo contenido en ambos.
+- **Seguridad (importante):** `.claude/settings.json` contenía **tokens de Shopify**; GitHub Push Protection bloqueó el primer push. **NO hubo fuga**: el commit que ya estaba en GitHub (`80abcb1`) no contenía el token, y el rango completo subido ahora (`80abcb1..a121b88`) escanea **0 tokens**. Se sacó del *tracking* y se **gitignoró** (`.claude/settings.json` + `.claude/settings.local.json`). **No hace falta rotar el token.** Regla operativa: nunca commitear `.claude/settings.json` ni `.envlocal`.
+- **Repo limpio:** scratch (`/_*`, `*.log`, caches, dumps) gitignorado; masters 4K de imagen, `precios_santavila.py`, backups (`compare_at_backup.csv`) y listas de publicación commiteados.
+
+**Estado para la siguiente fase (SEO):** todo al día y verificado. Pendiente con dueño claro: **F5-06** (honestidad de descripciones de catálogo, la absorbe la tarea SEO completa) — ver [`BACKLOG_SANTAVILA.md`](BACKLOG_SANTAVILA.md).
+
+---
+
 ## 2026-06-23 · PDP INTEGRAL VERIFICADA (galería, imagen-ambiente, honestidad)
 
 Pasada **integral y verificada al 100%** de la PDP (con auditoría adversarial independiente), tras feedback del dueño sobre errores cíclicos. Todo a live + verificado:
