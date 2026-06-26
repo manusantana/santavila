@@ -6,12 +6,16 @@ Autorización OAuth (desktop) para Google Search Console + GA4.
 - Tras autorizar, verifica acceso listando sitios de Search Console y cuentas GA4.
 
 Uso:
-    python3 scripts/google_auth.py
+    .venv/bin/python scripts/google_auth.py
 """
 import glob
 import os
 import sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
+
+from google.auth.exceptions import RefreshError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
@@ -43,16 +47,20 @@ def get_credentials():
     if creds and creds.valid:
         return creds
     if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-    else:
+        try:
+            creds.refresh(Request())
+        except RefreshError as e:
+            print(f"Token OAuth no reutilizable ({e}). Se abrirá autorización nueva.", flush=True)
+            creds = None
+    if not creds or not creds.valid:
         cs = find_client_secret()
-        print(f"Usando client_secret: {os.path.basename(cs)}")
+        print(f"Usando client_secret: {os.path.basename(cs)}", flush=True)
         flow = InstalledAppFlow.from_client_secrets_file(cs, SCOPES)
         # Abre el navegador y espera el callback en localhost
         creds = flow.run_local_server(port=0, prompt="consent")
     with open(TOKEN_PATH, "w") as f:
         f.write(creds.to_json())
-    print(f"✅ Token guardado en {TOKEN_PATH}")
+    print(f"✅ Token guardado en {TOKEN_PATH}", flush=True)
     return creds
 
 

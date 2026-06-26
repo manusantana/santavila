@@ -33,6 +33,35 @@
   {%- endfor -%}
 {%- endcapture -%}
 
+{%- capture geo_links -%}
+  {%- case collection.handle -%}
+    {%- when 'sillones-de-exterior' -%}
+      <a href="/products/sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm">Sofá terraza 120 cm</a>
+      <a href="/products/sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm">Sofá exterior 130 cm</a>
+      <a href="/products/set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro">Rinconera de terraza</a>
+    {%- when 'tumbonas' -%}
+      <a href="/products/balliu-tumbona-de-exterior-resina-28ff014d">Tumbona Balliu resina</a>
+      <a href="/products/balliu-tumbona-de-exterior-resina-75-cm-009e68e4">Tumbona resina 75 cm</a>
+      <a href="/products/balliu-tumbona-de-exterior-aluminio-d08586c1">Tumbona aluminio exterior</a>
+    {%- when 'parasoles' -%}
+      <a href="/products/base-de-parasol-25-kg">Base de parasol 25 kg</a>
+      <a href="/collections/accesorios">Bases para sombrilla</a>
+      <a href="/products/pergola-aluminio-para-jardin-300300250-cm">Pérgola 250x300</a>
+    {%- when 'accesorios' -%}
+      <a href="/products/base-de-parasol-25-kg">Base para sombrilla 25 kg</a>
+      <a href="/collections/parasoles">Parasoles para terraza</a>
+      <a href="/products/balliu-colchoneta-para-tumbona-0e9a3256">Colchonetas para tumbona</a>
+    {%- when 'mesas' -%}
+      <a href="/products/banco-jardin-con-mesa-integrada-220-cm">Banco con mesa incorporada</a>
+      <a href="/collections/sillas-de-exterior">Sillas para mesa exterior</a>
+      <a href="/blogs/news/como-elegir-muebles-de-exterior-que-duren-aluminio-teca-o-ratan-sintetico">Guía de materiales</a>
+    {%- when 'sillas-de-exterior' -%}
+      <a href="/collections/mesas">Mesas de exterior</a>
+      <a href="/blogs/news/como-elegir-muebles-de-exterior-que-duren-aluminio-teca-o-ratan-sintetico">Guía de materiales</a>
+      <a href="/collections/sillones-de-exterior">Sofás de exterior</a>
+  {%- endcase -%}
+{%- endcapture -%}
+
 {%- paginate collection.products by per_page -%}
 <div class="sv-coll color-{{ s.color_scheme }}">
   <div class="sv-filterbar">
@@ -111,6 +140,23 @@
   </div>
 
   <div class="sv-container sv-coll__body">
+    {%- assign geo_links_clean = geo_links | strip -%}
+    {%- if geo_links_clean != blank and paginate.current_page == 1 -%}
+      <nav class="sv-csuggest" aria-label="Rutas recomendadas">
+        <span class="sv-csuggest__label">También se busca</span>
+        <div class="sv-csuggest__links">{{ geo_links }}</div>
+      </nav>
+    {%- endif -%}
+    {%- if paginate.current_page == 1 -%}
+      <nav class="sv-ctrust" aria-label="Información de compra">
+        <span>Compra con tranquilidad</span>
+        <a href="/pages/envio">Entrega</a>
+        <a href="/pages/garantia">Garantía</a>
+        <a href="/pages/mantenimiento">Mantenimiento</a>
+        <a href="/pages/sobre-santavila">Sobre Santavila</a>
+      </nav>
+    {%- endif -%}
+
     {%- if collection.products.size > 0 -%}
       <div class="sv-cgrid" id="sv-cgrid">
         {%- for product in collection.products -%}
@@ -435,6 +481,74 @@
     padding-top: clamp(40px, 5vw, 64px);
     padding-bottom: clamp(48px, 7vw, 96px);
   }
+  .sv-csuggest {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: clamp(24px, 3.4vw, 42px);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .sv-csuggest__label {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .sv-csuggest__links {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .sv-csuggest__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 8px 14px;
+    background: var(--paper-2);
+    color: var(--ink-2);
+    font-family: var(--sans);
+    font-size: 13.5px;
+    line-height: 1.2;
+    transition: border-color 0.25s var(--ease, ease), color 0.25s var(--ease, ease), background 0.25s var(--ease, ease);
+  }
+  .sv-csuggest__links a:hover {
+    border-color: var(--sage);
+    color: var(--ink);
+    background: #fff;
+  }
+  .sv-ctrust {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin: 0 0 clamp(24px, 3.4vw, 42px);
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-3);
+    font-family: var(--sans);
+    font-size: 13.5px;
+  }
+  .sv-ctrust span {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sv-ctrust a {
+    color: var(--ink-2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s var(--ease, ease);
+  }
+  .sv-ctrust a:hover {
+    color: var(--ink);
+  }
   .sv-cgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -518,6 +632,20 @@
   @media screen and (max-width: 749px) {
     .sv-filterbar__in {
       gap: 12px;
+    }
+    .sv-csuggest {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .sv-csuggest__links {
+      width: 100%;
+    }
+    .sv-csuggest__links a {
+      max-width: 100%;
+    }
+    .sv-ctrust {
+      align-items: flex-start;
+      flex-direction: column;
     }
     .sv-facets {
       width: 100%;

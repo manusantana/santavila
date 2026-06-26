@@ -1,0 +1,127 @@
+{%- liquid
+  assign home_url = request.origin
+  assign logo_url = blank
+  if settings.logo != blank
+    assign logo_url = settings.logo | image_url: width: 500 | prepend: 'https:'
+  endif
+-%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "OnlineStore"],
+  "@id": {{ home_url | append: "#organization" | json }},
+  "name": "Santavila",
+  "url": {{ home_url | json }},
+  "email": "hola@santavila.com",
+  {%- if logo_url != blank %}
+  "logo": {{ logo_url | json }},
+  {%- endif %}
+  "areaServed": {
+    "@type": "Country",
+    "name": "España"
+  },
+  "knowsAbout": [
+    "mobiliario de exterior",
+    "muebles de terraza",
+    "sofás de exterior",
+    "tumbonas de exterior",
+    "parasoles de jardín",
+    "mantenimiento de muebles de exterior"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hola@santavila.com",
+    "contactType": "customer support",
+    "areaServed": "ES",
+    "availableLanguage": ["es"]
+  },
+  "hasPart": [
+    { "@type": "WebPage", "name": "Sobre Santavila", "url": {{ home_url | append: "/pages/sobre-santavila" | json }} },
+    { "@type": "WebPage", "name": "Entrega y envío", "url": {{ home_url | append: "/pages/envio" | json }} },
+    { "@type": "WebPage", "name": "Garantía", "url": {{ home_url | append: "/pages/garantia" | json }} },
+    { "@type": "WebPage", "name": "Cuidado y mantenimiento", "url": {{ home_url | append: "/pages/mantenimiento" | json }} },
+    { "@type": "WebPage", "name": "Contacto", "url": {{ home_url | append: "/pages/contacto" | json }} }
+  ]
+}
+</script>
+
+{%- unless request.page_type == 'index' -%}
+  {%- liquid
+    assign crumb_position = 1
+    assign crumb_current_name = page_title | strip
+    assign crumb_current_url = canonical_url
+    assign product_collection = blank
+    if request.page_type == 'product' and product.collections.size > 0
+      assign product_collection = product.collections.first
+    endif
+  -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": {{ crumb_position }},
+        "name": "Inicio",
+        "item": {{ home_url | json }}
+      }
+      {%- assign crumb_position = crumb_position | plus: 1 -%}
+      {%- if request.page_type == 'product' and product_collection != blank -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ crumb_position }},
+        "name": {{ product_collection.title | json }},
+        "item": {{ home_url | append: product_collection.url | json }}
+      }
+      {%- assign crumb_position = crumb_position | plus: 1 -%}
+      {%- elsif request.page_type == 'collection' -%}
+        {%- assign crumb_current_name = collection.title -%}
+      {%- elsif request.page_type == 'page' -%}
+        {%- assign crumb_current_name = page.title -%}
+      {%- elsif request.page_type == 'blog' -%}
+        {%- assign crumb_current_name = blog.title -%}
+      {%- elsif request.page_type == 'article' -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ crumb_position }},
+        "name": {{ blog.title | json }},
+        "item": {{ home_url | append: blog.url | json }}
+      }
+      {%- assign crumb_position = crumb_position | plus: 1 -%}
+        {%- assign crumb_current_name = article.title -%}
+      {%- endif -%}
+      ,{
+        "@type": "ListItem",
+        "position": {{ crumb_position }},
+        "name": {{ crumb_current_name | json }},
+        "item": {{ crumb_current_url | json }}
+      }
+    ]
+  }
+  </script>
+{%- endunless -%}
+
+{%- if request.page_type == 'collection' and collection.products_count > 0 -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": {{ canonical_url | append: "#itemlist" | json }},
+    "name": {{ collection.title | json }},
+    "url": {{ canonical_url | json }},
+    "numberOfItems": {{ collection.products_count | json }},
+    "itemListElement": [
+      {%- for product in collection.products limit: 24 -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index | json }},
+          "url": {{ home_url | append: product.url | json }},
+          "name": {{ product.title | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+  </script>
+{%- endif -%}

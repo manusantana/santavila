@@ -150,6 +150,24 @@ Cerrados dos pendientes del hito anterior, sobre el **tema dev** (`189114876228`
 
 **Commit:** `bbe924f` (rama `redesign`). **Siguiente:** decidir Destacada del home + **escalar imágenes a un 2º producto** con escenarios rotados (confirmar SKU; consume créditos Higgsfield).
 
+## 2026-06-23 · GEO Sprint 0 + quick wins en theme live
+
+Se ejecuta el arranque GEO de Santavila y se aplican los quick wins previos al Sprint 1.
+
+**GSC / baseline:** OAuth reautorizado con `.venv/bin/python scripts/google_auth.py`; `sc-domain:santavila.com` confirmado como `siteOwner`. `SEO-BASELINE.md` actualizado: 9 clics, 630 impresiones, CTR 1,43%, posición media 15,9 (ventana 2026-05-26 → 2026-06-22). Oportunidades resumidas en `GSC-OPPORTUNITIES-2026-06-23.md`.
+
+**Theme:** subidos por Asset API a DEV `189114876228` y LIVE `189222715716`:
+- `snippets/meta-tags.liquid` — fallback de meta description para home cuando Shopify no trae `page_description`.
+- `sections/santavila-collection-hero.liquid` — H1/crumb/alt visual `Sofás de exterior` para la colección `sillones-de-exterior`.
+
+**Admin Shopify:** colección `sillones-de-exterior` actualizada de `Sofas de exterior` a `Sofás de exterior` sin cambiar handle.
+
+**Verificación pública:** home emite meta description nueva; colección de sofás emite H1 `Sofás de exterior`. Quedan 2 labels `Sofas de exterior` en navegación (menu drawer / menu list), que vienen del menú de Shopify Admin y no del theme local; pendiente corregir en navegación si se quiere limpieza total.
+
+**Agentic endpoints:** `llms.txt`/`agents.md` confirmados como endpoints generados por Shopify (`LlmsTxtController` / `AgentsMdController`), no editables desde theme. Informe: `GEO-AGENTIC-ENDPOINTS-REPORT.md`.
+
+**Siguiente paso recomendado:** Sprint 1 sobre URLs con señales GSC: pérgola 250x300, sofás por medida, banco con mesa incorporada, tumbonas resina/Balliu.
+
 ---
 
 ## 2026-06-19/21 · ROL FOTÓGRAFO + GALERÍA LEISA EN VIVO (Fase 0 de imagen)
@@ -2351,6 +2369,266 @@ Estas limitaciones están reconocidas en el propio `AUDITORIA_SANTAVILA.md` y co
 - **Configuración de Markets, checkout y locales: no auditadas** por scope.
 
 Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes OAuth.
+
+---
+
+## 2026-06-24 · GEO Sprint 1 - PDPs con oportunidad GSC
+
+**Paso del flujo:** GEO Sprint 1
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API
+
+### Qué se ejecutó
+- Se creó `scripts/apply_gsc_opportunity_descriptions.py` con dry-run, backup, reintentos y aplicación controlada.
+- Se ejecutó dry-run contra Shopify Admin API para validar 8 productos con señal en GSC.
+- Se aplicaron `descriptionHtml` y `seo.description` en las 8 fichas objetivo.
+- El primer `--apply` sufrió un corte SSL puntual tras aplicar la pérgola; se endureció el script con reintentos y backup previo a mutaciones, y el segundo pase terminó con 8/8 OK.
+
+### Entregables
+- `scripts/apply_gsc_opportunity_descriptions.py` — script estrecho para el lote GEO Sprint 1.
+- `docs/santavila/GSC-OPPORTUNITIES-2026-06-23.md` — sección "Sprint 1 aplicado".
+- `content/descriptions/backup_gsc_opportunities_20260624-063513.json` — snapshot del dry-run.
+- `content/descriptions/backup_gsc_opportunities_20260624-063613.json` — snapshot previo a la aplicación final.
+
+### Hallazgos clave
+- `santavila.es` resolvió a una página aparcada de Hostinger durante una comprobación inicial, pero el dominio trabajado en GSC es `santavila.com`, que sí apunta a Shopify (`23.227.38.x`).
+- Verificación pública confirmada en `santavila.com` para pérgola y base de parasol: los textos aparecen en meta/OG y JSON-LD de producto.
+- Las fichas ya existían y se actualizaron sin errores de GraphQL.
+- Se reforzaron consultas por medida/intención: `pérgola 250x300`, `sofa terraza 120 cm`, `sofa exterior 130 cm`, `banco con mesa incorporada`, `base para sombrilla` y cluster de tumbonas.
+
+### Siguiente paso recomendado
+- Revisar si `santavila.es` debe redirigir a `santavila.com` o quedar fuera de la estrategia.
+- Pasar a Sprint 1.2: enlazado interno desde colecciones hacia estas PDPs y pequeños bloques de ayuda en colecciones `tumbonas`, `sofás de exterior`, `pérgolas` y `parasoles`.
+
+---
+
+## 2026-06-24 · GEO Sprint 1.2 - enlazado interno desde colecciones
+
+**Paso del flujo:** GEO Sprint 1.2
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + Asset API
+
+### Qué se ejecutó
+- Se reforzó `scripts/apply_collections.py` con reintentos ante cortes SSL puntuales de Shopify.
+- Se actualizaron intros/meta/FAQ de las 6 colecciones principales, añadiendo anchors hacia PDPs con oportunidad GSC.
+- Se añadió en `theme/sections/santavila-collection-grid.liquid` un bloque visible `También se busca` con enlaces internos contextuales por colección.
+- Se subió el asset a DEV `189114876228` y LIVE `189222715716`, verificado remoto == local.
+
+### Entregables
+- `scripts/apply_collections.py` — reintentos y copy de colección reforzado.
+- `theme/sections/santavila-collection-grid.liquid` — bloque `sv-csuggest` con enlaces internos.
+- `docs/santavila/GSC-OPPORTUNITIES-2026-06-23.md` — sección "Sprint 1.2 aplicado".
+- `content/descriptions/backup_collections_20260624-073205.json` y `backup_collections_20260624-073212.json` — snapshots antes de aplicar.
+
+### Hallazgos clave
+- Verificación pública en `santavila.com`: el bloque aparece en sofás, tumbonas, parasoles y accesorios.
+- El enlazado empuja señales hacia `sofa terraza 120 cm`, `sofa exterior 130 cm`, tumbonas Balliu/resina, `base de parasol 25 kg` y `pérgola 250x300`.
+- La primera consulta pública devolvió mucho HTML por scripts de Shopify, pero los anchors aparecen en HTML SSR y no dependen de JavaScript.
+
+### Siguiente paso recomendado
+- Completar Sprint 1 con 7-12 PDP adicionales por señal comercial: rinconeras, sofá bicolor, parasoles acrílicos y conjuntos.
+- Después, pasar a Sprint 2: páginas de confianza y E-E-A-T enlazadas desde footer/PDP/colecciones.
+
+---
+
+## 2026-06-24 · GEO Sprint 1.3 - desduplicación PDP Hevea top
+
+**Paso del flujo:** GEO Sprint 1.3
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + contraste público con `curl`
+
+### Qué se ejecutó
+- Se contrastó una ficha Balliu pública (`parasol-ocean-tejido-acrilico`) contra Santavila y no se detectó duplicado literal relevante: los solapes eran navegación/legal.
+- Se priorizó Hevea porque varias PDPs heredaban frases del CSV de proveedor y los bicolor tenían descripciones públicas muy finas.
+- Se creó `scripts/apply_desduplicated_descriptions.py` con dry-run, backup, reintentos y aplicación controlada.
+- Se aplicaron `descriptionHtml` y `seo.description` a 6 PDPs de alto valor: 4 rinconeras y 2 sets bicolor.
+
+### Entregables
+- `scripts/apply_desduplicated_descriptions.py` — script de Sprint 1.3 para reescritura anti-duplicado.
+- `content/descriptions/backup_desduplicated_20260624-083550.json` — snapshot previo a la aplicación.
+- `docs/santavila/GSC-OPPORTUNITIES-2026-06-23.md` — sección "Sprint 1.3 aplicado".
+
+### Hallazgos clave
+- En Shopify Admin las 6 fichas quedaron actualizadas sin errores.
+- Verificación pública confirmada con cache-buster para bicolor 2/3 plazas y sin cache-buster para rinconera contemporánea/sofisticada.
+- Los sets bicolor pasaron de 31-35 palabras a 87-101 palabras, con intención `sofá bicolor`, `set jardín bicolor` y `sofá exterior bicolor`.
+- Las rinconeras refuerzan `rinconera terraza`, `rinconera jardín`, `sofá de esquina exterior` y `set rinconera exterior`, evitando las frases más calcadas del CSV Hevea.
+
+### Siguiente paso recomendado
+- Pasar a Sprint 2: confianza/E-E-A-T y páginas auxiliares enlazadas desde footer, PDP y colecciones.
+- Mantener un lote posterior para sofás individuales bicolor y sofás 3 plazas si GSC confirma impresiones crecientes.
+
+---
+
+## 2026-06-24 · GEO Sprint 2 - páginas de confianza y E-E-A-T
+
+**Paso del flujo:** GEO Sprint 2
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + Asset API
+
+### Qué se ejecutó
+- Se creó `scripts/apply_trust_pages.py` con dry-run, backup y aplicación controlada.
+- Se crearon 4 páginas publicadas en Shopify: `/pages/sobre-santavila`, `/pages/envio`, `/pages/garantia` y `/pages/mantenimiento`.
+- Se enlazaron las páginas desde PDP, colecciones y footer para que queden accesibles en HTML SSR.
+- Se reforzó `scripts/push_theme_assets.py` con reintentos por cortes SSL puntuales de Shopify.
+
+### Entregables
+- `scripts/apply_trust_pages.py` — creación/refuerzo de páginas de confianza.
+- `theme/sections/santavila-product.liquid` — enlaces de entrega, mantenimiento y garantía en el panel de confianza PDP.
+- `theme/sections/santavila-collection-grid.liquid` — bloque `Compra con tranquilidad` en colecciones.
+- `theme/sections/santavila-footer.liquid` — enlaces persistentes a páginas de confianza.
+- `content/descriptions/backup_trust_pages_20260624-092444.json` — snapshot previo a la creación final.
+
+### Hallazgos clave
+- Las 4 páginas nuevas responden 200 en producción.
+- Verificación pública confirmada en HTML SSR para PDP, colección, footer y `/pages/sobre-santavila`.
+- La página de devoluciones se mantiene como policy canónica de Shopify (`/policies/refund-policy`) para no duplicar condiciones legales.
+- Shopify devolvió alguna verificación prematura en DEV, pero los assets quedaron remoto == local tras comprobación directa; LIVE quedó subido y verificado por script.
+
+### Siguiente paso recomendado
+- Sprint 3: schema GEO, empezando por `BreadcrumbList`, `FAQPage` en colecciones y `Organization` con enlaces a páginas de confianza.
+- Después Sprint 4: guías citables sobre materiales, lluvia/sol y mantenimiento enlazadas desde estas páginas.
+
+---
+
+## 2026-06-24 · GEO Sprint 3 - schema GEO
+
+**Paso del flujo:** GEO Sprint 3
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Asset API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se auditó JSON-LD actual en home, colección, PDP y página de confianza.
+- Se creó `theme/snippets/santavila-schema.liquid` para emitir schema global controlado.
+- Se conectó el snippet desde `theme/layout/theme.liquid`.
+- Se retiró el `Organization` básico de `theme/sections/header.liquid` porque generaba `url` con la página actual.
+- Se subió el cambio a DEV y LIVE.
+
+### Entregables
+- `theme/snippets/santavila-schema.liquid` — `Organization`/`OnlineStore`, `BreadcrumbList` e `ItemList`.
+- `theme/layout/theme.liquid` — render global del snippet.
+- `theme/sections/header.liquid` — retirada del schema antiguo.
+- `docs/santavila/GEO-SCHEMA-REPORT.md` — informe del sprint.
+
+### Hallazgos clave
+- Home ahora emite `Organization` + `OnlineStore` con `@id` estable `https://santavila.com#organization`.
+- Colecciones emiten `BreadcrumbList`, `ItemList` y mantienen `FAQPage`.
+- PDPs emiten `BreadcrumbList` y mantienen `Product` nativo de Shopify.
+- Páginas de confianza emiten `BreadcrumbList`.
+- No se añadió `AggregateRating` porque todavía no hay reviews reales.
+
+### Siguiente paso recomendado
+- Sprint 4: guías citables con `Article` + `FAQPage`, empezando por materiales, lluvia/sol y mantenimiento.
+
+---
+
+## 2026-06-24 · GEO Sprint 4.1 - primera guía citable
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se creó `scripts/apply_geo_guides.py` con dry-run, backup y aplicación controlada.
+- Se publicó la guía `/blogs/news/que-muebles-de-exterior-aguantan-mejor-lluvia-y-sol`.
+- Se añadió un enlace desde `/pages/mantenimiento` hacia la guía.
+- Se verificó HTML público, meta y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — creación/refuerzo de guías GEO.
+- `scripts/apply_trust_pages.py` — página de mantenimiento enlazada a la guía.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe de contenido citable.
+
+### Hallazgos clave
+- La guía publica ~1.099 palabras, tabla comparativa, secciones por material/caso y FAQ con 5 preguntas.
+- Schema verificado: `Organization` + `OnlineStore`, `BreadcrumbList`, `Article` y `FAQPage`.
+- Enlazado interno saliente hacia sillas, tumbonas, mesas, parasoles, guía de materiales y mantenimiento.
+- Enlazado entrante desde `/pages/mantenimiento`.
+
+### Siguiente paso recomendado
+- Sprint 4.2: reforzar o rehacer la guía de materiales existente, o publicar una nueva guía específica `Aluminio, resina, HPL o madera: qué material elegir`.
+
+---
+
+## 2026-06-25 · GEO Sprint 4.2 - guía de materiales contrastada
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se reforzó la guía existente `/blogs/news/como-elegir-muebles-de-exterior-que-duren-aluminio-teca-o-ratan-sintetico`.
+- Se evitó crear una URL nueva para no canibalizar el artículo de materiales ya existente.
+- Se contrastó el contenido con referencias externas sobre HPL/EN 438, ratán sintético PE, textiles de exterior y teca.
+- Se verificó HTML público, canonical, meta, H1 y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — ahora gestiona la guía de materiales y la guía lluvia/sol.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe actualizado con Sprint 4.2.
+
+### Hallazgos clave
+- La guía pasa de ~731 a ~1.467 palabras.
+- Schema verificado: `BreadcrumbList`, `Article` y `FAQPage` con 5 preguntas.
+- El copy evita afirmaciones absolutas y aterriza la decisión por uso real: sol, piscina, costa, porche, uso intensivo y mantenimiento.
+- La URL pública devuelve 200 con canonical correcto.
+
+### Siguiente paso recomendado
+- Sprint 4.3: guía de limpieza/mantenimiento citable, cuidando no duplicar la página `/pages/mantenimiento`.
+
+---
+
+## 2026-06-25 · GEO Sprint 4.3 - guía de mantenimiento contrastada
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se reforzó la guía existente `/blogs/news/guia-de-mantenimiento-de-muebles-de-exterior-como-prepararlos-para-cada-temporada`.
+- Se mantuvo `/pages/mantenimiento` como hub/resumen y se enlazó hacia la guía larga.
+- Se contrastó el contenido con fuentes externas sobre textiles técnicos, HDPE/polietileno, teca y limpieza por material.
+- Se verificó HTML público, canonical, meta, H1, tabla y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — ahora gestiona materiales, lluvia/sol y mantenimiento.
+- `scripts/apply_trust_pages.py` — página de mantenimiento enlazada a la guía larga.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe actualizado con Sprint 4.3.
+
+### Hallazgos clave
+- La guía pasa de ~761 a ~1.306 palabras.
+- Schema verificado: `BreadcrumbList`, `Article` y `FAQPage` con 5 preguntas.
+- El copy evita recomendaciones agresivas: hidrolimpiadora a presión alta, lejía generalizada o abrasivos como primera opción.
+- La URL pública devuelve 200 con canonical correcto.
+
+### Siguiente paso recomendado
+- Sprint 4.4: guía de muebles para terraza pequeña y balcón.
+
+---
+
+## 2026-06-26 · GEO Sprint 4.4 - guía terraza pequeña y balcón
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se reforzó la guía existente `/blogs/news/como-aprovechar-al-maximo-una-terraza-pequena-muebles-distribucion-y-trucos-visuales`.
+- Se mantuvo la URL previa para no canibalizar contenido ya indexable.
+- Se contrastó el contenido con fuentes externas sobre distribución, medidas de paso/comedor y soluciones de balcón compacto.
+- Se verificó HTML público, canonical, meta, H1, tabla y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — ahora gestiona materiales, lluvia/sol, mantenimiento y terraza pequeña.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe actualizado con Sprint 4.4.
+
+### Hallazgos clave
+- La guía pasa de ~566 a ~1.319 palabras.
+- Schema verificado: `BreadcrumbList`, `Article` y `FAQPage` con 5 preguntas.
+- La guía evita reglas rígidas y propone bajar escala cuando el balcón no permite un comedor completo.
+- La URL pública devuelve 200 con canonical correcto.
+
+### Siguiente paso recomendado
+- Sprint 4.5: guía de mesas de exterior por medidas, comensales y espacio necesario.
 
 ---
 

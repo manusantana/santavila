@@ -23,10 +23,16 @@
 >
 
 {%- liquid
+  assign santavila_home_description = 'Mobiliario de exterior premium fabricado en España para terrazas, jardines y porches. Sofás, sillas, tumbonas, mesas y parasoles con diseño mediterráneo y asesoramiento humano.'
+  assign meta_description = page_description
+  if meta_description == blank and request.page_type == 'index'
+    assign meta_description = santavila_home_description
+  endif
+
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
-  assign og_description = page_description | default: shop.description | default: shop.name
+  assign og_description = meta_description | default: shop.description | default: shop.name
 
   if request.page_type == 'product'
     assign og_type = 'product'
@@ -119,9 +125,9 @@
   href="{{ canonical_url }}"
 >
 
-{% if page_description %}
+{% if meta_description %}
   <meta
     name="description"
-    content="{{ page_description | escape }}"
+    content="{{ meta_description | escape }}"
   >
 {% endif %}

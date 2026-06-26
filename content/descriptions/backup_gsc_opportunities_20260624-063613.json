@@ -1,0 +1,365 @@
+{
+  "pergola-aluminio-para-jardin-300300250-cm": {
+    "id": "gid://shopify/Product/15507128582468",
+    "title": "Pérgola aluminio para jardín · 300×300×250 cm",
+    "productType": "Pérgola",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "pérgola",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2045.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2045.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Pérgola de aluminio para jardín y terraza, indicada para quien busca una pérgola 250x300 o una solución cercana a 300 x 250 cm con estructura resistente y estética limpia.</strong></p><ul>\n<li>\n<strong>Uso recomendado:</strong> zonas de sombra en jardín, terraza o patio.</li>\n<li>\n<strong>Material:</strong> estructura de aluminio para exterior.</li>\n<li>\n<strong>Medidas visibles en la ficha:</strong> 300/300/250 cm.</li>\n<li>\n<strong>Ventaja práctica:</strong> crea una zona protegida para comedor, sofá o rincón de descanso.</li>\n</ul><p>Es una opción útil para búsquedas por medida como “pérgola 250x300” o “pérgola 300 x 250”, donde el cliente ya compara encaje, material y uso exterior antes de decidir.</p>",
+    "seo": {
+      "title": null,
+      "description": "Pérgola de aluminio para jardín y terraza, medida 300/300/250 cm. Ideal para búsquedas de pérgola 250x300 o 300 x 250 con estructura exterior."
+    }
+  },
+  "sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm": {
+    "id": "gid://shopify/Product/15507126714692",
+    "title": "Sofá terraza 2 plazas · estilo contemporáneo | 120×78 cm",
+    "productType": "Sofá",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "875.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "875.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá ODIN de 2 plazas es perfecto para espacios exteriores de tamaño medio. Su diseño equilibrado y su estructura robusta garantizan estabilidad y durabilidad, mientras que sus cojines amplios aportan confort y estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>120 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>66 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>78 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo contemporáneo | 120×78 cm",
+      "description": "El sofá de 2 plazas es perfecto para espacios exteriores de tamaño medio. Su diseño equilibrado y su estructura robusta garantizan estabilidad y durabilidad, mientras que sus cojines amplios aportan confort y estilo."
+    }
+  },
+  "sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm": {
+    "id": "gid://shopify/Product/15507126026564",
+    "title": "Sofá terraza 2 plazas · estilo contemporáneo | 130×90 cm",
+    "productType": "Sofá",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1455.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1455.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá CUPRA de 2 plazas es perfecto para espacios exteriores de tamaño medio. Su diseño actual y su estructura robusta garantizan estabilidad y durabilidad, mientras que sus cojines amplios aportan confort y estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>130 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>75 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo contemporáneo | 130×90 cm",
+      "description": "El sofá de 2 plazas es perfecto para espacios exteriores de tamaño medio. Su diseño actual y su estructura robusta garantizan estabilidad y durabilidad, mientras que sus cojines amplios aportan confort y estilo."
+    }
+  },
+  "banco-jardin-con-mesa-integrada-220-cm": {
+    "id": "gid://shopify/Product/15507129663812",
+    "title": "Banco jardín con mesa integrada · 220 cm",
+    "productType": "Banco con mesa",
+    "tags": [
+      "banco con mesa",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2899.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2899.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El banco YULIEN con mesa integrada es una solución práctica y funcional para exteriores. Ideal para zonas de picnic o jardines familiares, combina comodidad y utilidad en una sola pieza.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>220 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>150 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>75 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Banco jardín con mesa integrada · 220 cm",
+      "description": "El banco con mesa integrada es una solución práctica y funcional para exteriores. Ideal para zonas de picnic o jardines familiares, combina comodidad y utilidad en una sola pieza."
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-28ff014d": {
+    "id": "gid://shopify/Product/15512247173444",
+    "title": "Tumbona exterior resina · Noa",
+    "productType": "Tumbona",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Blanco",
+          "Madera",
+          "Tórtola"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>Diseñada para los espacios más exclusivos, la tumbona Noa combina elegancia y funcionalidad. Su estructura de resina de polipropileno reforzada con ﬁbra de vidrio y acabado texturizado garantizan una alta resistencia.</p>\n<p>Su refuerzo interno con soporte metálico, respaldo regulable en cinco posiciones, ruedas integradas y tejido sustituible por guías aseguran máxima comodidad y durabilidad.</p>\n<p>Resina Classic</p>\n<p>Tejido Balliu</p>\n<p>Dimensiones: Largo: 191,2 cm | Peso: N/D kg</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina",
+      "description": "Diseñada para los espacios más exclusivos, la tumbona Noa combina elegancia y funcionalidad. Su estructura de resina de polipropileno reforzada con ﬁbra de vidrio y acabado texturizado garantizan una alta resistencia. Su refuerzo interno con soporte metálico, respaldo regulable en cinco posiciones, ruedas integradas y"
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-75-cm-009e68e4": {
+    "id": "gid://shopify/Product/15512246649156",
+    "title": "Tumbona exterior resina · 75 cm tela · Carmen",
+    "productType": "Tumbona",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Madera"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "183.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "188.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>Una de las tumbonas más resistentes de Balliu, pero también una de las más estéticamente destacadas. Su estructura monobloque de resina de polipropileno reforzada con carga mineral asegura una gran resistencia, mientras que su diseño elegante se caracteriza por la combinación de líneas rectas y formas curvas, creando un contraste visual único.</p>\n<p>Con respaldo regulable en cinco posiciones, reposabrazos y ruedas integradas en la estructura. El tejido sustituible por cordón añade versatilidad.</p>\n<p>Resina Classic</p>\n<p>Tejido Balliu</p>\n<p>Dimensiones: Largo: 205 cm | Ancho: 75 cm | Alto: 37 cm | Peso: 14.6 kg</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina | 75 cm",
+      "description": "Una de las tumbonas más resistentes de Balliu, pero también una de las más estéticamente destacadas. Su estructura monobloque de resina de polipropileno reforzada con carga mineral asegura una gran resistencia, mientras que su diseño elegante se caracteriza por la combinación de líneas rectas y formas curvas, creando u"
+    }
+  },
+  "balliu-tumbona-de-exterior-aluminio-d08586c1": {
+    "id": "gid://shopify/Product/15512247435588",
+    "title": "Tumbona exterior aluminio alta · acceso fácil · Etna Alta",
+    "productType": "Tumbona",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Ruedas",
+        "values": [
+          "No",
+          "Sí"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "496.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>Diseñada con una altura optimizada para facilitar el acceso, la Etna Alta es ideal para quienes buscan comodidad y funcionalidad. Con una estructura de aluminio endurecido y tornillería en acero inoxidable, garantiza una durabilidad excepcional.</p>\n<p>Su respaldo regulable en cinco posiciones y tejido sustituible ofrecen versatilidad y comodidad. Disponible con ruedas opcionales, cuenta con un sistema anti-atrapamiento de dedos con refuerzo doble para mayor seguridad.</p>\n<p>Aluminio texturizado</p>\n<p>Tejido Balliu</p>",
+    "seo": {
+      "title": "Tumbona de exterior aluminio",
+      "description": "Diseñada con una altura optimizada para facilitar el acceso, la Etna Alta es ideal para quienes buscan comodidad y funcionalidad. Con una estructura de aluminio endurecido y tornillería en acero inoxidable, garantiza una durabilidad excepcional. Su respaldo regulable en cinco posiciones y tejido sustituible ofrecen ver"
+    }
+  },
+  "base-de-parasol-25-kg": {
+    "id": "gid://shopify/Product/15507129499972",
+    "title": "Base de parasol 25 kg",
+    "productType": "Accesorios",
+    "tags": [
+      "accesorios",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Base de parasol de 25 kg, el complemento esencial para mantener tu sombrilla de exterior estable y segura.</strong> Compacta y resistente, ofrece un punto de anclaje firme para el mástil y evita que el parasol se mueva o vuelque con viento ligero. Fácil de colocar y reubicar.</p><ul>\n<li>\n<strong>Peso:</strong> 25 kg.</li>\n<li>\n<strong>Función:</strong> base de sujeción para parasol/sombrilla.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza y jardín.</li>\n<li>\n<strong>Ventaja:</strong> compacta y fácil de reubicar.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Base de parasol de 25 kg para sombrillas de exterior. Sujeción estable y segura, compacta y fácil de colocar. Para terraza y jardín."
+    }
+  }
+}

@@ -3,6 +3,10 @@
   assign col = collection
   assign img = s.image | default: col.image
   assign title = col.title | default: 'Colección'
+  assign display_title = title
+  if col.handle == 'sillones-de-exterior' and title == 'Sofas de exterior'
+    assign display_title = 'Sofás de exterior'
+  endif
   assign desc = s.description
   if desc == blank
     comment
@@ -16,7 +20,7 @@
 <div class="sv-chero" style="--sv-chero-h: {% if s.hero_size == 'full' %}var(--hero-h){% else %}var(--hero-h-secondary){% endif %};">
   {%- if img != blank -%}
     <div class="sv-chero__media">
-      {{ img | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800,1200,1600,2000,2400', alt: title }}
+      {{ img | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '800,1200,1600,2000,2400', alt: display_title }}
     </div>
   {%- endif -%}
 
@@ -26,9 +30,9 @@
       <span aria-hidden="true">/</span>
       <a href="{{ routes.collections_url }}">Colecciones</a>
       <span aria-hidden="true">/</span>
-      <span class="sv-crumb__current">{{ title }}</span>
+      <span class="sv-crumb__current">{{ display_title }}</span>
     </nav>
-    <h1 class="sv-chero__title">{{ title }}</h1>
+    <h1 class="sv-chero__title">{{ display_title }}</h1>
     {%- if desc != blank -%}
       <div class="sv-chero__desc">{{ desc }}</div>
     {%- endif -%}
