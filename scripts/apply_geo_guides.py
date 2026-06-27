@@ -30,6 +30,176 @@ BLOG_HANDLE = "news"
 
 
 GUIDES = {
+    "tumbona-de-aluminio-resina-o-madera-cual-elegir-para-exterior": {
+        "title": "Tumbona de aluminio, resina o madera: cuál elegir para exterior",
+        "summary": "Comparativa práctica para elegir tumbona de exterior según material: aluminio, resina, madera/teca, textilene, piscina, costa, peso, mantenimiento y uso.",
+        "meta_title": "Tumbona de aluminio, resina o madera: cuál elegir",
+        "meta_description": "Compara tumbonas de aluminio, resina y madera para exterior: piscina, costa, peso, mantenimiento, comodidad, textilene y uso recomendado.",
+        "body_html": """
+<p><strong>Para la mayoría de jardines, piscinas y terrazas, una tumbona de aluminio con textilene o una tumbona de resina exterior suele ser la opción más práctica.</strong> El aluminio pesa poco y no se oxida como el acero; la resina es muy fácil de limpiar y funciona muy bien junto a piscina; la madera aporta más calidez visual, pero exige más mantenimiento y pesa más.</p>
+
+<h2>Comparativa rápida de tumbonas por material</h2>
+<table>
+  <thead>
+    <tr><th>Material</th><th>Ventaja principal</th><th>Mantenimiento</th><th>Peso</th><th>Mejor uso</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Aluminio + textilene</td><td>Ligereza, resistencia al óxido y secado rápido</td><td>Bajo</td><td>Ligero</td><td>Piscina, terraza, uso frecuente y mover a menudo</td></tr>
+    <tr><td>Resina / polipropileno exterior</td><td>Limpieza sencilla y buena relación uso/precio</td><td>Muy bajo</td><td>Ligero-medio</td><td>Piscina, alquiler turístico, hostelería y uso intensivo</td></tr>
+    <tr><td>Madera / teca</td><td>Calidez estética y presencia premium</td><td>Medio-alto</td><td>Medio-pesado</td><td>Porche, jardín cuidado o terraza con estética natural</td></tr>
+    <tr><td>Acero tratado</td><td>Robustez estructural</td><td>Medio-alto</td><td>Pesado</td><td>Zonas protegidas, mejor si no hay salitre</td></tr>
+    <tr><td>Ratán sintético PE</td><td>Aspecto lounge y mantenimiento bajo</td><td>Bajo</td><td>Medio</td><td>Zona chill-out o porche cubierto</td></tr>
+  </tbody>
+</table>
+
+<h2>Tumbonas de aluminio: ligeras y muy prácticas</h2>
+<p>El aluminio lacado o pintado en polvo es uno de los materiales más cómodos para una <a href="/collections/tumbonas">tumbona de exterior</a>. No se oxida como el acero, pesa poco y permite mover la pieza para buscar sol, sombra o guardarla al final del día. En muchas tumbonas se combina con textilene, una malla técnica que seca rápido y evita depender siempre de cojines.</p>
+<p>Su punto débil no suele ser la lluvia, sino la calidad del acabado y el cuidado en costa. En zonas con salitre conviene limpiar con más frecuencia, especialmente uniones, tornillos y zonas donde se acumule polvo. Si quieres una tumbona fácil de mover y de estética limpia, el aluminio suele ser la primera opción.</p>
+
+<h2>Tumbonas de resina: piscina, limpieza y uso intensivo</h2>
+<p>La resina de exterior y el polipropileno son muy prácticos cuando la prioridad es limpiar rápido, resistir humedad y equipar varias piezas sin complicarse. Por eso son habituales en piscinas, alojamientos turísticos y zonas de uso intensivo. No se oxidan, no absorben agua como una madera sin tratar y se limpian con agua y jabón suave.</p>
+<p>La clave está en que sea resina apta para exterior, con buena formulación y protección frente al sol. Una resina pobre puede decolorarse o volverse quebradiza antes. Si buscas bajo mantenimiento, precio contenido y facilidad de reposición, la resina tiene mucho sentido.</p>
+
+<h2>Tumbonas de madera o teca: calidez, pero más cuidado</h2>
+<p>La madera cambia por completo la lectura de una zona de descanso: aporta textura, calidez y una presencia más decorativa. La teca es especialmente apreciada en exterior por sus aceites naturales y su estabilidad, pero no es “sin mantenimiento”. Con el sol puede evolucionar hacia una pátina gris plateada; si quieres conservar el tono dorado, tendrás que limpiar y aplicar protector o aceite específico de forma periódica.</p>
+<p>En tumbonas, la madera también pesa más. Eso puede ser positivo si quieres una pieza estable en un porche, pero incómodo si vas a moverla cada día alrededor de la piscina. Para exposición dura, conviene revisar drenaje, ventilación y evitar humedad estancada.</p>
+
+<h2>¿Qué material elegir junto a una piscina?</h2>
+<p>Junto a piscina, prioriza materiales que no absorban agua, se limpien rápido y soporten cloro, crema solar y humedad frecuente. Aluminio con textilene y resina exterior suelen ser las opciones más sencillas. La madera puede funcionar, pero pide más atención: limpieza, secado y protector si quieres mantener aspecto.</p>
+<p>También importa el detalle práctico: ruedas, respaldo reclinable, apilabilidad y si la superficie se seca rápido antes de sentarte. Una tumbona muy bonita que retiene humedad o cuesta mover acaba usándose menos.</p>
+
+<h2>¿Qué material funciona mejor en costa?</h2>
+<p>En costa, el salitre acelera el desgaste de acabados y tornillería. El aluminio lacado y la resina exterior funcionan bien si se limpian de forma periódica para retirar sal. Evita acero mal protegido y revisa uniones. Si eliges madera, asume limpieza y mantenimiento más constantes.</p>
+<p>La recomendación prudente es no pensar solo en el material principal: mira también tornillos, ruedas, bisagras, remaches y mecanismos de reclinado. En una tumbona, esas piezas trabajan mucho.</p>
+
+<h2>Comodidad: estructura, respaldo y tejido importan tanto como el material</h2>
+<p>Una buena tumbona no se elige solo por material. Revisa número de posiciones del respaldo, altura, anchura, curvatura, presencia de ruedas y si necesitas colchoneta. El textilene o malla técnica puede resultar muy práctico porque ofrece soporte y seca rápido; una tumbona rígida de resina puede necesitar colchoneta para largas siestas.</p>
+<p>Si vas a leer o usarla muchas horas, prioriza respaldo regulable. Si será para piscina y cambios rápidos de sitio, prioriza ligereza y ruedas. Si será una pieza decorativa fija, puedes permitirte más peso y material cálido.</p>
+
+<h2>Checklist antes de comprar una tumbona</h2>
+<ul>
+  <li>¿La vas a mover a diario o quedará fija?</li>
+  <li>¿Estará junto a piscina, en costa o bajo porche?</li>
+  <li>¿Necesitas ruedas o apilabilidad?</li>
+  <li>¿El respaldo se reclina en varias posiciones?</li>
+  <li>¿La superficie seca rápido tras lluvia o baño?</li>
+  <li>¿Necesita colchoneta para ser cómoda?</li>
+  <li>¿Puedes limpiarla y guardarla sin esfuerzo?</li>
+</ul>
+
+<h2>Cómo decidir según tu caso</h2>
+<ul>
+  <li><strong>Piscina familiar:</strong> resina exterior o aluminio con textilene.</li>
+  <li><strong>Terraza donde mueves muebles a menudo:</strong> aluminio ligero.</li>
+  <li><strong>Alojamiento turístico:</strong> resina o aluminio por limpieza y reposición.</li>
+  <li><strong>Porche decorativo:</strong> madera/teca si aceptas mantenimiento.</li>
+  <li><strong>Costa:</strong> aluminio lacado o resina, limpiando salitre con frecuencia.</li>
+</ul>
+
+<h2>Fuentes y criterio técnico</h2>
+<p>Esta guía se ha redactado contrastando criterios de materiales de exterior, resistencia del aluminio frente al óxido, uso de resinas y polietileno en mobiliario outdoor, recomendaciones de mantenimiento de teca y guías editoriales sobre durabilidad real frente a sol, lluvia, cloro y uso frecuente. La recomendación final se adapta al catálogo y al uso real en terrazas, jardines y piscinas españolas.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Es mejor una tumbona de aluminio o de resina?</h3>
+<p>Depende del uso. El aluminio suele ser más ligero y premium; la resina es muy práctica, fácil de limpiar y buena para piscina o uso intensivo. Ambas son buenas opciones si están preparadas para exterior.</p>
+<h3>¿La tumbona de aluminio se oxida?</h3>
+<p>El aluminio no se oxida como el acero, aunque puede deteriorarse el acabado si se descuida. En costa conviene limpiar salitre y revisar uniones y tornillería.</p>
+<h3>¿Una tumbona de madera puede quedarse fuera?</h3>
+<p>Puede quedarse fuera si la madera es adecuada para exterior y se mantiene bien, pero requiere más cuidado que aluminio o resina. Evita humedad estancada y sigue las indicaciones del fabricante.</p>
+<h3>¿Qué tumbona es mejor para piscina?</h3>
+<p>Para piscina suelen funcionar muy bien la resina exterior y el aluminio con textilene, porque no absorben agua, se limpian rápido y son fáciles de mover.</p>
+<h3>¿Necesito colchoneta para una tumbona?</h3>
+<p>No siempre. Las tumbonas con textilene pueden ser cómodas sin colchoneta; las superficies rígidas de resina o madera suelen agradecer una colchoneta si vas a usarlas durante mucho tiempo.</p>
+""",
+    },
+    "como-elegir-mesa-de-exterior-medidas-comensales-y-espacio-necesario": {
+        "title": "Cómo elegir mesa de exterior: medidas, comensales y espacio necesario",
+        "summary": "Guía práctica para elegir una mesa de exterior según número de comensales, forma, espacio disponible, paso, sillas y material del tablero.",
+        "meta_title": "Cómo elegir mesa de exterior: medidas y comensales",
+        "meta_description": "Guía para elegir mesa de exterior: medidas por comensales, espacio necesario para sillas, mesas redondas, rectangulares, extensibles y HPL.",
+        "body_html": """
+<p><strong>Para elegir una mesa de exterior, calcula primero cuántas personas la usarán a diario y cuánto espacio libre tienes alrededor para sacar sillas y circular.</strong> Como orientación, una mesa de 60-70 cm sirve para 2 personas, 120 cm para 4, 160-180 cm para 6 y 200-240 cm para 8, siempre ajustando según forma, tipo de silla y espacio real de terraza.</p>
+
+<h2>Respuesta rápida: medidas orientativas por comensales</h2>
+<table>
+  <thead>
+    <tr><th>Comensales</th><th>Mesa redonda</th><th>Mesa rectangular/cuadrada</th><th>Uso recomendado</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2 personas</td><td>60-70 cm diámetro</td><td>60x60 o 70x70 cm</td><td>Balcón, café, desayuno o terraza pequeña</td></tr>
+    <tr><td>4 personas</td><td>90-100 cm diámetro</td><td>120x70/80 cm aprox.</td><td>Comedor compacto de terraza</td></tr>
+    <tr><td>6 personas</td><td>120-140 cm diámetro</td><td>160-180x90 cm aprox.</td><td>Comedor exterior familiar</td></tr>
+    <tr><td>8 personas</td><td>150 cm o más, si hay espacio</td><td>200-240x90/100 cm aprox.</td><td>Jardín, porche amplio o comidas largas</td></tr>
+    <tr><td>Uso variable</td><td>Redonda extensible si existe</td><td>Extensible 140/200, 160/240 o similar</td><td>Día a día compacto e invitados puntuales</td></tr>
+  </tbody>
+</table>
+<p>Estas medidas no son una ley exacta: cambian con el ancho de las sillas, si tienen brazos, el grosor de las patas y si quieres poner fuentes, paneras o decoración en el centro. Para comprar con seguridad, mide siempre la terraza completa y simula la mesa con cinta en el suelo.</p>
+
+<h2>La medida que más se olvida: espacio para mover sillas</h2>
+<p>Una mesa no ocupa solo lo que mide el tablero. También necesita zona para sacar la silla, sentarse y pasar detrás. En interior se suele recomendar alrededor de 90 cm libres como referencia cómoda alrededor de la mesa; en una terraza pequeña puedes bajar esa ambición, pero entonces conviene usar sillas ligeras, plegables o sin brazos.</p>
+<p>Si el paso queda justo, no fuerces una mesa grande. Es mejor una mesa de 120 cm cómoda que una de 160 cm que obliga a mover las sillas cada vez. En balcones, mira también la guía de <a href="/blogs/news/como-aprovechar-al-maximo-una-terraza-pequena-muebles-distribucion-y-trucos-visuales">cómo amueblar una terraza pequeña o balcón</a>.</p>
+
+<h2>Mesa redonda, rectangular, cuadrada o extensible</h2>
+<p>La forma de la mesa cambia mucho la sensación de espacio. Una redonda facilita la conversación y evita esquinas, por eso funciona bien en terrazas pequeñas o zonas de paso. Una rectangular aprovecha mejor paredes, porches largos y comedores para 6 u 8 personas. Una cuadrada es muy práctica para 2 o 4, pero puede quedarse corta si quieres servir platos al centro.</p>
+<p>Las mesas extensibles son la opción más lógica cuando hay dos vidas: uso diario de 2-4 personas e invitados algunos fines de semana. La clave es comprobar también la medida abierta, no solo cerrada. Si abierta bloquea la puerta o el paso, la extensión será más teórica que útil.</p>
+
+<h2>Cómo elegir según el espacio real</h2>
+<ul>
+  <li><strong>Balcón estrecho:</strong> mesa plegable, abatible o redonda de 60-70 cm.</li>
+  <li><strong>Terraza pequeña:</strong> mesa redonda de 90 cm o rectangular de 120 cm, con sillas ligeras.</li>
+  <li><strong>Porche familiar:</strong> rectangular de 160-180 cm o extensible.</li>
+  <li><strong>Jardín amplio:</strong> 200-240 cm si comes habitualmente con 8 personas.</li>
+  <li><strong>Hostelería o alquiler:</strong> formatos repetibles, fáciles de limpiar y mover.</li>
+</ul>
+
+<h2>Sillas: el tablero no lo decide todo</h2>
+<p>Dos mesas de la misma medida pueden admitir distinto número de personas según las sillas. Una silla sin brazos ocupa menos y entra mejor bajo el tablero. Una silla con brazos es más cómoda para sobremesa, pero exige más ancho y puede chocar con el faldón o la estructura de la mesa.</p>
+<p>Antes de comprar, revisa tres cosas: ancho de silla, altura de asiento y si los brazos entran bajo la mesa. Como referencia ergonómica, la distancia entre asiento y tablero suele ser cómoda cuando deja margen suficiente para piernas sin que el usuario coma demasiado alto o encajado.</p>
+
+<h2>Materiales de tablero para exterior</h2>
+<p>En <a href="/collections/mesas">mesas de exterior</a>, el tablero recibe platos, vasos, sol, humedad y limpieza frecuente. Por eso el material importa mucho. El HPL es una opción muy práctica para exterior porque resiste bien el uso diario y se limpia con facilidad. El aluminio es ligero y cómodo en estructuras. La madera aporta calidez, pero exige más cuidado y puede cambiar de color con el sol.</p>
+<p>Si la mesa estará a pleno sol, cerca de piscina o en costa, revisa la <a href="/blogs/news/que-muebles-de-exterior-aguantan-mejor-lluvia-y-sol">guía de muebles resistentes a lluvia y sol</a> y la <a href="/blogs/news/como-elegir-muebles-de-exterior-que-duren-aluminio-teca-o-ratan-sintetico">guía de materiales</a>. Para mantenimiento, la pauta básica está en la guía de <a href="/blogs/news/guia-de-mantenimiento-de-muebles-de-exterior-como-prepararlos-para-cada-temporada">limpieza de muebles de exterior</a>.</p>
+
+<h2>Altura de mesa: comedor, auxiliar o alta</h2>
+<p>Una mesa de comedor exterior suele rondar la altura de una mesa de comedor interior. Es la más cómoda para comer sentado con silla estándar. Una mesa auxiliar sirve para apoyar bebidas, libros o aperitivo junto a un sofá, pero no sustituye bien a una mesa de comedor. Una mesa alta funciona para uso tipo barra, terraza de hostelería o aperitivo de pie, pero no es lo más cómodo para comidas largas.</p>
+<p>Elige altura según uso, no solo por estética. Si la terraza será un comedor real, compra mesa de comedor. Si será zona lounge, prioriza mesa de centro o auxiliar. Si será una zona social rápida, una mesa alta puede tener sentido.</p>
+
+<h2>Checklist antes de comprar una mesa de exterior</h2>
+<ul>
+  <li>¿Cuántas personas comen a diario y cuántas solo ocasionalmente?</li>
+  <li>¿Hay espacio para sacar sillas sin bloquear puerta o paso?</li>
+  <li>¿Las sillas elegidas caben bajo la mesa?</li>
+  <li>¿La mesa abierta, si es extensible, sigue dejando paso?</li>
+  <li>¿El tablero soporta el uso real: comida, sol, humedad y limpieza?</li>
+  <li>¿Puedes moverla o cubrirla cuando haga falta?</li>
+  <li>¿Entra por ascensor, escalera, puerta y acceso a terraza?</li>
+</ul>
+
+<h2>Errores habituales al elegir mesa de exterior</h2>
+<ul>
+  <li><strong>Comprar solo por número de plazas:</strong> una mesa “para 6” puede ser incómoda con sillas anchas.</li>
+  <li><strong>Olvidar el paso:</strong> el tablero cabe, pero las personas no circulan.</li>
+  <li><strong>Elegir una extensible enorme:</strong> si abierta no cabe, no resolverá las comidas con invitados.</li>
+  <li><strong>No pensar en el viento:</strong> manteles, parasoles y objetos ligeros condicionan el uso real.</li>
+  <li><strong>Ignorar el mantenimiento:</strong> un tablero bonito puede no ser el más cómodo si necesita demasiado cuidado.</li>
+</ul>
+
+<h2>Fuentes y criterio técnico</h2>
+<p>Esta guía se ha redactado contrastando medidas estándar de mesas de comedor, recomendaciones de espacio libre alrededor de la mesa, criterios de ancho por comensal y guías editoriales sobre mesas para espacios pequeños. La recomendación final se adapta a uso exterior: terraza real, sillas que se mueven, viento, sol, limpieza y necesidad de guardar o cubrir fuera de temporada.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Qué medida de mesa exterior necesito para 4 personas?</h3>
+<p>Como orientación, una mesa rectangular de unos 120x70/80 cm o una redonda de 90-100 cm suele funcionar para 4 personas. Si las sillas tienen brazos o quieres servir al centro, conviene algo más de margen.</p>
+<h3>¿Qué mesa exterior elijo para 6 personas?</h3>
+<p>Para 6 personas, una mesa rectangular de 160-180 cm suele ser una medida cómoda. En redonda, 120-140 cm puede funcionar, siempre que haya espacio suficiente alrededor.</p>
+<h3>¿Mesa redonda o rectangular para terraza pequeña?</h3>
+<p>La redonda suele facilitar el paso y la conversación en espacios compactos. La rectangular aprovecha mejor una pared o un porche alargado. Si el espacio es muy estrecho, valora una plegable.</p>
+<h3>¿Cuánto espacio dejo alrededor de la mesa?</h3>
+<p>Lo ideal es dejar espacio para sacar sillas y circular. Como referencia cómoda, unos 90 cm alrededor funcionan bien; si no cabe, reduce tamaño de mesa o usa sillas plegables o sin brazos.</p>
+<h3>¿Merece la pena una mesa extensible de exterior?</h3>
+<p>Sí, si cerrada encaja en el uso diario y abierta sigue dejando paso. Es buena solución para quien come normalmente 2-4 personas y recibe invitados puntuales.</p>
+""",
+    },
     "como-aprovechar-al-maximo-una-terraza-pequena-muebles-distribucion-y-trucos-visuales": {
         "title": "Cómo amueblar una terraza pequeña o balcón: medidas, muebles y distribución",
         "summary": "Guía práctica para elegir muebles de exterior en terrazas pequeñas y balcones: medidas, distribución, mesas, sillas, sombra, almacenaje y errores a evitar.",

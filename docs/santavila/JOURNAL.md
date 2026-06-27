@@ -2632,6 +2632,90 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ---
 
+## 2026-06-27 · GEO Sprint 4.5 - guía mesas por medidas y comensales
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se creó la guía `/blogs/news/como-elegir-mesa-de-exterior-medidas-comensales-y-espacio-necesario`.
+- Se contrastó el contenido con fuentes externas sobre medidas de mesa, espacio para sillas, ancho por comensal y mesas para espacios pequeños.
+- Se verificó HTML público, canonical, meta, H1, tabla y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — ahora gestiona materiales, lluvia/sol, mantenimiento, terraza pequeña y mesas.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe actualizado con Sprint 4.5.
+
+### Hallazgos clave
+- La guía publica ~1.231 palabras.
+- Schema verificado: `BreadcrumbList`, `Article` y `FAQPage` con 5 preguntas.
+- La guía aterriza medidas por 2, 4, 6 y 8 comensales, con advertencias por sillas, brazos, extensibles y paso real.
+- La URL pública devuelve 200 con canonical correcto.
+
+### Siguiente paso recomendado
+- Sprint 4.6: comparativa de tumbona de aluminio vs madera/resina.
+
+---
+
+## 2026-06-27 · GEO Sprint 4.6 - guía tumbonas por material
+
+**Paso del flujo:** GEO Sprint 4
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificación pública con `curl`
+
+### Qué se ejecutó
+- Se creó la guía `/blogs/news/tumbona-de-aluminio-resina-o-madera-cual-elegir-para-exterior`.
+- Se contrastó el contenido con fuentes externas sobre aluminio, resina/PE, teca, textiles técnicos, piscina, costa y mantenimiento.
+- Se verificó HTML público, canonical, meta, H1, tabla y schema.
+
+### Entregables
+- `scripts/apply_geo_guides.py` — ahora gestiona 6 guías citables del cluster GEO inicial.
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md` — informe actualizado con Sprint 4.6.
+
+### Hallazgos clave
+- La guía publica ~1.120 palabras.
+- Schema verificado: `BreadcrumbList`, `Article` y `FAQPage` con 5 preguntas.
+- La guía diferencia material principal, acabado, tornillería, salitre, cloro, ruedas, respaldo y colchoneta.
+- La URL pública devuelve 200 con canonical correcto.
+
+### Siguiente paso recomendado
+- Cerrar Sprint 4 como cluster inicial y pasar a Sprint 5: autoridad de marca y señales externas.
+
+---
+
+## 2026-06-27 · GEO Sprint 5 - autoridad de marca y menciones externas
+
+**Paso del flujo:** GEO Sprint 5
+**Estado:** 🔄 iniciado
+**Quién/qué:** Codex + revision theme + contraste guia oficial Google Business Profile
+
+### Qué se ejecutó
+- Se creo el documento operativo de autoridad externa para Santavila.
+- Se reviso el theme para confirmar soporte de enlaces sociales en footer.
+- Se dejo pendiente `sameAs` hasta tener perfiles publicos reales y verificables.
+- Se contrasto el criterio de Google Business Profile con la guia oficial de Google.
+
+### Entregables
+- `docs/santavila/GEO-BRAND-MENTIONS.md` — roadmap de perfiles, reviews, menciones, Pinterest, piezas visuales y `sameAs`.
+- `docs/santavila/GEO-SOCIAL-CONTENT-PACK.md` — copys y guiones base para Pinterest, Instagram y YouTube Shorts.
+
+### Hallazgos clave
+- El footer ya soporta Instagram y Pinterest desde ajustes del theme.
+- El schema de organizacion no debe incluir `sameAs` hasta tener URLs reales.
+- Google Business Profile solo conviene si Santavila tiene ubicacion visitable o servicio presencial elegible.
+- El cluster de 6 guias ya puede reutilizarse como contenido social sin tocar producto ni precios.
+
+### Decisiones pendientes
+- Confirmar si Santavila es elegible para Google Business Profile.
+- Crear o facilitar URLs reales de Instagram, Pinterest, LinkedIn y YouTube.
+- Elegir plataforma principal de reviews.
+
+### Siguiente paso recomendado
+- Con URLs reales, aplicar `sameAs` en schema y enlazado social en theme.
+
+---
+
 ## Plantilla para próximas entradas
 
 ```markdown

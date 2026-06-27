@@ -275,6 +275,80 @@ Informe:
 
 - `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md`
 
+## Sprint 4.6 aplicado - 2026-06-27
+
+Fuente de ejecucion:
+
+- `.venv/bin/python scripts/apply_geo_guides.py --apply`
+
+Estado: nueva guia citable de tumbonas por material publicada.
+
+URL publicada:
+
+- `/blogs/news/tumbona-de-aluminio-resina-o-madera-cual-elegir-para-exterior`
+
+Contenido:
+
+- Comparativa de aluminio + textilene, resina/polipropileno, madera/teca, acero tratado y ratán sintetico PE.
+- Secciones para piscina, costa, comodidad, respaldo, ruedas y colchoneta.
+- Checklist antes de comprar.
+- Recomendaciones por caso.
+- FAQ final con 5 preguntas.
+
+Enlazado:
+
+- El articulo enlaza a `/collections/tumbonas`.
+- El articulo refuerza el cluster de materiales, mantenimiento, piscina y costa.
+
+Verificacion:
+
+- URL devuelve 200.
+- Canonical apunta a la misma URL.
+- H1 y meta description actualizados.
+- HTML contiene tabla, bloque de fuentes y FAQ.
+- JSON-LD expone `Article`, `FAQPage` y `BreadcrumbList`.
+
+Informe:
+
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md`
+
+## Sprint 4.5 aplicado - 2026-06-27
+
+Fuente de ejecucion:
+
+- `.venv/bin/python scripts/apply_geo_guides.py --apply`
+
+Estado: nueva guia citable de mesas de exterior publicada.
+
+URL publicada:
+
+- `/blogs/news/como-elegir-mesa-de-exterior-medidas-comensales-y-espacio-necesario`
+
+Contenido:
+
+- Tabla por comensales: 2, 4, 6, 8 y uso variable/extensible.
+- Recomendaciones de espacio para sacar sillas y circular.
+- Comparativa de mesa redonda, rectangular, cuadrada y extensible.
+- Secciones para sillas, materiales de tablero, altura, checklist y errores habituales.
+- FAQ final con 5 preguntas.
+
+Enlazado:
+
+- El articulo enlaza a `/collections/mesas`.
+- El articulo enlaza a guias de terraza pequena, lluvia/sol, materiales y mantenimiento.
+
+Verificacion:
+
+- URL devuelve 200.
+- Canonical apunta a la misma URL.
+- H1 y meta description actualizados.
+- HTML contiene tabla, bloque de fuentes y FAQ.
+- JSON-LD expone `Article`, `FAQPage` y `BreadcrumbList`.
+
+Informe:
+
+- `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md`
+
 ## Sprint 4.4 aplicado - 2026-06-26
 
 Fuente de ejecucion:
@@ -351,6 +425,28 @@ Verificacion:
 Informe:
 
 - `docs/santavila/GEO-CITABLE-CONTENT-REPORT.md`
+
+## Sprint 5 iniciado - 2026-06-27
+
+Fuente de ejecucion:
+
+- Revision documental y theme audit local.
+- Contraste de Google Business Profile contra guia oficial de Google.
+
+Estado: autoridad de marca iniciada.
+
+Entregable:
+
+- `docs/santavila/GEO-BRAND-MENTIONS.md`
+- `docs/santavila/GEO-SOCIAL-CONTENT-PACK.md`
+
+Acciones definidas:
+
+- Confirmar elegibilidad de Google Business Profile.
+- Reservar/crear perfiles de Pinterest, Instagram, LinkedIn y YouTube.
+- Elegir plataforma principal de reviews.
+- Preparar 3-5 menciones externas realistas en blogs/directorios sectoriales.
+- Aplicar `sameAs` solo cuando existan URLs publicas reales.
 
 ## Sprint 4.2 aplicado - 2026-06-25
 
