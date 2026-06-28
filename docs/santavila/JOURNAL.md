@@ -13,6 +13,21 @@
 
 ---
 
+## 2026-06-28 (tarde-3) · HERO Fase 2 — carrusel/slideshow (v1)
+
+El hero pasa de una imagen a **carrusel** de varias diapositivas, **sin romper la home**.
+- **Slides = bloques** (imagen + eyebrow + título + subtítulo + 2 CTAs). Snippet nuevo `santavila-hero-slide.liquid` reutilizable (carrusel y legacy).
+- **Compatibilidad:** sin bloques → slide **legacy** desde los settings de sección (idéntico a hoy). Con 2+ bloques se activan navegación y auto-rotación. **No toca `index.json`** del compañero; el live (sin bloques) se ve como hoy — verificado.
+- **Funciones:** fundido o deslizar+fundir, puntos/flechas (posición configurable), auto-rotación (pausa en hover/foco y con `prefers-reduced-motion`), teclado ←/→ y **swipe** móvil. Accesible (`aria-live`, `aria-current`). JS vanilla, sin librerías.
+- Velo, caja, altura, color, sello y "Descubre" siguen **globales**. 1ª imagen `eager`, resto `lazy`.
+- **Sin split screen** (queda para v1.1).
+
+**Verificación:** schema válido, PUT 200 (compila snippet + sección), subido a DEV y LIVE; **legacy verificado intacto** en `santavila.com` (1 slide, sin carrusel ni nav). Spec: `docs/superpowers/specs/2026-06-28-hero-carrusel-design.md`. En `main` `48ff4e7`.
+
+**Para activarlo:** el dueño añade 2+ bloques "Diapositiva" desde el editor (Hero → Añadir bloque). El carrusel real se valida ahí (no se puede sin tocar `index.json`).
+
+---
+
 ## 2026-06-28 (tarde-2) · HERO Fase 1 — altura, color de texto y caja de fondo
 
 Sobre las funciones que pidió el dueño (referencias del tema Atlantica). **Fase 1** (additive, defaults neutros = no cambian el aspecto actual; solo añaden controles en el editor):
