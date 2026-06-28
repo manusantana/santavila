@@ -78,6 +78,14 @@
         "size_guide": "<p>Antes de elegir, mide el espacio donde la colocarás y deja paso para moverte con holgura (40–60&nbsp;cm alrededor).</p><p>Las medidas exactas (ancho, fondo y alto) están en la descripción. ¿Dudas con tu espacio? Escríbenos por WhatsApp o a hola@santavila.com y te ayudamos.</p>"
       }
     },
+    "santavila_pdp_description": {
+      "type": "santavila-pdp-description",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "eyebrow": "La pieza",
+        "heading": "Descripción y detalles"
+      }
+    },
     "santavila_pdp_highlights": {
       "type": "santavila-pdp-highlights",
       "blocks": {
@@ -167,6 +175,7 @@
   },
   "order": [
     "santavila_product",
+    "santavila_pdp_description",
     "santavila_pdp_highlights",
     "santavila_pdp_social",
     "santavila_related"

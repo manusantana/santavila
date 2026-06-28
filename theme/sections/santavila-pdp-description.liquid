@@ -1,0 +1,151 @@
+{%- comment -%}
+  Santavila · Descripción del producto a ancho completo + ficha técnica.
+  La ficha "Detalles clave" se EXTRAE de la propia descripción (la reescribió el sprint GEO con
+  estructura fija: <h2>Detalles clave</h2><ul>…</ul>). No inventa datos (línea roja).
+  Fallback: si la descripción no trae ese marcador, se muestra entera como narrativa, sin ficha.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign prod = closest.product
+  assign full = prod.description
+  assign narrative = full
+  assign spec = ''
+  assign marker = '<h2>Detalles clave</h2>'
+  if full contains marker
+    assign segs = full | split: marker
+    assign narrative = segs[0]
+    assign tail = segs[1]
+    if tail contains '</ul>'
+      assign two = tail | split: '</ul>'
+      assign spec = two[0] | append: '</ul>'
+      assign narrative = narrative | append: two[1]
+    else
+      assign spec = tail
+    endif
+  endif
+-%}
+
+{%- if full != blank -%}
+<div class="sv-section sv-pdesc color-{{ s.color_scheme }}">
+  <div class="sv-container">
+    <div class="sv-pdesc__grid{% if spec == blank %} sv-pdesc__grid--single{% endif %}">
+
+      <div class="sv-pdesc__main">
+        {%- if s.eyebrow != blank -%}<p class="sv-eyebrow">{{ s.eyebrow }}</p>{%- endif -%}
+        {%- if s.heading != blank -%}<h2 class="sv-pdesc__title">{{ s.heading }}</h2>{%- endif -%}
+        <div class="sv-pdesc__chips">
+          {%- if prod.type != blank -%}<span class="sv-pdesc__chip">{{ prod.type }}</span>{%- endif -%}
+          <span class="sv-pdesc__chip">Hecho en España</span>
+        </div>
+        <div class="sv-pdesc__rte">{{ narrative }}</div>
+      </div>
+
+      {%- if spec != blank -%}
+        <aside class="sv-pdesc__spec">
+          <h3 class="sv-pdesc__spec-title">Detalles clave</h3>
+          <div class="sv-pdesc__spec-body">{{ spec }}</div>
+        </aside>
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+{% stylesheet %}
+  .sv-pdesc { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-pdesc__grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: start;
+  }
+  .sv-pdesc__grid--single { grid-template-columns: 1fr; max-width: 70ch; }
+
+  .sv-pdesc__title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1.05;
+    margin: 8px 0 16px;
+  }
+  .sv-pdesc__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .sv-pdesc__chip {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    background: var(--sage-50);
+    border-radius: 99px;
+    padding: 6px 12px;
+  }
+
+  .sv-pdesc__rte { max-width: 64ch; }
+  .sv-pdesc__rte, .sv-pdesc__rte p, .sv-pdesc__rte li {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+  .sv-pdesc__rte p { margin: 0 0 16px; }
+  .sv-pdesc__rte :last-child { margin-bottom: 0; }
+  .sv-pdesc__rte strong { color: var(--ink); font-weight: 600; }
+
+  /* Ficha técnica (extraída de la descripción) */
+  .sv-pdesc__spec {
+    position: sticky;
+    top: 100px;
+    background: var(--bone);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-media);
+    padding: clamp(20px, 2.2vw, 30px);
+  }
+  .sv-pdesc__spec-title {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin: 0 0 6px;
+  }
+  .sv-pdesc__spec-body ul { list-style: none; margin: 0; padding: 0; }
+  .sv-pdesc__spec-body li {
+    display: grid;
+    grid-template-columns: minmax(86px, 38%) 1fr;
+    gap: 10px 14px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+  .sv-pdesc__spec-body li:last-child { padding-bottom: 0; }
+  .sv-pdesc__spec-body strong { color: var(--ink); font-weight: 600; }
+
+  @media screen and (max-width: 989px) {
+    .sv-pdesc__grid { grid-template-columns: 1fr; gap: 30px; }
+    .sv-pdesc__rte { max-width: none; }
+    .sv-pdesc__spec { position: static; }
+  }
+  @media screen and (max-width: 749px) {
+    .sv-pdesc__spec { padding: 20px; }
+    .sv-pdesc__spec-body li { grid-template-columns: minmax(78px, 40%) 1fr; gap: 8px 12px; font-size: 14px; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Santavila PDP Descripción",
+  "tag": "section",
+  "class": "sv-pdesc-wrapper",
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "La pieza" },
+    { "type": "text", "id": "heading", "label": "Titular", "default": "Descripción y detalles" }
+  ],
+  "presets": [ { "name": "Santavila PDP Descripción" } ]
+}
+{% endschema %}
