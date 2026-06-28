@@ -13,6 +13,16 @@
 
 ---
 
+## 2026-06-28 (tarde-4) · HERO — 3 diapositivas de ejemplo OCULTAS en el live
+
+A petición del dueño, se dejaron **3 bloques `slide` con `disabled: true`** en `santavila_hero`, dentro del `templates/index.json` del **LIVE** (no en git: el `index.json` es territorio del compañero y ya estaba diverged).
+- Los bloques `disabled` **no cuentan** en `section.blocks` → la home pública sigue en modo legacy (1 slide). Verificado en `santavila.com`: `is-carousel=0`, sin puntos ni navegación.
+- En el editor aparecen como diapositivas **ocultas**; el dueño las muestra (clic en el ojo) para activar el carrusel. Usan la imagen actual (`tumbona_consumible`) de placeholder + textos de ejemplo distintos.
+- El script de inserción llevó **salvaguardas** (aborta si cambiaría cualquier otra sección o el orden). Ninguna otra sección de la home fue tocada.
+- **Aumenta la divergencia `index.json` live≠git** (ya existente por el trabajo del compañero). Pendiente de sincronizar de forma coordinada.
+
+---
+
 ## 2026-06-28 (tarde-3) · HERO Fase 2 — carrusel/slideshow (v1)
 
 El hero pasa de una imagen a **carrusel** de varias diapositivas, **sin romper la home**.
