@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-06-28 (tarde-2) · HERO Fase 1 — altura, color de texto y caja de fondo
+
+Sobre las funciones que pidió el dueño (referencias del tema Atlantica). **Fase 1** (additive, defaults neutros = no cambian el aspecto actual; solo añaden controles en el editor):
+- **Altura** configurable: automática (del tema) o fija en px, independiente escritorio/móvil.
+- **Color del texto** del hero configurable (default blanco; el eyebrow y subtítulo heredan).
+- **Caja/fondo** opcional tras el texto: panel semitransparente (color, opacidad, esquinas, borde), **off por defecto** — alternativa al velo global. Usa `color_modify`.
+
+Subido a DEV y LIVE (solo `santavila-hero.liquid`); verificado que el hero sigue intacto (caja off, texto blanco, foto presente). En `main` `28827bf`.
+
+**Pendiente — Fase 2:** hero en **carrusel/slideshow** (varias diapositivas, navegación flechas/puntos, auto-rotación, split screen). Es un **rediseño estructural grande** (blocks de slide + JS + schema): tarea dedicada con su propio diseño y validación.
+
+---
+
 ## 2026-06-28 (tarde) · HERO — velo configurable para legibilidad
 
 El velo del hero de la home pasa de **gradiente fijo** (casi transparente en el centro → el texto sobre la foto no se leía) a **configurable** desde el editor: color, opacidad uniforme y refuerzo arriba/abajo.
