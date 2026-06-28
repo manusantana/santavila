@@ -7,9 +7,16 @@
   assign ov_grad_alpha = s.overlay_gradient | default: 60 | divided_by: 100.0
   assign ov_base = ov_color | color_modify: 'alpha', ov_base_alpha
   assign ov_grad = ov_color | color_modify: 'alpha', ov_grad_alpha
+  # Color del texto y caja/fondo opcional tras el texto
+  assign txt_color = s.text_color | default: '#FFFFFF'
+  assign panel_alpha = s.panel_opacity | default: 30 | divided_by: 100.0
+  assign panel_bg = s.panel_color | default: '#141610' | color_modify: 'alpha', panel_alpha
+  # Altura fija opcional
+  assign h_desktop = s.height_desktop | default: 720
+  assign h_mobile = s.height_mobile | default: 480
 -%}
 
-<div class="sv-hero" style="--sv-hero-h: {% if s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %}; --sv-ov-base: {{ ov_base }}; --sv-ov-grad: {{ ov_grad }};">
+<div class="sv-hero" style="--sv-hero-h: {% if s.height_mode == 'fixed' %}{{ h_desktop }}px{% elsif s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %};{% if s.height_mode == 'fixed' %} --sv-hero-h-mobile: {{ h_mobile }}px;{% endif %} --sv-text-color: {{ txt_color }}; --sv-ov-base: {{ ov_base }}; --sv-ov-grad: {{ ov_grad }};">
   {%- if s.image != blank -%}
     <div class="sv-hero__media">
       {{
@@ -26,6 +33,7 @@
   {%- endif -%}
 
   <div class="sv-hero__inner">
+    <div class="sv-hero__box{% if s.text_panel %} is-panel{% endif %}"{% if s.text_panel %} style="--sv-panel-bg: {{ panel_bg }}; --sv-panel-radius: {{ s.panel_radius | default: 10 }}px; --sv-panel-bw: {{ s.panel_border | default: 0 }}px; --sv-panel-bc: {{ s.panel_border_color | default: '#FFFFFF' }};"{% endif %}>
     {%- if s.eyebrow != blank -%}
       <p class="sv-hero__eyebrow">{{ s.eyebrow }}</p>
     {%- endif -%}
@@ -77,6 +85,7 @@
         {%- endif -%}
       </div>
     </div>
+    </div>
   </div>
 
   {%- if s.show_scroll -%}
@@ -91,7 +100,7 @@
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    color: #fff;
+    color: var(--sv-text-color, #fff);
     background: linear-gradient(150deg, #4f5447 0%, #2c2f26 55%, #3a3f31 100%);
   }
 
@@ -136,12 +145,23 @@
     padding-top: clamp(120px, 18vh, 200px);
   }
 
+  /* Caja/fondo opcional tras el texto (alternativa al velo global) */
+  .sv-hero__box.is-panel {
+    background: var(--sv-panel-bg, rgba(20, 22, 16, 0.3));
+    border-radius: var(--sv-panel-radius, 10px);
+    border: var(--sv-panel-bw, 0px) solid var(--sv-panel-bc, #fff);
+    padding: clamp(26px, 3.5vw, 52px);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+  }
+
   .sv-hero__eyebrow {
     font-family: var(--mono);
     font-size: 11.5px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.92);
+    color: var(--sv-text-color, #fff);
+    opacity: 0.92;
     margin: 0 0 26px;
   }
 
@@ -253,6 +273,7 @@
   }
 
   @media screen and (max-width: 749px) {
+    .sv-hero { min-height: var(--sv-hero-h-mobile, var(--sv-hero-h)); }
     /* el bloque cabía justo en 100svh: bajamos paddings y el mínimo del título */
     .sv-hero__inner {
       padding-top: clamp(92px, 13vh, 140px);
@@ -304,6 +325,38 @@
       "default": "full"
     },
     {
+      "type": "select",
+      "id": "height_mode",
+      "label": "Tipo de altura",
+      "options": [
+        { "value": "theme", "label": "Automática (del tema)" },
+        { "value": "fixed", "label": "Fija (px)" }
+      ],
+      "default": "theme"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "label": "Altura fija · escritorio",
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "default": 720,
+      "info": "Solo si 'Tipo de altura' = Fija."
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Altura fija · móvil",
+      "min": 240,
+      "max": 760,
+      "step": 10,
+      "unit": "px",
+      "default": 480,
+      "info": "Solo si 'Tipo de altura' = Fija."
+    },
+    {
       "type": "header",
       "content": "Velo / legibilidad sobre la imagen"
     },
@@ -334,6 +387,65 @@
       "unit": "%",
       "default": 60,
       "info": "Oscurece más la franja del menú (arriba) y la del título y botones (abajo)."
+    },
+    {
+      "type": "header",
+      "content": "Texto y caja"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_panel",
+      "label": "Fondo (caja) tras el texto",
+      "default": false,
+      "info": "Panel semitransparente detrás del texto, como alternativa al velo global. Si lo activas, baja el velo."
+    },
+    {
+      "type": "color",
+      "id": "panel_color",
+      "label": "Caja · color",
+      "default": "#141610"
+    },
+    {
+      "type": "range",
+      "id": "panel_opacity",
+      "label": "Caja · opacidad",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "panel_radius",
+      "label": "Caja · esquinas",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "panel_border",
+      "label": "Caja · grosor del borde",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "panel_border_color",
+      "label": "Caja · color del borde",
+      "default": "#FFFFFF"
     },
     {
       "type": "text",
