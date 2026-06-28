@@ -13,6 +13,17 @@
 
 ---
 
+## 2026-06-28 (tarde) · HERO — velo configurable para legibilidad
+
+El velo del hero de la home pasa de **gradiente fijo** (casi transparente en el centro → el texto sobre la foto no se leía) a **configurable** desde el editor: color, opacidad uniforme y refuerzo arriba/abajo.
+
+- **Por qué:** el compañero había puesto una imagen al hero **solo en live** (`tumbona_consumible.jpg`, vía `index.json` que sigue live≠git). Con foto, el velo viejo (0.05 en el centro) no daba contraste y el texto no se leía.
+- **Qué se hizo:** en `santavila-hero.liquid` (git==live para ese fichero) el `::after` ahora deriva de variables CSS calculadas con `color_modify` nativo. Settings nuevos (sección "Velo / legibilidad"): `overlay_color`, `overlay_opacity` (0-90 %), `overlay_gradient` (0-100 %). Defaults `#141610` / 40 % / 60 % → contraste suficiente **sin tocar `index.json`** (territorio del compañero, NO tocado).
+- **Velo** = capa uniforme (`--sv-ov-base`) + refuerzo arriba (menú) y abajo (título/CTAs) (`--sv-ov-grad`).
+- **Verificación:** schema JSON válido, PUT 200 (compila), subido a DEV y LIVE (solo el hero); render confirmado en `santavila.com` (variables del velo presentes sobre la imagen). En `main` `8eea6e8`.
+
+---
+
 ## 2026-06-28 · PDP — descripción a ancho completo + ficha técnica
 
 La descripción SEO deja de estar metida en la columna de compra (sitio equívoco) y baja a **ancho completo** con **ficha técnica** al lado. Patrón PDP premium: arriba compacto = comprar; debajo = contenido.
