@@ -1,0 +1,61 @@
+{%- comment -%}
+  Santavila · contenido de un slide del hero. Lo usan el carrusel (bloques) y el modo legacy (settings de sección).
+  Params:
+    img, ld (loading), fp (fetchpriority), eyebrow, h1, h2, sub,
+    cta1l, cta1lnk, cta2l, cta2lnk,
+    show_seal, seal_text, seal_id, panel (bool), panel_style, active (bool), attrs
+{%- endcomment -%}
+<div class="sv-hero__slide{% if active %} is-active{% endif %}" data-hero-slide{% if attrs %} {{ attrs }}{% endif %}>
+  {%- if img != blank -%}
+    <div class="sv-hero__media">
+      {{ img | image_url: width: 2400 | image_tag: loading: ld, fetchpriority: fp, sizes: '100vw', widths: '600, 900, 1200, 1600, 2000, 2400', alt: img.alt | default: shop.name }}
+    </div>
+  {%- endif -%}
+
+  <div class="sv-hero__inner">
+    <div class="sv-hero__box{% if panel %} is-panel{% endif %}"{% if panel %} style="{{ panel_style }}"{% endif %}>
+      {%- if eyebrow != blank -%}<p class="sv-hero__eyebrow">{{ eyebrow }}</p>{%- endif -%}
+
+      {%- if h1 != blank or h2 != blank -%}
+        <h1 class="sv-hero__title">{{- h1 -}}{%- if h2 != blank -%}<br><em>{{ h2 }}</em>{%- endif -%}</h1>
+      {%- endif -%}
+
+      <div class="sv-hero__row">
+        {%- if sub != blank -%}<p class="sv-hero__sub">{{ sub }}</p>{%- endif -%}
+
+        <div class="sv-hero__right">
+          {%- if show_seal -%}
+            <div class="sv-hero__seal" aria-hidden="true">
+              <svg class="sv-hero__seal-ring" viewBox="0 0 160 160">
+                <defs>
+                  <path id="{{ seal_id }}" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path>
+                </defs>
+                <text><textPath href="#{{ seal_id }}" startOffset="0">{{ seal_text }}</textPath></text>
+              </svg>
+              <span class="sv-hero__seal-mark">
+                <svg width="34" height="55" viewBox="0 0 100 162" fill="none" aria-hidden="true">
+                  <path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.25)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path>
+                  <path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+              </span>
+            </div>
+          {%- endif -%}
+
+          {%- if cta1l != blank or cta2l != blank -%}
+            <div class="sv-hero__cta">
+              {%- if cta1l != blank -%}
+                <a href="{{ cta1lnk | default: '#' }}" class="sv-btn sv-btn--light">
+                  {{ cta1l }}
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              {%- endif -%}
+              {%- if cta2l != blank -%}
+                <a href="{{ cta2lnk | default: '#' }}" class="sv-btn sv-btn--ghost">{{ cta2l }}</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

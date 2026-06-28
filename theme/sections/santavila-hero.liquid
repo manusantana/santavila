@@ -1,108 +1,173 @@
 {%- liquid
   assign s = section.settings
-  assign seal_id = 'sealpath-' | append: section.id
-  # Velo configurable (color + opacidad uniforme + refuerzo inferior para el texto)
+  # Velo configurable
   assign ov_color = s.overlay_color | default: '#141610'
   assign ov_base_alpha = s.overlay_opacity | default: 40 | divided_by: 100.0
   assign ov_grad_alpha = s.overlay_gradient | default: 60 | divided_by: 100.0
   assign ov_base = ov_color | color_modify: 'alpha', ov_base_alpha
   assign ov_grad = ov_color | color_modify: 'alpha', ov_grad_alpha
-  # Color del texto y caja/fondo opcional tras el texto
+  # Color del texto + caja opcional
   assign txt_color = s.text_color | default: '#FFFFFF'
   assign panel_alpha = s.panel_opacity | default: 30 | divided_by: 100.0
   assign panel_bg = s.panel_color | default: '#141610' | color_modify: 'alpha', panel_alpha
-  # Altura fija opcional
+  # Altura
   assign h_desktop = s.height_desktop | default: 720
   assign h_mobile = s.height_mobile | default: 480
+  # Slides (bloques). Sin bloques → modo legacy con los settings de sección.
+  assign slides = section.blocks | where: 'type', 'slide'
+  assign is_carousel = false
+  if slides.size > 1
+    assign is_carousel = true
+  endif
 -%}
 
-<div class="sv-hero" style="--sv-hero-h: {% if s.height_mode == 'fixed' %}{{ h_desktop }}px{% elsif s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %};{% if s.height_mode == 'fixed' %} --sv-hero-h-mobile: {{ h_mobile }}px;{% endif %} --sv-text-color: {{ txt_color }}; --sv-ov-base: {{ ov_base }}; --sv-ov-grad: {{ ov_grad }};">
-  {%- if s.image != blank -%}
-    <div class="sv-hero__media">
-      {{
-        s.image
-        | image_url: width: 2400
-        | image_tag:
-          loading: 'eager',
-          fetchpriority: 'high',
-          sizes: '100vw',
-          widths: '600, 900, 1200, 1600, 2000, 2400',
-          alt: s.image.alt | default: shop.name
-      }}
+{%- capture panel_style -%}--sv-panel-bg: {{ panel_bg }}; --sv-panel-radius: {{ s.panel_radius | default: 10 }}px; --sv-panel-bw: {{ s.panel_border | default: 0 }}px; --sv-panel-bc: {{ s.panel_border_color | default: '#FFFFFF' }};{%- endcapture -%}
+{%- capture hero_style -%}--sv-hero-h: {% if s.height_mode == 'fixed' %}{{ h_desktop }}px{% elsif s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %};{% if s.height_mode == 'fixed' %} --sv-hero-h-mobile: {{ h_mobile }}px;{% endif %} --sv-text-color: {{ txt_color }}; --sv-ov-base: {{ ov_base }}; --sv-ov-grad: {{ ov_grad }};{%- endcapture -%}
+
+<div class="sv-hero{% if is_carousel %} is-carousel{% endif %} sv-hero--{{ s.transition | default: 'fade' }}" style="{{ hero_style }}"
+  {%- if is_carousel %} data-hero-carousel data-autorotate="{{ s.autorotate }}" data-interval="{{ s.interval | default: 6 | times: 1000 }}"{% endif %}>
+
+  <div class="sv-hero__viewport"{% if is_carousel %} aria-live="polite"{% endif %}>
+    {%- if slides.size > 0 -%}
+      {%- for block in slides -%}
+        {%- liquid
+          assign ld = 'lazy'
+          assign fp = 'auto'
+          if forloop.first
+            assign ld = 'eager'
+            assign fp = 'high'
+          endif
+        -%}
+        {%- render 'santavila-hero-slide',
+          img: block.settings.image, ld: ld, fp: fp,
+          eyebrow: block.settings.eyebrow, h1: block.settings.heading_line1, h2: block.settings.heading_line2,
+          sub: block.settings.subheading,
+          cta1l: block.settings.cta1_label, cta1lnk: block.settings.cta1_link,
+          cta2l: block.settings.cta2_label, cta2lnk: block.settings.cta2_link,
+          show_seal: s.show_seal, seal_text: s.seal_text, seal_id: block.id,
+          panel: s.text_panel, panel_style: panel_style,
+          active: forloop.first, attrs: block.shopify_attributes -%}
+      {%- endfor -%}
+    {%- else -%}
+      {%- render 'santavila-hero-slide',
+        img: s.image, ld: 'eager', fp: 'high',
+        eyebrow: s.eyebrow, h1: s.heading_line1, h2: s.heading_line2,
+        sub: s.subheading,
+        cta1l: s.cta1_label, cta1lnk: s.cta1_link,
+        cta2l: s.cta2_label, cta2lnk: s.cta2_link,
+        show_seal: s.show_seal, seal_text: s.seal_text, seal_id: section.id,
+        panel: s.text_panel, panel_style: panel_style,
+        active: true -%}
+    {%- endif -%}
+  </div>
+
+  {%- if is_carousel -%}
+    <div class="sv-hero__nav sv-hero__nav--{{ s.nav_position | default: 'center' }}">
+      {%- if s.nav_arrows -%}
+        <button type="button" class="sv-hero__arrow" data-hero-prev aria-label="Diapositiva anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+      {%- endif -%}
+      {%- if s.nav_dots -%}
+        <div class="sv-hero__dots" aria-label="Diapositivas">
+          {%- for block in slides -%}
+            <button type="button" class="sv-hero__dot{% if forloop.first %} is-active{% endif %}" data-hero-dot data-idx="{{ forloop.index0 }}" aria-label="Ir a la diapositiva {{ forloop.index }}"{% if forloop.first %} aria-current="true"{% endif %}></button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if s.nav_arrows -%}
+        <button type="button" class="sv-hero__arrow" data-hero-next aria-label="Diapositiva siguiente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      {%- endif -%}
     </div>
   {%- endif -%}
-
-  <div class="sv-hero__inner">
-    <div class="sv-hero__box{% if s.text_panel %} is-panel{% endif %}"{% if s.text_panel %} style="--sv-panel-bg: {{ panel_bg }}; --sv-panel-radius: {{ s.panel_radius | default: 10 }}px; --sv-panel-bw: {{ s.panel_border | default: 0 }}px; --sv-panel-bc: {{ s.panel_border_color | default: '#FFFFFF' }};"{% endif %}>
-    {%- if s.eyebrow != blank -%}
-      <p class="sv-hero__eyebrow">{{ s.eyebrow }}</p>
-    {%- endif -%}
-
-    {%- if s.heading_line1 != blank or s.heading_line2 != blank -%}
-      <h1 class="sv-hero__title">
-        {{- s.heading_line1 -}}
-        {%- if s.heading_line2 != blank -%}
-          <br><em>{{ s.heading_line2 }}</em>
-        {%- endif -%}
-      </h1>
-    {%- endif -%}
-
-    <div class="sv-hero__row">
-      {%- if s.subheading != blank -%}
-        <p class="sv-hero__sub">{{ s.subheading }}</p>
-      {%- endif -%}
-
-      <div class="sv-hero__right">
-        {%- if s.show_seal -%}
-          <div class="sv-hero__seal" aria-hidden="true">
-            <svg class="sv-hero__seal-ring" viewBox="0 0 160 160">
-              <defs>
-                <path id="{{ seal_id }}" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path>
-              </defs>
-              <text><textPath href="#{{ seal_id }}" startOffset="0">{{ s.seal_text }}</textPath></text>
-            </svg>
-            <span class="sv-hero__seal-mark">
-              <svg width="34" height="55" viewBox="0 0 100 162" fill="none" aria-hidden="true">
-                <path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.25)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path>
-                <path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
-              </svg>
-            </span>
-          </div>
-        {%- endif -%}
-
-        {%- if s.cta1_label != blank or s.cta2_label != blank -%}
-          <div class="sv-hero__cta">
-            {%- if s.cta1_label != blank -%}
-              <a href="{{ s.cta1_link | default: '#' }}" class="sv-btn sv-btn--light">
-                {{ s.cta1_label }}
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
-            {%- endif -%}
-            {%- if s.cta2_label != blank -%}
-              <a href="{{ s.cta2_link | default: '#' }}" class="sv-btn sv-btn--ghost">{{ s.cta2_label }}</a>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-      </div>
-    </div>
-    </div>
-  </div>
 
   {%- if s.show_scroll -%}
     <div class="sv-hero__scroll" aria-hidden="true"><span>{{ s.scroll_label }}</span><i></i></div>
   {%- endif -%}
 </div>
 
+{%- if is_carousel -%}
+<script>
+  (function () {
+    function init(root) {
+      var slides = Array.prototype.slice.call(root.querySelectorAll('[data-hero-slide]'));
+      if (slides.length < 2) return;
+      var dots = Array.prototype.slice.call(root.querySelectorAll('[data-hero-dot]'));
+      var prev = root.querySelector('[data-hero-prev]');
+      var next = root.querySelector('[data-hero-next]');
+      var idx = 0, timer = null;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var auto = root.getAttribute('data-autorotate') === 'true' && !reduce;
+      var interval = parseInt(root.getAttribute('data-interval'), 10) || 6000;
+      function go(n) {
+        idx = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+        dots.forEach(function (d, i) {
+          d.classList.toggle('is-active', i === idx);
+          if (i === idx) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+        });
+      }
+      function start() { if (auto) { stop(); timer = setInterval(function () { go(idx + 1); }, interval); } }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      if (next) next.addEventListener('click', function () { go(idx + 1); start(); });
+      if (prev) prev.addEventListener('click', function () { go(idx - 1); start(); });
+      dots.forEach(function (d) { d.addEventListener('click', function () { go(parseInt(d.getAttribute('data-idx'), 10)); start(); }); });
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+      root.addEventListener('focusin', stop);
+      root.addEventListener('focusout', start);
+      var x0 = null;
+      root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+      root.addEventListener('touchend', function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) { go(idx + (dx < 0 ? 1 : -1)); }
+        x0 = null; start();
+      }, { passive: true });
+      go(0); start();
+    }
+    document.querySelectorAll('[data-hero-carousel]').forEach(init);
+  })();
+</script>
+{%- endif -%}
+
 {% stylesheet %}
   .sv-hero {
     position: relative;
     min-height: var(--sv-hero-h, var(--hero-h));
-    display: flex;
-    align-items: flex-end;
     overflow: hidden;
     color: var(--sv-text-color, #fff);
     background: linear-gradient(150deg, #4f5447 0%, #2c2f26 55%, #3a3f31 100%);
   }
+  .sv-hero__viewport { display: block; }
+
+  /* Cada diapositiva */
+  .sv-hero__slide {
+    display: flex;
+    align-items: flex-end;
+    min-height: var(--sv-hero-h, var(--hero-h));
+  }
+  /* Carrusel: diapositivas apiladas con fundido */
+  .sv-hero.is-carousel .sv-hero__slide {
+    position: absolute;
+    inset: 0;
+    min-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s var(--ease, ease), transform 0.85s var(--ease, ease);
+  }
+  .sv-hero.is-carousel .sv-hero__slide.is-active {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    z-index: 1;
+  }
+  .sv-hero.is-carousel.sv-hero--slide-fade .sv-hero__slide { transform: translateX(45px); }
+  .sv-hero.is-carousel.sv-hero--slide-fade .sv-hero__slide.is-active { transform: translateX(0); }
+  /* Una sola diapositiva (sin carrusel): en flujo, idéntico a hoy */
+  .sv-hero:not(.is-carousel) .sv-hero__slide { position: relative; opacity: 1; }
 
   .sv-hero__media {
     position: absolute;
@@ -116,9 +181,8 @@
     display: block;
   }
 
-  /* Velo configurable: capa uniforme (--sv-ov-base) + refuerzo arriba (header)
-     y abajo (texto) (--sv-ov-grad). Ambos derivan del color/opacidad del schema. */
-  .sv-hero::after {
+  /* Velo configurable: capa uniforme (--sv-ov-base) + refuerzo arriba/abajo (--sv-ov-grad) */
+  .sv-hero__slide::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -174,9 +238,7 @@
     max-width: 14ch;
     margin: 0;
   }
-  .sv-hero__title em {
-    font-style: italic;
-  }
+  .sv-hero__title em { font-style: italic; }
 
   .sv-hero__row {
     display: flex;
@@ -202,69 +264,59 @@
   }
 
   /* Sello rotatorio */
-  .sv-hero__seal {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    flex: none;
-  }
-  .sv-hero__seal-ring {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    animation: sv-sealspin 30s linear infinite;
-  }
-  .sv-hero__seal-ring text {
-    font-family: var(--mono);
-    font-size: 9.2px;
-    letter-spacing: 0.16em;
-    fill: #fff;
-    text-transform: uppercase;
-  }
-  .sv-hero__seal-mark {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-  }
-  @keyframes sv-sealspin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+  .sv-hero__seal { position: relative; width: 150px; height: 150px; flex: none; }
+  .sv-hero__seal-ring { position: absolute; inset: 0; width: 100%; height: 100%; animation: sv-sealspin 30s linear infinite; }
+  .sv-hero__seal-ring text { font-family: var(--mono); font-size: 9.2px; letter-spacing: 0.16em; fill: #fff; text-transform: uppercase; }
+  .sv-hero__seal-mark { position: absolute; inset: 0; display: grid; place-items: center; }
+  @keyframes sv-sealspin { to { transform: rotate(360deg); } }
 
-  /* CTAs (pill) */
-  .sv-hero__cta {
+  /* CTAs */
+  .sv-hero__cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Navegación del carrusel */
+  .sv-hero__nav {
+    position: absolute;
+    bottom: clamp(20px, 4vh, 40px);
+    z-index: 3;
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding-inline: var(--gut, clamp(20px, 5vw, 76px));
   }
-  /* .sv-btn (light / ghost) viven en santavila-components.css */
+  .sv-hero__nav--center { left: 50%; transform: translateX(-50%); }
+  .sv-hero__nav--left { left: 0; }
+  .sv-hero__nav--right { right: 0; }
+  .sv-hero__arrow {
+    width: 42px; height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    display: grid; place-items: center;
+    cursor: pointer;
+    transition: background-color 0.25s var(--ease, ease), border-color 0.25s var(--ease, ease);
+    -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  }
+  @media (hover: hover) { .sv-hero__arrow:hover { background: rgba(255, 255, 255, 0.2); border-color: #fff; } }
+  .sv-hero__dots { display: flex; align-items: center; gap: 10px; }
+  .sv-hero__dot {
+    width: 9px; height: 9px;
+    border-radius: 999px;
+    border: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    transition: background-color 0.25s var(--ease, ease), width 0.25s var(--ease, ease);
+  }
+  .sv-hero__dot.is-active { background: #fff; width: 26px; }
 
   /* Indicador "Descubre" */
   .sv-hero__scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 26px;
-    transform: translateX(-50%);
-    z-index: 2;
-    color: #fff;
-    display: grid;
-    place-items: center;
-    gap: 8px;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    opacity: 0.85;
+    position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+    z-index: 3; color: #fff; display: grid; place-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.85;
   }
-  .sv-hero__scroll i {
-    width: 1px;
-    height: 42px;
-    background: linear-gradient(#fff, transparent);
-    animation: sv-scrolldrop 2.4s var(--ease-soft, ease) infinite;
-  }
+  .sv-hero__scroll i { width: 1px; height: 42px; background: linear-gradient(#fff, transparent); animation: sv-scrolldrop 2.4s var(--ease-soft, ease) infinite; }
   @keyframes sv-scrolldrop {
     0% { transform: scaleY(0); transform-origin: top; }
     45% { transform: scaleY(1); transform-origin: top; }
@@ -273,32 +325,23 @@
   }
 
   @media screen and (max-width: 749px) {
-    .sv-hero { min-height: var(--sv-hero-h-mobile, var(--sv-hero-h)); }
-    /* el bloque cabía justo en 100svh: bajamos paddings y el mínimo del título */
+    .sv-hero, .sv-hero__slide { min-height: var(--sv-hero-h-mobile, var(--sv-hero-h)); }
     .sv-hero__inner {
       padding-top: clamp(92px, 13vh, 140px);
-      padding-bottom: clamp(36px, 6vh, 80px);
+      padding-bottom: clamp(56px, 8vh, 96px);
     }
     .sv-hero__title { font-size: clamp(40px, 11vw, 76px); }
-    .sv-hero__right {
-      align-items: flex-start;
-      gap: 20px;
-    }
-    .sv-hero__seal {
-      width: 118px;
-      height: 118px;
-    }
-    /* la flecha "Descubre" (absolute bottom) se solapaba con los CTAs en móvil */
+    .sv-hero__right { align-items: flex-start; gap: 20px; }
+    .sv-hero__seal { width: 118px; height: 118px; }
+    /* Con carrusel mostramos la navegación; el "Descubre" se oculta para no solapar */
     .sv-hero__scroll { display: none; }
+    .sv-hero__nav { bottom: 16px; }
   }
 
-  /* Regla de oro: el contenido nunca depende de animación para verse.
-     Solo desactivamos los movimientos como mejora progresiva. */
   @media (prefers-reduced-motion: reduce) {
     .sv-hero__seal-ring,
-    .sv-hero__scroll i {
-      animation: none;
-    }
+    .sv-hero__scroll i,
+    .sv-hero.is-carousel .sv-hero__slide { animation: none; transition: none; }
   }
 {% endstylesheet %}
 
@@ -307,12 +350,13 @@
   "name": "Santavila Hero",
   "tag": "section",
   "class": "sv-hero-section",
+  "max_blocks": 6,
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Imagen de fondo",
-      "info": "Opcional. Sin imagen se usa el degradado sage de marca."
+      "label": "Imagen de fondo (sin diapositivas)",
+      "info": "Se usa si NO añades diapositivas abajo. Sin imagen se usa el degradado sage de marca."
     },
     {
       "type": "select",
@@ -334,206 +378,87 @@
       ],
       "default": "theme"
     },
+    { "type": "range", "id": "height_desktop", "label": "Altura fija · escritorio", "min": 400, "max": 1000, "step": 10, "unit": "px", "default": 720, "info": "Solo si 'Tipo de altura' = Fija." },
+    { "type": "range", "id": "height_mobile", "label": "Altura fija · móvil", "min": 240, "max": 760, "step": 10, "unit": "px", "default": 480, "info": "Solo si 'Tipo de altura' = Fija." },
+
+    { "type": "header", "content": "Velo / legibilidad sobre la imagen" },
+    { "type": "color", "id": "overlay_color", "label": "Color del velo", "default": "#141610" },
+    { "type": "range", "id": "overlay_opacity", "label": "Opacidad del velo", "min": 0, "max": 90, "step": 5, "unit": "%", "default": 40, "info": "Velo uniforme sobre toda la imagen." },
+    { "type": "range", "id": "overlay_gradient", "label": "Refuerzo arriba y abajo", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 60, "info": "Oscurece más la franja del menú (arriba) y la del título y botones (abajo)." },
+
+    { "type": "header", "content": "Texto y caja" },
+    { "type": "color", "id": "text_color", "label": "Color del texto", "default": "#FFFFFF" },
+    { "type": "checkbox", "id": "text_panel", "label": "Fondo (caja) tras el texto", "default": false, "info": "Panel semitransparente detrás del texto, como alternativa al velo global." },
+    { "type": "color", "id": "panel_color", "label": "Caja · color", "default": "#141610" },
+    { "type": "range", "id": "panel_opacity", "label": "Caja · opacidad", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 30 },
+    { "type": "range", "id": "panel_radius", "label": "Caja · esquinas", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 10 },
+    { "type": "range", "id": "panel_border", "label": "Caja · grosor del borde", "min": 0, "max": 4, "step": 1, "unit": "px", "default": 0 },
+    { "type": "color", "id": "panel_border_color", "label": "Caja · color del borde", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "Contenido (si no usas diapositivas)" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Diseño español para vivir fuera" },
+    { "type": "text", "id": "heading_line1", "label": "Titular · línea 1", "default": "El exterior," },
+    { "type": "text", "id": "heading_line2", "label": "Titular · línea 2 (itálica)", "default": "bien vivido." },
+    { "type": "textarea", "id": "subheading", "label": "Subtítulo", "default": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real." },
+    { "type": "text", "id": "cta1_label", "label": "CTA principal · texto", "default": "Explorar colecciones" },
+    { "type": "url", "id": "cta1_link", "label": "CTA principal · enlace" },
+    { "type": "text", "id": "cta2_label", "label": "CTA secundaria · texto", "default": "Amueblar por espacio" },
+    { "type": "url", "id": "cta2_link", "label": "CTA secundaria · enlace" },
+
+    { "type": "header", "content": "Sello rotatorio" },
+    { "type": "checkbox", "id": "show_seal", "label": "Mostrar sello", "default": true },
+    { "type": "text", "id": "seal_text", "label": "Texto del sello (orbita)", "default": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · " },
+
+    { "type": "header", "content": "Navegación (carrusel · 2+ diapositivas)" },
+    { "type": "checkbox", "id": "nav_dots", "label": "Mostrar puntos", "default": true },
+    { "type": "checkbox", "id": "nav_arrows", "label": "Mostrar flechas", "default": false },
     {
-      "type": "range",
-      "id": "height_desktop",
-      "label": "Altura fija · escritorio",
-      "min": 400,
-      "max": 1000,
-      "step": 10,
-      "unit": "px",
-      "default": 720,
-      "info": "Solo si 'Tipo de altura' = Fija."
+      "type": "select",
+      "id": "nav_position",
+      "label": "Posición de la navegación",
+      "options": [
+        { "value": "left", "label": "Izquierda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Derecha" }
+      ],
+      "default": "center"
     },
     {
-      "type": "range",
-      "id": "height_mobile",
-      "label": "Altura fija · móvil",
-      "min": 240,
-      "max": 760,
-      "step": 10,
-      "unit": "px",
-      "default": 480,
-      "info": "Solo si 'Tipo de altura' = Fija."
+      "type": "select",
+      "id": "transition",
+      "label": "Transición",
+      "options": [
+        { "value": "fade", "label": "Fundido" },
+        { "value": "slide-fade", "label": "Deslizar y fundir" }
+      ],
+      "default": "fade"
     },
+    { "type": "checkbox", "id": "autorotate", "label": "Auto-rotación", "default": false },
+    { "type": "range", "id": "interval", "label": "Cambiar cada", "min": 3, "max": 12, "step": 1, "unit": "s", "default": 6 },
+
+    { "type": "header", "content": "Indicador de scroll" },
+    { "type": "checkbox", "id": "show_scroll", "label": "Mostrar indicador", "default": true },
+    { "type": "text", "id": "scroll_label", "label": "Texto del indicador", "default": "Descubre" }
+  ],
+  "blocks": [
     {
-      "type": "header",
-      "content": "Velo / legibilidad sobre la imagen"
-    },
-    {
-      "type": "color",
-      "id": "overlay_color",
-      "label": "Color del velo",
-      "default": "#141610"
-    },
-    {
-      "type": "range",
-      "id": "overlay_opacity",
-      "label": "Opacidad del velo",
-      "min": 0,
-      "max": 90,
-      "step": 5,
-      "unit": "%",
-      "default": 40,
-      "info": "Velo uniforme sobre toda la imagen. Súbelo si el texto no se lee bien."
-    },
-    {
-      "type": "range",
-      "id": "overlay_gradient",
-      "label": "Refuerzo arriba y abajo",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "default": 60,
-      "info": "Oscurece más la franja del menú (arriba) y la del título y botones (abajo)."
-    },
-    {
-      "type": "header",
-      "content": "Texto y caja"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Color del texto",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "checkbox",
-      "id": "text_panel",
-      "label": "Fondo (caja) tras el texto",
-      "default": false,
-      "info": "Panel semitransparente detrás del texto, como alternativa al velo global. Si lo activas, baja el velo."
-    },
-    {
-      "type": "color",
-      "id": "panel_color",
-      "label": "Caja · color",
-      "default": "#141610"
-    },
-    {
-      "type": "range",
-      "id": "panel_opacity",
-      "label": "Caja · opacidad",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "default": 30
-    },
-    {
-      "type": "range",
-      "id": "panel_radius",
-      "label": "Caja · esquinas",
-      "min": 0,
-      "max": 40,
-      "step": 2,
-      "unit": "px",
-      "default": 10
-    },
-    {
-      "type": "range",
-      "id": "panel_border",
-      "label": "Caja · grosor del borde",
-      "min": 0,
-      "max": 4,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "color",
-      "id": "panel_border_color",
-      "label": "Caja · color del borde",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "text",
-      "id": "eyebrow",
-      "label": "Eyebrow",
-      "default": "Diseño español para vivir fuera"
-    },
-    {
-      "type": "text",
-      "id": "heading_line1",
-      "label": "Titular · línea 1",
-      "default": "El exterior,"
-    },
-    {
-      "type": "text",
-      "id": "heading_line2",
-      "label": "Titular · línea 2 (itálica)",
-      "default": "bien vivido."
-    },
-    {
-      "type": "textarea",
-      "id": "subheading",
-      "label": "Subtítulo",
-      "default": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real."
-    },
-    {
-      "type": "header",
-      "content": "Llamadas a la acción"
-    },
-    {
-      "type": "text",
-      "id": "cta1_label",
-      "label": "CTA principal · texto",
-      "default": "Explorar colecciones"
-    },
-    {
-      "type": "url",
-      "id": "cta1_link",
-      "label": "CTA principal · enlace"
-    },
-    {
-      "type": "text",
-      "id": "cta2_label",
-      "label": "CTA secundaria · texto",
-      "default": "Amueblar por espacio"
-    },
-    {
-      "type": "url",
-      "id": "cta2_link",
-      "label": "CTA secundaria · enlace"
-    },
-    {
-      "type": "header",
-      "content": "Sello rotatorio"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_seal",
-      "label": "Mostrar sello",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "seal_text",
-      "label": "Texto del sello (orbita)",
-      "default": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · "
-    },
-    {
-      "type": "header",
-      "content": "Indicador de scroll"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_scroll",
-      "label": "Mostrar indicador",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "scroll_label",
-      "label": "Texto del indicador",
-      "default": "Descubre"
+      "type": "slide",
+      "name": "Diapositiva",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Imagen de fondo" },
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+        { "type": "text", "id": "heading_line1", "label": "Titular · línea 1" },
+        { "type": "text", "id": "heading_line2", "label": "Titular · línea 2 (itálica)" },
+        { "type": "textarea", "id": "subheading", "label": "Subtítulo" },
+        { "type": "text", "id": "cta1_label", "label": "CTA principal · texto" },
+        { "type": "url", "id": "cta1_link", "label": "CTA principal · enlace" },
+        { "type": "text", "id": "cta2_label", "label": "CTA secundaria · texto" },
+        { "type": "url", "id": "cta2_link", "label": "CTA secundaria · enlace" }
+      ]
     }
   ],
   "presets": [
-    {
-      "name": "Santavila Hero"
-    }
+    { "name": "Santavila Hero" }
   ]
 }
 {% endschema %}
