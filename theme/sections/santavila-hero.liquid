@@ -1,9 +1,15 @@
 {%- liquid
   assign s = section.settings
   assign seal_id = 'sealpath-' | append: section.id
+  # Velo configurable (color + opacidad uniforme + refuerzo inferior para el texto)
+  assign ov_color = s.overlay_color | default: '#141610'
+  assign ov_base_alpha = s.overlay_opacity | default: 40 | divided_by: 100.0
+  assign ov_grad_alpha = s.overlay_gradient | default: 60 | divided_by: 100.0
+  assign ov_base = ov_color | color_modify: 'alpha', ov_base_alpha
+  assign ov_grad = ov_color | color_modify: 'alpha', ov_grad_alpha
 -%}
 
-<div class="sv-hero" style="--sv-hero-h: {% if s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %};">
+<div class="sv-hero" style="--sv-hero-h: {% if s.hero_size == 'secondary' %}var(--hero-h-secondary){% else %}var(--hero-h){% endif %}; --sv-ov-base: {{ ov_base }}; --sv-ov-grad: {{ ov_grad }};">
   {%- if s.image != blank -%}
     <div class="sv-hero__media">
       {{
@@ -101,19 +107,22 @@
     display: block;
   }
 
-  /* Velo para legibilidad del header y del texto inferior */
+  /* Velo configurable: capa uniforme (--sv-ov-base) + refuerzo arriba (header)
+     y abajo (texto) (--sv-ov-grad). Ambos derivan del color/opacidad del schema. */
   .sv-hero::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(20, 22, 16, 0.42) 0%,
-      rgba(20, 22, 16, 0.05) 32%,
-      rgba(20, 22, 16, 0.08) 60%,
-      rgba(20, 22, 16, 0.66) 100%
-    );
+    background:
+      linear-gradient(
+        180deg,
+        var(--sv-ov-grad, rgba(20, 22, 16, 0.6)) 0%,
+        transparent 24%,
+        transparent 58%,
+        var(--sv-ov-grad, rgba(20, 22, 16, 0.6)) 100%
+      ),
+      var(--sv-ov-base, rgba(20, 22, 16, 0.4));
   }
 
   .sv-hero__inner {
@@ -293,6 +302,38 @@
         { "value": "secondary", "label": "Casi completa (deja asomar)" }
       ],
       "default": "full"
+    },
+    {
+      "type": "header",
+      "content": "Velo / legibilidad sobre la imagen"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Color del velo",
+      "default": "#141610"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Opacidad del velo",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 40,
+      "info": "Velo uniforme sobre toda la imagen. Súbelo si el texto no se lee bien."
+    },
+    {
+      "type": "range",
+      "id": "overlay_gradient",
+      "label": "Refuerzo arriba y abajo",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 60,
+      "info": "Oscurece más la franja del menú (arriba) y la del título y botones (abajo)."
     },
     {
       "type": "text",
