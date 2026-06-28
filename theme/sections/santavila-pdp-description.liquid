@@ -43,7 +43,24 @@
       {%- if spec != blank -%}
         <aside class="sv-pdesc__spec">
           <h3 class="sv-pdesc__spec-title">Detalles clave</h3>
-          <div class="sv-pdesc__spec-body">{{ spec }}</div>
+          <dl class="sv-pdesc__spec-list">
+            {%- assign rows = spec | split: '<li>' -%}
+            {%- for row in rows -%}
+              {%- if row contains '<strong>' -%}
+                {%- assign rp = row | split: '</strong>' -%}
+                {%- assign label = rp[0] | remove: '<strong>' | strip_html | strip | remove: ':' -%}
+                {%- assign value = rp[1] | split: '</li>' | first | strip_html | strip -%}
+                {%- if value != blank -%}
+                  {%- assign vlast = value | slice: -1 -%}
+                  {%- if vlast == '.' -%}{%- assign vlen = value.size | minus: 1 -%}{%- assign value = value | slice: 0, vlen -%}{%- endif -%}
+                  <div class="sv-pdesc__spec-row">
+                    <dt>{{ label }}</dt>
+                    <dd>{{ value }}</dd>
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </dl>
         </aside>
       {%- endif -%}
 
@@ -56,9 +73,9 @@
   .sv-pdesc { background-color: var(--color-background); color: var(--color-foreground); }
   .sv-pdesc__grid {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: clamp(28px, 4vw, 64px);
-    align-items: start;
+    grid-template-columns: 1.55fr 1fr;
+    gap: clamp(28px, 4vw, 60px);
+    align-items: stretch;
   }
   .sv-pdesc__grid--single { grid-template-columns: 1fr; max-width: 70ch; }
 
@@ -81,11 +98,11 @@
     padding: 6px 12px;
   }
 
-  .sv-pdesc__rte { max-width: 64ch; }
+  .sv-pdesc__rte { max-width: 66ch; text-align: justify; text-justify: inter-word; hyphens: auto; }
   .sv-pdesc__rte, .sv-pdesc__rte p, .sv-pdesc__rte li {
     font-family: var(--sans);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.72;
     color: var(--ink-2);
   }
   .sv-pdesc__rte p { margin: 0 0 16px; }
@@ -94,12 +111,13 @@
 
   /* Ficha técnica (extraída de la descripción) */
   .sv-pdesc__spec {
-    position: sticky;
-    top: 100px;
     background: var(--bone);
     border: 1px solid var(--line);
     border-radius: var(--radius-media);
-    padding: clamp(20px, 2.2vw, 30px);
+    padding: clamp(22px, 2.4vw, 34px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .sv-pdesc__spec-title {
     font-family: var(--sans);
@@ -110,29 +128,41 @@
     color: var(--sage-deep);
     margin: 0 0 6px;
   }
-  .sv-pdesc__spec-body ul { list-style: none; margin: 0; padding: 0; }
-  .sv-pdesc__spec-body li {
+  .sv-pdesc__spec-list { margin: 0; }
+  .sv-pdesc__spec-row {
     display: grid;
-    grid-template-columns: minmax(86px, 38%) 1fr;
-    gap: 10px 14px;
-    padding: 12px 0;
+    grid-template-columns: minmax(94px, 34%) 1fr;
+    gap: 4px 18px;
+    align-items: baseline;
+    padding: 13px 0;
     border-top: 1px solid var(--line);
+  }
+  .sv-pdesc__spec-row:first-child { border-top: none; }
+  .sv-pdesc__spec-row:last-child { padding-bottom: 0; }
+  .sv-pdesc__spec-row dt {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .sv-pdesc__spec-row dd {
+    margin: 0;
     font-family: var(--sans);
     font-size: 14.5px;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--ink-2);
   }
-  .sv-pdesc__spec-body li:last-child { padding-bottom: 0; }
-  .sv-pdesc__spec-body strong { color: var(--ink); font-weight: 600; }
 
   @media screen and (max-width: 989px) {
     .sv-pdesc__grid { grid-template-columns: 1fr; gap: 30px; }
     .sv-pdesc__rte { max-width: none; }
-    .sv-pdesc__spec { position: static; }
+    .sv-pdesc__spec { justify-content: flex-start; }
   }
   @media screen and (max-width: 749px) {
-    .sv-pdesc__spec { padding: 20px; }
-    .sv-pdesc__spec-body li { grid-template-columns: minmax(78px, 40%) 1fr; gap: 8px 12px; font-size: 14px; }
+    .sv-pdesc__rte { text-align: left; hyphens: none; }
+    .sv-pdesc__spec { padding: 22px; }
+    .sv-pdesc__spec-row { grid-template-columns: minmax(82px, 38%) 1fr; gap: 4px 14px; }
   }
 {% endstylesheet %}
 
