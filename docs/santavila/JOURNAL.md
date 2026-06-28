@@ -13,6 +13,27 @@
 
 ---
 
+## 2026-06-28 · PDP — descripción a ancho completo + ficha técnica
+
+La descripción SEO deja de estar metida en la columna de compra (sitio equívoco) y baja a **ancho completo** con **ficha técnica** al lado. Patrón PDP premium: arriba compacto = comprar; debajo = contenido.
+
+**Qué se hizo (rama `pdp-descripcion` → `main`):**
+- **Nueva sección `santavila-pdp-description.liquid`** (ancho completo) entre la zona de compra y "Por qué Santavila". Parte `product.description` por `<h2>Detalles clave</h2>`: narrativa a la izquierda + **ficha** (`<dl>` Detalles clave) a la derecha. Fallback a texto completo si no hay marcador. **Sin datos inventados** (línea roja): la ficha = lo que ya dice la descripción. Adaptativa por tipo: sofá→Medidas/Estilo, mesa→Altura/Material, conjunto→Incluye/Consejo.
+- Quitada la descripción de la columna de compra (`santavila-product.liquid`).
+- Quitado el botón **"Guía de medidas"** (redundante: las medidas están en la ficha).
+- **Botón "Añadir al carrito"**: fondo sólido `--sage-deep` + texto `--paper` en standby (ya no se pierde con el fondo); hover vira a `--sage` + sombra.
+- Narrativa **justificada** (izquierda en móvil ≤749 para evitar ríos). **Compostura**: las dos columnas a la misma altura (`align-items: stretch` + ficha centrada).
+
+**Sincronización previa (importante):** el bloque de descripción vivía **solo en el live** (no en git, +75 líneas; lo había añadido el compañero/editor). Se bajó a git (`beccd32`) antes de rediseñar, para restaurar `git==live` en la PDP. Quedan **4 ficheros del compañero por delante en live** (`templates/index.json`, `sections/footer-group.json`, `templates/cart.json`, `config/settings_data.json`) — **NO tocados**; pendiente de sincronizar con él.
+
+**Verificación:** parseo validado en 3 tipos de producto; Shopify compila la sección (PUT 200, un 422 inicial por un filtro dentro de un `if` ya corregido); subido a DEV y a LIVE **solo los 3 assets de la PDP** (sin pisar el theme del compañero); render confirmado en producción (`santavila.com`).
+
+**Entregables:** `theme/sections/santavila-pdp-description.liquid` (nueva), `theme/sections/santavila-product.liquid`, `theme/templates/product.json`, spec `docs/superpowers/specs/2026-06-28-pdp-descripcion-ficha-design.md`.
+
+**Pendiente (handoff):** poblar metafields de medidas/material para migrar a ficha-tabla 100% estructurada → BACKLOG **F5-07**.
+
+---
+
 ## 2026-06-24 · CIERRE DE FASE: todo a `main`, temas sincronizados, documentado
 
 Cierre limpio para arrancar la siguiente fase (SEO) sin dudas:

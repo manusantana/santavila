@@ -710,6 +710,20 @@ Cada tarea tiene un **ID estable** (`F0-01`, `F1-02`…) que se puede citar en c
 
 ---
 
+### F5-07 · Metafields estructurados para la ficha técnica de la PDP
+
+- **Prioridad:** P2 (la PDP ya tiene ficha técnica funcional; esto la hace 100% robusta)
+- **Impacto:** Medio (ficha consistente + base para filtros por medida/material en PLP)
+- **Dificultad:** Media (crear metafields + poblar ~235 productos; automatizable)
+- **Riesgo:** Bajo (datos)
+- **Contexto:** La sección `santavila-pdp-description.liquid` (JOURNAL 2026-06-28) extrae la ficha "Detalles clave" **parseando `product.description`**. Funciona y se adapta por tipo de producto, pero depende de que la descripción conserve la estructura `<h2>Detalles clave</h2><ul>`. Hoy **no hay metafields de medidas** (solo existe `santavila.material`, sin poblar).
+- **Pasos:** definir metafields (`santavila.medidas` o ancho/fondo/alto, `santavila.material`, `santavila.formato`…) y poblarlos con un script que extraiga del título (`| NNN×NN cm`) y de los "Detalles clave". Luego migrar la sección de "ficha desde descripción" a "ficha desde metafields" (mismo layout, fuente más robusta).
+- **Validación:** la ficha de la PDP se renderiza desde metafields; posible filtrar por medida/material en PLP.
+- **Dependencia:** encaja en la misma pasada de datos/SEO que **F5-06**.
+- **Hallazgo origen:** JOURNAL 2026-06-28 (rediseño PDP: descripción a ancho completo + ficha técnica).
+
+---
+
 ## Resumen por fase
 
 | Fase | Tareas | P0 | P1 | P2 | P3 | Esfuerzo total |
