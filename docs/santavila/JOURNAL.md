@@ -13,6 +13,15 @@
 
 ---
 
+## 2026-06-28 (tarde-5) · SINCRONIZACIÓN live→git completa (home del compañero)
+
+Se bajaron a git los 4 ficheros que vivían solo en el live (trabajo del compañero en el editor + diapositivas ocultas del hero): `templates/index.json`, `sections/footer-group.json`, `templates/cart.json`, `config/settings_data.json`.
+- Verificado: los 4 son **idénticos semánticamente** git==live (la diferencia de MD5 era la re-serialización JSON de Shopify, no contenido). Sin cambios de estructura en el home (mismas 12 secciones, mismo orden).
+- **git == live restaurado** para todo el theme; la divergencia que arrastrábamos queda cerrada. Commit atribuido al trabajo del compañero. En `main` `b41bb16`.
+- Notas menores: `config/markets.json` sigue solo-en-git (no lo exporta el Asset API); `.DS_Store` es basura local (conviene gitignorar).
+
+---
+
 ## 2026-06-28 (tarde-4) · HERO — 3 diapositivas de ejemplo OCULTAS en el live
 
 A petición del dueño, se dejaron **3 bloques `slide` con `disabled: true`** en `santavila_hero`, dentro del `templates/index.json` del **LIVE** (no en git: el `index.json` es territorio del compañero y ya estaba diverged).
