@@ -3,6 +3,21 @@
     "santavila_hero": {
       "type": "santavila-hero",
       "settings": {
+        "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+        "hero_size": "full",
+        "height_mode": "theme",
+        "height_desktop": 720,
+        "height_mobile": 480,
+        "overlay_color": "#141610",
+        "overlay_opacity": 60,
+        "overlay_gradient": 60,
+        "text_color": "#ffffff",
+        "text_panel": false,
+        "panel_color": "#141610",
+        "panel_opacity": 30,
+        "panel_radius": 10,
+        "panel_border": 0,
+        "panel_border_color": "#ffffff",
         "eyebrow": "Diseño español para vivir fuera",
         "heading_line1": "El exterior,",
         "heading_line2": "bien vivido.",
@@ -12,10 +27,62 @@
         "cta2_label": "Amueblar por espacio",
         "cta2_link": "\/collections\/all",
         "show_seal": true,
-        "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA · ",
+        "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA ·",
         "show_scroll": true,
         "scroll_label": "Descubre"
-      }
+      },
+      "blocks": {
+        "slide_ej1": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "eyebrow": "Diseño español para vivir fuera",
+            "heading_line1": "El exterior,",
+            "heading_line2": "bien vivido.",
+            "subheading": "Mobiliario de exterior fabricado en España, pensado para tu casa real.",
+            "cta1_label": "Explorar colecciones",
+            "cta1_link": "shopify:\/\/collections\/all",
+            "cta2_label": "Amueblar por espacio",
+            "cta2_link": "\/collections\/all"
+          }
+        },
+        "slide_ej2": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "eyebrow": "Colecciones de temporada",
+            "heading_line1": "Verano",
+            "heading_line2": "en la terraza.",
+            "subheading": "Sofás, tumbonas y mesas listos para la mejor estación del año.",
+            "cta1_label": "Ver novedades",
+            "cta1_link": "shopify:\/\/collections\/all",
+            "cta2_label": "",
+            "cta2_link": ""
+          }
+        },
+        "slide_ej3": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "eyebrow": "Fabricado en España",
+            "heading_line1": "Hecho para",
+            "heading_line2": "durar fuera.",
+            "subheading": "Materiales pensados para vivir a la intemperie todo el año.",
+            "cta1_label": "Por qué Santavila",
+            "cta1_link": "\/pages\/sobre-santavila",
+            "cta2_label": "",
+            "cta2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ej1",
+        "slide_ej2",
+        "slide_ej3"
+      ]
     },
     "santavila_trust": {
       "type": "santavila-trust",
@@ -26,6 +93,11 @@
     "santavila_manifesto": {
       "type": "santavila-manifesto",
       "settings": {
+        "color_scheme": "",
+        "statement_lead": "No vendemos un sueño inalcanzable.",
+        "statement_muted": "Vendemos una mejora tangible del modo de vivir: el patio con sombra, la mesa larga de domingo, el ático entre semana.",
+        "paragraph": "En España el exterior nunca fue un lujo: fue una forma de vivir. Seleccionamos mobiliario fabricado aquí, lo explicamos con honestidad —materiales, medidas, entrega, mantenimiento— y lo ponemos al servicio de la vivienda real.",
+        "link_label": "La forma seria de amueblar fuera",
         "link_url": "\/collections\/all"
       }
     },
@@ -72,176 +144,12 @@
         "sc4"
       ],
       "settings": {
+        "color_scheme": "",
+        "eyebrow": "Empieza por tu espacio",
+        "heading": "Amueblar por escenario",
+        "link_label": "Ver todos",
         "link_url": "\/collections\/all"
       }
-    },
-    "santavila_featured": {
-      "type": "santavila-featured",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "media_position": "left",
-        "image": "shopify:\/\/shop_images\/leisa_destacada_costero.jpg",
-        "tag": "Lo más elegido",
-        "eyebrow": "Sofás de exterior",
-        "heading": "El salón, pero fuera",
-        "body": "Sofás y conjuntos modulares para vivir la terraza de verdad: asiento profundo, fundas desenfundables y materiales que aguantan sol, lluvia y salitre.",
-        "meta1_value": "Asiento",
-        "meta1_label": "profundo",
-        "meta2_value": "Fabricado",
-        "meta2_label": "en España",
-        "meta3_value": "Montaje fácil",
-        "meta3_label": "en casa",
-        "cta1_label": "Ver sofás de exterior",
-        "cta1_link": "\/collections\/sillones-de-exterior",
-        "cta2_label": "",
-        "cta2_link": ""
-      }
-    },
-    "santavila_product_row": {
-      "type": "santavila-product-row",
-      "settings": {
-        "heading": "Lo más deseado",
-        "collection": "frontpage",
-        "max_products": 4,
-        "columns": 4,
-        "link_label": "Ver toda la tienda",
-        "link_url": "\/collections\/all"
-      }
-    },
-    "santavila_materials": {
-      "type": "santavila-materials",
-      "blocks": {
-        "m1": {
-          "type": "material",
-          "settings": {
-            "swatch": "#9c9a86",
-            "name": "Cuerda náutica",
-            "description": "Polietileno trenzado, tacto textil, color estable al sol.",
-            "tag": "Costa"
-          }
-        },
-        "m2": {
-          "type": "material",
-          "settings": {
-            "swatch": "#8a8d80",
-            "name": "Aluminio termolacado",
-            "description": "Estructura ligera que no se oxida.",
-            "tag": "Todo clima"
-          }
-        },
-        "m3": {
-          "type": "material",
-          "settings": {
-            "swatch": "#7d6a4f",
-            "name": "Teca",
-            "description": "Madera noble que envejece con nobleza.",
-            "tag": "Cálido"
-          }
-        },
-        "m4": {
-          "type": "material",
-          "settings": {
-            "swatch": "#b9b4a6",
-            "name": "Piedra y hormigón",
-            "description": "Sobres y bases con peso y permanencia.",
-            "tag": "Permanencia"
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3",
-        "m4"
-      ],
-      "settings": {}
-    },
-    "santavila_spain": {
-      "type": "santavila-spain",
-      "settings": {
-        "provinces": ""
-      }
-    },
-    "santavila_editorial": {
-      "type": "santavila-editorial",
-      "blocks": {
-        "a1": {
-          "type": "article",
-          "settings": {
-            "category": "Guía · Materiales",
-            "title": "Cómo elegir sofá de exterior según el material",
-            "excerpt": "Cuerda, aluminio o teca: qué aguanta mejor el sol, la lluvia y el salitre, y cómo acertar a la primera para una compra que dura años."
-          }
-        },
-        "a2": {
-          "type": "article",
-          "settings": {
-            "category": "Proyecto",
-            "title": "Amueblar un ático de 20 m²"
-          }
-        },
-        "a3": {
-          "type": "article",
-          "settings": {
-            "category": "Mantenimiento",
-            "title": "Cuidar cojines y tejidos de exterior"
-          }
-        }
-      },
-      "block_order": [
-        "a1",
-        "a2",
-        "a3"
-      ],
-      "settings": {}
-    },
-    "santavila_services": {
-      "type": "santavila-services",
-      "blocks": {
-        "s1": {
-          "type": "service",
-          "settings": {
-            "icon": "delivery",
-            "title": "Entrega clara",
-            "text": "Plazo estimado de hasta 30 días según disponibilidad del proveedor, visible antes de comprar."
-          }
-        },
-        "s2": {
-          "type": "service",
-          "settings": {
-            "icon": "assembly",
-            "title": "Fácil de montar en casa",
-            "text": "Llega en pocos bultos con instrucciones claras e ilustradas. Sin herramientas especiales: lo montas tú, a tu ritmo."
-          }
-        },
-        "s3": {
-          "type": "service",
-          "settings": {
-            "icon": "warranty",
-            "title": "Garantía legal",
-            "text": "Cubierta por la garantía legal, clara y sin letra pequeña."
-          }
-        },
-        "s4": {
-          "type": "service",
-          "settings": {
-            "icon": "support",
-            "title": "Atención personalizada",
-            "text": "Email, WhatsApp y chat. Te ayudamos con medidas, combinaciones y proyectos de terraza."
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3",
-        "s4"
-      ],
-      "settings": {}
-    },
-    "santavila_newsletter": {
-      "type": "santavila-newsletter",
-      "settings": {}
     },
     "santavila_shop_the_look": {
       "type": "product-hotspots",
@@ -324,6 +232,206 @@
         "product_price_preset": "",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "santavila_featured": {
+      "type": "santavila-featured",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "media_position": "left",
+        "image": "shopify:\/\/shop_images\/leisa_destacada_costero.jpg",
+        "tag": "Lo más elegido",
+        "eyebrow": "Sofás de exterior",
+        "heading": "El salón, pero fuera",
+        "body": "Sofás y conjuntos modulares para vivir la terraza de verdad: asiento profundo, fundas desenfundables y materiales que aguantan sol, lluvia y salitre.",
+        "meta1_value": "Asiento",
+        "meta1_label": "profundo",
+        "meta2_value": "Fabricado",
+        "meta2_label": "en España",
+        "meta3_value": "Montaje fácil",
+        "meta3_label": "en casa",
+        "cta1_label": "Ver sofás de exterior",
+        "cta1_link": "\/collections\/sillones-de-exterior",
+        "cta2_label": "",
+        "cta2_link": ""
+      }
+    },
+    "santavila_product_row": {
+      "type": "santavila-product-row",
+      "settings": {
+        "color_scheme": "",
+        "eyebrow": "",
+        "heading": "Lo más deseado",
+        "collection": "frontpage",
+        "max_products": 4,
+        "columns": 4,
+        "link_label": "Ver toda la tienda",
+        "link_url": "\/collections\/all",
+        "show_wishlist": false
+      }
+    },
+    "santavila_materials": {
+      "type": "santavila-materials",
+      "blocks": {
+        "m1": {
+          "type": "material",
+          "settings": {
+            "swatch": "#9c9a86",
+            "name": "Cuerda náutica",
+            "description": "Polietileno trenzado, tacto textil, color estable al sol.",
+            "tag": "Costa"
+          }
+        },
+        "m2": {
+          "type": "material",
+          "settings": {
+            "swatch": "#8a8d80",
+            "name": "Aluminio termolacado",
+            "description": "Estructura ligera que no se oxida.",
+            "tag": "Todo clima"
+          }
+        },
+        "m3": {
+          "type": "material",
+          "settings": {
+            "swatch": "#7d6a4f",
+            "name": "Teca",
+            "description": "Madera noble que envejece con nobleza.",
+            "tag": "Cálido"
+          }
+        },
+        "m4": {
+          "type": "material",
+          "settings": {
+            "swatch": "#b9b4a6",
+            "name": "Piedra y hormigón",
+            "description": "Sobres y bases con peso y permanencia.",
+            "tag": "Permanencia"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "eyebrow": "Materiales con criterio",
+        "heading_line1": "Preparados",
+        "heading_line2": "para durar.",
+        "intro": "Cada material elegido por cómo se comporta en exterior real español: radiación UV, lluvia y salitre de costa."
+      }
+    },
+    "santavila_spain": {
+      "type": "santavila-spain",
+      "settings": {
+        "color_scheme": "",
+        "show_arch": true,
+        "heading": "Diseñado y fabricado en España",
+        "body": "Diseño y fabricación en España, con proveedores nacionales del mueble de exterior. Cada pieza pensada para nuestro clima: sol, lluvia y costa.",
+        "provinces": ""
+      }
+    },
+    "santavila_editorial": {
+      "type": "santavila-editorial",
+      "blocks": {
+        "a1": {
+          "type": "article",
+          "settings": {
+            "category": "Guía · Materiales",
+            "title": "Cómo elegir sofá de exterior según el material",
+            "excerpt": "Cuerda, aluminio o teca: qué aguanta mejor el sol, la lluvia y el salitre, y cómo acertar a la primera para una compra que dura años.",
+            "link": ""
+          }
+        },
+        "a2": {
+          "type": "article",
+          "settings": {
+            "category": "Proyecto",
+            "title": "Amueblar un ático de 20 m²",
+            "excerpt": "",
+            "link": ""
+          }
+        },
+        "a3": {
+          "type": "article",
+          "settings": {
+            "category": "Mantenimiento",
+            "title": "Cuidar cojines y tejidos de exterior",
+            "excerpt": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "heading": "El exterior bien vivido",
+        "link_label": "Toda la inspiración",
+        "link_url": ""
+      }
+    },
+    "santavila_services": {
+      "type": "santavila-services",
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "icon": "delivery",
+            "title": "Entrega clara",
+            "text": "Plazo estimado de hasta 30 días según disponibilidad del proveedor, visible antes de comprar."
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "icon": "assembly",
+            "title": "Fácil de montar en casa",
+            "text": "Llega en pocos bultos con instrucciones claras e ilustradas. Sin herramientas especiales: lo montas tú, a tu ritmo."
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "icon": "warranty",
+            "title": "Garantía legal",
+            "text": "Cubierta por la garantía legal, clara y sin letra pequeña."
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "icon": "support",
+            "title": "Atención personalizada",
+            "text": "Email, WhatsApp y chat. Te ayudamos con medidas, combinaciones y proyectos de terraza."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "santavila_newsletter": {
+      "type": "santavila-newsletter",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Recibe ideas, no spam",
+        "body": "Una vez al mes: guías de exterior, nuevas colecciones y proyectos reales. Nada de descuentos permanentes.",
+        "placeholder": "Tu email",
+        "button_label": "Suscribirme",
+        "success_text": "¡Gracias! Te has suscrito."
       }
     }
   },

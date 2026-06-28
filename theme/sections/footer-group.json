@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "footer",
   "name": "Footer",
@@ -41,7 +32,14 @@
         "c2",
         "c3"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "tagline": "Diseño español para vivir fuera. Mobiliario de exterior fabricado en España, con diseño mediterráneo contemporáneo.",
+        "instagram_url": "",
+        "pinterest_url": "",
+        "copyright": "© 2026 Santavila · Fabricado en España",
+        "show_payment": true
+      }
     }
   },
   "order": [
