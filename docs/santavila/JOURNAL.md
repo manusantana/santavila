@@ -13,6 +13,20 @@
 
 ---
 
+## 2026-06-28 · CIERRE DE SESIÓN — PDP (descripción/ficha) + Hero (velo, carrusel) + sync
+
+Resumen de la sesión (detalle en las entradas siguientes):
+
+- **PDP:** la descripción SEO sale de la columna de compra a una sección a ancho completo (`santavila-pdp-description.liquid`) con **ficha técnica** extraída de la propia descripción (adaptativa por tipo de producto). Ajustes posteriores: ficha `dt/dd` con negritas consistentes, narrativa justificada, compostura de columnas, botón "Añadir al carrito" sólido (verde marca), "Guía de medidas" retirada.
+- **Hero:** (1) **velo configurable** (color/opacidad/refuerzo) para legibilidad sobre la imagen; (2) **altura** fija escritorio/móvil, **color de texto** y **caja/fondo** opcional; (3) **carrusel v1** (slides como bloques + snippet `santavila-hero-slide`, navegación, auto-rotación, swipe, accesible) con fallback legacy que **no rompe la home**; (4) **3 diapositivas de ejemplo ocultas** (`disabled`) dejadas en el live para activar con un clic.
+- **Sincronización:** cerrada la divergencia `index.json` / `footer-group.json` / `cart.json` / `settings_data.json` (trabajo del home del compañero, que vivía solo en el live) → **git == live** para todo el theme.
+
+**Estado:** todo en producción y documentado. `main` = `origin/main`. ~14 commits en la sesión. Solo el theme tocado; el `index.json` se sincronizó con salvaguardas (sin cambiar estructura del home).
+
+**Pendiente (opcional):** remates visuales a criterio del dueño (verde del botón PDP, justify en móvil, contraste del velo); activar el carrusel y afinar; **split screen** del hero (v1.1); **F5-07** (ficha desde metafields). **Coordinación:** avisar al compañero de hacer `git pull` antes de seguir con la home (su trabajo ya está en git).
+
+---
+
 ## 2026-06-28 (tarde-5) · SINCRONIZACIÓN live→git completa (home del compañero)
 
 Se bajaron a git los 4 ficheros que vivían solo en el live (trabajo del compañero en el editor + diapositivas ocultas del hero): `templates/index.json`, `sections/footer-group.json`, `templates/cart.json`, `config/settings_data.json`.
