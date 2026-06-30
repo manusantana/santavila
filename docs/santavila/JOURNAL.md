@@ -13,6 +13,36 @@
 
 ---
 
+## 2026-06-30 · WORKFLOW — Staging → Producción formalizado (regla + auditoría + helper blindado)
+
+Se formaliza y documenta el flujo de despliegue del theme: **se prueba en STAGING y solo lo
+validado pasa a PRODUCCIÓN, SIEMPRE con confirmación explícita del dueño.**
+
+**Auditoría de temas (verificada por Asset API / hash):**
+- **PRODUCCIÓN** (`main`, publicado) = **`189222715716`** — *Santavila Theme by Ubicuo Libres Pensadores*. Su ID **no cambia nunca**.
+- **STAGING** (`unpublished`) = **`189491151172`** — *Staging Santavila Theme by Ubicuo…*, **creado hoy (30-jun 23:19)** como **copia exacta del publicado** (`settings_data.json`, `index.json`, `santavila-hero`, `theme.liquid` coinciden con prod → arranca limpio y alineado).
+- `development 189114876228` = viejo "DEV", **ha divergido** del live (su `index.json` ya no coincide). **Deja de ser el gate**; el nuevo Staging lo sustituye.
+- Otros temas (Dwell, Horizon, exports, "Copia actualizada de Dwell 3.5.1") = restos ignorables.
+
+**Mecanismo elegido (decisión del dueño):** **copiar assets al ID fijo** (no publish-swap).
+Producción permanece `189222715716`; se promociona **archivo por archivo** con
+`push_theme_assets.py`; `git` sigue siendo la fuente de verdad. No se intercambian roles de temas.
+
+**Entregables:**
+- **Doc canónico** [`WORKFLOW_STAGING_PRODUCCION.md`](WORKFLOW_STAGING_PRODUCCION.md) (regla de oro, IDs, flujo paso a paso, preview de staging, cuidado con los `.json` del compañero, qué NO hacer, cheatsheet).
+- **`scripts/push_theme_assets.py` arreglado y blindado:** (1) **bug** corregido —leía `.env.local` inexistente; ahora `.envlocal`; (2) **alias** `--theme prod|staging|dev` o ID; (3) **guardia fail-closed**: subir a `prod` exige `--prod-confirm "<motivo>"` o **aborta**. Verificado: `--list-themes` OK y el intento a prod sin confirmación se bloquea.
+
+**Hallazgo menor:** terminología mezclada en el histórico (una entrada antigua llamaba "STAGING"
+al `189222715716`, que es el publicado) → unificada en el doc canónico.
+
+**Regla recalcada (no negociable):** ningún cambio sube a producción sin pasar por staging y
+sin el **"ok" explícito de Sergio**. Aplica a Claude, Codex, el compañero y scripts automáticos.
+
+**Siguiente paso:** mantener staging == prod (re-sincronizar staging desde prod si el compañero
+edita el live antes de empezar pruebas nuevas).
+
+---
+
 ## 2026-06-30 · Saneamiento de descripciones ACTIVE (ligadura fi + fragmentos de specs)
 
 **Paso del flujo:** GEO PDP / calidad de contenido
