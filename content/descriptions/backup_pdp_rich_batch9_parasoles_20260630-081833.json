@@ -1,0 +1,161 @@
+{
+  "parasol-cuadrado-200x200": {
+    "id": "gid://shopify/Product/15553968570692",
+    "title": "Parasol cuadrado exterior · aluminio 200×200 cm · Ágora",
+    "status": "DRAFT",
+    "productType": "Parasol",
+    "vendor": "santavila",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Azul",
+          "Blanco acrílico",
+          "Crudo",
+          "Mineral",
+          "Blanco tela",
+          "Caqui",
+          "Gris oscuro"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "426.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>Parasol cuadrado de exterior con estructura de acero inoxidable y mástil central fijo, 8 varillas de fibra de vidrio. Dos series de tejido a elegir: <strong>acrílico</strong> (6 colores) y <strong>tela Balliu</strong> (3 colores).</p><ul>\n<li>Dimensiones: 200 × 200 cm</li>\n<li>Tejido resistente al desgarre y a la decoloración por el sol</li>\n<li>Base no incluida — pedir aparte</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  "parasol-para-terraza-300-cm": {
+    "id": "gid://shopify/Product/15507129401668",
+    "title": "Parasol para terraza Ø300 cm",
+    "status": "DRAFT",
+    "productType": "Parasol",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "legacy-balliu-consolidado-2026-05",
+      "parasol",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El parasol proporciona amplia sombra y protección solar en terrazas y jardines. Su diseño elegante y estructura sólida lo convierten en un complemento funcional y decorativo.</p>\n<ul>\n  <li>Resistente a <strong>rayos UV, lluvia y humedad</strong> — preparado para exterior durante todo el año</li>\n  <li>Transporte sencillo y <strong>montaje sin herramientas especiales</strong>\n</li>\n</ul>\n<p><strong>Dimensiones:</strong> Diámetro: 300 cm</p>",
+    "seo": {
+      "title": "Parasol para terraza Ø300 cm",
+      "description": "El parasol proporciona amplia sombra y protección solar en terrazas y jardines. Su diseño elegante y estructura sólida lo convierten en un complemento funcional y decorativo."
+    }
+  },
+  "parasol-para-terraza-300-cm-2": {
+    "id": "gid://shopify/Product/15507129467204",
+    "title": "Parasol para terraza Ø300 cm 2",
+    "status": "DRAFT",
+    "productType": "Parasol",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "legacy-balliu-consolidado-2026-05",
+      "parasol",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "163.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "163.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El parasol aporta color y funcionalidad al espacio exterior. Diseñado para proporcionar sombra efectiva, es perfecto para terrazas dinámicas y modernas.</p>\n<ul>\n  <li>Resistente a <strong>rayos UV, lluvia y humedad</strong> — preparado para exterior durante todo el año</li>\n  <li>Transporte sencillo y <strong>montaje sin herramientas especiales</strong>\n</li>\n</ul>\n<p><strong>Dimensiones:</strong> Diámetro: 300 cm</p>",
+    "seo": {
+      "title": "Parasol para terraza Ø300 cm 2",
+      "description": "El parasol aporta color y funcionalidad al espacio exterior. Diseñado para proporcionar sombra efectiva, es perfecto para terrazas dinámicas y modernas."
+    }
+  },
+  "parasol-para-terraza-350-cm": {
+    "id": "gid://shopify/Product/15507129434436",
+    "title": "Parasol para terraza Ø350 cm",
+    "status": "DRAFT",
+    "productType": "Parasol",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "legacy-balliu-consolidado-2026-05",
+      "parasol",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1079.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1079.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El parasol Ø350 ofrece gran cobertura gracias a su amplio diámetro. Ideal para proteger zonas de comedor o descanso, combina resistencia y diseño moderno.</p>\n<ul>\n  <li>Resistente a <strong>rayos UV, lluvia y humedad</strong> — preparado para exterior durante todo el año</li>\n  <li>Transporte sencillo y <strong>montaje sin herramientas especiales</strong>\n</li>\n</ul>\n<p><strong>Dimensiones:</strong> Diámetro: 350 cm</p>",
+    "seo": {
+      "title": "Parasol para terraza Ø350 cm",
+      "description": "El parasol Ø350 ofrece gran cobertura gracias a su amplio diámetro. Ideal para proteger zonas de comedor o descanso, combina resistencia y diseño moderno."
+    }
+  }
+}

@@ -13,6 +13,43 @@
 
 ---
 
+## 2026-06-30 · Auditoría de descripciones de TODO el catálogo + fichas de parasoles DRAFT
+
+**Paso del flujo:** GEO PDP / saneamiento de catálogo
+**Estado:** ✅ aplicado
+**Quién/qué:** Claude (Opus 4.8) + Shopify Admin GraphQL + verificación en vivo
+
+### Qué se ejecutó
+- Se sincronizó git (commit del trabajo GEO pendiente + rebase de un commit remoto de cierre `sync live=git` + push).
+- Se ejecutó `scripts/audit_products.py` sobre **todo** el catálogo para verificar el estado real de las descripciones (no fiarse de la nota del batch 7).
+- Resultado ACTIVE (171): **0 vacías, 0 pobres, 0 finas**; 130 ricas (≥120p) + 41 aceptables (80-119p); meta SEO, marca e imagen al 100%. → En lo publicado no hay nada sin describir.
+- Resultado DRAFT (70): 10 vacías, 28 pobres, 12 finas, 18 aceptables, 2 ricas.
+- Se clasificaron los 70 DRAFT: **modelos reales** (handle limpio) vs **artefactos** (handle con hash / `pendiente`).
+- Auditoría cruzada: las **9 mesas `hpl-gd`/`extras`** (Capri, Brunei, Java, Etna, Altea, Ágata, mesa centro 110×60, Capri Doble) son **duplicados legacy** — cada una tiene su gemela ya ACTIVE publicada; llevan tags `legacy-balliu-consolidado-2026-05` + `pendiente-confirmar-proveedor` y **sin imagen**. → NO se describen (es residuo de deduplicación).
+- Modelos reales pendientes de verdad = **4 parasoles** sin equivalente activo: `parasol-cuadrado-200x200` (Ágora), `parasol-para-terraza-300-cm` (Viena), `parasol-para-terraza-300-cm-2` (Caracas, económico) y `parasol-para-terraza-350-cm` (Samson).
+- Se escribieron fichas ricas para esos 4 parasoles (47-55p → 188-211p) ancladas en datos reales (medida, estructura acero inox/fibra de vidrio del Ágora, resistencia UV/lluvia, montaje sin herramientas), con meta description. **Status DRAFT intacto** (no se publica nada; el merchant decide activar).
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch9_parasoles.py` — script (dry-run por defecto, `--apply`, guard `productType==Parasol`).
+- `content/descriptions/backup_pdp_rich_batch9_parasoles_20260630-081833.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoría completa actualizada.
+
+### Hallazgos clave
+- El sitio vivo (ACTIVE) está 100% cubierto en descripción/meta/imagen → el "esperar recrawl" sí está justificado para lo publicado.
+- Los 70 DRAFT son mayoritariamente **residuo de la consolidación Balliu**: 53 con hash/pendiente (incluidas todas las mesas-gd) son duplicados de productos ya activos.
+- 100% de los productos ACTIVE siguen **sin GTIN/barcode** en variantes → gap real para Google Merchant y comercio agéntico (no abordado aún).
+
+### Decisiones pendientes
+- **Borrado del residuo dedup:** las ~9 mesas `hpl-gd`/`extras` + `werzalit-60-etna` son duplicados; lo sano es borrarlas, pero es destructivo → requiere OK explícito.
+- **GTIN:** decidir si cargar EANs (desde datos de proveedor/migración) en los 171 activos.
+- Activar (o no) los 4 parasoles ahora que tienen ficha — decisión del merchant.
+
+### Siguiente paso recomendado
+- Mantener el plan: esperar recrawl 7-10 días y repetir GSC delta (~6-9 jul) para medir impacto de PDP 2.0 + enlazado interno.
+- En paralelo, sin depender del recrawl: valorar el bloque GTIN o el hub de tumbonas Balliu/resina.
+
+---
+
 ## 2026-06-28 · CIERRE DE SESIÓN — PDP (descripción/ficha) + Hero (velo, carrusel) + sync
 
 Resumen de la sesión (detalle en las entradas siguientes):
