@@ -448,6 +448,262 @@ Acciones definidas:
 - Preparar 3-5 menciones externas realistas en blogs/directorios sectoriales.
 - Aplicar `sameAs` solo cuando existan URLs publicas reales.
 
+## Sprint 6 validado - 2026-06-27
+
+Fuente de ejecucion:
+
+- `curl` publico contra `santavila.com`, `santavila.es` y `www.santavila.es`.
+
+Estado: endpoints agenticos y canonicidad validados.
+
+Verificacion:
+
+- `https://santavila.com/llms.txt` responde `200`.
+- `https://santavila.com/agents.md` responde `200`.
+- `https://santavila.com/.well-known/ucp` responde `200`.
+- `https://santavila.com/sitemap.xml` responde `200`.
+- `https://santavila.es/llms.txt` redirige `301` a `https://santavila.com/llms.txt`.
+- `https://www.santavila.es/llms.txt` redirige `301` a `https://santavila.com/llms.txt`.
+- `https://santavila.es/.well-known/ucp` redirige `301` a `https://santavila.com/.well-known/ucp`.
+
+Informe:
+
+- `docs/santavila/GEO-AGENTIC-ENDPOINTS-REPORT.md`
+
+## Reauditoria GSC - 2026-06-27
+
+Fuente:
+
+- `.venv/bin/python scripts/gsc_baseline.py`
+- `.venv/bin/python scripts/gsc_opportunities.py`
+
+Resultado 28 dias:
+
+- Clics: 9.
+- Impresiones: 636.
+- CTR: 1,42%.
+- Posicion media: 16,7.
+
+Delta frente al 2026-06-23:
+
+- Clics: 9 -> 9.
+- Impresiones: 630 -> 636.
+- CTR: 1,43% -> 1,42%.
+
+Lectura:
+
+- Aun es pronto para medir las guias nuevas.
+- El siguiente lote debe priorizar PDPs con queries ya visibles.
+
+Informe:
+
+- `docs/santavila/GEO-DELTA-2026-06-27.md`
+
+## PDP 2.0 batch 1 aplicado - 2026-06-27
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- `/products/banco-jardin-con-mesa-integrada-220-cm`
+- `/products/pergola-aluminio-para-jardin-300300250-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm`
+- `/products/balliu-tumbona-de-exterior-resina-28ff014d`
+- `/products/set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro`
+
+Resultado:
+
+- Descripciones ampliadas a 185-196 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD de producto recoge las nuevas descripciones.
+- Backups guardados en `content/descriptions/`.
+
+## PDP 2.0 batch 2 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch2.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm`
+- `/products/sofa-terraza-3-plazas-estilo-moderno-18770-cm`
+- `/products/sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm`
+- `/products/sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm`
+- `/products/sofa-terraza-2-plazas-estilo-elegante-13170-cm`
+- `/products/set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa`
+- `/products/set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa`
+- `/products/set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4`
+- `/products/set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3`
+
+Resultado:
+
+- Descripciones ampliadas a 174-188 palabras.
+- Meta descriptions actualizadas.
+- Bloque visible `Descripción y detalles` confirmado en PDPs publicas.
+- Productos activos con descripcion rica: 7 -> 17.
+
+## PDP 2.0 batch 3 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch3.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- `/products/sofa-terraza-2-plazas-estilo-estilizado-14383-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm`
+- `/products/sofa-terraza-3-plazas-estilo-sofisticado-212100-cm`
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm`
+- `/products/set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2`
+- `/products/set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-3`
+- `/products/set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3`
+- `/products/set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5`
+- `/products/set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa-2`
+- `/products/banco-de-exterior-150-cm`
+- `/products/banco-de-exterior-108-cm`
+
+Resultado:
+
+- Descripciones ampliadas a 157-172 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD y bloque visible `Descripción y detalles` confirmados en PDPs publicas.
+- Productos activos con descripcion rica: 17 -> 29.
+- Productos activos bajo 80 palabras: 106 -> 94.
+
+## PDP 2.0 batch 4 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch4.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- 16 sillones de exterior Hevea.
+
+Resultado:
+
+- Descripciones ampliadas a 154-165 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD y bloque visible `Descripción y detalles` confirmados en PDPs publicas.
+- Productos activos con descripcion rica: 29 -> 45.
+- Productos activos bajo 80 palabras: 94 -> 78.
+- La familia `Sillón` queda saneada en el umbral de descripcion rica.
+
+## PDP 2.0 batch 5 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch5.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- 12 mesas de centro.
+- 6 reposapies.
+- 7 tumbonas.
+
+Resultado:
+
+- Descripciones ampliadas a 129-165 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD y bloque visible `Descripción y detalles` confirmados en PDPs publicas.
+- Productos activos con descripcion rica: 45 -> 70.
+- Productos activos bajo 80 palabras: 78 -> 53.
+- Las familias `Mesa centro`, `Tumbona` y `Reposapiés` quedan saneadas bajo el criterio de descripcion rica.
+
+## PDP 2.0 batch 6 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch6.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- 16 sofas.
+- 15 conjuntos sofa.
+
+Resultado:
+
+- Descripciones ampliadas a 157-186 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD y bloque visible `Descripción y detalles` confirmados en PDPs publicas.
+- Productos activos con descripcion rica: 70 -> 101.
+- Productos activos bajo 80 palabras: 53 -> 22.
+- `Sofá` y `Conjunto sofá` quedan fuera del backlog de fichas bajo 80 palabras.
+
+## PDP 2.0 batch 7 aplicado - 2026-06-28
+
+Fuente:
+
+- `scripts/apply_pdp_rich_descriptions_batch7.py`
+- Shopify Admin API
+- Verificacion publica con `curl`
+
+Productos actualizados:
+
+- 22 productos de familias menores: sillas, fundas, mesas comedor, mesas auxiliares, parasoles, accesorios, balancin, rinconera, mini tumbona y mobiliario exterior.
+
+Resultado:
+
+- Descripciones ampliadas a 127-153 palabras.
+- Meta descriptions actualizadas.
+- JSON-LD y bloque visible `Descripción y detalles` confirmados en PDPs publicas.
+- Productos activos con descripcion rica: 101 -> 123.
+- Productos activos bajo 80 palabras: 22 -> 0.
+- Productos activos con menos de 50 palabras: 7 -> 0.
+- Productos activos entre 50 y 79 palabras: 15 -> 0.
+- Se corrigio el fallback de material para evitar frases artificiales en productos sin material explicito.
+
+## GEO delta y enlazado interno por GSC - 2026-06-29
+
+Fuente:
+
+- `.venv/bin/python scripts/gsc_baseline.py`
+- `.venv/bin/python scripts/gsc_opportunities.py`
+- `scripts/apply_geo_cluster_links_20260629.py`
+
+Resultado GSC 28 dias:
+
+- Clics: 10.
+- Impresiones: 675.
+- CTR: 1,48%.
+- Posicion media: 17,7.
+- Sitemap HTTPS: 0 errores, 0 warnings.
+
+Clusters priorizados:
+
+- Tumbonas Balliu/resina: `tumbonas de resina profesionales`, `tumbonas resina`, `hamacas balliu`, `tumbonas balliu`.
+- Sombra/parasol/pergola: `pérgola 250x300`, `base parasol`, `base para sombrilla`.
+- Compactos: `sofa terraza 120 cm`, `sofa exterior 130 cm`, `banco con mesa incorporada`.
+
+Accion aplicada:
+
+- Añadidos bloques contextuales de enlazado interno en 5 guias editoriales.
+- Backups guardados en `content/descriptions/backup_geo_cluster_links_20260629-145138.json` y `content/descriptions/backup_geo_cluster_links_20260629-145143.json`.
+- Verificacion publica con `curl` en guias de tumbonas, lluvia/sol y terraza pequena.
+
+Siguiente accion:
+
+- Medir de nuevo en 7-10 dias antes de crear mas contenido.
+- Si el cluster de tumbonas sigue creciendo, preparar hub especifico `tumbonas Balliu/resina`.
+
 ## Sprint 4.2 aplicado - 2026-06-25
 
 Fuente de ejecucion:

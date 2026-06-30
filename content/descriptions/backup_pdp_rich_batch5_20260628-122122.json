@@ -1,0 +1,1087 @@
+{
+  "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm": {
+    "id": "gid://shopify/Product/15507125829956",
+    "title": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "505.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "505.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro YINA-70 con tablero HPL combina diseño moderno y alta resistencia. Su superficie está preparada para soportar condiciones exteriores manteniendo su estética impecable.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>45 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
+      "description": "La mesa de centro con tablero HPL combina diseño moderno y alta resistencia. Su superficie está preparada para soportar condiciones exteriores manteniendo su estética impecable."
+    }
+  },
+  "mesa-de-centro-exterior-125-cm-altura-42-cm": {
+    "id": "gid://shopify/Product/15507127271748",
+    "title": "Mesa de centro exterior 125 cm · altura 42 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "569.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "569.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro BOLONIA 125x65x42 combina diseño moderno y funcionalidad. Su tamaño amplio la convierte en el complemento ideal para conjuntos de gran formato.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>125 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>65 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>42 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 125 cm · altura 42 cm",
+      "description": "La mesa de centro x65x42 combina diseño moderno y funcionalidad. Su tamaño amplio la convierte en el complemento ideal para conjuntos de gran formato."
+    }
+  },
+  "mesa-de-centro-exterior-hpl-90-cm-altura-40-cm": {
+    "id": "gid://shopify/Product/15507128451396",
+    "title": "Mesa de centro exterior HPL 90 cm · altura 40 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "332.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "332.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro 90 HPL combina resistencia y diseño minimalista. Su tablero HPL está preparado para soportar las condiciones exteriores manteniendo una estética impecable.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior HPL 90 cm · altura 40 cm",
+      "description": "La mesa de centro 90 HPL combina resistencia y diseño minimalista. Su tablero HPL está preparado para soportar las condiciones exteriores manteniendo una estética impecable."
+    }
+  },
+  "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2": {
+    "id": "gid://shopify/Product/15507128484164",
+    "title": "Mesa de centro exterior HPL 120 cm · altura 40 cm 2",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "441.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "441.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro 120 HPL ofrece una superficie amplia y duradera ideal para conjuntos exteriores. Su diseño limpio y materiales resistentes garantizan funcionalidad y estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>120 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior HPL 120 cm · altura 40 cm 2",
+      "description": "La mesa de centro 120 HPL ofrece una superficie amplia y duradera ideal para conjuntos exteriores. Su diseño limpio y materiales resistentes garantizan funcionalidad y estilo."
+    }
+  },
+  "mesa-de-centro-exterior-125-cm-altura-38-cm": {
+    "id": "gid://shopify/Product/15507126321476",
+    "title": "Mesa de centro exterior 125 cm · altura 38 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "375.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "375.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro BELLAGIO 125 complementa el conjunto con una superficie amplia y diseño armonioso. Resistente y funcional, es perfecta para completar salones exteriores con estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>125 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>38 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 125 cm · altura 38 cm",
+      "description": "La mesa de centro complementa el conjunto con una superficie amplia y diseño armonioso. Resistente y funcional, es perfecta para completar salones exteriores con estilo."
+    }
+  },
+  "mesa-de-centro-exterior-120-cm-altura-41-cm": {
+    "id": "gid://shopify/Product/15507126812996",
+    "title": "Mesa de centro exterior 120 cm · altura 41 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa SAIPROS-120 ofrece una superficie amplia perfecta para conjuntos de mayor tamaño. Su diseño limpio y estructura sólida garantizan resistencia y armonía estética en terrazas contemporáneas.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>120 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>41 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 120 cm · altura 41 cm",
+      "description": "La mesa ofrece una superficie amplia perfecta para conjuntos de mayor tamaño. Su diseño limpio y estructura sólida garantizan resistencia y armonía estética en terrazas contemporáneas."
+    }
+  },
+  "mesa-de-centro-exterior-90-cm-altura-40-cm-2": {
+    "id": "gid://shopify/Product/15507128123716",
+    "title": "Mesa de centro exterior 90 cm · altura 40 cm 2",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "332.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "332.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro 90 combina funcionalidad y diseño moderno en un formato compacto. Ideal para acompañar sofás y sillones de exterior aportando superficie práctica sin sobrecargar el espacio.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 90 cm · altura 40 cm 2",
+      "description": "La mesa de centro 90 combina funcionalidad y diseño moderno en un formato compacto. Ideal para acompañar sofás y sillones de exterior aportando superficie práctica sin sobrecargar el espacio."
+    }
+  },
+  "mesa-de-centro-exterior-90-cm-altura-41-cm": {
+    "id": "gid://shopify/Product/15507126780228",
+    "title": "Mesa de centro exterior 90 cm · altura 41 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "338.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "338.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro SAIPROS-90 destaca por su formato compacto y funcional. Resistente y preparada para exterior, es ideal para completar conjuntos modernos aportando superficie de apoyo práctica y elegante.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>41 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 90 cm · altura 41 cm",
+      "description": "La mesa de centro destaca por su formato compacto y funcional. Resistente y preparada para exterior, es ideal para completar conjuntos modernos aportando superficie de apoyo práctica y elegante."
+    }
+  },
+  "mesa-de-centro-exterior-hpl-135-cm-altura-40-cm": {
+    "id": "gid://shopify/Product/15507127566660",
+    "title": "Mesa de centro exterior HPL 135 cm · altura 40 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "bicolor",
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "835.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "835.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro Bicolor 135 HPL destaca por su mayor superficie y presencia visual. Ideal para conjuntos amplios, aporta estabilidad, resistencia y un diseño actual perfecto para terrazas sofisticadas.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>135 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior HPL 135 cm · altura 40 cm",
+      "description": "La mesa de centro Bicolor 135 HPL destaca por su mayor superficie y presencia visual. Ideal para conjuntos amplios, aporta estabilidad, resistencia y un diseño actual perfecto para terrazas sofisticadas."
+    }
+  },
+  "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm": {
+    "id": "gid://shopify/Product/15507127533892",
+    "title": "Mesa de centro exterior HPL 120 cm · altura 40 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "bicolor",
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "715.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "715.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro Bicolor 120 con tablero HPL combina resistencia y diseño moderno. Su superficie amplia y duradera está preparada para uso exterior, ofreciendo funcionalidad y un acabado elegante que complementa el conjunto DIVA.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>120 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior HPL 120 cm · altura 40 cm",
+      "description": "La mesa de centro Bicolor 120 con tablero HPL combina resistencia y diseño moderno. Su superficie amplia y duradera está preparada para uso exterior, ofreciendo funcionalidad y un acabado elegante que complementa el conjunto."
+    }
+  },
+  "mesa-de-centro-exterior-90-cm-altura-40-cm": {
+    "id": "gid://shopify/Product/15507125600580",
+    "title": "Mesa de centro exterior 90 cm · altura 40 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "338.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "338.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro UNIVERSAL-80 destaca por su diseño minimalista y funcional. Compacta y resistente, está preparada para uso exterior y resulta ideal para apoyar bebidas o elementos decorativos. Se integra perfectamente en conjuntos de terraza modernos.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa de centro exterior 90 cm · altura 40 cm",
+      "description": "La mesa de centro destaca por su diseño minimalista y funcional. Compacta y resistente, está preparada para uso exterior y resulta ideal para apoyar bebidas o elementos decorativos. Se integra perfectamente en conjuntos de terraza modernos."
+    }
+  },
+  "mesa-de-centro-exterior-120-cm-altura-40-cm-2": {
+    "id": "gid://shopify/Product/15507128156484",
+    "title": "Mesa de centro exterior 120 cm · altura 40 cm 2",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "441.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "441.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro 120 ofrece una superficie amplia y resistente para completar conjuntos de exterior. Su diseño sencillo y contemporáneo aporta equilibrio y funcionalidad al espacio.</p>\n<ul>\n  <li>Resistente a <strong>rayos UV, lluvia y humedad</strong> — preparado para exterior durante todo el año</li>\n  <li>Mantenimiento mínimo: no requiere tratamientos ni almacenamiento en invierno</li>\n  <li>Transporte sencillo y <strong>montaje sin herramientas especiales</strong>\n</li>\n</ul>\n<p><strong>Dimensiones:</strong> Ancho: 120 cm  |  Fondo: 60 cm  |  Alto: 40 cm</p>",
+    "seo": {
+      "title": "Mesa de centro exterior 120 cm · altura 40 cm 2",
+      "description": "La mesa de centro 120 ofrece una superficie amplia y resistente para completar conjuntos de exterior. Su diseño sencillo y contemporáneo aporta equilibrio y funcionalidad al espacio."
+    }
+  },
+  "reposapies-exterior-504540-cm": {
+    "id": "gid://shopify/Product/15507126616388",
+    "title": "Reposapiés exterior · 50×45×40 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "187.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "187.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés CLOE-5 añade un extra de confort al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar manteniendo la coherencia estética.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>45 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior · 50×45×40 cm",
+      "description": "El reposapiés añade un extra de confort al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar manteniendo la coherencia estética."
+    }
+  },
+  "reposapies-exterior-734640-cm": {
+    "id": "gid://shopify/Product/15507125862724",
+    "title": "Reposapiés exterior · 73×46×40 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "387.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "387.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés YINA-5 complementa el conjunto aportando mayor comodidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar, manteniendo la coherencia estética de la colección.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>73 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>46 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior · 73×46×40 cm",
+      "description": "El reposapiés complementa el conjunto aportando mayor comodidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar, manteniendo la coherencia estética de la colección."
+    }
+  },
+  "reposapies-exterior-855043-cm-2": {
+    "id": "gid://shopify/Product/15507127304516",
+    "title": "Reposapiés exterior · 85×50×43 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés STANDARD-XL complementa el conjunto aportando mayor comodidad y versatilidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar manteniendo la estética del conjunto.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>85 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>43 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior · 85×50×43 cm 2",
+      "description": "El reposapiés complementa el conjunto aportando mayor comodidad y versatilidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar manteniendo la estética del conjunto."
+    }
+  },
+  "reposapies-exterior-bicolor-704544-cm": {
+    "id": "gid://shopify/Product/15507127599428",
+    "title": "Reposapiés exterior bicolor · 70×45×44 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "bicolor",
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "509.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "509.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés Bicolor STANDARD-55 complementa el conjunto aportando mayor comodidad y versatilidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar manteniendo la coherencia estética del diseño bicolor.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>45 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>44 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior bicolor · 70×45×44 cm",
+      "description": "El reposapiés Bicolor complementa el conjunto aportando mayor comodidad y versatilidad. Puede utilizarse como extensión del asiento o como apoyo auxiliar manteniendo la coherencia estética del diseño bicolor."
+    }
+  },
+  "reposapies-exterior-605040-cm": {
+    "id": "gid://shopify/Product/15507126092100",
+    "title": "Reposapiés exterior · 60×50×40 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "326.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "326.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés STANDARD-5 aporta un extra de comodidad al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar. Su diseño coordinado mantiene la armonía del espacio exterior.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>60 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>40 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior · 60×50×40 cm",
+      "description": "El reposapiés aporta un extra de comodidad al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar. Su diseño coordinado mantiene la armonía del espacio exterior."
+    }
+  },
+  "reposapies-exterior-855043-cm": {
+    "id": "gid://shopify/Product/15507127140676",
+    "title": "Reposapiés exterior · 85×50×43 cm",
+    "status": "ACTIVE",
+    "productType": "Reposapiés",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "reposapiés",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El reposapiés STANDARD-XL añade un extra de confort al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar. Su diseño mantiene la coherencia estética del espacio exterior.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>85 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>43 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Reposapiés exterior · 85×50×43 cm",
+      "description": "El reposapiés añade un extra de confort al conjunto, permitiendo extender la zona de descanso o utilizarlo como asiento auxiliar. Su diseño mantiene la coherencia estética del espacio exterior."
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-923110d9": {
+    "id": "gid://shopify/Product/15512246419780",
+    "title": "Tumbona exterior resina · Ø73 cm tablillas · Eva Pro T",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Tórtola"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "219.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "242.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La Eva Pro es un icono de Balliu y mantiene la esencia de su predecesora Eva RG. Con una estructura de resina de polipropileno reforzada con carga mineral y un elegante acabado mate, ofrece resistencia y durabilidad.</p>\n<p>Su diseño con patas en forma de V ofrece estabilidad. Cuenta con refuerzo interno, respaldo regulable en cinco posiciones y ruedas integradas. El tejido sustituible mediante cordón asegura una fácil renovación.</p>\n<p>Resina Classic</p>\n<p>Tejido Balliu</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina",
+      "description": "La Eva Pro es un icono de Balliu y mantiene la esencia de su predecesora Eva RG. Con una estructura de resina de polipropileno reforzada con carga mineral y un elegante acabado mate, ofrece resistencia y durabilidad. Su diseño con patas en forma de V ofrece estabilidad. Cuenta con refuerzo interno, respaldo regulable e"
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-b19af1ea": {
+    "id": "gid://shopify/Product/15512246485316",
+    "title": "Tumbona exterior resina · Ø73 cm tela · Eva Pro",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Tórtola"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "228.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "242.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La Eva Pro es un icono de Balliu y mantiene la esencia de su predecesora Eva RG. Con una estructura de resina de polipropileno reforzada con carga mineral y un elegante acabado mate, ofrece resistencia y durabilidad.</p>\n<p>Su diseño con patas en forma de V ofrece estabilidad. Cuenta con refuerzo interno, respaldo regulable en cinco posiciones y ruedas integradas. El tejido sustituible mediante cordón asegura una fácil renovación.</p>\n<p>Resina Classic</p>\n<p>Tejido Balliu</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina",
+      "description": "La Eva Pro es un icono de Balliu y mantiene la esencia de su predecesora Eva RG. Con una estructura de resina de polipropileno reforzada con carga mineral y un elegante acabado mate, ofrece resistencia y durabilidad. Su diseño con patas en forma de V ofrece estabilidad. Cuenta con refuerzo interno, respaldo regulable e"
+    }
+  },
+  "balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24": {
+    "id": "gid://shopify/Product/15512247271748",
+    "title": "Tumbona exterior aluminio · con/sin ruedas · Olimpia",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Ruedas",
+        "values": [
+          "No",
+          "Sí"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "539.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "589.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La Olimpia combina una estructura resistente con un diseño minimalista y elegante. Fabricada con aluminio endurecido y tornillería de acero inoxidable, su estructura reforzada internamente asegura gran resistencia.</p>\n<p>Es regulable en cinco posiciones, con un sistema de seguridad para evitar el atrapamiento de manos y dedos. Con ruedas opcionales y tejido sustituible mediante guías, su diseño se caracteriza por líneas rectas y limpias, creando una apariencia plana y elegante.</p>\n<p>Tejido Balliu</p>\n<p>Aluminio texturizado</p>",
+    "seo": {
+      "title": "Tumbona de exterior sin ruedas aluminio",
+      "description": "La Olimpia combina una estructura resistente con un diseño minimalista y elegante. Fabricada con aluminio endurecido y tornillería de acero inoxidable, su estructura reforzada internamente asegura gran resistencia. Es regulable en cinco posiciones, con un sistema de seguridad para evitar el atrapamiento de manos y dedo"
+    }
+  },
+  "balliu-tumbona-de-exterior-aluminio-36870d09": {
+    "id": "gid://shopify/Product/15512247337284",
+    "title": "Tumbona exterior aluminio · Etna",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Ruedas",
+        "values": [
+          "No",
+          "Sí"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "426.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La tumbona Etna eleva cualquier espacio exterior con su diseño exclusivo y minimalista. Su estructura de aluminio endurecido, reforzada con nerviado interno y tornillería en acero inoxidable, la convierte en la más resistente de Balliu.</p>\n<p>Con respaldo regulable en cinco posiciones, su tejido es sustituible mediante guías. Cuenta con ruedas opcionales en color gris para agregar funcionalidad. Con un perﬁl reﬁnado, es ideal para quienes buscan un diseño sencillo pero soﬁsticado.</p>\n<p>Aluminio texturizado</p>\n<p>Tejido Balliu</p>",
+    "seo": {
+      "title": "Tumbona de exterior aluminio",
+      "description": "La tumbona Etna eleva cualquier espacio exterior con su diseño exclusivo y minimalista. Su estructura de aluminio endurecido, reforzada con nerviado interno y tornillería en acero inoxidable, la convierte en la más resistente de Balliu. Con respaldo regulable en cinco posiciones, su tejido es sustituible mediante guías"
+    }
+  },
+  "tumbona-de-exterior": {
+    "id": "gid://shopify/Product/15507129368900",
+    "title": "Tumbona de exterior",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "legacy-balliu-consolidado-2026-05",
+      "terraza",
+      "tumbona"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "193.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "193.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>Tumbona de exterior con estructura de aluminio y tejido técnico de textileno (tipo sling), con respaldo reclinable. Pensada para descansar al aire libre en jardines, terrazas y zonas de piscina.</p>\n<ul>\n  <li>Estructura de <strong>aluminio</strong>, ligera y resistente; tejido de <strong>textileno</strong> transpirable</li>\n  <li>Respaldo <strong>reclinable</strong> en varias posiciones</li>\n  <li>Pensada para el exterior; fácil de limpiar y de recoger cuando lo necesites</li>\n  <li>Montaje sencillo, sin herramientas especiales</li>\n</ul>\n<p><strong>Dimensiones:</strong> Ancho 53 cm · Fondo 136 cm · Alto 105 cm</p>",
+    "seo": {
+      "title": "Tumbona de exterior",
+      "description": "La tumbona está diseñada para ofrecer máximo confort bajo el sol. Su estructura resistente y diseño ergonómico permiten disfrutar de largas jornadas de descanso en jardines y zonas de piscina."
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-75-cm-009e68e4": {
+    "id": "gid://shopify/Product/15512246649156",
+    "title": "Tumbona exterior resina · 75 cm tela · Carmen",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Madera"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "183.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "188.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Tumbona de exterior Balliu en resina de 75 cm, pensada para zonas de piscina, jardín y terrazas donde se busca una pieza resistente y fácil de mantener.</strong></p><ul>\n<li>\n<strong>Material:</strong> resina para exterior.</li>\n<li>\n<strong>Medida clave:</strong> 75 cm.</li>\n<li>\n<strong>Uso recomendado:</strong> piscina, jardín, terraza y alojamiento turístico.</li>\n<li>\n<strong>Búsquedas relacionadas:</strong> tumbona Balliu, tumbona resina exterior y tumbona jardín resina.</li>\n</ul><p>La medida de 75 cm facilita comparar comodidad y encaje en espacios de descanso, especialmente cuando se buscan tumbonas de resina para exterior.</p>",
+    "seo": {
+      "title": null,
+      "description": "Tumbona Balliu de exterior en resina de 75 cm para jardín, piscina y terraza. Resistente, cómoda y fácil de mantener."
+    }
+  },
+  "balliu-tumbona-de-exterior-aluminio-d08586c1": {
+    "id": "gid://shopify/Product/15512247435588",
+    "title": "Tumbona exterior aluminio alta · acceso fácil · Etna Alta",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Ruedas",
+        "values": [
+          "No",
+          "Sí"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "496.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Tumbona de exterior Balliu con estructura de aluminio, orientada a jardín, piscina y espacios donde se prioriza ligereza y resistencia a la intemperie.</strong></p><ul>\n<li>\n<strong>Material:</strong> aluminio para exterior.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza, jardín, piscina y hostelería.</li>\n<li>\n<strong>Búsquedas relacionadas:</strong> tumbona Balliu, tumbona aluminio exterior y tumbona profesional.</li>\n<li>\n<strong>Ventaja práctica:</strong> estructura ligera para moverla con facilidad.</li>\n</ul><p>Es la alternativa natural dentro del cluster Balliu cuando el usuario compara resina frente a aluminio para equipar una zona de solárium o descanso exterior.</p>",
+    "seo": {
+      "title": null,
+      "description": "Tumbona Balliu de exterior en aluminio para jardín, piscina, terraza y hostelería. Ligera, resistente y fácil de mover."
+    }
+  }
+}

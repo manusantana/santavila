@@ -2809,6 +2809,387 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ---
 
+## 2026-06-27 · GEO Sprint 6 - reaudit endpoints agenticos Shopify
+
+**Paso del flujo:** GEO Sprint 6
+**Estado:** ✅ validado
+**Quién/qué:** Codex + `curl` publico
+
+### Qué se ejecutó
+- Se validaron `llms.txt`, `agents.md`, `/.well-known/ucp`, `robots.txt` y `sitemap.xml`.
+- Se comprobo redireccion 301 de `santavila.es` y `www.santavila.es` hacia `santavila.com` en endpoints agenticos.
+- Se actualizo el informe de endpoints agenticos.
+
+### Entregables
+- `docs/santavila/GEO-AGENTIC-ENDPOINTS-REPORT.md` — informe actualizado con reaudit 2026-06-27.
+
+### Hallazgos clave
+- `llms.txt` y `agents.md` responden `200` y siguen generados por Shopify.
+- `robots.txt` declara `agents.md`, UCP discovery, UCP/MCP endpoint y sitemap.
+- `santavila.es` redirige `301` al dominio primario en los endpoints probados.
+- UCP sigue devolviendo endpoints con `mueblesexterior.myshopify.com`, aunque `merchant_origin` aparece como `santavila.com`.
+
+### Siguiente paso recomendado
+- No tocar `llms.txt` desde theme; seguir con contenido, schema, reviews, menciones y enlazado interno.
+
+---
+
+## 2026-06-27 · GEO Reauditoria - delta GSC y siguiente lote PDP
+
+**Paso del flujo:** Reauditoria y delta
+**Estado:** ✅ ejecutado
+**Quién/qué:** Codex + Google Search Console
+
+### Qué se ejecutó
+- Se actualizo `SEO-BASELINE.md` con ventana 2026-05-30 -> 2026-06-26.
+- Se ejecuto el informe de oportunidades GSC de 90 dias.
+- Se creo un informe delta con prioridades por URL/query.
+
+### Entregables
+- `SEO-BASELINE.md` — baseline GSC actualizado.
+- `docs/santavila/GEO-DELTA-2026-06-27.md` — lectura de delta y siguiente lote de PDPs.
+
+### Hallazgos clave
+- 28 dias: 9 clics, 636 impresiones, CTR 1,42%, posicion media 16,7.
+- El delta frente al 2026-06-23 aun es pequeno: las guias nuevas necesitan crawl y maduracion.
+- Hay oportunidades claras en `banco con mesa incorporada`, `pérgola 250x300`, sofas 120/130 cm, tumbonas Balliu/resina y rinconeras.
+
+### Siguiente paso recomendado
+- Refuerzo quirurgico de PDPs con senales GSC: title/meta/descripcion y enlazado interno desde guias.
+
+---
+
+## 2026-06-27 · GEO PDP audit - descripciones pobres
+
+**Paso del flujo:** PDP quality audit
+**Estado:** ✅ ejecutado
+**Quién/qué:** Codex + Shopify Admin API
+
+### Qué se ejecutó
+- Se ejecuto auditoria viva de productos activos.
+- Se ajusto `scripts/audit_products.py` para medir descripciones con umbrales utiles para GEO, no solo vacias.
+- Se creo un informe especifico de calidad PDP.
+
+### Entregables
+- `auditoria_fichas_report.csv` — export actualizado.
+- `docs/santavila/GEO-PDP-DESCRIPTION-AUDIT-2026-06-27.md` — diagnostico y sprint propuesto.
+- `scripts/audit_products.py` — umbrales ajustados: pobre, fina, aceptable y rica.
+
+### Hallazgos clave
+- 171 productos activos.
+- 118 productos activos tienen menos de 80 palabras.
+- 79 productos activos tienen menos de 50 palabras.
+- Solo 1 producto activo supera 120 palabras.
+
+### Siguiente paso recomendado
+- Ejecutar Sprint PDP 2.0 por familias, empezando por productos con senales GSC y familias con muchas fichas pobres.
+
+---
+
+## 2026-06-27 · GEO PDP 2.0 - batch 1 con señales GSC
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions.py`.
+- Se ejecuto dry-run y aplicacion sobre 6 PDP con señales GSC.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico que el HTML publico y JSON-LD incluyen los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions.py` — lote 1 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch1_20260627-093828.json` — backup dry-run.
+- `content/descriptions/backup_pdp_rich_batch1_20260627-093834.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- `/products/banco-jardin-con-mesa-integrada-220-cm` — 81 -> 190 palabras.
+- `/products/pergola-aluminio-para-jardin-300300250-cm` — 94 -> 192 palabras.
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm` — 90 -> 185 palabras.
+- `/products/sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm` — 78 -> 196 palabras.
+- `/products/balliu-tumbona-de-exterior-resina-28ff014d` — 73 -> 190 palabras.
+- `/products/set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro` — 100 -> 196 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 1 -> 7.
+- Productos activos bajo 80 palabras: 118 -> 116.
+- La prioridad sigue estando en sofas, conjuntos sofa, sillones y mesas centro.
+
+### Siguiente paso recomendado
+- Batch 2: sofas/conjuntos con menos de 50 palabras y potencial long-tail por medida/plazas.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 2 sofas y conjuntos
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch2.py`.
+- Se ejecuto dry-run y aplicacion sobre 10 PDP de sofas/conjuntos.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico que el bloque visible `Descripción y detalles` aparece en PDPs publicas.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch2.py` — lote 2 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch2_20260628-105748.json` — backup dry-run.
+- `content/descriptions/backup_pdp_rich_batch2_20260628-105759.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 6 sofas por plazas/medidas: 33-37 -> 177-188 palabras.
+- 4 conjuntos sofa: 30-31 -> 174-180 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 7 -> 17.
+- Productos activos bajo 80 palabras: 116 -> 106.
+- Productos activos con menos de 50 palabras: 79 -> 69.
+
+### Siguiente paso recomendado
+- Batch 3: sofas/conjuntos restantes con menos de 50 palabras, sillones y mesas centro.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 3 sofas, conjuntos y bancos
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch3.py`.
+- Se ejecuto dry-run y aplicacion sobre 12 PDP: sofas, conjuntos sofa y bancos.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico en publico que el HTML, JSON-LD y bloque visible `Descripción y detalles` ya sirven los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch3.py` — lote 3 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch3_20260628-111220.json` — backup dry-run.
+- `content/descriptions/backup_pdp_rich_batch3_20260628-111226.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 5 sofas por plazas/medidas: 38 -> 159-166 palabras.
+- 5 conjuntos sofa: 30-32 -> 157-165 palabras.
+- 2 bancos de exterior: 33-35 -> 165-172 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 17 -> 29.
+- Productos activos bajo 80 palabras: 106 -> 94.
+- Productos activos con menos de 50 palabras: 69 -> 57.
+
+### Siguiente paso recomendado
+- Batch 4: sillones con menos de 80 palabras, mesas de centro HPL, tumbonas y reposapies.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 4 sillones
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch4.py`.
+- Se ejecuto dry-run y aplicacion sobre 16 PDP de sillones de exterior.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico en publico que el HTML, JSON-LD y bloque visible `Descripción y detalles` ya sirven los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch4.py` — lote 4 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch4_20260628-114046.json` — backup dry-run.
+- `content/descriptions/backup_pdp_rich_batch4_20260628-114053.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 16 sillones de exterior: 33-67 -> 154-165 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 29 -> 45.
+- Productos activos bajo 80 palabras: 94 -> 78.
+- Productos activos con menos de 50 palabras: 57 -> 44.
+- La familia `Sillón` ya no aparece como pendiente bajo 80 palabras.
+
+### Siguiente paso recomendado
+- Batch 5: mesas de centro HPL, tumbonas y reposapies.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 5 mesas centro, tumbonas y reposapies
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch5.py`.
+- Se ejecuto dry-run y aplicacion sobre 25 PDP: mesas de centro, reposapies y tumbonas.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico en publico que el HTML, JSON-LD y bloque visible `Descripción y detalles` ya sirven los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch5.py` — lote 5 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch5_20260628-122122.json` — backup dry-run.
+- `content/descriptions/backup_pdp_rich_batch5_20260628-122131.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 12 mesas de centro: 34-70 -> 129-142 palabras.
+- 6 reposapies: 36-41 -> 136-145 palabras.
+- 7 tumbonas: 72-77 -> 156-165 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 45 -> 70.
+- Productos activos bajo 80 palabras: 78 -> 53.
+- Productos activos con menos de 50 palabras: 44 -> 27.
+- `Mesa centro`, `Tumbona` y `Reposapiés` ya no aparecen como familias pendientes bajo 80 palabras.
+
+### Siguiente paso recomendado
+- Batch 6: terminar sofas/conjuntos restantes o cerrar familias menores: sillas, mesas comedor, parasoles, fundas y accesorios.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 6 sofas y conjuntos restantes
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch6.py`.
+- Se ejecuto dry-run, se corrigio el parser de estilos para sets y se aplico sobre 31 PDP.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico en publico que el HTML, JSON-LD y bloque visible `Descripción y detalles` ya sirven los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch6.py` — lote 6 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch6_20260628-123505.json` — backup dry-run inicial.
+- `content/descriptions/backup_pdp_rich_batch6_20260628-123524.json` — backup dry-run corregido.
+- `content/descriptions/backup_pdp_rich_batch6_20260628-123534.json` — backup previo a aplicar.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 16 sofas: 39-71 -> 157-174 palabras.
+- 15 conjuntos sofa: 33-77 -> 174-186 palabras.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 70 -> 101.
+- Productos activos bajo 80 palabras: 53 -> 22.
+- Productos activos con menos de 50 palabras: 27 -> 7.
+- `Sofá` y `Conjunto sofá` ya no aparecen como familias pendientes bajo 80 palabras.
+
+### Siguiente paso recomendado
+- Batch 7 opcional: cerrar familias menores restantes o pausar y medir impacto en GSC tras recrawl.
+
+---
+
+## 2026-06-28 · GEO PDP 2.0 - batch 7 cierre de familias menores
+
+**Paso del flujo:** PDP 2.0
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se creo `scripts/apply_pdp_rich_descriptions_batch7.py`.
+- Se ejecuto dry-run, se aplico sobre 22 PDP de familias menores y se reaplico una correccion de lenguaje para productos sin material explicito.
+- Se actualizaron descripcion HTML y meta description SEO.
+- Se verifico en publico que el HTML, JSON-LD y bloque visible `Descripción y detalles` sirven los nuevos textos.
+
+### Entregables
+- `scripts/apply_pdp_rich_descriptions_batch7.py` — lote 7 reutilizable.
+- `content/descriptions/backup_pdp_rich_batch7_20260628-124709.json` — backup dry-run inicial.
+- `content/descriptions/backup_pdp_rich_batch7_20260628-124726.json` — backup dry-run corregido.
+- `content/descriptions/backup_pdp_rich_batch7_20260628-124735.json` — backup previo a aplicar.
+- `content/descriptions/backup_pdp_rich_batch7_20260628-124931.json` — backup dry-run de correccion de lenguaje.
+- `content/descriptions/backup_pdp_rich_batch7_20260628-124940.json` — backup previo a reaplicar correccion.
+- `auditoria_fichas_report.csv` — auditoria recalculada tras aplicar.
+
+### Productos aplicados
+- 22 productos: sillas, mesas comedor, mesas auxiliares, fundas, parasoles, accesorios, balancin, rinconera, mini tumbona y mobiliario exterior.
+
+### Hallazgos clave
+- Productos activos con descripcion rica 120+ palabras: 101 -> 123.
+- Productos activos bajo 80 palabras: 22 -> 0.
+- Productos activos con menos de 50 palabras: 7 -> 0.
+- Productos activos entre 50 y 79 palabras: 15 -> 0.
+- Quedan 48 fichas aceptables de 80-119 palabras para optimizacion selectiva, no como deuda critica.
+
+### Siguiente paso recomendado
+- Pausar reescritura masiva, dejar recrawlear y volver a GSC para priorizar las 48 fichas aceptables por señales reales.
+
+---
+
+## 2026-06-29 · GEO delta y enlaces internos por señales GSC
+
+**Paso del flujo:** Reauditoria GEO + enlazado interno
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Google Search Console + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se ejecuto baseline GSC de 28 dias y oportunidades de 90 dias.
+- Se identificaron clusters con señales reales: tumbonas Balliu/resina, pergola 250x300, bases/parasol, sofas compactos y banco con mesa.
+- Se creo y aplico `scripts/apply_geo_cluster_links_20260629.py`.
+- Se insertaron bloques pequeños de enlaces contextuales en 5 guias editoriales.
+
+### Entregables
+- `SEO-BASELINE.md` — baseline GSC actualizado a 2026-06-29.
+- `docs/santavila/GEO-DELTA-2026-06-29.md` — informe del delta y decision de sprint.
+- `scripts/apply_geo_cluster_links_20260629.py` — script reutilizable/idempotente para los bloques de enlaces.
+- `content/descriptions/backup_geo_cluster_links_20260629-145138.json` — backup dry-run.
+- `content/descriptions/backup_geo_cluster_links_20260629-145143.json` — backup previo a aplicar.
+
+### Hallazgos clave
+- 28 dias GSC: 10 clics, 675 impresiones, CTR 1,48%, posicion media 17,7.
+- Sitemap HTTPS limpio: 0 errores, 0 warnings.
+- El cluster mas claro sigue siendo tumbonas Balliu/resina.
+- Tambien hay señales accionables en pergola 250x300, bases de parasol, sofas 120/130 cm y banco con mesa.
+
+### Siguiente paso recomendado
+- Esperar 7-10 dias para recrawl.
+- Si tumbonas mantiene crecimiento, crear/reforzar un hub especifico de tumbonas Balliu/resina.
+
+---
+
+## 2026-06-29 · Imagen destacada en guias GEO
+
+**Paso del flujo:** GEO editorial
+**Estado:** ✅ aplicado
+**Quién/qué:** Codex + Shopify Admin API + verificacion publica con `curl`
+
+### Qué se ejecutó
+- Se revisaron 5 guias editoriales recientes.
+- Se subieron imagenes destacadas reales a las 4 guias que no tenian imagen.
+- Se añadió alt descriptivo a la guia de terraza pequena, que ya tenia imagen.
+- Se verifico que Shopify expone `og:image`, `og:image:secure_url`, `summary_large_image` e imagen visible con alt.
+
+### Entregables
+- `scripts/apply_blog_featured_images_20260629.py` — script de subida de imagenes destacadas para articulos.
+- `content/descriptions/backup_blog_featured_images_20260629-150354.json` — backup dry-run.
+- `content/descriptions/backup_blog_featured_images_20260629-150359.json` — backup previo a aplicar.
+
+### Guias actualizadas
+- Guia de tumbonas por material.
+- Guia de muebles resistentes a lluvia y sol.
+- Guia de mesa exterior por medidas y comensales.
+- Guia de mantenimiento de muebles de exterior.
+- Guia de terraza pequena.
+
+### Ajuste posterior
+- La imagen inicial de mantenimiento era poco contextual y de baja definicion.
+- La primera version generada (`content/images/blog/mantenimiento-muebles-exterior-hero-20260629.png`) se descarto como imagen final porque no mostraba claramente el uso de la funda.
+- Se reaprovecho la referencia de una tumbona junto a piscina y se genero una version final con la tumbona protegida con funda: `content/images/blog/mantenimiento-tumbona-piscina-cubierta-20260629.png`.
+- Se reaplico solo esa guia con `--only guia-de-mantenimiento-de-muebles-de-exterior-como-prepararlos-para-cada-temporada`.
+- Verificado en publico: `og:image`, `Article.image`, imagen visible y alt descriptivo.
+
+### Siguiente paso recomendado
+- Mantener estas guias sin mas cambios unos dias para que Google recrawlee contenido, enlaces e imagenes.
+
+---
+
 ## Plantilla para próximas entradas
 
 ```markdown

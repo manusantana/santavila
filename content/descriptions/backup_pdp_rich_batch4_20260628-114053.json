@@ -1,0 +1,628 @@
+{
+  "sillon-exterior-estilo-urbano-6670-cm": {
+    "id": "gid://shopify/Product/15507128615236",
+    "title": "Sillón exterior · estilo urbano | 66×70 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "449.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón MANHATAN-1 destaca por su diseño urbano y contemporáneo. Ideal para terrazas modernas, combina comodidad y resistencia en una pieza elegante.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>66 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>66 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>70 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo urbano | 66×70 cm",
+      "description": "El sillón destaca por su diseño urbano y contemporáneo. Ideal para terrazas modernas, combina comodidad y resistencia en una pieza elegante."
+    }
+  },
+  "sillon-exterior-estilo-elegante-80104-cm": {
+    "id": "gid://shopify/Product/15507127173444",
+    "title": "Sillón exterior · estilo elegante | 80×104 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1019.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1019.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón BOLONIA XL-1 destaca por su formato generoso y diseño moderno. Pensado para exterior, combina resistencia y comodidad en una pieza elegante y versátil.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>80 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>84 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>104 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo elegante | 80×104 cm",
+      "description": "El sillón destaca por su formato generoso y diseño moderno. Pensado para exterior, combina resistencia y comodidad en una pieza elegante y versátil."
+    }
+  },
+  "sillon-exterior-estilo-moderno-7085-cm": {
+    "id": "gid://shopify/Product/15507127894340",
+    "title": "Sillón exterior · estilo moderno | 70×85 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "585.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "585.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón DOUNVIL-1 destaca por su diseño actual y confortable, ideal para espacios exteriores modernos. Su estructura resistente y asiento acogedor proporcionan estabilidad y comodidad.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>80 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>85 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo moderno | 70×85 cm",
+      "description": "El sillón destaca por su diseño actual y confortable, ideal para espacios exteriores modernos. Su estructura resistente y asiento acogedor proporcionan estabilidad y comodidad."
+    }
+  },
+  "sillon-exterior-estilo-versatil-6470-cm": {
+    "id": "gid://shopify/Product/15507128353092",
+    "title": "Sillón exterior · estilo versátil | 64×70 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "589.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "589.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón ACAPULCO-1 combina diseño contemporáneo y comodidad en una pieza versátil para exteriores. Ideal como asiento independiente o complemento dentro de un conjunto moderno.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>64 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>66 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>70 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo versátil | 64×70 cm",
+      "description": "El sillón combina diseño contemporáneo y comodidad en una pieza versátil para exteriores. Ideal como asiento independiente o complemento dentro de un conjunto moderno."
+    }
+  },
+  "sillon-exterior-estilo-versatil-76100-cm": {
+    "id": "gid://shopify/Product/15507126944068",
+    "title": "Sillón exterior · estilo versátil | 76×100 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "599.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "599.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón ALBANIA-1 destaca por su diseño actual y líneas definidas. Fabricado para uso exterior, combina resistencia estructural y comodidad en una pieza versátil ideal para terrazas modernas.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>76 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>100 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo versátil | 76×100 cm",
+      "description": "El sillón destaca por su diseño actual y líneas definidas. Fabricado para uso exterior, combina resistencia estructural y comodidad en una pieza versátil ideal para terrazas modernas."
+    }
+  },
+  "sillon-exterior-estilo-versatil-7783-cm": {
+    "id": "gid://shopify/Product/15507125731652",
+    "title": "Sillón exterior · estilo versátil | 77×83 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "959.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "959.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón YINA-1 destaca por su diseño ligero y moderno. Su estructura resistente para exterior y su asiento cómodo lo convierten en una pieza versátil ideal para terrazas actuales.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>77 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>72 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>83 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo versátil | 77×83 cm",
+      "description": "El sillón destaca por su diseño ligero y moderno. Su estructura resistente para exterior y su asiento cómodo lo convierten en una pieza versátil ideal para terrazas actuales."
+    }
+  },
+  "sillon-exterior-estilo-envolvente-7582-cm": {
+    "id": "gid://shopify/Product/15507126190404",
+    "title": "Sillón exterior · estilo envolvente | 75×82 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "795.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "795.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón BELLAGIO-1 destaca por su diseño elegante y proporciones envolventes. Pensado para exterior, combina estructura resistente y confort en una pieza ideal para crear rincones relajados con estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>75 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>75 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>82 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo envolvente | 75×82 cm",
+      "description": "El sillón destaca por su diseño elegante y proporciones envolventes. Pensado para exterior, combina estructura resistente y confort en una pieza ideal para crear rincones relajados con estilo."
+    }
+  },
+  "sillon-exterior-estilo-estilizado-7069-cm": {
+    "id": "gid://shopify/Product/15507126485316",
+    "title": "Sillón exterior · estilo estilizado | 70×69 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "975.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "975.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón CLOE-1 combina ligereza visual y comodidad en una pieza moderna para exterior. Su estructura resistente y asiento confortable lo convierten en un complemento perfecto para terrazas actuales.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>64 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>69 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo estilizado | 70×69 cm",
+      "description": "El sillón combina ligereza visual y comodidad en una pieza moderna para exterior. Su estructura resistente y asiento confortable lo convierten en un complemento perfecto para terrazas actuales."
+    }
+  },
+  "sillon-exterior-estilo-contemporaneo-68115-cm": {
+    "id": "gid://shopify/Product/15507128189252",
+    "title": "Sillón exterior · estilo contemporáneo | 68×115 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "559.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "559.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón HASTON-1 destaca por su diseño actual y confortable, ideal para crear rincones relajados en terrazas y jardines. Su estructura resistente y cojines acogedores garantizan estabilidad y comodidad en exterior.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>68 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>62 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>115 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo contemporáneo | 68×115 cm",
+      "description": "El sillón destaca por su diseño actual y confortable, ideal para crear rincones relajados en terrazas y jardines. Su estructura resistente y cojines acogedores garantizan estabilidad y comodidad en exterior."
+    }
+  },
+  "sillon-exterior-estilo-versatil-58100-cm": {
+    "id": "gid://shopify/Product/15507129303364",
+    "title": "Sillón exterior · estilo versátil | 58×100 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "114.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "114.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón AVALON-3 combina comodidad y diseño contemporáneo en una pieza versátil para exterior. Su estructura resistente y asiento confortable lo convierten en el complemento perfecto para zonas de comedor o relax.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>58 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>57 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>100 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo versátil | 58×100 cm",
+      "description": "El sillón combina comodidad y diseño contemporáneo en una pieza versátil para exterior. Su estructura resistente y asiento confortable lo convierten en el complemento perfecto para zonas de comedor o relax."
+    }
+  },
+  "sillon-exterior-estilo-versatil-7685-cm": {
+    "id": "gid://shopify/Product/15507127730500",
+    "title": "Sillón exterior · estilo versátil | 76×85 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "645.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "645.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón LEISA-1 combina líneas modernas y confort en una pieza ligera y versátil. Su estructura resistente y asiento cómodo lo convierten en una opción ideal para crear rincones acogedores en exteriores actuales.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>76 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>80 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>85 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo versátil | 76×85 cm",
+      "description": "El sillón combina líneas modernas y confort en una pieza ligera y versátil. Su estructura resistente y asiento cómodo lo convierten en una opción ideal para crear rincones acogedores en exteriores actuales."
+    }
+  },
+  "sillon-exterior-estilo-elegante-6590-cm": {
+    "id": "gid://shopify/Product/15507125993796",
+    "title": "Sillón exterior · estilo elegante | 65×90 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1019.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1019.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón CUPRA-1 combina líneas modernas y estructura resistente para crear un asiento elegante y duradero para exterior. Sus proporciones equilibradas y cojines confortables ofrecen una experiencia de descanso cómoda, ideal para terrazas y jardines contemporáneos.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>65 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>75 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo elegante | 65×90 cm",
+      "description": "El sillón combina líneas modernas y estructura resistente para crear un asiento elegante y duradero para exterior. Sus proporciones equilibradas y cojines confortables ofrecen una experiencia de descanso cómoda, ideal para terrazas y jardines contemporáneos."
+    }
+  },
+  "sillon-exterior-estilo-elegante-6578-cm": {
+    "id": "gid://shopify/Product/15507126649156",
+    "title": "Sillón exterior · estilo elegante | 65×78 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "515.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "515.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón ODIN-1 combina diseño contemporáneo y estructura resistente para crear un asiento cómodo y elegante en exteriores. Sus líneas modernas y cojines confortables ofrecen una experiencia de descanso relajada, ideal para terrazas y jardines actuales.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>65 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>66 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>78 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo elegante | 65×78 cm",
+      "description": "El sillón combina diseño contemporáneo y estructura resistente para crear un asiento cómodo y elegante en exteriores. Sus líneas modernas y cojines confortables ofrecen una experiencia de descanso relajada, ideal para terrazas y jardines actuales."
+    }
+  },
+  "sillon-exterior-bicolor-estilo-bicolor-7376-cm": {
+    "id": "gid://shopify/Product/15507127402820",
+    "title": "Sillón exterior bicolor · estilo bicolor | 73×76 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "bicolor",
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "945.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "945.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón DIVA-1 Bicolor destaca por su diseño contemporáneo con acabado en doble tonalidad que aporta personalidad y sofisticación al espacio exterior. Su estructura resistente y cojines confortables ofrecen estabilidad y una experiencia de descanso cómoda, ideal para terrazas modernas.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>73 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>76 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior bicolor · estilo bicolor | 73×76 cm",
+      "description": "El sillón Bicolor destaca por su diseño contemporáneo con acabado en doble tonalidad que aporta personalidad y sofisticación al espacio exterior. Su estructura resistente y cojines confortables ofrecen estabilidad y una experiencia de descanso cómoda, ideal para terrazas modernas."
+    }
+  },
+  "sillon-exterior-estilo-elegante-7275-cm": {
+    "id": "gid://shopify/Product/15507125502276",
+    "title": "Sillón exterior · estilo elegante | 72×75 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "795.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "795.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón DAMASCO-1 es una pieza elegante y equilibrada para terrazas y jardines. Su diseño contemporáneo y sus cojines amplios ofrecen una experiencia de descanso cómoda y relajada. Fabricado con estructura resistente para exterior, garantiza estabilidad y durabilidad frente al uso diario. Ideal como pieza individual o combinado con el resto de la colección DAMASCO.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>72 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>79 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>75 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior · estilo elegante | 72×75 cm",
+      "description": "El sillón es una pieza elegante y equilibrada para terrazas y jardines. Su diseño contemporáneo y sus cojines amplios ofrecen una experiencia de descanso cómoda y relajada. Fabricado con estructura resistente para exterior, garantiza estabilidad y durabilidad frente al uso diario. Ideal como pieza individual o combinad"
+    }
+  },
+  "sillon-exterior-aluminio-estilo-envolvente-9890-cm": {
+    "id": "gid://shopify/Product/15507125240132",
+    "title": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
+    "status": "ACTIVE",
+    "productType": "Sillón",
+    "vendor": "Hevea",
+    "tags": [
+      "aluminio",
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sillón",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1189.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1189.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sillón BRANDON-1 está fabricado íntegramente en aluminio con estructura tubular reforzada y acabado termo-lacado de alta resistencia. Su diseño combina líneas envolventes con cojines de gran volumen, ofreciendo ergonomía y estabilidad en entornos exteriores exigentes. Los cojines incorporan espuma de alta densidad y tapizado técnico para exterior, resistente a la intemperie y de fácil mantenimiento.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>98 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
+      "description": "El sillón está fabricado íntegramente en aluminio con estructura tubular reforzada y acabado termo-lacado de alta resistencia. Su diseño combina líneas envolventes con cojines de gran volumen, ofreciendo ergonomía y estabilidad en entornos exteriores exigentes. Los cojines incorporan espuma de alta densidad y tapizado "
+    }
+  }
+}

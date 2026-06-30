@@ -19,7 +19,8 @@ from config import SHOPIFY_ACCESS_TOKEN
 SHOP = "mueblesexterior.myshopify.com"
 API = f"https://{SHOP}/admin/api/2026-01/graphql.json"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SHORT_WORDS = 30  # umbral "descripción corta"
+MIN_WORDS = 80  # umbral mínimo razonable para una PDP citable
+RICH_WORDS = 120  # umbral de ficha con contexto suficiente para GEO
 
 QUERY = """
 query($cursor: String) {
@@ -93,11 +94,15 @@ def main():
           f"DRAFT/otros: {len(rows)-len(active)}")
     print(f"\n--- Sobre productos ACTIVE ({len(active)}) ---")
     empty = [r for r in active if r["desc_words"] == 0]
-    short = [r for r in active if 0 < r["desc_words"] < SHORT_WORDS]
-    ok    = [r for r in active if r["desc_words"] >= SHORT_WORDS]
+    poor = [r for r in active if 0 < r["desc_words"] < 50]
+    thin = [r for r in active if 50 <= r["desc_words"] < MIN_WORDS]
+    acceptable = [r for r in active if MIN_WORDS <= r["desc_words"] < RICH_WORDS]
+    rich = [r for r in active if r["desc_words"] >= RICH_WORDS]
     print(f"Descripción VACÍA:        {len(empty):>4}  ({pct(len(empty),len(active))})")
-    print(f"Descripción CORTA (<{SHORT_WORDS}p): {len(short):>4}  ({pct(len(short),len(active))})")
-    print(f"Descripción OK (≥{SHORT_WORDS}p):    {len(ok):>4}  ({pct(len(ok),len(active))})")
+    print(f"Descripción POBRE (<50p): {len(poor):>4}  ({pct(len(poor),len(active))})")
+    print(f"Descripción FINA (50-{MIN_WORDS-1}p): {len(thin):>3}  ({pct(len(thin),len(active))})")
+    print(f"Descripción ACEPTABLE ({MIN_WORDS}-{RICH_WORDS-1}p): {len(acceptable):>3}  ({pct(len(acceptable),len(active))})")
+    print(f"Descripción RICA (≥{RICH_WORDS}p):    {len(rich):>4}  ({pct(len(rich),len(active))})")
     no_seo = [r for r in active if r["seo_desc"] == "NO"]
     no_vendor = [r for r in active if not r["vendor"]]
     no_img = [r for r in active if r["image"] == "NO"]
@@ -108,7 +113,7 @@ def main():
     print(f"Con variantes sin GTIN:    {len(gtin):>4}  ({pct(len(gtin),len(active))})")
 
     # Reparto por tipo de los que necesitan descripción
-    need = empty + short
+    need = empty + poor + thin
     by_type = {}
     for r in need:
         by_type[r["type"] or "(sin tipo)"] = by_type.get(r["type"] or "(sin tipo)", 0) + 1

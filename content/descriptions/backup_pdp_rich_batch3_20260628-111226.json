@@ -1,0 +1,478 @@
+{
+  "sofa-terraza-2-plazas-estilo-estilizado-14383-cm": {
+    "id": "gid://shopify/Product/15507125764420",
+    "title": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
+    "status": "ACTIVE",
+    "productType": "Sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1399.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1399.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá YINA de 2 plazas combina líneas estilizadas y confort en un formato compacto. Perfecto para espacios exteriores de tamaño medio que buscan modernidad y funcionalidad.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>143 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>72 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>83 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
+      "description": "El sofá de 2 plazas combina líneas estilizadas y confort en un formato compacto. Perfecto para espacios exteriores de tamaño medio que buscan modernidad y funcionalidad."
+    }
+  },
+  "sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm": {
+    "id": "gid://shopify/Product/15507126255940",
+    "title": "Sofá terraza 2 plazas · estilo contemporáneo | 150×82 cm",
+    "status": "ACTIVE",
+    "productType": "Sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1055.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1055.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá BELLAGIO de 2 plazas ofrece una combinación perfecta entre sofisticación y comodidad. Su diseño contemporáneo y cojines generosos aportan elegancia y confort en terrazas modernas.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>150 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>75 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>82 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo contemporáneo | 150×82 cm",
+      "description": "El sofá de 2 plazas ofrece una combinación perfecta entre sofisticación y comodidad. Su diseño contemporáneo y cojines generosos aportan elegancia y confort en terrazas modernas."
+    }
+  },
+  "sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm": {
+    "id": "gid://shopify/Product/15507126976836",
+    "title": "Sofá terraza 2 plazas · estilo contemporáneo | 145×100 cm",
+    "status": "ACTIVE",
+    "productType": "Sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "950.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "950.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá ALBANIA de 2 plazas ofrece confort y estilo en un formato compacto. Su estructura sólida y cojines confortables garantizan una experiencia agradable al aire libre.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>145 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>100 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo contemporáneo | 145×100 cm",
+      "description": "El sofá de 2 plazas ofrece confort y estilo en un formato compacto. Su estructura sólida y cojines confortables garantizan una experiencia agradable al aire libre."
+    }
+  },
+  "sofa-terraza-3-plazas-estilo-sofisticado-212100-cm": {
+    "id": "gid://shopify/Product/15507127009604",
+    "title": "Sofá terraza 3 plazas · estilo sofisticado | 212×100 cm",
+    "status": "ACTIVE",
+    "productType": "Sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1205.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1205.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá ALBANIA de 3 plazas aporta amplitud y elegancia al espacio exterior. Con asiento profundo y diseño equilibrado, es ideal para crear ambientes acogedores y sofisticados.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>212 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>70 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>100 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 3 plazas · estilo sofisticado | 212×100 cm",
+      "description": "El sofá de 3 plazas aporta amplitud y elegancia al espacio exterior. Con asiento profundo y diseño equilibrado, es ideal para crear ambientes acogedores y sofisticados."
+    }
+  },
+  "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm": {
+    "id": "gid://shopify/Product/15507127206212",
+    "title": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
+    "status": "ACTIVE",
+    "productType": "Sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "sofá",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1580.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1580.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El sofá BOLONIA XL de 2 plazas ofrece una sentada amplia y confortable con un diseño contemporáneo. Ideal para terrazas que buscan equilibrio entre estilo y funcionalidad.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>164 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>84 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>104 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
+      "description": "El sofá de 2 plazas ofrece una sentada amplia y confortable con un diseño contemporáneo. Ideal para terrazas que buscan equilibrio entre estilo y funcionalidad."
+    }
+  },
+  "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2": {
+    "id": "gid://shopify/Product/15507127370052",
+    "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 2",
+    "status": "ACTIVE",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "4709.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "4709.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set BOLONIA XL 8 ofrece una composición completa con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar amplitud, resistencia y sofisticación en jardines y terrazas.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mes",
+      "description": "El Set ofrece una composición completa con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar amplitud, resistencia y sofisticación en jardines y terrazas."
+    }
+  },
+  "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-3": {
+    "id": "gid://shopify/Product/15507127861572",
+    "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 3",
+    "status": "ACTIVE",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2899.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2899.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set LEISA 8 ofrece un conjunto amplio con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar confort, resistencia y estilo en jardines y terrazas actuales.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mes",
+      "description": "El Set ofrece un conjunto amplio con sofá de 3 plazas, sillones y mesa de centro. Diseñado para aportar confort, resistencia y estilo en jardines y terrazas actuales."
+    }
+  },
+  "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3": {
+    "id": "gid://shopify/Product/15507126387012",
+    "title": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 3",
+    "status": "ACTIVE",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "3449.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "3449.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set BELLAGIO 8 ofrece un salón exterior amplio con sofá de 3 plazas, sillones y mesa de centro. Su diseño sofisticado y confortable convierte cualquier terraza en un espacio acogedor.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa ",
+      "description": "El Set ofrece un salón exterior amplio con sofá de 3 plazas, sillones y mesa de centro. Su diseño sofisticado y confortable convierte cualquier terraza en un espacio acogedor."
+    }
+  },
+  "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5": {
+    "id": "gid://shopify/Product/15507127337284",
+    "title": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 5",
+    "status": "ACTIVE",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "2 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "4175.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "4175.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set BOLONIA XL 7 incluye sofá de 2 plazas, sillones y mesa de centro, creando un espacio exterior amplio y elegante. Perfecto para terrazas modernas que buscan confort y diseño.</p>",
+    "seo": {
+      "title": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 5",
+      "description": "El Set incluye sofá de 2 plazas, sillones y mesa de centro, creando un espacio exterior amplio y elegante. Perfecto para terrazas modernas que buscan confort y diseño."
+    }
+  },
+  "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa-2": {
+    "id": "gid://shopify/Product/15507128090948",
+    "title": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa 2",
+    "status": "ACTIVE",
+    "productType": "Conjunto sofá",
+    "vendor": "Hevea",
+    "tags": [
+      "3 plazas",
+      "conjunto sofá",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "2779.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "2779.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set DOUNVIL 8 ofrece una solución amplia y elegante con sofá de 3 plazas, sillones y mesa de centro. Perfecto para quienes buscan un salón exterior cómodo, funcional y con presencia.</p>",
+    "seo": {
+      "title": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa 2",
+      "description": "El Set ofrece una solución amplia y elegante con sofá de 3 plazas, sillones y mesa de centro. Perfecto para quienes buscan un salón exterior cómodo, funcional y con presencia."
+    }
+  },
+  "banco-de-exterior-150-cm": {
+    "id": "gid://shopify/Product/15507129696580",
+    "title": "Banco de exterior 150 cm",
+    "status": "ACTIVE",
+    "productType": "Banco",
+    "vendor": "Hevea",
+    "tags": [
+      "banco",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "423.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "423.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El banco GULLIVER destaca por su diseño sencillo y resistente. Perfecto para jardines y espacios públicos o privados, aporta funcionalidad y durabilidad.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>150 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>49 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Banco de exterior 150 cm",
+      "description": "El banco destaca por su diseño sencillo y resistente. Perfecto para jardines y espacios públicos o privados, aporta funcionalidad y durabilidad."
+    }
+  },
+  "banco-de-exterior-108-cm": {
+    "id": "gid://shopify/Product/15507129729348",
+    "title": "Banco de exterior 108 cm",
+    "status": "ACTIVE",
+    "productType": "Banco",
+    "vendor": "Hevea",
+    "tags": [
+      "banco",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "381.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "381.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El banco SEVILLA combina líneas clásicas y resistencia estructural. Ideal para crear zonas de descanso en exteriores, ofrece comodidad y estabilidad en cualquier entorno.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>108 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>42 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>88 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Banco de exterior 108 cm",
+      "description": "El banco combina líneas clásicas y resistencia estructural. Ideal para crear zonas de descanso en exteriores, ofrece comodidad y estabilidad en cualquier entorno."
+    }
+  }
+}

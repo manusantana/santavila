@@ -1,0 +1,534 @@
+{
+  "mesa-de-centro-exterior-120-cm-altura-40-cm": {
+    "id": "gid://shopify/Product/15507125633348",
+    "title": "Mesa de centro exterior 120 cm · altura 40 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa centro",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "mesa centro",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "322.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "322.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa de centro ofrece una superficie amplia y práctica para conjuntos de mayor tamaño. Su diseño limpio y estructura resistente la convierten en el complemento ideal para sofás de 3 plazas, aportando funcionalidad y equilibrio visual.</p>\n<ul>\n  <li>Resistente a <strong>rayos UV, lluvia y humedad</strong> — preparado para exterior durante todo el año</li>\n  <li>Mantenimiento mínimo: no requiere tratamientos ni almacenamiento en invierno</li>\n  <li>Transporte sencillo y <strong>montaje sin herramientas especiales</strong>\n</li>\n</ul>\n<p><strong>Dimensiones:</strong> Ancho: 120 cm  |  Fondo: 60 cm  |  Alto: 40 cm</p>",
+    "seo": {
+      "title": "Mesa de centro exterior 120 cm · altura 40 cm",
+      "description": "La mesa de centro ofrece una superficie amplia y práctica para conjuntos de mayor tamaño. Su diseño limpio y estructura resistente la convierten en el complemento ideal para sofás de 3 plazas, aportando funcionalidad y equilibrio visual."
+    }
+  },
+  "balliu-parasol-para-terraza-f1ed8b8b": {
+    "id": "gid://shopify/Product/15512252842308",
+    "title": "Parasol exterior tela · Ø200/Ø250 cm · Ocean tela",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Diámetro",
+        "values": [
+          "250 cm"
+        ]
+      },
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Caqui",
+          "Gris oscuro"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "381.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "381.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Parasol de exterior en tela de poliéster, disponible en Ø200 y Ø250 cm para cubrir desde una mesa pequeña hasta un comedor de jardín.</strong> Se ofrece en 16 colores, así que es fácil integrarlo en cualquier terraza o zona de hostelería. La opción de Ø250 cm da más sombra para mesas grandes.</p><ul>\n<li>\n<strong>Tela:</strong> poliéster para exterior.</li>\n<li>\n<strong>Diámetros:</strong> Ø200 cm y Ø250 cm.</li>\n<li>\n<strong>Colores:</strong> 16 disponibles.</li>\n<li>\n<strong>Uso recomendado:</strong> jardín y hostelería.</li>\n<li>\n<strong>Mantenimiento:</strong> recoger con viento; limpiar con agua y jabón suave.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Parasol de exterior en poliéster, Ø200 o Ø250 cm, en 16 colores. Más sombra para mesas grandes. Para jardín y hostelería."
+    }
+  },
+  "base-de-parasol-25-kg": {
+    "id": "gid://shopify/Product/15507129499972",
+    "title": "Base de parasol 25 kg",
+    "status": "ACTIVE",
+    "productType": "Accesorios",
+    "vendor": "Hevea",
+    "tags": [
+      "accesorios",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Base de parasol de 25 kg para estabilizar sombrillas y parasoles de exterior en terraza, jardín o patio.</strong></p><ul>\n<li>\n<strong>Peso:</strong> 25 kg.</li>\n<li>\n<strong>Función:</strong> base para parasol o base para sombrilla de exterior.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza, jardín y balcón amplio.</li>\n<li>\n<strong>Ventaja práctica:</strong> aporta sujeción al mástil y ayuda a evitar movimientos con viento ligero.</li>\n</ul><p>La ficha responde a búsquedas como “base parasol”, “base para sombrilla” y “base de parasol 25 kg”, con el peso y el uso principal visibles desde el primer bloque.</p>",
+    "seo": {
+      "title": null,
+      "description": "Base de parasol de 25 kg para sombrilla exterior. Sujeción estable para terraza, jardín o patio. Base para parasol compacta."
+    }
+  },
+  "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8": {
+    "id": "gid://shopify/Product/15512247566660",
+    "title": "Tumbona exterior aluminio apilable · 68 cm · Marina",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "323.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "323.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La tumbona Marina se caracteriza por su diseño lineal y elegante, ideal para quienes buscan un mobiliario funcional con un diseño limpio y atemporal.</p>\n<p>Su estructura de aluminio endurecido y tornillería en acero inoxidable aseguran una gran resistencia y durabilidad, mientras que su ligereza facilita su movimiento. El respaldo es regulable en cinco posiciones y cuenta con tejido sustituible por cordón.</p>\n<p>Tejido Balliu</p>\n<p>Aluminio texturizado</p>\n<p>Dimensiones: Largo: 205 cm | Ancho: 68 cm | Alto: 36 cm | Peso: 9.4 kg</p>",
+    "seo": {
+      "title": "Tumbona de exterior aluminio | 68 cm",
+      "description": "La tumbona Marina se caracteriza por su diseño lineal y elegante, ideal para quienes buscan un mobiliario funcional con un diseño limpio y atemporal. Su estructura de aluminio endurecido y tornillería en acero inoxidable aseguran una gran resistencia y durabilidad, mientras que su ligereza facilita su movimiento. El re"
+    }
+  },
+  "balliu-colchoneta-para-tumbona-0e9a3256": {
+    "id": "gid://shopify/Product/15512253202756",
+    "title": "Colchoneta exterior para tumbona",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Tejido",
+        "values": [
+          "Tela Balliu / Guata",
+          "Tejido acrilico",
+          "Tela Balliu / Dryfeel",
+          "Tela Balliu",
+          "Acrílico",
+          "Dry Feel"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "115.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "190.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Colchoneta de exterior para tumbona que añade confort y un acabado cuidado a tu zona de descanso.</strong> Disponible en distintos tejidos de exterior —incluido acrílico y Dry Feel de secado rápido— pensados para resistir el sol y la humedad. Aporta amortiguación sobre la tumbona sin renunciar a la resistencia a la intemperie.</p><ul>\n<li>\n<strong>Tejidos:</strong> tela de exterior, acrílico y Dry Feel (secado rápido), según versión.</li>\n<li>\n<strong>Uso recomendado:</strong> jardín y piscina, sobre tumbona.</li>\n<li>\n<strong>Mantenimiento:</strong> limpiar con agua y jabón suave; dejar secar al aire.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Colchoneta de exterior para tumbona en tejidos resistentes (acrílico, Dry Feel). Más confort en jardín y piscina. Fácil mantenimiento."
+    }
+  },
+  "balliu-parasol-para-terraza-acrilico-236bd5f0": {
+    "id": "gid://shopify/Product/15512252350788",
+    "title": "Parasol exterior acrílico · Ø200 cm · Pamela acrílico",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Azul",
+          "Blanco",
+          "Crudo",
+          "Mineral"
+        ]
+      },
+      {
+        "name": "Punta de mástil",
+        "values": [
+          "Cónica",
+          "Plana"
+        ]
+      },
+      {
+        "name": "Faldón",
+        "values": [
+          "Sí",
+          "No"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Parasol de exterior de Ø200 cm con tela acrílica, pensado para terrazas y áticos.</strong> La tela acrílica ofrece una resistencia al sol y a la decoloración superior a la del poliéster, manteniendo el color temporada tras temporada. Disponible con punta de mástil cónica o plana y con o sin faldón decorativo.</p><ul>\n<li>\n<strong>Tela:</strong> acrílica de alta resistencia UV.</li>\n<li>\n<strong>Diámetro:</strong> Ø200 cm.</li>\n<li>\n<strong>Opciones:</strong> 6 colores · punta cónica o plana · con o sin faldón.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza y ático.</li>\n<li>\n<strong>Mantenimiento:</strong> cerrar con viento fuerte; limpiar con agua y jabón suave.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Parasol de terraza Ø200 cm en tela acrílica de alta resistencia UV. Punta cónica o plana, con o sin faldón. 6 colores. Para terraza y ático."
+    }
+  },
+  "balliu-parasol-para-terraza-acrilico-c8dd492d": {
+    "id": "gid://shopify/Product/15512252907844",
+    "title": "Parasol exterior acrílico · Ø200/Ø250 cm · Ocean acrílico",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Diámetro",
+        "values": [
+          "200 cm",
+          "250 cm"
+        ]
+      },
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Arena",
+          "Azul",
+          "Blanco",
+          "Crudo",
+          "Mineral"
+        ]
+      },
+      {
+        "name": "Faldón",
+        "values": [
+          "Sí",
+          "No"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "398.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "399.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Parasol de exterior con tela acrílica, disponible en Ø200 y Ø250 cm, para jardín y terraza.</strong> La tela acrílica resiste mejor el sol y conserva el color más tiempo que el poliéster, ideal si el parasol está expuesto muchas horas. La medida de Ø250 cm aporta sombra extra para mesas grandes, con faldón opcional.</p><ul>\n<li>\n<strong>Tela:</strong> acrílica de alta resistencia UV.</li>\n<li>\n<strong>Diámetros:</strong> Ø200 cm y Ø250 cm.</li>\n<li>\n<strong>Opciones:</strong> 6 colores · con o sin faldón.</li>\n<li>\n<strong>Uso recomendado:</strong> jardín y terraza.</li>\n<li>\n<strong>Mantenimiento:</strong> cerrar con viento fuerte; limpiar con agua y jabón suave.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Parasol de exterior en tela acrílica Ø200 o Ø250 cm, alta resistencia UV. 6 colores, faldón opcional. Para jardín y terraza."
+    }
+  },
+  "balliu-parasol-para-terraza-aluminio-300-cm-6c1e1224": {
+    "id": "gid://shopify/Product/15512253038916",
+    "title": "Parasol lateral exterior · aluminio 300×300 cm · Roma",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Antracita",
+          "Blanco",
+          "Mineral"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1899.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1899.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El parasol Roma es una opción de gran tamaño, diseñado para ofrecer máxima sombra y confort. Su estructura y varillas de aluminio proporcionan una excelente durabilidad, mientras que la válvula de liberación de aire garantiza mayor estabilidad.</p>\n<p>Se abre fácilmente con manivela, permitiendo regular su inclinación. Incluye una cruzeta con rotación de 360º para ser ﬁjada con losas de hormigón, disponibles en nuestro catálogo. Ideal para grandes espacios, el Roma es sinónimo de resistencia y versatilidad.</p>\n<p>Tejido acrílico</p>\n<p>Dimensiones: Ancho: 300 cm | Alto: 210 cm | Peso: N/D kg</p>",
+    "seo": {
+      "title": "Parasol para terraza aluminio | 300 cm",
+      "description": "El parasol Roma es una opción de gran tamaño, diseñado para ofrecer máxima sombra y confort. Su estructura y varillas de aluminio proporcionan una excelente durabilidad, mientras que la válvula de liberación de aire garantiza mayor estabilidad. Se abre fácilmente con manivela, permitiendo regular su inclinación. Incluy"
+    }
+  },
+  "balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7": {
+    "id": "gid://shopify/Product/15512253006148",
+    "title": "Parasol cuadrado exterior · aluminio 300×300 cm · Brisa",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Caqui",
+          "Gris oscuro"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1049.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1049.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El parasol Brisa es una opción que combina resistencia, ligereza y funcionalidad en un diseño de gran tamaño. Su estructura y varillas de aluminio garantizan una excelente durabilidad, mientras que su tejido de Textilene lo distingue de otros parasoles. Este material, poco común en su categoría, ofrece una resistencia excepcional.</p>\n<p>Su panel cuadrado proporciona una amplia zona de sombra, ideal para cualquier espacio exterior. Incorpora una válvula de liberación de aire para mayor estabilidad y está diseñada para utilizarse con base, disponible en nuestro catálogo.</p>\n<p>Tejido Balliu</p>\n<p>Dimensiones: Ancho: 300 cm | Alto: 285 cm | Peso: 10 kg</p>",
+    "seo": {
+      "title": "Parasol para terraza aluminio | 300 cm",
+      "description": "El parasol Brisa es una opción que combina resistencia, ligereza y funcionalidad en un diseño de gran tamaño. Su estructura y varillas de aluminio garantizan una excelente durabilidad, mientras que su tejido de Textilene lo distingue de otros parasoles. Este material, poco común en su categoría, ofrece una resistencia"
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-75-cm-aca076ae": {
+    "id": "gid://shopify/Product/15512246878532",
+    "title": "Tumbona exterior resina playa · 75 cm tela · Lola",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris Oscuro",
+          "Madera"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "182.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "187.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La Lola es una tumbona que resalta por su robustez, resistencia y diseño elegante. Su estructura monobloque de resina de polipropileno reforzada con carga mineral garantiza una gran durabilidad y estabilidad, mientras que sus líneas rectas le otorgan un estilo moderno.</p>\n<p>El respaldo es regulable en cinco posiciones, cuenta con ruedas integradas y el tejido es sustituible. Con un diseño que facilita el acceso, Lola ofrece una experiencia de descanso más relajante.</p>\n<p>Resina Classic</p>\n<p>Tejido Balliu</p>\n<p>Dimensiones: Largo: 205 cm | Ancho: 75 cm | Alto: 95 cm | Peso: 14,4 kg</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina | 75 cm",
+      "description": "La Lola es una tumbona que resalta por su robustez, resistencia y diseño elegante. Su estructura monobloque de resina de polipropileno reforzada con carga mineral garantiza una gran durabilidad y estabilidad, mientras que sus líneas rectas le otorgan un estilo moderno. El respaldo es regulable en cinco posiciones, cuen"
+    }
+  },
+  "balliu-tumbona-de-exterior-resina-73-cm-0648657b": {
+    "id": "gid://shopify/Product/15512247140676",
+    "title": "Tumbona exterior resina jardín · 73 cm tablillas · Eva RTG",
+    "status": "ACTIVE",
+    "productType": "Tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "190.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "190.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La Eva RTG es la tumbona perfecta para grandes espacios, combinando resistencia y funcionalidad. Su estructura de resina de polipropileno reforzada con carga mineral ofrece resistencia, mientras que el diseño nerviado aumenta su robustez.</p>\n<p>El respaldo regulable en cuatro posiciones, con un sistema de ajuste por click, ayuda a evitar el atrapamiento de manos y dedos. Además, su sistema de listones modulares permite sustituir las lamas con facilidad. Perfecta también para usar con colchoneta.</p>\n<p>Tablillas</p>\n<p>Resina Classic</p>\n<p>Resina Classic T</p>\n<p>Dimensiones: Largo: 205 cm | Ancho: 73 cm | Alto: 37 cm | Peso: 14 kg</p>",
+    "seo": {
+      "title": "Tumbona de exterior resina | 73 cm",
+      "description": "La Eva RTG es la tumbona perfecta para grandes espacios, combinando resistencia y funcionalidad. Su estructura de resina de polipropileno reforzada con carga mineral ofrece resistencia, mientras que el diseño nerviado aumenta su robustez. El respaldo regulable en cuatro posiciones, con un sistema de ajuste por click, a"
+    }
+  },
+  "balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e": {
+    "id": "gid://shopify/Product/15512252252484",
+    "title": "Mesa de centro exterior · aluminio HPL 110×60 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tablero",
+        "values": [
+          "Gris",
+          "Blanco",
+          "Moonwalk",
+          "Skyline",
+          "Prado"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "349.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa Etna central mantiene la esencia de la familia Etna. Su diseño simple y limpio, con líneas rectas y equilibradas, le aporta un estilo elegante y atemporal.</p>\n<p>Fabricada en aluminio endurecido con tornillería en acero inoxidable, garantiza resistencia y estabilidad. Su tablero de HPL, altamente duradero, facilita combinaciones versatiles para cualquier entorno. La Etna central es soﬁsticada y funcional, ideal para combinar con otros elementos de la familia Etna.</p>\n<p>Tablero</p>\n<p>HPL</p>\n<p>Aluminio texturizado</p>\n<p>Dimensiones: Largo: 110 cm | Ancho: 60 cm | Alto: 44,5 cm | Peso: N/D kg</p>",
+    "seo": {
+      "title": "Mesa de centro exterior aluminio | 60 cm",
+      "description": "La mesa Etna central mantiene la esencia de la familia Etna. Su diseño simple y limpio, con líneas rectas y equilibradas, le aporta un estilo elegante y atemporal. Fabricada en aluminio endurecido con tornillería en acero inoxidable, garantiza resistencia y estabilidad. Su tablero de HPL, altamente duradero, facilita c"
+    }
+  }
+}

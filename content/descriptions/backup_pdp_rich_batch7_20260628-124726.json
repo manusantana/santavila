@@ -1,0 +1,858 @@
+{
+  "set-losas-cemento-para-base-de-parasol": {
+    "id": "gid://shopify/Product/15507129565508",
+    "title": "Set losas cemento para base de parasol",
+    "status": "ACTIVE",
+    "productType": "Accesorios",
+    "vendor": "Hevea",
+    "tags": [
+      "accesorios",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "217.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "217.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El juego de 4 losas de cemento GRANITE proporciona el peso necesario para bases de parasol de gran formato. Diseñadas para máxima estabilidad, aseguran firmeza incluso en condiciones exteriores exigentes.</p>",
+    "seo": {
+      "title": "Set losas cemento para base de parasol",
+      "description": "El juego de 4 losas de cemento proporciona el peso necesario para bases de parasol de gran formato. Diseñadas para máxima estabilidad, aseguran firmeza incluso en condiciones exteriores exigentes."
+    }
+  },
+  "silla-exterior-estilo-contemporaneo": {
+    "id": "gid://shopify/Product/15507129205060",
+    "title": "Silla exterior · estilo contemporáneo",
+    "status": "ACTIVE",
+    "productType": "Silla",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "silla",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "175.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "175.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La silla CÓRCEGA 3 combina líneas limpias y resistencia estructural. Diseñada para exteriores, ofrece una sentada cómoda y estable, perfecta para acompañar mesas de comedor en terrazas actuales.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>55 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Silla exterior · estilo contemporáneo",
+      "description": "La silla combina líneas limpias y resistencia estructural. Diseñada para exteriores, ofrece una sentada cómoda y estable, perfecta para acompañar mesas de comedor en terrazas actuales."
+    }
+  },
+  "mesa-comedor-exterior-hpl-15090-cm": {
+    "id": "gid://shopify/Product/15507129270596",
+    "title": "Mesa comedor exterior HPL 150×90 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa comedor",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa comedor",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "669.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "669.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa MUNDRA 150 HPL ofrece una superficie amplia y resistente para comedores exteriores. Su diseño moderno y materiales preparados para exterior la convierten en una opción práctica y elegante.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>150 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>76 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa comedor exterior HPL 150×90 cm",
+      "description": "La mesa HPL ofrece una superficie amplia y resistente para comedores exteriores. Su diseño moderno y materiales preparados para exterior la convierten en una opción práctica y elegante."
+    }
+  },
+  "balancin-jardin-exterior-148194-cm": {
+    "id": "gid://shopify/Product/15507129631044",
+    "title": "Balancín jardín exterior · 148×194 cm",
+    "status": "ACTIVE",
+    "productType": "Balancín",
+    "vendor": "Hevea",
+    "tags": [
+      "balancín",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "1805.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "1805.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El balancín SIDNEY ofrece una experiencia de relax única en jardines y terrazas. Su diseño cómodo y estructura resistente lo convierten en el lugar perfecto para desconectar al aire libre.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>148 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>194 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>207 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Balancín jardín exterior · 148×194 cm",
+      "description": "El balancín ofrece una experiencia de relax única en jardines y terrazas. Su diseño cómodo y estructura resistente lo convierten en el lugar perfecto para desconectar al aire libre."
+    }
+  },
+  "silla-exterior-estilo-estilizado": {
+    "id": "gid://shopify/Product/15507129172292",
+    "title": "Silla exterior · estilo estilizado",
+    "status": "ACTIVE",
+    "productType": "Silla",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:m",
+      "exterior",
+      "Hevea",
+      "jardín",
+      "silla",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "199.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "199.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La silla JANEIRO 3 destaca por su diseño contemporáneo y estructura resistente para uso exterior. Cómoda y estilizada, es ideal para completar conjuntos de comedor aportando equilibrio entre funcionalidad y estética moderna.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>55 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>50 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>107 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Silla exterior · estilo estilizado",
+      "description": "La silla destaca por su diseño contemporáneo y estructura resistente para uso exterior. Cómoda y estilizada, es ideal para completar conjuntos de comedor aportando equilibrio entre funcionalidad y estética moderna."
+    }
+  },
+  "mesa-comedor-exterior-hpl-10090-cm": {
+    "id": "gid://shopify/Product/15507129237828",
+    "title": "Mesa comedor exterior HPL 100×90 cm",
+    "status": "ACTIVE",
+    "productType": "Mesa comedor",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa comedor",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "585.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "585.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa MUNDRA Ø100 HPL aporta un diseño redondo y acogedor al comedor exterior. Su tablero HPL resistente y su estructura sólida garantizan durabilidad, siendo ideal para espacios más compactos sin renunciar al estilo.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>100 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>76 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa comedor exterior HPL 100×90 cm",
+      "description": "La mesa Ø100 HPL aporta un diseño redondo y acogedor al comedor exterior. Su tablero HPL resistente y su estructura sólida garantizan durabilidad, siendo ideal para espacios más compactos sin renunciar al estilo."
+    }
+  },
+  "mesa-comedor-exterior-hpl-13590-cm": {
+    "id": "gid://shopify/Product/15507129073988",
+    "title": "Mesa comedor exterior HPL",
+    "status": "ACTIVE",
+    "productType": "Mesa comedor",
+    "vendor": "Hevea",
+    "tags": [
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "HPL",
+      "jardín",
+      "mesa comedor",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "135×90 cm",
+          "160×90 cm"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "720.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "720.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa CÓRCEGA 160x90 HPL amplía el espacio de comedor exterior con una superficie generosa y resistente. Su tablero HPL garantiza durabilidad y estabilidad, perfecta para disfrutar de comidas al aire libre con familia y amigos.</p>\n<table>\n<thead><tr>\n<th>Dimensión</th>\n<th>Medida</th>\n</tr></thead>\n<tbody>\n<tr>\n<td><strong>Ancho</strong></td>\n<td>160 cm</td>\n</tr>\n<tr>\n<td><strong>Fondo</strong></td>\n<td>90 cm</td>\n</tr>\n<tr>\n<td><strong>Alto</strong></td>\n<td>90 cm</td>\n</tr>\n</tbody>\n</table>",
+    "seo": {
+      "title": "Mesa comedor exterior HPL 135×90 cm",
+      "description": "La mesa comedor x90 HPL combina diseño moderno y alta resistencia para exteriores. Su tablero HPL ofrece gran durabilidad frente a la intemperie y fácil mantenimiento, mientras que su formato rectangular es ideal para reuniones cómodas en terrazas y jardines."
+    }
+  },
+  "set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro": {
+    "id": "gid://shopify/Product/15507128942916",
+    "title": "Set rinconera exterior · sofisticado | sofá de esquina + mesa de centro",
+    "status": "ACTIVE",
+    "productType": "Conjunto rinconera",
+    "vendor": "Hevea",
+    "tags": [
+      "conjunto rinconera",
+      "envio:l",
+      "exterior",
+      "Hevea",
+      "hostelería",
+      "jardín",
+      "terraza"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "3819.0",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "3819.0",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>El Set ADEL-30 es una rinconera de gran formato diseñada para crear un auténtico salón exterior amplio y sofisticado. Su distribución en esquina optimiza el espacio y favorece la conversación, convirtiéndose en el punto central de terrazas y jardines. Su estructura resistente y cojines confortables garantizan durabilidad y una experiencia de descanso superior al aire libre.</p>",
+    "seo": {
+      "title": "Set rinconera exterior · sofisticado | sofá de esquina + mesa de centr",
+      "description": "El Set es una rinconera de gran formato diseñada para crear un auténtico salón exterior amplio y sofisticado. Su distribución en esquina optimiza el espacio y favorece la conversación, convirtiéndose en el punto central de terrazas y jardines. Su estructura resistente y cojines confortables garantizan durabilidad y una"
+    }
+  },
+  "balliu-pie-de-parasol-c2147052": {
+    "id": "gid://shopify/Product/15512253366596",
+    "title": "Pie de parasol · 40 kg",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Acabado",
+        "values": [
+          "Estándar",
+          "RE"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "126.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "164.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Pie de parasol de 40 kg que aporta la estabilidad necesaria para sujetar con seguridad parasoles de terraza y jardín.</strong> Su peso evita vuelcos con viento moderado y sirve de base firme para mástiles estándar. Disponible en acabado estándar y RE.</p><ul>\n<li>\n<strong>Peso:</strong> 40 kg.</li>\n<li>\n<strong>Acabados:</strong> estándar y RE.</li>\n<li>\n<strong>Función:</strong> base de sujeción para parasol.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza y jardín.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Pie de parasol de 40 kg para sujetar con estabilidad parasoles de terraza y jardín. Evita vuelcos con viento moderado. Acabados estándar y RE."
+    }
+  },
+  "balliu-base-de-parasol-3ee8b72d": {
+    "id": "gid://shopify/Product/15512253464900",
+    "title": "Base de hormigón para parasol",
+    "status": "ACTIVE",
+    "productType": "Parasol",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Peso",
+        "values": [
+          "25 kg",
+          "30 kg"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "51.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "99.9",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Base de hormigón para parasol, disponible en 25 y 30 kg, que asegura la sujeción del mástil con un peso firme y duradero.</strong> El hormigón ofrece una base estable y resistente a la intemperie, ideal para mantener el parasol fijo en terrazas y jardines.</p><ul>\n<li>\n<strong>Material:</strong> hormigón.</li>\n<li>\n<strong>Pesos:</strong> 25 kg y 30 kg.</li>\n<li>\n<strong>Función:</strong> base de sujeción para parasol.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza y jardín.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Base de hormigón para parasol de 25 o 30 kg. Sujeción firme y resistente a la intemperie para terraza y jardín."
+    }
+  },
+  "balliu-funda-protectora-exterior-340b2844": {
+    "id": "gid://shopify/Product/15512253890884",
+    "title": "Funda protectora exterior",
+    "status": "ACTIVE",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "84.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "84.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Funda protectora de exterior para proteger tus muebles de jardín del sol, la lluvia y el polvo.</strong> Tejido resistente al agua que evita la decoloración y mantiene el mueble limpio cuando no está en uso, alargando su vida útil entre temporadas.</p><ul>\n<li>\n<strong>Para:</strong> muebles de exterior (silla/sillón).</li>\n<li>\n<strong>Material:</strong> tejido resistente al agua.</li>\n<li>\n<strong>Función:</strong> protección frente a sol, lluvia y polvo.</li>\n<li>\n<strong>Mantenimiento:</strong> dejar secar antes de guardar.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Funda protectora de exterior resistente al agua para muebles de jardín. Protege del sol, la lluvia y el polvo y alarga su vida útil."
+    }
+  },
+  "balliu-funda-protectora-exterior-acrilico-a1c16324": {
+    "id": "gid://shopify/Product/15512253727044",
+    "title": "Funda protectora exterior acrílico",
+    "status": "ACTIVE",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "36.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "36.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Funda protectora de exterior en tejido acrílico para parasol, con alta resistencia al sol y al agua.</strong> El acrílico protege el parasol cerrado de la lluvia y los rayos UV, evitando que la tela pierda color durante los meses de menos uso.</p><ul>\n<li>\n<strong>Para:</strong> parasoles de exterior.</li>\n<li>\n<strong>Material:</strong> tejido acrílico resistente al agua y a los rayos UV.</li>\n<li>\n<strong>Función:</strong> protección del parasol cerrado.</li>\n<li>\n<strong>Mantenimiento:</strong> limpiar con paño húmedo; guardar seca.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Funda protectora de exterior en acrílico para parasol. Resistente al agua y a los rayos UV, evita la decoloración. Protege el parasol cerrado."
+    }
+  },
+  "balliu-funda-protectora-exterior-6f6d4953": {
+    "id": "gid://shopify/Product/15512253759812",
+    "title": "Funda protectora para sofá exterior",
+    "status": "ACTIVE",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "Sofá individual",
+          "Sofá doble",
+          "sofá triple"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "129.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "227.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Funda protectora de exterior para sofá, disponible para módulos individuales, dobles y triples.</strong> Tejido resistente al agua que protege el sofá del sol, la lluvia y el polvo cuando no se usa, ayudando a conservar tapizados y estructura temporada tras temporada.</p><ul>\n<li>\n<strong>Para:</strong> sofás de exterior.</li>\n<li>\n<strong>Tamaños:</strong> sofá individual, doble y triple.</li>\n<li>\n<strong>Función:</strong> protección frente a sol, lluvia y polvo.</li>\n<li>\n<strong>Mantenimiento:</strong> dejar secar antes de guardar; limpiar con paño húmedo.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Funda protectora de exterior para sofá (individual, doble o triple). Tejido resistente al agua. Protege del sol, la lluvia y el polvo."
+    }
+  },
+  "balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf": {
+    "id": "gid://shopify/Product/15512248418628",
+    "title": "Silla exterior resina · Vera",
+    "status": "ACTIVE",
+    "productType": "Silla",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Configuración",
+        "values": [
+          "Sin brazos",
+          "Con brazos",
+          "Sillón L"
+        ]
+      },
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Tórtola"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "78.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "115.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La silla Vera combina solidez y diseño en una pieza de líneas deﬁnidas y estética moderna. Su estructura de resina de polipropileno reforzada con carga mineral garantiza resistencia, estabilidad y un excelente rendimiento en exteriores.</p>\n<p>Su respaldo, con un distintivo entramado de rejillas rectas, aporta ligereza visual y refuerza su carácter dinámico. Apilable y funcional, la Vera es una opción versátil para cualquier espacio.</p>\n<p>Resina mate</p>\n<p>Dimensiones: Peso: N/D kg</p>",
+    "seo": {
+      "title": "Silla exterior sin brazos resina · estilo funcional",
+      "description": "La silla Vera combina solidez y diseño en una pieza de líneas deﬁnidas y estética moderna. Su estructura de resina de polipropileno reforzada con carga mineral garantiza resistencia, estabilidad y un excelente rendimiento en exteriores. Su respaldo, con un distintivo entramado de rejillas rectas, aporta ligereza visual"
+    }
+  },
+  "balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce": {
+    "id": "gid://shopify/Product/15512247763268",
+    "title": "Mini tumbona exterior aluminio apilable · 57 cm · Marina",
+    "status": "ACTIVE",
+    "productType": "Mini tumbona",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l",
+      "match-verde"
+    ],
+    "options": [
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Aluminio"
+        ]
+      },
+      {
+        "name": "Color tejido",
+        "values": [
+          "Azul",
+          "Amarillo",
+          "Naranja",
+          "Verde claro",
+          "Blanco",
+          "Natural",
+          "Capuchino",
+          "Caqui",
+          "Marrón oscuro",
+          "Arena",
+          "Verde oscuro",
+          "Azul celeste",
+          "Ceniza",
+          "Azul marino",
+          "Gris oscuro",
+          "Azul acero"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "213.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "213.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La tumbona Marina ofrece un diseño sencillo con una estructura más perpendicular. Su estructura de aluminio endurecido y tornillería en acero inoxidable aseguran durabilidad y resistencia.</p>\n<p>Con reposabrazos ﬁjos para mayor confort y tejido sustituible que facilita su mantenimiento, la Marina cuenta con patas anchas que aportan mayor estabilidad y soporte.</p>\n<p>Tejido Balliu</p>\n<p>Aluminio texturizado</p>\n<p>Dimensiones: Largo: 77 cm | Ancho: 57 cm | Alto: 94 cm | Peso: 4,8 kg</p>",
+    "seo": {
+      "title": "Mini tumbona de exterior aluminio | 57 cm",
+      "description": "La tumbona Marina ofrece un diseño sencillo con una estructura más perpendicular. Su estructura de aluminio endurecido y tornillería en acero inoxidable aseguran durabilidad y resistencia. Con reposabrazos ﬁjos para mayor confort y tejido sustituible que facilita su mantenimiento, la Marina cuenta con patas anchas que"
+    }
+  },
+  "balliu-funda-protectora-exterior-686cc405": {
+    "id": "gid://shopify/Product/15512253661508",
+    "title": "Funda protectora para tumbona exterior",
+    "status": "ACTIVE",
+    "productType": "Funda",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:xs",
+      "match-rojo"
+    ],
+    "options": [
+      {
+        "name": "Pack",
+        "values": [
+          "2 Unidades",
+          "12 Unidades",
+          "24 Unidades"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "79.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "329.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Funda protectora de exterior para tumbona que prolonga la vida del mueble frente al sol, la lluvia y el polvo.</strong> Tejido resistente al agua que evita la decoloración y la suciedad cuando la tumbona no está en uso. Disponible en packs para cubrir varias piezas a la vez.</p><ul>\n<li>\n<strong>Para:</strong> tumbonas de exterior.</li>\n<li>\n<strong>Packs:</strong> 2, 12 o 24 unidades.</li>\n<li>\n<strong>Función:</strong> protección frente a sol, lluvia y polvo.</li>\n<li>\n<strong>Mantenimiento:</strong> dejar secar antes de guardar; limpiar con paño húmedo.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Funda protectora de exterior para tumbona, tejido resistente al agua. Protege del sol, la lluvia y el polvo. Packs de 2, 12 o 24 unidades."
+    }
+  },
+  "balliu-mobiliario-exterior-resina-28-cm-6264905d": {
+    "id": "gid://shopify/Product/15512253333828",
+    "title": "Mobiliario exterior resina | 28 cm",
+    "status": "ACTIVE",
+    "productType": "Mobiliario exterior",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m",
+      "match-amarillo"
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "67.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "67.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La caja de seguridad WeGuard está fabricada con polipropileno de alta resistencia, ofreciendo durabilidad y seguridad. Cuenta con una cerradura de dial numérico y una llave de seguridad para mayor protección.</p>\n<p>Su capacidad de 1,6 litros es ideal para guardar objetos pequeños. Compatible exclusivamente con las tumbonas Eva Pro, es una solución perfecta para mantener tus pertenencias a salvo.</p>\n<p>Resina Classic</p>\n<p>Dimensiones: Largo: 20 cm | Ancho: 28 cm | Alto: 8,5 cm | Peso: N/D kg</p>",
+    "seo": {
+      "title": "Mobiliario exterior resina | 28 cm",
+      "description": "La caja de seguridad WeGuard está fabricada con polipropileno de alta resistencia, ofreciendo durabilidad y seguridad. Cuenta con una cerradura de dial numérico y una llave de seguridad para mayor protección. Su capacidad de 1,6 litros es ideal para guardar objetos pequeños. Compatible exclusivamente con las tumbonas E"
+    }
+  },
+  "balliu-silla-exterior-resina-estilo-funcional-0b607ec7": {
+    "id": "gid://shopify/Product/15512248222020",
+    "title": "Silla exterior resina apilable · Selva",
+    "status": "ACTIVE",
+    "productType": "Silla",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Arena"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "33.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "40.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La silla Selva es la opción ideal para quienes buscan funcionalidad y simplicidad en una pieza clásica y atemporal. Su estructura de resina de polipropileno reforzada con carga mineral la convierte en una opción altamente resistente y duradera.</p>\n<p>Con un sistema de drenaje en el respaldo y el asiento, garantiza su rendimiento en todo tipo de condiciones. Apilable y ligera, su diseño ha sido optimizado para ofrecer mayor resistencia en comparación con otros modelos del mercado.</p>\n<p>Resina Classic</p>",
+    "seo": {
+      "title": "Silla exterior resina · estilo funcional",
+      "description": "La silla Selva es la opción ideal para quienes buscan funcionalidad y simplicidad en una pieza clásica y atemporal. Su estructura de resina de polipropileno reforzada con carga mineral la convierte en una opción altamente resistente y duradera. Con un sistema de drenaje en el respaldo y el asiento, garantiza su rendimi"
+    }
+  },
+  "balliu-mesa-exterior-5d0fb586": {
+    "id": "gid://shopify/Product/15512248877380",
+    "title": "Mesa auxiliar exterior resina decorativa · 48×48 cm · Mini Prestige",
+    "status": "ACTIVE",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:l"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Arena",
+          "Bronce",
+          "Gris oscuro",
+          "Madera"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "27.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "29.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p><strong>Mesa auxiliar de exterior en resina decorativa de 48×48 cm, perfecta como mesa de apoyo en terrazas y balcones.</strong> La resina resiste el sol y la humedad sin oxidarse, y su formato compacto y ligero permite colocarla junto a una tumbona o un sofá y moverla con facilidad.</p><ul>\n<li>\n<strong>Material:</strong> resina decorativa para exterior.</li>\n<li>\n<strong>Medidas:</strong> 48 × 48 cm.</li>\n<li>\n<strong>Acabados:</strong> blanco, arena, bronce, gris oscuro y madera.</li>\n<li>\n<strong>Uso recomendado:</strong> terraza y balcón.</li>\n<li>\n<strong>Mantenimiento:</strong> limpieza con agua y jabón suave.</li>\n</ul>",
+    "seo": {
+      "title": null,
+      "description": "Mesa auxiliar de exterior en resina decorativa 48×48 cm para terraza y balcón. Resistente y ligera. Disponible en 5 acabados."
+    }
+  },
+  "balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6": {
+    "id": "gid://shopify/Product/15512251433284",
+    "title": "Mesa exterior aluminio · HPL · Altea",
+    "status": "ACTIVE",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Tamaño",
+        "values": [
+          "70×70 cm",
+          "80×80 cm"
+        ]
+      },
+      {
+        "name": "Chasis",
+        "values": [
+          "Blanco",
+          "Tórtola"
+        ]
+      },
+      {
+        "name": "Color tablero",
+        "values": [
+          "Gris",
+          "Blanco",
+          "Moonwalk",
+          "Skyline",
+          "Prado"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "480.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "480.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa Altea destaca por su diseño sencillo y funcional, ideal para optimizar cualquier espacio. Su estructura de aluminio endurecido con base de polipropileno y tornillería en acero inoxidable garantizan resistencia y durabilidad.</p>\n<p>El tablero abatible, fabricado en HPL, ofrece una superﬁcie robusta y de alta resistencia. Además, sus cuatro patas incorporan reguladores de estabilidad. Versátil y práctica, la mesa Altea se adapta a cualquier espacio.</p>\n<p>Tablero</p>\n<p>HPL</p>\n<p>Aluminio texturizado</p>\n<p>Dimensiones: Alto: 74 cm | Peso: N/D kg</p>",
+    "seo": {
+      "title": "Mesa exterior aluminio | 70×70 cm",
+      "description": "La mesa Altea destaca por su diseño sencillo y funcional, ideal para optimizar cualquier espacio. Su estructura de aluminio endurecido con base de polipropileno y tornillería en acero inoxidable garantizan resistencia y durabilidad. El tablero abatible, fabricado en HPL, ofrece una superﬁcie robusta y de alta resistenc"
+    }
+  },
+  "balliu-mesa-exterior-aluminio-75-cm-dd745448": {
+    "id": "gid://shopify/Product/15512251728196",
+    "title": "Mesa exterior aluminio · 75×75 cm · Ágata",
+    "status": "ACTIVE",
+    "productType": "Mesa",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Aluminio"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "347.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "347.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La mesa Agata destaca por su diseño equilibrado y atemporal. Su estructura de aluminio endurecido y base de acero proporcionan una gran resistencia, mientras que los tapones reguladores permiten ajustar la estabilidad.</p>\n<p>El tablero presenta un elegante patrón de rallas, mientras que las esquinas redondeadas suavizan su estética. La estructura cilíndrica complementa el conjunto, brindando un diseño sólido y elegante.</p>\n<p>Aluminio texturizado</p>\n<p>Dimensiones: Largo: 75 cm | Ancho: 75 cm | Alto: 74 cm | Peso: 20 kg</p>",
+    "seo": {
+      "title": "Mesa exterior aluminio | 75 cm",
+      "description": "La mesa Agata destaca por su diseño equilibrado y atemporal. Su estructura de aluminio endurecido y base de acero proporcionan una gran resistencia, mientras que los tapones reguladores permiten ajustar la estabilidad. El tablero presenta un elegante patrón de rallas, mientras que las esquinas redondeadas suavizan su e"
+    }
+  },
+  "balliu-silla-exterior-resina-estilo-minimalista-484cbea0": {
+    "id": "gid://shopify/Product/15512248025412",
+    "title": "Silla exterior resina · estilo minimalista · Duna",
+    "status": "ACTIVE",
+    "productType": "Silla",
+    "vendor": "Balliu",
+    "tags": [
+      "Balliu",
+      "envio:m"
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          "Blanco",
+          "Negro",
+          "Tórtola"
+        ]
+      }
+    ],
+    "priceRangeV2": {
+      "minVariantPrice": {
+        "amount": "77.95",
+        "currencyCode": "EUR"
+      },
+      "maxVariantPrice": {
+        "amount": "81.95",
+        "currencyCode": "EUR"
+      }
+    },
+    "descriptionHtml": "<p>La silla Duna destaca por su diseño minimalista y funcional, adaptándose con facilidad a una gran variedad de espacios. Su estructura de resina de polipropileno, reforzada con ﬁbra de vidrio, le proporciona una excelente resistencia y durabilidad.</p>\n<p>Su diseño ligero y apilable facilita su almacenamiento y movilidad, ofreciendo una solución práctica sin renunciar a la estética. Con líneas limpias y elementos mínimos, la Duna combina versatilidad y sencillez, integrándose armoniosamente en cualquier ambiente.</p>\n<p>Resina mate</p>\n<p>Dimensiones: Peso: N/D kg</p>",
+    "seo": {
+      "title": "Silla exterior resina · estilo minimalista",
+      "description": "La silla Duna destaca por su diseño minimalista y funcional, adaptándose con facilidad a una gran variedad de espacios. Su estructura de resina de polipropileno, reforzada con ﬁbra de vidrio, le proporciona una excelente resistencia y durabilidad. Su diseño ligero y apilable facilita su almacenamiento y movilidad, ofre"
+    }
+  }
+}
