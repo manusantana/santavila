@@ -13,6 +13,35 @@
 
 ---
 
+## 2026-06-30 · Saneamiento de descripciones ACTIVE (ligadura fi + fragmentos de specs)
+
+**Paso del flujo:** GEO PDP / calidad de contenido
+**Estado:** ✅ aplicado
+**Quién/qué:** Claude (Opus 4.8) + Shopify Admin GraphQL
+
+### Qué se ejecutó
+- Revisión de calidad (no solo conteo) de las 41 fichas ACTIVE en rango 80-119p. Hallazgo: la copy es **buena y específica** (modelos, materiales, medidas, pesos reales); el problema es de **migración**, no de contenido.
+- Detectados dos defectos de migración en 30 fichas ACTIVE:
+  1. **Ligadura tipográfica `ﬁ`/`ﬂ`** (U+FB01/02) en vez de "fi"/"fl" — 16 fichas (heredado de PDF de proveedor). Afecta legibilidad y parsing IA.
+  2. **Fragmentos de specs sueltos** al final (`<p>Tablero</p><p>HPL</p>...<p>Dimensiones: ...</p>`) — 28 fichas, con casos malformados ("Dimensiones: Peso:", "Peso: N/D kg").
+- Se escribió `scripts/normalize_pdp_descriptions_20260630.py`: corrige ligaduras y convierte los fragmentos en un bloque **Ficha técnica** (h2 + ul: Materiales y acabados + Dimensiones), eliminando "Peso: N/D". **No reescribe** la copy de fabricante (se preserva entera).
+- Bug propio detectado y corregido durante el dry-run: `re.findall` con grupo de captura devolvía solo el nombre de etiqueta → se pasó a `finditer`/`group(0)`.
+- Aplicado a **31 fichas ACTIVE** (deltas +0 a +5 palabras, ninguna pierde prosa). Verificado: 0 ligaduras y 0 huérfanos en todo el catálogo ACTIVE. Ricas (≥120p): 130 → 131.
+
+### Entregables
+- `scripts/normalize_pdp_descriptions_20260630.py` — normalizador (dry-run, `--show <handle>`, `--apply`, backup).
+- `content/descriptions/backup_normalize_descriptions_20260630-223339.json` — backup previo a aplicar (31 fichas).
+
+### Hallazgos clave
+- Las 171 ACTIVE ya están limpias en descripción/meta/imagen; las 40 que siguen en 80-119p son copy buena algo corta, **sin defecto** → no requieren reescritura artificial.
+- El bug de ligadura `ﬁ` es típico de copy migrada desde PDF: conviene revisarlo en futuras importaciones de catálogo (reutilizable para otras tiendas).
+
+### Siguiente paso recomendado
+- Descripciones ACTIVE quedan en estado OK. Pendientes abiertos (no de descripción): borrado del residuo dedup (9 mesas DRAFT duplicadas, requiere OK) y carga de GTIN/barcode (100% ACTIVE sin código).
+- Mantener el plan: esperar recrawl y repetir GSC delta ~6-9 jul.
+
+---
+
 ## 2026-06-30 · Auditoría de descripciones de TODO el catálogo + fichas de parasoles DRAFT
 
 **Paso del flujo:** GEO PDP / saneamiento de catálogo
