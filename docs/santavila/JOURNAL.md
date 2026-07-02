@@ -43,6 +43,45 @@ edita el live antes de empezar pruebas nuevas).
 
 ---
 
+## 2026-06-30 · FAQ en PDP (bloque visible + schema FAQPage) con 0 invención
+
+**Paso del flujo:** GEO PDP / contenido citable
+**Estado:** ✅ aplicado (live)
+**Quién/qué:** Claude (Opus 4.8) + Shopify Admin GraphQL + theme (santavila-product.liquid)
+
+### Contexto
+Medición previa: la descripción de producto estaba en ~74/100 GEO; el mayor gap era **FAQ en PDP = 0%**. Se abordó como primera palanca. Regla dura pedida por el usuario: **0 invención**.
+
+### Qué se ejecutó
+- Se compilaron FAQ con respuestas trazadas a **fuentes documentadas reales**: `/pages/envio` (entrega hasta 30 días, montaje), `/pages/garantia` (garantía legal España, no cubre viento/mal uso), `/pages/mantenimiento` (limpieza por material aluminio/resina/HPL, cojines, parasol+viento) y guías del blog (lluvia/sol, tumbona por material, mesa por comensales) + datos reales del producto. Propuesta: `docs/santavila/GEO-FAQ-PDP-PROPUESTA-2026-06-30.md`.
+- Decisiones del usuario: 4 FAQ/ficha · bloque **visible + schema** · las **171 ACTIVE** · condicionales (apilable/reclinable) **solo si la ficha lo documenta**.
+- `scripts/apply_pdp_faq_20260630.py` genera las FAQ (material-adaptadas, condicionales por regex sobre la descripción, comensales con la medida real) y las escribe en el metafield **`santavila.faq` (json)**. Distribución: 155 fichas con 4 FAQ, 16 con 3 (mesas centro sin comensales, sillas sin apilable, fundas/accesorios).
+- Theme: bloque acordeón visible (`sv-pdp__faq`) + JSON-LD `FAQPage` leídos **del mismo metafield** (fuente única, sin cloaking), en `theme/sections/santavila-product.liquid`. Patrón calcado del `article-faq-schema.liquid` existente.
+- Flujo de despliegue: push a theme **dev** (189114876228) → validación visual del usuario → push a theme **live** (189222715716).
+
+### Entregables
+- `docs/santavila/GEO-FAQ-PDP-PROPUESTA-2026-06-30.md` — banco de FAQ con fuente por respuesta.
+- `scripts/apply_pdp_faq_20260630.py` — generador (dry-run/--show/--apply, backup).
+- `content/descriptions/backup_pdp_faq_20260702-193652.json` — backup valor previo (todos null).
+- `theme/sections/santavila-product.liquid` — bloque FAQ + schema + CSS.
+
+### Verificación
+- Público en live: `FAQPage` con 3-4 `Question` y bloque visible confirmado en 15/15 muestreados + tumbona/parasol/mesa/silla/banco/funda/mesa-centro/5 sofás.
+- Nota caché: 2 fichas (sofá `674ab9a1`, cama `2bd3a7a4`) devolvían la plantilla stock `__main` por **caché de página vieja de Shopify** (previa al sync live=git; el edge cache ignora `?v=`). No es un gap real: refrescan solas. Conviene reconfirmarlas.
+
+### Hallazgos clave
+- Todas las 171 ACTIVE usan `templateSuffix=None` → plantilla `product.json` con sección `santavila-product`, así que la FAQ cubre el 100%.
+- El metafield `santavila.faq` es reutilizable para futuras FAQ (editar valor, el theme se actualiza solo).
+
+### Siguiente paso recomendado
+- Reconfirmar en 1-2 días las 2 fichas cacheadas.
+- Validar el schema con el Test de Resultados Enriquecidos de Google sobre una URL pública.
+- Vuelve a medir el nivel GEO de descripción (esperado ~74 → ~86-88 al cubrir la palanca FAQ).
+- Pendientes abiertos no-descripción: GTIN (0%), borrado de residuo dedup DRAFT.
+- ⚠ Nota de proceso: este push a live se hizo con preview en el `dev 189114876228` (ahora deprecado) y con OK explícito del dueño, ANTES de conocer la regla de Staging→Producción formalizada en la entrada de arriba. Próximos cambios de theme: preview en STAGING `189491151172` + `push_theme_assets.py --theme prod --prod-confirm "<motivo>"`.
+
+---
+
 ## 2026-06-30 · Saneamiento de descripciones ACTIVE (ligadura fi + fragmentos de specs)
 
 **Paso del flujo:** GEO PDP / calidad de contenido
