@@ -13,6 +13,33 @@
 
 ---
 
+## 2026-07-04 · Apertura citable en PDP + límite honesto de medidas (GEO 90→92)
+
+**Paso del flujo:** GEO PDP / afinado de descripción
+**Estado:** ✅ aplicado (live)
+**Quién/qué:** Claude (Opus 4.8) + Shopify Admin GraphQL
+
+### Contexto
+Tras las FAQ (GEO descripción 90), quedaban dos palancas menores: **apertura citable 81%** y **medidas explícitas 67%**. Regla dura: 0 invención.
+
+### Qué se ejecutó
+- **Apertura (33 fichas de copy de fabricante que abrían con prosa):** `scripts/apply_pdp_lead_citable_20260630.py` antepone un `<p><strong>…</strong></p>` con respuesta directa compuesta SOLO de hechos ya presentes en la ficha: tipo (productType) + material + modelo (del título) + medida **tal cual en el título** + cláusula de uso por familia (con género correcto). Conserva la prosa intacta. Aplicado a las 33 → **apertura 81%→100%**.
+- **Medidas: límite honesto.** De las 58 fichas sin medida en texto, solo **6** tienen medida fiable (título/opciones). Las **52 restantes son Conjuntos sofá/rinconera sin cm en ningún dato accesible** (ni metafield, ni SKU, ni descripción) → añadirlas sería inventar. Se descartó parsear el handle por poco fiable ("7070" se confunde con Ø70 vs 70×70). No se hizo fix masivo de medidas; las que tenían medida en el título la reciben de paso vía el lead. Medidas queda ~66-67% (techo real dado el dato disponible).
+
+### Entregables
+- `scripts/apply_pdp_lead_citable_20260630.py` — generador de lead (dry-run/--show/--apply, backup, salta las que ya abren en negrita).
+- `content/descriptions/backup_pdp_lead_20260704-082608.json` — backup previo (33 fichas).
+
+### Resultado
+- GEO descripción: **90 → 92** (apertura 81→100). Señales al 100%: profundidad, FAQ, apertura, meta. Pendientes con techo: medidas 66% (52 sets sin dato), estructura 96%, uso 81%.
+- Recorrido total de la sesión de descripción: **74 → 92** (saneamiento + FAQ + apertura).
+
+### Siguiente paso recomendado
+- Descripción de producto: en rendimientos decrecientes; el resto exige datos que no existen (medidas de sets) o gaming de keywords (poco valor). Se da por cerrada en 92/A.
+- Pendientes no-descripción abiertos: **GTIN 0%** (Google Merchant/agéntico), borrado de residuo dedup DRAFT, y remedir GSC ~6-9 jul.
+
+---
+
 ## 2026-06-30 · WORKFLOW — Staging → Producción formalizado (regla + auditoría + helper blindado)
 
 Se formaliza y documenta el flujo de despliegue del theme: **se prueba en STAGING y solo lo
