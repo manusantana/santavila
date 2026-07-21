@@ -13,6 +13,24 @@
 
 ---
 
+## 2026-07-04 · FIX PDP — descripción DUPLICADA eliminada (⚠️ aviso al compañero)
+
+> **PARA EL COMPAÑERO (importante al hacer `git pull`):** se ha quitado el bloque de descripción de la **columna de compra** en `santavila-product.liquid`. **La descripción NO va ahí.** Se muestra a **ancho completo** en `santavila-pdp-description.liquid`. Si vuelves a añadir `<details class="sv-pdp__description">…{{ product.description }}…</details>` en esa columna, **la descripción saldrá DOS VECES**.
+
+**Qué pasó.** Al integrar tu trabajo GEO (FAQ + apertura citable), tu commit del **FAQ** reintrodujo en `santavila-product.liquid` el bloque `sv-pdp__description` en la columna de compra (se había quitado el 28-jun al mover la descripción a ancho completo). Resultado: `product.description` se renderizaba **2 veces visibles** en la PDP (columna estrecha + sección ancha). Verificado en `santavila.com` (sillón envolvente y sofá sofisticado): 2 apariciones visibles + 1 en JSON-LD.
+
+**Qué se hizo.**
+- Quitado **markup + CSS** de `sv-pdp__description` de la columna de compra en `santavila-product.liquid`. Se dejó un `{%- comment -%}` en el sitio avisando por qué.
+- **Tu FAQ se mantiene INTACTO** (`sv-pdp__faq` + metafield `santavila.faq` + schema `FAQPage`). No se ha tocado nada de tu trabajo GEO.
+- La descripción queda **solo** en `santavila-pdp-description.liquid` (narrativa a ancho completo + ficha "Detalles clave" parseada).
+- Subido a **LIVE** (`189222715716`). Verificado: descripción **1 vez visible**, columna limpia, sección presente, FAQ presente (2 productos).
+
+**Regla para no volver a chocar.** `product.description` se renderiza **SOLO** en `santavila-pdp-description.liquid`. En `santavila-product.liquid` (columna de compra) **no** debe renderizarse.
+
+**Nota de temas.** El DEV legacy `189114876228` ya no existe; ahora está **STAGING `189491151172`**. Para validar antes de LIVE, usar STAGING (no el DEV viejo).
+
+---
+
 ## 2026-07-04 · Apertura citable en PDP + límite honesto de medidas (GEO 90→92)
 
 **Paso del flujo:** GEO PDP / afinado de descripción
