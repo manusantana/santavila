@@ -13,6 +13,17 @@
 
 ---
 
+## 2026-07-04 · PDP UX — enlace "Ver descripción completa" + zoom lento (calma)
+
+Dos mejoras de UX de conversión en la PDP:
+
+- **Enlace "Ver descripción completa"** en la columna de compra (donde antes estaba el bloque de descripción, ya quitado). Es un **enlace-ancla** (`href="#sv-descripcion"`) con **scroll suave** (`scroll-behavior: smooth`, envuelto en `@media (prefers-reduced-motion: no-preference)`) que baja a la sección de descripción a ancho completo. Esa sección (`santavila-pdp-description.liquid`) lleva ahora `id="sv-descripcion"` + `scroll-margin-top: clamp(70px,10vh,100px)` para no quedar tapada por el header. Así la zona de compra queda limpia pero se invita a leer la descripción sin saturar.
+- **Zoom de la galería más lento y tranquilo.** El hover-zoom daba sensación de agobio (el paneo saltaba al instante con el cursor). Ahora: escala **2.1 → 1.8** (menos amplitud), transición de la escala **0.4s → 1.1s** con easing suave (`cubic-bezier(0.22,0.61,0.36,1)`), y el paneo (`transform-origin`) pasa a **amortiguado** (transición 0.7s) en vez de instantáneo. Resultado: zoom y seguimiento lentos, sensación de calma.
+
+**Ficheros:** `santavila-product.liquid` (enlace + su CSS + zoom), `santavila-pdp-description.liquid` (ancla + `scroll-margin-top`). Subido a **LIVE**; verificado el contenido del theme por Asset API (el HTML público tarda por la **caché full-page** de Shopify; se ve con refresh en unos minutos).
+
+---
+
 ## 2026-07-04 · FIX PDP — descripción DUPLICADA eliminada (⚠️ aviso al compañero)
 
 > **PARA EL COMPAÑERO (importante al hacer `git pull`):** se ha quitado el bloque de descripción de la **columna de compra** en `santavila-product.liquid`. **La descripción NO va ahí.** Se muestra a **ancho completo** en `santavila-pdp-description.liquid`. Si vuelves a añadir `<details class="sv-pdp__description">…{{ product.description }}…</details>` en esa columna, **la descripción saldrá DOS VECES**.

@@ -26,7 +26,7 @@
 -%}
 
 {%- if full != blank -%}
-<div class="sv-section sv-pdesc color-{{ s.color_scheme }}">
+<div class="sv-section sv-pdesc color-{{ s.color_scheme }}" id="sv-descripcion">
   <div class="sv-container">
     <div class="sv-pdesc__grid{% if spec == blank %} sv-pdesc__grid--single{% endif %}">
 
@@ -70,7 +70,7 @@
 {%- endif -%}
 
 {% stylesheet %}
-  .sv-pdesc { background-color: var(--color-background); color: var(--color-foreground); }
+  .sv-pdesc { background-color: var(--color-background); color: var(--color-foreground); scroll-margin-top: clamp(70px, 10vh, 100px); }
   .sv-pdesc__grid {
     display: grid;
     grid-template-columns: 1.55fr 1fr;

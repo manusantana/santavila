@@ -95,9 +95,16 @@
 
           {%- comment -%}
             OJO COMPAÑERO: la descripción del producto se muestra a ANCHO COMPLETO en la sección
-            santavila-pdp-description.liquid. NO renderizar aquí product.description (se duplicaría).
+            santavila-pdp-description.liquid (ancla #sv-descripcion). NO renderizar aquí
+            product.description (se duplicaría). Aquí solo un ENLACE-ancla a esa sección.
             Se quitó el bloque sv-pdp__description de esta columna el 2026-07-04. Ver JOURNAL.
           {%- endcomment -%}
+          {%- if product.description != blank -%}
+            <a class="sv-pdp__seemore" href="#sv-descripcion">
+              <span>Ver descripción completa</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+          {%- endif -%}
 
           {%- assign sv_faq = product.metafields.santavila.faq.value -%}
           {%- if sv_faq != blank and sv_faq.size > 0 -%}
@@ -643,6 +650,30 @@
   .sv-pdp__advisor-txt > span { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); line-height: 1.35; }
   .sv-pdp__advisor-arrow { flex: none; margin-left: auto; color: var(--sage-deep); font-size: 17px; transition: transform 0.2s var(--ease, ease); }
 
+  /* Enlace a la descripción completa (ancla → sección a ancho completo, con scroll suave) */
+  .sv-pdp__seemore {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0 2px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sage-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 3px;
+    transition: color 0.2s var(--ease, ease), border-color 0.2s var(--ease, ease);
+  }
+  .sv-pdp__seemore svg { transition: transform 0.3s var(--ease, ease); }
+  @media (hover: hover) {
+    .sv-pdp__seemore:hover { color: var(--ink); border-color: var(--sage); }
+    .sv-pdp__seemore:hover svg { transform: translateY(3px); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :root { scroll-behavior: smooth; }
+  }
+
   .sv-pdp__faq { margin: 18px 0; }
   .sv-pdp__faq-title {
     font-family: var(--sans);
@@ -1000,13 +1031,14 @@
   }
   .sv-gal__img {
     cursor: zoom-in;
-    transition: transform 0.4s var(--ease, ease);
+    /* Calma: la escala entra/sale MUY despacio y el paneo (transform-origin) amortigua
+       el seguimiento del cursor, en vez de saltar al instante. */
+    transition: transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1), transform-origin 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
     will-change: transform;
   }
-  /* Zoom premium: al pasar el ratón, la foto principal amplía y sigue al cursor (solo desktop).
-     transform-origin se mueve al instante con el cursor (paneo); la escala entra/sale suave. */
+  /* Zoom premium LENTO: al pasar el ratón amplía suave y sigue al cursor con calma (solo desktop). */
   .sv-gal__stage.is-zoom .sv-gal__slide.is-active .sv-gal__img {
-    transform: scale(2.1);
+    transform: scale(1.8);
     transform-origin: var(--zx, 50%) var(--zy, 50%);
   }
   .sv-gal__stage.is-zoom .sv-gal__slide::after { opacity: 0; }
