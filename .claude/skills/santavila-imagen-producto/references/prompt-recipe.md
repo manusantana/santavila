@@ -28,8 +28,10 @@ Photorealistic, shot on a real camera.
 **Toma 1 · Packshot (1:1, fondo bone)**
 > *Using the reference image, keep the 3-seater outdoor sofa EXACTLY as shown (same 3 seat cushions, same aluminium frame, same rope weave, same color). Do not change it. Place it on a clean warm-bone studio backdrop (never pure white), soft large key light from 40° left at ~40° elevation, neutral 5400 K, crisp contact shadow under the legs and a long soft shadow to the right. 3/4 view at 35°, verticals plumb. Photorealistic.*
 
-**Toma 2 · Ambiente (golden hour, escena emparejada)**
-> *Using the reference image, keep the sofa EXACTLY as shown (do not change it). Put it on a real Spanish porch: microcement floor, whitewashed wall, an olive tree in a terracotta pot slightly out of focus. Late-afternoon Mediterranean sun, single source, warm light with long soft shadows. One linen cushion as accent, nothing else. Photorealistic, shot on a real camera.*
+**Toma 2 · Ambiente (HÁBITAT según estilo + vida/ASMR)** — el hábitat sale del ESTILO del mueble (ver `perfil-disenador-escena.md`) y se mantiene en A y B. Añade SIEMPRE vida (uso reciente) + un elemento sensorial (vapor, gotas, textura).
+> *Using the reference image, keep the armchair EXACTLY as shown — do not change it. A contemporary designer coastal terrace matching its modern minimalist style: smooth microcement floor, clean rendered wall, architectural planters with a sculptural olive tree. Lived-in: a linen throw over the armrest with natural folds, a steaming coffee cup and an open book on a minimalist side table. Warm low side light, long soft shadows, as if someone just got up. Photorealistic, natural imperfection.*
+>
+> (Rústico → caserío de piedra + lana + tetera; clásico med → cal/barro + buganvilla. Nunca mezclar estilos: mueble moderno NO va en caserío rústico.)
 
 **Toma 4 · Detalle / ASMR (escala moderada, textura REAL)**
 > *Using the reference image, close but not extreme detail of the real rope weave over the aluminium armrest and the cushion seam. Keep the exact real texture — do not invent any weave or fabric. Grazing side light at low angle to reveal the relief. Photorealistic.*

@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-07-23 · SKILL imagen — "perfil de diseñador" (ambiente por ESTILO) + Fase 0 sillón
+
+Mejora clave del skill `santavila-imagen-producto`, aprendida en la Fase 0 con un sillón contemporáneo:
+- **Perfil de diseñador senior.** El error nº1 de "parece IA" es el **CHOQUE DE ESTILOS** (mueble contemporáneo puesto en un caserío rústico), no la luz. Nuevo paso: leer el **estilo** del producto → elegir su **hábitat** (contemporáneo→ático de diseño/microcemento; rústico→caserío; clásico med→cal/barro). El **ambiente es VARIABLE por producto** (corrige el "ambiente fijo" que teníamos).
+- **Ambiente vivido + ASMR sensorial** (piezas únicas): signos de uso reciente + un elemento que active un sentido (**vapor** del café, **gotas** del vaso frío, textura del lino/lana). Listón: *"parece que alguien vive aquí ahora"*.
+- **Coherencia de secuencia:** toda la galería de un producto = el mismo mundo/hábitat.
+- Nuevo `references/perfil-disenador-escena.md` (mapa estilo→espacio); `SKILL.md`, `prompt-recipe.md` y el QA actualizados.
+- **Validado** con el sillón antracita: ambientes de ático de diseño (microcemento/hormigón, olivo escultórico, café + té helado con condensación) — coherentes, con alma, sin tufo a IA. (Antes: caserío rústico con leña = choque.)
+
+**Fase 0 (`sillon-exterior-estilo-elegante-7275-cm`):** galería generada con Higgsfield (packshot bone + 2 ambientes de ático + detalle de la cuerda), ~14 créditos de 950. Pendiente: Toma 5 medidas (overlay 72×75) + upscale + subida a Shopify.
+
+---
+
 ## 2026-07-22 (tarde-3) · PDP — limpieza de maquetación de la columna (líneas + aire)
 
 Feedback del dueño: sobraban líneas divisorias y "Preguntas frecuentes" iba pegado. Diagnóstico: el bloque "Descripción" tenía `border-top` **y** `border-bottom`, y la de abajo (tras "Ver descripción completa") chocaba con el **techo del acordeón FAQ** → dos líneas juntas con el título apretado en medio. Arreglo:

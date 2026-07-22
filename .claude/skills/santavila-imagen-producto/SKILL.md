@@ -21,7 +21,7 @@ Los modelos Nano Banana de Higgsfield **colapsan a un gradiente en blanco** con:
 Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~60 = contenido real. Coste ≈ 2 créditos/imagen a 1k.
 
 ## Flujo maestro (8 pasos)
-1. **Inputs del SKU:** foto real de mayor resolución (la de la variante si aplica); cotas reales (título/metafield) para la Toma 5; tipología (rol §5); temporada activa (§14) y escena emparejada por paleta (§8).
+1. **Inputs del SKU + lectura de diseñador:** foto real de mayor resolución; cotas reales (título/metafield) para la Toma 5; tipología (rol §5). **Lee el ESTILO del producto y fija su HÁBITAT** (perfil de diseñador — ver reglas rectoras): un tipo de espacio coherente con el estilo (contemporáneo→ático de diseño; rústico→caserío…) que se mantiene en TODA la galería. La temporada (§14) aporta luz/paleta/consumible.
 2. **Anclar:** `media_import_url(<URL CDN Shopify de la foto real>)` → `media_id`.
 3. **Generar tomas 1–4:** por toma, `generate_image({model:"nano_banana_pro", prompt:<CORTO>, medias:[{value:media_id, role:"image"}], aspect_ratio, resolution:"1k", count:2, get_cost:true})` → preflight de coste → lanzar sin `get_cost`. (nano_banana se coerce a `nano_banana_flash`.)
 4. **Recoger:** `job_status(jobId, sync:true)` → URLs.
@@ -42,13 +42,16 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 ## QA gate — 4 bloques bloqueantes (contra la foto real)
 - **A · Fidelidad:** conteo 1:1 exacto (listones/cojines/plazas/patas); geometría, material, color de variante (ΔE≤3). Cualquier desviación = rechazo.
 - **B · Sin artefactos IA:** verticales a plomo; sin fusiones/derretidos; sombra de contacto bajo cada apoyo (no flota); una sola dirección de sol; sin HDR falso.
-- **C · On-brand:** luz/paleta mediterránea-española creíble; NO resort, NO chalet; fondo cálido (nunca `#FFFFFF`); ≤5 props; 0 logos/texto IA; no sugiere montaje nuestro.
+- **C · On-brand + estilo:** el ambiente **PEGA con el estilo del mueble** (lo pondría un interiorista — sin choque contemporáneo↔rústico); escena **vivida** (signos de uso + ASMR sensorial), no la pieza sola en un espacio vacío; **coherencia de secuencia** (mismo mundo en toda la galería); luz/paleta española creíble; NO resort/chalet; fondo cálido (nunca `#FFFFFF`); ≤5 props on-brand; 0 logos/texto IA; no sugiere montaje nuestro.
 - **D · Técnico:** ≥2000 px, nítida; ratio correcto (cover en producto); compone en 1:1 sin amputar; textura legible.
 
 Detalle completo y "tells" de IA: [`references/qa-checklist.md`](references/qa-checklist.md).
 
 ## Reglas rectoras (el oficio)
-- **Emparejamiento escena↔paleta:** la escena CONVERSA con el color del mueble (antracita/gris → piedra/cal fría/atlántico/urbano; arena/teca → barro/sur cálido/madera). Vender a **toda España**, no solo mediterráneo. Nunca resort tropical ni chalet de lujo.
+- **Perfil de diseñador — el ambiente lo dicta el ESTILO (no solo el color):** lee el estilo del mueble (contemporáneo / rústico / clásico mediterráneo / industrial / boho) y ponlo en SU hábitat (contemporáneo→ático de diseño, microcemento/hormigón; rústico→caserío/madera; clásico med→cal/barro). El ambiente es **variable por producto**; la paleta y la temporada afinan la luz/consumible. Un choque de estilo (mueble moderno en caserío rústico) = "parece IA" → rechazo. Mapa completo: [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md).
+- **Ambiente vivido + ASMR sensorial (piezas únicas):** la escena debe sentirse **habitada** (signos de uso reciente: libro abierto, manta con caída natural, cojín con huella) y activar un sentido — **vapor** del café/té, textura del lino/lana, gotas de un vaso frío, calidez de la luz. Listón: *"parece que alguien vive aquí ahora"*. **Nunca** la pieza sola en un espacio vacío y perfecto.
+- **Coherencia de la secuencia:** toda la galería de UN producto = el **mismo mundo/hábitat**; los ambientes A y B son variaciones (ángulo, momento, atrezzo) del mismo espacio, no mundos distintos. Decide el hábitat una vez y mantenlo.
+- Vender a **toda España**; **nunca** resort tropical ni chalet de lujo.
 - **Escala doble puerta (§13.bis):** métrica (factor 0,92–1,10; hombros ≤0,80 de un cojín; estatura 160–188 cm) **y** composición (máx 2 personas en sofá 3 plazas + ≥1 cojín libre). Si "lee personas grandes" → suele ser composición; mídelo lado a lado antes de concluir. Los ASMR sin personas esquivan el problema.
 - **Temporadas (§14):** backbone ESTABLE todo el año (packshot + ASMR — son la `og:image`/Google) + capa de temporada ROTATIVA (el ambiente). Temporada activa: **Verano Costero** (Cantábrico/Levante). La pos-1 NO cambia entre temporadas.
 - **Texturas — línea roja (§15):** en ASMR/detalle, **prohibido inventar tramas**. El macro extremo empuja al modelo a fabricar textura (sling fino → tweed inventado = rechazo). Anclar a la foto real, **escala moderada**, y preferir features reales (mecanismo, unión estructura↔tela, costura, nudo) a un macro de tejido.
@@ -56,7 +59,8 @@ Detalle completo y "tells" de IA: [`references/qa-checklist.md`](references/qa-c
 ## Detalle operativo (references)
 - Mecánica MCP exacta + subida Shopify: [`references/runbook-mcp.md`](references/runbook-mcp.md)
 - Prompt corto: compresión de la receta + ejemplos validados: [`references/prompt-recipe.md`](references/prompt-recipe.md)
-- Escenas por región y temporada + emparejamiento: [`references/escenas-region-temporada.md`](references/escenas-region-temporada.md)
+- **Perfil de diseñador (estilo→espacio, ambiente vivido/ASMR, coherencia de secuencia): [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md)**
+- Escenas por región y temporada + emparejamiento de paleta: [`references/escenas-region-temporada.md`](references/escenas-region-temporada.md)
 - Parámetros por toma y tipología (ángulos/focales/kelvin): rol §3–§5.
 
 ## Regla rectora final
