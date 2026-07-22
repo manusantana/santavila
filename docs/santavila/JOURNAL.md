@@ -13,6 +13,18 @@
 
 ---
 
+## 2026-07-22 · SKILL de generación de imagen con Higgsfield (`santavila-imagen-producto`)
+
+Se destila toda la base de conocimiento de imagen en un **skill invocable** (pipeline end-to-end), para que generar la galería de un SKU sea repetible y a prueba de los fallos de la Fase 0.
+
+- **Ubicación:** `.claude/skills/santavila-imagen-producto/` (versionado en el repo → le llega al compañero con `pull`).
+- **SKILL.md:** ley de fidelidad + **LECCIÓN CRÍTICA** (prompt CORTO en modo edición · generar a `1k` y upscale · describir la física, no adjetivos) + flujo maestro de 8 pasos + las 5 tomas + QA gate + reglas rectoras (emparejamiento escena↔paleta, escala doble puerta §13.bis, temporadas §14, texturas línea roja §15).
+- **references/:** `runbook-mcp.md` (mecánica exacta MCP + subida Shopify), `prompt-recipe.md` (compresión de la receta de 7 bloques a prompt corto + ejemplos validados), `qa-checklist.md` (4 bloques + "tells" de IA), `escenas-region-temporada.md` (§8 toda España + §14 + emparejamiento).
+- **No duplica** los docs: referencia `ROL_FOTOGRAFO_SENIOR.md` y `FLUJO_IMAGEN_PRODUCTO.md` como fuente de verdad del detalle fino (tablas por toma/tipología).
+- **Método:** writing-skills (TDD-para-skills). El *baseline failure* ya estaba documentado empíricamente (Fase 0: prompt largo/2k/4k → imagen en blanco). Validado con un subagente de aplicación.
+
+---
+
 ## 2026-07-04 · PDP UX — enlace "Ver descripción completa" + zoom lento (calma)
 
 Dos mejoras de UX de conversión en la PDP:
