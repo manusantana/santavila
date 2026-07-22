@@ -13,6 +13,15 @@
 
 ---
 
+## 2026-07-22 (tarde-3) · PDP — limpieza de maquetación de la columna (líneas + aire)
+
+Feedback del dueño: sobraban líneas divisorias y "Preguntas frecuentes" iba pegado. Diagnóstico: el bloque "Descripción" tenía `border-top` **y** `border-bottom`, y la de abajo (tras "Ver descripción completa") chocaba con el **techo del acordeón FAQ** → dos líneas juntas con el título apretado en medio. Arreglo:
+- Quitado el `border-bottom` de `.sv-pdp__desc` (una línea menos).
+- Aire: `.sv-pdp__faq` margin-top 18→**30px**; `.sv-pdp__faq-title` margin-bottom 4→**12px**.
+- Columna más limpia y respirada. Subido a LIVE; verificado por Asset API.
+
+---
+
 ## 2026-07-22 (tarde-2) · PDP — lightbox pro (zoom+pan) + bloque "Descripción" en la columna
 
 Dos mejoras (responsive verificado desktop + móvil):
