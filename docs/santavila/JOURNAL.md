@@ -13,6 +13,15 @@
 
 ---
 
+## 2026-07-22 (tarde-2) · PDP — lightbox pro (zoom+pan) + bloque "Descripción" en la columna
+
+Dos mejoras (responsive verificado desktop + móvil):
+- **Zoom de galería rehecho al patrón de lujo.** Se quita el *inner-zoom* sobre la propia foto (parecía de tienda amateur). Ahora, al hacer clic, se abre el **lightbox a pantalla completa** con **zoom + pan** fluido: clic/tap amplía a 2,4×, `pointermove` panea — funciona con **ratón y con touch** (`touch-action:none` para que el arrastre panee en móvil sin scrollear). En la galería queda solo un **realce sutil** al hover (`scale(1.03)`) + el indicador de lupa que invita a ampliar.
+- **Bloque "Descripción" en la columna de compra.** `<details open>` con el **primer párrafo** de la descripción (teaser, `product.description | split:'</p>' | first`) + enlace **"Ver descripción completa"** que baja con scroll suave a la sección a ancho completo. Ya no queda "cutre": da contexto sin duplicar (la descripción íntegra sigue SOLO abajo, en `santavila-pdp-description`).
+- Verificado en LIVE por Asset API + render presente en desktop y móvil (el HTML tarda por caché full-page de Shopify; se ve con refresh).
+
+---
+
 ## 2026-07-22 (tarde) · PDP — zoom de galería rehecho (estilo lupa, sin mareo)
 
 El hover-zoom mareaba porque usaba `transform-origin` animado: animar el origen de escalado produce un paneo **no lineal** (la imagen "resbala"), y por eso mareaba por mucho que se ajustara la velocidad. Rehecho al patrón de los mejores ecommerce:

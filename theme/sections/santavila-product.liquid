@@ -100,10 +100,18 @@
             Se quitó el bloque sv-pdp__description de esta columna el 2026-07-04. Ver JOURNAL.
           {%- endcomment -%}
           {%- if product.description != blank -%}
-            <a class="sv-pdp__seemore" href="#sv-descripcion">
-              <span>Ver descripción completa</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-            </a>
+            {%- assign sv_first_p = product.description | split: '</p>' | first | append: '</p>' -%}
+            <details class="sv-pdp__desc" open>
+              <summary class="sv-pdp__desc-q">
+                <span>Descripción</span>
+                <span class="sv-pdp__desc-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="sv-pdp__desc-a rte">{{ sv_first_p }}</div>
+              <a class="sv-pdp__seemore" href="#sv-descripcion">
+                <span>Ver descripción completa</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+              </a>
+            </details>
           {%- endif -%}
 
           {%- assign sv_faq = product.metafields.santavila.faq.value -%}
@@ -258,10 +266,25 @@
       var fulls = imgs.map(function (i) { return i.getAttribute('data-full'); });
       var lbImg = lb.querySelector('[data-lb-img]');
       var lbCount = lb.querySelector('[data-lb-count]');
-      var cur = 0;
-      function show(i) { cur = (i + fulls.length) % fulls.length; lbImg.src = fulls[cur]; if (lbCount) lbCount.textContent = (cur + 1) + ' / ' + fulls.length; }
+      var cur = 0, lbZoom = false;
+      var LB_SCALE = 2.4;
+      function lbFit() { lbZoom = false; lbImg.classList.remove('is-zoomed'); lbImg.style.transform = ''; }
+      function lbPan(e) {
+        if (!lbZoom) return;
+        var r = lbImg.getBoundingClientRect();
+        var px = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+        var py = Math.min(1, Math.max(0, (e.clientY - r.top) / r.height));
+        lbImg.style.transform = 'translate(' + ((0.5 - px) * r.width * (LB_SCALE - 1)) + 'px,' + ((0.5 - py) * r.height * (LB_SCALE - 1)) + 'px) scale(' + LB_SCALE + ')';
+      }
+      function show(i) { cur = (i + fulls.length) % fulls.length; lbFit(); lbImg.src = fulls[cur]; if (lbCount) lbCount.textContent = (cur + 1) + ' / ' + fulls.length; }
       imgs.forEach(function (im, i) { im.addEventListener('click', function () { show(i); lb.showModal ? lb.showModal() : lb.setAttribute('open', ''); }); });
-      lb.querySelector('[data-lb-close]').addEventListener('click', function () { lb.close && lb.close(); });
+      lbImg.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (lbZoom) { lbFit(); return; }
+        lbZoom = true; lbImg.classList.add('is-zoomed'); lbPan(e);
+      });
+      lbImg.addEventListener('pointermove', lbPan);
+      lb.querySelector('[data-lb-close]').addEventListener('click', function () { lbFit(); lb.close && lb.close(); });
       lb.querySelector('[data-lb-prev]').addEventListener('click', function () { show(cur - 1); });
       lb.querySelector('[data-lb-next]').addEventListener('click', function () { show(cur + 1); });
       lb.addEventListener('click', function (e) { if (e.target === lb && lb.close) lb.close(); });
@@ -272,26 +295,8 @@
       });
     }
 
-    // Zoom premium: la foto principal amplía y sigue al cursor (solo desktop con ratón).
-    if (gal && window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      var zStage = gal.querySelector('[data-gal-stage]');
-      if (zStage) {
-        zStage.addEventListener('mouseenter', function () { zStage.classList.add('is-zoom'); });
-        zStage.addEventListener('mouseleave', function () {
-          zStage.classList.remove('is-zoom');
-          zStage.style.removeProperty('--tx'); zStage.style.removeProperty('--ty');
-        });
-        // Paneo lineal (lupa): translate proporcional al cursor. ZOOM debe coincidir con el scale del CSS.
-        var ZOOM = 1.5;
-        zStage.addEventListener('mousemove', function (e) {
-          var r = zStage.getBoundingClientRect();
-          var px = (e.clientX - r.left) / r.width;
-          var py = (e.clientY - r.top) / r.height;
-          zStage.style.setProperty('--tx', ((px - 0.5) * r.width * (1 - ZOOM)) + 'px');
-          zStage.style.setProperty('--ty', ((py - 0.5) * r.height * (1 - ZOOM)) + 'px');
-        });
-      }
-    }
+    // El zoom vive ahora en el lightbox a pantalla completa (click en la foto → zoom + pan).
+    // Aquí solo un realce sutil por CSS al pasar el ratón (invita a ampliar).
 
     // Sticky bar + qty
     var bar = document.querySelector('[data-sticky]');
@@ -654,24 +659,48 @@
   .sv-pdp__advisor-txt > span { font-family: var(--sans); font-size: 12.5px; color: var(--ink-3); line-height: 1.35; }
   .sv-pdp__advisor-arrow { flex: none; margin-left: auto; color: var(--sage-deep); font-size: 17px; transition: transform 0.2s var(--ease, ease); }
 
-  /* Enlace a la descripción completa (ancla → sección a ancho completo, con scroll suave) */
-  .sv-pdp__seemore {
-    display: inline-flex;
+  /* Bloque "Descripción" colapsable en la columna: teaser (1er párrafo) + enlace-ancla a la sección completa */
+  .sv-pdp__desc {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin: 16px 0;
+  }
+  .sv-pdp__desc-q {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 16px 0 2px;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 16px 0;
     font-family: var(--sans);
     font-size: 14px;
-    font-weight: 600;
-    color: var(--sage-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 3px;
-    transition: color 0.2s var(--ease, ease), border-color 0.2s var(--ease, ease);
+    font-weight: 650;
+    color: var(--ink);
+  }
+  .sv-pdp__desc-q::-webkit-details-marker { display: none; }
+  .sv-pdp__desc-toggle { position: relative; flex: none; width: 14px; height: 14px; }
+  .sv-pdp__desc-toggle::before,
+  .sv-pdp__desc-toggle::after {
+    content: ""; position: absolute; background: var(--ink-2);
+    transition: opacity 0.2s var(--ease, ease), transform 0.2s var(--ease, ease);
+  }
+  .sv-pdp__desc-toggle::before { top: 50%; left: 0; right: 0; height: 1.5px; transform: translateY(-50%); }
+  .sv-pdp__desc-toggle::after { left: 50%; top: 0; bottom: 0; width: 1.5px; transform: translateX(-50%); }
+  .sv-pdp__desc[open] .sv-pdp__desc-toggle::after { opacity: 0; transform: translateX(-50%) rotate(90deg); }
+  .sv-pdp__desc-a { padding: 0; }
+  .sv-pdp__desc-a, .sv-pdp__desc-a p {
+    font-family: var(--sans); font-size: 14.5px; line-height: 1.62; color: var(--ink-2); margin: 0 0 12px;
+  }
+  .sv-pdp__desc-a strong { color: var(--ink); font-weight: 600; }
+  .sv-pdp__seemore {
+    display: inline-flex; align-items: center; gap: 7px; margin: 2px 0 16px;
+    font-family: var(--sans); font-size: 13.5px; font-weight: 600; color: var(--sage-deep);
+    text-decoration: none; transition: color 0.2s var(--ease, ease);
   }
   .sv-pdp__seemore svg { transition: transform 0.3s var(--ease, ease); }
   @media (hover: hover) {
-    .sv-pdp__seemore:hover { color: var(--ink); border-color: var(--sage); }
+    .sv-pdp__seemore:hover { color: var(--ink); }
     .sv-pdp__seemore:hover svg { transform: translateY(3px); }
   }
   @media (prefers-reduced-motion: no-preference) {
@@ -1035,16 +1064,12 @@
   }
   .sv-gal__img {
     cursor: zoom-in;
-    /* Zoom estilo lupa (como los mejores ecommerce): el paneo usa TRANSLATE (lineal y predecible),
-       no transform-origin (que "resbala" y marea). Escala moderada + una sola transición suave. */
-    transform-origin: center center;
-    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-    will-change: transform;
+    transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
-  .sv-gal__stage.is-zoom .sv-gal__slide.is-active .sv-gal__img {
-    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(1.5);
+  /* Realce SUTIL al pasar el ratón (invita a ampliar; el zoom real vive en el lightbox al hacer clic). */
+  @media (hover: hover) {
+    .sv-gal__slide:hover .sv-gal__img { transform: scale(1.03); }
   }
-  .sv-gal__stage.is-zoom .sv-gal__slide::after { opacity: 0; }
   /* Indicador "ampliar" (lupa) — solo en imágenes ampliables */
   .sv-gal__slide:has(.sv-gal__img)::after {
     content: "";
@@ -1078,7 +1103,14 @@
   }
   .sv-lightbox::backdrop { background: rgba(20, 22, 16, 0.93); }
   .sv-lightbox[open] { display: flex; align-items: center; justify-content: center; }
-  .sv-lightbox__img { max-width: 88vw; max-height: 86dvh; object-fit: contain; border-radius: 6px; }
+  .sv-lightbox__img {
+    max-width: 88vw; max-height: 86dvh; object-fit: contain; border-radius: 6px;
+    cursor: zoom-in;
+    transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+    touch-action: none; /* el arrastre panea (no scrollea) en móvil */
+    will-change: transform;
+  }
+  .sv-lightbox__img.is-zoomed { cursor: move; transition: transform 0.12s linear; }
   .sv-lightbox__close,
   .sv-lightbox__nav {
     position: fixed;
