@@ -13,6 +13,16 @@
 
 ---
 
+## 2026-07-22 (tarde) · PDP — zoom de galería rehecho (estilo lupa, sin mareo)
+
+El hover-zoom mareaba porque usaba `transform-origin` animado: animar el origen de escalado produce un paneo **no lineal** (la imagen "resbala"), y por eso mareaba por mucho que se ajustara la velocidad. Rehecho al patrón de los mejores ecommerce:
+- **Paneo lineal con `translate`** proporcional al cursor (`--tx`/`--ty` calculados en JS: `(px-0.5)·width·(1-ZOOM)`), como una lupa — movimiento predecible.
+- **Escala moderada** `scale(1.5)` (antes 1.8/2.1) → menos amplitud, menos agobio.
+- **Una sola transición suave** `transform 0.5s` para entrada y seguimiento.
+- `ZOOM` (JS) debe coincidir con el `scale` del CSS. En `santavila-product.liquid` (CSS + JS). Subido a LIVE.
+
+---
+
 ## 2026-07-22 · SKILL de generación de imagen con Higgsfield (`santavila-imagen-producto`)
 
 Se destila toda la base de conocimiento de imagen en un **skill invocable** (pipeline end-to-end), para que generar la galería de un SKU sea repetible y a prueba de los fallos de la Fase 0.

@@ -279,12 +279,16 @@
         zStage.addEventListener('mouseenter', function () { zStage.classList.add('is-zoom'); });
         zStage.addEventListener('mouseleave', function () {
           zStage.classList.remove('is-zoom');
-          zStage.style.removeProperty('--zx'); zStage.style.removeProperty('--zy');
+          zStage.style.removeProperty('--tx'); zStage.style.removeProperty('--ty');
         });
+        // Paneo lineal (lupa): translate proporcional al cursor. ZOOM debe coincidir con el scale del CSS.
+        var ZOOM = 1.5;
         zStage.addEventListener('mousemove', function (e) {
           var r = zStage.getBoundingClientRect();
-          zStage.style.setProperty('--zx', (((e.clientX - r.left) / r.width) * 100) + '%');
-          zStage.style.setProperty('--zy', (((e.clientY - r.top) / r.height) * 100) + '%');
+          var px = (e.clientX - r.left) / r.width;
+          var py = (e.clientY - r.top) / r.height;
+          zStage.style.setProperty('--tx', ((px - 0.5) * r.width * (1 - ZOOM)) + 'px');
+          zStage.style.setProperty('--ty', ((py - 0.5) * r.height * (1 - ZOOM)) + 'px');
         });
       }
     }
@@ -1031,15 +1035,14 @@
   }
   .sv-gal__img {
     cursor: zoom-in;
-    /* Calma: la escala entra/sale MUY despacio y el paneo (transform-origin) amortigua
-       el seguimiento del cursor, en vez de saltar al instante. */
-    transition: transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1), transform-origin 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Zoom estilo lupa (como los mejores ecommerce): el paneo usa TRANSLATE (lineal y predecible),
+       no transform-origin (que "resbala" y marea). Escala moderada + una sola transición suave. */
+    transform-origin: center center;
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     will-change: transform;
   }
-  /* Zoom premium LENTO: al pasar el ratón amplía suave y sigue al cursor con calma (solo desktop). */
   .sv-gal__stage.is-zoom .sv-gal__slide.is-active .sv-gal__img {
-    transform: scale(1.8);
-    transform-origin: var(--zx, 50%) var(--zy, 50%);
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(1.5);
   }
   .sv-gal__stage.is-zoom .sv-gal__slide::after { opacity: 0; }
   /* Indicador "ampliar" (lupa) — solo en imágenes ampliables */
