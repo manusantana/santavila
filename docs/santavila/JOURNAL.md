@@ -22,6 +22,8 @@ Sergio detectó dos fallos en la imagen de medidas publicada del sillón. Correg
 - **Herramienta reutilizable:** `scripts/overlay_medidas_producto.py` (CLI: `--img --ancho --alto [--lado-alto] [--bbox]`), JetBrains Mono + líneas ink. Añadido el **bloque E del QA** (medidas, bloqueante) y las 3 reglas al `SKILL.md`.
 - Imagen sustituida en Shopify (`MediaImage/71232245301572`, pos 5, 4096²); galería sigue en 5 media con el packshot en pos 0.
 
+**Cierre verificado (23-07-2026):** la PDP live sirve las **5** imágenes nuevas (packshot · terraza mañana · terraza atardecer · detalle cuerda · medidas corregida); producto ACTIVE con `featuredMedia` = packshot; las 5 en `READY` a 4096 px (el ambiente B, 3311×4096). Árbol de git limpio y `main == origin/main` (`01c5d0b`). **Fase 0 del skill de imagen CERRADA** — pipeline validado end-to-end (leer estilo → hábitat → generar → upscale → medidas → publicar → QA).
+
 ---
 
 ## 2026-07-23 · SKILL imagen — "perfil de diseñador" (ambiente por ESTILO) + Fase 0 sillón
