@@ -13,6 +13,25 @@
 
 ---
 
+## 2026-07-23 (tarde-3) · Colecciones — paginación numerada SEO (adiós "Cargar más")
+
+Sergio pide, como SEO senior, sustituir el "Cargar más" por paginación real. Investigado (Google + fuentes 2026) y auditado el estado actual.
+
+**Punto de partida (mejor de lo esperado):** el "Cargar más" ya era un `<a href="?page=N">` real sobre `{% paginate %}`, y el tema ya cumplía lo esencial — canonical **auto-referenciado** por página, títulos únicos, sin `noindex`. El fallo real era el **"túnel de paginación"**: solo enlazábamos a la página *siguiente*, así que en Sofás (88 prod / 12 = 8 págs) los productos de la última estaban a 8 clics de profundidad → menos crawl budget e indexación.
+
+**Implementado (decisión de Sergio: numerada + 24/página):**
+- **Paginación numerada** `‹ 1 … 5 [6] 7 … 12 ›` con `paginate.parts` (`window_size: 2`), enlaces `<a>` reales → todas las páginas a 1 clic. `rel=prev/next` en las flechas (Google ya no los usa, pero otros buscadores sí; no molestan). Eliminado el `<div class="sv-loadmore">` y su JS `fetch`.
+- **24 productos/página** (antes 12): Sofás 8→4 págs, Mesas 73→4. Schema `products_per_page` ahora 12–48, default 24.
+- **"Page 2" → "Página 2"** en el `<title>` (meta-tags.liquid) — estaba en inglés en una tienda ES. Y `tagged "x"` → `x`.
+- **Anti-duplicación en paginadas (revisión profunda):** la intro editorial del hero y **el FAQ con su schema `FAQPage`** solo se renderizan en `current_page == 1` (antes el schema FAQPage se repetía en las 8 páginas = señal SEO negativa). El **H1 se mantiene** en todas (cada página indexable lo necesita).
+- **Responsive verificado objetivamente** con Chrome headless midiendo `scrollWidth` en contenedores de 300/328/358 px: la serie **envuelve en 2 filas sin desbordar**; celdas ≥44 px (WCAG 2.5.5 área táctil); 1 fila en tablet/desktop. Estructura de **un solo nivel flex-wrap** (prev/números/next como `<li>` hermanos) tras detectar que el `<ol>` anidado como flex-item desbordaba.
+- Liquid balanceado, schema JSON válido, theme-check sin errores nuevos (el único error es el `ImgWidthAndHeight` preexistente del lightbox de producto).
+- Subido y verificado en **STAGING**. **Pendiente de ok de Sergio para producción** (validar el preview con sesión staff).
+
+**Arreglado el bug de `push_theme_assets.py`** (el falso negativo de las notas anteriores): ahora **reintenta** la verificación (4 intentos con espera) antes de darla por fallida y **no aborta** el resto de archivos si uno no cuadra (acumula y sale al final). Probado: los 4 archivos en verde, exit 0.
+
+---
+
 ## 2026-07-23 (tarde-2) · Metricool — tracker de analítica instalado en el tema
 
 Petición de Sergio: conectar la web con Metricool (su etiqueta JS).

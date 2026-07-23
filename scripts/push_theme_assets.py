@@ -144,13 +144,28 @@ def main():
             )
         print(f"⚠️  Subiendo a PRODUCCIÓN {theme_id} · confirmación: {args.prod_confirm!r}\n")
 
+    failures = []
     for key in args.keys:
         value = local_value(key)
         api(theme_id, "PUT", key=key, value=value)
-        remote = api(theme_id, "GET", key=key)["asset"]["value"]
-        if remote != value:
-            sys.exit(f"Verificacion fallida para {key}: remoto != local")
-        print(f"✓ {key} subido y verificado en theme {theme_id}")
+        # La Asset API puede devolver aún la versión anterior justo tras el PUT
+        # (propagación). Reintentamos la verificación antes de darla por fallida,
+        # y NO abortamos el resto de archivos si uno no cuadra.
+        ok = False
+        for intento in range(4):
+            remote = api(theme_id, "GET", key=key)["asset"]["value"]
+            if remote == value:
+                ok = True
+                break
+            time.sleep(1.5 * (intento + 1))
+        if ok:
+            print(f"✓ {key} subido y verificado en theme {theme_id}")
+        else:
+            print(f"⚠️  {key}: subido, pero la verificación no cuadró tras varios reintentos (revisar manualmente)")
+            failures.append(key)
+
+    if failures:
+        sys.exit(f"\nVerificación no confirmada para: {', '.join(failures)}")
 
 
 if __name__ == "__main__":

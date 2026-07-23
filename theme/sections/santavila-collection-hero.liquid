@@ -33,7 +33,8 @@
       <span class="sv-crumb__current">{{ display_title }}</span>
     </nav>
     <h1 class="sv-chero__title">{{ display_title }}</h1>
-    {%- if desc != blank -%}
+    {%- comment -%} La intro editorial solo en la página 1: evita duplicarla en las paginadas (?page=N). El H1 sí se mantiene en todas. {%- endcomment -%}
+    {%- if desc != blank and current_page == 1 -%}
       <div class="sv-chero__desc">{{ desc }}</div>
     {%- endif -%}
   </div>

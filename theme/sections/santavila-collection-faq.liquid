@@ -6,7 +6,11 @@
   endcomment
   assign chunks = collection.description | split: '<h3'
   assign has_faq = false
-  if chunks.size > 1
+  comment
+    Solo en la página 1: el FAQ y su schema FAQPage no deben duplicarse en las
+    paginadas (?page=N) — schema repetido en toda la serie = señal SEO negativa.
+  endcomment
+  if chunks.size > 1 and current_page == 1
     assign has_faq = true
   endif
 -%}
