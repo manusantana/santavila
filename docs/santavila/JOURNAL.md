@@ -22,7 +22,11 @@ Mejora clave del skill `santavila-imagen-producto`, aprendida en la Fase 0 con u
 - Nuevo `references/perfil-disenador-escena.md` (mapa estilo→espacio); `SKILL.md`, `prompt-recipe.md` y el QA actualizados.
 - **Validado** con el sillón antracita: ambientes de ático de diseño (microcemento/hormigón, olivo escultórico, café + té helado con condensación) — coherentes, con alma, sin tufo a IA. (Antes: caserío rústico con leña = choque.)
 
-**Fase 0 (`sillon-exterior-estilo-elegante-7275-cm`):** galería generada con Higgsfield (packshot bone + 2 ambientes de ático + detalle de la cuerda), ~14 créditos de 950. Pendiente: Toma 5 medidas (overlay 72×75) + upscale + subida a Shopify.
+**Fase 0 COMPLETA y PUBLICADA (`sillon-exterior-estilo-elegante-7275-cm`, `Product/15507125502276`):** galería end-to-end con Higgsfield.
+- **5 tomas a 4K** (upscale bytedance): 1 packshot bone (4096²) · 2 ambiente A terraza de diseño mañana (café+lino+libro) · 3 ambiente B atardecer (té helado+manta, 3311×4096) · 4 detalle cuerda · 5 **medidas** (overlay determinista NO IA: cotas 72 cm ancho + 75 cm alto, JetBrains Mono ink #23251D, sobre el packshot).
+- **Subida a Shopify** vía `stagedUploadsCreate` → POST GCS (201) → `productCreateMedia` → orden receta verificado (pos 0 = packshot, mediaCount = 5, todas READY ≥2000 px, alt en español).
+- **Reemplazo total:** eliminadas las 2 fotos "damasco" antiguas de baja calidad (IDs guardados por si hay que revertir: `MediaImage/70103549346116` y `/70108303589700`).
+- Coherencia validada por el usuario ("ahora sí, mucho mejor"): mismo hábitat de ático de diseño en A y B, sin choque de estilo, ambiente vivido/ASMR. ~22 créditos totales (gen + upscales).
 
 ---
 
