@@ -13,6 +13,17 @@
 
 ---
 
+## 2026-07-23 (tarde) · Toma 5 MEDIDAS — corregida + herramienta y reglas en el skill
+
+Sergio detectó dos fallos en la imagen de medidas publicada del sillón. Corregido y **grabado en el skill** para que no se repita:
+- **Fallo real:** el bounding box del producto lo medí **a ojo** y me quedé 663 px corto por la derecha → la cota de "72 cm" **no llegaba** al reposabrazos. **Fix:** detección **automática** del contorno por **neutralidad de tono** — en el packshot bone el producto es neutro (gris/antracita, R≈B) y el fondo **y la sombra** son cálidos (R−B alto); filtrando por neutralidad sale el contorno real sin contaminación de la sombra.
+- **Ambigüedad ancho/alto:** la ficha da "72×75 cm" sin desglosar. Confirmado con Sergio: **72 = ancho (horizontal), 75 = alto (vertical)**. Regla nueva: si la ficha no desglosa, **se pregunta** — en perspectiva 3/4, 3 cm son indistinguibles y la foto no lo resuelve.
+- **Etiqueta explícita:** ahora `Ancho · 72 cm` / `Alto · 75 cm` (antes solo "72 cm", que se lee al revés).
+- **Herramienta reutilizable:** `scripts/overlay_medidas_producto.py` (CLI: `--img --ancho --alto [--lado-alto] [--bbox]`), JetBrains Mono + líneas ink. Añadido el **bloque E del QA** (medidas, bloqueante) y las 3 reglas al `SKILL.md`.
+- Imagen sustituida en Shopify (`MediaImage/71232245301572`, pos 5, 4096²); galería sigue en 5 media con el packshot en pos 0.
+
+---
+
 ## 2026-07-23 · SKILL imagen — "perfil de diseñador" (ambiente por ESTILO) + Fase 0 sillón
 
 Mejora clave del skill `santavila-imagen-producto`, aprendida en la Fase 0 con un sillón contemporáneo:

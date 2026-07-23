@@ -26,7 +26,7 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 3. **Generar tomas 1–4:** por toma, `generate_image({model:"nano_banana_pro", prompt:<CORTO>, medias:[{value:media_id, role:"image"}], aspect_ratio, resolution:"1k", count:2, get_cost:true})` → preflight de coste → lanzar sin `get_cost`. (nano_banana se coerce a `nano_banana_flash`.)
 4. **Recoger:** `job_status(jobId, sync:true)` → URLs.
 5. **Upscale:** `upscale_image` a 2k/4k lo aceptado (nunca pedir 2k/4k en generación).
-6. **Toma 5 · medidas — NO IA:** overlay determinista (script) sobre la Toma 1; JetBrains Mono, líneas ink `#23251D` 70–80 %, máx. 3 cotas, dato verificado (nunca inventado).
+6. **Toma 5 · medidas — NO IA:** `python3 scripts/overlay_medidas_producto.py --img <packshot> --ancho N --alto N`. Overlay determinista sobre la Toma 1; JetBrains Mono, líneas ink `#23251D` 70–80 %, máx. 3 cotas, dato **verificado** (nunca inventado). **Tres reglas que se saltan solas y arruinan la cota** (ver más abajo): contorno automático, etiqueta explícita, cota de extremo a extremo.
 7. **QA gate (bloqueante):** ver abajo. Falla un bloqueante → regenerar, **no subir**.
 8. **Subir a Shopify:** `stagedUploadsCreate` → PUT bytes → `productCreateMedia` → `productReorderMedia` en el orden de la receta (packshot → ambientes → detalle → medidas). Verificar `mediaCount` y que la pos 0 es el packshot.
 
@@ -46,6 +46,14 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 - **D · Técnico:** ≥2000 px, nítida; ratio correcto (cover en producto); compone en 1:1 sin amputar; textura legible.
 
 Detalle completo y "tells" de IA: [`references/qa-checklist.md`](references/qa-checklist.md).
+
+## Toma 5 · medidas — las 3 reglas (lección 2026-07-23)
+Las medidas son lo más **delicado** de la galería: un cliente decide la compra con ellas.
+1. **Contorno AUTOMÁTICO, nunca "a ojo".** Medir el bbox a ojo dejó la cota de ancho corta (no llegaba al reposabrazos). En los packshots bone el producto es **neutro** (gris/antracita, R≈B) y el fondo **y la sombra** son **cálidos** (R−B alto): filtrar por neutralidad da el contorno real sin que la sombra lo contamine. Lo hace el script.
+2. **Etiqueta EXPLÍCITA:** `Ancho · 72 cm` / `Alto · 75 cm`, nunca solo "72 cm". Un "72×75" suelto es ambiguo (hay categorías que usan largo×ancho×alto) y se lee al revés.
+3. **De extremo a extremo:** cada cota debe abarcar **todo** el producto en ese eje (con sus topes en los extremos reales) y colocarse en el lado **limpio** (la sombra suele caer a la derecha → la cota vertical va a la izquierda).
+
+Si la ficha no desglosa qué medida es cuál (p. ej. "72×75 cm"), **pregunta**; no lo deduzcas de la foto: en perspectiva 3/4 una diferencia de 3 cm es indistinguible.
 
 ## Reglas rectoras (el oficio)
 - **Perfil de diseñador — el ambiente lo dicta el ESTILO (no solo el color):** lee el estilo del mueble (contemporáneo / rústico / clásico mediterráneo / industrial / boho) y ponlo en SU hábitat (contemporáneo→ático de diseño, microcemento/hormigón; rústico→caserío/madera; clásico med→cal/barro). El ambiente es **variable por producto**; la paleta y la temporada afinan la luz/consumible. Un choque de estilo (mueble moderno en caserío rústico) = "parece IA" → rechazo. Mapa completo: [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md).
