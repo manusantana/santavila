@@ -1,0 +1,13 @@
+{%- comment -%}
+  Metricool — tracker de analítica de visitas (be.js).
+
+  Snippet oficial de Metricool, tal cual lo entrega su panel. Carga el script creando
+  un <script> por JS, así que es asíncrono y NO bloquea el render (no penaliza CWV).
+
+  Cuenta (hash): 54d73844569a2a11646f3d458e0b3b5a
+  Se incluye desde layout/theme.liquid, justo antes de </body>.
+  No se ejecuta en el editor del tema para no contar visitas propias.
+{%- endcomment -%}
+{%- unless request.design_mode -%}
+  <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"54d73844569a2a11646f3d458e0b3b5a"})});</script>
+{%- endunless -%}
