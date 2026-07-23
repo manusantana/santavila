@@ -13,6 +13,21 @@
 
 ---
 
+## 2026-07-23 (tarde-2) · Metricool — tracker de analítica instalado en el tema
+
+Petición de Sergio: conectar la web con Metricool (su etiqueta JS).
+- **No se pegó suelto en un widget:** encapsulado en `snippets/santavila-metricool.liquid` y renderizado desde `layout/theme.liquid` justo antes de `</body>`. Así queda versionado en git y se retira de un solo sitio.
+- Código de Metricool **intacto** (hash `54d73844569a2a11646f3d458e0b3b5a`). Carga **asíncrona** (el propio snippet crea el `<script>` por JS) → no bloquea el render ni penaliza CWV.
+- `{%- unless request.design_mode -%}`: **no cuenta las visitas del editor** del tema.
+- **Flujo respetado:** STAGING (189491151172) → verificación por Asset API → **ok explícito de Sergio** → PROD (189222715716).
+- **Verificado en live:** `tracker.metricool.com/resources/be.js` + `beTracker.t` + el hash aparecen en la home y en la PDP (comprobado también con UA móvil); `be.js` responde HTTP 200.
+
+**⚠️ Bug detectado en `scripts/push_theme_assets.py`:** al releer el asset justo tras el PUT, la Asset API a veces devuelve todavía la versión anterior → el script declara *"Verificacion fallida: remoto != local"* siendo un **falso negativo** (comprobado: remoto y local idénticos byte a byte, en staging y en prod). Peor: hace `sys.exit()`, así que **los archivos siguientes de la lista no se suben**. PENDIENTE: añadir reintento con espera antes de dar el fallo por bueno.
+
+**PENDIENTE (legal/UE):** el tracker debería quedar cubierto por el banner de cookies. En el tema no hay banner propio (vendrá del nativo de Shopify o de una app); si se confirma cuál, condicionar la carga al consentimiento o migrarlo a *Custom Pixel* de Shopify (respeta el consentimiento de serie).
+
+---
+
 ## 2026-07-23 (tarde) · Toma 5 MEDIDAS — corregida + herramienta y reglas en el skill
 
 Sergio detectó dos fallos en la imagen de medidas publicada del sillón. Corregido y **grabado en el skill** para que no se repita:
