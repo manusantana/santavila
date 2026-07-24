@@ -13,6 +13,25 @@
 
 ---
 
+## 📍 ESTADO ACTUAL (2026-07-24) — para el compañero al actualizar el repo
+
+**Todo lo de estos días está PUBLICADO en producción (santavila.com) y con staging = prod.** No hay nada a medias ni pendiente de subir. Git: `main` sincronizado con `origin/main`, árbol limpio.
+
+Qué hay nuevo (detalle en las entradas de abajo):
+1. **Colecciones · paginación numerada SEO** (`santavila-collection-grid/hero/faq.liquid`, `meta-tags.liquid`) — sustituye el "Cargar más". 24/página, serie `‹ 1 2 3 4 ›` a 1 clic, canonical self, título "Página N", FAQ/intro solo en pág. 1. **En PROD y STAGING.**
+2. **Metricool** (`snippets/santavila-metricool.liquid` + `layout/theme.liquid`) — tracker de analítica en el footer. **En PROD y STAGING** y midiendo.
+3. **Galería del sillón** `sillon-exterior-estilo-elegante-7275-cm` (`Product/15507125502276`) — 5 imágenes 4K generadas con Higgsfield (packshot, 2 ambientes, detalle, medidas). **En Shopify (catálogo live).**
+4. **Skill de imagen** (`.claude/skills/santavila-imagen-producto/` + `scripts/overlay_medidas_producto.py`) — perfil de diseñador (ambiente por estilo) + Toma 5 de medidas. Solo repo.
+5. **Fix** `scripts/push_theme_assets.py` — reintenta la verificación (falso negativo de la Asset API) y no corta subidas multi-archivo.
+
+**Ojo temas Shopify:** trabajamos sobre **STAGING 189491151172** y **PROD/LIVE 189222715716**; el DEV legacy 189114876228 sigue divergido, no usarlo. Todo se sube por `scripts/push_theme_assets.py` (Asset API), nunca por CLI push sin `--path`.
+
+**Pendientes menores (no bloquean nada):**
+- Metricool debería quedar bajo el **consentimiento de cookies** (UE); falta confirmar qué banner usa la tienda.
+- Medidas del sillón: solo 72×75 (ancho×alto); si aparece el **fondo** real, añadir 3ª cota.
+
+---
+
 ## 2026-07-23 (tarde-3) · Colecciones — paginación numerada SEO (adiós "Cargar más")
 
 Sergio pide, como SEO senior, sustituir el "Cargar más" por paginación real. Investigado (Google + fuentes 2026) y auditado el estado actual.
