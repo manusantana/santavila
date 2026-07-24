@@ -62,8 +62,13 @@
   {%- endcase -%}
 {%- endcapture -%}
 
-{%- comment -%} window_size: 2 → serie compacta (1 … 3 [4] 5 … 9) que cabe en móvil {%- endcomment -%}
-{%- paginate collection.products by per_page, window_size: 2 -%}
+{%- comment -%}
+  window_size: 4 → con ≤9 páginas se muestran TODAS sin elipsis. El catálogo no pasa
+  de 4 páginas por colección (88 prod / 24), así que la serie sale siempre completa
+  (1 2 3 4) → cada página a 1 clic real. Si algún día una colección supera 9 páginas,
+  aparecerán elipsis y el layout ya envuelve en móvil (verificado).
+{%- endcomment -%}
+{%- paginate collection.products by per_page, window_size: 4 -%}
 <div class="sv-coll color-{{ s.color_scheme }}">
   <div class="sv-filterbar">
     <div class="sv-container sv-filterbar__in">

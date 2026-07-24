@@ -26,7 +26,8 @@ Sergio pide, como SEO senior, sustituir el "Cargar más" por paginación real. I
 - **Anti-duplicación en paginadas (revisión profunda):** la intro editorial del hero y **el FAQ con su schema `FAQPage`** solo se renderizan en `current_page == 1` (antes el schema FAQPage se repetía en las 8 páginas = señal SEO negativa). El **H1 se mantiene** en todas (cada página indexable lo necesita).
 - **Responsive verificado objetivamente** con Chrome headless midiendo `scrollWidth` en contenedores de 300/328/358 px: la serie **envuelve en 2 filas sin desbordar**; celdas ≥44 px (WCAG 2.5.5 área táctil); 1 fila en tablet/desktop. Estructura de **un solo nivel flex-wrap** (prev/números/next como `<li>` hermanos) tras detectar que el `<ol>` anidado como flex-item desbordaba.
 - Liquid balanceado, schema JSON válido, theme-check sin errores nuevos (el único error es el `ImgWidthAndHeight` preexistente del lightbox de producto).
-- Subido y verificado en **STAGING**. **Pendiente de ok de Sergio para producción** (validar el preview con sesión staff).
+- **PUBLICADO EN PRODUCCIÓN** (189222715716) con ok de Sergio y verificado en live: páginas 2/4 y la 1 (tras cache-bust) sirven la paginación numerada, canonical auto-referenciado, título "Página N", FAQ/intro solo en la página 1. El full-page cache de la página 1 refresca solo en unos minutos.
+- **Ajuste final `window_size: 4`:** con ≤9 páginas se muestran TODAS sin elipsis. Como ninguna colección pasa de 4 páginas (88/24), la serie sale siempre completa (`‹ 1 2 3 4 ›`) → cada página a **1 clic real** desde cualquier otra. Verificado en live.
 
 **Arreglado el bug de `push_theme_assets.py`** (el falso negativo de las notas anteriores): ahora **reintenta** la verificación (4 intentos con espera) antes de darla por fallida y **no aborta** el resto de archivos si uno no cuadra (acumula y sale al final). Probado: los 4 archivos en verde, exit 0.
 
