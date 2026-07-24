@@ -15,7 +15,9 @@
 
 ## 📍 ESTADO ACTUAL (2026-07-24) — para el compañero al actualizar el repo
 
-**Todo lo de estos días está PUBLICADO en producción (santavila.com) y con staging = prod.** No hay nada a medias ni pendiente de subir. Git: `main` sincronizado con `origin/main`, árbol limpio.
+**Todo lo de estos días está PUBLICADO en producción (santavila.com) y con staging = prod.** El código del tema no tiene nada a medias. Git: `main` sincronizado con `origin/main`, árbol limpio.
+
+> ⚠️ **Tarea que te dejo pendiente (MCP de Metricool):** he registrado el **conector MCP de Metricool** en Claude Code, pero **falta autenticarlo** (paso OAuth interactivo). Detalle en la entrada `2026-07-24 · MCP Metricool` de abajo. **No hay cambio de código por esto** — el MCP se guarda en la config local de Claude (`~/.claude.json`, scope *user*), **no se versiona en el repo**. O sea: al hacer `git pull` no verás nada nuevo salvo esta nota; el traspaso es justamente esta anotación.
 
 Qué hay nuevo (detalle en las entradas de abajo):
 1. **Colecciones · paginación numerada SEO** (`santavila-collection-grid/hero/faq.liquid`, `meta-tags.liquid`) — sustituye el "Cargar más". 24/página, serie `‹ 1 2 3 4 ›` a 1 clic, canonical self, título "Página N", FAQ/intro solo en pág. 1. **En PROD y STAGING.**
@@ -27,8 +29,34 @@ Qué hay nuevo (detalle en las entradas de abajo):
 **Ojo temas Shopify:** trabajamos sobre **STAGING 189491151172** y **PROD/LIVE 189222715716**; el DEV legacy 189114876228 sigue divergido, no usarlo. Todo se sube por `scripts/push_theme_assets.py` (Asset API), nunca por CLI push sin `--path`.
 
 **Pendientes menores (no bloquean nada):**
-- Metricool debería quedar bajo el **consentimiento de cookies** (UE); falta confirmar qué banner usa la tienda.
+- **[NUEVO] Autenticar el MCP de Metricool** (OAuth) — ver entrada `2026-07-24`. Es lo único vivo que te traspaso.
+- Metricool (el **tracker** del tema, cosa distinta al MCP) debería quedar bajo el **consentimiento de cookies** (UE); falta confirmar qué banner usa la tienda.
 - Medidas del sillón: solo 72×75 (ancho×alto); si aparece el **fondo** real, añadir 3ª cota.
+
+---
+
+## 2026-07-24 · MCP Metricool — conector registrado en Claude Code (falta autenticar)
+
+Sergio pide instalar el **MCP de Metricool** para operar la cuenta de Santavila (ya conectada a Metricool) desde Claude. Doc de referencia: <https://metricool.com/es/mcp-metricool-claude/>.
+
+**Qué se hizo:**
+- Registrado el servidor MCP **remoto** de Metricool, igual que el resto de conectores de la casa (Shopify, Meta Ads, Higgsfield… todos HTTP remotos):
+  ```
+  claude mcp add --transport http -s user metricool https://ai.metricool.com/mcp
+  ```
+- **Scope `user`** → disponible en todos los proyectos de Sergio, no solo en este repo. Guardado en `~/.claude.json`.
+- Verificado con `claude mcp get metricool`: `Type: http`, URL correcta, `Scope: User config`.
+
+**⚠️ Qué queda PENDIENTE (tu tarea):** el estado es **`! Needs authentication`**. La auth es **OAuth por navegador** y esta sesión era **no interactiva**, así que no se pudo completar. Para cerrarlo:
+1. En una sesión **interactiva** de Claude Code, ejecuta `/mcp`.
+2. Elige **metricool** → **Authenticate**.
+3. Se abre el navegador → inicia sesión en la cuenta de **Metricool donde está Santavila** y aprueba el acceso.
+4. Al volver, el estado pasa a `✔ Connected` y aparecen las tools de Metricool (marcas, analíticas, programación de contenido…).
+
+**Notas para que lo sepamos todos:**
+- **Esto NO toca el repo.** El MCP vive en la config local de Claude (`~/.claude.json`), no en git. Si trabajas en **otra máquina**, tendrás que ejecutar tú el mismo `claude mcp add …` antes de autenticar (no te llega por `git pull`).
+- Método alternativo que ofrece Metricool: **por token** (`METRICOOL_USER_TOKEN` + `METRICOOL_USER_ID`, desde ajustes de la cuenta). Se descartó a favor del **OAuth remoto** por coherencia con el resto de conectores y por ser el recomendado. Si en algún momento interesa el modo token (p. ej. para automatizaciones headless/cron donde no hay navegador), se reconfigura.
+- Ojo: el **tracker Metricool del tema** (`snippets/santavila-metricool.liquid`) y este **MCP** son cosas distintas — uno mide visitas en la web, el otro deja a Claude operar la cuenta. Su pendiente de cookies UE sigue siendo del tracker, no del MCP.
 
 ---
 
