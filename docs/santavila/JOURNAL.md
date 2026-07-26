@@ -15,7 +15,7 @@
 
 ## 2026-07-26 · TANDA DE IMAGEN — 6 galerías nuevas (29 imágenes 4K) con ambiente EXTERIOR + INTERIOR
 
-Producción en serie con el skill `santavila-imagen-producto`, atacando la cola de **91 productos ACTIVE con 1 sola foto**, por orden de ticket. **Nada subido a Shopify todavía** — los masters están en `images_generated/` esperando el OK de Sergio.
+Producción en serie con el skill `santavila-imagen-producto`, atacando la cola de **91 productos ACTIVE con 1 sola foto**, por orden de ticket. **PUBLICADAS en Shopify** (OK de Sergio en la misma sesión): las 6 fichas reemplazan la foto única del proveedor.
 
 **Novedad de receta (petición del dueño):** cada galería lleva **dos ambientes del MISMO hábitat** — uno **exterior** y uno **interior** (galería acristalada, porche cubierto, salón que se abre al jardín). Resuelve dos objeciones de golpe: "cómo se ve en mi terraza" y "cómo se ve en mi porche/galería", y refuerza la coherencia de secuencia (misma casa, distinto momento).
 
@@ -44,10 +44,15 @@ La pérgola es la única con **Toma 5 de medidas** (cotas verificadas del títul
 
 **Registro de localizaciones nuevo:** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) — carril de paleta, escenario exterior/interior y consumible por producto, con las regiones y bebidas **infrautilizadas** para la siguiente tanda (§11.2.d, que estaba sin implementar).
 
-**Decisiones pendientes de Sergio:**
-1. **¿Se publican en Shopify?** Reemplazar la foto única del proveedor o añadir la galería conservándola.
-2. **Sofá 220×90:** ¿90 es ALTO o FONDO? Sin ese dato no se dibuja la cota (regla del skill: si la ficha no desglosa, se pregunta).
-3. Quedan **17 créditos** de colchón para regenerar lo que no le guste antes de publicar.
+**Publicación (verificada):** las 6 fichas quedan ACTIVE con **5 media, todas READY a 4096 px, pos 0 = packshot y alt en español** en las 30. Se eliminó la foto única del proveedor de cada una; **los IDs borrados están en `images_generated/_backup_media_borrados.json`** por si hay que revertir. Comprobado en la web pública (los alt nuevos ya se sirven en la PDP).
+
+**Herramienta nueva:** [`scripts/publicar_galeria_producto.py`](../../scripts/publicar_galeria_producto.py) — dry-run por defecto, `--apply` / `--solo <carpeta>`; hace `stagedUploadsCreate` → POST de bytes → `productCreateMedia` → espera READY → `productReorderMedia` → borra los antiguos con backup. **Si alguna imagen no llega a READY, no borra nada de esa ficha.** Los alt de las 30 imágenes viven en el propio script.
+
+**Sofá 220×90:** Sergio confirma **90 = ALTO**. Cota dibujada `Ancho · 220 cm` / `Alto · 90 cm` sobre una vista frontal generada aparte.
+
+**Aviso sobre el script de cotas:** en el packshot frontal del sofá la **detección automática de contorno falló** (el viñeteado del fondo bone entra en el filtro de neutralidad y estiraba el bbox al borde de la imagen). Fallback usado: medir con `warm<8 & luma<215` + exigir ≥30 px por fila/columna, y pasar `--bbox`. **Siempre mirar la imagen resultante antes de subir una cota.**
+
+Saldo Higgsfield al cierre: **~11 créditos**.
 
 ---
 

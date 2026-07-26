@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""
+Publica en Shopify la galería generada de un producto (masters locales de `images_generated/`).
+
+Flujo (rol §7.4 / FLUJO_IMAGEN_PRODUCTO paso 7):
+  stagedUploadsCreate -> POST de los bytes -> productCreateMedia -> espera READY
+  -> productReorderMedia (orden de la receta) -> borra los media antiguos (con backup de IDs).
+
+Por defecto DRY-RUN. Con --apply ejecuta de verdad.
+
+  python3 scripts/publicar_galeria_producto.py                 # dry-run de todo
+  python3 scripts/publicar_galeria_producto.py --apply          # sube todo
+  python3 scripts/publicar_galeria_producto.py --solo brandon   # una sola ficha
+
+Seguridad:
+  - Los IDs de los media eliminados se guardan en `images_generated/_backup_media_borrados.json`
+    (permite revertir si hiciera falta).
+  - Si alguna imagen nueva no llega a READY, NO se borra nada de esa ficha.
+"""
+import json, os, sys, time, uuid, urllib.request, mimetypes
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SHOP = "mueblesexterior.myshopify.com"
+API = f"https://{SHOP}/admin/api/2025-01/graphql.json"
+APPLY = "--apply" in sys.argv
+SOLO = None
+if "--solo" in sys.argv:
+    SOLO = sys.argv[sys.argv.index("--solo") + 1]
+
+TOKEN = None
+for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
+    if line.startswith("SHOPIFY_ACCESS_TOKEN="):
+        TOKEN = line.split("=", 1)[1].strip()
+
+# carpeta -> (handle, {fichero: alt en español})
+GALERIAS = {
+    "brandon": ("set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 3 plazas, dos sillones y mesa, tapizado gris",
+        "02_ambiente_exterior_cantabria.jpg": "Set de jardín de aluminio antracita en una terraza de granito de la costa cántabra, con hortensias",
+        "03_ambiente_interior_galeria.jpg": "Sofá de 3 plazas y sillones de exterior en una galería acristalada del norte, con vistas al prado y al mar",
+        "04_asmr_material.jpg": "Detalle del brazo del sofá: tejido gris jaspeado y perfil de aluminio antracita mate con gotas de lluvia",
+        "05_asmr_cafe.jpg": "Taza de café humeante sobre la mesa auxiliar de tablero cerámico del set de jardín",
+    }),
+    "yina": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de cuerda trenzada greige con sofá de 3 plazas, dos sillones y mesa redonda, cojines crudo",
+        "02_ambiente_exterior_porxada.jpg": "Set de jardín de cuerda y cojines crudo en una porxada menorquina de piedra marés con olivos",
+        "03_ambiente_interior_payesa.jpg": "Sofá y sillones de cuerda en el salón de una casa payesa encalada, con las puertas abiertas al olivar",
+        "04_asmr_cuerda.jpg": "Detalle del trenzado de cuerda del respaldo y el cojín crudo del sofá de exterior",
+        "05_asmr_vino_higos.jpg": "Copa de vino blanco e higos partidos sobre la mesa de cuerda con tablero cerámico",
+    }),
+    "albania": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Set de jardín de aluminio gris con sofá de 3 plazas, dos sillones y mesa baja, cojines verde salvia",
+        "02_ambiente_exterior_pergola.jpg": "Set de jardín con cojines verde salvia bajo una pérgola de cañizo en una casa de huerta levantina",
+        "03_ambiente_interior_porche.jpg": "Sofá y sillones de exterior en un porche cubierto encalado, con las puertas abiertas al limonero",
+        "04_asmr_material.jpg": "Detalle del travesaño de aluminio del sillón y la trama real del cojín verde salvia",
+        "05_asmr_te_helado.jpg": "Vaso de té helado con menta sobre la mesa de lamas de aluminio, bajo la sombra del cañizo",
+    }),
+    "rinconera": ("set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Conjunto rinconera de exterior de aluminio blanco con tableros HPL y cojines arena, sofá de esquina y mesa de centro",
+        "02_ambiente_exterior_costablanca.jpg": "Rinconera de exterior blanca sobre tarima de madera en la terraza de una villa de la Costa Blanca con piscina",
+        "03_ambiente_interior_porche.jpg": "Sofá rinconero de exterior en un porche cubierto de microcemento abierto a la piscina",
+        "04_asmr_hpl.jpg": "Detalle del canto del tablero HPL con su línea oscura y el perfil de aluminio blanco mate",
+        "05_asmr_limonada_sandia.jpg": "Jarra de limonada con hielo y sandía sobre la mesa de centro HPL de la rinconera",
+    }),
+    "sofa3p_brandon": ("sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm", {
+        "01_packshot.jpg": "Sofá de terraza de 3 plazas de aluminio antracita con tapizado gris, 220x90 cm",
+        "02_ambiente_exterior_azotea_madrid.jpg": "Sofá de terraza de 3 plazas en una azotea de finca noble de Madrid al atardecer, con olivo y lavanda",
+        "03_ambiente_interior_galeria_madrid.jpg": "Sofá de exterior de 3 plazas en la galería acristalada de un piso madrileño, con suelo de terrazo",
+        "04_asmr_vermut.jpg": "Vermut con hielo y almendras marcona junto al brazo del sofá, sobre los tejados de Madrid",
+        "05_medidas.png": "Medidas del sofá de terraza de 3 plazas: 220 cm de ancho y 90 cm de alto",
+    }),
+    "pergola": ("pergola-aluminio-para-jardin-300300250-cm", {
+        "01_packshot.jpg": "Pérgola de jardín de aluminio blanco con toldo corredero de lona, 300x300x250 cm",
+        "02_ambiente_jardin.jpg": "Pérgola de aluminio blanco sobre tarima en un jardín de grava con seto y olivo, proyectando su sombra",
+        "03_bajo_la_pergola.jpg": "Vista desde debajo de la pérgola: la lona a contraluz y la sombra que crea sobre la tarima",
+        "04_asmr_perfil_carril.jpg": "Detalle del perfil de aluminio blanco de la pérgola con el carril del toldo corredero",
+        "05_medidas.png": "Medidas de la pérgola de aluminio: 300 cm de ancho y 250 cm de alto",
+    }),
+}
+
+
+def gql(query, variables=None):
+    body = json.dumps({"query": query, "variables": variables or {}}).encode()
+    req = urllib.request.Request(API, data=body, headers={
+        "Content-Type": "application/json", "X-Shopify-Access-Token": TOKEN})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        d = json.load(r)
+    if "errors" in d:
+        raise RuntimeError(d["errors"])
+    return d["data"]
+
+
+Q_PROD = """query($h:String!){ products(first:1, query:$h){ nodes{ id handle title
+  media(first:30){ nodes{ id ... on MediaImage { image{url} } } } } } }"""
+
+M_STAGED = """mutation($input:[StagedUploadInput!]!){ stagedUploadsCreate(input:$input){
+  stagedTargets{ url resourceUrl parameters{ name value } } userErrors{ field message } } }"""
+
+M_CREATE = """mutation($pid:ID!,$media:[CreateMediaInput!]!){ productCreateMedia(productId:$pid, media:$media){
+  media{ ... on MediaImage { id status } } mediaUserErrors{ field message } } }"""
+
+Q_STATUS = """query($id:ID!){ product(id:$id){ mediaCount{count}
+  media(first:30){ nodes{ id status ... on MediaImage { image{ url width height } } } } } }"""
+
+M_REORDER = """mutation($id:ID!,$moves:[MoveInput!]!){ productReorderMedia(id:$id, moves:$moves){
+  job{ id done } userErrors{ field message } } }"""
+
+M_DELETE = """mutation($pid:ID!,$ids:[ID!]!){ productDeleteMedia(productId:$pid, mediaIds:$ids){
+  deletedMediaIds mediaUserErrors{ field message } } }"""
+
+
+def post_multipart(url, params, filepath):
+    boundary = uuid.uuid4().hex
+    ctype = mimetypes.guess_type(filepath)[0] or "image/jpeg"
+    parts = []
+    for p in params:
+        parts.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{p['name']}\"\r\n\r\n{p['value']}\r\n".encode())
+    fn = os.path.basename(filepath)
+    parts.append(f"--{boundary}\r\nContent-Disposition: form-data; name=\"file\"; filename=\"{fn}\"\r\nContent-Type: {ctype}\r\n\r\n".encode())
+    parts.append(open(filepath, "rb").read())
+    parts.append(f"\r\n--{boundary}--\r\n".encode())
+    body = b"".join(parts)
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        return r.status
+
+
+def publicar(slug, handle, alts):
+    d = gql(Q_PROD, {"h": f"handle:{handle}"})["data"] if False else gql(Q_PROD, {"h": f"handle:{handle}"})
+    nodes = d["products"]["nodes"]
+    if not nodes:
+        print(f"  ✗ producto no encontrado: {handle}")
+        return None
+    p = nodes[0]
+    viejos = [m["id"] for m in p["media"]["nodes"]]
+    carpeta = os.path.join(ROOT, "images_generated", slug)
+    ficheros = sorted(f for f in os.listdir(carpeta) if f.lower().endswith((".jpg", ".png")))
+    print(f"\n== {slug} -> {p['title']}")
+    print(f"   producto: {p['id']}  media actuales: {len(viejos)}")
+    for f in ficheros:
+        print(f"   + {f}  ({os.path.getsize(os.path.join(carpeta,f))//1024} KB)  alt: {alts.get(f,'(SIN ALT)')[:70]}")
+    if not APPLY:
+        print("   [dry-run] no se sube nada")
+        return None
+
+    # 1) staged uploads
+    inputs = [{"filename": f, "mimeType": mimetypes.guess_type(f)[0] or "image/jpeg",
+               "resource": "IMAGE", "httpMethod": "POST",
+               "fileSize": str(os.path.getsize(os.path.join(carpeta, f)))} for f in ficheros]
+    targets = gql(M_STAGED, {"input": inputs})["stagedUploadsCreate"]
+    if targets["userErrors"]:
+        raise RuntimeError(targets["userErrors"])
+    media_inputs = []
+    for f, t in zip(ficheros, targets["stagedTargets"]):
+        st = post_multipart(t["url"], t["parameters"], os.path.join(carpeta, f))
+        print(f"   subido {f}: HTTP {st}")
+        media_inputs.append({"originalSource": t["resourceUrl"], "mediaContentType": "IMAGE",
+                             "alt": alts.get(f, "")})
+
+    # 2) crear media
+    res = gql(M_CREATE, {"pid": p["id"], "media": media_inputs})["productCreateMedia"]
+    if res["mediaUserErrors"]:
+        raise RuntimeError(res["mediaUserErrors"])
+    nuevos = [m["id"] for m in res["media"]]
+    print(f"   creados {len(nuevos)} media")
+
+    # 3) esperar READY
+    for intento in range(40):
+        time.sleep(4)
+        st = gql(Q_STATUS, {"id": p["id"]})["product"]
+        estados = {m["id"]: m["status"] for m in st["media"]["nodes"]}
+        pend = [i for i in nuevos if estados.get(i) != "READY"]
+        if not pend:
+            print("   todas READY")
+            break
+        print(f"   esperando READY... faltan {len(pend)}")
+    else:
+        print("   ✗ no todas llegaron a READY -> NO se borra nada")
+        return {"handle": handle, "producto": p["id"], "borrados": [], "aviso": "timeout READY"}
+
+    # 4) reordenar: los nuevos primero, en el orden de la receta
+    moves = [{"id": mid, "newPosition": str(i)} for i, mid in enumerate(nuevos)]
+    r = gql(M_REORDER, {"id": p["id"], "moves": moves})["productReorderMedia"]
+    if r["userErrors"]:
+        raise RuntimeError(r["userErrors"])
+    time.sleep(4)
+
+    # 5) borrar los antiguos
+    dl = gql(M_DELETE, {"pid": p["id"], "ids": viejos})["productDeleteMedia"]
+    if dl["mediaUserErrors"]:
+        raise RuntimeError(dl["mediaUserErrors"])
+    print(f"   borrados {len(dl['deletedMediaIds'])} media antiguos")
+
+    fin = gql(Q_STATUS, {"id": p["id"]})["product"]
+    print(f"   RESULTADO: mediaCount={fin['mediaCount']['count']}  pos0={fin['media']['nodes'][0]['image']['url'][-40:]}")
+    return {"handle": handle, "producto": p["id"], "borrados": viejos, "nuevos": nuevos}
+
+
+if __name__ == "__main__":
+    backup = []
+    for slug, (handle, alts) in GALERIAS.items():
+        if SOLO and slug != SOLO:
+            continue
+        try:
+            r = publicar(slug, handle, alts)
+            if r:
+                backup.append(r)
+        except Exception as e:
+            print(f"   ✗ ERROR en {slug}: {e}")
+    if backup:
+        path = os.path.join(ROOT, "images_generated", "_backup_media_borrados.json")
+        prev = json.load(open(path)) if os.path.exists(path) else []
+        json.dump(prev + backup, open(path, "w"), ensure_ascii=False, indent=1)
+        print(f"\nbackup de IDs -> {path}")
+    if not APPLY:
+        print("\n(dry-run: repite con --apply para publicar)")

@@ -1,0 +1,86 @@
+[
+ {
+  "handle": "set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125469508",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549313348"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254845522244",
+   "gid://shopify/MediaImage/71254845555012",
+   "gid://shopify/MediaImage/71254845587780",
+   "gid://shopify/MediaImage/71254845620548",
+   "gid://shopify/MediaImage/71254845653316"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125961028",
+  "borrados": [
+   "gid://shopify/MediaImage/70108303753540"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254846374212",
+   "gid://shopify/MediaImage/71254846406980",
+   "gid://shopify/MediaImage/71254846439748",
+   "gid://shopify/MediaImage/71254846472516",
+   "gid://shopify/MediaImage/71254846505284"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507126387012",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550624068"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254847226180",
+   "gid://shopify/MediaImage/71254847258948",
+   "gid://shopify/MediaImage/71254847291716",
+   "gid://shopify/MediaImage/71254847324484",
+   "gid://shopify/MediaImage/71254847357252"
+  ]
+ },
+ {
+  "handle": "set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128779076",
+  "borrados": [
+   "gid://shopify/MediaImage/70106376044868"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254848471364",
+   "gid://shopify/MediaImage/71254848504132",
+   "gid://shopify/MediaImage/71254848536900",
+   "gid://shopify/MediaImage/71254848569668",
+   "gid://shopify/MediaImage/71254848602436"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
+  "producto": "gid://shopify/Product/15507125338436",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549149508"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254852206916",
+   "gid://shopify/MediaImage/71254852239684",
+   "gid://shopify/MediaImage/71254852272452",
+   "gid://shopify/MediaImage/71254852305220",
+   "gid://shopify/MediaImage/71254852337988"
+  ]
+ },
+ {
+  "handle": "pergola-aluminio-para-jardin-300300250-cm",
+  "producto": "gid://shopify/Product/15507128582468",
+  "borrados": [
+   "gid://shopify/MediaImage/70108304441668"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71254853583172",
+   "gid://shopify/MediaImage/71254853615940",
+   "gid://shopify/MediaImage/71254853648708",
+   "gid://shopify/MediaImage/71254853681476",
+   "gid://shopify/MediaImage/71254853714244"
+  ]
+ }
+]
