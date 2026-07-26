@@ -55,6 +55,10 @@ Las medidas son lo más **delicado** de la galería: un cliente decide la compra
 
 Si la ficha no desglosa qué medida es cuál (p. ej. "72×75 cm"), **pregunta**; no lo deduzcas de la foto: en perspectiva 3/4 una diferencia de 3 cm es indistinguible.
 
+**4. Acota sobre una vista FRONTAL, no sobre un 3/4** (lección 2026-07-26, pérgola). En 3/4 el bbox horizontal suma el fondo en escorzo: una pérgola de 300×300 proyecta bastante más de 300 cm y la cota mentiría. Genera una toma frontal casi ortográfica aparte (*"strictly FRONTAL elevation view, camera perfectly level and centred, long lens, 135mm"*) y acota sobre ella — es además lo que pide el rol §4 (Toma 5 = frontal o perfil puro).
+
+**5. Verifica el bbox mirando la imagen.** La detección por neutralidad **falla si el fondo bone tiene viñeteado** (las esquinas se vuelven neutras y estiran el contorno al borde del cuadro). Fallback: `warm<8 & luma<215` exigiendo ≥30 px por fila/columna, y pasar `--bbox x0,y0,x1,y1`. Nunca subir una cota sin haberla visto.
+
 ## Reglas rectoras (el oficio)
 - **Perfil de diseñador — el ambiente lo dicta el ESTILO (no solo el color):** lee el estilo del mueble (contemporáneo / rústico / clásico mediterráneo / industrial / boho) y ponlo en SU hábitat (contemporáneo→ático de diseño, microcemento/hormigón; rústico→caserío/madera; clásico med→cal/barro). El ambiente es **variable por producto**; la paleta y la temporada afinan la luz/consumible. Un choque de estilo (mueble moderno en caserío rústico) = "parece IA" → rechazo. Mapa completo: [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md).
 - **Ambiente vivido + ASMR sensorial (piezas únicas):** la escena debe sentirse **habitada** (signos de uso reciente: libro abierto, manta con caída natural, cojín con huella) y activar un sentido — **vapor** del café/té, textura del lino/lana, gotas de un vaso frío, calidez de la luz. Listón: *"parece que alguien vive aquí ahora"*. **Nunca** la pieza sola en un espacio vacío y perfecto.
