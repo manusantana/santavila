@@ -56,7 +56,43 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 
 ---
 
-## 📍 ESTADO ACTUAL (2026-07-24) — para el compañero al actualizar el repo
+## 📍 ESTADO ACTUAL (2026-07-26) — dónde nos quedamos
+
+**Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir. Git: `main` == `origin/main`, árbol limpio.
+
+### Lo último: tanda de imagen (26-07)
+**6 galerías nuevas (30 imágenes 4K) generadas con Higgsfield y publicadas**, sustituyendo la foto única del proveedor en las 6 fichas de mayor ticket que estaban con 1 sola foto:
+
+| Ficha | € | Hábitat (exterior → interior) |
+|---|---|---|
+| Set Brandon 3 pl. | 5.249 | Villa cántabra → galería acristalada |
+| Set Yina (cuerda) | 4.195 | Porxada de marés (Menorca) → sala payesa |
+| Set Albania (salvia) | 3.140 | Pérgola de huerta (Levante) → porche encalado |
+| Rinconera HPL | 2.899 | Terraza de Costa Blanca → porche de microcemento |
+| Sofá terraza 3 pl. 220×90 | 2.349 | Azotea de Chamberí → galería de la finca |
+| Pérgola 300×300×250 | 2.045 | Jardín de Pozuelo → bajo la pérgola |
+
+Verificado ficha a ficha: **ACTIVE · 5 media · todas READY a 4096 px · pos 0 = packshot · 0 alt vacíos**, y los alt nuevos ya se sirven en la web pública. Los IDs de las fotos antiguas borradas están en `images_generated/_backup_media_borrados.json` (revertible).
+
+**Receta vigente de galería (decisión de Sergio, 26-07):** packshot bone → **ambiente EXTERIOR** → **ambiente INTERIOR** (galería/porche cubierto, el MISMO hábitat en otro momento) → 2 ASMR → medidas si hay cota verificada.
+
+### 👉 POR DÓNDE SEGUIR (siguiente tanda de imagen)
+1. **Quedan ~85 productos ACTIVE con 1 sola foto.** Atacar por ticket descendente; los siguientes de la lista son: set bicolor 3 pl. (4.405 €), set 3 pl. contemporáneo (4.195 €, *ojo: hay varios handles parecidos*), set 2 pl. moderno (3.819 €), cama balinesa (2.815 €), balancín (1.805 €).
+2. **Consultar SIEMPRE antes de elegir escena:** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) — dice qué localización y qué consumible se han usado ya. **Libres/infrautilizadas:** País Vasco, Galicia, Salamanca, Córdoba, campiña sevillana, Ibiza, Segovia, HORECA · bebidas libres: caldo/té del norte, queso y pan, tinto de verano, cerveza, granada, horchata.
+3. **Presupuesto:** 2 créditos por imagen (generada o upscalada) → **~32 créditos por galería**. Saldo Higgsfield al cierre: **~13 créditos** → hay que recargar antes de seguir.
+4. **Publicar es un comando:** `python3 scripts/publicar_galeria_producto.py` (dry-run) y `--apply --solo <carpeta>`. Añadir la ficha nueva al dict `GALERIAS` con sus alt en español.
+
+### Otros pendientes (no bloquean)
+- **Autenticar el MCP de Metricool** (OAuth interactivo, ver entrada `2026-07-24`). No hay cambio de código; el MCP vive en `~/.claude.json` (scope *user*), no en el repo.
+- Metricool (el **tracker** del tema, distinto del MCP) debería quedar bajo el **consentimiento de cookies** (UE); falta confirmar qué banner usa la tienda.
+- Medidas del sillón `7275`: solo 72×75 (ancho×alto); si aparece el **fondo** real, añadir 3ª cota.
+- Del sofá 220×90 solo hay ancho y alto (90 = alto, confirmado por Sergio); si aparece el fondo, 3ª cota.
+
+**Ojo temas Shopify:** trabajamos sobre **STAGING 189491151172** y **PROD/LIVE 189222715716**; el DEV legacy 189114876228 sigue divergido, no usarlo. Todo se sube por `scripts/push_theme_assets.py` (Asset API), nunca por CLI push sin `--path`.
+
+---
+
+## 📍 Estado previo (2026-07-24) — tema y colecciones
 
 **Todo lo de estos días está PUBLICADO en producción (santavila.com) y con staging = prod.** El código del tema no tiene nada a medias. Git: `main` sincronizado con `origin/main`, árbol limpio.
 
