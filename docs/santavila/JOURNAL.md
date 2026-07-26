@@ -13,6 +13,44 @@
 
 ---
 
+## 2026-07-26 · TANDA DE IMAGEN — 6 galerías nuevas (29 imágenes 4K) con ambiente EXTERIOR + INTERIOR
+
+Producción en serie con el skill `santavila-imagen-producto`, atacando la cola de **91 productos ACTIVE con 1 sola foto**, por orden de ticket. **Nada subido a Shopify todavía** — los masters están en `images_generated/` esperando el OK de Sergio.
+
+**Novedad de receta (petición del dueño):** cada galería lleva **dos ambientes del MISMO hábitat** — uno **exterior** y uno **interior** (galería acristalada, porche cubierto, salón que se abre al jardín). Resuelve dos objeciones de golpe: "cómo se ve en mi terraza" y "cómo se ve en mi porche/galería", y refuerza la coherencia de secuencia (misma casa, distinto momento).
+
+**Galerías (5 tomas cada una: packshot bone → ambiente exterior → ambiente interior 4:5 → 2 ASMR):**
+| Producto | € | Hábitat (exterior + interior) | Consumible |
+|---|---|---|---|
+| Set jardín aluminio 3 pl. "Brandon" | 5.249 | Villa cántabra: terraza de granito + **galería acristalada con lluvia** | café + galletas |
+| Set jardín 3 pl. "Yina" (cuerda) | 4.195 | Menorca: porxada de marés + sala payesa con cortina de lino | higos + vino blanco |
+| Set jardín 3 pl. "Albania" (salvia) | 3.140 | Huerta de Levante: pérgola de cañizo + porche encalado | aceitunas/almendras · té helado |
+| Set rinconera HPL | 2.899 | Villa Costa Blanca: tarima + porche de microcemento | limonada + sandía |
+| Sofá terraza 3 pl. 220×90 | 2.349 | Madrid noble: azotea de Chamberí + galería de la finca | vermut + almendras |
+| Pérgola aluminio 300×300×250 | 2.045 | Jardín de Pozuelo + **bajo la pérgola** (su sombra) | — |
+
+La pérgola es la única con **Toma 5 de medidas** (cotas verificadas del título). Se generó **una vista frontal casi ortográfica aparte** para acotarla: en 3/4 el ancho proyectado NO son los 300 cm reales y la cota mentiría. Cotas `Ancho · 300 cm` / `Alto · 250 cm` por overlay determinista.
+
+**Fidelidad — fallos cazados y corregidos en QA (los tres son de Ley 1):**
+- **Mesa redonda convertida en rectangular** en el primer ambiente de Brandon → se regeneró nombrando la geometría (*"ROUND nesting tables, round never rectangular"*). Lección: **nombrar la FORMA de cada pieza en el prompt**, no solo el material.
+- **Cortinas laterales inventadas** en las dos candidatas de "bajo la pérgola" (el producto no las tiene) → regenerado con negativo explícito.
+- **Tercer sillón inventado** en un interior de Yina (el set lleva 2) → se usó la candidata hermana. El `count:2` pagó por sí solo.
+- **Extras del proveedor eliminados**: los reposapiés y las personas de las fotos originales se quitan (las fichas incluyen *sofá + 2 sillones + mesa*, nada más). Quitar es seguro; inventar, nunca.
+- **Coherencia de secuencia:** un ASMR de Albania salió con playa de fondo (venía de la foto original de Cádiz) → regenerado con el hábitat correcto.
+
+**Escala y personas:** ninguna toma con cuerpo entero. La vida la dan **manos** (café, vino) y los consumibles, con la mano como ancla de 18 cm → se esquiva por diseño la doble puerta §13.bis. QA anatómico hecho **tras el upscale a 4K** (dedos contados). En los ambientes sin persona, escena **en reposo**: cojines mullidos, sin vapor, sin huella de cuerpo (§10, tell de IA).
+
+**Coste real (útil para presupuestar el escalado): 2 créditos por imagen generada y 2 por upscale.** ~194 créditos para 6 galerías = **~32 créditos/galería** (incluidas regeneraciones). Saldo Higgsfield: **211 → 17**.
+
+**Registro de localizaciones nuevo:** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) — carril de paleta, escenario exterior/interior y consumible por producto, con las regiones y bebidas **infrautilizadas** para la siguiente tanda (§11.2.d, que estaba sin implementar).
+
+**Decisiones pendientes de Sergio:**
+1. **¿Se publican en Shopify?** Reemplazar la foto única del proveedor o añadir la galería conservándola.
+2. **Sofá 220×90:** ¿90 es ALTO o FONDO? Sin ese dato no se dibuja la cota (regla del skill: si la ficha no desglosa, se pregunta).
+3. Quedan **17 créditos** de colchón para regenerar lo que no le guste antes de publicar.
+
+---
+
 ## 📍 ESTADO ACTUAL (2026-07-24) — para el compañero al actualizar el repo
 
 **Todo lo de estos días está PUBLICADO en producción (santavila.com) y con staging = prod.** El código del tema no tiene nada a medias. Git: `main` sincronizado con `origin/main`, árbol limpio.
