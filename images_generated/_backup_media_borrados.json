@@ -166,5 +166,33 @@
    "gid://shopify/MediaImage/71268873961796",
    "gid://shopify/MediaImage/71268873994564"
   ]
+ },
+ {
+  "handle": "set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507127664964",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554228548"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71270654935364",
+   "gid://shopify/MediaImage/71270654968132",
+   "gid://shopify/MediaImage/71270655000900",
+   "gid://shopify/MediaImage/71270655033668",
+   "gid://shopify/MediaImage/71270655066436"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-4",
+  "producto": "gid://shopify/Product/15507127042372",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552262468"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71270655295812",
+   "gid://shopify/MediaImage/71270655328580",
+   "gid://shopify/MediaImage/71270655361348",
+   "gid://shopify/MediaImage/71270655394116",
+   "gid://shopify/MediaImage/71270655426884"
+  ]
  }
 ]

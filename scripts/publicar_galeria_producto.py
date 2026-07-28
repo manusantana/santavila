@@ -33,8 +33,8 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-28 B (en preparación — descomentar al tener los masters)
-GALERIAS_PREP = {
+# TANDA 2026-07-28 B (activa)
+GALERIAS = {
     "diva2p": ("set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín bicolor de aluminio gris tórtola con sofá de 2 plazas, dos sillones de lamas antracita y mesa de centro, cojines crudo",
         "02_ambiente_exterior_cordoba.jpg": "Set de jardín bicolor en un patio cordobés encalado, con macetas de geranios en la pared y un limonero en tinaja",
@@ -51,8 +51,8 @@ GALERIAS_PREP = {
     }),
 }
 
-# TANDA 2026-07-28 (publicada)
-GALERIAS = {
+# TANDA 2026-07-28 A (ya publicada, se conserva como referencia)
+GALERIAS_TANDA_A = {
     "brandon2p": ("set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 2 plazas, dos sillones y dos mesas nido redondas, tapizado gris",
         "02_ambiente_exterior_bilbao.jpg": "Set de jardín de aluminio antracita en la terraza de hormigón de un loft de Bilbao, con la ría al fondo",

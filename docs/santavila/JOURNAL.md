@@ -13,13 +13,16 @@
 
 ---
 
-## 2026-07-28 (tarde) · TANDA B a medias — bloqueada por la cola de Higgsfield
+## 2026-07-28 (tarde) · TANDA B — 2 galerías más publicadas (14 fichas ya renovadas)
 
-Arrancada la siguiente tanda por ticket. **Generado y con QA hecho:** Diva bicolor 2 pl. (3.965 €, patio cordobés) — packshot, exterior, interior y ASMR de naranjas aprobados. **Generado y en QA:** Albania 2 pl. (2.815 €, Asturias) — packshot y exterior aprobados.
+| Ficha | € | Hábitat (exterior → interior) | Consumible |
+|---|---|---|---|
+| Set Diva bicolor 2 pl. | 3.965 | Patio cordobés contemporáneo → zaguán abovedado de barro | Naranjas partidas |
+| Set Albania 2 pl. | 2.815 | Terraza sobre el puerto pesquero, Asturias → porche de columnas de piedra | Sidra escanciada |
 
-**Incidencia:** desde media tarde la cola de Higgsfield dejó de drenar; ~28 imágenes quedaron en estado `queued`/`waiting` más de 30 minutos. **Los créditos se descuentan al encolar**, así que ya están pagadas (saldo 702,5) y los jobs siguen vivos: al recuperarse el servicio se recogen con `job_status` y se sigue desde ahí. No hay que relanzarlas.
+Verificado: **ACTIVE · 5 media · READY · ≥3311 px · pos 0 = packshot · 0 alt vacíos**.
 
-**Los alt y handles de estas dos fichas ya están escritos** en el dict `GALERIAS_PREP` de `scripts/publicar_galeria_producto.py` — al tener los masters basta con mover el bloque a `GALERIAS` y publicar.
+**Incidencia del proveedor (resuelta):** a media tarde la cola de Higgsfield dejó de drenar durante ~45 minutos — ~28 imágenes en `queued`/`waiting`, y un job nuevo de prueba también se quedó parado (confirmando que era el servicio, no los jobs). **Los créditos se descuentan al encolar**, así que no se relanzó nada: al recuperarse, todo se recogió con `job_status` sin regenerar ni pagar de nuevo. Lección: ante una cola parada, **no reencolar** — esperar y recoger.
 
 ### Hallazgo: duplicado de catálogo (decisión de Sergio)
 `set-jardin-3-plazas-sofisticado-...-mesa-3` y `...-mesa-4` son **el mismo producto**: misma foto de proveedor (`1739535555_ALBANIA-10.jpg`), mismo precio (3.140 €) y misma composición. El `-3` ya se renovó el 26-07. **No se ha generado galería para el `-4`** para no crear contenido duplicado. Opciones: fusionar las dos fichas, despublicar una, o clonarle las imágenes del `-3`.
@@ -107,13 +110,14 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
-### Lo último: segunda tanda de imagen (28-07)
-6 galerías más publicadas (Brandon 2 pl., Diva bicolor, Yina 2 pl., Damasco, Bellagio, cama balinesa). Con la tanda del 26-07 son **12 fichas renovadas** de las ~91 que tenían una sola foto. Detalle completo y lecciones de QA en la entrada `2026-07-28` de arriba.
+### Lo último: tandas de imagen del 28-07
+8 galerías publicadas hoy (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **14 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~79 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set bicolor 2 pl. (3.965 €), set 3 pl. sofisticado Albania-4 (3.140 €), set 2 pl. elegante Albania-09 (2.815 €), set 3 pl. elegante Dounvil (2.779 €), set 3 pl. contemporáneo Acapulco (2.765 €), set 3 pl. elegante Odin (2.645 €), set 3 pl. urbano Manhattan (2.405 €).
+1. **Quedan ~77 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set 3 pl. elegante Dounvil (2.779 €), set 3 pl. contemporáneo Acapulco (2.765 €, *mesa de tablero de CRISTAL — ojo a la fidelidad*), set 3 pl. elegante Odin (2.645 €), set 3 pl. urbano Manhattan (2.405 €), set 2 pl. contemporáneo (2.405 €).
+   **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
 2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
-3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield: **~755** → alcanza para ~22 galerías más.
+3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield al cierre del 28-07: **~660** → alcanza para ~19 galerías más.
 4. **Publicar es un comando:** añade la ficha al dict `GALERIAS` de `scripts/publicar_galeria_producto.py` con sus alt en español, `dry-run`, y luego `--apply`.
 5. **Antes de aprobar una galería, recorta la foto real del proveedor a alta resolución** sobre las piezas dudosas (tableros, paneles, herrajes). Es lo que cazó los dos fallos de fidelidad de Diva.
 
