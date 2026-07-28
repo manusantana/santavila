@@ -37,9 +37,9 @@
 | **`set-jardin-3-plazas-contemporaneo-...-mesa-5`** (Acapulco) | blanco + gris claro, mesa de CRISTAL / **blanco** | Blanco/barro | **B12 Terraza valenciana** — suelo de barro, persianas de esparto, romero y naranjo en tinaja | **B12 interior** — porche encalado con persiana de esparto, abierto al jardín | horchata + fartons |
 
 ## Cobertura regional (acumulado)
-Cantabria · Levante (Murcia) · Baleares (Menorca, **Ibiza**, **Mallorca**) · C. Valenciana (Costa Blanca) · Madrid residencial (Pozuelo) · Madrid noble (Chamberí) · **País Vasco (Bilbao)** · **Cádiz** · **campiña sevillana** · **Almería (Cabo de Gata)** · *(previas: Barcelona, Galicia, Salamanca, Toledo)*.
+Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería) · *(previas: Barcelona, Salamanca, Toledo)*.
 
-**Infrautilizadas — empujar en las próximas tandas:** Galicia (A1, 1 uso), Salamanca (A6, 1 uso), Córdoba (B1), HORECA (A8/B9), Segovia (C2), Asturias, Extremadura, Aragón/Pirineo, Canarias (con cuidado: nunca resort).
+**Infrautilizadas — empujar en las próximas tandas:** Salamanca (1 uso), HORECA (A8/B9), Extremadura, Aragón/Pirineo, La Rioja, Murcia capital, Málaga/Axarquía, Tarragona/Costa Daurada, Canarias (con cuidado: nunca resort).
 
 ## Anti-repetición de consumible
 Usados: café+galletas · aceitunas+almendras · té helado · vino blanco+higos · limonada+sandía · vermut+almendras marcona · cerveza+aceitunas · granada+agua con hielo · tinto de verano+almendras · queso+pan+aceite · tomate raf+aceite · **naranjas+zumo** · **sidra+queso azul** · **albariño+berberechos** · **horchata+fartons** · **botijo+agua** · **gazpacho+picatostes**.
