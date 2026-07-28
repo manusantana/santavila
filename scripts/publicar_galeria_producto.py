@@ -33,8 +33,26 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-28 B (activa)
+# TANDA 2026-07-28 C (activa)
 GALERIAS = {
+    "dounvil3p": ("set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Set de jardín elegante de aluminio antracita con sofá de 3 plazas, dos sillones con aspa lateral y mesa de centro de lamas, cojines azul grisáceo",
+        "02_ambiente_exterior_costadamorte.jpg": "Set de jardín antracita en una terraza de granito de la Costa da Morte, con tojo en flor, brezo y el Atlántico rompiendo abajo",
+        "03_ambiente_interior_galeria.jpg": "Sofá y sillones de exterior en una galería acristalada gallega de carpintería blanca, con el mar y las rocas al otro lado del cristal",
+        "04_asmr_aspa.jpg": "Detalle del aspa en X de aluminio antracita mate del lateral del sillón junto a la costura del cojín azul grisáceo",
+        "05_asmr_albarino.jpg": "Copa de albariño frío con condensación y un plato de berberechos con limón sobre la mesa de lamas",
+    }),
+    "acapulco3p": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de aluminio blanco con sofá de 3 plazas, dos sillones y mesa de centro con tablero de cristal, cojines gris claro",
+        "02_ambiente_exterior_valencia.jpg": "Set de jardín blanco en una terraza valenciana de suelo de barro, con persianas de esparto, romero y un naranjo en tinaja",
+        "03_ambiente_interior_porche.jpg": "Sofá y sillones de exterior en un porche valenciano encalado con persiana de esparto y suelo de barro, abierto al jardín",
+        "04_asmr_cristal.jpg": "Detalle del canto del tablero de cristal de la mesa apoyado en el perfil de aluminio blanco mate",
+        "05_asmr_horchata.jpg": "Vaso de horchata fría con fartons sobre el tablero de cristal de la mesa de centro",
+    }),
+}
+
+# TANDA 2026-07-28 B (ya publicada)
+GALERIAS_TANDA_B = {
     "diva2p": ("set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín bicolor de aluminio gris tórtola con sofá de 2 plazas, dos sillones de lamas antracita y mesa de centro, cojines crudo",
         "02_ambiente_exterior_cordoba.jpg": "Set de jardín bicolor en un patio cordobés encalado, con macetas de geranios en la pared y un limonero en tinaja",

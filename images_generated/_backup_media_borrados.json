@@ -194,5 +194,33 @@
    "gid://shopify/MediaImage/71270655394116",
    "gid://shopify/MediaImage/71270655426884"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507128090948",
+  "borrados": [
+   "gid://shopify/MediaImage/70108304212292"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71272567505220",
+   "gid://shopify/MediaImage/71272567537988",
+   "gid://shopify/MediaImage/71272567570756",
+   "gid://shopify/MediaImage/71272567603524",
+   "gid://shopify/MediaImage/71272567636292"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
+  "producto": "gid://shopify/Product/15507128549700",
+  "borrados": [
+   "gid://shopify/MediaImage/70108304408900"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71272571339076",
+   "gid://shopify/MediaImage/71272571371844",
+   "gid://shopify/MediaImage/71272571404612",
+   "gid://shopify/MediaImage/71272571437380",
+   "gid://shopify/MediaImage/71272571470148"
+  ]
  }
 ]
