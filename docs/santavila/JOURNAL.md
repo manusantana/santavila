@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-07-28 (tarde) · TANDA B a medias — bloqueada por la cola de Higgsfield
+
+Arrancada la siguiente tanda por ticket. **Generado y con QA hecho:** Diva bicolor 2 pl. (3.965 €, patio cordobés) — packshot, exterior, interior y ASMR de naranjas aprobados. **Generado y en QA:** Albania 2 pl. (2.815 €, Asturias) — packshot y exterior aprobados.
+
+**Incidencia:** desde media tarde la cola de Higgsfield dejó de drenar; ~28 imágenes quedaron en estado `queued`/`waiting` más de 30 minutos. **Los créditos se descuentan al encolar**, así que ya están pagadas (saldo 702,5) y los jobs siguen vivos: al recuperarse el servicio se recogen con `job_status` y se sigue desde ahí. No hay que relanzarlas.
+
+**Los alt y handles de estas dos fichas ya están escritos** en el dict `GALERIAS_PREP` de `scripts/publicar_galeria_producto.py` — al tener los masters basta con mover el bloque a `GALERIAS` y publicar.
+
+### Hallazgo: duplicado de catálogo (decisión de Sergio)
+`set-jardin-3-plazas-sofisticado-...-mesa-3` y `...-mesa-4` son **el mismo producto**: misma foto de proveedor (`1739535555_ALBANIA-10.jpg`), mismo precio (3.140 €) y misma composición. El `-3` ya se renovó el 26-07. **No se ha generado galería para el `-4`** para no crear contenido duplicado. Opciones: fusionar las dos fichas, despublicar una, o clonarle las imágenes del `-3`.
+
+### Correcciones de QA de esta tanda B
+- **Diva 2 pl.:** el detalle de lamas salía en tono tórtola claro por la luz rasante cuando el real es **antracita casi negro** (verificado recortando la foto del proveedor). Regenerado con luz difusa. El primer intento de interior perdía un sillón; el segundo oscurecía el chasis a contraluz — regenerado exigiendo las tres piezas visibles y sin contraluz. Las dos ASMR heredaban **palmeras/monstera** del fondo original: regeneradas con muro encalado.
+- **Albania 2 pl.:** el exterior en terraza de granito con hortensias y mar salía **casi idéntico a la villa cántabra del Brandon 3 pl.** (mismo carril atlántico). Aunque el registro solo obliga a sustituir con ≥2 coincidencias, se cambió a **terraza sobre un puerto pesquero asturiano** — inconfundible y sin riesgo de que el catálogo lea "la misma casa dos veces".
+
+---
+
 ## 2026-07-28 · TANDA DE IMAGEN — 6 galerías más (30 imágenes 4K), 12 fichas ya renovadas
 
 Segunda tanda en serie con el skill `santavila-imagen-producto`, siguiendo por ticket descendente la cola de productos con 1 sola foto. **Publicadas y verificadas en Shopify**: las 6 fichas sustituyen la foto única del proveedor.
