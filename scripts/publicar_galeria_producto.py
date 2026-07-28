@@ -33,7 +33,25 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-28 (activa)
+# TANDA 2026-07-28 B (en preparación — descomentar al tener los masters)
+GALERIAS_PREP = {
+    "diva2p": ("set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín bicolor de aluminio gris tórtola con sofá de 2 plazas, dos sillones de lamas antracita y mesa de centro, cojines crudo",
+        "02_ambiente_exterior_cordoba.jpg": "Set de jardín bicolor en un patio cordobés encalado, con macetas de geranios en la pared y un limonero en tinaja",
+        "03_ambiente_interior_zaguan.jpg": "Sofá y sillones de exterior en el zaguán abovedado de una casa cordobesa, con suelo de barro y reja de forja al patio",
+        "04_asmr_lamas.jpg": "Detalle del lateral del sillón: lamas de aluminio antracita encajadas en el marco gris tórtola",
+        "05_asmr_naranjas.jpg": "Naranjas partidas y un vaso de zumo recién exprimido sobre el tablero de madera de la mesa de centro",
+    }),
+    "albania2p": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-4", {
+        "01_packshot.jpg": "Set de jardín elegante de aluminio antracita con sofá de 2 plazas, dos sillones de travesaño en V y mesa de centro de lamas, cojines crudo",
+        "02_ambiente_exterior_asturias.jpg": "Set de jardín antracita en una terraza asturiana sobre el puerto pesquero, con las casas del pueblo y las barcas al fondo",
+        "03_ambiente_interior_porche.jpg": "Sofá y sillones de exterior en el porche de columnas de piedra de una casona asturiana, abierto al prado y al mar",
+        "04_asmr_travesano.jpg": "Detalle del travesaño diagonal en V de aluminio antracita del sillón junto a la costura del cojín crudo",
+        "05_asmr_sidra.jpg": "Vaso ancho de sidra natural recién escanciada junto a un plato de queso y pan sobre la mesa de lamas",
+    }),
+}
+
+# TANDA 2026-07-28 (publicada)
 GALERIAS = {
     "brandon2p": ("set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 2 plazas, dos sillones y dos mesas nido redondas, tapizado gris",
