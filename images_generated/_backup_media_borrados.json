@@ -82,5 +82,89 @@
    "gid://shopify/MediaImage/71254853681476",
    "gid://shopify/MediaImage/71254853714244"
   ]
+ },
+ {
+  "handle": "set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125403972",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549247812"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268859216196",
+   "gid://shopify/MediaImage/71268859248964",
+   "gid://shopify/MediaImage/71268859281732",
+   "gid://shopify/MediaImage/71268859314500",
+   "gid://shopify/MediaImage/71268859347268"
+  ]
+ },
+ {
+  "handle": "set-jardin-bicolor-3-plazas-bicolor-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507127697732",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554261316"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268861903172",
+   "gid://shopify/MediaImage/71268861935940",
+   "gid://shopify/MediaImage/71268861968708",
+   "gid://shopify/MediaImage/71268862001476",
+   "gid://shopify/MediaImage/71268862034244"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125895492",
+  "borrados": [
+   "gid://shopify/MediaImage/70108303720772"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268864852292",
+   "gid://shopify/MediaImage/71268864885060",
+   "gid://shopify/MediaImage/71268864917828",
+   "gid://shopify/MediaImage/71268864950596",
+   "gid://shopify/MediaImage/71268864983364"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125666116",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549575492"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268867080516",
+   "gid://shopify/MediaImage/71268867113284",
+   "gid://shopify/MediaImage/71268867146052",
+   "gid://shopify/MediaImage/71268867178820",
+   "gid://shopify/MediaImage/71268867211588"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507126354244",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550591300"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268871045444",
+   "gid://shopify/MediaImage/71268871078212",
+   "gid://shopify/MediaImage/71268871110980",
+   "gid://shopify/MediaImage/71268871143748",
+   "gid://shopify/MediaImage/71268871176516"
+  ]
+ },
+ {
+  "handle": "balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8",
+  "producto": "gid://shopify/Product/15512247861572",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514861892"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71268873863492",
+   "gid://shopify/MediaImage/71268873896260",
+   "gid://shopify/MediaImage/71268873929028",
+   "gid://shopify/MediaImage/71268873961796",
+   "gid://shopify/MediaImage/71268873994564"
+  ]
  }
 ]

@@ -59,6 +59,12 @@ Si la ficha no desglosa qué medida es cuál (p. ej. "72×75 cm"), **pregunta**;
 
 **5. Verifica el bbox mirando la imagen.** La detección por neutralidad **falla si el fondo bone tiene viñeteado** (las esquinas se vuelven neutras y estiran el contorno al borde del cuadro). Fallback: `warm<8 & luma<215` exigiendo ≥30 px por fila/columna, y pasar `--bbox x0,y0,x1,y1`. Nunca subir una cota sin haberla visto.
 
+## Packshot de SET (conjunto de varias piezas) — lección 2026-07-28
+Un set (sofá + 2 sillones + mesa) es **ancho y bajo**: en 1:1 deja fondo por encima de los respaldos y es **normal**. No intentes eliminarlo pidiendo un encuadre cerrado: probado en 4 fichas, el modelo acerca la cámara y **corta los dos sillones laterales** (y en un caso metió un tercer sillón parcial). En un packshot de conjunto el cliente tiene que **contar las piezas**, así que:
+- **Prioridad: todas las piezas completas dentro del cuadro** > llenar el cuadro.
+- La disposición en **U** ("U-shaped conversation layout") es la que mejor reparte el set en 1:1; el fondo bone sobrante es respiración de estudio, no aire muerto.
+- El recorte en post **no** lo arregla: si el set ya ocupa ~90 % del ancho, no hay margen para recentrar sin amputar. Mídelo antes de gastar créditos.
+
 ## Reglas rectoras (el oficio)
 - **Perfil de diseñador — el ambiente lo dicta el ESTILO (no solo el color):** lee el estilo del mueble (contemporáneo / rústico / clásico mediterráneo / industrial / boho) y ponlo en SU hábitat (contemporáneo→ático de diseño, microcemento/hormigón; rústico→caserío/madera; clásico med→cal/barro). El ambiente es **variable por producto**; la paleta y la temporada afinan la luz/consumible. Un choque de estilo (mueble moderno en caserío rústico) = "parece IA" → rechazo. Mapa completo: [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md).
 - **Ambiente vivido + ASMR sensorial (piezas únicas):** la escena debe sentirse **habitada** (signos de uso reciente: libro abierto, manta con caída natural, cojín con huella) y activar un sentido — **vapor** del café/té, textura del lino/lana, gotas de un vaso frío, calidez de la luz. Listón: *"parece que alguien vive aquí ahora"*. **Nunca** la pieza sola en un espacio vacío y perfecto.

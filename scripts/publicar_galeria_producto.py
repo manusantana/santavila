@@ -33,7 +33,54 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
+# TANDA 2026-07-28 (activa)
 GALERIAS = {
+    "brandon2p": ("set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 2 plazas, dos sillones y dos mesas nido redondas, tapizado gris",
+        "02_ambiente_exterior_bilbao.jpg": "Set de jardín de aluminio antracita en la terraza de hormigón de un loft de Bilbao, con la ría al fondo",
+        "03_ambiente_interior_loft.jpg": "Sofá de 2 plazas y sillones de exterior en un loft acristalado de Bilbao, con suelo de hormigón pulido y pared de ladrillo",
+        "04_asmr_chenille.jpg": "Detalle del brazo del sofá: tejido gris jaspeado de chenille y perfil de aluminio antracita mate",
+        "05_asmr_cerveza.jpg": "Cerveza fría con condensación y un plato de aceitunas sobre la mesa nido redonda de tablero cerámico gris",
+    }),
+    "diva3p": ("set-jardin-bicolor-3-plazas-bicolor-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín bicolor con sofá de 3 plazas, dos sillones y mesa de centro, aluminio blanco con lamas antracita y cojines crudo",
+        "02_ambiente_exterior_ibiza.jpg": "Set de jardín bicolor en el patio encalado de una casa payesa de Ibiza, con sabina y suelo de grava clara",
+        "03_ambiente_interior_payes.jpg": "Sofá de 3 plazas y sillones de exterior en un salón ibicenco encalado con techo de troncos de sabina",
+        "04_asmr_lamas.jpg": "Detalle del lateral del sillón: lamas de aluminio antracita encajadas en el marco blanco junto al cojín crudo",
+        "05_asmr_granada.jpg": "Granada partida y vaso de agua con hielo sobre el tablero blanco de la mesa de centro",
+    }),
+    "yina2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín moderno de cuerda trenzada gris con sofá de 2 plazas, dos sillones y mesa redonda, cojines azul claro",
+        "02_ambiente_exterior_cadiz.jpg": "Set de jardín de cuerda con cojines azules en la azotea de una casa de Cádiz, con la catedral y el Atlántico al fondo",
+        "03_ambiente_interior_gaditano.jpg": "Sofá y sillones de cuerda en un salón gaditano de baldosa hidráulica, con el balcón abierto al mar",
+        "04_asmr_cuerda.jpg": "Detalle del trenzado de cuerda gris del respaldo curvo del sillón junto al cojín azul claro",
+        "05_asmr_tinto_verano.jpg": "Vaso de tinto de verano con hielo y limón junto a un plato de almendras sobre la mesa redonda de cuerda",
+    }),
+    "damasco2p": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín elegante de aluminio gris tórtola con sofá de 2 plazas, dos sillones de cuerda beige y mesa de centro, cojines crudo",
+        "02_ambiente_exterior_cortijo.jpg": "Set de jardín tórtola en la terraza de un cortijo contemporáneo de la campiña sevillana, junto a un olivo",
+        "03_ambiente_interior_galeria.jpg": "Sofá y sillones de exterior en la galería de arcos encalados de un cortijo andaluz, abierta al olivar",
+        "04_asmr_cuerda.jpg": "Detalle del trenzado de cuerda beige del lateral del sillón sobre el perfil de aluminio gris tórtola",
+        "05_asmr_queso.jpg": "Tabla de queso curado, pan de pueblo y un cuenco de aceite de oliva sobre la mesa de centro de lamas",
+    }),
+    "bellagio2p": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Set de jardín elegante de aluminio blanco de líneas rectas con sofá de 2 plazas, dos sillones y mesa de centro, cojines gris claro",
+        "02_ambiente_exterior_cabodegata.jpg": "Set de jardín blanco en la terraza de una casa cúbica encalada de Cabo de Gata, con agave, chumbera y el mar al fondo",
+        "03_ambiente_interior_hornacinas.jpg": "Sofá y sillones de exterior en una sala encalada almeriense con hornacinas de piedra y suelo de microcemento",
+        "04_asmr_perfil.jpg": "Detalle del perfil de aluminio blanco de sección cuadrada del sillón junto a la costura del cojín gris claro",
+        "05_asmr_tomate_raf.jpg": "Tomates raf partidos, aceitera de cristal y pan de pueblo sobre la mesa de centro blanca",
+    }),
+    "balinesa": ("balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8", {
+        "01_packshot.jpg": "Cama balinesa de exterior de aluminio blanco con cubierta integrada y dos paneles laterales de tejido náutico, 198 cm",
+        "02_ambiente_exterior_mallorca.jpg": "Cama balinesa blanca junto a la piscina de una casa de piedra mallorquina, entre pinos y muro de piedra seca",
+        "03_ambiente_interior_porche.jpg": "Cama balinesa bajo el porche abovedado de una villa mallorquina, abierto a la piscina",
+        "04_asmr_tejido.jpg": "Detalle del poste de aluminio blanco y la trama del tejido náutico del panel lateral",
+        "05_medidas.png": "Medidas de la cama balinesa de exterior: 198 cm de ancho y 200 cm de alto",
+    }),
+}
+
+# TANDA 2026-07-26 (ya publicada, se conserva como referencia)
+GALERIAS_PUBLICADAS = {
     "brandon": ("set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 3 plazas, dos sillones y mesa, tapizado gris",
         "02_ambiente_exterior_cantabria.jpg": "Set de jardín de aluminio antracita en una terraza de granito de la costa cántabra, con hortensias",

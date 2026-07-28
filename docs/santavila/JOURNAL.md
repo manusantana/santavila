@@ -13,6 +13,36 @@
 
 ---
 
+## 2026-07-28 · TANDA DE IMAGEN — 6 galerías más (30 imágenes 4K), 12 fichas ya renovadas
+
+Segunda tanda en serie con el skill `santavila-imagen-producto`, siguiendo por ticket descendente la cola de productos con 1 sola foto. **Publicadas y verificadas en Shopify**: las 6 fichas sustituyen la foto única del proveedor.
+
+| Ficha | € | Hábitat (exterior → interior) | Consumible |
+|---|---|---|---|
+| Set Brandon 2 pl. | 4.679 | Loft junto a la ría, Bilbao → loft con ventanal de acero | Cerveza fría |
+| Set Diva bicolor 3 pl. | 4.405 | Casa payesa moderna, Ibiza → salón con techo de sabina | Granada partida |
+| Set Yina 2 pl. (cuerda azul) | 3.819 | Azotea de casa-torre, Cádiz → salón de baldosa hidráulica | Tinto de verano |
+| Set Damasco 2 pl. | 3.095 | Cortijo contemporáneo, campiña sevillana → galería de arcos | Queso, pan y aceite |
+| Set Bellagio 2 pl. | 3.015 | Casa cúbica, Cabo de Gata → sala con hornacinas | Tomate raf y aceite |
+| Cama balinesa Alma 198 cm | 2.815 | Piscina entre pinos, Mallorca → porche abovedado | Toalla + sombrero |
+
+Verificado ficha a ficha: **ACTIVE · 5 media · todas READY · ≥3311 px · pos 0 = packshot · 0 alt vacíos**.
+
+**La cama balinesa lleva Toma 5 de medidas** — es la primera ficha de esta tanda con cota verificada: la descripción da `Largo 205 · Ancho 198 · Alto 200 cm`. Overlay determinista sobre una vista **frontal** generada aparte (regla 4 del skill), con el bbox medido y comprobado a ojo antes de dibujar (regla 5).
+
+### Lo que costó QA (y por qué merece la pena)
+- **Diva:** el modelo convirtió el panel de lamas de **aluminio antracita en madera veteada** y puso tablero de lamas en una mesa que lo tiene **blanco liso**. Se detectó recortando la foto real del proveedor a alta resolución antes de aprobar. 3 tomas regeneradas.
+- **Brandon:** el interior al atardecer teñía el **tapizado gris hacia beige**. En una ficha de producto el color manda: regenerado con luz neutra 5400 K.
+- **Diva (interior):** una candidata inventó **cojines a rayas**; la otra amputaba los dos sillones. Regenerado con "PLAIN cushions, nothing cropped".
+- **Piezas fantasma:** Diva, Yina y Bellagio traían **reposapiés/taburetes que no entran en la composición** de la ficha, y cuatro fichas traían personas. Quitar es seguro; inventar, nunca.
+
+### Lección nueva incorporada al skill: packshot de SET
+Se intentó eliminar el fondo sobrante sobre los respaldos pidiendo encuadre cerrado en 4 fichas. Resultado: el modelo **corta los dos sillones laterales** (y en un caso mete un tercer sillón parcial). En un packshot de conjunto el cliente tiene que **contar las piezas**, así que la prioridad es *todas las piezas completas* por encima de *llenar el cuadro*. Los 4 re-encuadres se descartaron y se documentó la regla para no repetir el gasto.
+
+**Coste:** 204 créditos para las 6 galerías (incluye regeneraciones de QA y los 5 packshots descartados) → **~34 créditos/galería**. Saldo al cierre: **~755**.
+
+---
+
 ## 2026-07-26 · TANDA DE IMAGEN — 6 galerías nuevas (29 imágenes 4K) con ambiente EXTERIOR + INTERIOR
 
 Producción en serie con el skill `santavila-imagen-producto`, atacando la cola de **91 productos ACTIVE con 1 sola foto**, por orden de ticket. **PUBLICADAS en Shopify** (OK de Sergio en la misma sesión): las 6 fichas reemplazan la foto única del proveedor.
@@ -56,11 +86,21 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 
 ---
 
-## 📍 ESTADO ACTUAL (2026-07-26) — dónde nos quedamos
+## 📍 ESTADO ACTUAL (2026-07-28) — dónde nos quedamos
 
-**Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir. Git: `main` == `origin/main`, árbol limpio.
+**Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
-### Lo último: tanda de imagen (26-07)
+### Lo último: segunda tanda de imagen (28-07)
+6 galerías más publicadas (Brandon 2 pl., Diva bicolor, Yina 2 pl., Damasco, Bellagio, cama balinesa). Con la tanda del 26-07 son **12 fichas renovadas** de las ~91 que tenían una sola foto. Detalle completo y lecciones de QA en la entrada `2026-07-28` de arriba.
+
+### 👉 POR DÓNDE SEGUIR
+1. **Quedan ~79 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set bicolor 2 pl. (3.965 €), set 3 pl. sofisticado Albania-4 (3.140 €), set 2 pl. elegante Albania-09 (2.815 €), set 3 pl. elegante Dounvil (2.779 €), set 3 pl. contemporáneo Acapulco (2.765 €), set 3 pl. elegante Odin (2.645 €), set 3 pl. urbano Manhattan (2.405 €).
+2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
+3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield: **~755** → alcanza para ~22 galerías más.
+4. **Publicar es un comando:** añade la ficha al dict `GALERIAS` de `scripts/publicar_galeria_producto.py` con sus alt en español, `dry-run`, y luego `--apply`.
+5. **Antes de aprobar una galería, recorta la foto real del proveedor a alta resolución** sobre las piezas dudosas (tableros, paneles, herrajes). Es lo que cazó los dos fallos de fidelidad de Diva.
+
+### Histórico: tanda de imagen (26-07)
 **6 galerías nuevas (30 imágenes 4K) generadas con Higgsfield y publicadas**, sustituyendo la foto única del proveedor en las 6 fichas de mayor ticket que estaban con 1 sola foto:
 
 | Ficha | € | Hábitat (exterior → interior) |
@@ -76,13 +116,9 @@ Verificado ficha a ficha: **ACTIVE · 5 media · todas READY a 4096 px · pos 0 
 
 **Receta vigente de galería (decisión de Sergio, 26-07):** packshot bone → **ambiente EXTERIOR** → **ambiente INTERIOR** (galería/porche cubierto, el MISMO hábitat en otro momento) → 2 ASMR → medidas si hay cota verificada.
 
-### 👉 POR DÓNDE SEGUIR (siguiente tanda de imagen)
-1. **Quedan ~85 productos ACTIVE con 1 sola foto.** Atacar por ticket descendente; los siguientes de la lista son: set bicolor 3 pl. (4.405 €), set 3 pl. contemporáneo (4.195 €, *ojo: hay varios handles parecidos*), set 2 pl. moderno (3.819 €), cama balinesa (2.815 €), balancín (1.805 €).
-2. **Consultar SIEMPRE antes de elegir escena:** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) — dice qué localización y qué consumible se han usado ya. **Libres/infrautilizadas:** País Vasco, Galicia, Salamanca, Córdoba, campiña sevillana, Ibiza, Segovia, HORECA · bebidas libres: caldo/té del norte, queso y pan, tinto de verano, cerveza, granada, horchata.
-3. **Presupuesto:** 2 créditos por imagen (generada o upscalada) → **~32 créditos por galería**. Saldo Higgsfield al cierre: **~13 créditos** → hay que recargar antes de seguir.
-4. **Publicar es un comando:** `python3 scripts/publicar_galeria_producto.py` (dry-run) y `--apply --solo <carpeta>`. Añadir la ficha nueva al dict `GALERIAS` con sus alt en español.
+*(El "por dónde seguir" de esta entrada quedó cumplido en la tanda del 28-07; el vigente es el de arriba.)*
 
-### Otros pendientes (no bloquean)
+### Otros pendientes (siguen vivos, no bloquean)
 - **Autenticar el MCP de Metricool** (OAuth interactivo, ver entrada `2026-07-24`). No hay cambio de código; el MCP vive en `~/.claude.json` (scope *user*), no en el repo.
 - Metricool (el **tracker** del tema, distinto del MCP) debería quedar bajo el **consentimiento de cookies** (UE); falta confirmar qué banner usa la tienda.
 - Medidas del sillón `7275`: solo 72×75 (ancho×alto); si aparece el **fondo** real, añadir 3ª cota.
