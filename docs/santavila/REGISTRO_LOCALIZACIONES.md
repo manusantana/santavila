@@ -32,6 +32,8 @@
 | **`set-jardin-bicolor-2-plazas-...`** (Diva 2 pl.) | tórtola + lamas antracita + crudo / **cálido-neutro** | Cálido/cal | **B1 Patio cordobés contemporáneo** — cal, macetas de geranios en la pared, celosía de forja, limonero en tinaja | **B1 interior** — zaguán abovedado con suelo de barro y reja al patio | naranjas partidas + zumo |
 | **`set-jardin-2-plazas-elegante-...-mesa-4`** (Albania 2 pl.) | antracita + crudo / **frío** | Frío/atlántico | **A10 Terraza sobre el puerto pesquero, Asturias** — piedra, barandilla de hierro, casas de colores y barcas | **A10 interior** — porche de columnas de piedra con vigas, abierto al prado y al mar | sidra escanciada + queso azul |
 | **`set-jardin-3-plazas-elegante-...-mesa-2`** (Dounvil) | antracita + azul grisáceo / **frío** | Frío/granito | **A11 Costa da Morte, Galicia** — granito rugoso, tojo en flor y brezo, Atlántico rompiendo | **A11 interior** — galería acristalada gallega de carpintería blanca | albariño + berberechos |
+| **`set-jardin-3-plazas-elegante-...-mesa`** (Odin) | antracita + gris claro / **frío** | Frío/granito castellano | **C2 Terraza de sillar, Segovia** — granito, lavanda en pilón, pinar de Valsaín y sierra de Guadarrama | **C2 interior** — soportal de arcos de granito con vigas de castaño | botijo de barro + agua |
+| **`set-jardin-3-plazas-urbano-...`** (Manhattan) | blanco + gris claro / **blanco** | Blanco/ladrillo | **B13 Azotea sevillana** — parapeto encalado, suelo de ladrillo, jazmín en tinaja, la Giralda sobre los tejados | **B13 interior** — sala encalada con celosía de ladrillo dibujando la luz | gazpacho helado + picatostes |
 | **`set-jardin-3-plazas-contemporaneo-...-mesa-5`** (Acapulco) | blanco + gris claro, mesa de CRISTAL / **blanco** | Blanco/barro | **B12 Terraza valenciana** — suelo de barro, persianas de esparto, romero y naranjo en tinaja | **B12 interior** — porche encalado con persiana de esparto, abierto al jardín | horchata + fartons |
 
 ## Cobertura regional (acumulado)
@@ -40,5 +42,5 @@ Cantabria · Levante (Murcia) · Baleares (Menorca, **Ibiza**, **Mallorca**) · 
 **Infrautilizadas — empujar en las próximas tandas:** Galicia (A1, 1 uso), Salamanca (A6, 1 uso), Córdoba (B1), HORECA (A8/B9), Segovia (C2), Asturias, Extremadura, Aragón/Pirineo, Canarias (con cuidado: nunca resort).
 
 ## Anti-repetición de consumible
-Usados: café+galletas · aceitunas+almendras · té helado · vino blanco+higos · limonada+sandía · vermut+almendras marcona · **cerveza+aceitunas** · **granada+agua con hielo** · **tinto de verano+almendras** · **queso+pan+aceite** · **tomate raf+aceite**.
-**Libres para las próximas:** caldo/té humeante del norte, horchata, naranjas abiertas, cesta de hortalizas, sidra, chocolate con churros (otoño), sandía, uvas.
+Usados: café+galletas · aceitunas+almendras · té helado · vino blanco+higos · limonada+sandía · vermut+almendras marcona · cerveza+aceitunas · granada+agua con hielo · tinto de verano+almendras · queso+pan+aceite · tomate raf+aceite · **naranjas+zumo** · **sidra+queso azul** · **albariño+berberechos** · **horchata+fartons** · **botijo+agua** · **gazpacho+picatostes**.
+**Libres para las próximas:** caldo/té humeante del norte, cesta de hortalizas, chocolate con churros (otoño), sandía, uvas, torrijas, castañas asadas (otoño), leche merengada.

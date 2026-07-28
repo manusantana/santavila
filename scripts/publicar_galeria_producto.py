@@ -33,8 +33,26 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-28 C (activa)
+# TANDA 2026-07-28 D (activa)
 GALERIAS = {
+    "odin3p": ("set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín elegante de aluminio antracita con sofá de 3 plazas, dos sillones de brazo plano y mesa de centro de lamas, cojines gris claro",
+        "02_ambiente_exterior_segovia.jpg": "Set de jardín antracita en una terraza de sillar granítico castellana, con lavanda en pilón de piedra y la sierra de Guadarrama al fondo",
+        "03_ambiente_interior_soportal.jpg": "Sofá y sillones de exterior bajo el soportal de arcos de granito de una casona castellana, abierto al pinar",
+        "04_asmr_brazo.jpg": "Detalle del brazo plano de aluminio antracita mate del sofá junto a la trama del cojín gris claro",
+        "05_asmr_botijo.jpg": "Botijo de barro sudando agua fría sobre la mesa de lamas, con el cerco húmedo y un vaso de agua al lado",
+    }),
+    "manhattan3p": ("set-jardin-3-plazas-urbano-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardín urbano de aluminio blanco con sofá de 3 plazas, dos sillones de base voladiza y mesa de centro de lamas, cojines gris claro",
+        "02_ambiente_exterior_sevilla.jpg": "Set de jardín blanco en una azotea sevillana de suelo de ladrillo, con jazmín en tinaja y la Giralda sobre los tejados",
+        "03_ambiente_interior_celosia.jpg": "Sofá y sillones de exterior en una sala encalada sevillana, con una celosía de ladrillo dibujando la luz sobre el suelo",
+        "04_asmr_perfil.jpg": "Detalle del brazo plano blanco del sillón y su base voladiza de aluminio, con la sombra dura del sol andaluz",
+        "05_asmr_gazpacho.jpg": "Vaso alto de gazpacho helado con la condensación resbalando sobre las lamas blancas de la mesa, junto a un cuenco de picatostes",
+    }),
+}
+
+# TANDA 2026-07-28 C (ya publicada)
+GALERIAS_TANDA_C = {
     "dounvil3p": ("set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa-2", {
         "01_packshot.jpg": "Set de jardín elegante de aluminio antracita con sofá de 3 plazas, dos sillones con aspa lateral y mesa de centro de lamas, cojines azul grisáceo",
         "02_ambiente_exterior_costadamorte.jpg": "Set de jardín antracita en una terraza de granito de la Costa da Morte, con tojo en flor, brezo y el Atlántico rompiendo abajo",

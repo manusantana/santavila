@@ -222,5 +222,33 @@
    "gid://shopify/MediaImage/71272571437380",
    "gid://shopify/MediaImage/71272571470148"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507126911300",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551967556"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71273060303172",
+   "gid://shopify/MediaImage/71273060335940",
+   "gid://shopify/MediaImage/71273060368708",
+   "gid://shopify/MediaImage/71273060401476",
+   "gid://shopify/MediaImage/71273060434244"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-urbano-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507128746308",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555768644"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71273061810500",
+   "gid://shopify/MediaImage/71273061843268",
+   "gid://shopify/MediaImage/71273061876036",
+   "gid://shopify/MediaImage/71273061908804",
+   "gid://shopify/MediaImage/71273061941572"
+  ]
  }
 ]

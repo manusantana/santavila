@@ -13,6 +13,19 @@
 
 ---
 
+## 2026-07-28 (noche) · TANDA D — 2 galerías más (18 fichas ya renovadas)
+
+| Ficha | € | Hábitat (exterior → interior) | ASMR de consumible |
+|---|---|---|---|
+| Set Odin 3 pl. | 2.645 | Terraza de sillar, Segovia → soportal de arcos de granito | **Botijo de barro sudando** + vaso de agua |
+| Set Manhattan urbano 3 pl. | 2.405 | Azotea sevillana con la Giralda → sala con celosía de ladrillo | **Gazpacho helado** + picatostes |
+
+Verificado: **ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos**.
+
+**Subida de nivel del ASMR (petición del dueño):** se buscaron huellas físicas españolas aún sin usar y que se *sienten*: el **botijo de barro poroso sudando** con su cerco húmedo en la mesa (sed, frescor de meseta) y el **gazpacho helado** con la condensación resbalando por las lamas blancas (frescor andaluz, y el rojo como único acento de color). Ambas escenas salieron aprobadas a la primera. La toma de interior de Manhattan —la celosía de ladrillo dibujando la luz sobre el suelo— funciona además como ASMR visual.
+
+---
+
 ## 2026-07-28 (noche) · TANDA C — 2 galerías más (16 fichas ya renovadas)
 
 | Ficha | € | Hábitat (exterior → interior) | Consumible |
@@ -124,10 +137,10 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
 ### Lo último: tandas de imagen del 28-07
-10 galerías publicadas hoy (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **16 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
+12 galerías publicadas hoy (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **18 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~75 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set 3 pl. elegante Odin (2.645 €), set 3 pl. urbano Manhattan (2.405 €, blanco minimalista → azotea sevillana), set 2 pl. contemporáneo Dounvil (2.405 €), set 2 pl. contemporáneo Manhattan (1.995 €), sofá terraza 3 pl. 215×104 (2.109 €).
+1. **Quedan ~73 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set 2 pl. contemporáneo Dounvil (2.405 €), sofá terraza 3 pl. 215×104 (2.109 €), cama balinesa 160 cm (1.999 €), set 2 pl. contemporáneo Manhattan (1.995 €), sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €).
    **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
 2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
 3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield al cierre del 28-07: **~660** → alcanza para ~19 galerías más.
