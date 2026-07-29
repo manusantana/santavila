@@ -105,7 +105,10 @@ Un set (sofá + 2 sillones + mesa) es **ancho y bajo**: en 1:1 deja fondo por en
 - Vender a **toda España**; **nunca** resort tropical ni chalet de lujo.
 - **Escala doble puerta (§13.bis):** métrica (factor 0,92–1,10; hombros ≤0,80 de un cojín; estatura 160–188 cm) **y** composición (máx 2 personas en sofá 3 plazas + ≥1 cojín libre). Si "lee personas grandes" → suele ser composición; mídelo lado a lado antes de concluir. Los ASMR sin personas esquivan el problema.
 - **Temporadas (§14):** backbone ESTABLE todo el año (packshot + ASMR — son la `og:image`/Google) + capa de temporada ROTATIVA (el ambiente). Temporada activa: **Verano Costero** (Cantábrico/Levante). La pos-1 NO cambia entre temporadas.
-- **Texturas — línea roja (§15):** en ASMR/detalle, **prohibido inventar tramas**. El macro extremo empuja al modelo a fabricar textura (sling fino → tweed inventado = rechazo). Anclar a la foto real, **escala moderada**, y preferir features reales (mecanismo, unión estructura↔tela, costura, nudo) a un macro de tejido.
+- **Texturas — línea roja (§15):** en ASMR/detalle, **prohibido inventar tramas — y prohibido QUITARLAS**.
+  El tapizado del Brandon lleva un **jacquard estampado tono sobre tono** y se publicó liso en 3 fichas: el
+  modelo alisa lo estampado con la misma facilidad con la que inventa trama donde no la hay. Si el real
+  lleva motivo, el prompt lo nombra; si es liso, lo niega. El macro extremo empuja al modelo a fabricar textura (sling fino → tweed inventado = rechazo). Anclar a la foto real, **escala moderada**, y preferir features reales (mecanismo, unión estructura↔tela, costura, nudo) a un macro de tejido.
 
 ## Detalle operativo (references)
 - Mecánica MCP exacta + subida Shopify: [`references/runbook-mcp.md`](references/runbook-mcp.md)
