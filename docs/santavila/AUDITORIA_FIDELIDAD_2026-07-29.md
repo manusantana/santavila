@@ -54,6 +54,32 @@ igual: la imagen no representa el producto.
 | **Producto real** | Tablero **liso efecto madera marrón** sobre faldón de lamas antracita |
 | **Publicado** | Tablero **de lamas** |
 
+### A5 · Odin 3 pl. — veta de madera inventada sobre el aluminio
+`set-jardin-3-plazas-elegante-...-mesa` · imagen `04_asmr`
+
+| | |
+|---|---|
+| **Producto real** | Aluminio antracita **liso mate**, sin veta |
+| **Publicado** | Superficie oscura con **veteado longitudinal tipo MADERA** |
+
+Es el caso de manual de la §15 y aun así se publicó.
+
+### A6 · Manhattan 3 pl. — faltan los cojines decorativos estampados
+`set-jardin-3-plazas-urbano-...`
+
+| | |
+|---|---|
+| **Producto real** | Sofá con **2 cojines decorativos de jacquard estampado** (motivo tipo craquelado gris) además de los lisos |
+| **Publicado** | Los cojines decorativos **no aparecen**, o aparecen lisos |
+
+Falla el **conteo de piezas** del QA-A, no solo el material.
+
+### A7 · Desviación de color cálida en los ASMR (3 fichas)
+Acapulco 2 pl. · Acapulco 3 pl. · Dounvil 2 pl.
+
+El tejido real es **gris/beige frío** y en el ASMR se lee **beige dorado** por la luz de atardecer. Supera el
+ΔE≤3 del QA-A. Menos grave que A1–A6 pero es la misma familia de fallo: el cliente no ve el color que compra.
+
 ---
 
 ## B · NO VERIFICABLES — falta la foto original (6 fichas)
@@ -74,14 +100,17 @@ fichas NO están verificados todavía** (el fallo A2 demuestra que el tejido es 
 
 Acapulco 3 pl. (cristal) · Damasco 2 pl. (lamas tórtola) · Diva 3 pl. (blanco liso sobre faldón de lamas) ·
 Rinconera HPL (blanco liso, canto oscuro) · Albania 2 pl. · Dounvil 2 pl. · Dounvil 3 pl. ·
-Manhattan 2 pl. · Manhattan 3 pl. · Odin 3 pl. (todas lamas, confirmado) · Yina 3 pl. · Yina 2 pl.
+Manhattan 2 pl. · Odin 3 pl. (todas lamas, confirmado — **pero Odin falla en A5 y Manhattan 3 pl. en A6**) · Yina 3 pl. · Yina 2 pl.
 (cuerda + tablero cerámico) · Brandon y Sofá 3 pl. (mesas redondas lisas — el fallo de estas fichas es el
 tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 
 ---
 
 ## D · PENDIENTE DE AUDITAR
-1. **Tejido de las 22 fichas restantes** contra el recorte nativo (el A2 salió de aquí).
+1. **Tejido — auditado en 12 de 22 fichas.** Verificadas OK: Albania 2 pl., Bellagio 2 pl., Damasco 2 pl.,
+   Diva 2 pl., Diva 3 pl., Dounvil 3 pl., Rinconera. Falladas: A2 (Brandon ×3), A5 (Odin), A6 (Manhattan 3
+   pl.), A7 (Acapulco ×2, Dounvil 2 pl.). **Sin auditar todavía:** Manhattan 2 pl., Yina 3 pl., Yina 2 pl.,
+   Sidney, Sofá 220×69, Pérgola, Acapulco 3 pl. (tejido), Bolonia XL y CUPRA (sin publicar).
 2. **Elementos singulares**: cuerda, lamas de respaldo, herrajes, toldos.
 3. **Conteo de piezas** en las 5 imágenes de cada ficha (ya se revisó al generar, pero sin este rigor).
 4. Las 6 fichas del bloque B, cuando aparezca su foto original.
@@ -93,7 +122,7 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 
 | Escenario | Imágenes | Créditos |
 |---|---|---|
-| Lo confirmado hoy (A1 + A3 + A4 + los 5×3 del Brandon) | ~18 | ~72 |
+| Lo confirmado hoy (A1 + A3 + A4 + A5 + A6 + A7 + los 5×3 del Brandon) | ~24 | ~96 |
 | Si el tejido falla en más fichas | +5 a +25 | +20 a +100 |
 
 ---
