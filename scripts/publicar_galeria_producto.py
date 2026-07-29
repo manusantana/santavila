@@ -33,8 +33,26 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-29 (activa)
+# TANDA 2026-07-29 B (activa)
 GALERIAS = {
+    "balinesa160": ("balliu-cama-balinesa-exterior-aluminio-estilo-sofisticado-160-cm-2bd3a7a4", {
+        "01_packshot.jpg": "Cama balinesa de exterior de aluminio blanco, tumbona doble baja con dos respaldos reclinables independientes, 160 cm",
+        "02_ambiente_exterior_dehesa.jpg": "Cama balinesa blanca junto a la piscina de una finca de la dehesa extremeña, entre encinas y hierba dorada",
+        "03_ambiente_interior_porche.jpg": "Cama balinesa bajo el porche encalado de una casa de campo extremeña, con vigas de castaño y vistas a la dehesa",
+        "04_asmr_toalla.jpg": "Detalle de la esquina del colchón y el perfil de aluminio blanco, con una toalla de lino enrollada y la sombra moteada de la encina",
+        "05_perfil.jpg": "Vista de perfil de la cama balinesa con los respaldos planos: altura del colchón y base de aluminio blanco",
+    }),
+    "manhattan2p": ("set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de aluminio antracita con sofá de 2 plazas, dos sillones de base voladiza y mesa de centro de lamas, cojines gris claro",
+        "02_ambiente_exterior_pirineo.jpg": "Set de jardín antracita en una terraza de pizarra del Pirineo aragonés, con muro de piedra seca, lavanda y los picos al fondo",
+        "03_ambiente_interior_galeria.jpg": "Sofá y sillones de exterior en la galería acristalada de una casa pirenaica de piedra, con el ventanal abierto al pinar y la montaña",
+        "04_asmr_perfil.jpg": "Detalle del brazo plano antracita del sillón y su base voladiza de aluminio, con la trama del cojín gris claro",
+        "05_asmr_melocoton.jpg": "Melocotón partido y un vaso de agua fría con condensación sobre la mesa de lamas, con la montaña desenfocada al fondo",
+    }),
+}
+
+# TANDA 2026-07-29 A (ya publicada)
+GALERIAS_TANDA_29A = {
     "dounvil2p": ("set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2", {
         "01_packshot.jpg": "Set de jardín contemporáneo de aluminio blanco con sofá de 2 plazas, dos sillones con aspa lateral y mesa de centro de lamas, cojines color arena",
         "02_ambiente_exterior_rioja.jpg": "Set de jardín blanco en una terraza de piedra sobre los viñedos de La Rioja, con la Sierra de Cantabria al fondo",

@@ -264,5 +264,33 @@
    "gid://shopify/MediaImage/71277129826628",
    "gid://shopify/MediaImage/71277129859396"
   ]
+ },
+ {
+  "handle": "balliu-cama-balinesa-exterior-aluminio-estilo-sofisticado-160-cm-2bd3a7a4",
+  "producto": "gid://shopify/Product/15512247796036",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514796356"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71279375614276",
+   "gid://shopify/MediaImage/71279375647044",
+   "gid://shopify/MediaImage/71279375679812",
+   "gid://shopify/MediaImage/71279375712580",
+   "gid://shopify/MediaImage/71279375745348"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507128713540",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555735876"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71279376335172",
+   "gid://shopify/MediaImage/71279376367940",
+   "gid://shopify/MediaImage/71279376400708",
+   "gid://shopify/MediaImage/71279376433476",
+   "gid://shopify/MediaImage/71279376466244"
+  ]
  }
 ]

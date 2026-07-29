@@ -13,7 +13,21 @@
 
 ---
 
-## 2026-07-29 · Dounvil 2 pl. publicada (19 fichas) + 2 hallazgos de catálogo
+## 2026-07-29 (B) · Balinesa 160 y Manhattan 2 pl. (21 fichas renovadas)
+
+| Ficha | € | Hábitat (exterior → interior) | ASMR |
+|---|---|---|---|
+| Cama balinesa Aura 160 cm | 1.999 | Piscina en la dehesa extremeña → porche encalado con vigas | Toalla de lino y sombra moteada de encina |
+| Set Manhattan 2 pl. | 1.995 | Terraza de pizarra, Pirineo aragonés → galería acristalada de piedra | Melocotón partido + agua fría |
+
+Verificado: **ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos**.
+
+### ⚠️ Hallazgo: la cota "Alto 32 cm" de la balinesa 160 no cuadra
+La ficha da `Largo 190 · Ancho 160 · Alto 32 cm`, así que iba a llevar Toma 5. Se generó una **elevación lateral pura** (cámara a la altura del colchón, 200 mm, sin ver la cara superior) y al medir el contorno la proporción sale **ancho/alto ≈ 2,5**, cuando con 160×32 debería ser **5,0**: el producto se ve el doble de alto de lo que dice la ficha. O el dato de 32 cm se refiere sólo a la altura del asiento sin colchón, o está mal transcrito. **No se dibujó la cota** — regla del skill: si la cota mentiría, no se pone. En su lugar, la quinta imagen es esa **elevación lateral limpia**, que informa del perfil real (grosor de colchón + base) sin afirmar un número. Pendiente de verificar el dato con el proveedor.
+
+---
+
+## 2026-07-29 (A) · Dounvil 2 pl. publicada (19 fichas) + 2 hallazgos de catálogo
 
 **Set Dounvil 2 pl. (2.405 €)** — variante **blanca con cojines arena** de la familia (la 3 pl. es antracita). Hábitat: **terraza de piedra sobre los viñedos de La Rioja** con la Sierra de Cantabria → **sala abovedada de arenisca** con el arco abierto al viñedo. ASMR: **copa de tinto joven + racimo de uvas** con el polvillo intacto. Las cinco tomas salieron aprobadas a la primera. Verificado: ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos.
 
@@ -149,10 +163,10 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
 ### Lo último: tandas de imagen (28 y 29-07)
-13 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **19 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
+15 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **21 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~72 productos ACTIVE con 1 sola foto.** Siguientes por ticket: cama balinesa 160 cm (1.999 €, *con medidas → Toma 5*), set 2 pl. contemporáneo Manhattan (1.995 €, antracita → Pirineo aragonés), sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €, *tipología nueva*).
+1. **Quedan ~70 productos ACTIVE con 1 sola foto.** Siguientes por ticket: sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €, *tipología nueva: pedirá otra receta de tomas*), y seguir bajando por precio.
    **NO generar:** `sofa-terraza-3-plazas-...-215104-cm` (foto de 2 plazas en ficha de 3) y `set-jardin-3-plazas-sofisticado-...-mesa-4` (duplicado). Ambos pendientes de decisión de Sergio.
    **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
 2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
