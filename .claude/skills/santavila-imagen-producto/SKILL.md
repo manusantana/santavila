@@ -39,6 +39,23 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 | 4 | Detalle / ASMR de material | 1:1 | Higgsfield anclado |
 | 5 | Medidas (cotas) | 1:1 | **Overlay, NO IA** |
 
+## 🚦 PASO 0 — FICHA DE VERDAD (sin ficha no se genera NADA)
+**Antes de importar la foto, antes del primer prompt, antes de cualquier cosa:** abre la foto real a
+**resolución nativa**, recorta cada componente y escribe lo que ves en
+[`docs/santavila/FICHAS_VERDAD.md`](../../docs/santavila/FICHAS_VERDAD.md) — chasis, tejido, **tablero
+(material · tono · acabado · canto)** y piezas que la ficha NO incluye.
+
+- **Sin fila en esa tabla, no se lanza ni un job.** No es una recomendación: es la puerta de entrada.
+- **Lo que no se ve con certeza no existe.** Se anota `NO DETERMINADO` y **la toma en la que ese elemento
+  aparecería NO se genera**. Nunca se deduce, se completa ni se interpreta.
+- **La ficha se copia literalmente al prompt**, con la negación de lo que el modelo tiende a inventar.
+- **El QA se hace contra la FICHA**, no contra el packshot propio — el packshot también puede estar mal,
+  y si lo está, arrastra el error a toda la galería.
+
+Este paso existe porque se publicaron **dos** versiones seguidas de una misma imagen con el material de la
+mesa inventado (piedra caliza, y luego gris claro brillante en vez de gris cemento oscuro mate). El fallo no
+fue del modelo: fue **empezar a generar sin haber leído el producto**.
+
 ## ⛔ La SUPERFICIE que sostiene el atrezzo ES PRODUCTO (lección 2026-07-29)
 En el ASMR de consumible (la copa, la fruta, el plato) el **tablero de la mesa ocupa la mayor parte del
 encuadre** — y es exactamente ahí donde el modelo lo reescribe: un HPL gris liso se convirtió en **piedra
