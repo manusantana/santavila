@@ -13,6 +13,22 @@
 
 ---
 
+## 2026-07-29 (C) · Sofá 220×69 y parasol Roma (23 fichas renovadas)
+
+| Ficha | € | Hábitat | ASMR |
+|---|---|---|---|
+| Sofá terraza 3 pl. 220×69 | 1.919 | Terraza encalada de la Axarquía con buganvilla → sala con ventana de madera al mar | Cuerda gris enrollada en el tubo blanco |
+| Parasol lateral Roma 300×300 | 1.899 | Terraza entre pinos, Costa Daurada → **bajo el parasol** | Lona a contraluz + manivela y herraje |
+
+Verificado: **ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos**.
+
+**Receta nueva para PARASOL (tipología distinta).** Un parasol no se fotografía como un sofá: no tiene "interior" ni consumible. La receta que funcionó es **packshot bone → ambiente dando sombra sobre una mesa → vista DESDE DEBAJO (varillas radiando, lona antracita, terraza soleada más allá) → ASMR de la lona a contraluz → ASMR del mecanismo (manivela y herraje)**. La toma desde debajo es la que explica el producto: enseña el vuelo, la estructura y la sombra que crea. Reutilizable para el resto de parasoles y pérgolas del catálogo.
+
+### ⚠️ Hallazgo: el "69" del sofá 220×69 no es el alto
+Se generó la elevación frontal para acotar. Midiendo la proporción, con 220 cm de ancho el alto saldría **~91 cm**, no 69 — lo que apunta a que **69 es el FONDO**. El skill prohíbe deducir de la foto qué medida es cuál, así que **no se dibujó la cota** y la quinta imagen es la **vista frontal limpia**. Pendiente de confirmar con Sergio para poder acotar.
+
+---
+
 ## 2026-07-29 (B) · Balinesa 160 y Manhattan 2 pl. (21 fichas renovadas)
 
 | Ficha | € | Hábitat (exterior → interior) | ASMR |
@@ -163,10 +179,10 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
 ### Lo último: tandas de imagen (28 y 29-07)
-15 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **21 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
+17 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **23 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~70 productos ACTIVE con 1 sola foto.** Siguientes por ticket: sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €, *tipología nueva: pedirá otra receta de tomas*), y seguir bajando por precio.
+1. **Quedan ~68 productos ACTIVE con 1 sola foto.** Seguir bajando por precio. Para parasoles y pérgolas, usar la **receta de parasol** documentada en la entrada `2026-07-29 (C)`.
    **NO generar:** `sofa-terraza-3-plazas-...-215104-cm` (foto de 2 plazas en ficha de 3) y `set-jardin-3-plazas-sofisticado-...-mesa-4` (duplicado). Ambos pendientes de decisión de Sergio.
    **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
 2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.

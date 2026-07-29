@@ -292,5 +292,33 @@
    "gid://shopify/MediaImage/71279376433476",
    "gid://shopify/MediaImage/71279376466244"
   ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-elegante-22069-cm",
+  "producto": "gid://shopify/Product/15507126583620",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550984516"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71280339812676",
+   "gid://shopify/MediaImage/71280339845444",
+   "gid://shopify/MediaImage/71280339878212",
+   "gid://shopify/MediaImage/71280339910980",
+   "gid://shopify/MediaImage/71280339943748"
+  ]
+ },
+ {
+  "handle": "balliu-parasol-para-terraza-aluminio-300-cm-6c1e1224",
+  "producto": "gid://shopify/Product/15512253038916",
+  "borrados": [
+   "gid://shopify/MediaImage/70159530590532"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71280341287236",
+   "gid://shopify/MediaImage/71280341320004",
+   "gid://shopify/MediaImage/71280341352772",
+   "gid://shopify/MediaImage/71280341385540",
+   "gid://shopify/MediaImage/71280341418308"
+  ]
  }
 ]

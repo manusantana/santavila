@@ -33,8 +33,26 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-29 B (activa)
+# TANDA 2026-07-29 C (activa)
 GALERIAS = {
+    "sofa22069": ("sofa-terraza-3-plazas-estilo-elegante-22069-cm", {
+        "01_packshot.jpg": "Sofá de terraza de 3 plazas de aluminio blanco con laterales de cuerda gris y cojines crudo, 220 cm",
+        "02_ambiente_exterior_malaga.jpg": "Sofá de terraza blanco en la terraza encalada de una casa malagueña, con buganvilla sobre el muro y el Mediterráneo al fondo",
+        "03_ambiente_interior_ventana.jpg": "Sofá de exterior en una sala encalada con la ventana de madera abierta al mar",
+        "04_asmr_cuerda.jpg": "Detalle de la cuerda gris enrollada en el tubo de aluminio blanco del lateral del sofá",
+        "05_vista_frontal.jpg": "Vista frontal del sofá de terraza de 3 plazas: 220 cm de ancho, laterales de cuerda y cojines crudo",
+    }),
+    "parasol_roma": ("balliu-parasol-para-terraza-aluminio-300-cm-6c1e1224", {
+        "01_packshot.jpg": "Parasol lateral de exterior de aluminio blanco con lona cuadrada antracita y base de placas de piedra, 300x300 cm",
+        "02_ambiente_terraza.jpg": "Parasol lateral antracita dando sombra a una mesa en una terraza de piedra entre pinos, con el Mediterráneo al fondo",
+        "03_bajo_el_parasol.jpg": "Vista desde debajo del parasol: las varillas blancas radiando bajo la lona antracita y la terraza soleada más allá",
+        "04_asmr_lona.jpg": "Detalle de la varilla de aluminio blanco y la lona antracita tensada, con el sol atravesando la trama del tejido",
+        "05_asmr_manivela.jpg": "Detalle de la manivela de apertura y el herraje del mástil de aluminio blanco, con la sombra del parasol cruzando el suelo",
+    }),
+}
+
+# TANDA 2026-07-29 B (ya publicada)
+GALERIAS_TANDA_29B = {
     "balinesa160": ("balliu-cama-balinesa-exterior-aluminio-estilo-sofisticado-160-cm-2bd3a7a4", {
         "01_packshot.jpg": "Cama balinesa de exterior de aluminio blanco, tumbona doble baja con dos respaldos reclinables independientes, 160 cm",
         "02_ambiente_exterior_dehesa.jpg": "Cama balinesa blanca junto a la piscina de una finca de la dehesa extremeña, entre encinas y hierba dorada",
