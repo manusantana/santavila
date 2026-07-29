@@ -39,6 +39,22 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 | 4 | Detalle / ASMR de material | 1:1 | Higgsfield anclado |
 | 5 | Medidas (cotas) | 1:1 | **Overlay, NO IA** |
 
+## ⛔ La SUPERFICIE que sostiene el atrezzo ES PRODUCTO (lección 2026-07-29)
+En el ASMR de consumible (la copa, la fruta, el plato) el **tablero de la mesa ocupa la mayor parte del
+encuadre** — y es exactamente ahí donde el modelo lo reescribe: un HPL gris liso se convirtió en **piedra
+caliza rugosa** y se publicó. El fallo pasó el QA porque yo miraba el mueble (conteo, chasis, tejido) y leía
+la mesa como "bodegón". **No lo es: es producto, y su material es tan innegociable como el nº de plazas.**
+
+Antes de aprobar CUALQUIER toma en la que el producto sostenga algo:
+1. **Recorta el tablero de la foto REAL a resolución nativa** y ponlo al lado del tuyo. A tamaño tira no se
+   distingue una lama de una veta — hay que ampliar.
+2. Verifica las tres cosas por separado: **material** (HPL / cristal / lamas de aluminio / piedra),
+   **acabado** (liso vs. lamas, y el ancho de la lama) y **canto** (fino, con junta oscura, biselado).
+3. En el prompt, **nombra el material y niega el que el modelo tiende a inventar**:
+   *"the table top is FLAT SMOOTH GREY HPL — not stone, not travertine, not wood, no visible grain"*.
+   Esto es lo mismo que ya hacemos con las lamas de aluminio → madera (§15): la línea roja de texturas
+   **también aplica a las superficies horizontales**, no solo a los tejidos.
+
 ## QA gate — 4 bloques bloqueantes (contra la foto real)
 - **A · Fidelidad:** conteo 1:1 exacto (listones/cojines/plazas/patas); geometría, material, color de variante (ΔE≤3). Cualquier desviación = rechazo.
 - **B · Sin artefactos IA:** verticales a plomo; sin fusiones/derretidos; sombra de contacto bajo cada apoyo (no flota); una sola dirección de sol; sin HDR falso.

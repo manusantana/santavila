@@ -13,6 +13,43 @@
 
 ---
 
+## 2026-07-29 (E) · ⛔ INCIDENTE DE FIDELIDAD: la mesa que dejó de ser HPL
+
+**Sergio detectó una imagen publicada que cambiaba el material del producto.** En el ASMR de la sandía del
+Acapulco 2 pl., la mesa de centro —**HPL gris liso de canto fino**— aparecía como **piedra caliza rugosa y
+beige**. Es una violación directa de la ley suprema de fidelidad y **la aprobé yo**.
+
+**Acciones inmediatas:** imagen retirada de producción · regenerada con el material declarado y negado
+explícitamente (*"FLAT SMOOTH LIGHT-GREY HPL — not stone, not travertine, not concrete, not wood"*) ·
+verificada contra el packshot · repuesta en la posición 5.
+
+### Auditoría de las 25 galerías publicadas
+Se descargó la **foto original del proveedor** de cada ficha (`shopify_products.csv` → `hevea.es`) y se
+comparó **tablero por tablero a resolución nativa** contra las imágenes publicadas:
+
+| Resultado | Nº | Fichas |
+|---|---|---|
+| ✗ Fallo confirmado | **1** | Acapulco 2 pl. (corregido) |
+| ✓ Verificadas correctas | 20 | resto de la producción |
+| ⚠️ No concluyente | 1 | Albania 3 pl. — el export de imágenes apunta a otra foto |
+| ⚠️ Sin original localizable | 3 | balinesa 198, balinesa 160, parasol Roma |
+
+**Falsa alarma que conviene registrar:** estuve a punto de dar por malas las mesas de lamas de Albania 2 pl.,
+Dounvil 2 y 3 pl., Manhattan 2 y 3 pl. y Odin. Ampliadas a resolución nativa, **esas mesas SON de lamas en el
+producto real**. A tamaño tira no se distingue una lama de una veta: el zoom no es opcional, en ninguna de las
+dos direcciones.
+
+### Causa raíz y regla nueva en el skill
+El QA verificaba **el mueble** (plazas, chasis, tejido, color) y leía el tablero de la mesa como **atrezzo**.
+En el ASMR del consumible la mesa ocupa ~70 % del encuadre: es el sitio con más superficie de producto de toda
+la galería y el que menos se miraba. Añadido al skill como puerta bloqueante —
+**«La SUPERFICIE que sostiene el atrezzo ES PRODUCTO»**: recortar el tablero real a resolución nativa,
+verificar material + acabado + canto por separado, y **nombrar el material en el prompt negando el que el
+modelo tiende a inventar**. Es la §15 (línea roja de texturas) extendida de los tejidos a las superficies
+horizontales.
+
+---
+
 ## 2026-07-29 (D) · Acapulco 2 pl. y balancín Sidney (25 fichas renovadas)
 
 | Ficha | € | Hábitat (exterior → interior) | ASMR |
