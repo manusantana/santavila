@@ -33,8 +33,26 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-29 C (activa)
+# TANDA 2026-07-29 D (activa)
 GALERIAS = {
+    "acapulco2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4", {
+        "01_packshot.jpg": "Conjunto de jardín de 2 plazas de aluminio antracita: sofá de 2 plazas, dos sillones y mesa de centro, con cojines gris claro",
+        "02_ambiente_exterior_azotea_salamanca.jpg": "Conjunto de jardín antracita en una azotea de Salamanca al atardecer, con las torres de la catedral en piedra dorada al fondo",
+        "03_ambiente_interior_soportal_piedra.jpg": "Conjunto de jardín antracita bajo el soportal de arcos de piedra dorada de un patio salmantino, con macetas de geranios",
+        "04_asmr_aluminio_antracita.jpg": "Detalle del perfil de aluminio antracita mate del sofá y el canto del cojín gris claro, con la luz rasante del atardecer",
+        "05_asmr_sandia.jpg": "Media sandía cortada y un vaso de agua sobre la mesa de centro del conjunto, con la sombra larga de la tarde",
+    }),
+    "sidney": ("balancin-jardin-exterior-148194-cm", {
+        "01_packshot.jpg": "Balancín de jardín de estructura blanca en A con toldo y colchón azul pizarra y cojín blanco, 148x194 cm",
+        "02_ambiente_exterior_alpujarra.jpg": "Balancín blanco en una terraza de piedra de la Alpujarra granadina, bajo una morera y con Sierra Nevada al fondo",
+        "03_ambiente_interior_porche_encalado.jpg": "Balancín blanco bajo el porche encalado de una casa alpujarreña, con vigas de madera y suelo de laja",
+        "04_asmr_suspension.jpg": "Detalle del herraje de suspensión del balancín: los grilletes cromados colgando del travesaño de aluminio blanco",
+        "05_asmr_textil_hoja.jpg": "Detalle de la trama del tejido azul pizarra del asiento y el cojín blanco, con una hoja seca de morera caída encima",
+    }),
+}
+
+# TANDA 2026-07-29 C (ya publicada)
+GALERIAS_TANDA_29C = {
     "sofa22069": ("sofa-terraza-3-plazas-estilo-elegante-22069-cm", {
         "01_packshot.jpg": "Sofá de terraza de 3 plazas de aluminio blanco con laterales de cuerda gris y cojines crudo, 220 cm",
         "02_ambiente_exterior_malaga.jpg": "Sofá de terraza blanco en la terraza encalada de una casa malagueña, con buganvilla sobre el muro y el Mediterráneo al fondo",

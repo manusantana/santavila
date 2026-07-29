@@ -13,6 +13,23 @@
 
 ---
 
+## 2026-07-29 (D) · Acapulco 2 pl. y balancín Sidney (25 fichas renovadas)
+
+| Ficha | € | Hábitat (exterior → interior) | ASMR |
+|---|---|---|---|
+| Set Acapulco 2 pl. (antracita) | 2.349 | Azotea de Salamanca con las torres de la catedral al atardecer → soportal de arcos de piedra dorada | Perfil de aluminio antracita + **sandía cortada** y vaso de agua |
+| Balancín Sidney 148×194 | 1.805 | Terraza de piedra de la Alpujarra granadina, morera y Sierra Nevada → porche encalado con vigas | Herraje de suspensión (grilletes) + trama del tejido con hoja de morera |
+
+Verificado: **ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos**.
+
+**Tipología nueva — BALANCÍN.** No tiene consumible natural (nadie deja un vaso en un asiento que se mueve), así que los dos ASMR son **estructurales**: el punto de suspensión —los grilletes cromados colgando del travesaño blanco, que es lo que un cliente quiere ver para juzgar la calidad— y la trama del tejido con una hoja caída. Es la misma lógica que el parasol: cuando la pieza no invita a la mesa, el ASMR va al mecanismo y al textil.
+
+**Reincidencia del fondo heredado.** El ASMR textil salió con un palmito arrastrado de la foto original del proveedor — el mismo fallo exacto que en Diva 2 pl. Se regeneró nombrando el fondo deseado *y* prohibiendo explícitamente lo que arrastra (*"whitewashed lime wall and dry-stone wall — NO palm trees, no tropical plants, no concrete"*). **Conclusión operativa: en los ASMR de una foto de proveedor con vegetación tropical, la prohibición explícita no es opcional, va desde el primer intento.**
+
+La cota del balancín (148×194) es ambigua igual que los casos anteriores, así que **no se dibujó**: la quinta imagen es ASMR.
+
+---
+
 ## 2026-07-29 (C) · Sofá 220×69 y parasol Roma (23 fichas renovadas)
 
 | Ficha | € | Hábitat | ASMR |
@@ -174,19 +191,19 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 
 ---
 
-## 📍 ESTADO ACTUAL (2026-07-28) — dónde nos quedamos
+## 📍 ESTADO ACTUAL (2026-07-29) — dónde nos quedamos
 
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
 ### Lo último: tandas de imagen (28 y 29-07)
-17 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **23 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
+Con la tanda del 26-07 van **25 fichas renovadas** de las ~91 que tenían una sola foto. Las dos últimas: **Acapulco 2 pl.** (azotea de Salamanca) y **balancín Sidney** (Alpujarra granadina). Detalle y lecciones de QA en las entradas `2026-07-28` y `2026-07-29` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~68 productos ACTIVE con 1 sola foto.** Seguir bajando por precio. Para parasoles y pérgolas, usar la **receta de parasol** documentada en la entrada `2026-07-29 (C)`.
+1. **Quedan ~66 productos ACTIVE con 1 sola foto.** Seguir bajando por precio. Para parasoles y pérgolas, usar la **receta de parasol** de la entrada `2026-07-29 (C)`; para balancines/columpios, la **receta de ASMR estructural** de la `2026-07-29 (D)`.
    **NO generar:** `sofa-terraza-3-plazas-...-215104-cm` (foto de 2 plazas en ficha de 3) y `set-jardin-3-plazas-sofisticado-...-mesa-4` (duplicado). Ambos pendientes de decisión de Sergio.
    **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
-2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
-3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield al cierre del 28-07: **~660** → alcanza para ~19 galerías más.
+2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 25. Libres: HORECA, Canarias (sin resort), Murcia capital, Tarragona/Costa Daurada · bebidas libres: caldo/té del norte, cesta de hortalizas, torrijas, leche merengada, castañas (otoño).
+3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield tras la tanda del 29-07: **~330** → alcanza para ~9 galerías más.
 4. **Publicar es un comando:** añade la ficha al dict `GALERIAS` de `scripts/publicar_galeria_producto.py` con sus alt en español, `dry-run`, y luego `--apply`.
 5. **Antes de aprobar una galería, recorta la foto real del proveedor a alta resolución** sobre las piezas dudosas (tableros, paneles, herrajes). Es lo que cazó los dos fallos de fidelidad de Diva.
 

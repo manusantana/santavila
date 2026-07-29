@@ -320,5 +320,33 @@
    "gid://shopify/MediaImage/71280341385540",
    "gid://shopify/MediaImage/71280341418308"
   ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4",
+  "producto": "gid://shopify/Product/15507128516932",
+  "borrados": [
+   "gid://shopify/MediaImage/70108304376132"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71280500605252",
+   "gid://shopify/MediaImage/71280500638020",
+   "gid://shopify/MediaImage/71280500670788",
+   "gid://shopify/MediaImage/71280500703556",
+   "gid://shopify/MediaImage/71280500736324"
+  ]
+ },
+ {
+  "handle": "balancin-jardin-exterior-148194-cm",
+  "producto": "gid://shopify/Product/15507129631044",
+  "borrados": [
+   "gid://shopify/MediaImage/70105065980228"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71280500932932",
+   "gid://shopify/MediaImage/71280500965700",
+   "gid://shopify/MediaImage/71280500998468",
+   "gid://shopify/MediaImage/71280501031236",
+   "gid://shopify/MediaImage/71280501064004"
+  ]
  }
 ]
