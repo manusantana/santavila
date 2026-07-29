@@ -33,8 +33,19 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
-# TANDA 2026-07-28 D (activa)
+# TANDA 2026-07-29 (activa)
 GALERIAS = {
+    "dounvil2p": ("set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Set de jardín contemporáneo de aluminio blanco con sofá de 2 plazas, dos sillones con aspa lateral y mesa de centro de lamas, cojines color arena",
+        "02_ambiente_exterior_rioja.jpg": "Set de jardín blanco en una terraza de piedra sobre los viñedos de La Rioja, con la Sierra de Cantabria al fondo",
+        "03_ambiente_interior_calado.jpg": "Sofá y sillones de exterior en una sala abovedada de piedra arenisca, con el arco abierto al viñedo",
+        "04_asmr_aspa.jpg": "Detalle del aspa en X de aluminio blanco mate del lateral del sillón sobre la trama del cojín color arena",
+        "05_asmr_vino_uvas.jpg": "Copa de vino tinto joven y un racimo de uvas con el polvillo intacto sobre la mesa de lamas blanca",
+    }),
+}
+
+# TANDA 2026-07-28 D (ya publicada)
+GALERIAS_TANDA_D = {
     "odin3p": ("set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Set de jardín elegante de aluminio antracita con sofá de 3 plazas, dos sillones de brazo plano y mesa de centro de lamas, cojines gris claro",
         "02_ambiente_exterior_segovia.jpg": "Set de jardín antracita en una terraza de sillar granítico castellana, con lavanda en pilón de piedra y la sierra de Guadarrama al fondo",

@@ -13,6 +13,18 @@
 
 ---
 
+## 2026-07-29 · Dounvil 2 pl. publicada (19 fichas) + 2 hallazgos de catálogo
+
+**Set Dounvil 2 pl. (2.405 €)** — variante **blanca con cojines arena** de la familia (la 3 pl. es antracita). Hábitat: **terraza de piedra sobre los viñedos de La Rioja** con la Sierra de Cantabria → **sala abovedada de arenisca** con el arco abierto al viñedo. ASMR: **copa de tinto joven + racimo de uvas** con el polvillo intacto. Las cinco tomas salieron aprobadas a la primera. Verificado: ACTIVE · 5 media · READY · ≥3311 px · 0 alt vacíos.
+
+### ⚠️ Hallazgo: ficha con foto que no corresponde al producto
+**`sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm`** (2.109 €) se titula y describe como **sofá de 3 plazas**, pero la foto del proveedor (`bolonia_20xl_20_2.jpg`) muestra claramente un **sofá de 2 plazas** (2 cojines de asiento, 2 de respaldo). **No se ha generado galería**: inventar la tercera plaza rompe la ley de fidelidad, y publicar un 2 plazas en una ficha que vende 3 induciría a error al comprador. Hace falta contrastar con el catálogo del proveedor y corregir la ficha o la foto. Es el mismo tipo de fallo que recoge el QA del rol ("confusiones de SKU auditadas").
+
+### Medidas disponibles para la próxima balinesa
+**`balliu-cama-balinesa-...-160-cm`** (1.999 €) trae cotas en ficha: **Largo 190 · Ancho 160 · Alto 32 cm** → lleva Toma 5. Ojo: es una tumbona doble baja **sin dosel** (distinta de la Alma de 198 cm); la cota debe hacerse con los respaldos **planos** para que el Alto de 32 cm sea real.
+
+---
+
 ## 2026-07-28 (noche) · TANDA D — 2 galerías más (18 fichas ya renovadas)
 
 | Ficha | € | Hábitat (exterior → interior) | ASMR de consumible |
@@ -136,11 +148,12 @@ Saldo Higgsfield al cierre: **~11 créditos**.
 
 **Todo lo de esta sesión está PUBLICADO en producción (santavila.com) y verificado.** No hay nada a medias ni en local sin subir.
 
-### Lo último: tandas de imagen del 28-07
-12 galerías publicadas hoy (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **18 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
+### Lo último: tandas de imagen (28 y 29-07)
+13 galerías publicadas (Brandon 2 pl., Diva bicolor 3 pl., Yina 2 pl., Damasco, Bellagio, cama balinesa + Diva 2 pl. y Albania 2 pl.). Con la tanda del 26-07 son **19 fichas renovadas** de las ~91 que tenían una sola foto. Detalle y lecciones de QA en las entradas `2026-07-28` de arriba.
 
 ### 👉 POR DÓNDE SEGUIR
-1. **Quedan ~73 productos ACTIVE con 1 sola foto.** Siguientes por ticket: set 2 pl. contemporáneo Dounvil (2.405 €), sofá terraza 3 pl. 215×104 (2.109 €), cama balinesa 160 cm (1.999 €), set 2 pl. contemporáneo Manhattan (1.995 €), sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €).
+1. **Quedan ~72 productos ACTIVE con 1 sola foto.** Siguientes por ticket: cama balinesa 160 cm (1.999 €, *con medidas → Toma 5*), set 2 pl. contemporáneo Manhattan (1.995 €, antracita → Pirineo aragonés), sofá terraza 3 pl. 220×69 (1.919 €), parasol lateral Roma (1.899 €, *tipología nueva*).
+   **NO generar:** `sofa-terraza-3-plazas-...-215104-cm` (foto de 2 plazas en ficha de 3) y `set-jardin-3-plazas-sofisticado-...-mesa-4` (duplicado). Ambos pendientes de decisión de Sergio.
    **Ojo:** `set-jardin-3-plazas-sofisticado-...-mesa-4` (3.140 €) es **duplicado** del `-mesa-3` ya renovado — no generar, está pendiente de decisión de Sergio.
 2. **Consulta SIEMPRE** [`REGISTRO_LOCALIZACIONES.md`](REGISTRO_LOCALIZACIONES.md) antes de elegir escena — ya está actualizado con las 6 nuevas. Libres: Galicia, Salamanca, Córdoba, HORECA, Segovia, Asturias, Extremadura, Aragón · bebidas libres: caldo/té del norte, horchata, naranjas, sidra, sandía, uvas.
 3. **Presupuesto:** ~34 créditos/galería con QA incluido. Saldo Higgsfield al cierre del 28-07: **~660** → alcanza para ~19 galerías más.

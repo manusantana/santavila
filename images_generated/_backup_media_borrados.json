@@ -250,5 +250,19 @@
    "gid://shopify/MediaImage/71273061908804",
    "gid://shopify/MediaImage/71273061941572"
   ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507128025412",
+  "borrados": [
+   "gid://shopify/MediaImage/70108304179524"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71277129728324",
+   "gid://shopify/MediaImage/71277129761092",
+   "gid://shopify/MediaImage/71277129793860",
+   "gid://shopify/MediaImage/71277129826628",
+   "gid://shopify/MediaImage/71277129859396"
+  ]
  }
 ]
