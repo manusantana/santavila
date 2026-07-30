@@ -89,6 +89,19 @@ Antes de aprobar CUALQUIER toma en la que el producto sostenga algo:
    Esto es lo mismo que ya hacemos con las lamas de aluminio → madera (§15): la línea roja de texturas
    **también aplica a las superficies horizontales**, no solo a los tejidos.
 
+## 🌡️ El GRIS FRÍO no aguanta la luz de atardecer (lección 2026-07-30)
+Cuando el producto es **gris frío** (tejido, cuerda o chasis antracita), una escena de atardecer cálido lo
+vira a **beige dorado** y el aluminio antracita a **bronce**. Salió publicado así en 6 fichas (A7) y volvió a
+salir al primer intento del Sofá 220×90 en tres de sus cinco tomas.
+
+**No es un defecto del prompt de escena: es incompatibilidad de paleta.** Si la ficha de verdad dice
+"gris frío", el hábitat se elige con **luz neutra o del norte**, y el prompt lo fija explícitamente:
+
+> *"CRITICAL COLOUR: the fabric must read COOL NEUTRAL GREY and the frame MATT ANTHRACITE — never beige,
+> never golden, never bronze. Neutral daylight, white balance 5400 K, no warm colour cast."*
+
+Los ambientes de atardecer se reservan para las paletas cálidas (tórtola, crudo, arena, blanco cal).
+
 ## QA gate — 4 bloques bloqueantes (contra la foto real)
 - **A · Fidelidad:** conteo 1:1 exacto (listones/cojines/plazas/patas); geometría, material, color de variante (ΔE≤3). Cualquier desviación = rechazo.
 - **B · Sin artefactos IA:** verticales a plomo; sin fusiones/derretidos; sombra de contacto bajo cada apoyo (no flota); una sola dirección de sol; sin HDR falso.
