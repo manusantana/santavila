@@ -348,5 +348,19 @@
    "gid://shopify/MediaImage/71280501031236",
    "gid://shopify/MediaImage/71280501064004"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-urbano-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507128746308",
+  "borrados": [
+   "gid://shopify/MediaImage/71287540252996"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71287781294404",
+   "gid://shopify/MediaImage/71287781327172",
+   "gid://shopify/MediaImage/71287781359940",
+   "gid://shopify/MediaImage/71287781392708",
+   "gid://shopify/MediaImage/71287781425476"
+  ]
  }
 ]

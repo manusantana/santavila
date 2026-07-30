@@ -13,6 +13,27 @@
 
 ## A · FALLOS CONFIRMADOS
 
+### A0 · ⛔⛔ FALLO DE IDENTIDAD — galería de OTRO producto en la ficha
+`set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3` (Bellagio 3 pl., **3.449 €**)
+
+| | |
+|---|---|
+| **Producto real de la ficha** | Sofá de **brazos rectos cerrados**, chasis **antracita**, cojines gris claro + **cojines decorativos azul marino**, mesa de tablero liso |
+| **Publicado** | Un mueble **distinto**: sillones de **estructura en A con aspa diagonal**, chasis **tórtola claro**, cojines **verde salvia** |
+
+**No es una desviación de material: son dos muebles diferentes.** La carpeta de trabajo se llamaba `albania`
+y su galería es la del **Albania**; el handle al que se publicó es el del **Bellagio 3 pl.** Durante días esa
+ficha ha mostrado 5 fotos de un producto que no es el que se vende ahí.
+
+**Causa:** el mapeo `carpeta → handle` del script de publicación se escribió a mano y nunca se validó contra
+la foto real del handle destino. El nombre de la carpeta se dio por bueno como identificación del producto.
+
+**Estado:** las 5 imágenes retiradas; la ficha está con su foto real del proveedor.
+
+**Regla nueva (PASO 0.bis):** antes de publicar, **comparar el packshot generado con la foto real del handle
+destino**. Si no es el mismo mueble, no se publica. La comprobación es de 10 segundos y esto no habría pasado.
+
+
 ### A1 · Acapulco 2 pl. — material de la mesa inventado (DOS veces)
 `set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4` · imagen `05_asmr_sandia`
 
@@ -64,15 +85,13 @@ igual: la imagen no representa el producto.
 
 Es el caso de manual de la §15 y aun así se publicó.
 
-### A6 · Manhattan 3 pl. — faltan los cojines decorativos estampados
-`set-jardin-3-plazas-urbano-...`
+### ~~A6 · Manhattan 3 pl.~~ — **FALSA ALARMA, corregida**
+Di por ausentes los cojines decorativos estampados porque miré el ASMR de chasis, que no tiene por qué
+mostrarlos. Comparado el **packshot** con la foto real: los **3 cojines decorativos estampados SÍ están**, y
+el estampado coincide. **No hay fallo.**
 
-| | |
-|---|---|
-| **Producto real** | Sofá con **2 cojines decorativos de jacquard estampado** (motivo tipo craquelado gris) además de los lisos |
-| **Publicado** | Los cojines decorativos **no aparecen**, o aparecen lisos |
-
-Falla el **conteo de piezas** del QA-A, no solo el material.
+Consecuencia de mi error: retiré 5 imágenes correctas de esa ficha. **Ya restauradas** (5 media, READY).
+Lección: un ASMR de detalle no es la toma donde se audita el conteo de piezas — eso se hace en el packshot.
 
 ### A7 · Desviación de color cálida en los ASMR (6 fichas)
 Acapulco 2 pl. · Acapulco 3 pl. · Dounvil 2 pl. · **Yina 3 pl.** · **Yina 2 pl.** · **Pérgola**
@@ -137,7 +156,8 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 
 | Escenario | Imágenes | Créditos |
 |---|---|---|
-| Lo confirmado (A1–A8, incluidos los 5×3 del Brandon) | ~28 | ~112 |
+| A0 · Bellagio 3 pl. — galería entera de otro producto | 5 | 20 |
+| A1–A5, A7, A8 (incluidos los 5×3 del Brandon) | ~23 | ~92 |
 | Si el tejido falla en más fichas | +5 a +25 | +20 a +100 |
 
 ---
@@ -150,3 +170,7 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 4. **La superficie que sostiene el atrezzo es producto** — material, tono, acabado y canto, los cuatro.
 5. **El tejido se audita con la misma vara que el tablero**: si el real lleva jacquard, la imagen lleva
    jacquard; si es liso, es liso. Ni inventar ni quitar.
+6. **PASO 0.bis · IDENTIDAD** — antes de publicar, comparar el packshot con la foto real **del handle
+   destino**. El nombre de la carpeta NO identifica el producto. De aquí salió A0.
+7. **No retirar por sospecha sin ampliar primero**: A6 fue falsa alarma y costó retirar 5 imágenes buenas.
+   La duda se resuelve mirando el packshot a resolución nativa, no borrando.

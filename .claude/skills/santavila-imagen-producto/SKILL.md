@@ -56,6 +56,15 @@ Este paso existe porque se publicaron **dos** versiones seguidas de una misma im
 mesa inventado (piedra caliza, y luego gris claro brillante en vez de gris cemento oscuro mate). El fallo no
 fue del modelo: fue **empezar a generar sin haber leído el producto**.
 
+## 🚦 PASO 0.bis — IDENTIDAD: ¿es este el producto de esta ficha?
+**Antes de publicar, compara tu packshot con la foto real DEL HANDLE DESTINO.** Si no es el mismo mueble
+(mismo tipo de brazo, misma estructura, mismo color de chasis y tejido), **no se publica**.
+
+Se publicó la galería del **Albania** (tórtola + salvia, sillones de aspa) en la ficha del **Bellagio 3 pl.**
+(antracita + gris, brazos rectos, 3.449 €), y estuvo días en producción. El mapeo `carpeta → handle` del
+script se escribió a mano y **el nombre de la carpeta se dio por bueno como identificación del producto**.
+Un nombre de carpeta no identifica nada: la única identificación válida es **la foto real del handle**.
+
 ## ⛔ La SUPERFICIE que sostiene el atrezzo ES PRODUCTO (lección 2026-07-29)
 En el ASMR de consumible (la copa, la fruta, el plato) el **tablero de la mesa ocupa la mayor parte del
 encuadre** — y es exactamente ahí donde el modelo lo reescribe: un HPL gris liso se convirtió en **piedra
