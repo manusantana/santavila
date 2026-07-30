@@ -3,145 +3,167 @@ name: santavila-imagen-producto
 description: Úsalo al generar, crear, regenerar o mejorar imágenes o la galería de un producto de Santavila con Higgsfield — packshot, ambiente/lifestyle, ASMR/detalle, medidas; reemplazar fotos de baja resolución o productos con una sola foto; producir imágenes de catálogo, PDP o home de Santavila.
 ---
 
-# Santavila · Imagen de producto (v2 · reescrito 2026-07-30)
+# Santavila · Imagen de producto — v3 DEFINITIVO (2026-07-30)
 
-> **Por qué existe la v2.** La v1 produjo imágenes que **cambiaban el producto**: un tablero HPL convertido
-> en piedra, un jacquard inventado en tres fichas, un herraje que no existe, la galería de un producto en la
-> ficha de otro. El dueño tuvo que detectar cuatro de esos fallos. La v1 no fallaba por falta de reglas —
-> tenía muchas — sino porque **las reglas no eran puertas: eran consejos que yo mismo me saltaba al acelerar**.
-> La v2 convierte cada regla en una puerta, y **termina en "listo para revisar", nunca en "publicado"**.
-> (La v1 se conserva en `SKILL_v1_archivo.md` solo como registro histórico.)
+**Un producto cada vez. Cada imagen validada por el dueño. Cero invención.**
 
 ---
 
-## LEY 0 · La frase que manda sobre todo lo demás
+## LEY 0
 
 > ### Si no existe, no lo hago. Si no sé hacerlo, no lo hago. Si no lo puedo verificar, no lo publico.
 
 Una imagen de producto es **una afirmación sobre un objeto que alguien va a pagar**. Una textura inventada,
-un tono desviado o una pieza que no existe no son licencia creativa: son **datos falsos** sobre lo que el
-cliente recibirá en su casa.
-
-**Lectura obligatoria antes de empezar:**
-[`LECCIONES_FIDELIDAD.md`](../../docs/santavila/LECCIONES_FIDELIDAD.md) ·
-[`REFLEXION_2026-07-30.md`](../../docs/santavila/REFLEXION_2026-07-30.md)
+un tono desviado o una pieza que no existe son **datos falsos** sobre lo que el cliente recibirá en su casa.
 
 ---
 
-## Las 6 imágenes de una ficha
+## PASO 0 · EL PRIMER COMANDO, SIEMPRE
 
-| # | Toma | Aspecto | Fuente |
-|---|---|---|---|
-| 1 | **Packshot** limpio, fondo `bone` | 1:1 | generada |
-| 2 | **Ambiente exterior** | 1:1 | generada |
-| 3 | **Ambiente interior** (mismo hábitat, otro momento) | 4:5 | generada |
-| 4 | **Detalle de FEATURE verificable** | 1:1 | generada |
-| 5 | **ASMR de consumible** — plano ABIERTO | 1:1 | generada |
-| 6 | **FOTO REAL DEL PROVEEDOR** — cierra la galería | original | **nunca se borra** |
+```bash
+python3 scripts/fuente_verdad_producto.py <handle>
+```
 
-**La foto 6 es innegociable.** Es la red de seguridad: si algo generado se desvía, el cliente tiene la
-referencia verdadera en la misma ficha. **El script de publicación NO borra la original: la reordena al final.**
+Devuelve el **dato duro** del proveedor, no una interpretación:
+
+| Campo | Para qué sirve |
+|---|---|
+| **SKU** | identifica el producto de verdad. El título de la ficha y el nombre de la carpeta **no identifican nada** |
+| **producto** | nombre real del proveedor (BRANDON-3, CLOE, LUNA-44…) |
+| **variante** | Balliu: "Chasis Blanco/Tablillas" vs "Chasis Blanco/Tela" — resuelve productos que parecen iguales |
+| **foto real** | URL oficial del proveedor. **Es la referencia de todo el QA** |
+| **cotas** | ancho · fondo · alto REALES. Nunca se deducen de la foto |
+
+**Si el handle no aparece → no se genera nada.** Se anota y se pide el dato.
+
+> **Esto no es burocracia: es el paso que faltaba.** Sin él se publicó la galería del Albania en la ficha del
+> Bellagio, y se dejaron de dibujar cotas que estaban en el repo desde el principio (el "220×69" era
+> ancho 220 · fondo 64 · **alto 69**).
+
+Fuentes que consolida: `Santavila.xlsx` (hojas Hevea/Balliu) · `proveedores_raw/hevea/*.csv` ·
+`proveedores_raw/balliu/_sku_mapping.json`.
 
 ---
 
-## Las 5 PUERTAS (no se salta ninguna)
+## PASO 1 · FICHA DE VERDAD
 
-### PUERTA 1 · FICHA DE VERDAD — sin ficha no se genera nada
-Abre la foto real a **resolución nativa**, recorta cada componente y escribe lo que ves en
+Con el SKU en la mano, **abre la foto oficial a resolución nativa**, recorta cada componente y escribe en
 [`FICHAS_VERDAD.md`](../../docs/santavila/FICHAS_VERDAD.md):
 
 | Componente | Qué anotar |
 |---|---|
 | **Chasis** | material · color exacto · acabado (mate/brillo) |
-| **Tejido** | color · ¿liso o con motivo? · ribete |
-| **Tablero** | material · **tono** · **acabado** · **canto** (los cuatro) |
-| **Elementos** | cuerda, lamas, herrajes, toldo — y **si NO se ven, se anota que no se ven** |
-| **Piezas NO incluidas** | reposapiés o mesas que salen en la foto pero no en el lote (leer "Incluye:") |
+| **Tejido** | color · **¿liso o con motivo?** · ribete |
+| **Tablero** | **material · tono · acabado · canto** — los cuatro, siempre |
+| **Elementos** | cuerda, lamas, herrajes, toldo — **y si NO se ven, se escribe que no se ven** |
+| **Piezas del lote** | qué entra y qué no (leer "Incluye:" + las filas del SKU en el Excel) |
 
-- **Sin fila en esa tabla, no se lanza ni un job.**
-- **Lo que no se ve con certeza se marca `NO DETERMINADO`** y **la toma donde ese elemento sería protagonista
-  NO se hace**. La ficha queda con menos fotos y ninguna miente. Nunca se deduce ni se interpreta.
-
-### PUERTA 2 · IDENTIDAD — ¿es este el producto de esta ficha?
-Compara tu packshot con **la foto real DEL HANDLE DESTINO**. Si no es el mismo mueble (tipo de brazo,
-estructura, color de chasis y tejido), **no se publica**.
-El nombre de la carpeta **no identifica nada**: se publicó la galería del Albania en la ficha del Bellagio
-3 pl. (3.449 €) por dar por bueno un nombre de carpeta.
-
-### PUERTA 3 · QA CONTRA LA FICHA, nunca contra el packshot propio
-El packshot también puede estar mal, y si lo está **arrastra el error a las 6 imágenes**. La corrección de la
-mesa falló dos veces por comparar contra mi propio packshot.
-Se compara **siempre contra la foto del proveedor a resolución nativa**.
-
-### PUERTA 4 · VALIDACIÓN HUMANA — imagen a imagen
-**Se presenta cada imagen con el recorte de la foto real al lado. El dueño aprueba una a una.**
-Nada se sube sin su "ok" explícito **por imagen**. **Una ficha cada vez. Sin tandas.**
-
-### PUERTA 5 · VERIFICACIÓN TÉCNICA tras publicar
-ACTIVE · 6 media · READY · ≥2000 px · pos 0 = packshot · última = foto real · 0 alt vacíos.
+**Lo que no se ve con certeza → `NO DETERMINADO` → esa toma NO se hace.** Nunca se deduce ni se interpreta.
+La ficha queda con menos fotos y ninguna miente.
 
 ---
 
-## LO PROHIBIDO (cada línea es un fallo que ya se publicó)
+## PASO 2 · LAS 6 IMÁGENES
+
+| # | Toma | Aspecto | Fuente |
+|---|---|---|---|
+| 1 | **Packshot** limpio, fondo `bone` | 1:1 | generada |
+| 2 | **Ambiente exterior** | 1:1 | generada |
+| 3 | **Ambiente interior** — mismo hábitat, otro momento | 4:5 | generada |
+| 4 | **Detalle de FEATURE verificable** | 1:1 | generada |
+| 5 | **ASMR de consumible** — plano ABIERTO, la mesa entera en cuadro | 1:1 | generada |
+| 6 | **FOTO OFICIAL DEL PROVEEDOR** — cierra la galería | del SKU | **nunca se borra** |
+
+**La 6 es innegociable**: si algo generado se desvía, el cliente tiene la referencia verdadera en la ficha.
+
+---
+
+## PASO 3 · VALIDACIÓN IMAGEN A IMAGEN (el paso que no se salta)
+
+Por **cada** imagen generada, y antes de subir nada:
+
+1. **Montar el comparador**: recorte de la foto oficial a resolución nativa **junto a** la imagen generada.
+2. **Presentarla al dueño** con la afirmación explícita de qué se ha verificado:
+   > *"Packshot. Tablero HPL gris cemento mate, canto fino enrasado — igual que el real. Jacquard presente.
+   > Conteo 1 sofá + 2 sillones + 2 mesas. Sin reposapiés."*
+3. **Esperar su "ok" por imagen.** No hay aprobación implícita ni por lote.
+4. Si algo no se puede afirmar mirando el píxel → **no se afirma y no se aprueba**.
+
+**El pipeline termina en "listo para revisar", nunca en "publicado".
+Una ficha cada vez. Sin tandas.**
+
+---
+
+## PASO 4 · PUBLICAR Y VERIFICAR
+
+Solo con el "ok" de todas las imágenes. Después:
+`ACTIVE · 6 media · READY · ≥2000 px · pos 0 = packshot · última = foto oficial · 0 alt vacíos`
+
+---
+
+## LO PROHIBIDO — cada línea es un fallo que ya se publicó
 
 | Prohibido | Qué pasó |
 |---|---|
-| **Macro de tejido** | A escala macro el modelo **fabrica** la trama, no la copia. 3 ASMR con jacquard inventado. El detalle de tela solo como **feature**: costura, ribete, unión tela-estructura, herraje, nudo |
-| **Inventar una pieza que no se ve** | Los grilletes del balancín: en la foto real el punto de suspensión no se ve. Se inventó **el detalle en el que el cliente juzga la calidad** |
+| **Macro de tejido** | A escala macro el modelo **fabrica** la trama. 3 ASMR con jacquard inventado. El detalle de tela solo como **feature**: costura, ribete, unión tela-estructura, herraje, nudo |
+| **Inventar lo que no se ve** | Los grilletes del balancín no aparecen en la foto real. Se inventó **el detalle donde el cliente juzga la calidad** |
 | **Quitar una trama que existe** | El jacquard del Brandon publicado **liso** en 3 fichas. La línea roja va en **los dos sentidos** |
-| **Cambiar material, tono, acabado o canto de una superficie** | HPL gris cemento → piedra caliza → gris claro brillante. **El tablero es producto, no bodegón** |
-| **Mezclar variantes en la ficha** | La Java con principal **blanca** y secuencia **gris**: son dos productos |
-| **Gris frío bajo luz de atardecer** | Vira a beige dorado y el aluminio a bronce. Es **incompatibilidad de paleta**: gris frío → luz neutra o del norte, 5400 K |
-| **Personas** | Nunca. La escena vive por los signos de uso, no por gente |
-| **Piezas fantasma** | Reposapiés y mesas que salen en la foto del proveedor pero **no entran en el lote** |
+| **Cambiar material, tono, acabado o canto** | HPL gris cemento → piedra caliza → gris claro brillante. **El tablero es producto, no bodegón** |
+| **Mezclar variantes en la ficha** | La Java con principal blanca y secuencia gris: son **dos productos** |
+| **Gris frío al atardecer** | Vira a beige y el aluminio a bronce. **Incompatibilidad de paleta**: gris frío → luz neutra/norte, 5400 K |
+| **Personas** | Nunca. La escena vive por los signos de uso |
+| **Piezas fantasma** | Reposapiés o mesas que salen en la foto pero **no entran en el lote** (comprobar en el Excel) |
+| **QA contra el packshot propio** | Si el packshot está mal, arrastra el error a las 6. **Siempre contra la foto oficial** |
 
 ---
 
 ## Cómo se compone cada toma
 
-**Referencia visual: Kave Home exteriores** — español, mediterráneo contemporáneo, luz natural franca,
-espacios reales habitados. Ni resort tropical ni chalet de lujo.
+**Referencia: Kave Home exteriores** — español, mediterráneo contemporáneo, luz natural franca, espacios
+reales habitados. Ni resort tropical ni chalet de lujo.
 
-- **Hábitat: uno propio por ficha**, nunca repetido. Consultar
-  [`REGISTRO_LOCALIZACIONES.md`](../../docs/santavila/REGISTRO_LOCALIZACIONES.md) antes de elegir.
-- **El ambiente lo dicta el ESTILO del mueble**, no solo el color: contemporáneo → ático de diseño,
-  microcemento; rústico → caserío, madera; clásico mediterráneo → cal y barro. Un choque de estilo lee
-  "IA" y se rechaza.
+- **Un hábitat propio por ficha**, nunca repetido → [`REGISTRO_LOCALIZACIONES.md`](../../docs/santavila/REGISTRO_LOCALIZACIONES.md)
+- **El ambiente lo dicta el ESTILO**: contemporáneo → ático de microcemento; rústico → caserío;
+  clásico mediterráneo → cal y barro. Un choque de estilo lee "IA" y se rechaza.
+- **Adecuación por tipología**: la silla de comedor a una mesa puesta; la tumbona junto al agua; el parasol
+  dando sombra sobre algo; el balancín en un porche. **Donde ese mueble existiría de verdad.**
 - **Escena vivida**: manta con caída natural, libro abierto, vaso servido, vapor. Nunca la pieza sola en un
   espacio vacío y perfecto.
-- **Adecuación por tipología**: una silla de comedor va a una mesa puesta; una tumbona junto al agua; un
-  parasol dando sombra sobre algo; un balancín en un porche. El sitio donde ese mueble **existiría de verdad**.
-- **Toma 5 · ASMR de consumible con PLANO ABIERTO**: la mesa entera en cuadro, con su canto y sus patas, para
-  que el material sea comparable con la foto real. El macro cerrado del tablero produjo la piedra caliza.
+- **Luz según paleta**: gris frío → neutra/norte 5400 K · tórtola, crudo, arena, cal → cálida, atardecer OK.
 
 ---
 
 ## Mecánica Higgsfield
 
-1. `media_import_url(<URL CDN de la foto real>)` -> `media_id`
+1. `media_import_url(<URL oficial del SKU>)` → `media_id`
 2. `generate_image({model:"nano_banana_pro", prompt:<CORTO>, medias:[{value:media_id, role:"image"}], aspect_ratio, resolution:"1k"})`
-3. `job_status(jobId, sync:true)` -> 4. QA -> 5. `upscale_image` a `4k`
+3. `job_status(jobId, sync:true)` → 4. comparador + validación → 5. `upscale_image` a `4k`
 
-- **Prompt CORTO en modo edición** (3-6 frases, inglés). Los prompts largos colapsan a blanco.
-- **Generar SIEMPRE a `1k`** y subir con `upscale_image`. Pedir 2k/4k en generación da imagen vacía.
-- **Describe la FÍSICA** (hora, dirección y dureza del sol, material, distancia de cámara), nunca adjetivos
-  de calidad ("8k, ultrarrealista").
-- **Nombra el material Y niega el que el modelo inventa**:
+- **Prompt CORTO en modo edición** (3-6 frases, inglés). Los largos colapsan a blanco.
+- **Generar a `1k` SIEMPRE** y subir con `upscale_image`. Pedir 2k/4k en generación da imagen vacía.
+- **Describe la FÍSICA** (hora, dirección y dureza del sol, material, distancia de cámara). Nunca "8k,
+  ultrarrealista".
+- **Nombra el material Y niega lo que el modelo inventa**:
   *"the table top is FLAT SMOOTH GREY HPL — not stone, not travertine, not wood, no grain"*.
-- Límite del plan: **8 jobs concurrentes**. Los créditos se descuentan **al encolar**: si la cola se para,
-  **NO reencolar** — esperar y recoger.
-- Coste: 2 créditos/imagen + 2/upscale.
+- **8 jobs concurrentes** máximo. Los créditos se descuentan **al encolar**: si la cola se para,
+  **NO reencolar** — esperar y recoger. Coste: 2 créditos/imagen + 2/upscale.
 
 ---
 
-## Detalle operativo
-- Runbook MCP y subida a Shopify: [`references/runbook-mcp.md`](references/runbook-mcp.md)
-- Prompt corto y ejemplos validados: [`references/prompt-recipe.md`](references/prompt-recipe.md)
-- Estilo -> espacio: [`references/perfil-disenador-escena.md`](references/perfil-disenador-escena.md)
-- Escenas por región y temporada: [`references/escenas-region-temporada.md`](references/escenas-region-temporada.md)
-- QA detallado y "tells" de IA: [`references/qa-checklist.md`](references/qa-checklist.md)
-- Auditoría de fotos duplicadas del catálogo: `scripts/auditar_fotos_duplicadas.py`
+## Herramientas del proyecto
+
+| Script | Para qué |
+|---|---|
+| `scripts/fuente_verdad_producto.py <handle>` | **PASO 0.** SKU, producto, variante, foto oficial, cotas |
+| `scripts/auditar_fotos_duplicadas.py` | fichas que comparten foto principal (huella perceptual) |
+| `scripts/publicar_galeria_producto.py` | publicar (dry-run por defecto; `--apply` para subir) |
+| `scripts/overlay_medidas_producto.py` | cotas deterministas, **NO IA**, solo con medidas del PASO 0 |
+
+## Contexto obligatorio antes de empezar
+[`LECCIONES_FIDELIDAD.md`](../../docs/santavila/LECCIONES_FIDELIDAD.md) ·
+[`REFLEXION_2026-07-30.md`](../../docs/santavila/REFLEXION_2026-07-30.md) ·
+[`AUDITORIA_CATALOGO_FOTOS.md`](../../docs/santavila/AUDITORIA_CATALOGO_FOTOS.md)
 
 ## Regla final
-Si dudas entre **más espectacular** y **más fiel** -> gana **fiel**.
-Si dudas entre **publicar** y **preguntar** -> gana **preguntar**.
+Si dudas entre **más espectacular** y **más fiel** → gana **fiel**.
+Si dudas entre **publicar** y **preguntar** → gana **preguntar**.
