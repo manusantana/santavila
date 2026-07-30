@@ -39,7 +39,9 @@
           endif
         -%}
         {%- render 'santavila-hero-slide',
-          img: block.settings.image, ld: ld, fp: fp,
+          img: block.settings.image,
+          img_tablet: block.settings.image_tablet, img_mobile: block.settings.image_mobile,
+          ld: ld, fp: fp,
           eyebrow: block.settings.eyebrow, h1: block.settings.heading_line1, h2: block.settings.heading_line2,
           sub: block.settings.subheading,
           cta1l: block.settings.cta1_label, cta1lnk: block.settings.cta1_link,
@@ -50,7 +52,8 @@
       {%- endfor -%}
     {%- else -%}
       {%- render 'santavila-hero-slide',
-        img: s.image, ld: 'eager', fp: 'high',
+        img: s.image, img_tablet: s.image_tablet, img_mobile: s.image_mobile,
+        ld: 'eager', fp: 'high',
         eyebrow: s.eyebrow, h1: s.heading_line1, h2: s.heading_line2,
         sub: s.subheading,
         cta1l: s.cta1_label, cta1lnk: s.cta1_link,
@@ -173,6 +176,12 @@
     position: absolute;
     inset: 0;
     z-index: 0;
+  }
+  /* <picture> es inline por defecto: sin esto el object-fit del img no tiene caja que rellenar. */
+  .sv-hero__media picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .sv-hero__media img {
     width: 100%;
@@ -356,7 +365,19 @@
       "type": "image_picker",
       "id": "image",
       "label": "Imagen de fondo (sin diapositivas)",
-      "info": "Se usa si NO añades diapositivas abajo. Sin imagen se usa el degradado sage de marca."
+      "info": "Se usa si NO añades diapositivas abajo. Sin imagen se usa el degradado sage de marca. Formato de escritorio: 16:9."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_tablet",
+      "label": "Imagen · tablet (750–1023 px)",
+      "info": "Opcional. Formato ~1:1. Si la dejas vacía se usa la de escritorio."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Imagen · móvil (hasta 749 px)",
+      "info": "Opcional. Formato vertical 9:16. Si la dejas vacía se usa la de escritorio, que en móvil se recorta mucho."
     },
     {
       "type": "select",
@@ -445,7 +466,9 @@
       "type": "slide",
       "name": "Diapositiva",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "Imagen de fondo" },
+        { "type": "image_picker", "id": "image", "label": "Imagen de fondo · escritorio (16:9)" },
+        { "type": "image_picker", "id": "image_tablet", "label": "Imagen · tablet (~1:1)", "info": "Opcional. 750–1023 px." },
+        { "type": "image_picker", "id": "image_mobile", "label": "Imagen · móvil (9:16)", "info": "Opcional. Hasta 749 px." },
         { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
         { "type": "text", "id": "heading_line1", "label": "Titular · línea 1" },
         { "type": "text", "id": "heading_line2", "label": "Titular · línea 2 (itálica)" },

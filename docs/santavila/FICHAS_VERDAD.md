@@ -43,6 +43,19 @@
 | **Brandon 2 pl.** `set-jardin-aluminio-2-plazas-...` | ídem | ídem (jacquard) | ídem | — |
 | **Sofá 220×90** `sofa-terraza-aluminio-3-plazas-...` | ídem | ídem (jacquard) | — (pieza suelta, sin mesa) | — |
 | Balinesa 198 · Balinesa 160 · Parasol Roma · LEISA · Tumbona | — | — | **PENDIENTE** — originales localizadas en `images_optimized/` e `images_balliu/` del repo, falta auditarlas | — |
+| **Mesa Java + sillas Etna** `balliu-mesa-exterior-hpl-140-180100-cm-8e073aab` (1.575 €) | mesa y sillas en **aluminio GRIS TÓRTOLA mate**, patas de sección cuadrada gruesa a plomo | sillas Etna: **textileno BLANCO ROTO/CRUDO**, trama fina visible, tensado; respaldo curvo con **remate superior de aluminio** y **remaches visibles** en la unión brazo-respaldo; con brazos planos, apilables | **HPL · GRIS TOPO MEDIO · MATE y LISO · junta transversal central visible (es extensible) · canto FINO enrasado en el marco tórtola** → se lee como una pieza | Leída sobre `Balliu_Mesa-Java2` (1200×921) y `java-mesa-aluminio-ambiente` (800×614), **no** sobre la pos-0. **NO DETERMINADO:** el mecanismo interno de extensión (solo visible en otra variante de color) → no se genera toma de ese detalle |
+
+> ⚠️ **Fallo de identidad detectado el 2026-07-30 (clase A0, fuera del alcance de la auditoría de las 25).**
+> La **foto principal (pos-0) de la mesa Java** es, byte a byte, la foto de la **mesa Atlanta**
+> (`balliu_mesa-extensible-de-aluminio-atlanta.jpg`, distancia perceptual **0** entre ambas pos-0).
+> No son la misma mesa: la **Atlanta tiene tablero de LAMAS** y la **Java tiene tablero HPL LISO** — lo dicen
+> su descripción y sus otras cuatro fotos. Es decir, la Java se vende con la foto de otro modelo como imagen
+> principal. **Pendiente de corregir en la ficha.** Por eso la ficha de verdad de arriba se ha escrito
+> deliberadamente sobre las fotos de ambiente, ignorando la pos-0.
+>
+> Alcance sin comprobar: la colección **Mesas (73 productos)** nunca se ha auditado por identidad. Este fallo
+> apareció al mirar la primera mesa; conviene revisar las demás con el mismo método (comparación de huella
+> perceptual entre pos-0 de productos distintos).
 
 ## Estado de auditoría de lo ya publicado
 Ver [`AUDITORIA_FIDELIDAD_2026-07-29.md`](AUDITORIA_FIDELIDAD_2026-07-29.md) y

@@ -390,5 +390,19 @@
    "gid://shopify/MediaImage/71288552096068",
    "gid://shopify/MediaImage/71288552128836"
   ]
+ },
+ {
+  "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
+  "producto": "gid://shopify/Product/15507125338436",
+  "borrados": [
+   "gid://shopify/MediaImage/71287539695940"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71288703910212",
+   "gid://shopify/MediaImage/71288703942980",
+   "gid://shopify/MediaImage/71288703975748",
+   "gid://shopify/MediaImage/71288704008516",
+   "gid://shopify/MediaImage/71288704041284"
+  ]
  }
 ]

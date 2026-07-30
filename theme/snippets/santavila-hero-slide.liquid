@@ -1,14 +1,39 @@
 {%- comment -%}
   Santavila · contenido de un slide del hero. Lo usan el carrusel (bloques) y el modo legacy (settings de sección).
   Params:
-    img, ld (loading), fp (fetchpriority), eyebrow, h1, h2, sub,
+    img, img_tablet, img_mobile, ld (loading), fp (fetchpriority), eyebrow, h1, h2, sub,
     cta1l, cta1lnk, cta2l, cta2lnk,
     show_seal, seal_text, seal_id, panel (bool), panel_style, active (bool), attrs
 {%- endcomment -%}
 <div class="sv-hero__slide{% if active %} is-active{% endif %}" data-hero-slide{% if attrs %} {{ attrs }}{% endif %}>
   {%- if img != blank -%}
     <div class="sv-hero__media">
-      {{ img | image_url: width: 2400 | image_tag: loading: ld, fetchpriority: fp, sizes: '100vw', widths: '600, 900, 1200, 1600, 2000, 2400', alt: img.alt | default: shop.name }}
+      {%- comment -%}
+        Art direction. El hero mide 100svh, así que su proporción va de ~0,52 en móvil a ~2,0 en
+        escritorio: una sola imagen no puede servir a las tres sin recortes brutales. Se sirve un
+        encuadre por familia de pantalla con el mismo patrón <picture> que usa el tema en
+        sections/hero.liquid. Si no hay imagen de tablet/móvil, cae a la de escritorio (comportamiento
+        anterior intacto).
+      {%- endcomment -%}
+      <picture>
+        {%- if img_mobile != blank -%}
+          <source
+            media="(max-width: 749px)"
+            srcset="{{ img_mobile | image_url: width: 600 }} 600w, {{ img_mobile | image_url: width: 900 }} 900w, {{ img_mobile | image_url: width: 1200 }} 1200w"
+            sizes="100vw"
+            width="{{ img_mobile.width }}"
+            height="{{ img_mobile.height }}">
+        {%- endif -%}
+        {%- if img_tablet != blank -%}
+          <source
+            media="(max-width: 1023px)"
+            srcset="{{ img_tablet | image_url: width: 900 }} 900w, {{ img_tablet | image_url: width: 1200 }} 1200w, {{ img_tablet | image_url: width: 1600 }} 1600w"
+            sizes="100vw"
+            width="{{ img_tablet.width }}"
+            height="{{ img_tablet.height }}">
+        {%- endif -%}
+        {{ img | image_url: width: 2400 | image_tag: loading: ld, fetchpriority: fp, sizes: '100vw', widths: '600, 900, 1200, 1600, 2000, 2400', alt: img.alt | default: shop.name }}
+      </picture>
     </div>
   {%- endif -%}
 
