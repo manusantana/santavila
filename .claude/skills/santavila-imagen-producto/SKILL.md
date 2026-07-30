@@ -39,6 +39,25 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 | 4 | Detalle / ASMR de material | 1:1 | Higgsfield anclado |
 | 5 | Medidas (cotas) | 1:1 | **Overlay, NO IA** |
 
+## ⛔⛔ PROHIBIDO EL MACRO DE TEJIDO (2026-07-30)
+Se publicaron **tres** ASMR con el jacquard **inventado** — y la regla que lo prohibía (§15) la había
+escrito yo mismo horas antes. A escala macro **el modelo SIEMPRE fabrica la trama**: no la copia, la
+reconstruye. Y una foto de catálogo a 1.500 px **no permite auditarla**, así que el QA tampoco puede
+cazarlo. Es una toma que no se puede hacer con garantías.
+
+**El detalle de tela solo se fotografía como FEATURE VERIFICABLE:** costura, ribete, cremallera, unión
+tela↔estructura, herraje, nudo de cuerda. Nunca la trama por sí misma.
+**Si la trama no se distingue en la foto del proveedor, NO HAY TOMA DE TRAMA.**
+
+## ⛔ COHERENCIA DE VARIANTE dentro de la ficha
+Todas las fotos de una ficha deben ser **el mismo color y acabado**. Mezclar el packshot de la versión
+blanca con ambientes de la gris es tan grave como cambiar un material: son **dos productos**.
+Verificar la variante de TODAS las fotos, no solo de la principal.
+
+## 🛑 NADA SE PUBLICA SIN VISTO BUENO
+El pipeline termina en **"listo para revisar"**, no en "publicado". Una ficha cada vez: se genera, se enseña,
+el dueño valida, y solo entonces se sube. **Nada de tandas.**
+
 ## 📕 LEE ESTO ANTES DE EMPEZAR
 [`docs/santavila/LECCIONES_FIDELIDAD.md`](../../docs/santavila/LECCIONES_FIDELIDAD.md) — las creencias
 equivocadas que llevaron a publicar imágenes con material inventado, trama eliminada, color desviado, un
