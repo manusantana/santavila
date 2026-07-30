@@ -36,7 +36,8 @@ def cargar():
                 s=(row.get("SKU") or "").strip()
                 if s and row.get("Imagen"):
                     sku2img[s]={"img":row["Imagen"].strip(),"ancho":row.get("Ancho (cm)"),
-                                "fondo":row.get("Fondo (cm)"),"alto":row.get("Alto (cm)")}
+                                "fondo":row.get("Fondo (cm)"),"alto":row.get("Alto (cm)"),
+                                "descripcion":(row.get("Descripción") or "").strip()}
         except Exception: pass
     sku2var={}
     try:
@@ -45,12 +46,33 @@ def cargar():
     except Exception: pass
     return h2sku,sku2img,sku2var
 
+def cutout(handle):
+    """Recorte del producto SUELTO en images_cutout/. TOMA DE CONOCIMIENTO:
+    sirve para entender la geometria de la pieza aislada, no para publicar."""
+    p=os.path.join("images_cutout",handle+".png")
+    return p if os.path.exists(p) else None
+
+def catalogo_balliu(producto):
+    """Texto de la ficha del producto en el catalogo general de Balliu 2025."""
+    f="proveedores_raw/balliu/_catalogo_2025_texto.txt"
+    if not os.path.exists(f) or not producto: return None
+    txt=open(f,encoding="utf-8",errors="replace").read().split("\n")
+    nombre=producto.split("·")[0].split("|")[0].strip()
+    for i,l in enumerate(txt):
+        if l.strip().lower()==nombre.lower():
+            blq=[x.strip() for x in txt[i:i+26] if x.strip()]
+            return " ".join(blq[:14])
+    return None
+
 def ficha(handle,h2sku,sku2img,sku2var):
     out=[]
     for prov,sku,prod in h2sku.get(handle,[]):
         d={"proveedor":prov,"sku":sku,"producto":prod}
         if sku in sku2img: d.update(sku2img[sku])
-        if sku in sku2var: d["variante"]=sku2var[sku][1]
+        if sku in sku2var:
+            d["variante"]=sku2var[sku][1]
+            d["catalogo"]=catalogo_balliu(sku2var[sku][0])
+        d["cutout"]=cutout(handle)
         out.append(d)
     return out
 
@@ -69,3 +91,6 @@ if __name__=="__main__":
         if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
         if d.get("img"):      print(f"  foto real : {d['img']}")
         if d.get("ancho"):    print(f"  cotas     : ancho {d['ancho']} · fondo {d['fondo']} · alto {d['alto']} cm")
+        if d.get("descripcion"): print(f"  descripcion: {d['descripcion'][:200]}")
+        if d.get("catalogo"):  print(f"  catalogo  : {d['catalogo'][:260]}")
+        if d.get("cutout"):    print(f"  cutout    : {d['cutout']}  (conocimiento de la pieza suelta, NO publicar)")
