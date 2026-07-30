@@ -74,11 +74,27 @@ Es el caso de manual de la §15 y aun así se publicó.
 
 Falla el **conteo de piezas** del QA-A, no solo el material.
 
-### A7 · Desviación de color cálida en los ASMR (3 fichas)
-Acapulco 2 pl. · Acapulco 3 pl. · Dounvil 2 pl.
+### A7 · Desviación de color cálida en los ASMR (6 fichas)
+Acapulco 2 pl. · Acapulco 3 pl. · Dounvil 2 pl. · **Yina 3 pl.** · **Yina 2 pl.** · **Pérgola**
 
-El tejido real es **gris/beige frío** y en el ASMR se lee **beige dorado** por la luz de atardecer. Supera el
-ΔE≤3 del QA-A. Menos grave que A1–A6 pero es la misma familia de fallo: el cliente no ve el color que compra.
+El material real es **gris frío** (tejido o cuerda) y en el ASMR se lee **beige dorado** por la luz de
+atardecer. Supera el ΔE≤3 del QA-A. En el Sofá 220×69 este mismo fallo **sí** se detectó y corrigió en su
+momento (regenerado a 5400 K); en estas seis no.
+
+### A8 · Balancín Sidney — HERRAJE DE SUSPENSIÓN INVENTADO ⛔
+`balancin-jardin-exterior-148194-cm` · imagen `04_asmr_suspension`
+
+| | |
+|---|---|
+| **Producto real** | En la única foto disponible **el punto de suspensión NO se ve**: el asiento cuelga del travesaño, pero el herraje queda oculto |
+| **Publicado** | **Grilletes cromados en U con bulón**, detallados y en primer plano, presentados como el herraje del producto |
+
+**Este es el fallo más grave de la lista en términos de principio.** No es una desviación de tono ni una
+trama mal leída: es **una pieza entera inventada y puesta como protagonista de la imagen**. Y encima el
+razonamiento con el que la generé fue *"es lo que un cliente quiere ver para juzgar la calidad"* — es decir,
+inventé precisamente el detalle en el que el cliente se va a apoyar para decidir.
+
+Regla que se incumplió: **si no se ve, no existe, y la toma NO se hace.**
 
 ---
 
@@ -107,11 +123,10 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 ---
 
 ## D · PENDIENTE DE AUDITAR
-1. **Tejido — auditado en 12 de 22 fichas.** Verificadas OK: Albania 2 pl., Bellagio 2 pl., Damasco 2 pl.,
-   Diva 2 pl., Diva 3 pl., Dounvil 3 pl., Rinconera. Falladas: A2 (Brandon ×3), A5 (Odin), A6 (Manhattan 3
-   pl.), A7 (Acapulco ×2, Dounvil 2 pl.). **Sin auditar todavía:** Manhattan 2 pl., Yina 3 pl., Yina 2 pl.,
-   Sidney, Sofá 220×69, Pérgola, Acapulco 3 pl. (tejido), Bolonia XL y CUPRA (sin publicar).
-2. **Elementos singulares**: cuerda, lamas de respaldo, herrajes, toldos.
+1. ~~Tejido~~ **COMPLETADO en las 19 fichas con foto original.** Verificadas OK: Albania 2 pl.,
+   Bellagio 2 pl., Damasco 2 pl., Diva 2 pl., Diva 3 pl., Dounvil 3 pl., Manhattan 2 pl., Rinconera,
+   Sofá 220×69, Acapulco 3 pl. (tablero). Falladas: A2 · A5 · A6 · A7 · A8.
+2. ~~Elementos singulares~~ **COMPLETADO** — de aquí salió A8 (herraje inventado en el Sidney).
 3. **Conteo de piezas** en las 5 imágenes de cada ficha (ya se revisó al generar, pero sin este rigor).
 4. Las 6 fichas del bloque B, cuando aparezca su foto original.
 
@@ -122,7 +137,7 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 
 | Escenario | Imágenes | Créditos |
 |---|---|---|
-| Lo confirmado hoy (A1 + A3 + A4 + A5 + A6 + A7 + los 5×3 del Brandon) | ~24 | ~96 |
+| Lo confirmado (A1–A8, incluidos los 5×3 del Brandon) | ~28 | ~112 |
 | Si el tejido falla en más fichas | +5 a +25 | +20 a +100 |
 
 ---
