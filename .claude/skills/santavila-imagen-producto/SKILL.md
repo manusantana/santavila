@@ -39,6 +39,14 @@ Diagnóstico de imagen vacía: desviación estándar de píxeles ~15 = blanca; ~
 | 4 | Detalle / ASMR de material | 1:1 | Higgsfield anclado |
 | 5 | Medidas (cotas) | 1:1 | **Overlay, NO IA** |
 
+## 📕 LEE ESTO ANTES DE EMPEZAR
+[`docs/santavila/LECCIONES_FIDELIDAD.md`](../../docs/santavila/LECCIONES_FIDELIDAD.md) — las creencias
+equivocadas que llevaron a publicar imágenes con material inventado, trama eliminada, color desviado, un
+herraje que no existe y **la galería de un producto en la ficha de otro**. No es historia: son los errores
+que se repiten si no se leen.
+
+> **Si no existe, no lo hago. Si no sé hacerlo, no lo hago. Si no lo puedo verificar, no lo publico.**
+
 ## 🚦 PASO 0 — FICHA DE VERDAD (sin ficha no se genera NADA)
 **Antes de importar la foto, antes del primer prompt, antes de cualquier cosa:** abre la foto real a
 **resolución nativa**, recorta cada componente y escribe lo que ves en

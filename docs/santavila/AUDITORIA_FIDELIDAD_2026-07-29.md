@@ -74,6 +74,7 @@ igual: la imagen no representa el producto.
 |---|---|
 | **Producto real** | Tablero **liso efecto madera marrón** sobre faldón de lamas antracita |
 | **Publicado** | Tablero **de lamas** |
+| **Alcance** | ⚠️ **También en el PACKSHOT**, no solo en el ASMR → la galería entera. **Retirada**; la ficha queda con la foto real del proveedor |
 
 ### A5 · Odin 3 pl. — veta de madera inventada sobre el aluminio
 `set-jardin-3-plazas-elegante-...-mesa` · imagen `04_asmr`
@@ -99,6 +100,9 @@ Acapulco 2 pl. · Acapulco 3 pl. · Dounvil 2 pl. · **Yina 3 pl.** · **Yina 2 
 El material real es **gris frío** (tejido o cuerda) y en el ASMR se lee **beige dorado** por la luz de
 atardecer. Supera el ΔE≤3 del QA-A. En el Sofá 220×69 este mismo fallo **sí** se detectó y corrigió en su
 momento (regenerado a 5400 K); en estas seis no.
+
+⚠️ **En Yina 3 pl. el viraje está también en el PACKSHOT** (la cuerda real es gris y sale tórtola) → galería
+entera **retirada**, la ficha queda con la foto real del proveedor.
 
 ### A8 · Balancín Sidney — HERRAJE DE SUSPENSIÓN INVENTADO ⛔
 `balancin-jardin-exterior-148194-cm` · imagen `04_asmr_suspension`
@@ -141,12 +145,21 @@ tejido, no la mesa) · Pérgola · Balancín Sidney · Sofá 220×69.
 
 ---
 
+## C.bis · IDENTIDAD DEL PRODUCTO — auditada en las 25 fichas
+Packshot generado vs. foto real del handle destino. **1 fallo: A0 (Bellagio 3 pl.).** Las otras 24 son el
+producto correcto. Verificadas: Acapulco 2/3 pl. · Albania 2 pl. · Bellagio 2 pl. · Brandon 3/2 pl. ·
+Sofá 220×90 · Damasco 2 pl. · Diva 2/3 pl. · Dounvil 2/3 pl. · Manhattan 2/3 pl. · Odin 3 pl. ·
+Rinconera · Sidney · Sofá 220×69 · Yina 3/2 pl. · Pérgola.
+
+---
+
 ## D · PENDIENTE DE AUDITAR
 1. ~~Tejido~~ **COMPLETADO en las 19 fichas con foto original.** Verificadas OK: Albania 2 pl.,
    Bellagio 2 pl., Damasco 2 pl., Diva 2 pl., Diva 3 pl., Dounvil 3 pl., Manhattan 2 pl., Rinconera,
    Sofá 220×69, Acapulco 3 pl. (tablero). Falladas: A2 · A5 · A6 · A7 · A8.
 2. ~~Elementos singulares~~ **COMPLETADO** — de aquí salió A8 (herraje inventado en el Sidney).
-3. **Conteo de piezas** en las 5 imágenes de cada ficha (ya se revisó al generar, pero sin este rigor).
+3. **Conteo de piezas** en el packshot de cada ficha (se hace en el packshot, NO en los ASMR — ver A6).
+4. **Nº de postes de la pérgola** (el real parece tener 6; el packshot muestra 5 desde ese ángulo).
 4. Las 6 fichas del bloque B, cuando aparezca su foto original.
 
 ---
