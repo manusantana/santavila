@@ -39,7 +39,17 @@
 | **Bolonia XL 3 pl.** `set-jardin-3-plazas-contemporaneo-...-mesa-2` | aluminio azul marino | azul claro grisáceo | **LAMAS de aluminio azul marino · marco perimetral más ancho** | reposapiés **NO** incluido |
 | **CUPRA 3 pl.** `set-jardin-3-plazas-sofisticado-...-mesa-2` | aluminio tórtola mate | verde salvia | **LAMAS de aluminio tórtola · lamas ESTRECHAS y numerosas, dentro de marco más ancho** | 2 reposapiés **NO** incluidos |
 | **Albania 3 pl.** `...-mesa-3` | tórtola | verde salvia | **NO DETERMINADO** — el export de imágenes apunta a otro producto; falta la foto real de esta ficha | — |
-| Balinesa 198 · Balinesa 160 · Parasol Roma · LEISA · Tumbona | — | — | **NO DETERMINADO** — falta localizar la foto original | — |
+| **Brandon 3 pl.** `set-jardin-aluminio-3-plazas-...` | aluminio antracita, perfil fino | **chenille gris con JACQUARD tono sobre tono** (motivo irregular tipo pinceladas/grafismos en gris claro) — NO liso | **2 mesas redondas nido · LISO gris cemento · mate · canto fino · patas cilíndricas finas** | — |
+| **Brandon 2 pl.** `set-jardin-aluminio-2-plazas-...` | ídem | ídem (jacquard) | ídem | — |
+| **Sofá 220×90** `sofa-terraza-aluminio-3-plazas-...` | ídem | ídem (jacquard) | — (pieza suelta, sin mesa) | — |
+| Balinesa 198 · Balinesa 160 · Parasol Roma · LEISA · Tumbona | — | — | **PENDIENTE** — originales localizadas en `images_optimized/` e `images_balliu/` del repo, falta auditarlas | — |
 
 ## Estado de auditoría de lo ya publicado
-Ver `JOURNAL.md`, entradas `2026-07-29 (E)` y `(F)`.
+Ver [`AUDITORIA_FIDELIDAD_2026-07-29.md`](AUDITORIA_FIDELIDAD_2026-07-29.md) y
+[`LECCIONES_FIDELIDAD.md`](LECCIONES_FIDELIDAD.md).
+
+## Galerías rehechas con el método nuevo (ficha → generar → QA contra ficha → identidad → publicar)
+| Ficha | € | Fecha | Notas |
+|---|---|---|---|
+| **Brandon 3 pl.** | 5.249 | 2026-07-30 | 5/5 aprobadas a la primera. Jacquard correcto en las 5 |
+| **Brandon 2 pl.** | 4.679 | 2026-07-30 | El QA rechazó el ASMR (jacquard demasiado tenue, leído como rayas) y se regeneró antes de publicar |
