@@ -29,8 +29,24 @@
 - [ ] Compone en 1:1 sin aire muerto ni patas/brazos amputados; 8–12 % de aire.
 - [ ] Textura del material legible. Escala legible (referente real cuando aplica).
 
-## E · Toma 5 · medidas — BLOQUEANTE (lo más delicado de la galería)
-- [ ] Cota = **dato verificado** de ficha/título/metafield. Si no hay dato, la cota NO se dibuja.
+## D.bis · Escala — BLOQUEANTE (línea roja del dueño, ROL §13.bis)
+Sin cuerpo entero en la galería, la escala se ancla **exclusivamente en objetos cotidianos**:
+- [ ] **Mano humana 18 cm** (obligatoria en todo ASMR con manos) · taza 8 cm Ø · copa 22 cm · libro 30 cm · cojín 45–60 cm.
+- [ ] Producto **≥78 % del ancho** en packshot y **≥45 %** en ambiente (nunca <30 %). Cielo ≤25 %.
+- [ ] **Plano de cierre** sólido a 2–5 m detrás (seto, muro, pérgola). Prohibida la fuga al infinito tras el mueble.
+- [ ] Perspectiva única: una línea de horizonte, una escala física para todo el cuadro. Patas apoyadas con su sombra.
+- [ ] **Mano gigante o taza desproporcionada invalida el ASMR** aunque la textura sea perfecta.
+
+## D.ter · Presencia humana — solo MANOS (decisión 31-07)
+- [ ] **Nunca cuerpo entero ni cara.** Solo manos y consumibles. El §10 del ROL está archivado.
+- [ ] Manos: 5 dedos, sin fusiones, muñeca natural. **Verificar tras el upscale a 4K**, no en la previa.
+- [ ] Mano que TOCA el producto = máximo escrutinio: si falla, rechazo aunque el resto sea perfecto.
+- [ ] **Escena sin persona = escena EN REPOSO:** cojines mullidos y lisos, **sin vapor**, sin huella de cuerpo.
+      El vapor y el cojín hundido implican que alguien está ahí ahora → tell de IA en una foto vacía.
+
+## E · Medidas — BLOQUEANTE **cuando aplica** (solo si el Paso 0 dio cota)
+> Hoy **103 de 176 fichas no tienen cotas reales**. Sin cota verificada, la ficha simplemente no lleva esta imagen.
+- [ ] Cota = **dato verificado** del proveedor/ficha/metafield. Si no hay dato, la cota NO se dibuja.
 - [ ] Se sabe **cuál es ancho y cuál alto**. Si la ficha da "72×75" sin desglosar → **preguntar**; jamás deducirlo de la foto (en 3/4 unos centímetros son indistinguibles).
 - [ ] Etiqueta **explícita**: `Ancho · N cm` / `Alto · N cm`. Nunca solo "N cm".
 - [ ] Cada línea abarca el producto **de extremo a extremo** en su eje, con topes en los extremos REALES (contorno automático, no medido a ojo).

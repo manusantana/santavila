@@ -33,8 +33,13 @@ Photorealistic, shot on a real camera.
 >
 > (Rústico → caserío de piedra + lana + tetera; clásico med → cal/barro + buganvilla. Nunca mezclar estilos: mueble moderno NO va en caserío rústico.)
 
-**Toma 4 · Detalle / ASMR (escala moderada, textura REAL)**
-> *Using the reference image, close but not extreme detail of the real rope weave over the aluminium armrest and the cushion seam. Keep the exact real texture — do not invent any weave or fabric. Grazing side light at low angle to reveal the relief. Photorealistic.*
+**Toma 4 · Detalle / ASMR de FEATURE (nunca de tejido — §15 endurecido)**
+> ⛔ **Prohibido cualquier plano cuya superficie dominante sea el TEJIDO**, a cualquier escala: el modelo
+> fabrica la trama (jacquard inventado en 3 fichas del Brandon). El detalle se hace sobre una **feature
+> verificable**: costura, ribete, cremallera, **unión tela↔estructura**, herraje, nudo de cuerda, canto del
+> tablero, perfil de aluminio.
+>
+> *Using the reference image, a close detail of the junction between the aluminium armrest and the cushion — the real seam and the rope knot where they meet. Keep the exact real materials — do not invent any weave or fabric. Grazing side light at low angle to reveal the relief. Photorealistic.*
 
 ## Validado (Fase 0, LEISA)
 Ancla `media_import_url`(URL CDN Shopify) → `media_id` → `generate_image(medias:[{role:"image"}])` con prompt corto → resultado premium fiel (terraza menorquina con barro/cal/olivo). El fondo se cambió desde una composición YA correcta (camino seguro: swap de fondo, no recomponer de cero cuando hay personas — evita el fallo de escala).

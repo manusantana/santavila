@@ -4,6 +4,26 @@
 
 ---
 
+## ⚠️ ESTADO VIGENTE (2026-07-31) — leer ANTES que nada
+
+Este documento es la **fuente del oficio** y sigue vigente casi por completo. Pero se ha escrito por capas
+entre junio y julio de 2026, y **cuatro puntos han quedado superados por decisiones posteriores de Sergio**.
+Donde este documento y el [`SKILL.md`](../../.claude/skills/santavila-imagen-producto/SKILL.md) discrepen,
+**manda el SKILL**:
+
+| Punto | Lo que dice este documento | **Lo vigente** |
+|---|---|---|
+| **Receta de galería** | §4: 5 tomas (packshot · ambiente A · ambiente B · macro · medidas). §13.bis.6: "1 producto + 1 ambiente + 2–3 ASMR" | **Decisión 26-07, confirmada 31-07:** packshot bone → **ambiente EXTERIOR** → **ambiente INTERIOR del mismo hábitat** → 2 ASMR. Medidas **solo si hay cota verificada** |
+| **Personas** | §10: sistema completo de avatares regionales, 5 Souls, casting por región | **Solo MANOS y consumibles. Nunca cuerpo entero ni cara.** El §10 queda archivado como conocimiento, no se aplica. Las anclas de escala (§13.bis.3) siguen siendo bloqueantes: mano 18 cm, taza 8, copa 22, libro 30 |
+| **Macro de material** | §15: permitido "a escala moderada" anclado a la foto real | **PROHIBIDO todo plano cuya superficie dominante sea el TEJIDO.** Solo features verificables: costura, ribete, unión tela↔estructura, herraje, nudo, canto, perfil. Motivo: el jacquard inventado en 3 fichas del Brandon |
+| **Resolución de generación** | §7.4 y §8: `resolution:"4k"` | **`1k` SIEMPRE**, y `upscale_image` a 4k después. 2k/4k directos colapsan a un gradiente en blanco (verificado en la Fase 0: std de píxeles ~15 = vacía) |
+
+**Todo lo demás de este documento está vigente y es de aplicación obligatoria**, en especial: §8 (emparejamiento
+por carril de paleta), §11 (roster de localizaciones y disciplina de rotación), §12 (Master QA), §13 y §13.bis
+(escala — línea roja) y §14 (temporadas).
+
+---
+
 ## 0. Cómo usar este documento
 
 1. Lee la **Identidad y mentalidad** (§1) y las **Leyes innegociables** (§2): si dudas, ganan ellas.
@@ -180,6 +200,12 @@ El hero debe vender solo (el 50%+ del tráfico no pasa de la primera foto). **Or
 ---
 
 ## 4. Las 5 Tomas (operacionalizadas)
+
+> ⚠️ **La LISTA de tomas de esta sección está superada** (ver *Estado vigente* arriba). La receta vigente es:
+> packshot bone → **ambiente EXTERIOR** → **ambiente INTERIOR del mismo hábitat** → 2 ASMR → medidas solo con
+> cota verificada. **Las ESPECIFICACIONES de cada toma (óptica, luz, sombra, criterio de éxito) siguen siendo
+> de aplicación obligatoria** — se leen mapeando: Ambiente A ≙ exterior, Ambiente B ≙ interior, y el "Detalle
+> de material" con la restricción del §15 endurecido (feature, nunca tejido).
 
 Receta fija por ficha. Mínimo no negociable (refrendado por el blueprint “Perfect Product Page”: *at least 5 images*). Todas a **≥2000 px** lado mayor (objetivo 2400), export sRGB/WebP-AVIF + master. Fija UNA dirección de sol por ficha y mantenla en las 4 tomas generadas.
 
@@ -704,6 +730,16 @@ Esta línea roja es **subordinada a la Ley 1**: el ASMR vive en la escena, las h
 - **Regla de oro:** dos fotos de la MISMA ficha **nunca** llevan la misma bebida+aperitivo. Esa rotación ("ahora un vermut con aceitunas, luego un café con galletas") es lo que convierte la escena en VIDA real y dispara el ASMR — que el cliente piense *"esa gente está viviendo de verdad ahí, me veo yo"*.
 
 ## 10. Sistema de avatares por región (hiperrealista)
+
+> ⚠️ **SECCIÓN ARCHIVADA — no se aplica hoy** (decisión de Sergio, 31-07). En la galería de producto entran
+> **solo manos y consumibles; nunca cuerpo entero ni cara.** Motivo: el cuerpo entero abre la doble puerta de
+> escala del §13.bis, que es exactamente donde falló Cantabria, y su QA anatómico es el más caro y el más
+> propenso a error. Con manos, la escala se ancla en objetos (mano 18 cm) y el problema desaparece por diseño.
+>
+> Se conserva íntegra porque el conocimiento es bueno y porque **sigue vigente lo que sí usamos de aquí**: el
+> QA de manos y dedos tras el upscale a 4K, la coherencia de luz piel↔escena, y la regla de escena vacía vs
+> habitada (sin persona → escena EN REPOSO: cojines mullidos, sin vapor, sin huella de cuerpo).
+> Si algún día se reactivan las personas, esta sección es el punto de partida.
 
 > Capa nueva (2026-06-19, feedback del dueño): cuando entra gente, deben ser **personas/familias hiperrealistas y AUTÉNTICAS de la zona de la escena** (§8) — *"la persona real con la que el cliente ha estado hablando"*, no modelos de stock ni caricatura de tópico. Esta sección operacionaliza la presencia humana que la Ley 4 (self-assembly, persona secundaria) y el §3.4 (escala humana sin protagonismo) ya admitían, y la ata al casting regional y al flujo Higgsfield. **Producto de prueba: conjunto LEISA** (sofá 3 plazas + 2 sillones + mesa, aluminio antracita + cojines gris claro).
 
@@ -1354,9 +1390,21 @@ RH/Kettal/Gandia Blasco disparan **fotografía real** → no pueden refrescar to
 ## 15. LÍNEA ROJA — materiales y texturas REALES (nunca inventar)
 
 > Añadido **2026-06-22** tras la tumbona. En los **ASMR y detalles**, está **PROHIBIDO inventar materiales o texturas que no sean los reales del producto.** Es línea roja, como la proporción.
+>
+> ### ⛔ ENDURECIDO el 2026-07-30 por orden de Sergio — el macro de tejido queda PROHIBIDO
+>
+> La versión de junio ("escala moderada, no macro extremo") **no bastó**: el 29-07 se publicaron **tres ASMR
+> del Brandon con un jacquard fabricado por el modelo**, siguiendo esta misma sección. La regla de "moderada"
+> deja una zona gris que en la práctica se cruza sola.
+>
+> **Regla vigente:** está prohibido **cualquier plano cuya superficie dominante sea el TEJIDO**, a cualquier
+> escala. El detalle de tela solo se hace como **FEATURE verificable**: costura, ribete, cremallera, unión
+> tela↔estructura, herraje, nudo de cuerda, canto del tablero, perfil de aluminio.
+> Si la trama no se distingue con certeza en la foto del proveedor a resolución nativa → `NO DETERMINADO` →
+> **esa toma no se hace.** La ficha queda con menos fotos y ninguna miente.
 
 - **El enemigo es el MACRO EXTREMO de textura.** Pedir *"extreme macro del tejido"* empuja al modelo a **fabricar** un tejido (p. ej. un tweed/arpillera grueso) que no existe. En la tumbona el sling real es una **malla técnica fina y lisa**; el macro inventó un tejido grueso → **rechazado**.
-- **Regla:** los ASMR de material se anclan SIEMPRE a la **foto REAL** del producto (no al packshot IA, que ya puede haber derivado) y a **escala MODERADA** (no macro extremo), para que el material se lea como el real.
+- **Regla:** los ASMR de material se anclan SIEMPRE a la **foto REAL** del producto (no al packshot IA, que ya puede haber derivado). *(La coletilla "y a escala MODERADA" queda derogada por el bloque de arriba: no hay escala de tejido permitida.)*
 - **Mejor que el macro de textura:** mostrar **features REALES** (mecanismo reclinable, unión estructura↔tela, curva del aluminio, costura real, nudo de cuerda real). Da "detalle premium" sin inventar nada.
 - **Si el material real es liso/fino, NO fabricar un tejido visible.** Si es cuerda/teca/ratán real, reproducir ESE patrón exacto, no otro.
 - **QA obligatorio:** comparar el detalle generado contra la foto real (**recorte lado a lado**). ¿La textura coincide con el material real? Si no → regenerar. Aplica también al **ambiente** (tela bajo la persona) y al **styling** (tela bajo los props).
