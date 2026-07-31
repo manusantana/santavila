@@ -13,6 +13,42 @@
 
 ---
 
+## 2026-07-31 · BARRIDO DE CONOCIMIENTO + el Paso 0 pasa del 61% al 95% de cobertura
+
+Sergio pregunta si he tomado **todo** el conocimiento del proyecto (`.md`, `.json`, `Santavila.xlsx`) o si me
+quedan dudas. Barrido completo: `ROL_FOTOGRAFO_SENIOR.md` (1.362 líneas, **nunca leído entero hasta hoy**),
+`JOURNAL.md`, las 13 hojas del Excel, los JSON de estado/auditoría y las 5 carpetas `images_*`.
+
+**Agujero encontrado y tapado — el Paso 0 no cubría Balliu.** `fuente_verdad_producto.py` leía la foto oficial
+solo de los CSV de Hevea, así que **58 de 176 fichas ACTIVE salían sin referencia de QA** — y la referencia es
+justo lo que evita repetir el fallo del tablero. El dato ya existía en el repo desde junio:
+`balliu_smart_mapping.json` (137 handles con `primary_image` + galería + variante).
+
+| | antes | ahora |
+|---|---|---|
+| ACTIVE con foto oficial | 108 / 176 (61%) | **167 / 176 (95%)** |
+| Fuentes del Paso 0 | 4 | 6 (+ smart_mapping, + galería del proveedor) |
+
+Además: la hoja consolidada del Excel es **`20260508 -Todos`** (284 filas, Hevea+Balliu, cabecera en la fila 2);
+las hojas `Hevea`/`Balliu` son el respaldo. El Excel **no tiene ninguna columna de imagen** — lo que se llamaba
+"imagen value/lifestyle/optimizer" son las carpetas `images_optimized/`, `images_lifestyle/` y `images_cutout/`.
+Nuevo flag `--cobertura` para listar en cualquier momento qué fichas se pueden trabajar y cuáles no.
+
+**Las 9 fichas ACTIVE que siguen SIN foto oficial** (no se genera nada para ellas hasta tener el dato):
+set jardín contemporáneo 2 pl. · mesa de centro 120 cm · **cama balinesa 160** · **cama balinesa 198** ·
+**parasol Roma 300** · parasol Ágora 200×200 · tumbona Carmen T · tumbona Lola T · mesa Capri Doble.
+Las tres en negrita **ya tienen galería generada** — coinciden con el bloque B ("no verificables") de la
+[`AUDITORIA_FIDELIDAD_2026-07-29.md`](AUDITORIA_FIDELIDAD_2026-07-29.md): se generaron sin referencia contra la
+que auditar. **103 fichas siguen sin cotas reales** → esas no llevan toma de medidas.
+
+**Contradicciones detectadas entre el ROL y el SKILL v3** (pendientes de decisión de Sergio, ninguna resuelta
+por mi cuenta): nº de tomas de la receta · personas sí/no · macro de tejido prohibido vs. moderado ·
+toma de medidas dentro o fuera de la galería. Detalle en la conversación del 31-07.
+
+**Generación sigue PARADA.** Créditos Higgsfield ~200, intactos.
+
+---
+
 ## 2026-07-29 (E) · ⛔ INCIDENTE DE FIDELIDAD: la mesa que dejó de ser HPL
 
 **Sergio detectó una imagen publicada que cambiaba el material del producto.** En el ASMR de la sandía del

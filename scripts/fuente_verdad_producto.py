@@ -7,11 +7,17 @@ Es el PASO 0 del skill: antes de generar nada, se consulta aqui.
 Uso:
   python3 scripts/fuente_verdad_producto.py <handle>
   python3 scripts/fuente_verdad_producto.py --todos      # vuelca el mapa completo
+  python3 scripts/fuente_verdad_producto.py --cobertura  # que fichas ACTIVE tienen dato y cuales no
 
 Fuentes que consolida (todas ya existentes en el repo):
-  Santavila.xlsx  hojas Hevea/Balliu -> handle, SKU, nombre del proveedor
-  proveedores_raw/hevea/*.csv        -> SKU -> Imagen + Ancho/Fondo/Alto REALES
+  Santavila.xlsx  hoja '20260508 -Todos' (+ Hevea/Balliu) -> handle, SKU, nombre del proveedor
+  proveedores_raw/hevea/*.csv              -> SKU -> Imagen + Ancho/Fondo/Alto REALES + Descripcion
   proveedores_raw/balliu/_sku_mapping.json -> SKU -> producto + VARIANTE exacta
+  balliu_smart_mapping.json                -> handle -> FOTO OFICIAL Balliu + galeria + variante
+  proveedores_raw/balliu/_catalogo_2025_texto.txt -> ficha tecnica del catalogo
+  images_cutout/<handle>.png               -> recorte de la pieza suelta (CONOCIMIENTO, no publicar)
+
+REGLA: si un handle sale SIN foto oficial, NO se genera nada para el. Se anota y se pide el dato.
 """
 import csv,json,glob,sys,os
 try: import openpyxl
@@ -23,12 +29,21 @@ os.chdir(ROOT)
 def cargar():
     wb=openpyxl.load_workbook("Santavila.xlsx", read_only=True)
     h2sku={}
-    for sn in ("Hevea","Balliu"):
+    # la hoja consolidada trae Hevea + Balliu juntos; las otras dos son el respaldo
+    hojas=[s for s in wb.sheetnames if s.strip()=="20260508 -Todos"]+["Hevea","Balliu"]
+    for sn in hojas:
         rows=list(wb[sn].iter_rows(values_only=True))
-        hdr=[str(c or "") for c in rows[0]]
+        hdr=None
+        for i,r in enumerate(rows[:5]):          # la cabecera no siempre esta en la fila 1
+            c=[str(x or "") for x in r]
+            if "Handle Shopify" in c: hdr,ini=c,i+1; break
+        if not hdr: continue
         iH,iS,iP=hdr.index("Handle Shopify"),hdr.index("SKU"),hdr.index("Producto")
-        for r in rows[1:]:
-            if r[iH]: h2sku.setdefault(str(r[iH]).strip(),[]).append((sn,str(r[iS]),str(r[iP])))
+        for r in rows[ini:]:
+            if not r[iH]: continue
+            h=str(r[iH]).strip()
+            fila=(str(r[0] or ""),str(r[iS]),str(r[iP]))
+            if fila not in h2sku.setdefault(h,[]): h2sku[h].append(fila)
     sku2img={}
     for f in glob.glob("proveedores_raw/hevea/*.csv"):
         try:
@@ -44,7 +59,13 @@ def cargar():
         for m in json.load(open("proveedores_raw/balliu/_sku_mapping.json"))["mapping"]:
             sku2var[m["sku"]]=(m["producto"],m["variante"])
     except Exception: pass
-    return h2sku,sku2img,sku2var
+    # FOTO OFICIAL de Balliu por handle (faltaba: dejaba 55 fichas sin referencia de QA)
+    balliu={}
+    try:
+        for x in json.load(open("balliu_smart_mapping.json")):
+            balliu[x["shopify_handle"]]=x
+    except Exception: pass
+    return h2sku,sku2img,sku2var,balliu
 
 def cutout(handle):
     """Recorte del producto SUELTO en images_cutout/. TOMA DE CONOCIMIENTO:
@@ -64,7 +85,7 @@ def catalogo_balliu(producto):
             return " ".join(blq[:14])
     return None
 
-def ficha(handle,h2sku,sku2img,sku2var):
+def ficha(handle,h2sku,sku2img,sku2var,balliu):
     out=[]
     for prov,sku,prod in h2sku.get(handle,[]):
         d={"proveedor":prov,"sku":sku,"producto":prod}
@@ -72,25 +93,56 @@ def ficha(handle,h2sku,sku2img,sku2var):
         if sku in sku2var:
             d["variante"]=sku2var[sku][1]
             d["catalogo"]=catalogo_balliu(sku2var[sku][0])
-        d["cutout"]=cutout(handle)
         out.append(d)
+    b=balliu.get(handle)
+    if b:                                        # Balliu: la foto oficial vive aqui, no en el Excel
+        if not out: out=[{"proveedor":"Balliu","sku":"","producto":b.get("shopify_title","")}]
+        for d in out:
+            if not d.get("img") and b.get("primary_image"): d["img"]=b["primary_image"]
+            d.setdefault("variante",b.get("variant_option"))
+            d["galeria"]=b.get("gallery_images") or []
+            d["slug_balliu"]=b.get("balliu_slug")
+    for d in out: d["cutout"]=cutout(handle)
     return out
 
+def imprimir(d):
+    print(f"\n  proveedor : {d['proveedor']}")
+    if d.get("sku"):      print(f"  SKU       : {d['sku']}")
+    print(f"  producto  : {d['producto']}")
+    if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
+    if d.get("img"):      print(f"  foto real : {d['img']}")
+    else:                 print(f"  foto real : *** NO HAY *** -> NO se genera nada. Pedir el dato.")
+    if d.get("galeria") and len(d["galeria"])>1:
+        print(f"  galeria   : {len(d['galeria'])} fotos del proveedor")
+        for g in d["galeria"][1:6]: print(f"              {g}")
+    if d.get("ancho"):    print(f"  cotas     : ancho {d['ancho']} · fondo {d['fondo']} · alto {d['alto']} cm")
+    else:                 print(f"  cotas     : *** NO HAY *** -> sin toma de medidas (nunca deducir de la foto)")
+    if d.get("descripcion"): print(f"  descripcion: {d['descripcion'][:200]}")
+    if d.get("catalogo"):  print(f"  catalogo  : {d['catalogo'][:260]}")
+    if d.get("cutout"):    print(f"  cutout    : {d['cutout']}  (conocimiento de la pieza suelta, NO publicar)")
+
+def cobertura(h2sku,sku2img,sku2var,balliu):
+    est=json.load(open("_estado_imagenes.json"))
+    act=[p for p in est if p["status"]=="ACTIVE"]
+    sin_foto=[];sin_cotas=0;ok=0
+    for p in act:
+        r=ficha(p["handle"],h2sku,sku2img,sku2var,balliu)
+        if r and any(d.get("img") for d in r): ok+=1
+        else: sin_foto.append((p["handle"],p["title"],p["vendor"]))
+        if not (r and any(d.get("ancho") for d in r)): sin_cotas+=1
+    print(f"ACTIVE: {len(act)}  ·  con foto oficial: {ok}  ·  SIN foto: {len(sin_foto)}  ·  sin cotas: {sin_cotas}")
+    print("\nSIN FOTO OFICIAL (no se puede generar nada para estas):")
+    for h,t,v in sin_foto: print(f"  [{v}] {h}\n        {t}")
+
 if __name__=="__main__":
-    h2sku,sku2img,sku2var=cargar()
+    h2sku,sku2img,sku2var,balliu=cargar()
+    if "--cobertura" in sys.argv:
+        cobertura(h2sku,sku2img,sku2var,balliu); sys.exit()
     if "--todos" in sys.argv:
-        print(json.dumps({h:ficha(h,h2sku,sku2img,sku2var) for h in h2sku},ensure_ascii=False,indent=1))
+        todos=set(h2sku)|set(balliu)
+        print(json.dumps({h:ficha(h,h2sku,sku2img,sku2var,balliu) for h in sorted(todos)},ensure_ascii=False,indent=1))
         sys.exit()
     if len(sys.argv)<2: sys.exit(__doc__)
-    r=ficha(sys.argv[1],h2sku,sku2img,sku2var)
-    if not r: sys.exit(f"handle no encontrado en Santavila.xlsx: {sys.argv[1]}")
-    for d in r:
-        print(f"\n  proveedor : {d['proveedor']}")
-        print(f"  SKU       : {d['sku']}")
-        print(f"  producto  : {d['producto']}")
-        if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
-        if d.get("img"):      print(f"  foto real : {d['img']}")
-        if d.get("ancho"):    print(f"  cotas     : ancho {d['ancho']} · fondo {d['fondo']} · alto {d['alto']} cm")
-        if d.get("descripcion"): print(f"  descripcion: {d['descripcion'][:200]}")
-        if d.get("catalogo"):  print(f"  catalogo  : {d['catalogo'][:260]}")
-        if d.get("cutout"):    print(f"  cutout    : {d['cutout']}  (conocimiento de la pieza suelta, NO publicar)")
+    r=ficha(sys.argv[1],h2sku,sku2img,sku2var,balliu)
+    if not r: sys.exit(f"handle no encontrado en NINGUNA fuente: {sys.argv[1]}  -> no se genera nada")
+    for d in r: imprimir(d)
