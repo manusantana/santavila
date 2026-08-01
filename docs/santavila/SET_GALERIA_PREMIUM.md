@@ -1,5 +1,14 @@
 # Set de galería premium — recomendación (auditoría mercado + CRO + fotógrafo)
 
+> ## ⚠️ DOCUMENTO SUPERADO — NO LO SIGAS (marca puesta el 2026-08-01)
+>
+> Refleja la receta de **junio de 2026**, anterior a los incidentes de fidelidad del 29-07. En concreto
+> propone cosas hoy **PROHIBIDAS**: macros de material/tejido, personas de cuerpo entero y la toma de
+> medidas como obligatoria. La fuente vigente es
+> [`SKILL.md`](../../.claude/skills/santavila-imagen-producto/SKILL.md) (v4). Se conserva como registro.
+
+
+
 > Fecha 2026-06-19. Aplica a fichas de producto Santavila. Validado en LEISA (Fase 0).
 
 # SET DE GALERÍA LEISA — Dirección de Fotografía

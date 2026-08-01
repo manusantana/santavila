@@ -232,6 +232,12 @@ GALERIAS_PUBLICADAS = {
         "04_asmr_cuerda.jpg": "Detalle del trenzado de cuerda del respaldo y el cojín crudo del sofá de exterior",
         "05_asmr_vino_higos.jpg": "Copa de vino blanco e higos partidos sobre la mesa de cuerda con tablero cerámico",
     }),
+    # ⛔⛔ ATENCION — ESTE MAPEO ES EL FALLO A0. NO LO REACTIVES SIN COMPROBAR EL HANDLE.
+    # La carpeta se llama "albania" pero este handle es el del BELLAGIO 3 pl. (3.449 EUR), que es
+    # OTRO MUEBLE. Durante dias esa ficha mostro 5 fotos de un producto que no era el que vende.
+    # El nombre de la carpeta NO identifica el producto: antes de publicar, ejecuta
+    #   python3 scripts/fuente_verdad_producto.py <handle>
+    # y compara su foto oficial con el packshot. Ver AUDITORIA_FIDELIDAD_2026-07-29.md, caso A0.
     "albania": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3", {
         "01_packshot.jpg": "Set de jardín de aluminio gris con sofá de 3 plazas, dos sillones y mesa baja, cojines verde salvia",
         "02_ambiente_exterior_pergola.jpg": "Set de jardín con cojines verde salvia bajo una pérgola de cañizo en una casa de huerta levantina",

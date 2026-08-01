@@ -44,15 +44,23 @@ def cargar():
             h=str(r[iH]).strip()
             fila=(str(r[0] or ""),str(r[iS]),str(r[iP]))
             if fila not in h2sku.setdefault(h,[]): h2sku[h].append(fila)
+    # OJO: un mismo SKU puede aparecer en varios CSV con imagenes DISTINTAS (p.ej. 557-1563 apunta
+    # a "mesa centro 120" y a "dounvil 3 plazas": son productos distintos). Guardar solo la ultima
+    # devolvia la foto de otro producto en silencio -> se guardan TODAS y se avisa.
     sku2img={}
-    for f in glob.glob("proveedores_raw/hevea/*.csv"):
+    for f in sorted(glob.glob("proveedores_raw/hevea/*.csv")):
         try:
             for row in csv.DictReader(open(f,encoding="utf-8",errors="replace")):
                 s=(row.get("SKU") or "").strip()
-                if s and row.get("Imagen"):
-                    sku2img[s]={"img":row["Imagen"].strip(),"ancho":row.get("Ancho (cm)"),
-                                "fondo":row.get("Fondo (cm)"),"alto":row.get("Alto (cm)"),
-                                "descripcion":(row.get("Descripción") or "").strip()}
+                if not (s and row.get("Imagen")): continue
+                d=sku2img.setdefault(s,{"img":None,"otras_img":[],"ancho":None,"fondo":None,
+                                        "alto":None,"descripcion":""})
+                img=row["Imagen"].strip()
+                if d["img"] is None: d["img"]=img
+                elif img!=d["img"] and img not in d["otras_img"]: d["otras_img"].append(img)
+                for k,col in (("ancho","Ancho (cm)"),("fondo","Fondo (cm)"),("alto","Alto (cm)")):
+                    if not d[k] and row.get(col): d[k]=row[col]
+                if not d["descripcion"]: d["descripcion"]=(row.get("Descripción") or "").strip()
         except Exception: pass
     sku2var={}
     try:
@@ -80,17 +88,29 @@ def cutout(handle):
     p=os.path.join("images_cutout",handle+".png")
     return p if os.path.exists(p) else None
 
+TIPOLOGIAS=("tumbona","silla","sillon","sillón","mesa","butaca","taburete","parasol","sofa","sofá",
+            "banco","reposapies","reposapiés","cama","balinesa","funda","pie","base","modulo","módulo")
+
 def catalogo_balliu(producto):
-    """Texto de la ficha del producto en el catalogo general de Balliu 2025."""
+    """Texto de la ficha del producto en el catalogo general de Balliu 2025.
+
+    El mapping trae 'Eva Pro Tumbona' y el catalogo titula 'Eva Pro': comparar la cadena
+    entera no acertaba NUNCA (0 de 459). Se quita el sufijo de tipologia antes de buscar.
+    """
     f="proveedores_raw/balliu/_catalogo_2025_texto.txt"
     if not os.path.exists(f) or not producto: return None
-    txt=open(f,encoding="utf-8",errors="replace").read().split("\n")
     nombre=producto.split("·")[0].split("|")[0].strip()
+    pal=[p for p in nombre.split() if p.lower() not in TIPOLOGIAS]
+    if not pal: return None
+    base=" ".join(pal).lower()
+    txt=open(f,encoding="utf-8",errors="replace").read().split("\n")
+    mejor=None
     for i,l in enumerate(txt):
-        if l.strip().lower()==nombre.lower():
-            blq=[x.strip() for x in txt[i:i+26] if x.strip()]
-            return " ".join(blq[:14])
-    return None
+        if l.strip().lower()!=base: continue
+        blq=[x.strip() for x in txt[i+1:i+26] if x.strip()]
+        cand=" ".join(blq[:14])
+        if mejor is None or len(cand)>len(mejor): mejor=cand   # varias entradas: la mas informativa
+    return mejor or None
 
 def ficha(handle,h2sku,sku2img,sku2var,balliu):
     out=[]
@@ -120,6 +140,10 @@ def imprimir(d):
     if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
     if d.get("img"):      print(f"  foto real : {d['img']}")
     else:                 print(f"  foto real : *** NO HAY *** -> NO se genera nada. Pedir el dato.")
+    if d.get("otras_img"):
+        print(f"  ⚠️  ESE SKU APUNTA A {len(d['otras_img'])+1} IMAGENES DISTINTAS en los CSV del proveedor.")
+        print(f"      Puede que sean piezas del mismo lote... o productos distintos. CONFIRMAR cual es.")
+        for u in d["otras_img"][:4]: print(f"        tambien: {u}")
     if d.get("comparten"):
         n=len(d["comparten"])
         print(f"  ⚠️  ESA FOTO LA COMPARTEN {n+1} FICHAS -> NO identifica esta variante.")

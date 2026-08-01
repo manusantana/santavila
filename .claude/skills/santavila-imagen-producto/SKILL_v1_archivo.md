@@ -1,6 +1,6 @@
 ---
-name: santavila-imagen-producto
-description: Úsalo al generar, crear, regenerar o mejorar imágenes o la galería de un producto de Santavila con Higgsfield — packshot, ambiente/lifestyle, ASMR/detalle, medidas; reemplazar fotos de baja resolución o productos con una sola foto; producir imágenes de catálogo, PDP o home de Santavila.
+name: ARCHIVO-santavila-imagen-producto-v1-NO-USAR
+description: "ARCHIVO HISTORICO — NO SEGUIR. Version 1 del skill de imagen, superada. El skill vigente es SKILL.md (v4). Se conserva solo como registro de como se trabajaba antes de los incidentes de fidelidad del 29-07-2026."
 ---
 
 # Santavila · Imagen de producto con Higgsfield (pipeline end-to-end)

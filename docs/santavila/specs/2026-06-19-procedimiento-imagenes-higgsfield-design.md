@@ -1,5 +1,14 @@
 # Spec — Procedimiento de imagen de producto con Higgsfield (Santavila)
 
+> ## ⚠️ DOCUMENTO SUPERADO — NO LO SIGAS (marca puesta el 2026-08-01)
+>
+> Refleja la receta de **junio de 2026**, anterior a los incidentes de fidelidad del 29-07. En concreto
+> propone cosas hoy **PROHIBIDAS**: macros de material/tejido, personas de cuerpo entero y la toma de
+> medidas como obligatoria. La fuente vigente es
+> [`SKILL.md`](../../../.claude/skills/santavila-imagen-producto/SKILL.md) (v4). Se conserva como registro.
+
+
+
 > Fecha: 2026-06-19 · Estado: aprobado en brainstorming, pendiente de plan de implementación.
 > Origen: auditoría de imágenes ([`../AUDITORIA_IMAGENES.md`](../AUDITORIA_IMAGENES.md)) + investigación de posicionamiento ([`../../Santavila como líder de mobiliario exterior premium accesible en España.pdf`](../../Santavila%20como%20líder%20de%20mobiliario%20exterior%20premium%20accesible%20en%20España.pdf)) + guía de diseño ([`../GUIA_DISENO.md`](../GUIA_DISENO.md)) + Shop the Look ([`../INVESTIGACION_SHOP_THE_LOOK.md`](../INVESTIGACION_SHOP_THE_LOOK.md)).
 
