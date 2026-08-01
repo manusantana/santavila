@@ -33,6 +33,24 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
         TOKEN = line.split("=", 1)[1].strip()
 
 # carpeta -> (handle, {fichero: alt en español})
+#
+# ############################################################################
+# RECETA VIGENTE (31-07-2026) — ver .claude/skills/santavila-imagen-producto/SKILL.md
+#   01 packshot bone
+#   02 ambiente EXTERIOR
+#   03 ambiente INTERIOR (mismo habitat, otro momento)
+#   04 ASMR de FEATURE verificable   <- costura, union, herraje REAL, nudo, canto
+#   05 ASMR de consumible            <- o medidas, si el PASO 0 dio cota verificada
+#   La ficha queda SIEMPRE con 5 media.
+#
+# ⛔ NO COPIES los dict de las tandas de abajo como plantilla: varios llevan tomas
+#    que hoy estan PROHIBIDAS y quedan como registro historico, no como ejemplo.
+#      "04_asmr_suspension"  -> grilletes INVENTADOS (fallo A8, ya retirado)
+#      "05_asmr_textil_hoja" / "04_asmr_lona" / "04_asmr_tejido"
+#                            -> macro de TRAMA de tejido: el modelo la fabrica.
+#    Ninguna toma cuya superficie dominante sea el TEJIDO, a ninguna escala.
+# ############################################################################
+#
 # TANDA 2026-07-29 D (activa)
 GALERIAS = {
     "acapulco2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4", {

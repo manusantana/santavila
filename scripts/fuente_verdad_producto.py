@@ -65,6 +65,13 @@ def cargar():
         for x in json.load(open("balliu_smart_mapping.json")):
             balliu[x["shopify_handle"]]=x
     except Exception: pass
+    # una MISMA foto sirve a varios handles (10 mesas HPL de medidas distintas comparten imagen):
+    # esa foto NO identifica la variante -> hay que avisarlo o se genera fiel a la foto equivocada
+    compartida={}
+    for h,x in balliu.items():
+        if x.get("primary_image"): compartida.setdefault(x["primary_image"],[]).append(h)
+    for x in balliu.values():
+        x["_comparten"]=sorted(compartida.get(x.get("primary_image"),[]))
     return h2sku,sku2img,sku2var,balliu
 
 def cutout(handle):
@@ -102,6 +109,7 @@ def ficha(handle,h2sku,sku2img,sku2var,balliu):
             d.setdefault("variante",b.get("variant_option"))
             d["galeria"]=b.get("gallery_images") or []
             d["slug_balliu"]=b.get("balliu_slug")
+            d["comparten"]=[h for h in b.get("_comparten",[]) if h!=handle]
     for d in out: d["cutout"]=cutout(handle)
     return out
 
@@ -112,6 +120,12 @@ def imprimir(d):
     if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
     if d.get("img"):      print(f"  foto real : {d['img']}")
     else:                 print(f"  foto real : *** NO HAY *** -> NO se genera nada. Pedir el dato.")
+    if d.get("comparten"):
+        n=len(d["comparten"])
+        print(f"  ⚠️  ESA FOTO LA COMPARTEN {n+1} FICHAS -> NO identifica esta variante.")
+        print(f"      Antes de generar hay que confirmar con Sergio que la foto es de ESTA medida/acabado.")
+        for h in d["comparten"][:6]: print(f"        tambien: {h}")
+        if n>6: print(f"        ... y {n-6} mas")
     if d.get("galeria") and len(d["galeria"])>1:
         print(f"  galeria   : {len(d['galeria'])} fotos del proveedor")
         for g in d["galeria"][1:6]: print(f"              {g}")
@@ -122,15 +136,28 @@ def imprimir(d):
     if d.get("cutout"):    print(f"  cutout    : {d['cutout']}  (conocimiento de la pieza suelta, NO publicar)")
 
 def cobertura(h2sku,sku2img,sku2var,balliu):
-    est=json.load(open("_estado_imagenes.json"))
+    import datetime
+    SNAP="_estado_imagenes.json"
+    mt=datetime.date.fromtimestamp(os.path.getmtime(SNAP))
+    dias=(datetime.date.today()-mt).days
+    print(f"FUENTE: {SNAP}  ·  snapshot del {mt}  ({dias} dias)")
+    if dias>14:
+        print(f"⚠️  El snapshot tiene {dias} dias: una ficha puede haber cambiado de estado o de fotos.")
+        print( "    Refrescalo con scripts/auditoria_imagenes.py antes de fiarte de estas cifras.\n")
+    est=json.load(open(SNAP))
     act=[p for p in est if p["status"]=="ACTIVE"]
-    sin_foto=[];sin_cotas=0;ok=0
+    sin_foto=[];sin_cotas=0;ok=0;foto_compartida=[]
     for p in act:
         r=ficha(p["handle"],h2sku,sku2img,sku2var,balliu)
-        if r and any(d.get("img") for d in r): ok+=1
+        if r and any(d.get("img") for d in r):
+            ok+=1
+            if any(d.get("comparten") for d in r): foto_compartida.append(p["handle"])
         else: sin_foto.append((p["handle"],p["title"],p["vendor"]))
         if not (r and any(d.get("ancho") for d in r)): sin_cotas+=1
     print(f"ACTIVE: {len(act)}  ·  con foto oficial: {ok}  ·  SIN foto: {len(sin_foto)}  ·  sin cotas: {sin_cotas}")
+    print(f"de las {ok} con foto, {len(foto_compartida)} usan una foto COMPARTIDA con otra ficha:")
+    print(f"  esa foto NO identifica la variante -> confirmar con Sergio antes de generar.")
+    print(f"  fichas listas de verdad (foto propia + identificada): {ok-len(foto_compartida)}")
     print("\nSIN FOTO OFICIAL (no se puede generar nada para estas):")
     for h,t,v in sin_foto: print(f"  [{v}] {h}\n        {t}")
 

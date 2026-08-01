@@ -1,5 +1,21 @@
 # Flujo de imagen por producto — runbook Santavila (rol fotógrafo + Higgsfield MCP)
 
+> ## ⚠️ DOCUMENTO SUPERADO (2026-07-31) — manda el [`SKILL.md`](../../.claude/skills/santavila-imagen-producto/SKILL.md)
+>
+> Este runbook es de **junio de 2026** y describe la receta antigua. **No lo sigas.** Lo que ha cambiado:
+>
+> | Aquí dice | **Lo vigente** |
+> |---|---|
+> | Receta: principal · ambiente A · ambiente B · **detalle macro** · medidas fija | packshot bone → **ambiente EXTERIOR** → **ambiente INTERIOR del mismo hábitat** → 2 ASMR. Medidas **solo con cota verificada** |
+> | Toma 4 = "detalle macro" de material | **ASMR de FEATURE** (costura, unión, herraje, nudo, canto). **Prohibido el macro de tejido** |
+> | `resolution:"4k"` en `generate_image` (§1 y paso 2) | **`1k` siempre** + `upscale_image` después. 4k directo colapsa a blanco *(ya corregido en el §2.bis de abajo)* |
+> | Escenas: "la librería de 6" (rol §4.bis) | roster de ~20 localizaciones con **carril de paleta** (ROL §11) y registro anti-repetición |
+> | Paso 0 = "foto de mayor resolución de su carpeta" | `scripts/fuente_verdad_producto.py <handle>` — SKU, variante, foto oficial, cotas |
+>
+> Se conserva porque el **§2.bis (lección del prompt corto)** y la mecánica MCP siguen siendo válidos y
+> están citados desde el skill. Todo lo demás es histórico.
+
+
 > Procedimiento **robusto, repetible y escalable** para producir la galería de cada SKU.
 > Combina: el **oficio** ([`ROL_FOTOGRAFO_SENIOR.md`](ROL_FOTOGRAFO_SENIOR.md)) + la **mecánica** (Higgsfield vía MCP) + **QA** + **subida a Shopify**.
 > Spec de origen: [`specs/2026-06-19-procedimiento-imagenes-higgsfield-design.md`](specs/2026-06-19-procedimiento-imagenes-higgsfield-design.md). Estado live de partida: `_estado_imagenes.json`; cruce SKU↔imagen: `auditoria_imagenes_report.csv`.

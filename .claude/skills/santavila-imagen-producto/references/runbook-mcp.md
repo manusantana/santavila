@@ -37,7 +37,10 @@ Diagnóstico de blanco: descargar y medir desviación estándar de píxeles — 
 **4) Upscale (subir calidad DESPUÉS)**
 `upscale_image({ image_id, width, height, resolution: "4k" })` sobre las aceptadas. Objetivo ≥2400 px lado mayor.
 
-**5) Toma 5 (medidas): NO pasa por Higgsfield** — overlay determinista por script sobre la Toma 1.
+**5) Medidas: NO pasan por Higgsfield, y SOLO si el PASO 0 devolvió cota verificada**
+Overlay determinista por script sobre una **vista FRONTAL casi ortográfica generada aparte** — *nunca* sobre el
+packshot en 3/4: en perspectiva el ancho proyectado no son los centímetros reales y la cota mentiría.
+Prompt de la frontal: *"strictly FRONTAL elevation view, camera perfectly level and centred, 135 mm"*.
 
 ## Gotchas (Fase 0)
 - **Prompt largo = imagen en blanco.** Comprimir a 3–6 frases (prompt-recipe.md).
@@ -52,7 +55,10 @@ Reutilizar la infra existente (`upload_images.py/.mjs`, `upload_balliu_images.py
 1. `stagedUploadsCreate` → obtener target + parámetros.
 2. PUT de los bytes de cada imagen al target.
 3. `productCreateMedia(productId, [{ originalSource, alt }])` por imagen.
-4. `productReorderMedia(productId, moves)` → orden: **packshot(0) → ambiente A → ambiente B → detalle → medidas**.
-5. Verificar `mediaCount` y que la posición 0 es el packshot correcto (no un detalle ni un ambiente).
+4. `productReorderMedia(productId, moves)` → orden: **packshot(0) → ambiente EXTERIOR → ambiente INTERIOR →
+   ASMR de feature → ASMR de consumible** *(si hay cota verificada, la imagen de medidas ocupa el hueco 5 y
+   se queda un solo ASMR — la ficha siempre acaba con **5 media**)*.
+5. **Y SOLO ENTONCES borrar las antiguas.** Si alguna nueva no llegó a READY, no se borra nada. Nunca al revés.
+6. Verificar `mediaCount = 5` y que la posición 0 es el packshot correcto (no un detalle ni un ambiente).
 
 **Registrar por SKU:** prompts finales por toma, créditos gastados, nº de regeneraciones, veredicto QA → afina la receta por tipología y presupuesta el escalado.

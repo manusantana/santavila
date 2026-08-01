@@ -13,6 +13,47 @@
 
 ---
 
+## 2026-08-01 · AUDITORÍA ADVERSARIAL DEL SKILL v4 — 17 fallos, corregidos
+
+El v4 se sometió a una auditoría de 6 lentes independientes (contra el ROL, contra las auditorías de fallos,
+contra las decisiones del JOURNAL, contra el código real, contra la propagación en el repo y contra los datos),
+con un escéptico por hallazgo intentando refutarlo. **17 sobrevivieron.** Todos corregidos. Los que importan:
+
+**⛔ Foto oficial COMPARTIDA — el agujero que quedaba.** De los 132 handles de Balliu con foto,
+**105 comparten imagen con otra ficha**: hay una sola foto para 10 mesas HPL de medidas distintas. La ficha
+`Mesa exterior HPL 70×70` (SKU **SOFIA**) trae como referencia `Balliu_MesaCentral-**Etna**_blanco.jpg`.
+Se podía generar una galería impecablemente fiel **a la mesa equivocada** — el fallo A0 del Bellagio, en origen.
+`fuente_verdad_producto.py` ahora avisa (`⚠️ esa foto la comparten N fichas`) y el skill exige confirmarlo con
+Sergio antes de gastar un crédito. **Cobertura real: 135 fichas con foto propia, no 167.**
+
+**⛔ Faltaba la puerta de IDENTIDAD antes de publicar.** La v3 la tenía como "PASO 0.bis" y la v4 la había
+perdido. Restaurada como PASO 7.a bloqueante: reejecutar el Paso 0 sobre el handle **destino** y afirmar por
+escrito "es el mismo mueble".
+
+**⛔ Yo había escrito el orden de publicación al revés.** El skill decía "borrar primero, reponer después";
+`publicar_galeria_producto.py` hace lo correcto (subir → READY → reordenar → borrar, y si algo no llega a READY
+no borra nada). Seguir el skill al pie de la letra dejaba fichas sin imagen. Corregido.
+
+**⚠️ El upscale iba después del "ok" de Sergio** → el QA anatómico de manos a 4K no se hacía nunca (a 1k una
+mano son ~40 px). Reordenado: 1k → QA → upscale → **re-QA de manos sobre el 4k** → validación.
+
+**⚠️ La cota se dibujaba sobre el packshot en 3/4**, donde el ancho proyectado no son los centímetros reales.
+Ahora va sobre una vista frontal casi ortográfica generada aparte.
+
+También: el ejemplo de prompt de ambiente pedía **vapor en escenas sin personas** (tell de IA bloqueante);
+`FLUJO_IMAGEN_PRODUCTO.md` seguía sin marca prescribiendo la receta vieja; y las cifras del skill salían de un
+snapshot del 18-06 presentado como "hoy" — `--cobertura` ahora avisa de su antigüedad.
+
+### Hallazgo en producción — pendiente de decisión de Sergio
+Revisadas las galerías vivas de las 3 fichas **sin foto oficial**:
+- **Parasol Roma · `04_asmr_lona.jpg`** → ⛔ **es un macro de trama**: el 80% del cuadro es la lona a contraluz
+  con la trama fabricada por el modelo, y no hay foto del proveedor contra la que auditarla. **Propuesta: retirar.**
+- **Balinesa 198 · `04_asmr_tejido.jpg`** → ✅ falsa alarma: es un detalle de esquina (poste, remate, tope de
+  aluminio). Lo que está mal es el **alt**, que dice "la trama del tejido". Corregir el texto, no la imagen.
+- Balinesa 160 → sus dos detalles son features correctas.
+
+---
+
 ## 2026-07-31 · BARRIDO DE CONOCIMIENTO + el Paso 0 pasa del 61% al 95% de cobertura
 
 Sergio pregunta si he tomado **todo** el conocimiento del proyecto (`.md`, `.json`, `Santavila.xlsx`) o si me

@@ -8,7 +8,7 @@ description: Úsalo al generar, crear, regenerar o mejorar imágenes o la galer�
 **Un producto cada vez. Cada imagen validada por el dueño. Cero invención.**
 
 > **Qué cambia respecto a la v3.** La v3 se escribió sin haber leído entero el
-> [`ROL_FOTOGRAFO_SENIOR.md`](../../docs/santavila/ROL_FOTOGRAFO_SENIOR.md) — 1.362 líneas que son la fuente
+> [`ROL_FOTOGRAFO_SENIOR.md`](../../docs/santavila/ROL_FOTOGRAFO_SENIOR.md), que es la fuente
 > real del oficio. Esta versión lo integra (escala, carriles de paleta, rotación de localizaciones, Master QA)
 > y cierra las cuatro contradicciones que había entre ambos documentos con la decisión de Sergio del 31-07:
 > **receta del 26-07 · solo manos, nunca cuerpo · macro de tejido prohibido · medidas solo con cota verificada.**
@@ -48,9 +48,26 @@ Devuelve el **dato duro** del proveedor, no una interpretación:
 | **catálogo** | ficha técnica de Balliu 2025 |
 | **cutout** | recorte de la pieza suelta. **CONOCIMIENTO, no se publica** (todos <800 px) |
 
-**Si sale `*** NO HAY ***` en foto real → NO SE GENERA NADA para esa ficha.** Se anota y se pide el dato.
-Hoy son 9 fichas ACTIVE. `--cobertura` las lista en cualquier momento.
-**Si sale `*** NO HAY ***` en cotas → esa ficha no lleva imagen de medidas.** Hoy son 103.
+### Las tres puertas del Paso 0
+
+**1 · Sin foto → no se genera nada.** Si sale `*** NO HAY ***` en foto real, esa ficha está bloqueada.
+**Antes de darla por bloqueada, búscala de verdad**: `images_optimized/`, `images_balliu/`, el CDN de Shopify,
+por SKU y por `balliu_slug`. *(Un export ya dio una foto equivocada por buena y se declaró "no verificable" algo
+que estaba en el repo.)* Si tampoco aparece, se anota en `PENDIENTES_PROVEEDOR.md` y se pide.
+
+**2 · ⚠️ Foto COMPARTIDA → no identifica la variante → se pregunta a Sergio.** Si el Paso 0 avisa de que la
+foto la comparten varias fichas, **esa foto no prueba que sea este producto**. Se marca `NO DETERMINADO` y se
+confirma antes de gastar un crédito.
+
+> **El caso que lo demuestra:** la ficha `Mesa exterior HPL 70×70` (SKU **SOFIA**) trae como foto oficial
+> `Balliu_MesaCentral-**Etna**_blanco.jpg`, compartida con **otras 9 mesas de medidas distintas**. Se puede
+> generar una galería impecablemente fiel… a la mesa equivocada. Es el fallo A0 del Bellagio, pero en origen.
+
+**3 · Sin cotas → esa ficha no lleva imagen de medidas.** Nunca se deduce una medida de la foto.
+
+> **Las cifras vivas salen de `--cobertura`, no de este documento.** El comando avisa de la antigüedad del
+> snapshot (`_estado_imagenes.json`); si tiene más de dos semanas, refréscalo antes de fiarte.
+> Orden de magnitud a fecha del último snapshot: ~9 fichas sin foto, ~32 con foto compartida, ~103 sin cotas.
 
 > **Esto no es burocracia: es el paso que faltaba.** Sin él se publicó la galería del Albania en la ficha del
 > Bellagio, y las balinesas y el parasol Roma se generaron sin ninguna referencia contra la que auditarlos.
@@ -120,11 +137,22 @@ consumible — no el hábitat. El packshot y los ASMR son **backbone estable**: 
 | 4 | **ASMR de material / FEATURE verificable** | 1:1 | Prueba de calidad. Costura, unión, herraje, canto — **nunca la trama** |
 | 5 | **ASMR de consumible** — plano ABIERTO | 1:1 | Vida. La superficie que sostiene el atrezzo **es producto** |
 
-**+ Medidas (overlay determinista, NO IA) solo si el Paso 0 dio cotas.** Sin cota verificada, no hay imagen.
+**La ficha SIEMPRE queda con 5 media** (es el precedente aprobado en las 25 galerías publicadas).
+Si el Paso 0 dio cotas, **la imagen de medidas ocupa el hueco 5 y se queda un solo ASMR**; si no hay cota,
+el hueco 5 es el segundo ASMR. *(Si algún día quieres 6, dilo y se cambia también el verificador del Paso 7.)*
+
+**La cota se dibuja sobre una vista FRONTAL casi ortográfica generada aparte, nunca sobre el packshot en 3/4.**
+En perspectiva 3/4 el ancho proyectado no son los centímetros reales y **la cota miente**. Prompt:
+*"strictly FRONTAL elevation view, camera perfectly level and centred, 135 mm"*.
 Si la ficha da "72×75" sin desglosar → **se pregunta a Sergio**; en 3/4 tres centímetros son indistinguibles.
 
 **Coherencia de secuencia:** las tomas 2 y 3 son el **mismo mundo**, un solo sol, un solo grade. La 1 y las
 ASMR son neutras. Toda la ficha comparte dirección de luz y temperatura.
+
+**Dónde caben las manos:** en las tomas 2, 3, 4 y 5 (nunca en el packshot). **Con manos** en cuadro, la huella
+de uso es obligatoria: vapor, cojín hundido, libro abierto. **Sin manos, la escena va EN REPOSO** — pero no
+muerta: la vida la dan huellas *frías* que no implican a nadie ahora mismo (condensación en un vaso, sombra
+moteada, hoja caída, manta plegada, libro cerrado). **Una toma de ambiente sin ninguna señal de vida se regenera.**
 
 ---
 
@@ -133,7 +161,11 @@ ASMR son neutras. Toda la ficha comparte dirección de luz y temperatura.
 1. `media_import_url(<URL oficial del SKU>)` → `media_id`
 2. `generate_image({model:"nano_banana_pro", prompt:<CORTO>, medias:[{value:media_id, role:"image"}], aspect_ratio, resolution:"1k", count:2, get_cost:true})`
 3. preflight → lanzar sin `get_cost` → `job_status(jobId, sync:true)`
-4. QA (Paso 5) → validación de Sergio (Paso 6) → `upscale_image` a `4k`
+4. **QA de fidelidad y escena sobre la 1k** (Paso 5) → `upscale_image` a `4k` → **re-QA anatómico de manos
+   sobre el 4k, BLOQUEANTE** → validación de Sergio (Paso 6) sobre la imagen final
+
+> **El orden importa.** A 1k una mano mide ~40 px y no se le pueden contar los dedos; a 4k mide ~160 px y sí.
+> Si el upscale va después del "ok", **Sergio aprueba una imagen y se publica otra que nadie ha inspeccionado.**
 
 - **Prompt CORTO en modo edición** (3–6 frases, inglés). Los largos **colapsan a blanco**.
 - **Generar a `1k` SIEMPRE.** Pedir 2k/4k en generación da imagen vacía (std de píxeles ~15 = vacía, ~60 = real).
@@ -141,6 +173,10 @@ ASMR son neutras. Toda la ficha comparte dirección de luz y temperatura.
 - **Describe la FÍSICA** (hora, dirección y dureza del sol, material, distancia de cámara). Nunca "8k, ultrarrealista".
 - **Nombra material Y FORMA, y niega lo que el modelo inventa:**
   *"ROUND nesting tables, round never rectangular"* · *"FLAT SMOOTH GREY HPL — not stone, not travertine, no grain"*.
+- **Niega el fondo HEREDADO desde el primer prompt.** El modelo arrastra lo que hay en la foto de origen: si el
+  proveedor fotografió con palmeras o playa, aparecerán. Ya pasó dos veces (playa de Cádiz colada en un ASMR de
+  Albania, cortinas inventadas en la pérgola). Escribe el fondo que quieres **y el que no**:
+  *"whitewashed lime wall and dry-stone wall — NO palm trees, no tropical plants, no beach"*.
 - **Óptica que no miente:** 70–105 mm en packshot y detalle, 35–50 mm en ambiente desde >2 m. **Cero gran
   angular** — es la causa nº1 del "mueble de juguete en paisaje enorme".
 - **8 jobs concurrentes** máximo. Los créditos se descuentan **al encolar**: si la cola se para, **NO reencolar**.
@@ -177,9 +213,15 @@ Producto **≥78% del ancho** en packshot, **≥45%** en ambiente (nunca <30%). 
 detrás; sin fuga al infinito. Cielo ≤25%. **Mano gigante o taza desproporcionada invalida el ASMR aunque la
 textura sea perfecta.**
 
+**C.bis · Manos — el fallo IA nº1, sobre el 4k** — 5 dedos por mano, sin dedos fundidos ni de más, sin "tercera
+mano", muñeca natural. **La mano que TOCA el producto es la de máximo escrutinio: si falla, rechazo aunque el
+resto sea perfecto.** Se verifica **tras el upscale**, nunca en la previa a 1k.
+
 **D · Lógica de la escena (tells de IA)** — cada bebida con dueño y **junto a él**, nunca en el lado opuesto ·
-nada de props duplicados sin dueño · **escena sin personas = escena EN REPOSO**: cojines mullidos y lisos, sin
-vapor, sin huella de cuerpo (el vapor implica que alguien está ahí ahora).
+nada de props duplicados sin dueño · **escena sin manos = escena EN REPOSO**: cojines mullidos y lisos, sin
+vapor, sin huella de cuerpo (el vapor implica que alguien está ahí ahora) — pero con huella *fría* que dé vida
+(condensación, sombra moteada, hoja caída, manta plegada). **Con manos en cuadro, el vapor y la huella son
+obligatorios.**
 
 **E · On-brand** — NO resort tropical, NO chalet imposible · fondo bone nunca blanco puro · ≤5 props ·
 0 logos, 0 watermark, 0 texto de IA · no sugerir montaje nuestro (self-assembly).
@@ -203,11 +245,32 @@ Por **cada** imagen, antes de subir nada:
 
 ---
 
-## PASO 7 · PUBLICAR Y VERIFICAR
+## PASO 7 · IDENTIDAD, y solo entonces publicar
 
-Solo con el "ok" de todas. `scripts/publicar_galeria_producto.py` (dry-run por defecto, `--apply`).
-Verificar: `ACTIVE · READY · ≥2000 px · pos 0 = packshot · 0 alt vacíos`.
-**Orden correcto: borrar la foto antigua primero, reponer después** — al revés se borró lo que se acababa de subir.
+### 7.a · PUERTA DE IDENTIDAD (bloqueante — es el fallo A0)
+
+Con el "ok" de todas las imágenes y **antes de tocar Shopify**:
+
+1. Volver a ejecutar `python3 scripts/fuente_verdad_producto.py <handle-DESTINO>`.
+2. Abrir su **foto real** junto al **packshot generado**.
+3. Afirmar por escrito: **"es el mismo mueble"** — chasis, forma de los brazos, nº de plazas, color, tablero.
+4. Si no se puede afirmar mirando el píxel, **no se publica**.
+
+> La galería del Albania estuvo días en la ficha del Bellagio (3.449 €) porque el nombre de la carpeta se dio
+> por bueno como identificación. **La carpeta no identifica nada; el handle destino sí.** Son diez segundos.
+
+### 7.b · Publicar
+
+`scripts/publicar_galeria_producto.py` (dry-run por defecto, `--apply`).
+
+**Orden seguro, el que hace el script:** capturar los IDs antiguos → subir las nuevas → **esperar READY** →
+reordenar → **y solo entonces borrar las antiguas**. Si alguna no llega a READY, **no se borra nada**.
+Nunca borrar primero: una ficha sin imagen, aunque sea un segundo, es una ficha rota.
+*(El incidente real fue un filtro `*` demasiado amplio que borró lo recién subido — el remedio es excluir
+explícitamente lo nuevo, no invertir el orden.)*
+
+Verificar al cierre: `ACTIVE · 5 media · READY · ≥2000 px · pos 0 = packshot · 0 alt vacíos`.
+Y anotar la fila del producto en [`REGISTRO_LOCALIZACIONES.md`](../../docs/santavila/REGISTRO_LOCALIZACIONES.md).
 
 ---
 

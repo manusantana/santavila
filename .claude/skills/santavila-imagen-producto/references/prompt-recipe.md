@@ -28,8 +28,18 @@ Photorealistic, shot on a real camera.
 **Toma 1 · Packshot (1:1, fondo bone)**
 > *Using the reference image, keep the 3-seater outdoor sofa EXACTLY as shown (same 3 seat cushions, same aluminium frame, same rope weave, same color). Do not change it. Place it on a clean warm-bone studio backdrop (never pure white), soft large key light from 40° left at ~40° elevation, neutral 5400 K, crisp contact shadow under the legs and a long soft shadow to the right. 3/4 view at 35°, verticals plumb. Photorealistic.*
 
-**Toma 2 · Ambiente (HÁBITAT según estilo + vida/ASMR)** — el hábitat sale del ESTILO del mueble (ver `perfil-disenador-escena.md`) y se mantiene en A y B. Añade SIEMPRE vida (uso reciente) + un elemento sensorial (vapor, gotas, textura).
-> *Using the reference image, keep the armchair EXACTLY as shown — do not change it. A contemporary designer coastal terrace matching its modern minimalist style: smooth microcement floor, clean rendered wall, architectural planters with a sculptural olive tree. Lived-in: a linen throw over the armrest with natural folds, a steaming coffee cup and an open book on a minimalist side table. Warm low side light, long soft shadows, as if someone just got up. Photorealistic, natural imperfection.*
+**Toma 2 · Ambiente (HÁBITAT según estilo + vida)** — el hábitat sale del ESTILO del mueble (ver `perfil-disenador-escena.md`) y se mantiene en el exterior y el interior. Añade SIEMPRE vida, pero **la vida depende de si hay manos en cuadro**.
+
+> ⚠️ **SIN MANOS → escena EN REPOSO.** Nada de vapor ni de cojín hundido: el vapor implica que alguien está ahí
+> **ahora**, y en una foto vacía eso es el tell de IA que el ROL marca BLOQUEANTE. La vida la dan huellas
+> *frías*: condensación en un vaso, manta plegada, libro cerrado, sombra moteada, hoja caída.
+> **CON MANOS → el vapor y la huella de uso son obligatorios.**
+
+*Sin manos (reposo):*
+> *Using the reference image, keep the armchair EXACTLY as shown — do not change it. A contemporary designer coastal terrace matching its modern minimalist style: smooth microcement floor, clean rendered wall, architectural planters with a sculptural olive tree. At rest, nobody around: a folded linen throw on the armrest, a closed book and a cold glass with condensation on a minimalist side table, cushions plump and unmarked. Warm low side light, long soft shadows, dappled shade from the pergola. Photorealistic, natural imperfection.*
+
+*Con manos (uso activo):*
+> *…the same terrace. A pair of hands pouring iced tea into a glass over the side table, steam-free cold drink with condensation, the cushion beside them slightly compressed. Realistic hands, five fingers. Warm low side light. Photorealistic.*
 >
 > (Rústico → caserío de piedra + lana + tetera; clásico med → cal/barro + buganvilla. Nunca mezclar estilos: mueble moderno NO va en caserío rústico.)
 

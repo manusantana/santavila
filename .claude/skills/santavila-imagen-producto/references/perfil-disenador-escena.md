@@ -17,10 +17,18 @@ líneas (rectas/minimalistas vs orgánicas/rústicas), material y acabado, lengu
 
 **Regla:** el **estilo del mueble** dicta el tipo de espacio, no una plantilla fija. La **temporada** (§14) solo aporta la **luz, la paleta y el consumible**; el tipo de espacio **cambia con cada producto**. Estilo + paleta + temporada deben **converger**.
 
-## Ambiente VIVIDO + ASMR sensorial (obligatorio en piezas únicas)
-Un producto único (sillón, sofá, tumbona) NO va solo en un espacio bonito y vacío (= tufo a IA). Debe sentirse **habitado** y activar un sentido:
-- **Vida vivida:** signos de uso reciente — libro abierto, manta con caída natural, cojín con huella. Listón: *"parece que alguien acaba de levantarse de aquí"*.
-- **ASMR sensorial:** un elemento que se SIENTE — **vapor** del café/té, **textura** del lino/lana, **gotas de condensación** de un vaso frío, **calidez** de la luz dorada, frescor del mar.
+## Ambiente VIVIDO (obligatorio en piezas únicas) — pero coherente con si hay manos o no
+Un producto único (sillón, sofá, tumbona) NO va solo en un espacio bonito y vacío (= tufo a IA). Debe sentirse **habitado** y activar un sentido. **Cómo se consigue depende de si hay manos en cuadro** (decisión 31-07: solo manos, nunca cuerpo entero):
+
+| | **SIN manos** (la mayoría de ambientes) | **CON manos** |
+|---|---|---|
+| Señal de vida | huella **fría**: gotas de condensación en un vaso, manta plegada, libro cerrado, sombra moteada, hoja caída, arena en el filo de una baldosa | huella **caliente**: vapor de café/té, cojín hundido, libro abierto boca abajo, copa a medias |
+| Cojines | mullidos, lisos, parejos | el de al lado, comprimido |
+| Vapor | **PROHIBIDO** (implica presencia que no existe = tell de IA bloqueante) | obligatorio si hay bebida caliente |
+
+- **Listón sin manos:** *"aquí no hay nadie ahora, pero qué ganas de sentarse"* — staging bello y en reposo.
+- **Listón con manos:** *"alguien está viviendo aquí ahora mismo"*.
+- **Una toma de ambiente sin ninguna señal de vida está MUERTA → se regenera.**
 - **Imperfección real:** musgo, hoja caída, plantas orgánicas — no la limpieza perfecta de CGI.
 - **Coherencia lógica** (rol §6): consumibles con dueño; nada de dobles sin sentido.
 
