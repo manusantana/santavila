@@ -13,6 +13,62 @@
 
 ---
 
+## 2026-08-03 · RRSS — MCP de Metricool CONECTADO (vía mcp-remote) + arranque del plan social
+
+Se retoma el pendiente del 24-07 ("autenticar el MCP de Metricool") y **queda RESUELTO**, aunque no por el
+camino previsto. Con esto arranca la fase de redes sociales: **Sergio ya creó los perfiles de Santavila
+(Instagram, Facebook, Pinterest) y los cargó en Metricool.**
+
+### El OAuth nativo NO funciona — y no es cosa nuestra
+- El flujo previsto (`/mcp` → metricool → Authenticate contra `https://ai.metricool.com/mcp`) falla en la
+  pantalla de Metricool con un error genérico ("Autentificación de la aplicación — ha ocurrido un error").
+  Es un **error externo CONOCIDO, reconocido en la propia ayuda de Metricool**. Reintentar no sirve.
+- La alternativa por clave API (cabecera `X-Mc-Auth`, la que documentan para n8n) **es solo del plan
+  Advanced (de pago)** → descartada.
+
+### Lo que SÍ funcionó (dejar de referencia para cualquier MCP con OAuth roto)
+1. Lanzar el puente oficial en segundo plano: `npx -y mcp-remote https://ai.metricool.com/mcp`
+   → **imprime la URL de autorización en la terminal** (además de abrir el navegador por defecto).
+2. Pegar esa URL en el navegador **donde está la sesión de Metricool** (útil si el navegador por defecto
+   no es el conectado). El callback va a `localhost` y lo captura el proceso; los tokens quedan cacheados
+   en `~/.mcp-auth` y **se renuevan solos**.
+3. Registrar el MCP apuntando al puente, no al HTTP directo:
+   ```
+   claude mcp add -s user metricool -- npx -y mcp-remote https://ai.metricool.com/mcp
+   ```
+   Estado verificado: `✔ Connected`. Scope *user* → vale para todos los proyectos de esa máquina.
+
+**Trucos aprendidos por el camino:** `claude mcp login <name> --no-browser` imprime la URL del OAuth en vez
+de abrir navegador; y si se abre el navegador equivocado, vale copiar la URL de su barra al navegador
+correcto (mismo equipo → el callback `localhost` funciona igual).
+
+**Ojo (igual que el MCP del 24-07):** esto vive en `~/.claude.json` + `~/.mcp-auth`, **no viaja por git**.
+En otra máquina hay que repetir el proceso (pasos 1–3 de arriba).
+
+### Plan RRSS propuesto (pendiente de ejecutar)
+Objetivo: tráfico a santavila.com y primera venta asistida por social. Resumen de lo acordado:
+- **Canales:** Instagram (marca + Reels), Pinterest (tráfico evergreen, prioritario para ticket 2-5 k€),
+  Facebook (soporte del catálogo).
+- **Tienda en Instagram:** vía canal *Facebook & Instagram* de Shopify → catálogo sincronizado + etiquetas
+  de producto que llevan a la ficha (en España no hay checkout in-app: el tráfico acaba en nuestra web, mejor).
+- **3 pilares de contenido, todo con material YA producido:** (1) "un mueble en su sitio" — las galerías
+  renovadas por región (Menorca, Cádiz, Alpujarra…); (2) carruseles educativos del
+  [`GEO-SOCIAL-CONTENT-PACK.md`](GEO-SOCIAL-CONTENT-PACK.md) (junio, sin estrenar) → tráfico a las guías;
+  (3) Reels con los clips ASMR del `spot-leisa/` (el export 1080 está listo).
+- **Cadencia:** IG 4 piezas/semana (2 Reels + 2 carruseles) · Pinterest 8-10 pines/semana · programación
+  por lotes mensuales en Metricool.
+- **Medición:** UTMs automáticas de Metricool + SmartLink en bio → sesiones/carritos/ventas en GA4.
+
+### Siguiente paso recomendado
+1. En sesión nueva de Claude: listar marcas vía MCP y **verificar que se ven los 3 perfiles** de Santavila.
+2. Cerrar el bucle GEO: URLs reales de los perfiles al footer del tema + `sameAs` (pendiente de
+   `GEO-BRAND-MENTIONS.md` desde junio).
+3. Calendario del primer mes (16 piezas IG + ~30 pines con copys e imagen asignada) → aprobar → programar.
+4. Sigue vivo: el tracker de Metricool del tema debería quedar bajo el consentimiento de cookies (UE) —
+   más urgente ahora que vamos a meter tráfico social.
+
+---
+
 ## 2026-08-01 (B) · 6 FICHAS SE VENDÍAN SIN NINGUNA FOTO — repuestas
 
 Al ir a arrancar la galería del producto de mayor ticket apareció algo peor: **6 fichas ACTIVE estaban en
