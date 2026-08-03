@@ -39,7 +39,7 @@
 | **Bolonia XL 3 pl.** `set-jardin-3-plazas-contemporaneo-...-mesa-2` | aluminio azul marino | azul claro grisáceo | **LAMAS de aluminio azul marino · marco perimetral más ancho** | reposapiés **NO** incluido |
 | **CUPRA 3 pl.** `set-jardin-3-plazas-sofisticado-...-mesa-2` | aluminio tórtola mate | verde salvia | **LAMAS de aluminio tórtola · lamas ESTRECHAS y numerosas, dentro de marco más ancho** | 2 reposapiés **NO** incluidos |
 | **Albania 3 pl.** `...-mesa-3` | tórtola | verde salvia | **NO DETERMINADO** — el export de imágenes apunta a otro producto; falta la foto real de esta ficha | — |
-| **Brandon 3 pl.** `set-jardin-aluminio-3-plazas-...` | aluminio antracita, perfil fino | **chenille gris con JACQUARD tono sobre tono** (motivo irregular tipo pinceladas/grafismos en gris claro) — NO liso | **2 mesas redondas nido · LISO gris cemento · mate · canto fino · patas cilíndricas finas** | — |
+| **Brandon 3 pl.** `set-jardin-aluminio-3-plazas-...` | aluminio antracita, perfil fino | **chenille gris con JACQUARD tono sobre tono** (motivo irregular tipo pinceladas/grafismos en gris claro) — NO liso | **2 mesas redondas nido · LISO gris cemento · mate · canto fino · patas cilíndricas finas** | ⚠️ ver ficha ampliada abajo |
 | **Brandon 2 pl.** `set-jardin-aluminio-2-plazas-...` | ídem | ídem (jacquard) | ídem | — |
 | **Sofá 220×90** `sofa-terraza-aluminio-3-plazas-...` | ídem | ídem (jacquard) | — (pieza suelta, sin mesa) | — |
 | Balinesa 198 · Balinesa 160 · Parasol Roma · LEISA · Tumbona | — | — | **PENDIENTE** — originales localizadas en `images_optimized/` e `images_balliu/` del repo, falta auditarlas | — |
@@ -56,6 +56,27 @@
 > Alcance sin comprobar: la colección **Mesas (73 productos)** nunca se ha auditado por identidad. Este fallo
 > apareció al mirar la primera mesa; conviene revisar las demás con el mismo método (comparación de huella
 > perceptual entre pos-0 de productos distintos).
+
+---
+
+## FICHA AMPLIADA · Brandon 3 plazas — SKU 557-010885 (5.249 €, el de mayor ticket)
+*Leída el 2026-08-01 sobre `brandon 8 (3).png` (1536×1024) a resolución nativa, recorte por componente.*
+
+| Componente | Lo que hay **de verdad** |
+|---|---|
+| **Chasis** | Aluminio **antracita mate**, perfil **fino**. Marco perimetral en U de esquinas redondeadas que envuelve el lateral; **tornillos vistos** en el perfil. Patas **cilíndricas finas** antracita, ligeramente separadas de la esquina |
+| **Tejido** | Chenille **gris medio** con **JACQUARD tono sobre tono**: trazos irregulares tipo grafismo en gris más claro. **Está en TODAS las piezas** — asiento, respaldo, brazos y panel lateral. **NO es liso** |
+| **Brazos** | **Tapizados y gruesos**, con vuelta hacia fuera en la coronación (rulo). No son de aluminio desnudo |
+| **Cojines** | Sofá: 3 de asiento + 3 de respaldo. Sillón: 1 + 1. Todos del mismo tejido; **no hay cojín decorativo distinto** |
+| **Mesas** | **2 redondas nido** de distinto diámetro. Tablero **gris cemento medio, LISO y MATE**, veteado muy sutil, **canto fino redondeado**. Pie de 4 tubos finos antracita |
+| **Cotas** | **NO DETERMINADO** — el proveedor no da medidas de este SKU → **esta ficha no lleva imagen de medidas** |
+| **Piezas del lote** | ⚠️ **NO DETERMINADO — pendiente de Sergio.** La foto muestra **2 mesas**; la descripción dice *"Incluye: … y mesa"* (singular); el SKU hermano 557-010884 (Brandon-7, 2 pl.) **sí** lista `LUNA-44 SET MESAS CENTRO 80 + 60` como segunda fila, y el 557-010885 **no**. Hasta resolverlo no se fija el conteo de mesas del packshot |
+| **A quitar de la escena** | La **mujer sentada** y el atrezzo del proveedor (copa de vino, cuenco de uvas). El fondo original —techo de madera oscura, carpintería negra y **vegetación tropical (estrelitzia)**— hay que **negarlo por nombre** en el prompt |
+
+**Riesgo específico de esta ficha:** es el producto donde ya se publicó el **jacquard eliminado** en 3 fichas.
+El QA del tejido es el bloqueante nº1 aquí, y se hace contra este recorte, no contra el packshot generado.
+
+---
 
 ## Estado de auditoría de lo ya publicado
 Ver [`AUDITORIA_FIDELIDAD_2026-07-29.md`](AUDITORIA_FIDELIDAD_2026-07-29.md) y

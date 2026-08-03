@@ -13,6 +13,39 @@
 
 ---
 
+## 2026-08-01 (B) · 6 FICHAS SE VENDÍAN SIN NINGUNA FOTO — repuestas
+
+Al ir a arrancar la galería del producto de mayor ticket apareció algo peor: **6 fichas ACTIVE estaban en
+producción con CERO imágenes**, 17.578 € de ticket acumulado. Son galerías retiradas por los fallos de
+fidelidad a las que **nunca se les repuso la foto del proveedor**. Ninguna auditoría previa lo detectó porque
+todas miraban la *pos-0* — y estas no tenían pos-0 que mirar.
+
+| € | Ficha | Repuesta con |
+|---|---|---|
+| 4.195 | Set Yina 3 pl. | foto oficial Hevea |
+| 3.819 | Set Yina 2 pl. | foto oficial Hevea |
+| 2.765 | Set Acapulco 3 pl. | **`images_optimized/` del repo** — la del proveedor no mostraba los 2 sillones |
+| 2.405 | Set Dounvil 2 pl. | foto oficial Hevea |
+| 2.349 | Set Acapulco 2 pl. | foto oficial Hevea ⚠️ *ver deuda abajo* |
+| 2.045 | Pérgola 300×300×250 | foto oficial Hevea |
+
+**Verificado: 171 ACTIVE · 0 sin imagen · 0 media en FAILED.** Coste: 0 créditos.
+
+### ⛔ Hallazgo técnico nuevo — Shopify tiene un límite de ~20 MEGAPÍXELES
+El primer intento **falló en silencio**: `productCreateMedia` respondió `201 OK` y las imágenes quedaron en
+`status: FAILED` con `image: null`. Las fotos de Hevea vienen a **35–39 MP** (9190×4267) y Shopify no las
+procesa. Es un límite **distinto** del de 20 MB que ya conocíamos por el balancín.
+**Regla nueva:** redimensionar a ≤18 MP antes de subir **y comprobar el `status` de cada media después** — un
+201 no significa que la imagen exista. Grabado en el PASO 7 del skill.
+
+### Deuda anotada
+- **Acapulco 2 pl.**: la única foto disponible del proveedor lleva una modelo con **camiseta de logo GUESS**
+  visible (logo de tercero, prohibido por Ley 4). Se ha subido igual —una ficha sin foto es peor— pero debe
+  sustituirse cuando se genere su galería.
+- **83 fichas ACTIVE tienen algún `alt` vacío.** No bloquea, pero es deuda de accesibilidad y SEO.
+
+---
+
 ## 2026-08-01 · AUDITORÍA ADVERSARIAL DEL SKILL v4 — 17 fallos, corregidos
 
 El v4 se sometió a una auditoría de 6 lentes independientes (contra el ROL, contra las auditorías de fallos,

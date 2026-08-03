@@ -269,6 +269,17 @@ Nunca borrar primero: una ficha sin imagen, aunque sea un segundo, es una ficha 
 *(El incidente real fue un filtro `*` demasiado amplio que borró lo recién subido — el remedio es excluir
 explícitamente lo nuevo, no invertir el orden.)*
 
+**Dos límites de Shopify que hacen fallar la subida en silencio** (la imagen queda en `FAILED`, la ficha se
+queda sin foto y el script dice "subida HTTP 201"):
+
+| Límite | Síntoma | Arreglo |
+|---|---|---|
+| **~20 megapíxeles** | `status: FAILED`, `image: null`. Las fotos de Hevea vienen a **35–39 MP** | redimensionar a ≤18 MP antes de subir |
+| **20 MB** por fichero | error 400 al crear el media | recomprimir a 4000 px, quality 92 |
+
+**Verificar SIEMPRE el `status` de cada media después de subir.** Un `productCreateMedia` que responde bien no
+significa que la imagen exista: puede quedarse en `FAILED` minutos después.
+
 Verificar al cierre: `ACTIVE · 5 media · READY · ≥2000 px · pos 0 = packshot · 0 alt vacíos`.
 Y anotar la fila del producto en [`REGISTRO_LOCALIZACIONES.md`](../../docs/santavila/REGISTRO_LOCALIZACIONES.md).
 
