@@ -149,6 +149,15 @@ Si la ficha da "72×75" sin desglosar → **se pregunta a Sergio**; en 3/4 tres 
 **Coherencia de secuencia:** las tomas 2 y 3 son el **mismo mundo**, un solo sol, un solo grade. La 1 y las
 ASMR son neutras. Toda la ficha comparte dirección de luz y temperatura.
 
+> ### ⛔ Los ambientes se hacen por SWAP DE FONDO desde el packshot ya aprobado
+> **Nunca desde la foto del proveedor.** En el ambiente el mueble ocupa menos cuadro y el modelo **simplifica
+> el tejido**: un jacquard, una trama o una veta sutil desaparecen y salen lisos. Anclando al packshot que ya
+> pasó el QA, el modelo parte de un tejido correcto y lo conserva.
+> Se pasa el `job_id` del packshot aprobado en `medias[]` y el prompt dice *"change ONLY the background and
+> the ground"*. El QA se sigue haciendo **contra la foto oficial del proveedor**, no contra el packshot.
+> *(Verificado en el Brandon 3 pl.: generado desde la foto del proveedor, el jacquard se perdía; por swap, se
+> mantuvo en las tres tomas.)*
+
 **Dónde caben las manos:** en las tomas 2, 3, 4 y 5 (nunca en el packshot). **Con manos** en cuadro, la huella
 de uso es obligatoria: vapor, cojín hundido, libro abierto. **Sin manos, la escena va EN REPOSO** — pero no
 muerta: la vida la dan huellas *frías* que no implican a nadie ahora mismo (condensación en un vaso, sombra
@@ -179,6 +188,7 @@ moteada, hoja caída, manta plegada, libro cerrado). **Una toma de ambiente sin 
   *"whitewashed lime wall and dry-stone wall — NO palm trees, no tropical plants, no beach"*.
 - **Óptica que no miente:** 70–105 mm en packshot y detalle, 35–50 mm en ambiente desde >2 m. **Cero gran
   angular** — es la causa nº1 del "mueble de juguete en paisaje enorme".
+- **El upscale a `4k` falla en ratio 4:5** — usar `2k` (da ~2160×2672, por encima del mínimo de 2000 px).
 - **8 jobs concurrentes** máximo. Los créditos se descuentan **al encolar**: si la cola se para, **NO reencolar**.
   Coste real: **~34 créditos por galería** con regeneraciones incluidas.
 

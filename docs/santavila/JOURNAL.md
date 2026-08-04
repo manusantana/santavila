@@ -13,6 +13,47 @@
 
 ---
 
+## 2026-08-03 · PRIMERA GALERÍA CON EL SKILL v4 — Brandon 3 pl. (5.249 €, el de mayor ticket)
+
+Estreno del pipeline v4 con el producto más caro del catálogo, que además es **el del jacquard**: el tejido
+que se publicó liso en tres fichas. Galería lista en `images_generated/brandon3p_2026-08/`, **sin publicar,
+esperando el ok de Sergio**.
+
+| # | Toma | px |
+|---|---|---|
+| 1 | Packshot bone (recorte aprobado) | 4096² |
+| 2 | Ambiente exterior · A3 Villa cántabra | 4096² |
+| 3 | Ambiente interior · galería acristalada con lluvia | 2160×2672 |
+| 4 | ASMR de feature · canto de las mesas nido | 4096² |
+| 5 | ASMR de consumible · caldo + pan de nueces, con manos | 4096² |
+
+Sin imagen de medidas: **el proveedor no da cotas de este SKU** (Paso 0 → `NO HAY`).
+
+### Lo que el QA rechazó — 4 tomas que en julio se habrían publicado
+1. **Packshot v1: jacquard BORRADO en los cojines de asiento.** Presente en respaldos, ausente en asientos.
+2. **Packshot v2: jacquard EXAGERADO** a estampado gráfico de trazos gruesos. El modelo o lo borra o lo grita;
+   acertó a la tercera con *"VERY SUBTLE, LOW-CONTRAST tone-on-tone"*.
+3. **Detalle con TORNILLOS ALLEN inventados.** En la foto real, ampliada al máximo, se ven puntos oscuros en
+   las esquinas del marco pero **no se puede determinar el tipo de fijación**. Era el fallo A8 otra vez.
+4. **Canto del tablero con un RIBETE DORADO** que no existe: en el real el canto es del mismo gris.
+
+### Dos hallazgos técnicos
+- **⛔ Los ambientes generados desde la foto del proveedor PIERDEN el jacquard.** A la escala del ambiente el
+  sofá ocupa menos cuadro y el modelo simplifica el tejido a liso. **Solución: swap de fondo desde el packshot
+  ya aprobado** (flujo validado el 22-06). Así parte de un tejido correcto y lo conserva. Verificado en las
+  tomas 2, 3 y 5. **Es la técnica por defecto para ambientes a partir de ahora.**
+- El upscale a **4k falla en ratio 4:5**; a `2k` funciona (2160×2672, por encima del mínimo de 2000 px).
+
+### Piezas del lote — resuelto con Sergio
+La foto muestra **2 mesas nido**, la descripción dice *"y mesa"* en singular, y el SKU hermano 557-010884
+(Brandon-7, 2 pl.) **sí** lista `LUNA-44 SET MESAS CENTRO 80 + 60` como segunda fila. Decisión: **son 2 mesas**
+y hay que corregir el texto de la ficha.
+
+**Coste real: 52 créditos** (216,5 → 164,5) para 5 imágenes válidas. Muy por encima de los ~34/galería de julio,
+y el motivo es el QA: 3 rondas de packshot, 3 detalles rechazados y un upscale fallido. **El rigor cuesta
+créditos; publicar una imagen falsa cuesta más.**
+---
+
 ## 2026-08-03 · RRSS — MCP de Metricool CONECTADO (vía mcp-remote) + arranque del plan social
 
 Se retoma el pendiente del 24-07 ("autenticar el MCP de Metricool") y **queda RESUELTO**, aunque no por el
