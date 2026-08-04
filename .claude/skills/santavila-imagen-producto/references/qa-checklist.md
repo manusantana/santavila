@@ -1,5 +1,13 @@
 # QA gate (antes de subir) — bloqueante
 
+> ## ⛔ NADA DE COMIDA NI BEBIDA (Sergio, 03-08-2026)
+> Vendemos **decoración de exterior**, no una comida. Donde este documento diga taza, copa, vino, café, té,
+> vermut, cerveza, aperitivo o "consumible", **está derogado**.
+> **Atrezzo vigente:** libro · maceta de barro o gres con olivo/romero/lavanda · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana **vacía**.
+> En escena de carril FRÍO la maceta va en **gres gris o piedra**, nunca terracota naranja.
+
+
 > Del rol §6 + capa de coherencia lógica. Comparar SIEMPRE lado a lado contra la **foto real** de referencia. Falla un solo bloqueante → regenerar, no subir. Registrar el veredicto.
 
 ## A · Fidelidad (tolerancia cero) — BLOQUEANTE
@@ -31,14 +39,15 @@
 
 ## D.bis · Escala — BLOQUEANTE (línea roja del dueño, ROL §13.bis)
 Sin cuerpo entero en la galería, la escala se ancla **exclusivamente en objetos cotidianos**:
-- [ ] **Mano humana 18 cm** (obligatoria en todo ASMR con manos) · taza 8 cm Ø · copa 22 cm · libro 30 cm · cojín 45–60 cm.
+- [ ] **Mano humana 18 cm** (obligatoria en toda toma con manos) · libro cerrado 22–25 cm · maceta 25–40 cm Ø · romero/olivo en maceta 60–120 cm · cojín de asiento 45–60 cm.
+- [ ] **Las COTAS REALES del Paso 0 mandan sobre el encuadre:** si el sofá mide 220 cm y la mesa 80, la mesa es 0,36 de su ancho **y lo sigue siendo al acercarse**. Un mueble que encoge al acercar la cámara = rechazo.
 - [ ] Producto **≥78 % del ancho** en packshot y **≥45 %** en ambiente (nunca <30 %). Cielo ≤25 %.
 - [ ] **Plano de cierre** sólido a 2–5 m detrás (seto, muro, pérgola). Prohibida la fuga al infinito tras el mueble.
 - [ ] Perspectiva única: una línea de horizonte, una escala física para todo el cuadro. Patas apoyadas con su sombra.
-- [ ] **Mano gigante o taza desproporcionada invalida el ASMR** aunque la textura sea perfecta.
+- [ ] **Mano gigante o prop desproporcionado invalida la toma** aunque la textura sea perfecta.
 
 ## D.ter · Presencia humana — solo MANOS (decisión 31-07)
-- [ ] **Nunca cuerpo entero ni cara.** Solo manos y consumibles. El §10 del ROL está archivado.
+- [ ] **Nunca cuerpo entero ni cara.** Solo manos. El §10 del ROL está archivado.
 - [ ] Manos: 5 dedos, sin fusiones, muñeca natural. **Verificar tras el upscale a 4K**, no en la previa.
 - [ ] Mano que TOCA el producto = máximo escrutinio: si falla, rechazo aunque el resto sea perfecto.
 - [ ] **Escena sin persona = escena EN REPOSO:** cojines mullidos y lisos, **sin vapor**, sin huella de cuerpo.
@@ -54,7 +63,7 @@ Sin cuerpo entero en la galería, la escala se ancla **exclusivamente en objetos
 - [ ] Overlay determinista con `scripts/overlay_medidas_producto.py` — **nunca** cotas generadas por IA.
 
 ## "Tells" de IA en la lógica de la escena — BLOQUEANTE (ambientes con vida)
-- **Consumibles = personas, con DUEÑO:** el nº de copas/tazas es coherente con el nº de personas; cada bebida junto a quien la toma (nunca en el lado opuesto de la mesa ni amontonada). Una persona con la copa en la mano no puede tener otra idéntica delante.
+- **Props con dueño y con lógica:** cada objeto está donde alguien lo habría dejado, no repartido de adorno. Nada duplicado sin motivo. *(La antigua regla de consumibles queda sin objeto: ya no hay comida ni bebida en escena.)*
 - **Deformación por peso:** cojín donde se sienta alguien → hundimiento y arruga; respaldo cede; ropa pliega. Persona sobre cojín intacto = "flotando" = tell.
 - **Coherencia física:** sombras/reflejos/dirección de luz de personas y props concuerdan con el sol único; cada objeto con su sombra de contacto; recuento sillas/personas/sombras cuadra.
 - **Escala doble puerta:** si "lee personas grandes", **mídelo lado a lado** antes de concluir — suele ser composición (dos personas llenando el sofá), no tamaño. Fix: separar figuras (≥1 cojín libre), enderezar espalda, plano más cerrado. No encoger personas.

@@ -1,5 +1,13 @@
 # Escenas por región y temporada + emparejamiento producto↔escena
 
+> ## ⛔ NADA DE COMIDA NI BEBIDA (Sergio, 03-08-2026)
+> Vendemos **decoración de exterior**, no una comida. Donde este documento diga taza, copa, vino, café, té,
+> vermut, cerveza, aperitivo o "consumible", **está derogado**.
+> **Atrezzo vigente:** libro · maceta de barro o gres con olivo/romero/lavanda · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana **vacía**.
+> En escena de carril FRÍO la maceta va en **gres gris o piedra**, nunca terracota naranja.
+
+
 > Del rol §8 (toda España) y §14 (temporadas). Para la tabla completa de regiones, ver `docs/santavila/ROL_FOTOGRAFO_SENIOR.md` §8.
 
 ## Principio (§14) — dos capas

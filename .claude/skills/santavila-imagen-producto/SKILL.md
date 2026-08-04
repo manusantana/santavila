@@ -248,6 +248,22 @@ Todo **contra la foto oficial del proveedor**, nunca contra el packshot propio. 
 color de variante ΔE≤3 (antracita no se aplasta a negro, tórtola no vira a rosa, blanco no amarillea) ·
 herrajes respetados · verticales a plomo · **SKU correcto**.
 
+> ### ⛔ CÓMO SE COMPARA UNA TRAMA — el método, no la buena voluntad
+> **Mirar los dos recortes "ampliados" en pantalla NO es comparar.** Así aprobé el jacquard perdido en dos
+> imágenes del Brandon: los puse uno al lado del otro a tamaños distintos y "parecía que estaba".
+>
+> **Protocolo obligatorio, en este orden:**
+> 1. **Calcula los px/cm de cada imagen** con una cota conocida. *(Sofá de 220 cm que mide 1711 px → 7,8 px/cm.)*
+> 2. **Recorta el MISMO número de centímetros reales** en las dos —30-40 cm de cojín— y llévalos al **mismo
+>    tamaño final**. Solo entonces la trama es comparable.
+> 3. **Recorta la pieza MÁS CERCANA a cámara**, no la más lejana. El sofá del fondo tiene menos píxeles por
+>    centímetro que el sillón de delante: mirar el sofá es darse la razón a uno mismo.
+> 4. **Si a igual escala el motivo no aparece, NO está.** No es "sutileza", no es "resolución": el modelo lo
+>    ha borrado. Rechazo.
+>
+> **Prueba de fuego:** si la foto del proveedor tiene MENOS px/cm que tu imagen y en ella el motivo se ve y en
+> la tuya no, la excusa de la resolución no existe.
+
 **B · Física de luz** — un solo sol · sombra de contacto bajo **cada** apoyo (si flota, rechazo) · sombra
 proyectada al lado opuesto, nunca hacia cámara · sombra coloreada, negros al ink `#23251D` nunca `#000` ·
 sin HDR falso · microtextura sin denoise plástico.
@@ -285,6 +301,23 @@ obligatorios.**
 0 logos, 0 watermark, 0 texto de IA · no sugerir montaje nuestro (self-assembly).
 
 **F · Técnico** — ≥2000 px (objetivo 2400) · cover en producto · sin amputar patas ni brazos en el 1:1.
+
+**G · ESTACIÓN — bloqueante, se mira EN LA IMAGEN** *(no basta con pensarlo antes de generar)*
+Mira el suelo, el cielo y los textiles: ¿suelo **seco**, sin charcos ni reflejos de agua? ¿sin gotas en
+cristales? ¿cielo claro aunque velado, no plomizo? ¿**sin hojas secas caídas**? ¿textiles ligeros, sin lana
+gruesa? Si alguna falla en temporada de verano → **regenerar**.
+
+**H · VERACIDAD DEL LUGAR — bloqueante, se mira EN LA IMAGEN**
+1. **¿Hay arquitectura española en cuadro?** Al menos una esquina de la casa: mampostería, sillería, galería
+   acristalada blanca, alero de teja. **Una terraza flotando en un prado no está en ningún sitio.**
+2. **¿Hay 2 anclas de paisaje de la región?** En el norte: silueta de sierra al fondo *(la costa cantábrica
+   siempre tiene monte detrás)*, eucaliptal o mancha de monte, parcelas con seto. Un horizonte recto y vacío
+   sobre césped raso es Irlanda, no Cantabria.
+3. **¿El muro es del país correcto?** Norte de España: **mampostería de caliza gris angular trabada con
+   mortero**, esquinas de sillar. **NO** muro de piedra seca de cantos redondeados con líquenes naranjas —
+   eso es *cornish hedge* irlandés/córnico, y es lo que el modelo pone si no se lo niegas.
+4. **La pregunta final:** *"¿esto está en España o podría estar en Cornualles?"* Si vale igual para las dos,
+   no has localizado nada → **regenerar**.
 
 ---
 

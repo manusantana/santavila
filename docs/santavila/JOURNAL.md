@@ -13,6 +13,51 @@
 
 ---
 
+## 2026-08-04 · AUDITORÍA INTEGRAL — el jacquard se volvió a perder y yo lo aprobé
+
+Sergio, con razón: *"siempre encuentras fallos, siempre revisas y encuentras fallos... ¿no puedes hacer una
+auditoría entera ahora que tienes la galería y el skill hechos?"*. Siete lentes independientes sobre las 5
+imágenes y el skill, con un escéptico por hallazgo. **8 confirmados.** Dos son bloqueantes y me señalan a mí.
+
+### ⛔ El fallo histórico nº1, repetido — y aprobado por mi QA
+| Imagen | Tejido real | Lo generado |
+|---|---|---|
+| **02 exterior** | chenille con jacquard de trazos | **rejilla ortogonal lisa** tipo lino/tweed |
+| **03 interior** | chenille con jacquard de trazos | **trama nudosa** tipo tweed — otro material |
+
+**Por qué mi QA lo dejó pasar** (esto es lo importante): comparé los dos recortes *a tamaño de pantalla*, a
+escalas distintas, y **recorté el sofá — la pieza más lejana y con menos píxeles por centímetro — en vez del
+sillón de primer plano.** A tamaño completo el jacquard "parece que está" siempre.
+El verificador lo demostró midiendo: la foto del proveedor tiene **menos** px/cm que la generada y en ella el
+motivo se ve sin discusión. La excusa de la resolución no existía.
+
+**Método correcto, ya grabado en el skill:** calcular px/cm con una cota conocida → recortar **los mismos
+centímetros reales** en las dos → llevarlos al **mismo tamaño** → mirar la pieza **más cercana** a cámara.
+Si a igual escala el motivo no aparece, **no está**. Comparador nuevo: `_QA_CORRECTO_jacquard_igual_escala.jpg`.
+
+### El lugar no es España
+- El muro de las tomas 2 y 5 es un **muro de piedra seca de cantos redondeados con líquenes naranjas**:
+  tipología *cornish hedge* irlandesa/córnica. En el norte de España es **mampostería de caliza gris angular
+  trabada con mortero**, con esquinas de sillar.
+- **No hay ni un metro de arquitectura española en cuadro.** La terraza flota en un prado: sin casa, sin
+  fachada, sin alero. Y el horizonte es recto y vacío — **la costa cantábrica siempre tiene sierra detrás**.
+
+### Huecos del skill (los tres cerrados)
+1. La derogación de la comida vivía en **un solo bloque**; los references seguían pidiendo copas y tazas.
+2. Estación y veracidad del lugar estaban como comprobación **antes** de generar, y no había ni un ítem que
+   las mirara **en la imagen ya hecha**. Añadidos como bloques **G** y **H** del QA.
+3. El swap de fondo (única defensa mecánica contra la pérdida de trama) estaba en un blockquote mientras el
+   runbook mandaba lo contrario. Ahora es el **paso 1.bis** numerado.
+
+### Estado de la galería
+**Se salvan 2 de 5:** `01_packshot` y `04_asmr_mesas_canto`. **Rehacer 02, 03 y 05.**
+Restaurada `_foto_oficial_proveedor.png`, que había borrado con un `rm *.png` — la referencia del QA.
+
+**La auditoría quedó incompleta:** el límite de sesión mató 24 agentes, entre ellos las lentes de
+**coherencia de secuencia** y **tells de IA**, y el informe final. Faltan por pasar sobre 01 y 04.
+
+---
+
 ## 2026-08-03 · PRIMERA GALERÍA CON EL SKILL v4 — Brandon 3 pl. (5.249 €, el de mayor ticket)
 
 Estreno del pipeline v4 con el producto más caro del catálogo, que además es **el del jacquard**: el tejido

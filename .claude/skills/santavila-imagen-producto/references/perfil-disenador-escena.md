@@ -1,5 +1,13 @@
 # Perfil de diseñador senior — encajar el producto en SU ambiente
 
+> ## ⛔ NADA DE COMIDA NI BEBIDA (Sergio, 03-08-2026)
+> Vendemos **decoración de exterior**, no una comida. Donde este documento diga taza, copa, vino, café, té,
+> vermut, cerveza, aperitivo o "consumible", **está derogado**.
+> **Atrezzo vigente:** libro · maceta de barro o gres con olivo/romero/lavanda · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana **vacía**.
+> En escena de carril FRÍO la maceta va en **gres gris o piedra**, nunca terracota naranja.
+
+
 > Lección validada (Fase 0, sillón contemporáneo). El error nº1 de "parece IA" **no** es la luz: es el **choque de estilos** — poner un mueble en un espacio que no es el suyo (un sillón contemporáneo de aluminio en un caserío rústico con leña). Antes de elegir la escena, **lee el producto como un interiorista**.
 
 ## Paso obligatorio (antes de la escena): leer el ESTILO del producto

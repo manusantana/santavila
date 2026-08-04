@@ -1,5 +1,13 @@
 # Runbook Higgsfield MCP + subida Shopify (mecánica exacta)
 
+> ## ⛔ NADA DE COMIDA NI BEBIDA (Sergio, 03-08-2026)
+> Vendemos **decoración de exterior**, no una comida. Donde este documento diga taza, copa, vino, café, té,
+> vermut, cerveza, aperitivo o "consumible", **está derogado**.
+> **Atrezzo vigente:** libro · maceta de barro o gres con olivo/romero/lavanda · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana **vacía**.
+> En escena de carril FRÍO la maceta va en **gres gris o piedra**, nunca terracota naranja.
+
+
 > Fuente: `docs/santavila/FLUJO_IMAGEN_PRODUCTO.md` + memoria de la Fase 0. Todo vía MCP de Higgsfield.
 
 ## Modelos
@@ -15,6 +23,12 @@
 **1) Anclar la foto real**
 `media_import_url({ url: "<URL CDN Shopify de la foto real del SKU>" })` → `media_id`.
 Si la foto es local: subirla antes a un host/CDN accesible, o `media_upload_widget` (cliente con UI). Nunca pasar una URL cruda en `medias[].value` — siempre el `media_id`.
+
+**1.bis) Para los AMBIENTES (tomas 2 y 3): el ancla NO es la foto del proveedor**
+Es el `job_id` del **packshot ya aprobado**. Generar el ambiente desde la foto del proveedor **pierde la trama
+del tejido** (a esa escala el modelo la simplifica a lisa) — es el fallo histórico nº1 de Santavila.
+`medias:[{value:<job_id del packshot aprobado>, role:"image"}]` y en el prompt: *"change ONLY the background
+and the ground"*. El QA se sigue haciendo **contra la foto del proveedor**.
 
 **2) Preflight de coste + generar (por toma)**
 ```
@@ -56,7 +70,7 @@ Reutilizar la infra existente (`upload_images.py/.mjs`, `upload_balliu_images.py
 2. PUT de los bytes de cada imagen al target.
 3. `productCreateMedia(productId, [{ originalSource, alt }])` por imagen.
 4. `productReorderMedia(productId, moves)` → orden: **packshot(0) → ambiente EXTERIOR → ambiente INTERIOR →
-   ASMR de feature → ASMR de consumible** *(si hay cota verificada, la imagen de medidas ocupa el hueco 5 y
+   ASMR de feature → ASMR de atrezzo de exterior** *(si hay cota verificada, la imagen de medidas ocupa el hueco 5 y
    se queda un solo ASMR — la ficha siempre acaba con **5 media**)*.
 5. **Y SOLO ENTONCES borrar las antiguas.** Si alguna nueva no llegó a READY, no se borra nada. Nunca al revés.
 6. Verificar `mediaCount = 5` y que la posición 0 es el packshot correcto (no un detalle ni un ambiente).
