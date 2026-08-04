@@ -1390,6 +1390,20 @@ RH/Kettal/Gandia Blasco disparan **fotografía real** → no pueden refrescar to
 | **Props / vegetación** | Plantas y objetos coherentes con lugar y estación |
 
 ### 14.5 TEMPORADA ACTIVA — "Verano Costero" (Cantábrico / Levante)
+
+> ## ⛔ AVISO (04-08-2026) — "Cantábrico" NO significa lluvia
+> Sergio, al ver el Brandon con la terraza mojada y hojas caídas: *"Tiene que haber concordancia con la época
+> del año. Ahora estamos en verano, estamos ofreciendo verano. No me pongas algo que está lloviendo."*
+>
+> El brief de abajo dice *"día algo cubierto del norte (fría, difusa)"* y eso se interpretó como **día de
+> lluvia con charcos y hojas secas** — que es noviembre, no agosto. **La escena va SIEMPRE en la estación en
+> la que se vende.** En verano: suelo seco, cielo claro aunque velado, cero gotas, cero hojas caídas, cero
+> mantas de lana gruesa. La luz del norte en agosto es suave **y luminosa**.
+>
+> **Y la veracidad del lugar:** nombrar la región no basta. Hay que nombrar el elemento arquitectónico que la
+> hace española — en el norte, la **galería acristalada de fachada** (mirador vertical de carpintería blanca,
+> sin techo de cristal), nunca un *conservatory* inglés. Ver el bloque de veracidad en el SKILL.
+
 | Campo | Definición |
 |---|---|
 | **Tema / lugar** | Costa del norte (Cantábrico: piedra, hortensias, mar gris-azul, colinas verdes); Levante/Mediterráneo cuando el producto pide luz más cálida |

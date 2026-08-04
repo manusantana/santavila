@@ -119,11 +119,44 @@ nunca cruzándolo. El entorno nunca gana al producto en saturación ni en temper
 **3 · Rotación de localización.** Consulta **siempre**
 [`REGISTRO_LOCALIZACIONES.md`](../../docs/santavila/REGISTRO_LOCALIZACIONES.md) y elige del roster (ROL §11.1)
 las **menos usadas** del carril. Dos productos no comparten set; coincidencia de 1 localización como mucho.
-Rota también el **consumible**: dos fotos de la misma ficha nunca llevan la misma bebida+aperitivo, y no
-siempre alcohol. Al terminar, **anota la fila nueva en el registro.**
+Rota también el **atrezzo**. Al terminar, **anota la fila nueva en el registro.**
+
+> ### ⛔ VERACIDAD DEL LUGAR — un español tiene que reconocer SU tierra
+> Decir "Cantabria" en el prompt no basta: el modelo tira al norte de Europa genérico, que es lo que más ha
+> visto. **Una localización que un local no reconoce es peor que no localizar**, porque delata el montaje.
+>
+> **Nombra la ARQUITECTURA concreta, no solo la región.** Antes de generar, escribe qué elemento hace que ese
+> sitio sea inconfundiblemente español, y ponlo en el prompt con nombre propio:
+>
+> | Región | Lo que la identifica de verdad | Lo que el modelo pone si no se lo dices |
+> |---|---|---|
+> | Cantabria / Asturias | **galería acristalada de fachada**: mirador vertical de carpintería blanca de madera, adosado al muro, **sin techo de cristal**; casona de sillería y mampostería | *conservatory* victoriano inglés con techo de cristal a dos aguas |
+> | Galicia | granito, hórreo, mampostería de sillar | cottage irlandés de piedra redondeada |
+> | Andalucía | patio encalado, olambrilla, celosía, reja de forja | riad marroquí |
+> | Levante / Baleares | porxada de vigas de sabina, marés, cañizo | villa griega de Santorini |
+>
+> **Verificación:** mira la imagen y pregúntate *"¿esto está en España o podría estar en Cornualles?"*
+> Si un muro de piedra con musgo, un prado verde y un mar gris valen igual para Irlanda, **no has localizado nada**.
 
 **4 · Temporada activa.** *(ROL §14)* Hoy: **"Verano Costero"** (Cantábrico/Levante). Aporta luz, paleta y
-consumible — no el hábitat. El packshot y los ASMR son **backbone estable**: no cambian por temporada.
+atrezzo — no el hábitat. El packshot y los ASMR son **backbone estable**: no cambian por temporada.
+
+> ### ⛔ LA ESCENA VA EN LA ESTACIÓN EN QUE SE VENDE (Sergio, 04-08)
+> *"Ahora mismo estamos en verano, estamos ofreciendo verano. No me pongas algo que está lloviendo."*
+> Una terraza mojada en agosto no vende una terraza: **vende el mes en que no se usa.**
+>
+> | En temporada de VERANO — prohibido | Lo que sí |
+> |---|---|
+> | Lluvia, gotas en el cristal, suelo mojado, charcos | Suelo **seco** |
+> | **Hojas secas caídas** (leen a otoño) | Sombra moteada, alguna flor, polvo fino |
+> | Cielo plomizo cerrado, luz de día gris | Cielo **claro** aunque velado; luz suave pero **de verano** |
+> | Mantas de lana gruesa, ropa de abrigo | Lino, algodón fino, plaid ligero |
+>
+> **Norte ≠ lluvia.** El Cantábrico en agosto tiene **luz difusa y suave con cielo claro** — eso da el carril
+> frío que pide un antracita **sin** convertir la foto en noviembre. Confundir "luz del norte" con "día de
+> lluvia" es el error que se coló en el Brandon.
+>
+> **Comprobación antes de generar:** ¿en qué mes se va a vender esto? La escena tiene que ser de ese mes.
 
 ---
 
