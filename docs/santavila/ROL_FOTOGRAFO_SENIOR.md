@@ -721,7 +721,23 @@ Esta línea roja es **subordinada a la Ley 1**: el ASMR vive en la escena, las h
 
 ---
 
-### El consumible + el aperitivo (ROTAR siempre) — núcleo del ASMR
+### ~~El consumible + el aperitivo (ROTAR siempre)~~ — ⛔ DEROGADO el 2026-08-03
+
+> ## ⛔ SECCIÓN DEROGADA — NADA DE COMIDA NI BEBIDA
+>
+> **Decisión de Sergio (03-08-2026), tras ver un ASMR con caldo y pan en una terraza cántabra:**
+> *"La lógica, siempre la lógica. Si está en un escenario fuera, ¿cómo es posible que esté con un caldo y pan?
+> No pongas nada y listo. Decoración exterior: libros, planta o macetas. Nada de comidas."*
+>
+> Vendemos **decoración de exterior**, no una comida. Un plato servido en una terraza rompe la lógica de la
+> escena antes que ningún fallo técnico.
+>
+> **Atrezzo vigente:** libro · planta o maceta de barro (olivo, romero, lavanda) · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana **vacía**.
+> **Prohibido:** platos, cuencos con comida, pan, fruta, tazas y jarras servidas, copas, botellas, vasos con
+> bebida, cubertería, bandejas de aperitivo.
+>
+> Se conserva lo de abajo como registro de por qué se hizo así entre junio y julio de 2026.
 
 > Refuerzo (2026-06-19, dueño): la VIDA la da que la gente esté **consumiendo algo** y que haya un **aperitivo sobre la mesa** — y se **ROTAN** entre fotos (nunca repetir, NO siempre alcohol). *"La imagen tiene que ser 100% ASMR."*
 

@@ -12,7 +12,7 @@
 
 ## Registro
 
-| Producto (handle) | Variante / eje | Carril | Ambiente exterior | Ambiente interior (mismo hábitat) | Consumible |
+| Producto (handle) | Variante / eje | Carril | Ambiente exterior | Ambiente interior (mismo hábitat) | ~~Consumible~~ **Atrezzo** |
 |---|---|---|---|---|---|
 | `set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-3` (LEISA) | antracita + gris / **frío** | Frío/piedra | A4 Ático Eixample · A1 Galería Rías Baixas · A6 Patio Salamanca *(receta antigua, 3 ambientes)* | — | café · té helado |
 | `tumbona-de-exterior` (Brescia) | sling gris / **frío** | Frío/piedra | Piscina costera (B8-like) | — | agua · toalla |
@@ -48,6 +48,17 @@ Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa d
 
 **Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), Extremadura, Aragón/Pirineo, La Rioja, Murcia capital, Málaga/Axarquía, Tarragona/Costa Daurada, Canarias (con cuidado: nunca resort).
 
-## Anti-repetición de consumible
+## ⛔ Consumibles DEROGADOS (03-08-2026)
+
+**Sergio: nada de comida ni bebida.** *"Si está en un escenario fuera, ¿cómo es posible que esté con un caldo
+y pan? No pongas nada y listo. Decoración exterior: libros, planta o macetas. Nada de comidas."*
+Vendemos decoración de exterior, no una comida. La columna "Consumible" pasa a **Atrezzo**.
+
+**Atrezzo vigente a rotar:** libro · maceta de barro o gres con olivo/romero/lavanda · manta o plaid de lino ·
+cesta · sombrero de paja · farol apagado · cerámica artesana vacía.
+**Ojo al carril:** en escena FRÍA la maceta va en **gres gris o piedra**, nunca terracota naranja (choque
+cálido/frío prohibido, §8).
+
+## ~~Anti-repetición de consumible~~ *(histórico)*
 Usados: café+galletas · aceitunas+almendras · té helado · vino blanco+higos · limonada+sandía · vermut+almendras marcona · cerveza+aceitunas · granada+agua con hielo · tinto de verano+almendras · queso+pan+aceite · tomate raf+aceite · **naranjas+zumo** · **sidra+queso azul** · **albariño+berberechos** · **horchata+fartons** · **botijo+agua** · **gazpacho+picatostes** · **vino tinto+uvas** · **melocotón+agua** · **sandía+agua**.
 **Libres para las próximas:** caldo/té humeante del norte, cesta de hortalizas, chocolate con churros (otoño), sandía, torrijas, castañas asadas (otoño), leche merengada.

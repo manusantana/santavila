@@ -135,7 +135,17 @@ consumible — no el hábitat. El packshot y los ASMR son **backbone estable**: 
 | 2 | **Ambiente EXTERIOR** | 1:1 | "cómo se ve en mi terraza". Producto ≥45% del cuadro |
 | 3 | **Ambiente INTERIOR** — mismo hábitat, otro momento | 4:5 | "cómo se ve en mi porche/galería". Misma casa, distinta hora |
 | 4 | **ASMR de material / FEATURE verificable** | 1:1 | Prueba de calidad. Costura, unión, herraje, canto — **nunca la trama** |
-| 5 | **ASMR de consumible** — plano ABIERTO | 1:1 | Vida. La superficie que sostiene el atrezzo **es producto** |
+| 5 | **ASMR de atrezzo de EXTERIOR** — plano ABIERTO | 1:1 | Vida. La superficie que sostiene el atrezzo **es producto** |
+
+> ### ⛔ NADA DE COMIDA NI BEBIDA (decisión de Sergio, 03-08)
+> Vendemos **decoración de exterior**, no una comida. Un caldo y un pan en una terraza no se sostienen: la
+> lógica se rompe antes que la imagen. **Deroga la "ley del consumible + aperitivo" del ROL §9** y la columna
+> "Consumible" del registro de localizaciones.
+>
+> **Atrezzo permitido:** libro · planta o maceta de barro (olivo, romero, lavanda) · manta o plaid de lino ·
+> cesta · sombrero de paja · farol apagado · cerámica artesana vacía.
+> **Prohibido:** platos, cuencos con comida, pan, fruta, tazas y jarras servidas, copas, botellas, vasos con
+> bebida, cubertería, bandejas de aperitivo.
 
 **La ficha SIEMPRE queda con 5 media** (es el precedente aprobado en las 25 galerías publicadas).
 Si el Paso 0 dio cotas, **la imagen de medidas ocupa el hueco 5 y se queda un solo ASMR**; si no hay cota,
@@ -213,15 +223,20 @@ sin HDR falso · microtextura sin denoise plástico.
 
 | Ancla | Cota real |
 |---|---|
-| Mano humana | **18 cm** — obligatoria en ASMR con manos |
-| Taza de cerámica | 8 cm Ø |
-| Copa de vino | 22 cm alto |
-| Libro abierto | 30 cm |
+| Mano humana | **18 cm** — obligatoria en toda toma con manos |
+| Libro cerrado | 22–25 × 15 cm |
+| Maceta de barro | 25–40 cm Ø · olivo/romero en maceta 60–120 cm de alto total |
 | Cojín de asiento | 45–60 cm |
+| Cesta / farol | 30–40 cm · 15–30 cm |
+
+**Las COTAS REALES del producto mandan sobre el encuadre.** Antes de acercarte, apunta las medidas del Paso 0
+y comprueba la razón en la imagen: si el sofá mide 220 cm y la mesa 80 cm Ø, **la mesa es 0,36 del ancho del
+sofá — y sigue siéndolo en el primer plano.** Acercarse cambia el encuadre, nunca las proporciones.
 
 Producto **≥78% del ancho** en packshot, **≥45%** en ambiente (nunca <30%). Plano de cierre sólido a 2–5 m
-detrás; sin fuga al infinito. Cielo ≤25%. **Mano gigante o taza desproporcionada invalida el ASMR aunque la
-textura sea perfecta.**
+detrás; sin fuga al infinito. Cielo ≤25%.
+**Un mueble que "encoge" al acercarse invalida la toma aunque la textura sea perfecta** — es el fallo que
+Sergio señaló en el primer ASMR del Brandon: mesas enanas respecto al sofá.
 
 **C.bis · Manos — el fallo IA nº1, sobre el 4k** — 5 dedos por mano, sin dedos fundidos ni de más, sin "tercera
 mano", muñeca natural. **La mano que TOCA el producto es la de máximo escrutinio: si falla, rechazo aunque el
