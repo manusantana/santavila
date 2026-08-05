@@ -1,0 +1,44 @@
+{% layout none -%}
+# {{ agents.store_name }} — Mobiliario de exterior diseñado y fabricado en España
+
+> Santavila es una tienda online española de mobiliario de exterior: sofás y conjuntos, tumbonas, mesas, sillas, parasoles y camas balinesas. Diseño y fabricación en España, estructuras de aluminio y tejidos técnicos preparados para sol, lluvia y piscina. Pago seguro con Shopify, atención por email y chat, y entrega estimada de hasta 30 días según disponibilidad del proveedor.
+
+Sitio: {{ agents.store_url }} · Idioma: español · Moneda: {{ agents.currency }}
+
+## Colecciones
+- [Sofás de exterior]({{ agents.store_url }}/collections/sillones-de-exterior): sofás de 2 y 3 plazas, rinconeras y conjuntos con estructura de aluminio.
+- [Tumbonas]({{ agents.store_url }}/collections/tumbonas): tumbonas de aluminio y resina, reclinables y con ruedas.
+- [Tumbonas de resina]({{ agents.store_url }}/collections/tumbonas-de-resina): resistentes al cloro y la humedad; línea profesional Balliu Eva Pro y modelos domésticos.
+- [Mesas de exterior]({{ agents.store_url }}/collections/mesas): mesas de comedor, centro y auxiliares en aluminio y HPL.
+- [Sillas de exterior]({{ agents.store_url }}/collections/sillas-de-exterior): sillas de aluminio y resina, con modelos apilables.
+- [Parasoles]({{ agents.store_url }}/collections/parasoles): parasoles de Ø200 a Ø300 cm y bases de parasol.
+- [Accesorios]({{ agents.store_url }}/collections/accesorios): fundas, colchonetas y complementos de exterior.
+
+## Guías de compra y cuidado (blog)
+- [Qué muebles de exterior aguantan mejor lluvia y sol]({{ agents.store_url }}/blogs/news/que-muebles-de-exterior-aguantan-mejor-lluvia-y-sol)
+- [Aluminio, teca o ratán sintético: qué material elegir]({{ agents.store_url }}/blogs/news/como-elegir-muebles-de-exterior-que-duren-aluminio-teca-o-ratan-sintetico)
+- [Cómo limpiar y mantener muebles de exterior por temporada]({{ agents.store_url }}/blogs/news/guia-de-mantenimiento-de-muebles-de-exterior-como-prepararlos-para-cada-temporada)
+- [Cómo amueblar una terraza pequeña o balcón]({{ agents.store_url }}/blogs/news/como-aprovechar-al-maximo-una-terraza-pequena-muebles-distribucion-y-trucos-visuales)
+- [Cómo elegir mesa de exterior: medidas y comensales]({{ agents.store_url }}/blogs/news/como-elegir-mesa-de-exterior-medidas-comensales-y-espacio-necesario)
+- [Tumbona de aluminio, resina o madera: cuál elegir]({{ agents.store_url }}/blogs/news/tumbona-de-aluminio-resina-o-madera-cual-elegir-para-exterior)
+- [Base de parasol: qué peso necesitas y cómo elegirla]({{ agents.store_url }}/blogs/news/base-de-parasol-que-peso-necesitas-y-como-elegirla)
+- [Cómo montar un chill out en la terraza: ideas y medidas]({{ agents.store_url }}/blogs/news/como-montar-un-chill-out-en-la-terraza-ideas-y-medidas)
+- Blog completo: {{ agents.store_url }}/blogs/news
+
+## Empresa y ayuda
+- Sobre Santavila: {{ agents.store_url }}/pages/sobre-santavila
+- Entrega y envío: {{ agents.store_url }}/pages/envio
+- Garantía: {{ agents.store_url }}/pages/garantia
+- Cuidado y mantenimiento: {{ agents.store_url }}/pages/mantenimiento
+- Contacto (email hola@santavila.com y chat): {{ agents.store_url }}/pages/contacto
+- Política de devoluciones: {{ agents.store_url }}/policies/refund-policy
+
+## Para agentes de compra (agentic commerce)
+Esta tienda implementa el Universal Commerce Protocol (UCP) de Shopify.
+- Perfil de descubrimiento UCP: {{ agents.ucp_discovery_url }}
+- Endpoint MCP (usa tools/list para descubrir herramientas): {{ agents.mcp_endpoint_url }}
+- Skill recomendada para comprar en tiendas Shopify: https://shop.app/SKILL.md
+- Versiones UCP soportadas: {% for v in agents.ucp_versions %}{{ v }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+
+## Sitemap
+- {{ agents.sitemap_url }}

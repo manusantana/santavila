@@ -4071,3 +4071,144 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 ### Siguiente paso recomendado
 - …
 ```
+
+---
+
+## 2026-08-03 · RRSS lote 1: creativos + programación en Metricool
+
+**Paso del flujo:** GEO social — `GEO-SOCIAL-CONTENT-PACK.md`
+**Estado:** ✅ programado
+**Quién/qué:** Claude Code + Pillow + Shopify Files + Metricool MCP
+
+### Qué se ejecutó
+- Canal de YouTube "Santavila" creado como cuenta de marca bajo ubicuolibrespensadores@gmail.com y conectado a Metricool (UC2lp0raCdSjuBvb8M2ftZ3g). Perfil Pinterest renombrado a `santavilamuebles` + tablero "Guías de exterior" (ID 1096556277962014411).
+- Compuestos los creativos del lote 1 con identidad de GUIA_DISENO.md (paper/sage/ink, Cormorant+Hanken+JetBrains): 6 pins Pinterest 1000x1500 y carrusel IG "Lluvia y sol" (6 slides 1080x1350).
+- Subidos los 12 PNG a Shopify Files (URLs CDN en `content/social/cdn_urls.json`).
+- Programados en Metricool (marca Santavila, blogId 6606564): carrusel IG+FB mar 4-ago 21:00; pins en días alternos 5/7/9/11/13/15-ago a las 14:00, cada uno con enlace a su guía.
+
+### Entregables
+- `scripts/compose_social_batch1_20260803.py` — compositor reutilizable (pins + carruseles).
+- `scripts/upload_social_files_20260803.py` — subida a Shopify Files vía staged uploads.
+- `content/social/pins/*.png`, `content/social/ig/carrusel-01/*.png`, `content/social/fonts/`, `content/social/cdn_urls.json`.
+
+### Prioridades vivas tras este hito
+- Carruseles 2-6 de IG (textos ya en el content pack; solo añadir al compositor).
+- 5 YouTube Shorts del pack (canal ya conectado; falta producir vídeo).
+- Guardar URLs publicadas para `sameAs` y reporting (checklist del pack).
+
+### Siguiente paso recomendado
+- Revisar en el planner de Metricool antes del 4-ago; tras 1-2 semanas, mirar analítica (clics a guías) y decidir cadencia del lote 2.
+
+### Ampliación mismo día (2026-08-03, tarde)
+- Foto de playa del proveedor sustituida por lifestyle Leisa en pin-01 (Cantabria) y cierre del carrusel 1 (costero v2); posts de Metricool actualizados.
+- Generados y programados los carruseles IG+FB 2-6 (compositor generalizado a CAROUSELS): dom 9, mar 11, dom 16, mar 18 y dom 23 de agosto, 21:00. Instagram queda con 6 publicaciones (2/semana).
+
+---
+
+## 2026-08-03 · GEO: reauth Google, delta 5 semanas y sameAs en staging
+
+**Paso del flujo:** GEO — delta + Sprint 5 (autoridad)
+**Estado:** ✅ (sameAs en PRODUCCIÓN con OK del dueño, verificado en la home pública el 2026-08-03)
+**Quién/qué:** Claude Code + GSC API + Asset API
+
+### Qué se ejecutó
+- Token Google caducado (invalid_grant) → reautorizado con `scripts/reauth_google_20260803.py` (token.json regenerado).
+- Delta GSC 28 días: 12 clics / 692 impr / CTR 1,73% / pos 20,8 (vs 10/675/1,48%/17,7 el 29-jun). Detalle en `docs/santavila/GEO-DELTA-2026-08-03.md`.
+- Cluster tumbonas resina CONFIRMADO (201+48+43 impr repartidas en 3 PDP hermanas, pos 26-58, 0 clics) → luz verde al hub/colección.
+- Señal local nueva: `muebles vigo` con la home en pos 4-6 → refuerza GBP.
+- `sameAs` (FB/IG/Pinterest/YouTube) añadido a `snippets/santavila-schema.liquid`, subido y verificado en STAGING 189491151172.
+
+### Siguiente paso recomendado
+- Con OK del dueño: push a producción del snippet. Después: hub tumbonas resina + titles/metas de pérgola 250x300, sofás 120/130 y base parasol 25 kg. Próximo delta ~17-ago.
+
+---
+
+## 2026-08-03 · Hub tumbonas de resina + titles striking distance
+
+**Paso del flujo:** GEO — bloque post-delta (GEO-DELTA-2026-08-03)
+**Estado:** ✅ aplicado y verificado en público
+**Quién/qué:** Claude Code + GraphQL/REST Admin API
+
+### Qué se ejecutó
+- Creada y publicada la colección inteligente `/collections/tumbonas-de-resina` (tipo Tumbona + título contiene "resina" → 7 productos) con intro citable + 4 FAQ (FAQPage schema vía patrón collection-intro/collection-faq). SEO title + meta propios.
+- ⚠️ Gotcha: `collectionCreate` NO publica (falta scope `read_publications` para publishablePublish) → se publicó con REST `PUT /smart_collections/{id}.json {published: true}`.
+- Enlazado el hub desde la intro de `/collections/tumbonas` y desde la guía de tumbonas del blog (párrafo antes de la FAQ).
+- SEO titles nuevos (antes vacíos) + metas diferenciadas en las 3 PDP hermanas de resina: Noa (doméstica/piscina), Eva Pro T (profesional tablillas), Eva Pro (profesional textil) — objetivo: dejar de canibalizarse en `tumbonas resina`.
+- SEO titles striking distance: pérgola 300×300×250 (`pérgola 250x300` pos 13,9), sofá 120 cm, sofá 130 cm, base parasol 25 kg.
+- Verificado en público: hub live con 7 productos + FAQPage, title de PDP Noa y del hub correctos, enlace desde la guía activo (el de la colección tumbonas confirmado por API, pendiente refresco de caché).
+
+### Entregables
+- `scripts/apply_geo_hub_tumbonas_resina_20260803.py` — script idempotente (dry-run/apply).
+- `content/descriptions/backup_geo_hub_20260803-115539.json` — backup previo.
+
+### Siguiente paso recomendado
+- Dejar recrawlear; delta GSC ~17-ago. Si `muebles vigo` se mantiene, arrancar Google Business Profile (requiere pasos del dueño).
+
+---
+
+## 2026-08-03 · Merchant saneado + 2 guías nuevas (bases parasol + chill out)
+
+**Paso del flujo:** GEO — Merchant + Sprint 4 (contenido citable, 2ª ola)
+**Estado:** ✅ aplicado y verificado
+**Quién/qué:** Claude Code + Content API + REST articles
+
+### Qué se ejecutó
+- Diagnóstico Merchant (id 5781655181): 2.233 ítems, 2.086 sanos. GTIN NO es bloqueante (solo aviso informativo de unit pricing).
+- "80 sin imagen" = 5 productos × 16 países (4 sets jardín + pérgola 300×300×250): tenían imagen de producto pero variante sin imagen → asignada la media del producto a la variante vía productVariantsBulkUpdate. Resync 24-72 h.
+- Desaprobados por envío BG/HR/MT: se IGNORAN (decisión del dueño: no se vende a esos países; no afecta a ES).
+- Guías nuevas publicadas con Article+FAQPage, meta y featured image:
+  - `/blogs/news/base-de-parasol-que-peso-necesitas-y-como-elegirla` (cluster GSC bases/sombrillas; enlaza base 25 kg, losas cemento, parasoles, Garbí Ø300).
+  - `/blogs/news/como-montar-un-chill-out-en-la-terraza-ideas-y-medidas` (trendy B2C con fotos ricas: camas balinesas, sets jardín, pérgola; decisión del dueño: nada de producto "profesional" en contenido).
+- Verificado en público: FAQPage + og:image + title en ambas.
+
+### Entregables
+- `scripts/apply_geo_guides_20260803.py` · backups en content/descriptions/backup_guias_20260803-*.json
+- `content/descriptions/merchant_sin_imagen_20260803.json` — detalle del feed.
+
+### Siguiente paso recomendado
+- Pins/carruseles RRSS de las 2 guías nuevas (compositor listo) para septiembre.
+- Comprobar en ~3 días que las 80 desaprobaciones de imagen desaparecen de Merchant.
+
+### Ajuste (mismo día)
+- Decisión del dueño: escalonar publicación. Bases de parasol queda publicada hoy; chill out reprogramada al **6-ago 10:00** (GraphQL `articleUpdate` con `isPublished:false` + `publishDate` — ojo: el REST `published_at` IGNORA fechas futuras, las coerciona a hoy). Verificado: fuera del listado del blog y URL directa en 404.
+
+---
+
+## 2026-08-04 · RRSS lote 2: creativos y programación de las guías nuevas
+
+**Paso del flujo:** RRSS (GEO-SOCIAL, 2ª ola ligada al blog)
+**Estado:** ✅ programado
+**Quién/qué:** Claude Code + compositor Pillow + Metricool
+
+### Qué se ejecutó
+- Añadidos al compositor pins 07-08 y carruseles 07-08 (chill out + bases de parasol), con fotos lifestyle (balinesa Mallorca, azotea Madrid, parasol Roma, pérgola).
+- 14 archivos subidos a Shopify Files (registro en content/social/cdn_urls.json).
+- Programado en Metricool: pin chill out mar 18-ago 14:00 · pin bases parasol vie 21-ago 14:00 · carrusel chill out IG+FB dom 30-ago 21:00 · carrusel bases parasol IG+FB mar 1-sep 21:00. Los pins enlazan a sus guías.
+
+### Siguiente paso recomendado
+- Tras el delta del ~17-ago, decidir cadencia de sept y si toca lote 3 (Shorts YouTube o nuevas guías).
+
+### Reels (mismo día, 2026-08-04)
+- 2 Reels 1080×1920 montados con los clips Higgsfield del spot Leisa (masters 1440 de spot-leisa/clips): marco de marca vía PNG de Pillow + overlay ffmpeg (⚠️ ffmpeg de Homebrew sin drawtext). Archivos en content/social/reels/.
+- Subidos a Shopify Files como VIDEO (staged upload con resource:VIDEO — el helper de imágenes no vale) y programados en Metricool: vie 14-ago 21:00 (tumbona) y jue 27-ago 21:00 (tejido), IG REEL + FB REEL.
+
+---
+
+## 2026-08-05 · GEO: llms.txt propio (staging) + enlazado guía de bases
+
+**Paso del flujo:** GEO — Sprint 6 revisado (reutiliza playbook Espejoled) + enlazado interno
+**Estado:** ✅ llms.txt EN PRODUCCIÓN (subido por el dueño 5-ago, verificado con curl: sirve el template propio)
+**Quién/qué:** Claude Code + Asset API
+
+### Qué se ejecutó
+- `templates/llms.txt.liquid` creado (adaptación del de espejoled-theme): identidad honesta, 7 colecciones (incl. hub tumbonas-de-resina), 8 guías, páginas de confianza, bloque UCP/MCP con objeto `agents` y sitemap. Subido y verificado en STAGING 189491151172. Sustituirá al llms.txt genérico de Shopify al promocionar a prod.
+- Colección `parasoles`: añadida frase-enlace a la guía de bases de parasol en la intro (aplicado en vivo, patrón habitual de colecciones).
+- Subido a Shopify Files el vídeo que faltaba del spot (`set-leisa-caricia-1080.mp4`, READY) — decisión del dueño: se conservan todos los vídeos de spot-leisa.
+
+### Siguiente paso recomendado
+- Con OK: push a prod de llms.txt (nota: el enlace a la guía chill out da 404 hasta el 6-ago 10:00). Después: enlazar chill out desde guías hermanas cuando publique, y valorar las 48 fichas de 80-119 palabras con señales GSC.
+
+### PDP 2.0 batch 10 (2026-08-05)
+- Cruce GSC 90 días × fichas de 80-119 palabras: 29/31 con señales (top: tumbona Lola, 54 impr). Detalle en `content/descriptions/fichas_80_119_con_senales_20260805.json`.
+- Ampliadas las 10 primeras (115→179p la mayor): párrafos a medida INSERTADOS antes de la ficha técnica (sin reescribir lo existente) con enlaces a guías, hub de resina y colecciones. Script `apply_pdp_rich_descriptions_batch10.py` (idempotente), backup previo. Verificado en público.
+- Quedan 19 fichas con señales menores (≤4 impr) para una tanda futura si el delta lo justifica.

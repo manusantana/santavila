@@ -1,51 +1,51 @@
 # Baseline SEO — Search Console
 
-**Propiedad:** sc-domain:santavila.com  ·  **Fecha:** 2026-06-29
+**Propiedad:** sc-domain:santavila.com  ·  **Fecha:** 2026-08-03
 
 ## Sitemaps registrados
 
-- `https://santavila.com/sitemap.xml` — última descarga: 2026-06-27T12:04:15.582Z · errores: 0 · warnings: 0
-- `http://santavila.com/sitemap.xml` — última descarga: 2026-06-21T09:15:08.731Z · errores: 0 · warnings: 8
+- `https://santavila.com/sitemap.xml` — última descarga: 2026-07-26T11:39:05.156Z · errores: 0 · warnings: 0
+- `http://santavila.com/sitemap.xml` — última descarga: 2026-07-25T10:51:17.262Z · errores: 0 · warnings: 8
 
 ✅ https://santavila.com/sitemap.xml ya está registrado.
 
-## Rendimiento (28 días: 2026-06-01 → 2026-06-28)
+## Rendimiento (28 días: 2026-07-06 → 2026-08-02)
 
-- **Clics:** 10
-- **Impresiones:** 675
-- **CTR:** 1.48%
-- **Posición media:** 17.7
+- **Clics:** 12
+- **Impresiones:** 692
+- **CTR:** 1.73%
+- **Posición media:** 20.8
 
 ### Top consultas
 
 ```
 query                                              | clicks  | impr    | ctr%    | pos   
 -----------------------------------------------------------------------------------------
-base para sombrilla                                | 1       | 1       | 100.0   | 73.0  
-santavila                                          | 1       | 14      | 7.1     | 2.8   
-alta mesa                                          | 0       | 1       | 0.0     | 39.0  
-balliu tumbonas                                    | 0       | 1       | 0.0     | 49.0  
-banco 150                                          | 0       | 1       | 0.0     | 23.0  
-banco 150 cm                                       | 0       | 1       | 0.0     | 24.0  
-banco 220                                          | 0       | 3       | 0.0     | 3.7   
-banco con mesa                                     | 0       | 1       | 0.0     | 5.0   
-banco con mesa incorporada                         | 0       | 4       | 0.0     | 3.2   
-base for parasol                                   | 0       | 1       | 0.0     | 38.0  
-base parasol                                       | 0       | 9       | 0.0     | 50.9  
-dame precios                                       | 0       | 1       | 0.0     | 6.0   
+santavila                                          | 1       | 9       | 11.1    | 3.7   
+25kg parasol stand                                 | 0       | 1       | 0.0     | 10.0  
+alu parasol                                        | 0       | 1       | 0.0     | 46.0  
+balancin jardin exterior                           | 0       | 1       | 0.0     | 11.0  
+balliu export                                      | 0       | 1       | 0.0     | 1.0   
+balliu muebles jardin                              | 0       | 1       | 0.0     | 26.0  
+balliu tumbonas                                    | 0       | 3       | 0.0     | 30.0  
+banco 150 cm                                       | 0       | 2       | 0.0     | 25.5  
+banco con mesa incorporada                         | 0       | 3       | 0.0     | 2.0   
+banco madera 150 cm                                | 0       | 1       | 0.0     | 32.0  
+banco mesa exterior                                | 0       | 1       | 0.0     | 22.0  
+base de cemento para sombrilla                     | 0       | 2       | 0.0     | 44.0  
+base de sombrilla de cemento                       | 0       | 1       | 0.0     | 58.0  
+base parasol                                       | 0       | 1       | 0.0     | 47.0  
+base parasol 25 kg                                 | 0       | 2       | 0.0     | 8.0   
+base parasol cemento                               | 0       | 1       | 0.0     | 46.0  
+base sombrilla cemento                             | 0       | 2       | 0.0     | 57.5  
+base sombrilla hormigon                            | 0       | 1       | 0.0     | 43.0  
+base sombrilla hormigón                            | 0       | 3       | 0.0     | 39.3  
+bases de hormigon para sombrillas                  | 0       | 1       | 0.0     | 49.0  
+como hacer una base de cemento para sombrilla      | 0       | 1       | 0.0     | 45.0  
+conjunto sofa y dos sillones                       | 0       | 1       | 0.0     | 47.0  
+conjunto sofá y dos sillones                       | 0       | 1       | 0.0     | 46.0  
 decovila                                           | 0       | 1       | 0.0     | 22.0  
-find the look                                      | 0       | 1       | 0.0     | 10.0  
-funda protectora sofa exterior                     | 0       | 3       | 0.0     | 27.7  
-hamacas balliu                                     | 0       | 12      | 0.0     | 31.3  
-losas para sombrilla                               | 0       | 3       | 0.0     | 20.0  
-mesa auxiliar resina                               | 0       | 1       | 0.0     | 29.0  
-mesa con banco incorporado                         | 0       | 1       | 0.0     | 2.0   
-muebles rial                                       | 0       | 1       | 0.0     | 1.0   
-para sols                                          | 0       | 1       | 0.0     | 60.0  
-parasol base                                       | 0       | 1       | 0.0     | 35.0  
-parasol con pie                                    | 0       | 2       | 0.0     | 32.0  
-parasoles de hormigon                              | 0       | 3       | 0.0     | 42.3  
-pergola 250x300                                    | 0       | 2       | 0.0     | 19.5  
+donde la puedo comprar                             | 0       | 1       | 0.0     | 3.0   
 ```
 
 ### Top páginas
@@ -53,29 +53,29 @@ pergola 250x300                                    | 0       | 2       | 0.0    
 ```
 page                                               | clicks  | impr    | ctr%    | pos   
 -----------------------------------------------------------------------------------------
-https://santavila.com/                             | 1       | 39      | 2.6     | 2.9   
-https://santavila.com/en/products/balliu-tumbona-d | 1       | 15      | 6.7     | 19.3  
-https://santavila.com/en/products/banco-jardin-con | 1       | 1       | 100.0   | 12.0  
-https://santavila.com/products/balliu-base-de-para | 1       | 5       | 20.0    | 41.6  
-https://santavila.com/products/balliu-tumbona-de-e | 1       | 1       | 100.0   | 3.0   
-https://santavila.com/products/balliu-tumbona-de-e | 1       | 37      | 2.7     | 24.1  
-https://santavila.com/products/balliu-tumbona-de-e | 1       | 14      | 7.1     | 27.0  
-https://santavila.com/products/base-de-parasol-25- | 1       | 16      | 6.2     | 40.1  
-https://santavila.com/products/sofa-terraza-2-plaz | 1       | 7       | 14.3    | 10.1  
-https://santavila.com/products/sofa-terraza-2-plaz | 1       | 4       | 25.0    | 11.2  
-https://santavila.com/products/sofa-terraza-2-plaz | 1       | 2       | 50.0    | 13.5  
-https://santavila.com/blogs/news/como-aprovechar-a | 0       | 2       | 0.0     | 8.0   
-https://santavila.com/blogs/news/como-elegir-muebl | 0       | 2       | 0.0     | 4.5   
-https://santavila.com/blogs/news/muebles-de-exteri | 0       | 2       | 0.0     | 6.0   
-https://santavila.com/blogs/news/tendencias-en-mue | 0       | 5       | 0.0     | 6.2   
-https://santavila.com/en                           | 0       | 3       | 0.0     | 1.7   
-https://santavila.com/en/blogs/news/muebles-de-ext | 0       | 2       | 0.0     | 7.0   
-https://santavila.com/en/collections/frontpage     | 0       | 1       | 0.0     | 5.0   
-https://santavila.com/en/collections/sillas-de-ext | 0       | 1       | 0.0     | 4.0   
-https://santavila.com/en/collections/tumbonas      | 0       | 1       | 0.0     | 13.0  
-https://santavila.com/en/products/balliu-base-de-p | 0       | 1       | 0.0     | 52.0  
-https://santavila.com/en/products/balliu-colchonet | 0       | 1       | 0.0     | 11.0  
-https://santavila.com/en/products/balliu-funda-pro | 0       | 6       | 0.0     | 9.0   
-https://santavila.com/en/products/balliu-mesa-alta | 0       | 1       | 0.0     | 39.0  
-https://santavila.com/en/products/balliu-mesa-auxi | 0       | 1       | 0.0     | 5.0   
+https://santavila.com/products/balliu-tumbona-de-e | 2       | 25      | 8.0     | 10.6  
+https://santavila.com/products/sofa-terraza-2-plaz | 2       | 15      | 13.3    | 7.6   
+https://santavila.com/                             | 1       | 53      | 1.9     | 22.5  
+https://santavila.com/products/balliu-mesa-exterio | 1       | 8       | 12.5    | 10.0  
+https://santavila.com/products/balliu-mesa-exterio | 1       | 5       | 20.0    | 28.2  
+https://santavila.com/products/balliu-mesa-exterio | 1       | 1       | 100.0   | 7.0   
+https://santavila.com/products/balliu-mesa-exterio | 1       | 9       | 11.1    | 7.1   
+https://santavila.com/products/balliu-silla-exteri | 1       | 12      | 8.3     | 11.8  
+https://santavila.com/products/balliu-tumbona-de-e | 1       | 27      | 3.7     | 23.1  
+https://santavila.com/products/sofa-terraza-2-plaz | 1       | 2       | 50.0    | 7.0   
+https://santavila.com/blogs/news                   | 0       | 3       | 0.0     | 51.0  
+https://santavila.com/blogs/news/como-aprovechar-a | 0       | 1       | 0.0     | 6.0   
+https://santavila.com/blogs/news/como-elegir-muebl | 0       | 3       | 0.0     | 9.0   
+https://santavila.com/blogs/news/que-muebles-de-ex | 0       | 4       | 0.0     | 9.5   
+https://santavila.com/blogs/news/tendencias-en-mue | 0       | 1       | 0.0     | 1.0   
+https://santavila.com/collections/tumbonas         | 0       | 11      | 0.0     | 49.8  
+https://santavila.com/en/blogs/news/tendencias-en- | 0       | 1       | 0.0     | 8.0   
+https://santavila.com/en/products/balliu-funda-pro | 0       | 1       | 0.0     | 9.0   
+https://santavila.com/en/products/balliu-mesa-auxi | 0       | 5       | 0.0     | 22.2  
+https://santavila.com/en/products/balliu-mesa-auxi | 0       | 1       | 0.0     | 8.0   
+https://santavila.com/en/products/balliu-mesa-exte | 0       | 1       | 0.0     | 6.0   
+https://santavila.com/en/products/balliu-parasol-p | 0       | 1       | 0.0     | 6.0   
+https://santavila.com/en/products/balliu-parasol-p | 0       | 1       | 0.0     | 9.0   
+https://santavila.com/en/products/balliu-silla-ext | 0       | 1       | 0.0     | 5.0   
+https://santavila.com/en/products/balliu-tumbona-d | 0       | 6       | 0.0     | 46.8  
 ```

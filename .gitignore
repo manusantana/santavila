@@ -34,3 +34,6 @@ consolidate_balliu_sillas_report.csv
 /_estado_tienda.json
 .claude/settings.json
 .claude/settings.local.json
+
+.secrets
+.secrets/
