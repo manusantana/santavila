@@ -3,7 +3,7 @@
     "santavila_hero": {
       "type": "santavila-hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+        "image": "shopify://shop_images/tumbona_consumible.jpg",
         "hero_size": "full",
         "height_mode": "theme",
         "height_desktop": 720,
@@ -23,9 +23,9 @@
         "heading_line2": "bien vivido.",
         "subheading": "Mobiliario de exterior fabricado en España. Diseño mediterráneo contemporáneo, preparado para durar y pensado para tu casa real.",
         "cta1_label": "Explorar colecciones",
-        "cta1_link": "shopify:\/\/collections\/all",
+        "cta1_link": "shopify://collections/all",
         "cta2_label": "Amueblar por espacio",
-        "cta2_link": "\/collections\/all",
+        "cta2_link": "/collections/all",
         "show_seal": true,
         "seal_text": "FABRICADO EN ESPAÑA · DISEÑO PARA VIVIR FUERA ·",
         "show_scroll": true,
@@ -36,28 +36,28 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "image": "shopify://shop_images/tumbona_consumible.jpg",
             "eyebrow": "Diseño español para vivir fuera",
             "heading_line1": "El exterior,",
             "heading_line2": "bien vivido.",
             "subheading": "Mobiliario de exterior fabricado en España, pensado para tu casa real.",
             "cta1_label": "Explorar colecciones",
-            "cta1_link": "shopify:\/\/collections\/all",
+            "cta1_link": "shopify://collections/all",
             "cta2_label": "Amueblar por espacio",
-            "cta2_link": "\/collections\/all"
+            "cta2_link": "/collections/all"
           }
         },
         "slide_ej2": {
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "image": "shopify://shop_images/tumbona_consumible.jpg",
             "eyebrow": "Colecciones de temporada",
             "heading_line1": "Verano",
             "heading_line2": "en la terraza.",
             "subheading": "Sofás, tumbonas y mesas listos para la mejor estación del año.",
             "cta1_label": "Ver novedades",
-            "cta1_link": "shopify:\/\/collections\/all",
+            "cta1_link": "shopify://collections/all",
             "cta2_label": "",
             "cta2_link": ""
           }
@@ -66,13 +66,13 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/tumbona_consumible.jpg",
+            "image": "shopify://shop_images/tumbona_consumible.jpg",
             "eyebrow": "Fabricado en España",
             "heading_line1": "Hecho para",
             "heading_line2": "durar fuera.",
             "subheading": "Materiales pensados para vivir a la intemperie todo el año.",
             "cta1_label": "Por qué Santavila",
-            "cta1_link": "\/pages\/sobre-santavila",
+            "cta1_link": "/pages/sobre-santavila",
             "cta2_label": "",
             "cta2_link": ""
           }
@@ -98,7 +98,7 @@
         "statement_muted": "Vendemos una mejora tangible del modo de vivir: el patio con sombra, la mesa larga de domingo, el ático entre semana.",
         "paragraph": "En España el exterior nunca fue un lujo: fue una forma de vivir. Seleccionamos mobiliario fabricado aquí, lo explicamos con honestidad —materiales, medidas, entrega, mantenimiento— y lo ponemos al servicio de la vivienda real.",
         "link_label": "La forma seria de amueblar fuera",
-        "link_url": "\/collections\/all"
+        "link_url": "/collections/all"
       }
     },
     "santavila_scenarios": {
@@ -109,7 +109,8 @@
           "settings": {
             "number": "01",
             "name": "Áticos y terrazas",
-            "link": "\/collections\/sillones-de-exterior"
+            "link": "/collections/sillones-de-exterior",
+            "image": "shopify://shop_images/escenario-aticos-terrazas.jpg"
           }
         },
         "sc2": {
@@ -117,7 +118,8 @@
           "settings": {
             "number": "02",
             "name": "Balcón",
-            "link": "\/collections\/sillas-de-exterior"
+            "link": "/collections/sillas-de-exterior",
+            "image": "shopify://shop_images/escenario-balcon.jpg"
           }
         },
         "sc3": {
@@ -125,7 +127,8 @@
           "settings": {
             "number": "03",
             "name": "Jardín y porche",
-            "link": "\/collections\/tumbonas"
+            "link": "/collections/tumbonas",
+            "image": "shopify://shop_images/escenario-jardin-porche.jpg"
           }
         },
         "sc4": {
@@ -133,7 +136,8 @@
           "settings": {
             "number": "04",
             "name": "Comedores",
-            "link": "\/collections\/mesas"
+            "link": "/collections/mesas",
+            "image": "shopify://shop_images/escenario-comedores.jpg"
           }
         }
       },
@@ -148,7 +152,7 @@
         "eyebrow": "Empieza por tu espacio",
         "heading": "Amueblar por escenario",
         "link_label": "Ver todos",
-        "link_url": "\/collections\/all"
+        "link_url": "/collections/all"
       }
     },
     "santavila_shop_the_look": {
@@ -187,7 +191,7 @@
           "disabled": true,
           "static": true,
           "settings": {
-            "text": "<p>Shop the look<\/p>",
+            "text": "<p>Shop the look</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -217,7 +221,7 @@
       ],
       "name": "Hotspots",
       "settings": {
-        "image": "shopify:\/\/shop_images\/bolonia-xl-1.jpg",
+        "image": "shopify://shop_images/bolonia-xl-1.jpg",
         "toggle_overlay": false,
         "overlay_color": "#00000026",
         "overlay_style": "solid",
@@ -239,7 +243,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "media_position": "left",
-        "image": "shopify:\/\/shop_images\/leisa_destacada_costero.jpg",
+        "image": "shopify://shop_images/leisa_destacada_costero.jpg",
         "tag": "Lo más elegido",
         "eyebrow": "Sofás de exterior",
         "heading": "El salón, pero fuera",
@@ -251,7 +255,7 @@
         "meta3_value": "Montaje fácil",
         "meta3_label": "en casa",
         "cta1_label": "Ver sofás de exterior",
-        "cta1_link": "\/collections\/sillones-de-exterior",
+        "cta1_link": "/collections/sillones-de-exterior",
         "cta2_label": "",
         "cta2_link": ""
       }
@@ -266,7 +270,7 @@
         "max_products": 4,
         "columns": 4,
         "link_label": "Ver toda la tienda",
-        "link_url": "\/collections\/all",
+        "link_url": "/collections/all",
         "show_wishlist": false
       }
     },
