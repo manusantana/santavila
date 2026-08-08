@@ -4260,3 +4260,8 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Panel "Preparados para durar": image_picker vacío → rellenado con detalle de cuerda náutica (Files: materiales-cuerda-nautica.jpg), a juego con el primer material del listado.
 - Sección "El exterior bien vivido" (santavila-editorial.liquid): reescrita para renderizar SIEMPRE los últimos 3 posts de blogs['news'] (lead = más reciente con extracto; categoría = tags[1] fallback 'Guía'); las tarjetas manuales (que tenían enlaces vacíos y contenido placeholder) quedan como fallback si el blog estuviera vacío. link "Toda la inspiración" → /blogs/news.
 - Verificado en público: cuerda náutica renderizada y las 3 guías más recientes (chill out / bases parasol / tumbonas) como tarjetas. Se actualizará solo con cada guía nueva.
+
+### Logos reales de marca en hero y sección España (2026-08-08, mismo día)
+- Sustituidos los 2 arcos SVG dibujados a mano por el icono real (`imagen-corporativa/icono-santavila.png` → `assets/icono-santavila.png`, 34 KB RGBA): centro del sello giratorio del hero (34px) y sección "Diseñado y fabricado en España" (58px).
+- El helper de push no sube binarios → asset subido por API con attachment base64 a staging y prod.
+- Verificado en público (variante fresca de caché: 3 refs al icono, 0 SVG viejos; la CDN converge en minutos). Si el trazo sage pierde contraste sobre foto en el sello, hay plan B: variante monocroma crema generada con Pillow.

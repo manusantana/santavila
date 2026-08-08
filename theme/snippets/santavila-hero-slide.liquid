@@ -1,39 +1,14 @@
 {%- comment -%}
   Santavila · contenido de un slide del hero. Lo usan el carrusel (bloques) y el modo legacy (settings de sección).
   Params:
-    img, img_tablet, img_mobile, ld (loading), fp (fetchpriority), eyebrow, h1, h2, sub,
+    img, ld (loading), fp (fetchpriority), eyebrow, h1, h2, sub,
     cta1l, cta1lnk, cta2l, cta2lnk,
     show_seal, seal_text, seal_id, panel (bool), panel_style, active (bool), attrs
 {%- endcomment -%}
 <div class="sv-hero__slide{% if active %} is-active{% endif %}" data-hero-slide{% if attrs %} {{ attrs }}{% endif %}>
   {%- if img != blank -%}
     <div class="sv-hero__media">
-      {%- comment -%}
-        Art direction. El hero mide 100svh, así que su proporción va de ~0,52 en móvil a ~2,0 en
-        escritorio: una sola imagen no puede servir a las tres sin recortes brutales. Se sirve un
-        encuadre por familia de pantalla con el mismo patrón <picture> que usa el tema en
-        sections/hero.liquid. Si no hay imagen de tablet/móvil, cae a la de escritorio (comportamiento
-        anterior intacto).
-      {%- endcomment -%}
-      <picture>
-        {%- if img_mobile != blank -%}
-          <source
-            media="(max-width: 749px)"
-            srcset="{{ img_mobile | image_url: width: 600 }} 600w, {{ img_mobile | image_url: width: 900 }} 900w, {{ img_mobile | image_url: width: 1200 }} 1200w"
-            sizes="100vw"
-            width="{{ img_mobile.width }}"
-            height="{{ img_mobile.height }}">
-        {%- endif -%}
-        {%- if img_tablet != blank -%}
-          <source
-            media="(max-width: 1023px)"
-            srcset="{{ img_tablet | image_url: width: 900 }} 900w, {{ img_tablet | image_url: width: 1200 }} 1200w, {{ img_tablet | image_url: width: 1600 }} 1600w"
-            sizes="100vw"
-            width="{{ img_tablet.width }}"
-            height="{{ img_tablet.height }}">
-        {%- endif -%}
-        {{ img | image_url: width: 2400 | image_tag: loading: ld, fetchpriority: fp, sizes: '100vw', widths: '600, 900, 1200, 1600, 2000, 2400', alt: img.alt | default: shop.name }}
-      </picture>
+      {{ img | image_url: width: 2400 | image_tag: loading: ld, fetchpriority: fp, sizes: '100vw', widths: '600, 900, 1200, 1600, 2000, 2400', alt: img.alt | default: shop.name }}
     </div>
   {%- endif -%}
 
@@ -58,10 +33,7 @@
                 <text><textPath href="#{{ seal_id }}" startOffset="0">{{ seal_text }}</textPath></text>
               </svg>
               <span class="sv-hero__seal-mark">
-                <svg width="34" height="55" viewBox="0 0 100 162" fill="none" aria-hidden="true">
-                  <path d="M30 12 C58 12 80 32 80 64 L82 150 L58 150 L56 64 C56 40 42 22 22 16 C25 13 27 12 30 12 Z" fill="rgba(255,255,255,0.25)" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round"></path>
-                  <path d="M14 60 C14 30 30 14 44 14 C58 14 74 30 74 60 L76 150 L12 150 Z" fill="none" stroke="#F7F4EC" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
-                </svg>
+                <img src="{{ 'icono-santavila.png' | asset_url }}" width="34" height="63" style="height: auto;" alt="" loading="lazy">
               </span>
             </div>
           {%- endif -%}
