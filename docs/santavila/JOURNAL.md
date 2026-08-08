@@ -4212,3 +4212,28 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Cruce GSC 90 días × fichas de 80-119 palabras: 29/31 con señales (top: tumbona Lola, 54 impr). Detalle en `content/descriptions/fichas_80_119_con_senales_20260805.json`.
 - Ampliadas las 10 primeras (115→179p la mayor): párrafos a medida INSERTADOS antes de la ficha técnica (sin reescribir lo existente) con enlaces a guías, hub de resina y colecciones. Script `apply_pdp_rich_descriptions_batch10.py` (idempotente), backup previo. Verificado en público.
 - Quedan 19 fichas con señales menores (≤4 impr) para una tanda futura si el delta lo justifica.
+
+---
+
+## 2026-08-08 · RRSS: rebalanceo hacia Instagram (aplicación inmediata)
+
+**Paso del flujo:** RRSS — revisión de estrategia
+**Estado:** 🔄 creativos listos; programación pendiente de reconectar Metricool
+**Quién/qué:** Claude Code + Pillow/ffmpeg + Shopify Files
+
+### Contexto y decisión
+- Dato nuevo del dueño: IG tiene ~6K seguidores reales; Pinterest 0 (perfil recién renombrado). Decisión: rebalancear YA (no en sept) — IG pasa a 3-4/semana con más producto aspiracional; Pinterest queda en modo siembra (2 pins/semana, juego a 3-6 meses como buscador visual).
+
+### Qué se produjo (subido a Shopify Files, URLs en cdn_urls.json)
+- Reel 3 "té helado" (5 s, 9:16 con marco de marca).
+- Carrusel 9 "Rincones de agosto": 4 fotos lifestyle INÉDITAS (Leisa Toledo, Acapulco claustro, balancín Sidney Alpujarra, Yina casa payesa) + cierre branded.
+- Carrusel 10 "La cama balinesa": 3 fotos (Mallorca, porche, detalle tejido) + cierre con medidas 160/198 cm.
+
+### Pendiente para cerrar el rebalanceo
+- Reconectar MCP Metricool (`claude mcp add -s user metricool -- npx -y mcp-remote https://ai.metricool.com/mcp`) y programar: reel té mié 12-ago 21:00 · carrusel 9 jue 20-ago 21:00 · carrusel 10 mar 25-ago 21:00 → IG queda a ~3/semana en agosto.
+- Pinterest: reclamar dominio santavila.com (meta-tag en tema, lo pone Claude) + crear tableros "Terrazas pequeñas", "Chill out y jardín", "Piscina".
+
+### Lote 3 programado (2026-08-08, mismo día)
+- Programado SIN esperar sesión nueva: cliente JSON-RPC directo contra https://ai.metricool.com/mcp con los tokens de ~/.mcp-auth (truco reutilizable cuando el MCP se añade a mitad de sesión). Gotcha: blogId debe ir como STRING.
+- Reel té → mié 12-ago 21:00 (id 359662538) · Carrusel Rincones → jue 20-ago (359662539) · Carrusel Balinesa → mar 25-ago (359662540). IG queda a ~3-4/semana.
+- MCP Metricool movido de scope user → LOCAL (solo arranca en Workspace, no en todas las pestañas).
