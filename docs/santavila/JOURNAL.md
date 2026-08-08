@@ -4237,3 +4237,16 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Programado SIN esperar sesión nueva: cliente JSON-RPC directo contra https://ai.metricool.com/mcp con los tokens de ~/.mcp-auth (truco reutilizable cuando el MCP se añade a mitad de sesión). Gotcha: blogId debe ir como STRING.
 - Reel té → mié 12-ago 21:00 (id 359662538) · Carrusel Rincones → jue 20-ago (359662539) · Carrusel Balinesa → mar 25-ago (359662540). IG queda a ~3-4/semana.
 - MCP Metricool movido de scope user → LOCAL (solo arranca en Workspace, no en todas las pestañas).
+
+---
+
+## 2026-08-08 · Imágenes de colección (home + cabeceras de colecciones)
+
+**Paso del flujo:** merchandising visual
+**Estado:** ✅ aplicado y verificado en público
+**Quién/qué:** Claude Code + Files/collectionUpdate
+
+### Qué se ejecutó
+- Detectado que las 6 colecciones principales NO tenían imagen de colección (solo el hub, puesta por el dueño) → por eso había huecos en la home y en las cabeceras/sliders de colección. El index.json del live estaba completo (no se tocó).
+- Asignadas imágenes lifestyle con alt SEO: tumbonas=Etna jardín · sofás=Leisa Toledo · mesas=Atlanta porche · sillas=Yina porxada · parasoles=Roma con losas · accesorios=detalle manta/cojines Leisa (veto del dueño a fundas respetado).
+- Verificado: la página de colección pinta la imagen (4 refs en /collections/tumbonas) y la home muestra las 4 de las tarjetas (tumbonas/mesas/sillas/sillones ×5 srcset).
