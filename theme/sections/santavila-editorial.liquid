@@ -12,7 +12,41 @@
       {%- endif -%}
     </div>
 
-    {%- if blocks.size > 0 -%}
+    {%- liquid
+      # Últimos 3 posts del blog (dinámico); las tarjetas manuales quedan como fallback
+      assign latest = blogs['news'].articles
+    -%}
+    {%- if latest.size > 0 -%}
+      <div class="sv-mag__grid">
+        {%- for article in latest limit: 3 -%}
+          {%- assign cat = article.tags[1] | default: 'Guía' | capitalize -%}
+          {%- if forloop.first -%}
+            <a class="sv-mag-card sv-mag-card--lead" href="{{ article.url }}">
+              <div class="sv-mag-card__media">
+                {%- if article.image != blank -%}
+                  {{ article.image | image_url: width: 1200 | image_tag: loading: 'lazy', sizes: '(max-width: 980px) 100vw, 50vw', widths: '500,800,1100,1200', alt: article.title }}
+                {%- endif -%}
+              </div>
+              <div class="sv-mag-card__cat">{{ cat }}</div>
+              <div class="sv-mag-card__title">{{ article.title }}</div>
+              <p class="sv-mag-card__ex">{{ article.excerpt_or_content | strip_html | truncate: 150 }}</p>
+            </a>
+            <div class="sv-mag__col">
+          {%- else -%}
+            <a class="sv-mag-card" href="{{ article.url }}">
+              <div class="sv-mag-card__media">
+                {%- if article.image != blank -%}
+                  {{ article.image | image_url: width: 800 | image_tag: loading: 'lazy', sizes: '(max-width: 980px) 50vw, 25vw', widths: '300,450,600,800', alt: article.title }}
+                {%- endif -%}
+              </div>
+              <div class="sv-mag-card__cat">{{ cat }}</div>
+              <div class="sv-mag-card__title">{{ article.title }}</div>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+        </div>
+      </div>
+    {%- elsif blocks.size > 0 -%}
       <div class="sv-mag__grid">
         {%- for block in blocks -%}
           {%- if forloop.first -%}

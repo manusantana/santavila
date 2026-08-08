@@ -4255,3 +4255,8 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Las 4 tarjetas tenían el image_picker VACÍO (la sección lo soporta). Rellenado parcheando el index.json FRESCO del live (solo los 4 campos image; resto intacto, trabajo del compañero preservado): áticos=Acapulco azotea Salamanca · balcón=Manhattan galería Pirineo · jardín/porche=Sidney porche encalado · comedores=comedor bajo pérgola. Files: escenario-*.jpg.
 - Staging y PROD verificados (4/4 + orden de secciones intacto); render público confirmado (5 refs srcset por tarjeta).
 - Gotcha: la verificación byte a byte del helper "no cuadra" con .json de plantilla porque Shopify reformatea el JSON al guardar — verificar semánticamente.
+
+### Materiales + editorial dinámico (2026-08-08, mismo día)
+- Panel "Preparados para durar": image_picker vacío → rellenado con detalle de cuerda náutica (Files: materiales-cuerda-nautica.jpg), a juego con el primer material del listado.
+- Sección "El exterior bien vivido" (santavila-editorial.liquid): reescrita para renderizar SIEMPRE los últimos 3 posts de blogs['news'] (lead = más reciente con extracto; categoría = tags[1] fallback 'Guía'); las tarjetas manuales (que tenían enlaces vacíos y contenido placeholder) quedan como fallback si el blog estuviera vacío. link "Toda la inspiración" → /blogs/news.
+- Verificado en público: cuerda náutica renderizada y las 3 guías más recientes (chill out / bases parasol / tumbonas) como tarjetas. Se actualizará solo con cada guía nueva.

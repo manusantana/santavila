@@ -325,7 +325,8 @@
         "eyebrow": "Materiales con criterio",
         "heading_line1": "Preparados",
         "heading_line2": "para durar.",
-        "intro": "Cada material elegido por cómo se comporta en exterior real español: radiación UV, lluvia y salitre de costa."
+        "intro": "Cada material elegido por cómo se comporta en exterior real español: radiación UV, lluvia y salitre de costa.",
+        "image": "shopify://shop_images/materiales-cuerda-nautica.jpg"
       }
     },
     "santavila_spain": {
@@ -378,7 +379,7 @@
         "color_scheme": "",
         "heading": "El exterior bien vivido",
         "link_label": "Toda la inspiración",
-        "link_url": ""
+        "link_url": "/blogs/news"
       }
     },
     "santavila_services": {
