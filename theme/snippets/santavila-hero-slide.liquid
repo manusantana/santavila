@@ -30,10 +30,10 @@
                 <defs>
                   <path id="{{ seal_id }}" d="M80,80 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"></path>
                 </defs>
-                <text><textPath href="#{{ seal_id }}" startOffset="0">{{ seal_text }}</textPath></text>
+                <text><textPath href="#{{ seal_id }}" startOffset="0" textLength="377" lengthAdjust="spacing">{{ seal_text }}</textPath></text>
               </svg>
               <span class="sv-hero__seal-mark">
-                <img src="{{ 'icono-santavila.png' | asset_url }}" width="34" height="63" style="height: auto;" alt="" loading="lazy">
+                <img src="{{ 'icono-santavila.png' | asset_url }}" width="34" height="63" style="width: 34px; height: auto; max-width: 34px;" alt="" loading="lazy">
               </span>
             </div>
           {%- endif -%}

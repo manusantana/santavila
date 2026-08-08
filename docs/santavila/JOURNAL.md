@@ -4265,3 +4265,8 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Sustituidos los 2 arcos SVG dibujados a mano por el icono real (`imagen-corporativa/icono-santavila.png` → `assets/icono-santavila.png`, 34 KB RGBA): centro del sello giratorio del hero (34px) y sección "Diseñado y fabricado en España" (58px).
 - El helper de push no sube binarios → asset subido por API con attachment base64 a staging y prod.
 - Verificado en público (variante fresca de caché: 3 refs al icono, 0 SVG viejos; la CDN converge en minutos). Si el trazo sage pierde contraste sobre foto en el sello, hay plan B: variante monocroma crema generada con Pillow.
+
+### Sello del hero: texto a círculo completo (2026-08-08, mismo día)
+- El texto rotatorio dejaba un hueco → `textLength="377"` (circunferencia del path r=60) + `lengthAdjust="spacing"` en el textPath: las letras se reparten uniformes por los 360°.
+- Nota post-hotfix anterior: en este tema todo `<img>` nuevo necesita ancho por ESTILO INLINE (hay CSS global img width:100% que pisa los atributos width/height) — causa del icono gigante y su hotfix.
+- Decisión del dueño: el icono se queda con el PNG actual (descarta rehacerlo sin fondo/SVG).
