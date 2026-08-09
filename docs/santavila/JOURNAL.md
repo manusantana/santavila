@@ -13,6 +13,41 @@
 
 ---
 
+## 2026-08-09 · GALERÍA DEL BRANDON REHECHA — ahora sí es España, en agosto y con el jacquard
+
+Regeneradas las tres imágenes que la auditoría tumbó (02, 03 y 05), aplicando las reglas nuevas. **Las 5 están
+en 4K y sin publicar.**
+
+| Antes (rechazado) | Ahora |
+|---|---|
+| Muro de piedra seca de cantos redondeados = *cornish hedge* irlandés | **Mampostería de caliza gris angular con mortero y esquinas de sillar** |
+| Terraza flotando en un prado, sin casa | **La casona en cuadro**: fachada de piedra, alero de teja curva, galería blanca |
+| Horizonte recto y vacío | **Los Picos de Europa al fondo**, robles y eucaliptos |
+| Llueve: suelo mojado, charcos, hojas secas | **Suelo seco, cielo claro, hortensias en flor** — agosto |
+| *Conservatory* inglés con techo de cristal | **Galería del norte**: ventanales verticales de carpintería blanca, **techo sólido con viga**, la fachada de piedra dentro |
+| Jarra de terracota naranja en escena fría | Maceta de **gres gris** |
+| Caldo y pan | **Libro y romero** |
+| Tejido liso / nudoso | **Jacquard presente, verificado a igual escala cm/px** |
+
+### El fallo que casi se cuela otra vez: el color
+Con el primer intento de verano, el **gris viraba a beige** por la luz cálida — el fallo A7. Medido por
+piezas (índice R−B, el real está en −4,6 / −7,0):
+
+| | Sofá | Sillón dcho | Sillón izdo |
+|---|---|---|---|
+| 1er intento | −6,3 | +3,8 | **+13,6 ⚠️** |
+| Corregido | −3,8 | −1,3 | +2,5 |
+
+Veinte puntos de diferencia entre dos piezas de la **misma tela** en la misma foto. La causa fue mi propio
+prompt: pedí *"warm dry air"*. Se arregló exigiendo **5400 K neutros y el mismo gris en las tres piezas**.
+**Regla práctica:** al pedir luz de verano, decir siempre *"no golden or amber cast on the furniture"*.
+
+**Estado:** 5 imágenes listas, ninguna publicada. Créditos renovados (1.046).
+**Sigue pendiente** el trozo de auditoría que el límite de sesión dejó sin correr: coherencia de secuencia y
+tells de IA sobre las 5 definitivas.
+
+---
+
 ## 2026-08-04 · AUDITORÍA INTEGRAL — el jacquard se volvió a perder y yo lo aprobé
 
 Sergio, con razón: *"siempre encuentras fallos, siempre revisas y encuentras fallos... ¿no puedes hacer una
