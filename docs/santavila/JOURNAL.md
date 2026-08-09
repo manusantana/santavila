@@ -4270,3 +4270,21 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - El texto rotatorio dejaba un hueco → `textLength="377"` (circunferencia del path r=60) + `lengthAdjust="spacing"` en el textPath: las letras se reparten uniformes por los 360°.
 - Nota post-hotfix anterior: en este tema todo `<img>` nuevo necesita ancho por ESTILO INLINE (hay CSS global img width:100% que pisa los atributos width/height) — causa del icono gigante y su hotfix.
 - Decisión del dueño: el icono se queda con el PNG actual (descarta rehacerlo sin fondo/SVG).
+
+---
+
+## 2026-08-09 · Guía de pérgolas programada (blog más activo)
+
+**Paso del flujo:** GEO contenido — 3ª guía de agosto (decisión del dueño: "hay que estar activos")
+**Estado:** ✅ programada para lun 11-ago 10:00
+**Quién/qué:** Claude Code + REST articles + GraphQL publishDate
+
+### Qué se ejecutó
+- Guía nueva `pergola-de-aluminio-medidas-altura-y-cuanta-sombra-da` (674 palabras, respuesta directa + tabla "qué cabe bajo 3×3" + FAQ×4): ataca el striking distance `pérgola 250x300` (pos 13,9) reforzando la PDP retitulada el día 3. Enlaza PDP pérgola, guías de mesas/chill out/bases/materiales/mantenimiento y colección parasoles.
+- Imagen destacada: pergola/02_ambiente_jardin (pérgola blanca con techo de lona, jardín encalado).
+- Creada OCULTA + programada vía GraphQL publishDate (11-ago 08:00Z). Verificado: 404 público hasta entonces.
+- Al publicar alimentará sola la sección editorial de la home y el llms.txt ya la lista.
+- Marcha del delta previo: Merchant 147→113 desaprobados (imágenes propagando); enlaces chill out desde guías hermanas aplicados (8-ago).
+
+### Siguiente paso recomendado
+- Vie 14: datos RRSS + Pinterest (meta-tag/tableros del dueño). Delta GSC ~17-ago → decidir guía "¿Parasol o pérgola?" (2ª de la quincena), cadencia sept y lote 3 RRSS. Pin/carrusel de esta guía → con el lote de septiembre.
