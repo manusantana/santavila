@@ -4323,3 +4323,20 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ### Siguiente paso recomendado
 - Vie 14: datos RRSS + Pinterest (meta-tag/tableros del dueño). Delta GSC ~17-ago → decidir guía "¿Parasol o pérgola?" (2ª de la quincena), cadencia sept y lote 3 RRSS. Pin/carrusel de esta guía → con el lote de septiembre.
+
+---
+
+## 2026-08-16 · Delta GSC + guía "¿Parasol o pérgola?" programada
+
+**Paso del flujo:** GEO — delta quincenal + contenido
+**Estado:** ✅ delta documentado · guía programada lun 18-ago 10:00
+**Quién/qué:** Claude Code + GSC API + REST/GraphQL articles
+
+### Qué se ejecutó
+- Token Google caducado OTRA VEZ (7 días, consent screen en Testing). Reautorizado vía URL manual (Safari por defecto ≠ Chrome logueado). ⚠️ Proyecto GCP correcto: `santavila-muebles-exteriores` (el dueño miró `ubicuo-para-clientes` por error, ese ya estaba en producción). PENDIENTE dueño: publicar el consent screen correcto.
+- Delta 28d: 12 clics / 866 impr (+25%) / pos 25,0. Detalle y decisiones en `GEO-DELTA-2026-08-16.md`. Cluster sombra al alza (pérgola 250x300: 15→26 impr pos 13,4); tumbonas resina +43% impr pero aún pos 41-45 (hub recién indexado, no tocar); `muebles vigo` persiste → GBP.
+- Guía 4 creada y programada (18-ago 10:00): `parasol-o-pergola-que-sombra-te-conviene` (646p, tabla comparativa, FAQ×4, portada parasol_roma/03). Verificado 404 hasta publicación. Gotcha: SSL EOF transitorio en el POST → reintento idempotente OK.
+- Guía de pérgolas publicó sola el lun 11 (verificado HTTP 200); editorial de la home la muestra como lead.
+
+### Siguiente paso recomendado
+- Próximo delta ~30-ago (decide temas de sept; candidatos: sets/conjuntos o balinesas según RRSS). Lote 3 RRSS con pins/carruseles de las guías 3-4. Pendientes dueño: consent screen, meta-tag Pinterest + tableros, móvil GBP.
