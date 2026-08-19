@@ -48,6 +48,52 @@ tells de IA sobre las 5 definitivas.
 
 ---
 
+## 2026-08-19 (B) · ✅ MÉTODO A1 — el tejido deja de generarse y pasa a copiarse
+
+Tras los cinco intentos fallidos de la mañana, Sergio da luz verde a probar el **método A1**, que estaba en el
+`ROL_FOTOGRAFO_SENIOR.md` §7.1 desde junio y **nunca se había aplicado**. Funciona.
+
+**La idea:** el producto no se genera, **se recorta de la foto del proveedor y se compone**. La fidelidad del
+material deja de depender de que el modelo sepa dibujarlo.
+
+### El hallazgo que lo hace viable
+**El upscale PRESERVA el jacquard, y además lo afila.** La foto del proveedor pasa de 1536 px (3,4 px/cm) a
+4096 px (9 px/cm) y el motivo se lee mejor que en el original. Sin esto el método no habría servido, porque la
+foto de origen era demasiado pequeña para un packshot 4K.
+
+### Los pasos (2 llamadas a la API, el resto procesado local)
+1. `upscale_image` de la foto del proveedor → 4096×2737, jacquard intacto
+2. `remove_background` → producto recortado con su tejido real
+3. Limpieza sin IA: alpha estricto contra halos · descarte de componentes conectados pequeños (manchas de
+   sombra) · **clonado** de zonas limpias sobre la copa y el cuenco de uvas del proveedor
+4. **El sillón izquierdo tenía a la mujer sentada** → se espeja el **derecho**, que está limpio. Es la misma
+   pieza: no se inventa nada
+5. Composición sobre fondo bone con degradado procedural + sombras de contacto elípticas
+
+### Resultado — packshot con producto 100% real
+| | Generado (5 intentos) | **A1** |
+|---|---|---|
+| Jacquard | ausente / exagerado / trama | **el real, por construcción** |
+| Color sofá (R−B) | +9,5 … −16,9 | **−6,8** (real −4,7) |
+| Color sillones | +23,9 | **−7,8** |
+| Bandas pegadas | salto 85 | **6,7** |
+| Producto en el cuadro | — | **89% del ancho** |
+
+Prueba lado a lado con normalización local en `_QA_A1_jacquard_copiado_vs_generado.jpg`: el copiado y el real
+son el mismo tejido; el generado es otro. El recorte queda guardado como `_recorte_producto_real_4k.png` y
+**sirve para las cuatro imágenes restantes**.
+
+**Coste: ~4 créditos.** Frente a los ~60 quemados en los cinco intentos de generación.
+
+### Lo que se pierde
+La perspectiva es la de la foto del proveedor y no se puede cambiar. Con un conjunto de 3,5 m de ancho, en
+formato cuadrado quedan 42% de aire arriba: es geometría, no un defecto. Grabado en el skill.
+
+**Siguiente:** aplicar el mismo método a los ambientes — generar la escena **vacía** y componer el producto
+encima con su sombra.
+
+---
+
 ## 2026-08-19 · ⛔ EL JACQUARD NO SALE — 5 intentos y hay que parar
 
 Verificación al 100% pedida por Sergio: 7 lentes sobre las 5 definitivas, 26 hallazgos revisados,

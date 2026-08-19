@@ -376,6 +376,43 @@ Y anotar la fila del producto en [`REGISTRO_LOCALIZACIONES.md`](../../docs/santa
 
 ---
 
+## MÉTODO A1 · CUANDO EL MODELO NO SABE REPRODUCIR EL MATERIAL
+
+> **Nace del Brandon 3 pl. (19-08-2026), tras CINCO intentos fallidos de que el modelo dibujase su jacquard.**
+> Lo borraba, lo exageraba a estampado, o lo sustituía por trama. Con la LEY 0 en la mano no se podía publicar.
+
+**La idea:** el tejido deja de generarse — **se copia de la foto del proveedor**. La fidelidad pasa de depender
+de la suerte del modelo a estar garantizada por construcción.
+
+**Cuándo usarlo:** cuando el material tiene un motivo que el modelo no reproduce (jacquard, bordado, veta
+concreta, trama singular) y ya ha fallado **dos** veces. No hace falta esperar a la quinta.
+
+### Los pasos
+
+1. **`upscale_image` sobre la foto del proveedor.** *Verificado: el upscale PRESERVA el motivo y lo afila.*
+   Una foto de 1536 px pasa a 4096 y de 3,4 a 9 px/cm. **Comprueba el motivo antes de seguir** — si el
+   upscale lo destruyera, este método tampoco sirve.
+2. **`remove_background`** sobre la upscalada → producto recortado con su tejido real.
+3. **Limpieza local, sin IA:** alpha estricto (>110) para quitar halos · descartar componentes conectados
+   pequeños (manchas de sombra sueltas) · **clonar zonas limpias** sobre el atrezzo del proveedor (copas,
+   fruta) tomando el parche del MISMO material.
+4. **Piezas repetidas:** si una unidad sale tapada (una persona sentada) y hay otra igual limpia, **espejar la
+   limpia**. Sillón derecho volteado = sillón izquierdo: es la misma pieza, no se inventa nada.
+5. **Componer:** fondo bone con degradado vertical (procedural, sin IA) · piezas a una base común ·
+   **sombra de contacto** como elipse difuminada bajo cada una, antes de pegar la pieza.
+
+### Lo que hay que vigilar
+- **La perspectiva es la de la foto del proveedor** y no se puede cambiar. Se gana fidelidad y se pierde
+  libertad de encuadre: si el conjunto es muy ancho, en 1:1 quedará aire vertical. Es geometría, no un fallo.
+- **Las uniones de clonado** se notan si el parche viene de otra zona de iluminación. Toma siempre el parche
+  del mismo plano y con la misma luz.
+- **Para los AMBIENTES**, el mismo principio: generar la escena **vacía** y componer el producto encima con
+  su sombra. Nunca dejar que el modelo redibuje el mueble.
+
+**Coste:** ~4 créditos (un upscale + un remove_background). El resto es procesado local, gratis.
+
+---
+
 ## LO PROHIBIDO — cada línea es un fallo que ya se publicó
 
 | Prohibido | Qué pasó |
