@@ -48,6 +48,33 @@ tells de IA sobre las 5 definitivas.
 
 ---
 
+## 2026-08-16 · Brandon 3 pl. · galería rehecha, ficha corregida y verificación en curso
+
+**Las tres imágenes rechazadas, regeneradas** con todo lo aprendido. La 02 ahora es una casona cántabra de
+verdad: mampostería de caliza gris angular con mortero y esquinas de sillar, la esquina de la casa con su
+galería blanca en cuadro, alero de teja, **sierra al fondo**, eucaliptos y hortensias en flor. Y **en agosto**:
+suelo seco, cielo claro, cero charcos, cero hojas caídas.
+
+**El jacquard, verificado con el método correcto** (px/cm calculados, mismos 28 cm reales, pieza más cercana):
+está presente en el panel lateral y el brazo. La versión anterior era una rejilla ortogonal perfecta; esta
+tiene el motivo irregular. Comparador en `_QA_02_jacquard_igual_escala.jpg`.
+
+**Ficha corregida en producción** — las dos mesas, como se decidió:
+- *"…sofá de 3 plazas, dos sillones y **dos mesas nido**"*
+- *"…las dos mesas nido, de 80 y 60 cm, se separan o se recogen una bajo otra según haga falta"*
+- *"Incluye: sofá de 3 plazas, dos sillones y **dos mesas nido (80 y 60 cm)**"*
+
+⚠️ **El título sigue diciendo "+ mesa" en singular.** No lo he tocado: cambiar títulos afecta al SEO y al
+trabajo GEO del compañero. Pendiente de decisión.
+
+**Entrada de publicación preparada** en `publicar_galeria_producto.py` (`GALERIAS_BRANDON_3P`), con los cinco
+alt en español. No se publica hasta el "ok" de Sergio y la puerta de identidad del PASO 7.a.
+
+**Verificación al 100% en curso:** 7 lentes sobre las 5 definitivas, incluidas las dos que el límite de sesión
+dejó sin correr (coherencia de secuencia y tells de IA), más color medido por pieza y textos alternativos.
+
+---
+
 ## 2026-08-04 · AUDITORÍA INTEGRAL — el jacquard se volvió a perder y yo lo aprobé
 
 Sergio, con razón: *"siempre encuentras fallos, siempre revisas y encuentras fallos... ¿no puedes hacer una

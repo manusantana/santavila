@@ -51,7 +51,19 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #    Ninguna toma cuya superficie dominante sea el TEJIDO, a ninguna escala.
 # ############################################################################
 #
-# TANDA 2026-07-29 D (activa)
+# TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
+# NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_BRANDON_3P = {
+    "brandon3p_2026-08": ("set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin de 3 plazas de aluminio antracita: sofa de 3 plazas, dos sillones y dos mesas nido, con tapiceria gris de jacquard tono sobre tono",
+        "02_ambiente_exterior_casona_cantabra.jpg": "Conjunto de jardin gris en la terraza de losa de piedra de una casona cantabra de mamposteria, entre hortensias azules y con la sierra al fondo",
+        "03_ambiente_interior_galeria.jpg": "Sofa y sillones de exterior en la galeria acristalada de una casona del norte, con el jardin y el mar al fondo",
+        "04_asmr_mesas_canto.jpg": "Detalle del canto fino de los tableros de cemento gris de las dos mesas nido y de sus patas cilindricas de aluminio antracita",
+        "05_asmr_libro_romero.jpg": "Las dos mesas nido del conjunto con un libro cerrado y una maceta de gres con romero, sobre la terraza de piedra",
+    }),
+}
+
+# TANDA 2026-07-29 D (historica)
 GALERIAS = {
     "acapulco2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4", {
         "01_packshot.jpg": "Conjunto de jardín de 2 plazas de aluminio antracita: sofá de 2 plazas, dos sillones y mesa de centro, con cojines gris claro",
