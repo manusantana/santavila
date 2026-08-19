@@ -48,6 +48,43 @@ tells de IA sobre las 5 definitivas.
 
 ---
 
+## 2026-08-19 (C) · ✅ LAS 5 IMÁGENES, CON PRODUCTO REAL
+
+Método A1 aplicado a toda la galería. **El producto de las cinco es el mismo recorte de la foto del
+proveedor**: su tejido, su color y su geometría son los reales por construcción, no por suerte del modelo.
+
+| # | Toma | px | R−B tapicería |
+|---|---|---|---|
+| 01 | Packshot bone, conjunto en U | 4096² | **−6,7** |
+| 02 | Terraza de casona cántabra | 4096² | **−4,8** |
+| 03 | Galería acristalada de fachada | 2160×2672 | **−3,9** |
+| 04 | Detalle del canto de las mesas | 4096² | −4,4 *(tableros)* |
+| 05 | Las mesas nido en la terraza | 2400² | **−4,9** |
+
+**Referencia real: −4,7.** Las cinco dentro de tolerancia, y tres de ellas a menos de un punto. Antes, las
+generadas iban de +23,9 a −16,9.
+
+### Lo que ha cambiado en el método
+- **La escena se genera VACÍA y el producto se compone encima.** Sin un mueble que respetar, el modelo dibuja
+  arquitectura española de verdad: la galería salió con ventanales verticales, carpintería blanca, **techo
+  sólido con vigas** y zócalo de balaustres — una galería del norte, no un conservatory inglés.
+- **La toma 5 no gasta generación:** es un reencuadre de la 02 sobre las mesas. Mismo hábitat garantizado y
+  coherencia de secuencia por construcción.
+- **La 04 es la única generada que sobrevive**, y sobrevive porque su sujeto son los tableros, no el tejido:
+  su color da −4,4 contra −3,7 del tablero real.
+
+### De la auditoría, resuelto
+libro de 45 cm → **fuera** (ya no hay libro) · texto inventado en los libros → **fuera** · bandas del
+packshot → **fuera** · conservatory inglés → **galería del norte** · muro irlandés → **mampostería con
+sillar** · lluvia en agosto → **suelo seco y cielo claro** · jacquard → **el real**.
+
+**Coste total del método A1: ~12 créditos** (3 upscales, 1 remove_background, 2 escenas). Los cinco intentos
+de generar el tejido habían costado ~60 sin resultado.
+
+**Sigue sin publicar**: falta el "ok" de Sergio y la puerta de identidad del PASO 7.a.
+
+---
+
 ## 2026-08-19 (B) · ✅ MÉTODO A1 — el tejido deja de generarse y pasa a copiarse
 
 Tras los cinco intentos fallidos de la mañana, Sergio da luz verde a probar el **método A1**, que estaba en el
