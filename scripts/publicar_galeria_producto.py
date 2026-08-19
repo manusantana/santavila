@@ -336,7 +336,18 @@ def publicar(slug, handle, alts):
     p = nodes[0]
     viejos = [m["id"] for m in p["media"]["nodes"]]
     carpeta = os.path.join(ROOT, "images_generated", slug)
-    ficheros = sorted(f for f in os.listdir(carpeta) if f.lower().endswith((".jpg", ".png")))
+    # SOLO los ficheros del diccionario, y en su orden. Antes se subia TODO lo que
+    # hubiera en la carpeta: rechazadas, comparadores de QA y ficheros de trabajo,
+    # casi todos sin alt. El dry-run del 19-08 lo caz\u00f3 con 30 ficheros en vez de 5.
+    ficheros = list(alts.keys())
+    faltan = [f for f in ficheros if not os.path.exists(os.path.join(carpeta, f))]
+    if faltan:
+        print(f"  \u2717 faltan ficheros declarados en el diccionario: {faltan}")
+        return None
+    sin_alt = [f for f in ficheros if not alts.get(f)]
+    if sin_alt:
+        print(f"  \u2717 sin alt: {sin_alt} -- no se publica")
+        return None
     print(f"\n== {slug} -> {p['title']}")
     print(f"   producto: {p['id']}  media actuales: {len(viejos)}")
     for f in ficheros:
@@ -400,7 +411,9 @@ def publicar(slug, handle, alts):
 
 if __name__ == "__main__":
     backup = []
-    for slug, (handle, alts) in GALERIAS.items():
+    # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
+    ACTIVA = GALERIAS_BRANDON_3P
+    for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
             continue
         try:

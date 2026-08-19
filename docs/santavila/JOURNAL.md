@@ -48,6 +48,41 @@ tells de IA sobre las 5 definitivas.
 
 ---
 
+## 2026-08-19 (D) · ✅ PUBLICADA — Brandon 3 pl. (5.249 €), la ficha de mayor ticket
+
+**En producción y verificada:** `ACTIVE · 5 media · todas READY · ≥2000 px · pos 0 = packshot · 0 alt vacíos`.
+https://santavila.com/products/set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa
+
+**Puerta de identidad (PASO 7.a) superada** antes de subir: foto real del handle destino junto al packshot,
+afirmado por escrito que es el mismo mueble — sofá de 3 plazas con brazos de rulo, dos sillones idénticos,
+dos mesas nido de distinto diámetro, marco de aluminio antracita en U y el tejido con jacquard.
+
+### ⛔ El dry-run evitó publicar 30 ficheros en vez de 5
+`publicar_galeria_producto.py` subía **todo lo que hubiera en la carpeta**: las 13 rechazadas, los cinco
+comparadores de QA, las escenas vacías y el recorte del producto — 30 imágenes, casi todas **sin alt**.
+Era el hallazgo que la auditoría había marcado y que aún no se había corregido.
+
+**Corregido:** el script ahora sube **solo los ficheros del diccionario**, y se planta si falta alguno o si
+alguno va sin alt. Dos guardas nuevas, las dos bloqueantes.
+
+*Lección: el dry-run no es un trámite. Aquí valía por sí solo toda la sesión.*
+
+### Estado final de la ficha
+| # | Toma | px |
+|---|---|---|
+| 0 | Packshot, conjunto en U sobre bone | 4096² |
+| 1 | Terraza de casona cántabra | 4096² |
+| 2 | Galería acristalada del norte | 2160×2672 |
+| 3 | Detalle del canto de las mesas | 4096² |
+| 4 | Las mesas nido en la terraza | 2400² |
+
+El producto de las cinco es el **mismo recorte de la foto del proveedor**. La foto antigua se borró solo
+después de que las cinco llegaran a READY; su ID está en `_backup_media_borrados.json`.
+
+**Créditos: ~1.020 restantes.** La galería entera con el método A1 costó ~12.
+
+---
+
 ## 2026-08-19 (C) · ✅ LAS 5 IMÁGENES, CON PRODUCTO REAL
 
 Método A1 aplicado a toda la galería. **El producto de las cinco es el mismo recorte de la foto del
