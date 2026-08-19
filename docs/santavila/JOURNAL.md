@@ -48,6 +48,52 @@ tells de IA sobre las 5 definitivas.
 
 ---
 
+## 2026-08-19 · ⛔ EL JACQUARD NO SALE — 5 intentos y hay que parar
+
+Verificación al 100% pedida por Sergio: 7 lentes sobre las 5 definitivas, 26 hallazgos revisados,
+**5 confirmados**. Uno es bloqueante y obliga a parar.
+
+### El tejido: la trama no es el motivo
+El jacquard **no está** en 01, 02, 03 ni 05. Y lo importante es **por qué me equivoqué al aprobarlo**:
+comparé a igual escala —bien— pero lo que vi e interpreté como jacquard era **la trama del tejido (los
+hilos)**, no el motivo. En la foto del proveedor están las DOS cosas: la trama fina y, encima, los trazos
+caligráficos irregulares. En las generadas solo está la trama.
+
+**El test que lo separa** (ya en el skill): recortar el mismo nº de centímetros reales, llevarlos al mismo
+tamaño **y aplicar normalización local** (restar un desenfoque gaussiano). Eso elimina iluminación y pliegues
+y deja solo el motivo. Si tras normalizar solo aparece una retícula regular de hilos, **el jacquard no está**.
+Comparador: `_QA_DEFINITIVO_jacquard.jpg`.
+
+### Cinco intentos, tres resultados, ninguno bueno
+| Intento | Resultado |
+|---|---|
+| v1 | jacquard borrado en los asientos |
+| v2 | exagerado a estampado gráfico de trazos gruesos |
+| v3 "muy sutil" | borrado |
+| ambientes por swap | solo trama |
+| packshot v2 | solo trama |
+
+**El modelo no reproduce este jacquard tono sobre tono.** O lo borra, o lo grita, o lo sustituye por trama.
+
+### Lo que SÍ se arregló en esta ronda
+- **Packshot rehecho:** sin las bandas pegadas (salto de luminancia 85 → 5), **color corregido**
+  (sofá R−B +9,5 → −6,2; sillón +23,9 → −0,6, contra −4,7 del real) y **composición en U** que llena el cuadro.
+- **02 sin libro:** cuenco de gres vacío a escala en su lugar. Pero la regeneración **rompió el color del
+  sillón izquierdo** (+19 a +29 de R−B por el rebote del muro de caliza): esa versión no se usa.
+
+### Otros confirmados
+- **Libro sobredimensionado** en 05 (~30-33 cm frente a 22-25) y en 03. El auditor exageró la magnitud
+  (+56/+72%); la real es +25/+35%, pero se sale igual.
+- **Texto inventado** en portada y lomo de los libros: garabatos que a 4096 px el cliente ve al hacer zoom.
+- La **02 vende mejor que la 01** en la rejilla de colección.
+
+### Decisión pendiente de Sergio — se para aquí
+Aplica la LEY 0: *"Si no sé hacerlo, no lo hago."* Queda **una vía sin probar**, y está en el ROL §7.1 desde
+el principio: el **método A1 de verdad** — generar la escena y **compositar encima el recorte del producto
+real**. No genera el tejido: lo copia. Es la única forma de garantizar la trama píxel a píxel.
+
+---
+
 ## 2026-08-16 · Brandon 3 pl. · galería rehecha, ficha corregida y verificación en curso
 
 **Las tres imágenes rechazadas, regeneradas** con todo lo aprendido. La 02 ahora es una casona cántabra de
