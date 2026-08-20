@@ -13,6 +13,44 @@
 
 ---
 
+## 2026-08-20 · VUELTA ATRÁS EN EL BRANDON — la métrica no aprueba una foto
+
+**Qué pasó.** El 19-08 sustituí la galería del Brandon (la del 09-08, que estaba bien) por cinco imágenes
+hechas con el *método A1*: el producto recortado de la foto del proveedor y **compuesto** sobre las escenas.
+Perseguía una métrica —el color del jacquard medido punto a punto— y la conseguí: R−B entre −3,9 y −6,7 frente
+a −4,7 del real. Sergio, al verlas: *"está fatal… es horrible… no tiene sentido ni coherencia"*. Tenía razón.
+Habían dejado de ser fotografías: el mueble flotaba, sin sombra de contacto, con luz de estudio sobre escenas
+de exterior, y en la 03 faltaba uno de los dos sillones.
+
+**La causa, con nombre.** Convertí un criterio de rechazo en un criterio de aceptación. Un número puede tumbar
+una imagen; ninguno puede aprobarla. Y sustituí en silencio unas fotos ya aprobadas por otras peores, sin
+comparar y sin preguntar.
+
+**Qué se recupera.** Las cuatro buenas del 09-08, con sus dos defectos reales corregidos:
+
+| Defecto | Cómo se arregló |
+|---|---|
+| Dos bandas beige cruzando el packshot (un letterbox que pegué yo) | Prolongando el gradiente de la pared y estirando el suelo en perspectiva. Determinista, sin IA, sin tocar el mueble |
+| Libro de 28 cm con letras inventadas sobre una mesa de 80 | **No** se borró: el libro tapaba el canto trasero de la mesa y quitarlo obligaba a repintarlo — eso es inventar mueble. La toma 05 pasa a ser un reencuadre cerrado de la 02, donde los libros ya están a escala |
+
+**Lo que queda escrito para el resto del catálogo** (SKILL v5, `qa-checklist.md`, ROL):
+- **Ley:** una métrica rechaza, nunca acepta.
+- **Prohibido** componer el producto sobre la escena (método A1 retirado). Se genera anclado a la foto real.
+- **Test de collage** (bloque J): sombra de contacto, sombra proyectada, oclusión ambiental, rebote de color,
+  grano coherente, borde al 200 % — y la *prueba de los dos tapados*.
+- **Las tres promesas** (bloque K, palabras de Sergio): **vida** (rastro reciente de alguien), **lujo** (nace de
+  la luz y la sombra, no del precio del atrezzo), **deseo** (*¿me dan ganas de sentarme ahí?*). Se responden
+  por escrito antes de presentar cada imagen.
+- **Atrezzo medido** (bloque L): todo prop se mide en cm reales con una cota del mueble como regla. 0 texto en props.
+- **Reparar sin regenerar:** reencuadrar → reparación local solo sobre fondo liso → regenerar como último
+  recurso. Línea roja: si tapar el defecto obliga a repintar geometría del producto, no se repara.
+- **Sustituir una imagen ya aprobada** exige comparación directa a tamaño real y el ok de Sergio.
+
+**Estado:** los cinco ficheros están listos en `images_generated/brandon3p_2026-08/` y el dry-run está limpio.
+**La ficha sigue mostrando los collages: falta el ok para el `--apply`.**
+
+---
+
 ## 2026-08-09 · GALERÍA DEL BRANDON REHECHA — ahora sí es España, en agosto y con el jacquard
 
 Regeneradas las tres imágenes que la auditoría tumbó (02, 03 y 05), aplicando las reglas nuevas. **Las 5 están

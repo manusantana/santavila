@@ -1,5 +1,10 @@
 # QA gate (antes de subir) — bloqueante
 
+> ## ⛔ UNA MÉTRICA RECHAZA, NUNCA ACEPTA (20-08-2026)
+> Esta lista sirve para **tumbar** una imagen. Ninguna imagen se aprueba por haberla pasado. Antes de
+> presentar cualquier toma hay que responder por escrito las **tres promesas** (bloque K) y pasar el
+> **test de collage** (bloque J). Cinco imágenes con el color del tejido exacto se publicaron siendo collages.
+
 > ## ⛔ NADA DE COMIDA NI BEBIDA (Sergio, 03-08-2026)
 > Vendemos **decoración de exterior**, no una comida. Donde este documento diga taza, copa, vino, café, té,
 > vermut, cerveza, aperitivo o "consumible", **está derogado**.
@@ -61,6 +66,30 @@ Sin cuerpo entero en la galería, la escala se ancla **exclusivamente en objetos
 - [ ] Cada línea abarca el producto **de extremo a extremo** en su eje, con topes en los extremos REALES (contorno automático, no medido a ojo).
 - [ ] La cota vertical va en el lado **limpio** (la sombra suele caer a la derecha).
 - [ ] Overlay determinista con `scripts/overlay_medidas_producto.py` — **nunca** cotas generadas por IA.
+
+## J · Test de collage — BLOQUEANTE (20-08-2026)
+El mueble tiene que estar **dentro** de la escena, no encima. Se mira, no se calcula:
+- [ ] **Sombra de contacto** bajo cada apoyo, ennegreciendo el suelo justo donde lo toca.
+- [ ] **Sombra proyectada** en una sola dirección, con el largo que corresponde a la altura del sol.
+- [ ] **Oclusión ambiental**: penumbra bajo el asiento y entre las piezas. Sin ella, el mueble flota.
+- [ ] **Rebote de color** del entorno en las caras bajas (verde de la hierba, cálido de la caliza).
+- [ ] **Grano y nitidez** iguales a los de los objetos a la misma distancia.
+- [ ] **Borde al 200 %** sin halo, sin orla clara, sin un contorno más limpio que el resto de la escena.
+- [ ] **Prueba de los dos tapados** — tapa el mueble: ¿la escena sigue teniendo sentido, o el suelo queda
+      impecable y vacío? · tapa el fondo: ¿la luz del mueble podría ser la de esa escena, o es de estudio?
+
+## K · Las tres promesas — se responden POR ESCRITO al presentar
+- [ ] **Vida** · ¿hay rastro reciente de alguien? (manta caída como la dejaron, huella en el cojín, libro
+      abierto). Conjunto alineado y sin tocar = catálogo de fábrica. El rastro es **frío**: nadie está ahí ahora.
+- [ ] **Lujo** · ¿nace de la luz y la sombra? Una sola luz direccional, negros abiertos con detalle (`#23251D`),
+      material legible al tacto, aire alrededor, paleta corta. Si hace falta un resort para que parezca caro, no lo es.
+- [ ] **Deseo** · *¿me dan ganas de sentarme ahí?* Si la respuesta es tibia, no entra aunque no falle un solo bloqueante.
+
+## L · Atrezzo medido — BLOQUEANTE
+- [ ] **Cada prop se mide en cm reales** usando una cota verificada del mueble como regla, en el mismo plano
+      de profundidad. *(El libro del Brandon: 28 cm sobre una mesa de 80. Nadie lo midió hasta que Sergio lo vio.)*
+- [ ] **0 texto en los props.** Cualquier letra en una portada, etiqueta o lomo es texto inventado por IA:
+      o el prop no lleva texto, o el prop no va.
 
 ## "Tells" de IA en la lógica de la escena — BLOQUEANTE (ambientes con vida)
 - **Props con dueño y con lógica:** cada objeto está donde alguien lo habría dejado, no repartido de adorno. Nada duplicado sin motivo. *(La antigua regla de consumibles queda sin objeto: ya no hay comida ni bebida en escena.)*

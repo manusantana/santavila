@@ -4,7 +4,24 @@
 
 ---
 
-## ⚠️ ESTADO VIGENTE (2026-07-31) — leer ANTES que nada
+## ⚠️ ESTADO VIGENTE (2026-08-20) — leer ANTES que nada
+
+> ### Lo aprendido el 20-08-2026 — manda sobre todo lo demás
+> Se publicó una galería completa que cumplía **todas** las métricas de este documento y que el dueño describió
+> como *"horrible"*. Habían dejado de ser fotografías: el producto estaba **recortado y compuesto** sobre las
+> escenas, y flotaba. De ahí, tres reglas que gobiernan el oficio entero:
+>
+> 1. **Una métrica rechaza una imagen; ninguna métrica la acepta.** Los números de §12 sirven para tumbar
+>    deprisa, no para aprobar. Se aprueba mirando la fotografía entera, a tamaño real.
+> 2. **Prohibido componer el producto sobre la escena.** El recorte arrastra la luz del estudio del proveedor
+>    y no admite sombra de contacto, oclusión ambiental ni rebote de color. Se genera anclado a la foto real.
+> 3. **Toda toma responde por escrito a las tres promesas del dueño:** *vida* (rastro reciente de alguien),
+>    *lujo* (nace de la luz y la sombra, no del precio del atrezzo) y *deseo* (¿dan ganas de sentarse ahí?).
+>
+> El detalle operativo —test de collage, reparación local, sustitución de una imagen ya aprobada— está en el
+> [`SKILL.md`](../../.claude/skills/santavila-imagen-producto/SKILL.md) v5.
+
+### Puntos superados por decisiones posteriores (31-07)
 
 Este documento es la **fuente del oficio** y sigue vigente casi por completo. Pero se ha escrito por capas
 entre junio y julio de 2026, y **cuatro puntos han quedado superados por decisiones posteriores de Sergio**.

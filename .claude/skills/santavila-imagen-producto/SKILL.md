@@ -3,9 +3,17 @@ name: santavila-imagen-producto
 description: Úsalo al generar, crear, regenerar o mejorar imágenes o la galería de un producto de Santavila con Higgsfield — packshot, ambiente/lifestyle, ASMR/detalle, medidas; reemplazar fotos de baja resolución o productos con una sola foto; producir imágenes de catálogo, PDP o home de Santavila.
 ---
 
-# Santavila · Imagen de producto — v4 (2026-07-31)
+# Santavila · Imagen de producto — v5 (2026-08-20)
 
 **Un producto cada vez. Cada imagen validada por el dueño. Cero invención.**
+
+> **Qué cambia respecto a la v4 — la lección del 20-08.** Publiqué una galería que pasaba todas las métricas
+> y que Sergio describió como *"horrible"*, sustituyendo unas fotos suyas que ya eran buenas. Habían dejado de
+> ser fotografías: eran **collages**. De ahí salen los tres bloques nuevos de este documento —
+> [las tres promesas](#paso-5bis--las-tres-promesas-lo-que-la-foto-tiene-que-cumplir),
+> el [test de collage](#i--test-de-collage--la-foto-tiene-que-ser-una-foto-bloqueante) y la
+> [prohibición del método A1](#método-a1--por-qué-ya-no-se-usa) — y la regla que gobierna todas:
+> **una métrica puede rechazar una imagen; ninguna métrica puede aceptarla.**
 
 > **Qué cambia respecto a la v3.** La v3 se escribió sin haber leído entero el
 > [`ROL_FOTOGRAFO_SENIOR.md`](../../docs/santavila/ROL_FOTOGRAFO_SENIOR.md), que es la fuente
@@ -21,6 +29,12 @@ description: Úsalo al generar, crear, regenerar o mejorar imágenes o la galer�
 
 Una imagen de producto es **una afirmación sobre un objeto que alguien va a pagar**. Una textura inventada,
 un tono desviado o una pieza que no existe son **datos falsos** sobre lo que el cliente recibirá en su casa.
+
+> ### Una métrica RECHAZA. Nunca ACEPTA. *(20-08-2026)*
+> Los números —ΔE, R−B, px/cm, conteo— existen para **tumbar** una imagen deprisa y sin discutir. En cuanto
+> uno de ellos se convierte en el motivo por el que una imagen se aprueba, se ha dejado de mirar la fotografía.
+> Así se publicaron cinco collages con el color del tejido exacto. **Ninguna imagen entra en la ficha porque
+> haya pasado una medición: entra porque, mirada entera y a tamaño real, es una fotografía.**
 
 **Ley 1 (del ROL §2), inviolable:** nunca se transforman geometría, silueta, proporciones, nº de
 listones/lamas/cuerdas/cojines/plazas/módulos/patas, material y trama, acabado, color de variante, herrajes ni
@@ -319,6 +333,56 @@ gruesa? Si alguna falla en temporada de verano → **regenerar**.
 4. **La pregunta final:** *"¿esto está en España o podría estar en Cornualles?"* Si vale igual para las dos,
    no has localizado nada → **regenerar**.
 
+**I · TEST DE COLLAGE — la foto tiene que ser una foto (bloqueante, 20-08)**
+Es el fallo que costó la galería del Brandon. Un producto **compuesto** sobre una escena no se integra jamás,
+porque arrastra la luz del estudio donde lo fotografió el proveedor: plana, frontal y difusa. Seis
+comprobaciones, todas **mirando la imagen**, no calculando:
+
+| # | Qué se mira | Señal de collage |
+|---|---|---|
+| 1 | **Sombra de contacto** | La pata se apoya sobre losa limpia. Cada apoyo tiene que ennegrecer el suelo justo donde lo toca |
+| 2 | **Sombra proyectada** | No existe, o cada pieza tira la suya hacia un lado distinto, o su largo no corresponde a la altura del sol |
+| 3 | **Oclusión ambiental** | Bajo el asiento y entre las piezas el suelo está igual de claro que a tres metros. Un mueble sin penumbra debajo flota |
+| 4 | **Rebote de color** | El bajo de las patas no recoge el verde de la hierba ni el cálido de la caliza. Misma temperatura en todas las caras = viene de otro sitio |
+| 5 | **Grano y nitidez** | El mueble está más definido que los objetos a su misma distancia, o no comparte su grano |
+| 6 | **El borde, al 200 %** | Halo, orla clara, o un contorno más limpio que cualquier borde real de la escena |
+
+> **Prueba de los dos tapados** — vale más que las seis:
+> **Tapa el mueble con la mano.** ¿La escena sigue teniendo sentido? Si el suelo queda impecable y vacío, sin
+> marca de que ahí viva nada, la escena se generó sin él y el mueble se pegó encima.
+> **Tapa el fondo.** ¿La luz sobre el mueble podría ser la de esa escena? Si es plana y frontal, es de estudio.
+
+---
+
+## PASO 5.bis · LAS TRES PROMESAS — lo que la foto tiene que cumplir
+
+> *"Que exprese ASMR, una forma de vivir el producto, que el producto tenga vida. Que exprese el lujo, que
+> exprese determinación para la calidad. Y que nada más ver la foto te entren ganas de comprarlo."*
+> — Sergio, 20-08-2026
+
+El QA de arriba dice **qué no puede fallar**. Estas tres dicen **qué tiene que conseguir**. Se juzgan mirando
+la imagen a tamaño real, en menos de tres segundos, y se responden por escrito antes de enseñarla:
+
+**1 · VIDA — ¿alguien vive aquí?**
+Sin persona en cuadro, la vida la da el **rastro reciente**: la manta caída por el brazo del sillón como la
+dejó alguien, no doblada de tienda · el cojín con la huella de una espalda · el libro abierto boca abajo ·
+la maceta con tierra recién regada. Un conjunto perfectamente alineado y sin tocar es un catálogo de fábrica.
+**Contra-regla:** el rastro es *frío* (nadie está ahí ahora). Nada de vapor ni de bebidas — [ver la prohibición](#-nada-de-comida-ni-bebida-decisión-de-sergio-03-08).
+
+**2 · LUJO — ¿de dónde sale?**
+De la **luz y la sombra**, nunca del precio de los props ni de la saturación. Lujo es: una sola luz suave y
+direccional que modela el volumen del cojín · negros abiertos con detalle dentro (ink `#23251D`, jamás `#000`)
+· materiales que se leen al tacto con los ojos · aire alrededor del producto · paleta corta. Si para que
+parezca caro hay que meter una piscina, un resort o una copa de champán, la foto no es cara: es hortera.
+
+**3 · DESEO — ¿me lo quiero comprar?**
+La última pregunta y la más honesta: *¿esta foto me da ganas de sentarme ahí?* No *"¿es correcta?"*, no
+*"¿pasa el QA?"*. Si la respuesta es tibia, la imagen no entra aunque no falle ni un bloqueante. El cliente
+paga 5.249 € por lo que siente en los primeros dos segundos.
+
+**Las tres se responden por escrito al presentar la imagen.** Una imagen que no puede defender las tres frases
+no se presenta.
+
 ---
 
 ## PASO 6 · VALIDACIÓN IMAGEN A IMAGEN (el paso que no se salta)
@@ -376,40 +440,69 @@ Y anotar la fila del producto en [`REGISTRO_LOCALIZACIONES.md`](../../docs/santa
 
 ---
 
-## MÉTODO A1 · CUANDO EL MODELO NO SABE REPRODUCIR EL MATERIAL
+## MÉTODO A1 · POR QUÉ YA NO SE USA
 
-> **Nace del Brandon 3 pl. (19-08-2026), tras CINCO intentos fallidos de que el modelo dibujase su jacquard.**
-> Lo borraba, lo exageraba a estampado, o lo sustituía por trama. Con la LEY 0 en la mano no se podía publicar.
+> **Se probó en el Brandon 3 pl. el 19-08-2026 y se retiró al día siguiente.** La idea era buena sobre el
+> papel: si el modelo no sabe dibujar el jacquard, **el tejido no se genera — se recorta de la foto del
+> proveedor y se compone sobre la escena**. La fidelidad del material deja de depender de la suerte.
+>
+> Funcionó exactamente como prometía: el color quedó a 0,1 del real, el motivo intacto, la geometría exacta.
+> Y las cinco imágenes eran **inservibles**. Sergio: *"está fatal… es horrible… no tiene sentido ni coherencia"*.
 
-**La idea:** el tejido deja de generarse — **se copia de la foto del proveedor**. La fidelidad pasa de depender
-de la suerte del modelo a estar garantizada por construcción.
+**Por qué falla, y por qué no tiene arreglo.** El recorte trae consigo la **luz del estudio del proveedor**:
+plana, frontal, sin dirección. La escena tiene otra luz, otra hora y otro cielo. Al pegar uno sobre otra no
+hay —ni se pueden fabricar a mano— **sombra de contacto, oclusión ambiental, rebote de color del entorno ni
+coherencia de grano**. El ojo lo detecta en menos de un segundo aunque no sepa nombrarlo: *el mueble flota*.
+Una elipse difuminada bajo cada pata no es una sombra; es una mancha.
 
-**Cuándo usarlo:** cuando el material tiene un motivo que el modelo no reproduce (jacquard, bordado, veta
-concreta, trama singular) y ya ha fallado **dos** veces. No hace falta esperar a la quinta.
+**⛔ Prohibido componer el producto sobre una escena.** Ni en ambiente, ni en detalle, ni en packshot.
 
-### Los pasos
+### Qué se hace en su lugar
 
-1. **`upscale_image` sobre la foto del proveedor.** *Verificado: el upscale PRESERVA el motivo y lo afila.*
-   Una foto de 1536 px pasa a 4096 y de 3,4 a 9 px/cm. **Comprueba el motivo antes de seguir** — si el
-   upscale lo destruyera, este método tampoco sirve.
-2. **`remove_background`** sobre la upscalada → producto recortado con su tejido real.
-3. **Limpieza local, sin IA:** alpha estricto (>110) para quitar halos · descartar componentes conectados
-   pequeños (manchas de sombra sueltas) · **clonar zonas limpias** sobre el atrezzo del proveedor (copas,
-   fruta) tomando el parche del MISMO material.
-4. **Piezas repetidas:** si una unidad sale tapada (una persona sentada) y hay otra igual limpia, **espejar la
-   limpia**. Sillón derecho volteado = sillón izquierdo: es la misma pieza, no se inventa nada.
-5. **Componer:** fondo bone con degradado vertical (procedural, sin IA) · piezas a una base común ·
-   **sombra de contacto** como elipse difuminada bajo cada una, antes de pegar la pieza.
+1. **Generar anclado a la foto real** — el camino de siempre, y el que dio las dos mejores imágenes del
+   Brandon. El modelo pone el mueble *dentro* de la luz de la escena, con sus sombras, y por eso parece una foto.
+2. **Si el material no sale a la segunda**, no se fuerza: se **cambia el encuadre** para que ese material deje
+   de ser la superficie dominante (plano más abierto, o sujeto = estructura/canto/herraje). El jacquard
+   tono sobre tono se lee perfectamente a distancia de ambiente; lo que el modelo no sabe es hacerlo en macro.
+3. **Si aun así no hay imagen defendible**, la ficha se queda con la foto del proveedor. Es la LEY 0.
 
-### Lo que hay que vigilar
-- **La perspectiva es la de la foto del proveedor** y no se puede cambiar. Se gana fidelidad y se pierde
-  libertad de encuadre: si el conjunto es muy ancho, en 1:1 quedará aire vertical. Es geometría, no un fallo.
-- **Las uniones de clonado** se notan si el parche viene de otra zona de iluminación. Toma siempre el parche
-  del mismo plano y con la misma luz.
-- **Para los AMBIENTES**, el mismo principio: generar la escena **vacía** y componer el producto encima con
-  su sombra. Nunca dejar que el modelo redibuje el mueble.
+**Lo único que sobrevive del A1** —porque no toca la fotografía— es la **reparación local determinista**:
+ver [Reparar sin regenerar](#reparar-sin-regenerar).
 
-**Coste:** ~4 créditos (un upscale + un remove_background). El resto es procesado local, gratis.
+---
+
+## REPARAR SIN REGENERAR
+
+> Una imagen aprobada con un defecto pequeño **no se regenera**: regenerar cambia todo lo demás. *(Al rehacer
+> la 02 del Brandon para quitar un libro, el sillón izquierdo cambió de color: R−B de +19 a +29.)*
+
+**Orden de intentos, del más barato al más caro:**
+
+1. **Reencuadrar** — el defecto sale del cuadro. Gratis, sin riesgo, y a menudo mejora la composición.
+   *La toma 05 del Brandon salió así: un recorte cerrado de la 02, ya con los libros a escala.*
+2. **Reparación local sin IA** — solo sobre **fondo liso y continuo**: prolongar el gradiente de una pared,
+   estirar un suelo en perspectiva, cerrar un letterbox. *Así se quitaron las dos bandas del packshot.*
+   Técnica: difusión (Laplace) con el contorno como frontera, más el grano tomado de **una zona lisa del
+   mismo material y la misma luz** — un grano tomado sobre un canto o una junta repite ese canto y se ve.
+3. **Regenerar solo esa toma** — último recurso, y obliga a repasar el QA entero de la imagen nueva.
+
+> ### ⛔ La línea roja de la reparación
+> **Si tapar el defecto obliga a repintar geometría del producto, no se repara.** En el Brandon el libro
+> ocultaba el canto trasero de la mesa: borrarlo exigía redibujar ese arco, y redibujar el canto de una mesa
+> es **inventar mueble**. Se reencuadró en su lugar. Fondo, sí. Producto, jamás.
+
+---
+
+## SUSTITUIR UNA IMAGEN QUE YA ESTABA BIEN
+
+El error más caro del 19-08 no fue técnico: **cambié cinco fotografías que ya eran buenas por otras peores**,
+por mi cuenta, persiguiendo una métrica.
+
+- Una imagen aprobada **solo se reemplaza si la nueva gana en la comparación directa**, las dos a tamaño real
+  y una al lado de la otra — nunca porque la nueva puntúe mejor en un número.
+- Esa comparación **se le enseña a Sergio antes de tocar nada**. No hay sustitución silenciosa.
+- Un defecto acotado (un prop grande, una banda, un texto) **no invalida el resto de la fotografía**: se
+  repara por el orden de arriba. Tirar una foto entera por un libro es tirar el trabajo bueno con el malo.
 
 ---
 
@@ -427,6 +520,12 @@ concreta, trama singular) y ya ha fallado **dos** veces. No hace falta esperar a
 | **Piezas fantasma** | Reposapiés o mesas que salen en la foto pero **no entran en el lote** |
 | **QA contra el packshot propio** | Si el packshot está mal, arrastra el error a las 5. **Siempre contra la foto oficial** |
 | **Cota deducida de la imagen** | El bbox medido a ojo dejó la cota 663 px corta. Contorno automático o no se dibuja |
+| **Componer el producto sobre la escena** | Cinco collages publicados en la ficha de 5.249 €. El recorte trae la luz del estudio y flota. [Ver el A1](#método-a1--por-qué-ya-no-se-usa) |
+| **Aprobar por métrica** | Las cinco tenían el color del tejido exacto. Un número tumba una imagen; no la aprueba |
+| **Sustituir en silencio una foto ya buena** | Cambié una galería aprobada por otra peor sin comparar ni preguntar |
+| **Texto en un prop** | El libro del Brandon llevaba letras inventadas en la portada. O el prop no lleva texto, o el prop no va |
+| **Prop sin medir** | Ese mismo libro medía 28 cm sobre una mesa de 80. Todo prop se mide en cm reales usando una cota del mueble como regla, **antes** de aceptar la imagen |
+| **Repintar producto para tapar un defecto** | Quitar el libro obligaba a redibujar el canto de la mesa. Se reencuadra o se descarta |
 
 ---
 

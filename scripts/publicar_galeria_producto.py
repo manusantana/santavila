@@ -56,10 +56,10 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 GALERIAS_BRANDON_3P = {
     "brandon3p_2026-08": ("set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Conjunto de jardin de 3 plazas de aluminio antracita: sofa de 3 plazas, dos sillones y dos mesas nido, con tapiceria gris de jacquard tono sobre tono",
-        "02_ambiente_exterior_casona_cantabra.jpg": "Conjunto de jardin gris en la terraza de losa de piedra de una casona cantabra de mamposteria, entre hortensias azules y con la sierra al fondo",
-        "03_ambiente_interior_galeria.jpg": "Sofa y sillon de exterior con las dos mesas nido en la galeria acristalada de una casona del norte, con las montanas al fondo",
+        "02_ambiente_exterior_casona.jpg": "Conjunto de jardin gris en la terraza de losa de piedra de una casona de mamposteria del norte de Espana, entre hortensias azules en flor",
+        "03_ambiente_interior_galeria.jpg": "Sofa de 3 plazas y sillon de exterior con las dos mesas nido en la galeria acristalada de una casona de piedra, con las hortensias al otro lado del cristal",
         "04_asmr_mesas_canto.jpg": "Detalle del canto fino de los tableros de cemento gris de las dos mesas nido y de sus patas cilindricas de aluminio antracita",
-        "05_asmr_mesas_terraza.jpg": "Las dos mesas nido delante del sofa en la terraza de losa de piedra, con las hortensias azules de la casona detras",
+        "05_ambiente_mesas_terraza.jpg": "Las dos mesas nido delante del sofa de 3 plazas en la terraza de losa de piedra, con las hortensias azules de la casona detras",
     }),
 }
 
