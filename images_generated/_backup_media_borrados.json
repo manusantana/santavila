@@ -535,5 +535,84 @@
    "gid://shopify/MediaImage/71483135328580",
    "gid://shopify/MediaImage/71483135361348"
   ]
+ },
+ {
+  "handle": "set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507127664964",
+  "borrados": [
+   "gid://shopify/MediaImage/71287847321924"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483791704388",
+   "gid://shopify/MediaImage/71483791737156",
+   "gid://shopify/MediaImage/71483791769924",
+   "gid://shopify/MediaImage/71483791802692"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
+  "producto": "gid://shopify/Product/15507128549700",
+  "borrados": [
+   "gid://shopify/MediaImage/71319232545092"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483793015108",
+   "gid://shopify/MediaImage/71483793047876",
+   "gid://shopify/MediaImage/71483793080644",
+   "gid://shopify/MediaImage/71483793113412"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507126911300",
+  "borrados": [
+   "gid://shopify/MediaImage/71291131560260"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483794915652",
+   "gid://shopify/MediaImage/71483794948420",
+   "gid://shopify/MediaImage/71483794981188",
+   "gid://shopify/MediaImage/71483795013956",
+   "gid://shopify/MediaImage/71483795046724"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507128025412",
+  "borrados": [
+   "gid://shopify/MediaImage/71319234838852"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483796554052",
+   "gid://shopify/MediaImage/71483796586820",
+   "gid://shopify/MediaImage/71483796619588",
+   "gid://shopify/MediaImage/71483796652356"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4",
+  "producto": "gid://shopify/Product/15507128516932",
+  "borrados": [
+   "gid://shopify/MediaImage/71319234871620"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483797242180",
+   "gid://shopify/MediaImage/71483797274948",
+   "gid://shopify/MediaImage/71483797307716",
+   "gid://shopify/MediaImage/71483797340484"
+  ]
+ },
+ {
+  "handle": "balancin-jardin-exterior-148194-cm",
+  "producto": "gid://shopify/Product/15507129631044",
+  "borrados": [
+   "gid://shopify/MediaImage/71291159937348"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483801928004",
+   "gid://shopify/MediaImage/71483801960772",
+   "gid://shopify/MediaImage/71483801993540",
+   "gid://shopify/MediaImage/71483802026308"
+  ]
  }
 ]

@@ -13,6 +13,50 @@
 
 ---
 
+## 2026-08-20 (F) · RESCATE COMPLETADO — 9 fichas publicadas sin generar una sola imagen nueva
+
+Cerrado el repaso de las **11 galerías generadas y sin publicar**. Nueve se han publicado; dos
+quedan en cuarentena por identidad.
+
+| Ficha | € | resultado |
+|---|---|---|
+| Yina 3 plazas | 4.195 | 5 imágenes |
+| Diva bicolor 2 plazas | 3.965 | 4 |
+| Yina 2 plazas | 3.819 | 5 |
+| Bellagio 2 plazas | 3.015 | 5 |
+| Acapulco 3 plazas | 2.765 | 4 |
+| Odin 3 plazas | 2.645 | 5 |
+| Dounvil 2 plazas | 2.405 | 4 |
+| Acapulco 2 plazas | 2.349 | 4 |
+| Balancín Sidney | 1.805 | 4 |
+| «Albania» 3 plazas | 3.449 | **cuarentena — no es el mismo mueble** |
+| Pérgola Venecia | 2.045 | **cuarentena — variante sin confirmar** |
+
+**26.963 € de catálogo** que pasan de una sola foto a galería, **sin gastar un crédito**.
+
+### Por qué se habían quedado fuera
+
+En siete de las nueve, el problema era **solo la quinta imagen**: el consumible que la receta de
+julio pedía y que quedó prohibido el 03-08 — naranjas y zumo, horchata, vino y uvas, sandía, botijo,
+tinto de verano, tomate raf, vino con higos. Se retira y, donde hay **cotas verificadas del
+catálogo**, se sustituye por la ficha de medidas. Donde no las hay (DIVA, ACAPULCO y DOUNVIL no
+aparecen en el PDF), la ficha se publica con **cuatro imágenes** y la de medidas queda pendiente:
+cuatro buenas valen más que cinco con una prohibida.
+
+El **balancín Sidney** tenía además dos fallos ya documentados: los **grilletes cromados inventados**
+(la foto real no los enseña) y una **hoja seca de morera** sobre el asiento, que es otoño en agosto.
+Se publican tres imágenes y las medidas.
+
+### Las dos cuarentenas
+
+- **`_CUARENTENA_albania_identidad/`** — galería de un conjunto verde salvia con patas en A, mapeada
+  a un handle cuyo SKU (BELLAGIO-8) corresponde a un conjunto gris antracita de patas rectas.
+- **`_CUARENTENA_pergola_identidad/`** — el packshot es una pérgola **autoportante de cuatro patas**;
+  la foto oficial del proveedor para ese SKU es la **4×3 adosada**. Sin saber si la 300×300×250 es
+  exenta o adosada, no se publica: es exactamente la LEY 0.
+
+---
+
 ## 2026-08-20 (E) · RESCATE DE GALERÍAS HECHAS — tres publicadas con cero créditos, una en cuarentena
 
 De las **11 galerías generadas y sin publicar**, se abordan las cuatro de mayor ticket. El diagnóstico

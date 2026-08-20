@@ -53,6 +53,49 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_RESCATE_3 = {
+    "sidney": ("balancin-jardin-exterior-148194-cm", {
+        "01_packshot.jpg": "Balancin de jardin Sidney de estructura blanca en A con toldo y colchon azul pizarra y cojin blanco, 148x194 cm, sobre fondo neutro",
+        "02_ambiente_exterior_alpujarra.jpg": "Balancin blanco en una terraza de piedra de la Alpujarra granadina, con muro de mamposteria, suelo de barro y las terrazas de la sierra al fondo",
+        "03_ambiente_interior_porche_encalado.jpg": "Balancin blanco bajo un porche encalado de vigas de madera y suelo de laja, abierto a la sierra",
+        "04_medidas.jpg": "Medidas del balancin Sidney: 148 cm de ancho por 194 de fondo y 207 de alto, con toldo y colchon",
+    }),
+}
+
+GALERIAS_RESCATE_2 = {
+    "diva2p": ("set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Diva bicolor de 2 plazas: sofa, dos sillones y mesa de centro de lamas, estructura antracita y tapiceria crudo, sobre fondo neutro",
+        "02_ambiente_exterior_cordoba.jpg": "Conjunto Diva bicolor en un patio cordobes encalado, con macetas de geranios en la pared, celosia de forja y un limonero en tinaja",
+        "03_ambiente_interior_zaguan.jpg": "Sofa y sillones Diva bicolor en un zaguan abovedado de suelo de barro, con la reja abierta al patio",
+        "04_asmr_lamas.jpg": "Detalle de las lamas de aluminio antracita del respaldo del sillon Diva y del canto del cojin crudo",
+    }),
+    "acapulco3p": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5", {
+        "01_packshot.jpg": "Conjunto de jardin Acapulco de 3 plazas en aluminio blanco con cojines gris claro y mesa de centro de cristal, sobre fondo neutro",
+        "02_ambiente_exterior_valencia.jpg": "Conjunto Acapulco blanco en una terraza valenciana de suelo de barro, con persianas de esparto, romero y un naranjo en tinaja",
+        "03_ambiente_interior_porche.jpg": "Sofa y sillones Acapulco blancos bajo un porche encalado con persiana de esparto, abierto al jardin",
+        "04_asmr_cristal.jpg": "Detalle del canto del tablero de cristal de la mesa de centro Acapulco sobre la estructura de aluminio blanco",
+    }),
+    "odin3p": ("set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Odin de 3 plazas en aluminio antracita con cojines gris claro y mesa de centro, sobre fondo neutro",
+        "02_ambiente_exterior_segovia.jpg": "Conjunto Odin antracita en una terraza de sillar de granito en Segovia, con lavanda en un pilon y el pinar y la sierra de Guadarrama al fondo",
+        "03_ambiente_interior_soportal.jpg": "Sofa y sillones Odin bajo un soportal de arcos de granito con vigas de castano",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio antracita del sillon Odin y su union con el cojin gris claro",
+        "05_medidas.jpg": "Medidas del conjunto Odin de 3 plazas: sofa 175x66x78 cm, sillon 65x66x78 cm y mesa de centro 120x60x41 cm",
+    }),
+    "dounvil2p": ("set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Dounvil de 2 plazas en aluminio blanco con aspa en el lateral y cojines color arena, sobre fondo neutro",
+        "02_ambiente_exterior_rioja.jpg": "Conjunto Dounvil blanco en una terraza de piedra arenisca sobre los vinedos de La Rioja, con la Sierra de Cantabria al fondo",
+        "03_ambiente_interior_calado.jpg": "Sofa y sillones Dounvil en una sala abovedada de arenisca con un arco abierto al vinedo",
+        "04_asmr_aspa.jpg": "Detalle del aspa de aluminio blanco del lateral del sillon Dounvil y del canto del cojin color arena",
+    }),
+    "acapulco2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4", {
+        "01_packshot.jpg": "Conjunto de jardin Acapulco de 2 plazas en aluminio antracita con cojines gris claro y mesa de centro, sobre fondo neutro",
+        "02_ambiente_exterior_azotea_salamanca.jpg": "Conjunto Acapulco antracita en una azotea de Salamanca al atardecer, con parapeto de sillar y las torres de la catedral en piedra dorada al fondo",
+        "03_ambiente_interior_soportal_piedra.jpg": "Sofa y sillones Acapulco bajo el soportal de arcos de piedra dorada de un patio salmantino, con macetas de geranios",
+        "04_asmr_aluminio_antracita.jpg": "Detalle del perfil de aluminio antracita mate del sofa Acapulco y el canto del cojin gris claro con la luz rasante de la tarde",
+    }),
+}
+
 GALERIAS_RESCATE_1 = {
     "yina": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Conjunto de jardin Yina de 3 plazas: sofa, dos sillones y mesa de centro redonda con respaldos de cuerda trenzada gris y cojines crudo, sobre fondo neutro",
@@ -501,7 +544,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_RESCATE_1
+    ACTIVA = GALERIAS_RESCATE_3
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

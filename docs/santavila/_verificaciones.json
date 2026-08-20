@@ -316,5 +316,197 @@
     "alt_len": 104
    }
   ]
+ },
+ "set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "diva2p",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 149
+   },
+   {
+    "fichero": "02_ambiente_exterior_cordoba.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "03_ambiente_interior_zaguan.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 99
+   },
+   {
+    "fichero": "04_asmr_lamas.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 99
+   }
+  ]
+ },
+ "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5": {
+  "fecha": "2026-08-20",
+  "carpeta": "acapulco3p",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 129
+   },
+   {
+    "fichero": "02_ambiente_exterior_valencia.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 125
+   },
+   {
+    "fichero": "03_ambiente_interior_porche.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 99
+   },
+   {
+    "fichero": "04_asmr_cristal.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 109
+   }
+  ]
+ },
+ "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "odin3p",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 117
+   },
+   {
+    "fichero": "02_ambiente_exterior_segovia.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "03_ambiente_interior_soportal.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 78
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 90
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 106
+   }
+  ]
+ },
+ "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2": {
+  "fecha": "2026-08-20",
+  "carpeta": "dounvil2p",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 122
+   },
+   {
+    "fichero": "02_ambiente_exterior_rioja.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 124
+   },
+   {
+    "fichero": "03_ambiente_interior_calado.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 87
+   },
+   {
+    "fichero": "04_asmr_aspa.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 100
+   }
+  ]
+ },
+ "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4": {
+  "fecha": "2026-08-20",
+  "carpeta": "acapulco2p",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "02_ambiente_exterior_azotea_salamanca.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 145
+   },
+   {
+    "fichero": "03_ambiente_interior_soportal_piedra.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 115
+   },
+   {
+    "fichero": "04_asmr_aluminio_antracita.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 126
+   }
+  ]
+ },
+ "balancin-jardin-exterior-148194-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "sidney",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "02_ambiente_exterior_alpujarra.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "03_ambiente_interior_porche_encalado.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 95
+   },
+   {
+    "fichero": "04_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 96
+   }
+  ]
  }
 }
