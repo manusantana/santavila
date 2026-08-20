@@ -471,6 +471,57 @@ ver [Reparar sin regenerar](#reparar-sin-regenerar).
 
 ---
 
+## DOS COSAS QUE EL MODELO INVENTA SIEMPRE *(Bolonia XL-8, 20-08-2026)*
+
+**1 · Si le pides recolocar, redibuja — y al redibujar, inventa.**
+Pedirle *"pon los sillones abiertos hacia la cámara"* o *"recompón el conjunto"* le obliga a construir el mueble
+de nuevo, y entonces aparece lo que no existe: en el Bolonia, un **respaldo de lamas verticales** en un sillón
+que lo tiene liso, y en otro intento el respaldo bajó 20 cm. Cinco descartes por esto.
+> **Regla: swap de fondo puro.** *"Keep the furniture exactly as shown: same pieces, same arrangement, same
+> camera angle, same proportions. Replace only the background with …"* Quitar un objeto (un reposapiés, un vaso)
+> sí se puede pedir. Mover, girar o recomponer el mueble, no.
+> **Si la composición del proveedor no sirve, se cambia el encuadre — no la escena.**
+
+**2 · La cara que el proveedor no fotografió, se la inventa.**
+El catálogo enseña los sillones de frente y de tres cuartos. Ninguna foto enseña la **trasera**. Cada vez que
+un encuadre dejaba un sillón de espaldas, el modelo le puso lamas. No es que el modelo se equivoque: es que ahí
+**no hay dato**, y por la LEY 0 tampoco lo hay para aprobarlo.
+> **Regla: si un encuadre muestra una cara no fotografiada, se cambia el encuadre.** Y una toma no necesita
+> enseñar todas las piezas: el ambiente interior del Bolonia se resolvió con **solo el sofá y la mesa**, porque
+> el conjunto completo ya estaba en el packshot y en el ambiente exterior.
+
+---
+
+## LO QUE SALE EN LA FOTO Y NO SE VENDE
+
+> **Sergio, 20-08-2026:** *"O no dibujarlo, o dejar una nota en los textos de qué elemento es y que no se incluye.
+> Esto lo hacen muy bien en Zara Home y en Maisons du Monde: explicar con elegancia lo que no está incluido."*
+
+Los proveedores fotografían el **ambiente**, no el lote. Hevea llega a anotarlo en su propio catálogo —*"Set BOLONIA
+XL-8 (Sin reposapiés)"*— pero esa advertencia se queda en el PDF y **no viaja con la foto**. Si la copiamos tal cual,
+el cliente ve un reposapiés de 340 € que no le va a llegar.
+
+**Cómo se detecta.** En el PASO 0, comparar la foto con la **fórmula de composición** de la tarifa
+(`2XA+C+D`) y con la suma de PVP de las piezas. Si la cuenta cuadra sin una pieza que sale en la foto, esa pieza
+no entra. *(Bolonia XL-8: 1.740 + 840×2 + 470 = 3.890 € = PVP del set, al euro.)*
+
+**Dos salidas, y en este orden:**
+
+**1 · No dibujarla** — siempre que la imagen sea nuestra. Una foto que no la enseña no necesita explicarse. Es lo
+que se hizo en el Bolonia: las cinco imágenes van sin el reposapiés.
+
+**2 · Declararla en texto** — cuando la pieza aparece igualmente (foto del proveedor sin alternativa, o atrezzo que
+da vida a la escena). Se escribe como un dato más de la ficha, **nunca como una advertencia**:
+- Primero lo que **sí** entra: *"El conjunto incluye: sofá de 3 plazas, dos sillones y mesa de centro."*
+- Después, en una línea sobria: *"El reposapiés que aparece en las imágenes se vende por separado."*
+- Si esa pieza está en el catálogo, **se enlaza**: la nota deja de ser un descargo y pasa a ser una venta.
+- Para el atrezzo: *"Los elementos decorativos no están incluidos."*
+
+**Prohibido:** mayúsculas, negritas de alarma, "OJO", "IMPORTANTE", exclamaciones o letra pequeña al pie. Una
+tienda de lujo no se disculpa por lo que no vende: lo dice, y ofrece dónde comprarlo.
+
+---
+
 ## REPARAR SIN REGENERAR
 
 > Una imagen aprobada con un defecto pequeño **no se regenera**: regenerar cambia todo lo demás. *(Al rehacer

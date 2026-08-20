@@ -53,6 +53,16 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_BOLONIA_XL8 = {
+    "bolonia_xl8_2026-08": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Bolonia XL-8 de aluminio azul marino: sofa de 3 plazas, dos sillones y mesa de centro de listones, con cojines azul lavanda",
+        "02_ambiente_exterior_cadaques.jpg": "Conjunto de jardin azul marino en una terraza de laja de pizarra en Cadaques, entre cal blanca, postigos azules y buganvilla, con las barcas fondeadas en la bahia",
+        "03_ambiente_interior_casa_cadaques.jpg": "Sofa de 3 plazas y mesa de centro azul marino en una sala encalada de casa de pescadores, con vigas de madera, suelo de barro cocido y la ventana abierta al mar",
+        "04_detalle_brazo_patin.jpg": "Detalle de la esquina donde el brazo de aluminio azul marino mate se une con la pata delantera inclinada del sillon, junto al canto del cojin azul lavanda",
+        "05_medidas.jpg": "Medidas de cada pieza del conjunto: sofa de 3 plazas 200x84x104 cm, sillon 78x84x104 cm y mesa de centro 125x65x42 cm",
+    }),
+}
+
 GALERIAS_BRANDON_3P = {
     "brandon3p_2026-08": ("set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Conjunto de jardin de 3 plazas de aluminio antracita: sofa de 3 plazas, dos sillones y dos mesas nido, con tapiceria gris de jacquard tono sobre tono",
@@ -412,7 +422,7 @@ def publicar(slug, handle, alts):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BRANDON_3P
+    ACTIVA = GALERIAS_BOLONIA_XL8
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
             continue

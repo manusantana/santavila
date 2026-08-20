@@ -436,5 +436,20 @@
    "gid://shopify/MediaImage/71479724638532",
    "gid://shopify/MediaImage/71479724671300"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507127370052",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553376580",
+   "gid://shopify/MediaImage/70108304081220"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71481754747204",
+   "gid://shopify/MediaImage/71481754779972",
+   "gid://shopify/MediaImage/71481754812740",
+   "gid://shopify/MediaImage/71481754845508",
+   "gid://shopify/MediaImage/71481754878276"
+  ]
  }
 ]

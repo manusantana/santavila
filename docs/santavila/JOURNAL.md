@@ -13,6 +13,55 @@
 
 ---
 
+## 2026-08-20 (B) · BOLONIA XL-8 PUBLICADA — y una pieza que se vendía sin venderse
+
+**Ficha:** `set-jardin-3-plazas-contemporaneo-...-mesa-2` · 4.709 € · Hevea 557-010483. **PUBLICADA y verificada:**
+`ACTIVE · 5 media · READY · ≥2000 px · 0 alt vacíos`. Antes tenía **dos fotos que eran la misma imagen** duplicada
+en PNG y JPG, una sin alt.
+
+### El hallazgo del PASO 0
+
+La foto del proveedor incluye un **reposapiés que no entra en el lote**. Lo confirma el catálogo Hevea 2026,
+pág. 58, al pie de la foto: *"Set BOLONIA XL - 8 · Artic Lux · **(Sin reposapiés)**"*, con el `STANDARD XL - 5`
+listado como pieza aparte (340 €). Y la aritmética cuadra al euro: `2XA+C+D` → 1.740 + 840×2 + 470 = **3.890 €**,
+el PVP del set. Es la convención del catálogo: la misma nota aparece en el JAVA-8 y en el ARIZONA-18.
+
+**Ninguna de las cinco imágenes lo enseña.** Decisión de Sergio: fuera de las fotos **y** cross-sell del
+reposapiés desde la ficha.
+
+### Las cotas del proveedor se contradicen
+
+| | Catálogo PDF (ene) | Los 5 CSV (mar–may) |
+|---|---|---|
+| Sillón XL-1 | **78** × 84 × 104 | 80 × 84 × 104 |
+| Sofá 2 pl. XL-2 | **141** × 84 × 104 | 164 × 84 × 104 |
+| Sofá 3 pl. XL-3 | **200** × 84 × 104 | 215 × 84 × 104 |
+| Mesa BOLONIA-4 | 125 × 65 × 42 | 125 × 65 × 42 ✓ |
+
+Manda el catálogo: la **serie Bolonia Reclinable** de la misma página usa el mismo chasis **78/141/200**. Los CSV
+arrastran un error copiado entre ellos. **Pendiente:** los títulos publicados de las piezas sueltas dicen 215 y 80 cm.
+
+### Dos cosas que el modelo inventa (ya escritas en el SKILL)
+
+1. **Si le pides recolocar, redibuja — y al redibujar, inventa.** Cinco descartes con un *respaldo de lamas* que
+   el sillón no tiene. Swap de fondo puro y respeta la geometría.
+2. **La cara que el proveedor no fotografió, se la inventa.** Ninguna foto enseña la trasera del sillón; todo
+   encuadre que dejaba uno de espaldas volvía con lamas. El interior se resolvió con **solo el sofá y la mesa**.
+
+### La galería
+
+`01` packshot 4096 · `02` terraza de Cadaqués 4096 · `03` interior de casa de pescadores 3311×4096 ·
+`04` brazo y patín 4096 · `05` medidas 2400 (overlay determinista). Color de la tapicería contra la referencia
+(R−B −41,1): **−38,5 · −45,4 · −38,1 · −31,4**. El packshot se rehízo entero: el primero perdía 15 puntos de azul
+contra el fondo cálido.
+
+**Localización nueva: C8 Cadaqués (Cap de Creus)**, registrada. Coste: 22 créditos con los descartes.
+
+**Pendiente:** enlazar el reposapiés desde la ficha y añadir el texto de composición. Toca la descripción, y
+Sergio ha pedido dejar SEO/GEO para después.
+
+---
+
 ## 2026-08-20 · VUELTA ATRÁS EN EL BRANDON — la métrica no aprueba una foto
 
 **Qué pasó.** El 19-08 sustituí la galería del Brandon (la del 09-08, que estaba bien) por cinco imágenes
