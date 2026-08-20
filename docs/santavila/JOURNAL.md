@@ -13,6 +13,56 @@
 
 ---
 
+## 2026-08-20 (D) · FAMILIA BRANDON CERRADA — y 12 galerías que estaban hechas y sin publicar
+
+**Las cinco fichas Brandon, completas y verificadas:**
+
+| Ficha | € | media |
+|---|---|---|
+| Set 3 plazas | 5.249 | 6 |
+| Set 2 plazas | 4.679 | 5 |
+| Sofá 3 plazas | 2.349 | 5 |
+| Sofá 2 plazas | 1.779 | 5 |
+| Sillón | 1.189 | 5 |
+
+Todas `ACTIVE · READY · ≥2000 px · 0 alt vacíos`. Las tres últimas partían de **una sola imagen**.
+
+### El hallazgo: 12 galerías generadas y nunca publicadas
+
+Al cruzar `images_generated/` contra la tienda aparecieron **12 carpetas con galería completa cuyo
+handle sigue con 1 sola imagen**. Están pagadas y hechas. La del sofá 3 plazas Brandon explica por
+qué se quedaron fuera: su ambiente interior llevaba **copa de vino y uvas** (prohibido desde el
+03-08) y enseñaba **las mesas nido, que no entran** con el sofá suelto; su cuarta imagen era un
+**macro de tejido** (prohibido por §15). No pasaban el QA de hoy.
+
+**Se reparan, no se rehacen:** regenerar el interior costó 2 créditos y el macro se sustituyó por la
+imagen de medidas. Total de la ficha: **4 créditos** frente a los ~40 de hacerla de cero.
+
+### Coste real de cerrar la familia
+
+| | créditos |
+|---|---|
+| Sofá 3 plazas (reparación) | 4 |
+| Sofá 2 plazas (de cero, reutilizando hábitat y detalle) | 12 |
+| Sillón (de cero, con un descarte por localización) | 14 |
+
+**30 créditos para tres fichas** — 10 de media, frente a los 22–64 de una ficha aislada. Es la
+palanca de familia funcionando: el hábitat (azotea + mirador madrileños), el prompt del jacquard y
+el detalle de aluminio se reutilizan enteros.
+
+**Descarte de la sesión:** el primer ambiente del sillón salió con tejados de zinc y chimeneas de
+cerámica en hilera — **París, no Madrid**. Corregido pidiendo teja árabe y torre con chapitel.
+
+### Limpieza
+
+Fuera las carpetas `brandon/` y `brandon2p/`, sustituidas por las galerías publicadas hoy.
+`images_generated`: **344 → 209 MB** en la jornada.
+
+**Pendiente:** hay una ficha en DRAFT con el mismo SKU `557-010884` del set de 2 plazas, a 349,90 €.
+Es un duplicado del catálogo, no una galería. Decisión de Sergio.
+
+---
+
 ## 2026-08-20 (C) · PUNTO DE INFLEXIÓN — el auditor, la limpieza y el coste de terminar
 
 **Brandon 7 publicado** (`set-jardin-aluminio-2-plazas-...`, 4.679 €): pasa de **1 imagen a 5**.

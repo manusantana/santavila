@@ -32,33 +32,46 @@ def _font(size):
 INK=(35,37,29); GRIS=(112,114,106); LIN=(203,196,184); BONE=(242,238,230)
 
 def _encuadre(src, W, M, bbox=None):
-    """Contorno del producto. Reutiliza el detector por NEUTRALIDAD de overlay_medidas_producto,
-    que ya distingue producto (gris neutro) de fondo y sombra (calidos) — detectarlo por
-    luminancia se tragaba el suelo entero. Si el recorte sale demasiado alto, se quita aire POR
-    ARRIBA: abajo estan las patas y su sombra de contacto."""
-    _font(10)                      # fuerza la carga del modulo del overlay
-    if bbox: x0,y0,x1,y1 = bbox
+    """Contorno del producto sobre fondo claro, por OSCURIDAD relativa al fondo: vale tanto con
+    fondo bone como con suelo gris, que es donde fallaban los detectores anteriores.
+
+    Si el recorte sale mas alto que el 45 % del lienzo, el aire se quita POR ARRIBA — abajo estan
+    las patas y su sombra de contacto. Y si aun asi el producto quedaria cortado, se avisa: eso
+    significa que el bbox esta mal y hay que pasarlo a mano con bbox=(x0,y0,x1,y1).
+    """
+    a = np.asarray(src).astype(float); L = a.mean(axis=2)
+    fondo = L[100:300, 100:300].mean()
+    osc = L < fondo - 30
+    if bbox:
+        x0, y0, x1, y1 = bbox
     else:
-        x0,y0,x1,y1 = _ov.detectar_bbox(src, step=6)
-    m = 130
-    x0,y0 = max(0,x0-m), max(0,y0-m)
-    x1,y1 = min(src.width,x1+m), min(src.height,y1+m)
-    disp = W - 2*M; maxH = int(W*0.45)
-    if (y1-y0)*disp/(x1-x0) > maxH:
-        y0 = max(0, y1 - int((x1-x0)*maxH/disp))
-    return src.crop((x0,y0,x1,y1))
+        rows, cols = osc.sum(axis=1), osc.sum(axis=0)
+        ys = np.where(rows > 40)[0]; xs = np.where(cols > 40)[0]
+        if not len(ys) or not len(xs):
+            raise ValueError("no se detecta el producto: pasa bbox=(x0,y0,x1,y1)")
+        x0, y0, x1, y1 = xs.min(), ys.min(), xs.max(), ys.max()
+    m = 120
+    x0, y0 = max(0, x0-m), max(0, y0-m)
+    x1, y1 = min(src.width, x1+m), min(src.height, y1+m)
+    return src.crop((x0, y0, x1, y1))
 
 def ficha_medidas(packshot, filas, incluye, salida, nota_pie="ancho x fondo x alto", preview=None, bbox=None):
     src = Image.open(packshot).convert("RGB")
     W, M = 2400, 110
     pack = _encuadre(src, W, M, bbox)
-    ph = int((W-2*M) * pack.height / pack.width)
-    pack = pack.resize((W-2*M, ph), Image.LANCZOS)
+    # La foto respeta su proporcion: limitada por el ancho util y por el 45 % del alto del lienzo.
+    # Una pieza alta (un sillon) ocupa menos ancho y se centra, en vez de quedar recortada.
+    disp, maxH = W - 2*M, int(W*0.45)
+    pw, ph = disp, int(disp * pack.height / pack.width)
+    if ph > maxH:
+        ph, pw = maxH, int(maxH * pack.width / pack.height)
+    pack = pack.resize((pw, ph), Image.LANCZOS)
+    px = M + (disp - pw)//2
     total = 110 + ph + 120 + 48 + len(filas)*112 + 60 + 118 + 76 + 60
     y = max(90, (W-total)//2)
     lz = Image.new("RGB",(W,W),BONE); d = ImageDraw.Draw(lz)
     d.text((M,y),"MEDIDAS DE CADA PIEZA",font=_font(48),fill=INK); y += 110
-    lz.paste(pack,(M,y)); y += ph + 120
+    lz.paste(pack,(px,y)); y += ph + 120
     d.line([(M,y),(W-M,y)],fill=INK,width=3); y += 48
     for nombre, cota in filas:
         d.text((M,y),nombre,font=_font(46),fill=INK)

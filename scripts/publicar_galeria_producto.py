@@ -53,6 +53,23 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_BRANDON_PIEZAS = {
+    "brandon2p_sofa": ("sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm", {
+        "01_packshot.jpg": "Sofa de terraza Brandon de 2 plazas en aluminio antracita con tapiceria gris de jacquard, 166x90x90 cm, sobre fondo neutro",
+        "02_ambiente_azotea_madrid.jpg": "Sofa de 2 plazas gris en una azotea de Madrid, con muro de piedra y los tejados de pizarra con buhardillas al fondo, y una manta de lino sobre el brazo",
+        "03_ambiente_mirador.jpg": "Sofa de 2 plazas gris en el mirador acristalado de un piso madrileno, con molduras, suelo de terrazo y los tejados de teja y las torres de la ciudad al fondo",
+        "04_detalle_aluminio.jpg": "Detalle del codo del tubo de aluminio antracita del sofa Brandon, con su lacado mate granulado y el tejido gris desenfocado detras",
+        "05_medidas.jpg": "Medidas del sofa de 2 plazas Brandon: 166 cm de ancho por 90 de fondo y 90 de alto. Se vende solo el sofa",
+    }),
+    "brandon1_sillon": ("sillon-exterior-aluminio-estilo-envolvente-9890-cm", {
+        "01_packshot.jpg": "Sillon de exterior Brandon en aluminio antracita con tapiceria gris de jacquard y brazos envolventes, 98x90x90 cm, sobre fondo neutro",
+        "02_ambiente_azotea_madrid.jpg": "Sillon gris en una azotea del Madrid antiguo, con parapeto encalado y los tejados de teja arabe y una torre con chapitel de pizarra al fondo",
+        "03_ambiente_mirador.jpg": "Sillon gris en el mirador acristalado de un piso madrileno, con molduras, suelo de terrazo, un geranio en maceta de barro y los tejados de la ciudad al fondo",
+        "04_detalle_aluminio.jpg": "Detalle del codo del tubo de aluminio antracita del sillon Brandon, con su lacado mate granulado y el tejido gris desenfocado detras",
+        "05_medidas.jpg": "Medidas del sillon Brandon: 98 cm de ancho por 90 de fondo y 90 de alto. Se vende solo el sillon",
+    }),
+}
+
 GALERIAS_BRANDON_7 = {
     "brandon7_2026-08": ("set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
         "01_packshot.jpg": "Conjunto de jardin Brandon 7 de aluminio antracita: sofa de 2 plazas, dos sillones y dos mesas de centro redondas, con tapiceria gris de jacquard",
@@ -429,10 +446,38 @@ def publicar(slug, handle, alts):
     return {"handle": handle, "producto": p["id"], "borrados": viejos, "nuevos": nuevos}
 
 
+REG = os.path.join(ROOT, "docs", "santavila", "_verificaciones.json")
+
+
+def anotar_verificacion(entradas):
+    """Deja constancia de QUE se publico y con que caracteristicas medibles.
+
+    Nace del 20-08-2026. Sergio: "no puede ser que tengamos que volver atras". Cada vez que
+    aparecia un criterio nuevo habia que ir a mirar a mano las fichas ya publicadas, porque no
+    quedaba registro. Con este fichero, un criterio nuevo se comprueba sobre el registro (o con
+    scripts/auditar_galerias.py contra la tienda) en vez de a ojo, ficha por ficha.
+    """
+    from PIL import Image
+    prev = json.load(open(REG)) if os.path.exists(REG) else {}
+    for e in entradas:
+        imgs = []
+        for f in e["ficheros"]:
+            ruta = os.path.join(ROOT, "images_generated", e["slug"], f)
+            if not os.path.exists(ruta):
+                continue
+            w, h = Image.open(ruta).size
+            imgs.append({"fichero": f, "px": f"{w}x{h}", "mp": round(w*h/1e6, 1),
+                         "alt_len": len(e["alts"].get(f, ""))})
+        prev[e["handle"]] = {"fecha": e["fecha"], "carpeta": e["slug"],
+                             "n_imagenes": len(imgs), "imagenes": imgs}
+    json.dump(prev, open(REG, "w"), ensure_ascii=False, indent=1)
+    print(f"\nregistro de verificacion -> {REG}")
+
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BRANDON_7
+    ACTIVA = GALERIAS_BRANDON_PIEZAS
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

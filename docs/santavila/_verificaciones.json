@@ -99,5 +99,111 @@
     "mp": 5.8
    }
   ]
+ },
+ "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "sofa3p_brandon",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "02_ambiente_exterior_azotea_madrid.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "03_ambiente_interior_mirador.jpg",
+    "px": "3311x4096",
+    "mp": 13.6
+   },
+   {
+    "fichero": "04_detalle_perfil.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8
+   }
+  ]
+ },
+ "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "brandon2p_sofa",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 122
+   },
+   {
+    "fichero": "02_ambiente_azotea_madrid.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 151
+   },
+   {
+    "fichero": "03_ambiente_mirador.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 157
+   },
+   {
+    "fichero": "04_detalle_aluminio.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 105
+   }
+  ]
+ },
+ "sillon-exterior-aluminio-estilo-envolvente-9890-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "brandon1_sillon",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 133
+   },
+   {
+    "fichero": "02_ambiente_azotea_madrid.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 140
+   },
+   {
+    "fichero": "03_ambiente_mirador.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 157
+   },
+   {
+    "fichero": "04_detalle_aluminio.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 132
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 96
+   }
+  ]
  }
 }

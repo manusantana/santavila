@@ -465,5 +465,33 @@
    "gid://shopify/MediaImage/71481930416452",
    "gid://shopify/MediaImage/71481930449220"
   ]
+ },
+ {
+  "handle": "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm",
+  "producto": "gid://shopify/Product/15507125305668",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549116740"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71482078593348",
+   "gid://shopify/MediaImage/71482078626116",
+   "gid://shopify/MediaImage/71482078658884",
+   "gid://shopify/MediaImage/71482078691652",
+   "gid://shopify/MediaImage/71482078724420"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-aluminio-estilo-envolvente-9890-cm",
+  "producto": "gid://shopify/Product/15507125240132",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549083972"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71482079314244",
+   "gid://shopify/MediaImage/71482079347012",
+   "gid://shopify/MediaImage/71482079379780",
+   "gid://shopify/MediaImage/71482079412548",
+   "gid://shopify/MediaImage/71482079445316"
+  ]
  }
 ]
