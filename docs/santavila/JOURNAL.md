@@ -46,8 +46,9 @@ comparar y sin preguntar.
   recurso. Línea roja: si tapar el defecto obliga a repintar geometría del producto, no se repara.
 - **Sustituir una imagen ya aprobada** exige comparación directa a tamaño real y el ok de Sergio.
 
-**Estado:** los cinco ficheros están listos en `images_generated/brandon3p_2026-08/` y el dry-run está limpio.
-**La ficha sigue mostrando los collages: falta el ok para el `--apply`.**
+**Estado: PUBLICADA y verificada** con el ok de Sergio. `ACTIVE · 5 media · todas READY · ≥2000 px · 0 alt
+vacíos · pos 0 = packshot`. Los cinco media del A1 se borraron **después** de que los nuevos llegaran a READY;
+sus IDs quedan en `images_generated/_backup_media_borrados.json`.
 
 ---
 

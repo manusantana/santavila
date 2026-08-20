@@ -418,5 +418,23 @@
    "gid://shopify/MediaImage/71472995828036",
    "gid://shopify/MediaImage/71472995860804"
   ]
+ },
+ {
+  "handle": "set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125469508",
+  "borrados": [
+   "gid://shopify/MediaImage/71472995729732",
+   "gid://shopify/MediaImage/71472995762500",
+   "gid://shopify/MediaImage/71472995795268",
+   "gid://shopify/MediaImage/71472995828036",
+   "gid://shopify/MediaImage/71472995860804"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71479724540228",
+   "gid://shopify/MediaImage/71479724572996",
+   "gid://shopify/MediaImage/71479724605764",
+   "gid://shopify/MediaImage/71479724638532",
+   "gid://shopify/MediaImage/71479724671300"
+  ]
  }
 ]
