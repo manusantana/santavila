@@ -53,6 +53,16 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_BRANDON_7 = {
+    "brandon7_2026-08": ("set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Brandon 7 de aluminio antracita: sofa de 2 plazas, dos sillones y dos mesas de centro redondas, con tapiceria gris de jacquard",
+        "02_ambiente_la_concha.jpg": "Conjunto de jardin antracita en una terraza de piedra sobre la bahia de La Concha en San Sebastian, con la isla de Santa Clara y el monte Urgull al fondo",
+        "03_ambiente_interior_donostia.jpg": "Sofa de 2 plazas y las dos mesas redondas en una sala de piso donostiarra con molduras, suelo de espiga de roble y balcon abierto a la bahia",
+        "04_detalle_aluminio.jpg": "Detalle del codo del tubo de aluminio antracita del sillon, con su lacado mate granulado y el tejido gris desenfocado detras",
+        "05_medidas.jpg": "Medidas de cada pieza: sofa de 2 plazas 166x90x90 cm, sillon 98x90x90 cm y mesas de centro de 80 y 60 cm de diametro por 40 cm de alto",
+    }),
+}
+
 GALERIAS_BOLONIA_XL8 = {
     "bolonia_xl8_2026-08": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2", {
         "01_packshot.jpg": "Conjunto de jardin Bolonia XL-8 de aluminio azul marino: sofa de 3 plazas, dos sillones y mesa de centro de listones, con cojines azul lavanda",
@@ -422,7 +432,8 @@ def publicar(slug, handle, alts):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BOLONIA_XL8
+    ACTIVA = GALERIAS_BRANDON_7
+    registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
             continue
@@ -430,8 +441,13 @@ if __name__ == "__main__":
             r = publicar(slug, handle, alts)
             if r:
                 backup.append(r)
+                registro.append({"handle": handle, "slug": slug, "alts": alts,
+                                 "ficheros": list(alts.keys()),
+                                 "fecha": time.strftime("%Y-%m-%d")})
         except Exception as e:
             print(f"   ✗ ERROR en {slug}: {e}")
+    if registro:
+        anotar_verificacion(registro)
     if backup:
         path = os.path.join(ROOT, "images_generated", "_backup_media_borrados.json")
         prev = json.load(open(path)) if os.path.exists(path) else []

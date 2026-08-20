@@ -451,5 +451,19 @@
    "gid://shopify/MediaImage/71481754845508",
    "gid://shopify/MediaImage/71481754878276"
   ]
+ },
+ {
+  "handle": "set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125403972",
+  "borrados": [
+   "gid://shopify/MediaImage/71291128316228"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71481930318148",
+   "gid://shopify/MediaImage/71481930350916",
+   "gid://shopify/MediaImage/71481930383684",
+   "gid://shopify/MediaImage/71481930416452",
+   "gid://shopify/MediaImage/71481930449220"
+  ]
  }
 ]

@@ -13,6 +13,45 @@
 
 ---
 
+## 2026-08-20 (C) · PUNTO DE INFLEXIÓN — el auditor, la limpieza y el coste de terminar
+
+**Brandon 7 publicado** (`set-jardin-aluminio-2-plazas-...`, 4.679 €): pasa de **1 imagen a 5**.
+`ACTIVE · READY · 0 alt vacíos`. Localización nueva **C9 La Concha, San Sebastián**.
+Y al **Brandon 8** se le ha añadido la imagen de medidas que le faltaba (pasa a 6), con las cotas
+del catálogo que aparecieron al trabajar su ficha hermana: sofá 220×90×90, sillón 98×90×90,
+mesas Ø80 y Ø60 × 40.
+
+### La ley del auditor
+
+Sergio: *"no puede ser que tengamos que volver atrás"*. La causa real: **lo publicado no dejaba
+rastro de qué se le verificó**. Ahora:
+- `scripts/auditar_galerias.py` recorre las **171 fichas activas** y aplica todos los criterios.
+- `docs/santavila/_verificaciones.json` lo escribe el publicador solo, en cada publicación.
+- **Regla:** un criterio que no está en el auditor no existe. Primero se programa y se pasa sobre
+  todo el catálogo; después se sigue con la ficha en curso.
+
+### Auditoría del catálogo
+
+171 activas · 55 con galería completa · **79 con una sola imagen** (88.099 €) · 143 con alguna
+imagen bajo 2000 px · 80 con algún alt vacío. Y **cuatro ceros**: sin imagen, duplicadas dentro de
+la ficha, media no-READY y fotos compartidas entre fichas. Esa deuda ya estaba saldada.
+
+### Limpieza
+
+`images_generated` pasa de **344 MB a 222 MB**: 37 ficheros de trabajo y rechazados, 13 `.DS_Store`
+y 8 PNG redundantes que ya tenían su JPG idéntico. No se ha tocado ninguna galería publicada ni la
+carpeta `brand` (dos imágenes de marca, no basura).
+
+### Coste de terminar
+
+Medido: **22 créditos** una ficha de tela lisa (Bolonia), **64** una con jacquard (Brandon). Lo
+manda el material. ~142 fichas pendientes × ~40 = **~5.700 créditos**, o **~3.900** trabajando por
+familia en vez de por ticket. Saldo actual 921.
+
+Todo el detalle en [`PUNTO_DE_INFLEXION_2026-08-20.md`](PUNTO_DE_INFLEXION_2026-08-20.md).
+
+---
+
 ## 2026-08-20 (B) · BOLONIA XL-8 PUBLICADA — y una pieza que se vendía sin venderse
 
 **Ficha:** `set-jardin-3-plazas-contemporaneo-...-mesa-2` · 4.709 € · Hevea 557-010483. **PUBLICADA y verificada:**

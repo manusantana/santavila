@@ -1,0 +1,2194 @@
+{
+ "total_activas": 171,
+ "con_galeria_completa": 55,
+ "fallos": {
+  "una_sola_imagen": [
+   {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa",
+    "precio": 4195.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa",
+    "titulo": "Set jardín bicolor 2 plazas · bicolor | sofá 2 plazas + 2 sillones + mesa",
+    "precio": 3965.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa",
+    "precio": 3819.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 3",
+    "precio": 3449.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 4",
+    "precio": 3140.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 3",
+    "precio": 3015.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
+    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 5",
+    "precio": 2765.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa",
+    "precio": 2645.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa 2",
+    "precio": 2405.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
+    "titulo": "Sofá terraza aluminio 3 plazas · estilo contemporáneo | 220×90 cm",
+    "precio": 2349.0,
+    "n": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 4",
+    "precio": 2349.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 215×104 cm",
+    "precio": 2109.0,
+    "n": 1
+   },
+   {
+    "handle": "pergola-aluminio-para-jardin-300300250-cm",
+    "titulo": "Pérgola aluminio para jardín · 300×300×250 cm",
+    "precio": 2045.0,
+    "n": 1
+   },
+   {
+    "handle": "balancin-jardin-exterior-148194-cm",
+    "titulo": "Balancín jardín exterior · 148×194 cm",
+    "precio": 1805.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm",
+    "titulo": "Sofá terraza aluminio 2 plazas · estilo contemporáneo | 166×90 cm",
+    "precio": 1779.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×83 cm",
+    "precio": 1775.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm",
+    "titulo": "Sofá terraza bicolor 3 plazas · estilo bicolor | 200×76 cm",
+    "precio": 1685.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
+    "precio": 1580.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-19475-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 194×75 cm",
+    "precio": 1485.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 130×90 cm",
+    "precio": 1455.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-estilizado-14383-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
+    "precio": 1399.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 162×69 cm",
+    "precio": 1389.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-bicolor-2-plazas-estilo-bicolor-14076-cm",
+    "titulo": "Sofá terraza bicolor 2 plazas · estilo bicolor | 140×76 cm",
+    "precio": 1365.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-212100-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 212×100 cm",
+    "precio": 1205.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 188×115 cm",
+    "precio": 1199.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-aluminio-estilo-envolvente-9890-cm",
+    "titulo": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
+    "precio": 1189.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 196×85 cm",
+    "precio": 1175.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 190×85 cm",
+    "precio": 1175.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-envolvente-13575-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo envolvente | 135×75 cm",
+    "precio": 1169.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-moderno-18570-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo moderno | 185×70 cm",
+    "precio": 1150.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-17578-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 175×78 cm",
+    "precio": 1145.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-moderno-18770-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo moderno | 187×70 cm",
+    "precio": 1029.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-80104-cm",
+    "titulo": "Sillón exterior · estilo elegante | 80×104 cm",
+    "precio": 1019.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-estilizado-7069-cm",
+    "titulo": "Sillón exterior · estilo estilizado | 70×69 cm",
+    "precio": 975.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-7783-cm",
+    "titulo": "Sillón exterior · estilo versátil | 77×83 cm",
+    "precio": 959.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 145×100 cm",
+    "precio": 950.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-bicolor-estilo-bicolor-7376-cm",
+    "titulo": "Sillón exterior bicolor · estilo bicolor | 73×76 cm",
+    "precio": 945.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13785-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 137×85 cm",
+    "precio": 909.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-elegante-15085-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo elegante | 150×85 cm",
+    "precio": 909.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-moderno-128115-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo moderno | 128×115 cm",
+    "precio": 909.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 120×78 cm",
+    "precio": 875.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-elegante-13170-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo elegante | 131×70 cm",
+    "precio": 845.0,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-135-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 135 cm · altura 40 cm",
+    "precio": 835.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-envolvente-7582-cm",
+    "titulo": "Sillón exterior · estilo envolvente | 75×82 cm",
+    "precio": 795.0,
+    "n": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 133×70 cm",
+    "precio": 715.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-7685-cm",
+    "titulo": "Sillón exterior · estilo versátil | 76×85 cm",
+    "precio": 645.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-76100-cm",
+    "titulo": "Sillón exterior · estilo versátil | 76×100 cm",
+    "precio": 599.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-6470-cm",
+    "titulo": "Sillón exterior · estilo versátil | 64×70 cm",
+    "precio": 589.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-moderno-7085-cm",
+    "titulo": "Sillón exterior · estilo moderno | 70×85 cm",
+    "precio": 585.0,
+    "n": 1
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-10090-cm",
+    "titulo": "Mesa comedor exterior HPL 100×90 cm",
+    "precio": 585.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-contemporaneo-68115-cm",
+    "titulo": "Sillón exterior · estilo contemporáneo | 68×115 cm",
+    "precio": 559.0,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-6578-cm",
+    "titulo": "Sillón exterior · estilo elegante | 65×78 cm",
+    "precio": 515.0,
+    "n": 1
+   },
+   {
+    "handle": "reposapies-exterior-bicolor-704544-cm",
+    "titulo": "Reposapiés exterior bicolor · 70×45×44 cm",
+    "precio": 509.0,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm",
+    "titulo": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
+    "precio": 505.0,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-41-cm",
+    "titulo": "Mesa de centro exterior 120 cm · altura 41 cm",
+    "precio": 449.9,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-urbano-6670-cm",
+    "titulo": "Sillón exterior · estilo urbano | 66×70 cm",
+    "precio": 449.9,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior 120 cm · altura 40 cm 2",
+    "precio": 441.95,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior HPL 120 cm · altura 40 cm 2",
+    "precio": 441.95,
+    "n": 1
+   },
+   {
+    "handle": "banco-de-exterior-150-cm",
+    "titulo": "Banco de exterior 150 cm",
+    "precio": 423.95,
+    "n": 1
+   },
+   {
+    "handle": "reposapies-exterior-734640-cm",
+    "titulo": "Reposapiés exterior · 73×46×40 cm",
+    "precio": 387.95,
+    "n": 1
+   },
+   {
+    "handle": "banco-de-exterior-108-cm",
+    "titulo": "Banco de exterior 108 cm",
+    "precio": 381.95,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-125-cm-altura-38-cm",
+    "titulo": "Mesa de centro exterior 125 cm · altura 38 cm",
+    "precio": 375.95,
+    "n": 1
+   },
+   {
+    "handle": "reposapies-exterior-855043-cm",
+    "titulo": "Reposapiés exterior · 85×50×43 cm",
+    "precio": 349.9,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-41-cm",
+    "titulo": "Mesa de centro exterior 90 cm · altura 41 cm",
+    "precio": 338.95,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm 2",
+    "precio": 332.95,
+    "n": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-90-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 90 cm · altura 40 cm",
+    "precio": 332.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-686cc405",
+    "titulo": "Funda protectora para tumbona exterior",
+    "precio": 329.95,
+    "n": 1
+   },
+   {
+    "handle": "reposapies-exterior-605040-cm",
+    "titulo": "Reposapiés exterior · 60×50×40 cm",
+    "precio": 326.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-6f6d4953",
+    "titulo": "Funda protectora para sofá exterior",
+    "precio": 227.95,
+    "n": 1
+   },
+   {
+    "handle": "set-losas-cemento-para-base-de-parasol",
+    "titulo": "Set losas cemento para base de parasol",
+    "precio": 217.95,
+    "n": 1
+   },
+   {
+    "handle": "silla-exterior-estilo-estilizado",
+    "titulo": "Silla exterior · estilo estilizado",
+    "precio": 199.95,
+    "n": 1
+   },
+   {
+    "handle": "reposapies-exterior-504540-cm",
+    "titulo": "Reposapiés exterior · 50×45×40 cm",
+    "precio": 187.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a",
+    "titulo": "Taburete exterior aluminio · tejido Balliu · Etna",
+    "precio": 186.95,
+    "n": 1
+   },
+   {
+    "handle": "silla-exterior-estilo-contemporaneo",
+    "titulo": "Silla exterior · estilo contemporáneo",
+    "precio": 175.95,
+    "n": 1
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-58100-cm",
+    "titulo": "Sillón exterior · estilo versátil | 58×100 cm",
+    "precio": 114.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-base-de-parasol-3ee8b72d",
+    "titulo": "Base de hormigón para parasol",
+    "precio": 99.9,
+    "n": 1
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-340b2844",
+    "titulo": "Funda protectora exterior",
+    "precio": 84.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+    "titulo": "Silla exterior resina · Venus",
+    "precio": 65.95,
+    "n": 1
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-acrilico-a1c16324",
+    "titulo": "Funda protectora exterior acrílico",
+    "precio": 36.95,
+    "n": 1
+   }
+  ],
+  "baja_resolucion": [
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 2",
+    "precio": 4345.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 977
+   },
+   {
+    "handle": "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centro",
+    "precio": 4225.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1444
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 5",
+    "precio": 4175.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 2",
+    "precio": 3825.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 981
+   },
+   {
+    "handle": "set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior · sofisticado | sofá de esquina + mesa de centro",
+    "precio": 3819.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1194
+   },
+   {
+    "handle": "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior HPL · elegante | sofá de esquina + mesa de centro",
+    "precio": 3795.0,
+    "n": 3,
+    "cuantas": 3,
+    "min_px": 1371
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa",
+    "precio": 3540.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1114
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 3",
+    "precio": 3449.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1562
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 4",
+    "precio": 3140.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 978
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 3",
+    "precio": 3015.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 996
+   },
+   {
+    "handle": "banco-jardin-con-mesa-integrada-220-cm",
+    "titulo": "Banco jardín con mesa integrada · 220 cm",
+    "precio": 2899.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
+    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 5",
+    "precio": 2765.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 875
+   },
+   {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4",
+    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 4",
+    "precio": 2755.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1333
+   },
+   {
+    "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa",
+    "precio": 2645.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de centro",
+    "precio": 2579.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1119
+   },
+   {
+    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa",
+    "precio": 2535.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1333
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3",
+    "precio": 2355.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1287
+   },
+   {
+    "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
+    "titulo": "Sofá terraza aluminio 3 plazas · estilo contemporáneo | 220×90 cm",
+    "precio": 2349.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 2",
+    "precio": 2239.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 215×104 cm",
+    "precio": 2109.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab",
+    "titulo": "Mesa extensible exterior aluminio · HPL · Java",
+    "precio": 2019.0,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 614
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18590-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×90 cm",
+    "precio": 1840.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm",
+    "titulo": "Sofá terraza aluminio 2 plazas · estilo contemporáneo | 166×90 cm",
+    "precio": 1779.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×83 cm",
+    "precio": 1775.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm",
+    "titulo": "Sofá terraza bicolor 3 plazas · estilo bicolor | 200×76 cm",
+    "precio": 1685.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-mesa-exterior-140-18090-cm-e4ec7d7c",
+    "titulo": "Mesa extensible exterior aluminio · HPL · Atlanta",
+    "precio": 1670.0,
+    "n": 9,
+    "cuantas": 9,
+    "min_px": 600
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
+    "precio": 1580.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1",
+    "titulo": "Sofá exterior aluminio · estilo contemporáneo | 77 cm",
+    "precio": 1560.0,
+    "n": 12,
+    "cuantas": 12,
+    "min_px": 614
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19882-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 198×82 cm",
+    "precio": 1489.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-19475-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 194×75 cm",
+    "precio": 1485.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 130×90 cm",
+    "precio": 1455.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-estilizado-14383-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
+    "precio": 1399.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 162×69 cm",
+    "precio": 1389.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-bicolor-2-plazas-estilo-bicolor-14076-cm",
+    "titulo": "Sofá terraza bicolor 2 plazas · estilo bicolor | 140×76 cm",
+    "precio": 1365.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-212100-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 212×100 cm",
+    "precio": 1205.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 188×115 cm",
+    "precio": 1199.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-aluminio-estilo-envolvente-9890-cm",
+    "titulo": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
+    "precio": 1189.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 196×85 cm",
+    "precio": 1175.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 190×85 cm",
+    "precio": 1175.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-envolvente-13575-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo envolvente | 135×75 cm",
+    "precio": 1169.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-moderno-18570-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo moderno | 185×70 cm",
+    "precio": 1150.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-sofisticado-17578-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo sofisticado | 175×78 cm",
+    "precio": 1145.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 150×82 cm",
+    "precio": 1055.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1",
+    "titulo": "Parasol redondo exterior · aluminio Ø300 cm · Garbí",
+    "precio": 1049.0,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 921
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7",
+    "titulo": "Parasol cuadrado exterior · aluminio 300×300 cm · Brisa",
+    "precio": 1049.0,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-moderno-18770-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo moderno | 187×70 cm",
+    "precio": 1029.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-6590-cm",
+    "titulo": "Sillón exterior · estilo elegante | 65×90 cm",
+    "precio": 1019.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-80104-cm",
+    "titulo": "Sillón exterior · estilo elegante | 80×104 cm",
+    "precio": 1019.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268",
+    "titulo": "Sofá exterior aluminio · estilo elegante | 62 cm",
+    "precio": 995.0,
+    "n": 14,
+    "cuantas": 14,
+    "min_px": 614
+   },
+   {
+    "handle": "sillon-exterior-estilo-estilizado-7069-cm",
+    "titulo": "Sillón exterior · estilo estilizado | 70×69 cm",
+    "precio": 975.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-7783-cm",
+    "titulo": "Sillón exterior · estilo versátil | 77×83 cm",
+    "precio": 959.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 145×100 cm",
+    "precio": 950.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-bicolor-estilo-bicolor-7376-cm",
+    "titulo": "Sillón exterior bicolor · estilo bicolor | 73×76 cm",
+    "precio": 945.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-8080-cm-ef580ae2",
+    "titulo": "Mesa exterior aluminio · HPL · Brunei",
+    "precio": 945.0,
+    "n": 30,
+    "cuantas": 30,
+    "min_px": 614
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13785-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 137×85 cm",
+    "precio": 909.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-elegante-15085-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo elegante | 150×85 cm",
+    "precio": 909.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-moderno-128115-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo moderno | 128×115 cm",
+    "precio": 909.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 120×78 cm",
+    "precio": 875.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-elegante-13170-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo elegante | 131×70 cm",
+    "precio": 845.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-135-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 135 cm · altura 40 cm",
+    "precio": 835.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-estilo-envolvente-7582-cm",
+    "titulo": "Sillón exterior · estilo envolvente | 75×82 cm",
+    "precio": 795.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-13590-cm",
+    "titulo": "Mesa comedor exterior HPL",
+    "precio": 720.0,
+    "n": 3,
+    "cuantas": 3,
+    "min_px": 1024
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 120 cm · altura 40 cm",
+    "precio": 715.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 133×70 cm",
+    "precio": 715.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-15090-cm",
+    "titulo": "Mesa comedor exterior HPL 150×90 cm",
+    "precio": 669.0,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1565
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-7685-cm",
+    "titulo": "Sillón exterior · estilo versátil | 76×85 cm",
+    "precio": 645.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9",
+    "titulo": "Tumbona exterior aluminio · con ruedas 58 cm · Iris",
+    "precio": 629.0,
+    "n": 7,
+    "cuantas": 7,
+    "min_px": 614
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-76100-cm",
+    "titulo": "Sillón exterior · estilo versátil | 76×100 cm",
+    "precio": 599.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-6470-cm",
+    "titulo": "Sillón exterior · estilo versátil | 64×70 cm",
+    "precio": 589.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24",
+    "titulo": "Tumbona exterior aluminio · con/sin ruedas · Olimpia",
+    "precio": 589.0,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 600
+   },
+   {
+    "handle": "sillon-exterior-estilo-moderno-7085-cm",
+    "titulo": "Sillón exterior · estilo moderno | 70×85 cm",
+    "precio": 585.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-10090-cm",
+    "titulo": "Mesa comedor exterior HPL 100×90 cm",
+    "precio": 585.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1738
+   },
+   {
+    "handle": "mesa-de-centro-exterior-125-cm-altura-42-cm",
+    "titulo": "Mesa de centro exterior 125 cm · altura 42 cm",
+    "precio": 569.0,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "sillon-exterior-estilo-contemporaneo-68115-cm",
+    "titulo": "Sillón exterior · estilo contemporáneo | 68×115 cm",
+    "precio": 559.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-mesa-alta-exterior-hpl-94512eab",
+    "titulo": "Mesa alta exterior · aluminio HPL 110 cm",
+    "precio": 529.0,
+    "n": 5,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-6578-cm",
+    "titulo": "Sillón exterior · estilo elegante | 65×78 cm",
+    "precio": 515.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "reposapies-exterior-bicolor-704544-cm",
+    "titulo": "Reposapiés exterior bicolor · 70×45×44 cm",
+    "precio": 509.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm",
+    "titulo": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
+    "precio": 505.0,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-d08586c1",
+    "titulo": "Tumbona exterior aluminio alta · acceso fácil · Etna Alta",
+    "precio": 496.95,
+    "n": 7,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6",
+    "titulo": "Mesa exterior aluminio · HPL · Altea",
+    "precio": 480.95,
+    "n": 9,
+    "cuantas": 9,
+    "min_px": 614
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-41-cm",
+    "titulo": "Mesa de centro exterior 120 cm · altura 41 cm",
+    "precio": 449.9,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "sillon-exterior-estilo-urbano-6670-cm",
+    "titulo": "Sillón exterior · estilo urbano | 66×70 cm",
+    "precio": 449.9,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-36870d09",
+    "titulo": "Tumbona exterior aluminio · Etna",
+    "precio": 449.9,
+    "n": 11,
+    "cuantas": 11,
+    "min_px": 614
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior 120 cm · altura 40 cm 2",
+    "precio": 441.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior HPL 120 cm · altura 40 cm 2",
+    "precio": 441.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "reposapies-exterior-855043-cm-2",
+    "titulo": "Reposapiés exterior · 85×50×43 cm",
+    "precio": 399.9,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 540
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-28ff014d",
+    "titulo": "Tumbona exterior resina · Noa",
+    "precio": 399.9,
+    "n": 9,
+    "cuantas": 9,
+    "min_px": 921
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-7070-cm-724b0db0",
+    "titulo": "Mesa exterior aluminio · HPL · Capri",
+    "precio": 399.9,
+    "n": 30,
+    "cuantas": 22,
+    "min_px": 574
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-acrilico-236bd5f0",
+    "titulo": "Parasol exterior acrílico · Ø200 cm · Pamela acrílico",
+    "precio": 399.9,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-acrilico-c8dd492d",
+    "titulo": "Parasol exterior acrílico · Ø200/Ø250 cm · Ocean acrílico",
+    "precio": 399.9,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "reposapies-exterior-734640-cm",
+    "titulo": "Reposapiés exterior · 73×46×40 cm",
+    "precio": 387.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "banco-de-exterior-108-cm",
+    "titulo": "Banco de exterior 108 cm",
+    "precio": 381.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-f1ed8b8b",
+    "titulo": "Parasol exterior tela · Ø200/Ø250 cm · Ocean tela",
+    "precio": 381.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "mesa-de-centro-exterior-125-cm-altura-38-cm",
+    "titulo": "Mesa de centro exterior 125 cm · altura 38 cm",
+    "precio": 375.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "reposapies-exterior-855043-cm",
+    "titulo": "Reposapiés exterior · 85×50×43 cm",
+    "precio": 349.9,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e",
+    "titulo": "Mesa de centro exterior · aluminio HPL 110×60 cm",
+    "precio": 349.9,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 839
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-75-cm-dd745448",
+    "titulo": "Mesa exterior aluminio · 75×75 cm · Ágata",
+    "precio": 347.95,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 401
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm",
+    "precio": 338.95,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-41-cm",
+    "titulo": "Mesa de centro exterior 90 cm · altura 41 cm",
+    "precio": 338.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm-2",
+    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm 2",
+    "precio": 332.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-90-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 90 cm · altura 40 cm",
+    "precio": 332.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-686cc405",
+    "titulo": "Funda protectora para tumbona exterior",
+    "precio": 329.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "reposapies-exterior-605040-cm",
+    "titulo": "Reposapiés exterior · 60×50×40 cm",
+    "precio": 326.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1080
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8",
+    "titulo": "Tumbona exterior aluminio apilable · 68 cm · Marina",
+    "precio": 323.95,
+    "n": 9,
+    "cuantas": 9,
+    "min_px": 614
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior 120 cm · altura 40 cm",
+    "precio": 322.95,
+    "n": 2,
+    "cuantas": 2,
+    "min_px": 1024
+   },
+   {
+    "handle": "balliu-mesa-exterior-resina-70-cm-33ce1613",
+    "titulo": "Mesa exterior resina · Werzalit · Selva",
+    "precio": 315.95,
+    "n": 7,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-madera-59-cm-fa211c70",
+    "titulo": "Mini tumbona exterior madera teca plegable · 59 cm · Bristol",
+    "precio": 299.9,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 598
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-aluminio-62-cm-5a6f53eb",
+    "titulo": "Mini tumbona exterior aluminio plegable · 62 cm · Cannes",
+    "precio": 249.9,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 800
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-923110d9",
+    "titulo": "Tumbona exterior resina · Ø73 cm tablillas · Eva Pro T",
+    "precio": 242.95,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-b19af1ea",
+    "titulo": "Tumbona exterior resina · Ø73 cm tela · Eva Pro",
+    "precio": 242.95,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-19d3d0ee",
+    "titulo": "Mesa de centro exterior · aluminio HPL 74×54 cm · Olimpia Central",
+    "precio": 227.95,
+    "n": 11,
+    "cuantas": 11,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-6f6d4953",
+    "titulo": "Funda protectora para sofá exterior",
+    "precio": 227.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-72-cm-72514f40",
+    "titulo": "Mesa exterior aluminio · 72×72 cm · Nora",
+    "precio": 224.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce",
+    "titulo": "Mini tumbona exterior aluminio apilable · 57 cm · Marina",
+    "precio": 213.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-73-cm-d369d964",
+    "titulo": "Tumbona exterior resina playa · 73 cm tela · Eva RG",
+    "precio": 192.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-73-cm-0648657b",
+    "titulo": "Tumbona exterior resina jardín · 73 cm tablillas · Eva RTG",
+    "precio": 190.95,
+    "n": 3,
+    "cuantas": 3,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a",
+    "titulo": "Silla exterior aluminio alta · tejido Balliu · Etna Alta",
+    "precio": 190.95,
+    "n": 10,
+    "cuantas": 10,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-colchoneta-para-tumbona-0e9a3256",
+    "titulo": "Colchoneta exterior para tumbona",
+    "precio": 190.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 410
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-75-cm-009e68e4",
+    "titulo": "Tumbona exterior resina · 75 cm tela · Carmen",
+    "precio": 188.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "reposapies-exterior-504540-cm",
+    "titulo": "Reposapiés exterior · 50×45×40 cm",
+    "precio": 187.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-75-cm-aca076ae",
+    "titulo": "Tumbona exterior resina playa · 75 cm tela · Lola",
+    "precio": 187.95,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a",
+    "titulo": "Taburete exterior aluminio · tejido Balliu · Etna",
+    "precio": 186.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 921
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-5c88bd77",
+    "titulo": "Silla exterior aluminio · tejido Balliu · Etna",
+    "precio": 181.95,
+    "n": 10,
+    "cuantas": 10,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-60-cm-9c991818",
+    "titulo": "Mesa auxiliar exterior · aluminio HPL 45×45 cm · Etna",
+    "precio": 167.95,
+    "n": 5,
+    "cuantas": 5,
+    "min_px": 574
+   },
+   {
+    "handle": "balliu-pie-de-parasol-c2147052",
+    "titulo": "Pie de parasol · 40 kg",
+    "precio": 164.95,
+    "n": 7,
+    "cuantas": 7,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-6c7a42d9",
+    "titulo": "Mesa auxiliar exterior aluminio · 48×48 cm tejido · Olimpia",
+    "precio": 157.95,
+    "n": 11,
+    "cuantas": 11,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-90b11e5b",
+    "titulo": "Mesa auxiliar exterior aluminio · Ø42 cm · Noa",
+    "precio": 137.95,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf",
+    "titulo": "Silla exterior resina · Vera",
+    "precio": 115.95,
+    "n": 12,
+    "cuantas": 12,
+    "min_px": 614
+   },
+   {
+    "handle": "sillon-exterior-estilo-versatil-58100-cm",
+    "titulo": "Sillón exterior · estilo versátil | 58×100 cm",
+    "precio": 114.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 1024
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65",
+    "titulo": "Silla exterior resina · estilo clásico · Bimba",
+    "precio": 99.9,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-base-de-parasol-3ee8b72d",
+    "titulo": "Base de hormigón para parasol",
+    "precio": 99.9,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec",
+    "titulo": "Silla exterior aluminio · tejido Balliu · Mila",
+    "precio": 97.95,
+    "n": 6,
+    "cuantas": 6,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c",
+    "titulo": "Silla exterior resina · Bruna",
+    "precio": 84.95,
+    "n": 11,
+    "cuantas": 11,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-340b2844",
+    "titulo": "Funda protectora exterior",
+    "precio": 84.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-minimalista-484cbea0",
+    "titulo": "Silla exterior resina · estilo minimalista · Duna",
+    "precio": 81.95,
+    "n": 9,
+    "cuantas": 9,
+    "min_px": 614
+   },
+   {
+    "handle": "base-de-parasol-25-kg",
+    "titulo": "Base de parasol 25 kg",
+    "precio": 78.95,
+    "n": 2,
+    "cuantas": 1,
+    "min_px": 1333
+   },
+   {
+    "handle": "balliu-mobiliario-exterior-resina-28-cm-6264905d",
+    "titulo": "Mobiliario exterior resina | 28 cm",
+    "precio": 67.95,
+    "n": 7,
+    "cuantas": 7,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+    "titulo": "Silla exterior resina · Venus",
+    "precio": 65.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-funcional-0b607ec7",
+    "titulo": "Silla exterior resina apilable · Selva",
+    "precio": 40.95,
+    "n": 4,
+    "cuantas": 4,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-35554775",
+    "titulo": "Mesa auxiliar exterior resina · 48×48 cm · Eva Pro BCN",
+    "precio": 37.95,
+    "n": 8,
+    "cuantas": 8,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-acrilico-a1c16324",
+    "titulo": "Funda protectora exterior acrílico",
+    "precio": 36.95,
+    "n": 1,
+    "cuantas": 1,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42",
+    "titulo": "Mesa auxiliar exterior resina · 48×48 cm · Eva Pro Mini",
+    "precio": 34.95,
+    "n": 11,
+    "cuantas": 11,
+    "min_px": 614
+   },
+   {
+    "handle": "balliu-mesa-exterior-5d0fb586",
+    "titulo": "Mesa auxiliar exterior resina decorativa · 48×48 cm · Mini Prestige",
+    "precio": 29.95,
+    "n": 5,
+    "cuantas": 5,
+    "min_px": 614
+   }
+  ],
+  "alt_vacio": [
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 2",
+    "precio": 4345.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior HPL · moderno | sofá de esquina + mesa de centro",
+    "precio": 4225.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 5",
+    "precio": 4175.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 2",
+    "precio": 3825.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior · sofisticado | sofá de esquina + mesa de centro",
+    "precio": 3819.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior HPL · elegante | sofá de esquina + mesa de centro",
+    "precio": 3795.0,
+    "n": 3,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa",
+    "precio": 3540.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "banco-jardin-con-mesa-integrada-220-cm",
+    "titulo": "Banco jardín con mesa integrada · 220 cm",
+    "precio": 2899.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4",
+    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 4",
+    "precio": 2755.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro",
+    "titulo": "Set rinconera exterior · contemporáneo | sofá de esquina + mesa de centro",
+    "precio": 2579.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+    "titulo": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa",
+    "precio": 2535.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 3",
+    "precio": 2355.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2",
+    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 2",
+    "precio": 2239.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab",
+    "titulo": "Mesa extensible exterior aluminio · HPL · Java",
+    "precio": 2019.0,
+    "n": 8,
+    "alt_vacios": 8
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18590-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×90 cm",
+    "precio": 1840.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mesa-exterior-140-18090-cm-e4ec7d7c",
+    "titulo": "Mesa extensible exterior aluminio · HPL · Atlanta",
+    "precio": 1670.0,
+    "n": 9,
+    "alt_vacios": 9
+   },
+   {
+    "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1",
+    "titulo": "Sofá exterior aluminio · estilo contemporáneo | 77 cm",
+    "precio": 1560.0,
+    "n": 12,
+    "alt_vacios": 11
+   },
+   {
+    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19882-cm",
+    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 198×82 cm",
+    "precio": 1489.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm",
+    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 150×82 cm",
+    "precio": 1055.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1",
+    "titulo": "Parasol redondo exterior · aluminio Ø300 cm · Garbí",
+    "precio": 1049.0,
+    "n": 6,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7",
+    "titulo": "Parasol cuadrado exterior · aluminio 300×300 cm · Brisa",
+    "precio": 1049.0,
+    "n": 4,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "sillon-exterior-estilo-elegante-6590-cm",
+    "titulo": "Sillón exterior · estilo elegante | 65×90 cm",
+    "precio": 1019.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268",
+    "titulo": "Sofá exterior aluminio · estilo elegante | 62 cm",
+    "precio": 995.0,
+    "n": 14,
+    "alt_vacios": 13
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-8080-cm-ef580ae2",
+    "titulo": "Mesa exterior aluminio · HPL · Brunei",
+    "precio": 945.0,
+    "n": 30,
+    "alt_vacios": 29
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-13590-cm",
+    "titulo": "Mesa comedor exterior HPL",
+    "precio": 720.0,
+    "n": 3,
+    "alt_vacios": 2
+   },
+   {
+    "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior HPL 120 cm · altura 40 cm",
+    "precio": 715.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-15090-cm",
+    "titulo": "Mesa comedor exterior HPL 150×90 cm",
+    "precio": 669.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9",
+    "titulo": "Tumbona exterior aluminio · con ruedas 58 cm · Iris",
+    "precio": 629.0,
+    "n": 7,
+    "alt_vacios": 6
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24",
+    "titulo": "Tumbona exterior aluminio · con/sin ruedas · Olimpia",
+    "precio": 589.0,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "mesa-comedor-exterior-hpl-10090-cm",
+    "titulo": "Mesa comedor exterior HPL 100×90 cm",
+    "precio": 585.0,
+    "n": 1,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "mesa-de-centro-exterior-125-cm-altura-42-cm",
+    "titulo": "Mesa de centro exterior 125 cm · altura 42 cm",
+    "precio": 569.0,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mesa-alta-exterior-hpl-94512eab",
+    "titulo": "Mesa alta exterior · aluminio HPL 110 cm",
+    "precio": 529.0,
+    "n": 5,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-d08586c1",
+    "titulo": "Tumbona exterior aluminio alta · acceso fácil · Etna Alta",
+    "precio": 496.95,
+    "n": 7,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6",
+    "titulo": "Mesa exterior aluminio · HPL · Altea",
+    "precio": 480.95,
+    "n": 9,
+    "alt_vacios": 8
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-36870d09",
+    "titulo": "Tumbona exterior aluminio · Etna",
+    "precio": 449.9,
+    "n": 11,
+    "alt_vacios": 11
+   },
+   {
+    "handle": "reposapies-exterior-855043-cm-2",
+    "titulo": "Reposapiés exterior · 85×50×43 cm",
+    "precio": 399.9,
+    "n": 2,
+    "alt_vacios": 2
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-28ff014d",
+    "titulo": "Tumbona exterior resina · Noa",
+    "precio": 399.9,
+    "n": 9,
+    "alt_vacios": 8
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-7070-cm-724b0db0",
+    "titulo": "Mesa exterior aluminio · HPL · Capri",
+    "precio": 399.9,
+    "n": 30,
+    "alt_vacios": 29
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-acrilico-236bd5f0",
+    "titulo": "Parasol exterior acrílico · Ø200 cm · Pamela acrílico",
+    "precio": 399.9,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-acrilico-c8dd492d",
+    "titulo": "Parasol exterior acrílico · Ø200/Ø250 cm · Ocean acrílico",
+    "precio": 399.9,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "balliu-parasol-para-terraza-f1ed8b8b",
+    "titulo": "Parasol exterior tela · Ø200/Ø250 cm · Ocean tela",
+    "precio": 381.95,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e",
+    "titulo": "Mesa de centro exterior · aluminio HPL 110×60 cm",
+    "precio": 349.9,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-75-cm-dd745448",
+    "titulo": "Mesa exterior aluminio · 75×75 cm · Ágata",
+    "precio": 347.95,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm",
+    "precio": 338.95,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-686cc405",
+    "titulo": "Funda protectora para tumbona exterior",
+    "precio": 329.95,
+    "n": 1,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8",
+    "titulo": "Tumbona exterior aluminio apilable · 68 cm · Marina",
+    "precio": 323.95,
+    "n": 9,
+    "alt_vacios": 8
+   },
+   {
+    "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm",
+    "titulo": "Mesa de centro exterior 120 cm · altura 40 cm",
+    "precio": 322.95,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mesa-exterior-resina-70-cm-33ce1613",
+    "titulo": "Mesa exterior resina · Werzalit · Selva",
+    "precio": 315.95,
+    "n": 7,
+    "alt_vacios": 6
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-madera-59-cm-fa211c70",
+    "titulo": "Mini tumbona exterior madera teca plegable · 59 cm · Bristol",
+    "precio": 299.9,
+    "n": 6,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-aluminio-62-cm-5a6f53eb",
+    "titulo": "Mini tumbona exterior aluminio plegable · 62 cm · Cannes",
+    "precio": 249.9,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-923110d9",
+    "titulo": "Tumbona exterior resina · Ø73 cm tablillas · Eva Pro T",
+    "precio": 242.95,
+    "n": 6,
+    "alt_vacios": 6
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-b19af1ea",
+    "titulo": "Tumbona exterior resina · Ø73 cm tela · Eva Pro",
+    "precio": 242.95,
+    "n": 6,
+    "alt_vacios": 6
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-19d3d0ee",
+    "titulo": "Mesa de centro exterior · aluminio HPL 74×54 cm · Olimpia Central",
+    "precio": 227.95,
+    "n": 11,
+    "alt_vacios": 10
+   },
+   {
+    "handle": "balliu-mesa-exterior-aluminio-72-cm-72514f40",
+    "titulo": "Mesa exterior aluminio · 72×72 cm · Nora",
+    "precio": 224.95,
+    "n": 4,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce",
+    "titulo": "Mini tumbona exterior aluminio apilable · 57 cm · Marina",
+    "precio": 213.95,
+    "n": 4,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-73-cm-d369d964",
+    "titulo": "Tumbona exterior resina playa · 73 cm tela · Eva RG",
+    "precio": 192.95,
+    "n": 4,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-73-cm-0648657b",
+    "titulo": "Tumbona exterior resina jardín · 73 cm tablillas · Eva RTG",
+    "precio": 190.95,
+    "n": 3,
+    "alt_vacios": 2
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a",
+    "titulo": "Silla exterior aluminio alta · tejido Balliu · Etna Alta",
+    "precio": 190.95,
+    "n": 10,
+    "alt_vacios": 9
+   },
+   {
+    "handle": "balliu-colchoneta-para-tumbona-0e9a3256",
+    "titulo": "Colchoneta exterior para tumbona",
+    "precio": 190.95,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-75-cm-009e68e4",
+    "titulo": "Tumbona exterior resina · 75 cm tela · Carmen",
+    "precio": 188.95,
+    "n": 4,
+    "alt_vacios": 3
+   },
+   {
+    "handle": "balliu-tumbona-de-exterior-resina-75-cm-aca076ae",
+    "titulo": "Tumbona exterior resina playa · 75 cm tela · Lola",
+    "precio": 187.95,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-5c88bd77",
+    "titulo": "Silla exterior aluminio · tejido Balliu · Etna",
+    "precio": 181.95,
+    "n": 10,
+    "alt_vacios": 9
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-60-cm-9c991818",
+    "titulo": "Mesa auxiliar exterior · aluminio HPL 45×45 cm · Etna",
+    "precio": 167.95,
+    "n": 5,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-pie-de-parasol-c2147052",
+    "titulo": "Pie de parasol · 40 kg",
+    "precio": 164.95,
+    "n": 7,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-6c7a42d9",
+    "titulo": "Mesa auxiliar exterior aluminio · 48×48 cm tejido · Olimpia",
+    "precio": 157.95,
+    "n": 11,
+    "alt_vacios": 10
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-aluminio-90b11e5b",
+    "titulo": "Mesa auxiliar exterior aluminio · Ø42 cm · Noa",
+    "precio": 137.95,
+    "n": 6,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf",
+    "titulo": "Silla exterior resina · Vera",
+    "precio": 115.95,
+    "n": 12,
+    "alt_vacios": 11
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65",
+    "titulo": "Silla exterior resina · estilo clásico · Bimba",
+    "precio": 99.9,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-base-de-parasol-3ee8b72d",
+    "titulo": "Base de hormigón para parasol",
+    "precio": 99.9,
+    "n": 1,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec",
+    "titulo": "Silla exterior aluminio · tejido Balliu · Mila",
+    "precio": 97.95,
+    "n": 6,
+    "alt_vacios": 5
+   },
+   {
+    "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c",
+    "titulo": "Silla exterior resina · Bruna",
+    "precio": 84.95,
+    "n": 11,
+    "alt_vacios": 10
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-340b2844",
+    "titulo": "Funda protectora exterior",
+    "precio": 84.95,
+    "n": 1,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-minimalista-484cbea0",
+    "titulo": "Silla exterior resina · estilo minimalista · Duna",
+    "precio": 81.95,
+    "n": 9,
+    "alt_vacios": 8
+   },
+   {
+    "handle": "base-de-parasol-25-kg",
+    "titulo": "Base de parasol 25 kg",
+    "precio": 78.95,
+    "n": 2,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mobiliario-exterior-resina-28-cm-6264905d",
+    "titulo": "Mobiliario exterior resina | 28 cm",
+    "precio": 67.95,
+    "n": 7,
+    "alt_vacios": 6
+   },
+   {
+    "handle": "balliu-silla-exterior-resina-estilo-funcional-0b607ec7",
+    "titulo": "Silla exterior resina apilable · Selva",
+    "precio": 40.95,
+    "n": 4,
+    "alt_vacios": 4
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-35554775",
+    "titulo": "Mesa auxiliar exterior resina · 48×48 cm · Eva Pro BCN",
+    "precio": 37.95,
+    "n": 8,
+    "alt_vacios": 7
+   },
+   {
+    "handle": "balliu-funda-protectora-exterior-acrilico-a1c16324",
+    "titulo": "Funda protectora exterior acrílico",
+    "precio": 36.95,
+    "n": 1,
+    "alt_vacios": 1
+   },
+   {
+    "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42",
+    "titulo": "Mesa auxiliar exterior resina · 48×48 cm · Eva Pro Mini",
+    "precio": 34.95,
+    "n": 11,
+    "alt_vacios": 10
+   },
+   {
+    "handle": "balliu-mesa-exterior-5d0fb586",
+    "titulo": "Mesa auxiliar exterior resina decorativa · 48×48 cm · Mini Prestige",
+    "precio": 29.95,
+    "n": 5,
+    "alt_vacios": 5
+   }
+  ],
+  "sin_imagen": [],
+  "duplicadas_dentro": [],
+  "no_ready": [],
+  "foto_compartida": []
+ }
+}

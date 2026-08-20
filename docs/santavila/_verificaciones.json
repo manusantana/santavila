@@ -1,0 +1,103 @@
+{
+ "set-jardin-aluminio-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "brandon3p_2026-08",
+  "n_imagenes": 6,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "02_ambiente_exterior_casona.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "03_ambiente_interior_galeria.jpg",
+    "px": "2160x2672",
+    "mp": 5.8
+   },
+   {
+    "fichero": "04_asmr_mesas_canto.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "05_ambiente_mesas_terraza.jpg",
+    "px": "2400x2400",
+    "mp": 5.8
+   },
+   {
+    "fichero": "06_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8
+   }
+  ]
+ },
+ "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-2": {
+  "fecha": "2026-08-20",
+  "carpeta": "bolonia_xl8_2026-08",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "02_ambiente_exterior_cadaques.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "03_ambiente_interior_casa_cadaques.jpg",
+    "px": "3311x4096",
+    "mp": 13.6
+   },
+   {
+    "fichero": "04_detalle_brazo_patin.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8
+   }
+  ]
+ },
+ "set-jardin-aluminio-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "brandon7_2026-08",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "02_ambiente_la_concha.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "03_ambiente_interior_donostia.jpg",
+    "px": "3311x4096",
+    "mp": 13.6
+   },
+   {
+    "fichero": "04_detalle_aluminio.jpg",
+    "px": "4096x4096",
+    "mp": 16.8
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8
+   }
+  ]
+ }
+}

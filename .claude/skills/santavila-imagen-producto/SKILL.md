@@ -42,6 +42,31 @@ remates. **Solo cambian** escena, suelo, fondo, atrezzo, luz, sombra, encuadre y
 
 ---
 
+## LEY DEL AUDITOR — antes que el Paso 0
+
+> **Sergio, 20-08-2026:** *"esto hemos pasado mil veces y no puede ser que tengamos aún errores así
+> y tengamos que volver atrás."*
+
+Tenía razón, y la causa no era el descuido. Era que **una imagen publicada no dejaba rastro de qué
+se le verificó**, así que cada criterio nuevo obligaba a abrir las fichas ya publicadas y mirarlas a
+ojo. De ahí el bucle de *"déjame comprobar una cosa antes de seguir"*.
+
+> ### Un criterio que no está en el auditor no existe.
+> Cuando descubras un criterio nuevo: **primero lo programas en `scripts/auditar_galerias.py` y lo
+> pasas sobre las 171 fichas activas. Después** sigues con la ficha que tenías entre manos.
+
+**Las dos herramientas:**
+- `python3 scripts/auditar_galerias.py [--json]` — recorre lo publicado y aplica todos los criterios
+  objetivos: sin imagen · una sola imagen · duplicadas dentro de la ficha · alt vacío · <2000 px ·
+  media que no llegó a READY · foto compartida con otra ficha.
+- `docs/santavila/_verificaciones.json` — lo escribe el publicador solo: qué fichero, cuántos
+  píxeles, cuántos megapíxeles y qué largo tiene el alt, ficha por ficha y con fecha.
+
+**Prohibido** volver a mirar una ficha publicada "por si acaso" sin haber pasado antes el auditor.
+Si el auditor no lo detecta, es que le falta ese criterio: se le añade.
+
+---
+
 ## PASO 0 · EL PRIMER COMANDO, SIEMPRE
 
 ```bash
@@ -277,6 +302,19 @@ herrajes respetados · verticales a plomo · **SKU correcto**.
 >
 > **Prueba de fuego:** si la foto del proveedor tiene MENOS px/cm que tu imagen y en ella el motivo se ve y en
 > la tuya no, la excusa de la resolución no existe.
+>
+> ### Y dos errores de medición que ya me han hecho fallar dos veces (20-08)
+> **1 · Un motivo no se mide con la métrica de los hilos.** La diferencia entre píxeles vecinos mide la **trama**
+> (frecuencia alta). El motivo de un jacquard son **manchas de 1–4 cm**: frecuencia media. Medirlo con la métrica
+> equivocada dio 0,129 frente a 0,249 del real y me hizo tumbar una imagen que sí tenía el motivo.
+> **La medida correcta:** `blur(4) − blur(26)` sobre el parche normalizado, y comparar su desviación típica.
+> Con esa banda, el mismo par daba **88 % del real** — atenuado, no ausente.
+>
+> **2 · El parche va en la MISMA zona anatómica de la pieza.** Recortar por coordenadas fijas en dos imágenes con
+> composiciones distintas compara el asiento de una con el respaldo de la otra. Asiento con asiento, brazo con brazo.
+>
+> **Y el veredicto se da MIRANDO los tres parches juntos** —real, candidata y, si existe, la ficha hermana ya
+> publicada— a la misma escala. El número solo acompaña.
 
 **B · Física de luz** — un solo sol · sombra de contacto bajo **cada** apoyo (si flota, rechazo) · sombra
 proyectada al lado opuesto, nunca hacia cámara · sombra coloreada, negros al ink `#23251D` nunca `#000` ·
