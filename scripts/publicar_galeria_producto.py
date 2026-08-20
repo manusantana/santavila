@@ -53,6 +53,15 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_ALBANIA8 = {
+    "albania8": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4", {
+        "01_packshot.jpg": "Conjunto de jardin Albania de 3 plazas en aluminio gris claro con patas en A y tapiceria verde salvia: sofa, dos sillones y mesa de centro, sobre fondo neutro",
+        "03_ambiente_interior_porche.jpg": "Sofa y sillones Albania verde salvia en un porche encalado con vigas de madera, alfombra de fibra y un olivo, abierto al campo",
+        "04_asmr_material.jpg": "Detalle del perfil de aluminio gris claro del sillon Albania y del canto del cojin verde salvia",
+        "05_medidas.jpg": "Medidas del conjunto Albania de 3 plazas: sofa 212x70x100 cm y sillon 76x70x100 cm. Incluye sofa, dos sillones y mesa de centro",
+    }),
+}
+
 GALERIAS_YINA_PIEZAS = {
     "yina_sillon": ("sillon-exterior-estilo-versatil-7783-cm", {
         "01_packshot.jpg": "Sillon de exterior Yina con respaldo y brazos de cuerda trenzada gris sobre aluminio antracita y cojines crudo, 77x72x83 cm, sobre fondo neutro",
@@ -572,7 +581,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_YINA_PIEZAS
+    ACTIVA = GALERIAS_ALBANIA8
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

@@ -674,5 +674,18 @@
    "gid://shopify/MediaImage/71483914420548",
    "gid://shopify/MediaImage/71483914453316"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4",
+  "producto": "gid://shopify/Product/15507127107908",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552328004"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483965899076",
+   "gid://shopify/MediaImage/71483965931844",
+   "gid://shopify/MediaImage/71483965964612",
+   "gid://shopify/MediaImage/71483965997380"
+  ]
  }
 ]

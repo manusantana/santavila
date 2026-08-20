@@ -633,5 +633,36 @@
     "alt_len": 101
    }
   ]
+ },
+ "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4": {
+  "fecha": "2026-08-20",
+  "carpeta": "albania8",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 158
+   },
+   {
+    "fichero": "03_ambiente_interior_porche.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 126
+   },
+   {
+    "fichero": "04_asmr_material.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 95
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 127
+   }
+  ]
  }
 }

@@ -13,6 +13,34 @@
 
 ---
 
+## 2026-08-20 (H) · AUDITORÍA DE IDENTIDAD — 19 revisadas, 19 correctas, y el caso «albania» resuelto
+
+Herramienta nueva: **`scripts/auditar_identidad.py`**. Para cada carpeta con galería, resuelve
+handle → SKU → producto y foto oficial del catálogo, y compara el **color del producto** (no el del
+fondo) entre la foto oficial y nuestro packshot. Marca sospechosas; el veredicto es visual.
+
+**Resultado: 19 marcadas, 19 correctas.** Los desvíos altos venían del fondo — un render de lago
+verde contra un estudio gris da ΔRGB 62 aunque el mueble sea idéntico. La métrica sirve para
+priorizar la mirada, no para juzgar. *(La lección del 20-08 otra vez: un número señala, no decide.)*
+
+### El caso «albania», resuelto
+
+La galería en cuarentena era de un conjunto **verde salvia con patas en A**. El catálogo tiene la
+familia ALBANIA completa, y su set de 3 plazas (`ALBANIA-8`, SKU 557-010730) vive en el handle
+`set-jardin-3-plazas-sofisticado-...-**mesa-4**` (3.140 €). La galería estaba mapeada a
+`...-**mesa-3**`, que es BELLAGIO-8. **Un dígito.**
+
+La foto oficial del ALBANIA-8 coincide pieza por pieza con el packshot en cuarentena. Sale de
+cuarentena, se corrige el handle y **se publica**. La ficha de medidas había que rehacerla: llevaba
+las cotas de Bellagio. Las buenas son sofá **212 × 70 × 100** y sillón **76 × 70 × 100**.
+
+Su ambiente exterior se retira: llevaba **aceitunas y almendras**. Se publica con cuatro imágenes.
+
+**Queda una sola cuarentena:** la pérgola Venecia, pendiente de saber si la 300×300×250 es exenta o
+adosada.
+
+---
+
 ## 2026-08-20 (G) · FAMILIA YINA CERRADA — cinco piezas sueltas a 8 créditos cada una
 
 Publicadas las **cinco fichas de piezas sueltas Yina**, todas partían de una sola imagen:
