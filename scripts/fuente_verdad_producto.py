@@ -47,21 +47,45 @@ def cargar():
     # OJO: un mismo SKU puede aparecer en varios CSV con imagenes DISTINTAS (p.ej. 557-1563 apunta
     # a "mesa centro 120" y a "dounvil 3 plazas": son productos distintos). Guardar solo la ultima
     # devolvia la foto de otro producto en silencio -> se guardan TODAS y se avisa.
-    sku2img={}
+    # Un mismo SKU puede corresponder a DOS PRODUCTOS DISTINTOS del proveedor. Caso real
+    # (20-08-2026): 557-010884 es a la vez "LUNA-44 SET MESAS CENTRO 80+60" (435 EUR) y
+    # "BRANDON-7 SET SOFA 2 PLAZAS" (3.865 EUR). Quedarse con el primero devolvia la foto de
+    # unas mesas para la ficha de un sofa de 4.679 EUR. Ahora se guardan TODOS los candidatos
+    # con su coste exworks y se desempata por el COSTE REAL de la variante en Shopify.
+    sku2cands={}
     for f in sorted(glob.glob("proveedores_raw/hevea/*.csv")):
         try:
             for row in csv.DictReader(open(f,encoding="utf-8",errors="replace")):
                 s=(row.get("SKU") or "").strip()
                 if not (s and row.get("Imagen")): continue
-                d=sku2img.setdefault(s,{"img":None,"otras_img":[],"ancho":None,"fondo":None,
-                                        "alto":None,"descripcion":""})
+                prod=(row.get("Producto") or "").strip()
                 img=row["Imagen"].strip()
-                if d["img"] is None: d["img"]=img
-                elif img!=d["img"] and img not in d["otras_img"]: d["otras_img"].append(img)
-                for k,col in (("ancho","Ancho (cm)"),("fondo","Fondo (cm)"),("alto","Alto (cm)")):
-                    if not d[k] and row.get(col): d[k]=row[col]
-                if not d["descripcion"]: d["descripcion"]=(row.get("Descripción") or "").strip()
+                cands=sku2cands.setdefault(s,[])
+                if any(c["producto"]==prod and c["img"]==img for c in cands): continue
+                def num(x):
+                    try: return float(str(x).replace(",",".").strip())
+                    except Exception: return None
+                cands.append({"producto":prod,"img":img,
+                              "ancho":row.get("Ancho (cm)") or None,
+                              "fondo":row.get("Fondo (cm)") or None,
+                              "alto":row.get("Alto (cm)") or None,
+                              "descripcion":(row.get("Descripción") or "").strip(),
+                              "exworks":num(next((row[k] for k in row
+                                    if k and "exworks" in k.lower() and row[k]),None))})
         except Exception: pass
+    # coste real de cada handle, para desempatar
+    h2cost={}
+    try:
+        est=json.load(open("_estado_tienda.json"))
+        for p in (est if isinstance(est,list) else est.get("products",[])):
+            for v in p.get("variants",[]):
+                if v.get("cost") is not None: h2cost[p["handle"]]=float(v["cost"]); break
+    except Exception: pass
+    sku2img={}
+    for s,cands in sku2cands.items():
+        base=dict(cands[0]); base["otras_img"]=[c["img"] for c in cands[1:] if c["img"]!=base["img"]]
+        base["_cands"]=cands
+        sku2img[s]=base
     sku2var={}
     try:
         for m in json.load(open("proveedores_raw/balliu/_sku_mapping.json"))["mapping"]:
@@ -80,7 +104,7 @@ def cargar():
         if x.get("primary_image"): compartida.setdefault(x["primary_image"],[]).append(h)
     for x in balliu.values():
         x["_comparten"]=sorted(compartida.get(x.get("primary_image"),[]))
-    return h2sku,sku2img,sku2var,balliu
+    return h2sku,sku2img,sku2var,balliu,h2cost
 
 def cutout(handle):
     """Recorte del producto SUELTO en images_cutout/. TOMA DE CONOCIMIENTO:
@@ -112,15 +136,36 @@ def catalogo_balliu(producto):
         if mejor is None or len(cand)>len(mejor): mejor=cand   # varias entradas: la mas informativa
     return mejor or None
 
-def ficha(handle,h2sku,sku2img,sku2var,balliu):
+def ficha(handle,h2sku,sku2img,sku2var,balliu,h2cost=None):
     out=[]
     for prov,sku,prod in h2sku.get(handle,[]):
         d={"proveedor":prov,"sku":sku,"producto":prod}
-        if sku in sku2img: d.update(sku2img[sku])
+        if sku in sku2img:
+            e=dict(sku2img[sku]); e.pop("_cands",None); e.pop("producto",None)
+            d.update(e)   # el nombre viene del Excel; sku2img solo aporta foto, cotas y texto
         if sku in sku2var:
             d["variante"]=sku2var[sku][1]
             d["catalogo"]=catalogo_balliu(sku2var[sku][0])
         out.append(d)
+    # DESEMPATE de SKU compartido por DOS PRODUCTOS del proveedor (caso 557-010884, 20-08-2026):
+    # gana el candidato cuyo coste exworks se parece al COSTE REAL de la variante en Shopify.
+    if len(out)>1 and h2cost and handle in h2cost:
+        c=h2cost[handle]
+        cands=[]
+        for d in out:
+            for x in sku2img.get(d.get("sku",""),{}).get("_cands",[]):
+                if x["producto"]==d["producto"] and x.get("exworks"): cands.append((d,x))
+        if len(cands)>1:
+            err=sorted(cands,key=lambda t:abs(t[1]["exworks"]-c)/c)
+            e0=abs(err[0][1]["exworks"]-c)/c; e1=abs(err[1][1]["exworks"]-c)/c
+            if e0<=0.35 and e0<e1/2:                     # claramente mejor que el siguiente
+                g,x=err[0]
+                g.update({k:x[k] for k in ("img","ancho","fondo","alto","descripcion")})
+                g["otras_img"]=[y["img"] for _,y in err[1:] if y["img"]!=x["img"]]
+                g["_desempate"]=(f"coste real {c:.0f} EUR vs exworks {x['exworks']:.0f} "
+                                 f"(el otro candidato, {err[1][0]['producto'][:28]}, cuesta {err[1][1]['exworks']:.0f})")
+                out=[g]
+
     b=balliu.get(handle)
     if b:                                        # Balliu: la foto oficial vive aqui, no en el Excel
         if not out: out=[{"proveedor":"Balliu","sku":"","producto":b.get("shopify_title","")}]
@@ -140,6 +185,8 @@ def imprimir(d):
     if d.get("variante"): print(f"  VARIANTE  : {d['variante']}")
     if d.get("img"):      print(f"  foto real : {d['img']}")
     else:                 print(f"  foto real : *** NO HAY *** -> NO se genera nada. Pedir el dato.")
+    if d.get("_desempate"):
+        print(f"  ✓ SKU duplicado en el proveedor, resuelto por {d['_desempate']}")
     if d.get("otras_img"):
         print(f"  ⚠️  ESE SKU APUNTA A {len(d['otras_img'])+1} IMAGENES DISTINTAS en los CSV del proveedor.")
         print(f"      Puede que sean piezas del mismo lote... o productos distintos. CONFIRMAR cual es.")
@@ -159,7 +206,7 @@ def imprimir(d):
     if d.get("catalogo"):  print(f"  catalogo  : {d['catalogo'][:260]}")
     if d.get("cutout"):    print(f"  cutout    : {d['cutout']}  (conocimiento de la pieza suelta, NO publicar)")
 
-def cobertura(h2sku,sku2img,sku2var,balliu):
+def cobertura(h2sku,sku2img,sku2var,balliu,h2cost=None):
     import datetime
     SNAP="_estado_imagenes.json"
     mt=datetime.date.fromtimestamp(os.path.getmtime(SNAP))
@@ -172,7 +219,7 @@ def cobertura(h2sku,sku2img,sku2var,balliu):
     act=[p for p in est if p["status"]=="ACTIVE"]
     sin_foto=[];sin_cotas=0;ok=0;foto_compartida=[]
     for p in act:
-        r=ficha(p["handle"],h2sku,sku2img,sku2var,balliu)
+        r=ficha(p["handle"],h2sku,sku2img,sku2var,balliu,h2cost)
         if r and any(d.get("img") for d in r):
             ok+=1
             if any(d.get("comparten") for d in r): foto_compartida.append(p["handle"])
@@ -186,14 +233,14 @@ def cobertura(h2sku,sku2img,sku2var,balliu):
     for h,t,v in sin_foto: print(f"  [{v}] {h}\n        {t}")
 
 if __name__=="__main__":
-    h2sku,sku2img,sku2var,balliu=cargar()
+    h2sku,sku2img,sku2var,balliu,h2cost=cargar()
     if "--cobertura" in sys.argv:
-        cobertura(h2sku,sku2img,sku2var,balliu); sys.exit()
+        cobertura(h2sku,sku2img,sku2var,balliu,h2cost); sys.exit()
     if "--todos" in sys.argv:
         todos=set(h2sku)|set(balliu)
-        print(json.dumps({h:ficha(h,h2sku,sku2img,sku2var,balliu) for h in sorted(todos)},ensure_ascii=False,indent=1))
+        print(json.dumps({h:ficha(h,h2sku,sku2img,sku2var,balliu,h2cost) for h in sorted(todos)},ensure_ascii=False,indent=1))
         sys.exit()
     if len(sys.argv)<2: sys.exit(__doc__)
-    r=ficha(sys.argv[1],h2sku,sku2img,sku2var,balliu)
+    r=ficha(sys.argv[1],h2sku,sku2img,sku2var,balliu,h2cost)
     if not r: sys.exit(f"handle no encontrado en NINGUNA fuente: {sys.argv[1]}  -> no se genera nada")
     for d in r: imprimir(d)
