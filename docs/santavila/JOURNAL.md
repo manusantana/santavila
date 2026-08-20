@@ -13,6 +13,40 @@
 
 ---
 
+## 2026-08-20 (G) · FAMILIA YINA CERRADA — cinco piezas sueltas a 8 créditos cada una
+
+Publicadas las **cinco fichas de piezas sueltas Yina**, todas partían de una sola imagen:
+
+| Ficha | € | media |
+|---|---|---|
+| Sofá 3 plazas · 185×83 | 1.775 | 3 |
+| Sofá 2 plazas · 143×83 | 1.399 | 3 |
+| Sillón · 77×83 | 959 | 3 |
+| Mesa de centro HPL 70 | 505 | 3 |
+| Reposapiés · 73×46×40 | 388 | 3 |
+
+**Receta corta para pieza suelta:** packshot · ambiente · medidas. Tres imágenes bien hechas valen
+más que cinco forzadas, y para un reposapiés de 388 € la quinta toma no aporta nada.
+
+### Coste
+
+**10 generaciones + 10 upscales = ~40 créditos para cinco fichas: 8 por ficha.** Es el mejor número
+de la jornada, y confirma la palanca de familia: el hábitat (**B5 porxada de marés menorquina**, ya
+usado en los dos sets Yina), el prompt del material y las cotas del catálogo se reutilizaron enteros.
+Se lanzaron en **dos lotes de cinco** con `generate_image_batch`, no de una en una.
+
+### Lo que enseñó el Paso 0
+
+Las **cinco fotos oficiales** de estas piezas muestran piezas que no entran: el sillón sale con
+reposapiés, los sofás con mesa y reposapiés. Por eso cada packshot se generó con la pieza **sola**,
+y la ficha de medidas lo dice en letra: *«Se vende solo el sillón»*.
+
+**Nota de catálogo:** el pictograma llama a la mesa `YINA-70` y la tarifa `YINA-60`. La medida
+(70 Ø × 45) coincide con el título de la ficha, así que el dato es bueno; la discrepancia está solo
+en la referencia.
+
+---
+
 ## 2026-08-20 (F) · RESCATE COMPLETADO — 9 fichas publicadas sin generar una sola imagen nueva
 
 Cerrado el repaso de las **11 galerías generadas y sin publicar**. Nueve se han publicado; dos

@@ -614,5 +614,65 @@
    "gid://shopify/MediaImage/71483801993540",
    "gid://shopify/MediaImage/71483802026308"
   ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-versatil-7783-cm",
+  "producto": "gid://shopify/Product/15507125731652",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549641028"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483911078212",
+   "gid://shopify/MediaImage/71483911110980",
+   "gid://shopify/MediaImage/71483911143748"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-estilizado-14383-cm",
+  "producto": "gid://shopify/Product/15507125764420",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549673796"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483912126788",
+   "gid://shopify/MediaImage/71483912159556",
+   "gid://shopify/MediaImage/71483912192324"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm",
+  "producto": "gid://shopify/Product/15507125797188",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549739332"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483912978756",
+   "gid://shopify/MediaImage/71483913011524",
+   "gid://shopify/MediaImage/71483913044292"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm",
+  "producto": "gid://shopify/Product/15507125829956",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549772100"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483913732420",
+   "gid://shopify/MediaImage/71483913765188",
+   "gid://shopify/MediaImage/71483913797956"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-734640-cm",
+  "producto": "gid://shopify/Product/15507125862724",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549837636"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483914387780",
+   "gid://shopify/MediaImage/71483914420548",
+   "gid://shopify/MediaImage/71483914453316"
+  ]
  }
 ]

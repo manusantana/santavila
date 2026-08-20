@@ -508,5 +508,130 @@
     "alt_len": 96
    }
   ]
+ },
+ "sillon-exterior-estilo-versatil-7783-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina_sillon",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 143
+   },
+   {
+    "fichero": "02_ambiente_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 157
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 93
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-estilizado-14383-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina_sofa2p",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "02_ambiente_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 125
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 102
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina_sofa3p",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "02_ambiente_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 154
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 102
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 117
+   },
+   {
+    "fichero": "02_ambiente_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 93
+   }
+  ]
+ },
+ "reposapies-exterior-734640-cm": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina_repo",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 122
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 101
+   }
+  ]
  }
 }

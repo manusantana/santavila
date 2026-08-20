@@ -53,6 +53,34 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_YINA_PIEZAS = {
+    "yina_sillon": ("sillon-exterior-estilo-versatil-7783-cm", {
+        "01_packshot.jpg": "Sillon de exterior Yina con respaldo y brazos de cuerda trenzada gris sobre aluminio antracita y cojines crudo, 77x72x83 cm, sobre fondo neutro",
+        "02_ambiente_porxada.jpg": "Sillon Yina de cuerda gris bajo una porxada de piedra de mares menorquina, junto a un olivo viejo y con el mar al fondo, con una manta de lino sobre el brazo",
+        "03_medidas.jpg": "Medidas del sillon Yina: 77 cm de ancho por 72 de fondo y 83 de alto. Se vende solo el sillon",
+    }),
+    "yina_sofa2p": ("sofa-terraza-2-plazas-estilo-estilizado-14383-cm", {
+        "01_packshot.jpg": "Sofa de terraza Yina de 2 plazas con respaldo de cuerda trenzada gris sobre aluminio antracita y cojines azul grisaceo, 143x72x83 cm, sobre fondo neutro",
+        "02_ambiente_porxada.jpg": "Sofa Yina de 2 plazas con cojines azul grisaceo bajo una porxada de piedra menorquina, junto a un olivo y con el mar al fondo",
+        "03_medidas.jpg": "Medidas del sofa Yina de 2 plazas: 143 cm de ancho por 72 de fondo y 83 de alto. Se vende solo el sofa",
+    }),
+    "yina_sofa3p": ("sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm", {
+        "01_packshot.jpg": "Sofa de terraza Yina de 3 plazas con respaldo de cuerda trenzada gris sobre aluminio antracita y cojines crudo, 185x72x83 cm, sobre fondo neutro",
+        "02_ambiente_porxada.jpg": "Sofa Yina de 3 plazas bajo una porxada de piedra de mares menorquina, junto a un olivo viejo y con el mar al fondo, con una manta de lino sobre el asiento",
+        "03_medidas.jpg": "Medidas del sofa Yina de 3 plazas: 185 cm de ancho por 72 de fondo y 83 de alto. Se vende solo el sofa",
+    }),
+    "yina_mesa": ("mesa-de-centro-exterior-hpl-70-cm-altura-45-cm", {
+        "01_packshot.jpg": "Mesa de centro Yina redonda de 70 cm con faldon de cuerda trenzada gris y tablero HPL gris oscuro, sobre fondo neutro",
+        "02_ambiente_porxada.jpg": "Mesa de centro Yina de cuerda trenzada sobre el suelo de piedra de una porxada menorquina, con el olivo y el mar detras",
+        "03_medidas.jpg": "Medidas de la mesa de centro Yina: 70 cm de diametro por 45 cm de alto. Se vende sola la mesa",
+    }),
+    "yina_repo": ("reposapies-exterior-734640-cm", {
+        "01_packshot.jpg": "Reposapies de exterior Yina con panel lateral de cuerda trenzada gris sobre aluminio antracita y cojin crudo, 73x46x40 cm, sobre fondo neutro",
+        "02_ambiente_porxada.jpg": "Reposapies Yina de cuerda gris sobre el suelo de piedra de una porxada menorquina, con una manta de lino y el mar al fondo",
+        "03_medidas.jpg": "Medidas del reposapies Yina: 73 cm de ancho por 46 de fondo y 40 de alto. Se vende solo el reposapies",
+    }),
+}
+
 GALERIAS_RESCATE_3 = {
     "sidney": ("balancin-jardin-exterior-148194-cm", {
         "01_packshot.jpg": "Balancin de jardin Sidney de estructura blanca en A con toldo y colchon azul pizarra y cojin blanco, 148x194 cm, sobre fondo neutro",
@@ -544,7 +572,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_RESCATE_3
+    ACTIVA = GALERIAS_YINA_PIEZAS
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
