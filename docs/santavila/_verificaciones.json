@@ -205,5 +205,116 @@
     "alt_len": 96
    }
   ]
+ },
+ "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 154
+   },
+   {
+    "fichero": "02_ambiente_exterior_porxada.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "03_ambiente_interior_payesa.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 104
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 110
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 122
+   }
+  ]
+ },
+ "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-20",
+  "carpeta": "yina2p",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "02_ambiente_exterior_cadiz.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 128
+   },
+   {
+    "fichero": "03_ambiente_interior_gaditano.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 101
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 96
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 122
+   }
+  ]
+ },
+ "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3": {
+  "fecha": "2026-08-20",
+  "carpeta": "bellagio2p",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 139
+   },
+   {
+    "fichero": "02_ambiente_exterior_cabodegata.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 118
+   },
+   {
+    "fichero": "03_ambiente_interior_hornacinas.jpg",
+    "px": "3311x4096",
+    "mp": 13.6,
+    "alt_len": 102
+   },
+   {
+    "fichero": "04_asmr_perfil.jpg",
+    "px": "4096x4096",
+    "mp": 16.8,
+    "alt_len": 87
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 104
+   }
+  ]
  }
 }

@@ -53,6 +53,30 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+GALERIAS_RESCATE_1 = {
+    "yina": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Yina de 3 plazas: sofa, dos sillones y mesa de centro redonda con respaldos de cuerda trenzada gris y cojines crudo, sobre fondo neutro",
+        "02_ambiente_exterior_porxada.jpg": "Conjunto Yina de cuerda gris con cojines crudo en una porxada de piedra de mares menorquina, entre olivos en tinaja y con el mar al fondo",
+        "03_ambiente_interior_payesa.jpg": "Sofa y sillones Yina en una sala payesa encalada con vigas de madera y cortina de lino abierta al olivar",
+        "04_asmr_cuerda.jpg": "Detalle de la cuerda trenzada gris del respaldo del sillon Yina y su union con el perfil de aluminio antracita",
+        "05_medidas.jpg": "Medidas del conjunto Yina de 3 plazas: sofa 185x72x83 cm y sillon 77x72x83 cm. Incluye sofa, dos sillones y mesa de centro",
+    }),
+    "yina2p": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Yina de 2 plazas: sofa, dos sillones y mesa de centro redonda con respaldos de cuerda gris y cojines azul celeste, sobre fondo neutro",
+        "02_ambiente_exterior_cadiz.jpg": "Conjunto Yina de 2 plazas con cojines azules en una azotea encalada de Cadiz, con geranios y la catedral y el Atlantico al fondo",
+        "03_ambiente_interior_gaditano.jpg": "Sofa y sillones Yina de cojines azules en un salon de baldosa hidraulica con el balcon abierto al mar",
+        "04_asmr_cuerda.jpg": "Detalle de la cuerda trenzada del respaldo del sillon Yina sobre el perfil de aluminio antracita",
+        "05_medidas.jpg": "Medidas del conjunto Yina de 2 plazas: sofa 143x72x83 cm y sillon 77x72x83 cm. Incluye sofa, dos sillones y mesa de centro",
+    }),
+    "bellagio2p": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Conjunto de jardin Bellagio de 2 plazas en aluminio blanco: sofa, dos sillones y mesa de centro, con cojines gris claro, sobre fondo neutro",
+        "02_ambiente_exterior_cabodegata.jpg": "Conjunto Bellagio blanco en una terraza encalada del Cabo de Gata, entre agaves y chumberas, con el mar arido al fondo",
+        "03_ambiente_interior_hornacinas.jpg": "Sofa y sillones Bellagio blancos en una sala encalada con hornacinas de piedra y suelo de microcemento",
+        "04_asmr_perfil.jpg": "Detalle del perfil de aluminio blanco del sofa Bellagio y el canto del cojin gris claro",
+        "05_medidas.jpg": "Medidas del conjunto Bellagio de 2 plazas: sofa 150x75 cm, sillon 75x75 cm y mesa de centro 125x60x38 cm",
+    }),
+}
+
 GALERIAS_BRANDON_PIEZAS = {
     "brandon2p_sofa": ("sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm", {
         "01_packshot.jpg": "Sofa de terraza Brandon de 2 plazas en aluminio antracita con tapiceria gris de jacquard, 166x90x90 cm, sobre fondo neutro",
@@ -477,7 +501,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BRANDON_PIEZAS
+    ACTIVA = GALERIAS_RESCATE_1
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

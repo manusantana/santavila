@@ -493,5 +493,47 @@
    "gid://shopify/MediaImage/71482079412548",
    "gid://shopify/MediaImage/71482079445316"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125961028",
+  "borrados": [
+   "gid://shopify/MediaImage/71319234740548"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483132412228",
+   "gid://shopify/MediaImage/71483132444996",
+   "gid://shopify/MediaImage/71483132477764",
+   "gid://shopify/MediaImage/71483132510532",
+   "gid://shopify/MediaImage/71483132543300"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125895492",
+  "borrados": [
+   "gid://shopify/MediaImage/71319234806084"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483133624644",
+   "gid://shopify/MediaImage/71483133657412",
+   "gid://shopify/MediaImage/71483133690180",
+   "gid://shopify/MediaImage/71483133722948",
+   "gid://shopify/MediaImage/71483133755716"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507126354244",
+  "borrados": [
+   "gid://shopify/MediaImage/71291135951172"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71483135230276",
+   "gid://shopify/MediaImage/71483135263044",
+   "gid://shopify/MediaImage/71483135295812",
+   "gid://shopify/MediaImage/71483135328580",
+   "gid://shopify/MediaImage/71483135361348"
+  ]
  }
 ]

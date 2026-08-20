@@ -13,6 +13,42 @@
 
 ---
 
+## 2026-08-20 (E) · RESCATE DE GALERÍAS HECHAS — tres publicadas con cero créditos, una en cuarentena
+
+De las **11 galerías generadas y sin publicar**, se abordan las cuatro de mayor ticket. El diagnóstico
+es el mismo en todas: **solo la quinta imagen falla**, y falla por la misma razón — lleva el
+consumible que la receta de julio pedía y que quedó prohibido el 03-08 (vino y higos, tinto de
+verano, tomate raf, té helado). Las otras cuatro imágenes de cada galería están bien.
+
+**La reparación no cuesta un crédito:** la quinta se sustituye por la **ficha de medidas**, que es
+overlay determinista. Y las cotas salen del catálogo PDF, no de deducirlas.
+
+| Ficha | € | resultado |
+|---|---|---|
+| Yina 3 plazas | 4.195 | publicada, 1 → 5 imágenes |
+| Yina 2 plazas | 3.819 | publicada, 1 → 5 |
+| Bellagio 2 plazas | 3.015 | publicada, 1 → 5 |
+| «Albania» 3 plazas | 3.449 | **cuarentena: no es el mismo mueble** |
+
+### La puerta de identidad ha cazado un fallo real
+
+La carpeta `albania/` está mapeada al handle `set-jardin-3-plazas-sofisticado-...-mesa-3`, cuyo SKU
+es **BELLAGIO-8**. Pero la galería muestra un conjunto **verde salvia con patas en A**, y la foto
+oficial de ese SKU es un conjunto **gris antracita con cojines blancos y patas rectas**. No es el
+mismo producto. La carpeta pasa a `_CUARENTENA_albania_identidad/` hasta saber de qué ficha es.
+
+### Herramienta nueva
+
+`scripts/cotas_catalogo_hevea.py` extrae del PDF las cotas de cada pieza y la fórmula de composición
+de cada set — el dato que los CSV dan como «xx». Verificado con dos series: **YINA** (790×2 + 1.465
++ 415 = 3.460 ≈ 3.465 de tarifa) y **BELLAGIO** (655×2 + 1.230 + 310 = 2.850, exacto).
+
+**Dato para el resto del catálogo:** las fotos oficiales de Yina llevan **dos reposapiés** que no
+entran en la fórmula `2xA+C+D`. Los packshots generados no los llevan, así que la ficha ya es
+honesta, pero conviene la nota de texto cuando se toquen las descripciones.
+
+---
+
 ## 2026-08-20 (D) · FAMILIA BRANDON CERRADA — y 12 galerías que estaban hechas y sin publicar
 
 **Las cinco fichas Brandon, completas y verificadas:**
