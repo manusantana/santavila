@@ -1278,5 +1278,86 @@
     "alt_len": 81
    }
   ]
+ },
+ "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3": {
+  "fecha": "2026-08-21",
+  "carpeta": "bellagio8_set",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   },
+   {
+    "fichero": "02_ambiente_cabodegata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 138
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 93
+   }
+  ]
+ },
+ "sillon-exterior-estilo-envolvente-7582-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "bellagio1_sillon",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_cabodegata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 123
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 81
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "cupra2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 150
+   },
+   {
+    "fichero": "02_ambiente_toledo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 101
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 87
+   }
+  ]
  }
 }

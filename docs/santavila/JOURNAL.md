@@ -13,6 +13,80 @@
 
 ---
 
+## 2026-08-21 (A) · PRODUCCIÓN A FONDO — 23 fichas publicadas, 26.101 € de catálogo
+
+Sergio: *«adelante producción a fondo»*. Punto de partida: la auditoría dejó **61 fichas ACTIVE con
+UNA sola foto** (47.653 € de catálogo). Se atacaron por valor, empezando por las **24 con cotas
+confirmadas por doble fuente** (CSV maestro Hevea **==** catálogo PDF), que es lo único que permite
+dibujar una cota sin inventarla.
+
+### Publicadas (23 fichas · 26.101 €)
+
+| Familia | Fichas | € | Hábitat |
+|---|---|---|---|
+| Odin | 175×78 · 120×78 · 65×78 | 2.535 | C2 Segovia (antracita) · **C11 Lanzarote** (blancos) |
+| Damasco | 194×75 · 135×75 | 2.654 | B2 cortijo sevillano |
+| Acapulco | 185×70 · 64×70 | 1.739 | B12 Valencia · C6 Salamanca |
+| Cloe | 162×69 · 70×69 | 2.364 | **C12 Altea** |
+| Haston | 188×115 | 1.199 | **C13 carmen del Albaicín** |
+| Diva bicolor | 200×76 · 140×76 | 3.050 | B6 Ibiza · B1 patio cordobés |
+| Albania | 212×100 · 76×100 | 1.804 | B4 huerta de Murcia · A10 puerto asturiano |
+| Leisa | 196×85 · 137×85 | 2.084 | **C14 Cuenca** |
+| Dounvil | 150×85 · 70×85 | 1.494 | C3 La Rioja · A11 Costa da Morte |
+| Manhatan | 187×70 · 66×70 | 1.479 | B13 Sevilla · C5 Pirineo |
+| **Bellagio** | **set 3 pl.** · sillón 75×82 | **4.244** | B10 Cabo de Gata |
+| Cupra | 130×90 | 1.455 | **C15 cigarral toledano** |
+
+Cinco localizaciones nuevas al roster (C11–C15). Receta por ficha: packshot bone · ambiente ·
+ASMR de **feature verificable** · medidas. Coste ≈ 12 créditos por ficha.
+
+### Un SKU, una foto, un acabado
+
+Odin, Diva, Albania, Acapulco y Dounvil **existen en dos acabados** y el CSV no lo declara: la única
+fuente es la foto del SKU. Por eso Odin-3 sale antracita y Odin-1/-2 blancos, o Diva-3 blanco y
+Diva-2 tórtola. No es incoherencia: es lo único verificable.
+
+### Lo que NO se publicó, y por qué
+
+**Cuando una persona sentada tapa el asiento, el modelo lo reconstruye como una pieza continua.**
+Se detectó comparando el conteo de cojines contra la foto oficial:
+
+| Ficha | € | Motivo |
+|---|---|---|
+| Acapulco-2 | 845 | asiento real de DOS cojines → salió de una pieza |
+| Albania-2 | 950 | ídem |
+| Dounvil-3 | 1.175 | persona sentada en su única foto |
+| Manhatan-2 | 715 | ídem |
+| Diva-1 | 945 | su única foto lo muestra **de espaldas** |
+| Bolonia XL (×3) | 4.708 | **CSV y PDF se contradicen** en el ancho (215 vs 200) |
+
+Un conteo mal es un mueble que no es el que se vende. Total en cuarentena: **9.338 €**.
+
+### Herramienta nueva: `scripts/bbox_producto.py`
+
+El detector de contorno del overlay **fallaba en silencio** con los packshots nuevos: devolvía un
+bbox pegado al borde del cuadro, así que la cota de alto arrancaba del cielo y la de ancho se
+pasaba de largo. Nadie lo ve si no se mira. Cuatro detectores se descartaron por el camino
+(neutralidad, mediana de bordes, umbral global, solo oscuridad) y cada uno está anotado en el skill.
+El que funciona combina dos hechos que sí se cumplen siempre — *el fondo es, en su vecindad, lo más
+claro **y** lo más cálido* — y trata los dos ejes distinto:
+
+- **ancho**: corte sobre el máximo de la columna → la sombra blanda lateral queda fuera
+- **alto**: filas medidas solo dentro del ancho hallado, con umbral absoluto bajo → las **patas**
+  (finas, blancas, casi del color del fondo) vuelven a contar
+
+Regla añadida al skill: **un detector que no se ha mirado no ha detectado nada.** Se ejecuta con
+`--hoja`, se mira la hoja, y solo entonces se pasa el bbox al overlay.
+
+### Estado
+
+171 fichas ACTIVE · **38 pendientes** de galería (~21.500 €) · 707 → ~480 créditos de Higgsfield.
+
+**Siguiente:** mesas de centro, reposapiés, bancos y sillas (unas 20 fichas, ~7.000 €).
+**Decisión pendiente de Sergio:** Bolonia XL — el CSV dice 215/164/80 y el catálogo PDF 200/141/78.
+
+---
+
 ## 2026-08-20 (H) · AUDITORÍA DE IDENTIDAD — 19 revisadas, 19 correctas, y el caso «albania» resuelto
 
 Herramienta nueva: **`scripts/auditar_identidad.py`**. Para cada carpeta con galería, resuelve

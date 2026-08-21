@@ -946,5 +946,42 @@
    "gid://shopify/MediaImage/71487294144836",
    "gid://shopify/MediaImage/71487294177604"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507126387012",
+  "borrados": [
+   "gid://shopify/MediaImage/71287730667844"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487436882244",
+   "gid://shopify/MediaImage/71487436915012",
+   "gid://shopify/MediaImage/71487436947780"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-envolvente-7582-cm",
+  "producto": "gid://shopify/Product/15507126190404",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550394692"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487439307076",
+   "gid://shopify/MediaImage/71487439339844",
+   "gid://shopify/MediaImage/71487439372612"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm",
+  "producto": "gid://shopify/Product/15507126026564",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550198084"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487442977092",
+   "gid://shopify/MediaImage/71487443009860",
+   "gid://shopify/MediaImage/71487443042628",
+   "gid://shopify/MediaImage/71487443075396"
+  ]
  }
 ]

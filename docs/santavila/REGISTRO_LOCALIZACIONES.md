@@ -48,10 +48,24 @@
 | **`sillon-exterior-aluminio-...-9890-cm`** (Brandon-1, pieza suelta) | gris jacquard + antracita / **frío** | Frío/urbano | **C10 Azotea del Madrid antiguo** — parapeto encalado, teja árabe, torre con chapitel de pizarra | **C10 interior** — mirador con geranio en barro | manta de lino |
 | **`yina_*` — 5 piezas sueltas** (Yina 1/2/3/70/5) | cuerda gris + crudo y azul grisáceo / **cálido-luminoso** | Cálido/cal | **B5 Porxada de marés, Menorca** — piedra clara, muro encalado, olivo viejo, mar desaturado | — (piezas sueltas, 3 tomas) | manta de lino (sin bebida) |
 
+| **`odin*` — 3 piezas sueltas** (Odin 1/2/3) | Odin-3 antracita+gris / **frío**; Odin-1 y -2 **blancos** | Frío/granito · Blanco/volcánico | **C2 Segovia** (el antracita, mundo de su set) · **C11 Casa de Lanzarote** — cal blanca, suelo de picón negro, higuera en zoco de piedra volcánica (los blancos) | — (piezas sueltas) | manta de lino · libro |
+| **`damasco3` / `damasco2`** (Damasco 3 y 2 pl.) | antracita + cuerda beige + gris claro / **cálido-neutro** | Cálido-neutro | **B2 Cortijo campiña sevillana** — arcos encalados, olivo viejo, trigales | — | manta de lino · libro |
+| **`acapulco3` / `acapulco1`** (piezas sueltas) | Acapulco-3 **blanco**; Acapulco-1 **antracita** | Blanco/barro · Frío/piedra dorada | **B12 Terraza valenciana** (el blanco) · **C6 Azotea de Salamanca** (el antracita) | — | manta de lino · libro |
+| **`cloe2` / `cloe1`** (Cloe 2 pl. y sillón) | blanco + cuerda gris + crudo / **blanco** | Blanco/cal | **C12 Terraza de Altea (Alicante)** — cal, cúpula de teja azul vidriada, buganvilla, calle empedrada al mar | — | manta de lino · libro |
+| **`haston3`** (Haston 3 pl., respaldo alto) | blanco + verde salvia claro / **blanco-vegetal** | Blanco/vegetal | **C13 Carmen del Albaicín, Granada** — cipreses, alberca de piedra, muro encalado, setos de mirto | — | manta de lino |
+| **`diva3` / `diva2`** (piezas sueltas bicolor) | Diva-3 blanco+lamas antracita; Diva-2 **tórtola**+lamas marrón | Blanco/cal · Cálido/cal | **B6 Casa payesa de Ibiza** (el blanco) · **B1 Patio cordobés** (el tórtola) | — | manta de lino · libro |
+| **`albania3` / `albania1`** (piezas sueltas) | Albania-3 verde salvia; Albania-1 **antracita** | Cálido-vegetal · Frío/atlántico | **B4 Huerta de Murcia** — pérgola de cañizo, gres arena, limonar (el salvia) · **A10 Puerto pesquero asturiano** (el antracita) | — | manta de lino · libro |
+| **`leisa3` / `leisa2`** (Leisa 3 y 2 pl.) | Leisa-3 brazos antracita s/ chasis blanco + gris claro; Leisa-2 blanco + **gris marengo** | Frío/piedra | **C14 Terraza sobre el casco viejo de Cuenca** — casas colgadas, hoz del Huécar, piedra caliza | — | manta de lino · libro |
+| **`dounvil2` / `dounvil1`** (piezas sueltas) | Dounvil-2 blanco + **arena**; Dounvil-1 antracita + gris | Cálido/arenisca · Frío/granito | **C3 Viñedos de La Rioja** (el arena) · **A11 Costa da Morte** (el antracita) | — | manta de lino |
+| **`manhatan3` / `manhatan1`** (piezas sueltas) | Manhatan-3 blanco; Manhatan-1 antracita | Blanco/ladrillo · Frío/pizarra | **B13 Azotea sevillana** (el blanco) · **C5 Pirineo aragonés** (el antracita) | — | manta de lino · libro |
+| **`bellagio8` / `bellagio1`** (set 3 pl. y sillón) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Casa cúbica de Cabo de Gata** — cal, agave y chumbera, mar árido | — | manta de lino |
+| **`cupra2`** (Cupra 2 pl.) | blanco + gris claro / **blanco** | Blanco/piedra | **C15 Cigarral toledano** — muro de mampostería, olivos viejos, el Tajo y Toledo al fondo | — | manta de lino · libro |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
-**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), Extremadura, Aragón/Pirineo, La Rioja, Murcia capital, Málaga/Axarquía, Tarragona/Costa Daurada, Canarias (con cuidado: nunca resort).
+**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), **Extremadura**, Murcia capital, Tarragona/Costa Daurada, Asturias interior, Castilla y León rural.
+*(21-08-2026: se estrenan C11 Lanzarote, C12 Altea, C13 Albaicín, C14 Cuenca y C15 cigarral toledano; Canarias, Aragón/Pirineo y La Rioja dejan de estar infrautilizadas.)*
 
 ## ⛔ Consumibles DEROGADOS (03-08-2026)
 

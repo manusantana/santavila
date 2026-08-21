@@ -73,6 +73,31 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # TANDA 2026-08-21 E · piezas sueltas LEISA, DOUNVIL y MANHATAN (6 fichas, 5.057 EUR)
 # Cotas del CSV maestro Hevea. Habitat nuevo: C14 Cuenca (Leisa).
 # NO entran: Dounvil-3 (1.175) y Manhatan-2 (715), ambas con persona sentada en su unica foto.
+# TANDA 2026-08-21 F · BELLAGIO y CUPRA (3 fichas, 5.699 EUR)
+# El set BELLAGIO-8 es la ficha de mayor ticket que quedaba sin galeria (3.449 EUR).
+# Composicion verificada en el catalogo (pag. 37): 2xA + C + D = dos sillones, sofa de
+# 3 plazas y mesa de centro. Los DOS REPOSAPIES que salen en la foto del proveedor NO
+# entran en el lote: se retiraron de la imagen.
+# El set no tiene cotas en el CSV -> no lleva imagen de medidas (nunca se deduce de la foto).
+GALERIAS_BELLAGIO_CUPRA = {
+    "bellagio8_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Conjunto de jardin Bellagio en aluminio antracita con sofa de 3 plazas, dos sillones y mesa de centro, con cojines azul claro, sobre fondo neutro",
+        "02_ambiente_cabodegata.jpg": "Conjunto Bellagio antracita en la terraza encalada de una casa cubica de Cabo de Gata, entre agaves y chumberas, con el mar arido al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio antracita del sofa Bellagio junto al canto del cojin azul claro",
+    }),
+    "bellagio1_sillon": ("sillon-exterior-estilo-envolvente-7582-cm", {
+        "01_packshot.jpg": "Sillon de exterior Bellagio en aluminio antracita con tirante diagonal y base de patin, cojines gris azulado, 75x75x82 cm, sobre fondo neutro",
+        "02_ambiente_cabodegata.jpg": "Sillon Bellagio antracita en la terraza encalada de una casa de Cabo de Gata, entre agaves y chumberas, con el mar al fondo",
+        "05_medidas.jpg": "Medidas del sillon Bellagio: 75 cm de ancho y 82 de alto. Se vende solo el sillon",
+    }),
+    "cupra2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-13090-cm", {
+        "01_packshot.jpg": "Sofa de terraza Cupra de 2 plazas en aluminio blanco con brazos de marco abierto y base de patin, cojines gris claro, 130x75x90 cm, sobre fondo neutro",
+        "02_ambiente_toledo.jpg": "Sofa Cupra de 2 plazas en la terraza de un cigarral toledano, con muro de mamposteria, olivos viejos y el Tajo y la ciudad al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de marco abierto de aluminio blanco del sofa Cupra en su union con la base de patin",
+        "05_medidas.jpg": "Medidas del sofa Cupra de 2 plazas: 130 cm de ancho y 90 de alto. Se vende solo el sofa",
+    }),
+}
+
 GALERIAS_LEISA_DOUNVIL_MANHATAN = {
     "leisa3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm", {
         "01_packshot.jpg": "Sofa de terraza Leisa de 3 plazas con brazos de aluminio antracita sobre chasis blanco y cojines gris claro, 196x80x85 cm, sobre fondo neutro",
@@ -735,7 +760,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_LEISA_DOUNVIL_MANHATAN
+    ACTIVA = GALERIAS_BELLAGIO_CUPRA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
