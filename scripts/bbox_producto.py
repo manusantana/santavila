@@ -18,7 +18,7 @@ desviacion es baja y ademas se exige una masa minima por fila/columna.
 import sys, numpy as np
 from PIL import Image, ImageDraw
 
-def bbox(path, umbral=40, min_frac=0.06):
+def bbox(path, umbral=40, min_frac=0.06, croma=12):
     """Contorno del producto en un packshot bone.
 
     Cuatro detectores fallaron antes que este (21-08-2026):
@@ -50,11 +50,18 @@ def bbox(path, umbral=40, min_frac=0.06):
     # El corte se toma sobre el MAXIMO de cada eje, no sobre el tamano de la imagen:
     # un sofa bajo y largo y un sillon alto y estrecho reparten su masa de forma muy
     # distinta, y un porcentaje fijo del cuadro dejaba entrar la sombra blanda.
-    sf, sc = mask.sum(axis=1), mask.sum(axis=0)
-    filas = sf > max(8, sf.max() * min_frac)
-    cols  = sc > max(8, sc.max() * min_frac)
-    ys, xs = np.where(filas)[0], np.where(cols)[0]
-    if not len(ys) or not len(xs): return None
+    # ANCHO: corte sobre el maximo de la columna -> deja fuera la sombra blanda lateral.
+    sc = mask.sum(axis=0)
+    cols = sc > max(8, sc.max() * min_frac)
+    xs = np.where(cols)[0]
+    if not len(xs): return None
+    # ALTO: el mismo corte se comia las PATAS (finas, blancas, poca masa por fila y encima
+    # del color del fondo). Se miden las filas SOLO dentro del ancho ya hallado y con un
+    # umbral absoluto bajo: ahi una pata si cuenta y la sombra lateral ya no puede entrar.
+    sf = mask[:, xs[0]:xs[-1] + 1].sum(axis=1)
+    filas = sf >= 6
+    ys = np.where(filas)[0]
+    if not len(ys): return None
     # margen del 1%: el detector subestima siempre un poco (el borde iluminado del
     # producto se confunde con el fondo) y una cota CORTA enganya mas que una larga
     mx, my = round(w * 0.01), round(h * 0.01)
@@ -65,7 +72,8 @@ if __name__ == "__main__":
     p = sys.argv[1]
     u = int(sys.argv[sys.argv.index("--umbral")+1]) if "--umbral" in sys.argv else 40
     mf = float(sys.argv[sys.argv.index("--masa")+1]) if "--masa" in sys.argv else 0.06
-    b = bbox(p, u, mf)
+    cr = int(sys.argv[sys.argv.index("--croma")+1]) if "--croma" in sys.argv else 12
+    b = bbox(p, u, mf, cr)
     im = Image.open(p).convert("RGB")
     print(f"{b[0]},{b[1]},{b[2]},{b[3]}   ({b[2]-b[0]}x{b[3]-b[1]} px de {im.size[0]}x{im.size[1]})")
     if "--hoja" in sys.argv:

@@ -869,5 +869,82 @@
    "gid://shopify/MediaImage/71487097110852",
    "gid://shopify/MediaImage/71487097143620"
   ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm",
+  "producto": "gid://shopify/Product/15507127796036",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554359620"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487276155204",
+   "gid://shopify/MediaImage/71487276187972",
+   "gid://shopify/MediaImage/71487276220740",
+   "gid://shopify/MediaImage/71487276253508"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13785-cm",
+  "producto": "gid://shopify/Product/15507127763268",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554326852"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487279759684",
+   "gid://shopify/MediaImage/71487279792452",
+   "gid://shopify/MediaImage/71487279825220",
+   "gid://shopify/MediaImage/71487279857988"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-elegante-15085-cm",
+  "producto": "gid://shopify/Product/15507127959876",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554523460"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487282708804",
+   "gid://shopify/MediaImage/71487282741572",
+   "gid://shopify/MediaImage/71487282774340",
+   "gid://shopify/MediaImage/71487282807108"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-moderno-7085-cm",
+  "producto": "gid://shopify/Product/15507127894340",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554457924"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487286411588",
+   "gid://shopify/MediaImage/71487286444356",
+   "gid://shopify/MediaImage/71487286477124",
+   "gid://shopify/MediaImage/71487286509892"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-moderno-18770-cm",
+  "producto": "gid://shopify/Product/15507128680772",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555637572"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487291097412",
+   "gid://shopify/MediaImage/71487291130180",
+   "gid://shopify/MediaImage/71487291162948",
+   "gid://shopify/MediaImage/71487291195716"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-urbano-6670-cm",
+  "producto": "gid://shopify/Product/15507128615236",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555572036"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487294112068",
+   "gid://shopify/MediaImage/71487294144836",
+   "gid://shopify/MediaImage/71487294177604"
+  ]
  }
 ]

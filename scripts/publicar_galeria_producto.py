@@ -70,6 +70,47 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Albania-3 verde salvia sobre gris claro, Albania-1 antracita.
 # NO entran: Albania-2 (persona sentada -> el asiento salio de una pieza cuando lleva DOS
 # cojines) ni Diva-1 (su unica foto lo muestra de espaldas: no hay cara frontal que usar).
+# TANDA 2026-08-21 E · piezas sueltas LEISA, DOUNVIL y MANHATAN (6 fichas, 5.057 EUR)
+# Cotas del CSV maestro Hevea. Habitat nuevo: C14 Cuenca (Leisa).
+# NO entran: Dounvil-3 (1.175) y Manhatan-2 (715), ambas con persona sentada en su unica foto.
+GALERIAS_LEISA_DOUNVIL_MANHATAN = {
+    "leisa3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm", {
+        "01_packshot.jpg": "Sofa de terraza Leisa de 3 plazas con brazos de aluminio antracita sobre chasis blanco y cojines gris claro, 196x80x85 cm, sobre fondo neutro",
+        "02_ambiente_cuenca.jpg": "Sofa Leisa de 3 plazas en una terraza de piedra sobre el casco viejo de Cuenca, con las casas colgadas y la hoz del Huecar al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio antracita del sofa Leisa en su encuentro con el travesano blanco del chasis",
+        "05_medidas.jpg": "Medidas del sofa Leisa de 3 plazas: 196 cm de ancho y 85 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "leisa2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-13785-cm", {
+        "01_packshot.jpg": "Sofa de terraza Leisa de 2 plazas con chasis de aluminio blanco y cojines gris marengo, 137x80x85 cm, sobre fondo neutro",
+        "02_ambiente_cuenca.jpg": "Sofa Leisa de 2 plazas en una terraza de piedra sobre el casco viejo de Cuenca, con las casas colgadas y la hoz del Huecar al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio blanco del sofa Leisa junto a la costura del cojin gris marengo",
+        "05_medidas.jpg": "Medidas del sofa Leisa de 2 plazas: 137 cm de ancho y 85 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "dounvil2_sofa": ("sofa-terraza-2-plazas-estilo-elegante-15085-cm", {
+        "01_packshot.jpg": "Sofa de terraza Dounvil de 2 plazas con chasis de aluminio blanco y cojines arena, 150x80x85 cm, sobre fondo neutro",
+        "02_ambiente_rioja.jpg": "Sofa Dounvil de 2 plazas en una terraza de piedra arenisca sobre los vinedos de La Rioja, con la Sierra de Cantabria al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio blanco del sofa Dounvil en su union con la pata, junto al canto del cojin arena",
+        "05_medidas.jpg": "Medidas del sofa Dounvil de 2 plazas: 150 cm de ancho y 85 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "dounvil1_sillon": ("sillon-exterior-estilo-moderno-7085-cm", {
+        "01_packshot.jpg": "Sillon de exterior Dounvil con chasis de aluminio antracita y cojines gris claro, 70x80x85 cm, sobre fondo neutro",
+        "02_ambiente_costadamorte.jpg": "Sillon Dounvil antracita sobre las rocas de granito de la Costa da Morte, entre tojo en flor y brezo, con el Atlantico rompiendo abajo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio antracita del sillon Dounvil junto al cojin gris claro",
+        "05_medidas.jpg": "Medidas del sillon Dounvil: 70 cm de ancho y 85 de alto. Se vende solo el sillon; el reposapies no se incluye",
+    }),
+    "manhatan3_sofa": ("sofa-terraza-3-plazas-estilo-moderno-18770-cm", {
+        "01_packshot.jpg": "Sofa de terraza Manhatan de 3 plazas en aluminio blanco con brazos planos y base voladiza, cojines gris claro, 187x66x70 cm, sobre fondo neutro",
+        "02_ambiente_sevilla.jpg": "Sofa Manhatan de 3 plazas blanco en una azotea sevillana de suelo de ladrillo, con jazmin en tinaja y la Giralda sobre los tejados",
+        "04_asmr_brazo.jpg": "Detalle del brazo plano de aluminio blanco del sofa Manhatan y del quiebro de su base voladiza",
+        "05_medidas.jpg": "Medidas del sofa Manhatan de 3 plazas: 187 cm de ancho y 70 de alto. Se vende solo el sofa; la mesa y los cojines decorativos no se incluyen",
+    }),
+    "manhatan1_sillon": ("sillon-exterior-estilo-urbano-6670-cm", {
+        "01_packshot.jpg": "Sillon de exterior Manhatan en aluminio antracita con brazo plano y base voladiza, cojines gris claro, 66x66x70 cm, sobre fondo neutro",
+        "02_ambiente_pirineo.jpg": "Sillon Manhatan antracita en una terraza de pizarra del Pirineo aragones, con muro de piedra seca, lavanda y los picos al fondo",
+        "05_medidas.jpg": "Medidas del sillon Manhatan: 66 cm de ancho y 70 de alto. Se vende solo el sillon",
+    }),
+}
+
 GALERIAS_DIVA_ALBANIA = {
     "diva3_sofa": ("sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm", {
         "01_packshot.jpg": "Sofa de terraza Diva bicolor de 3 plazas con estructura de aluminio blanco, laterales de lamas antracita y cojines blanco crudo, 200x70x76 cm, sobre fondo neutro",
@@ -694,7 +735,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_DIVA_ALBANIA
+    ACTIVA = GALERIAS_LEISA_DOUNVIL_MANHATAN
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
