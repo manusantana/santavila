@@ -619,6 +619,23 @@ por mi cuenta, persiguiendo una métrica.
 ---
 
 
+## Si dos fuentes del proveedor discrepan, manda el CATÁLOGO (21-08-2026)
+
+Pasa: el **CSV maestro** y el **catálogo PDF** de Hevea dan cotas distintas para la misma
+referencia. Bolonia XL fue el caso: CSV 215/164/80, catálogo 200/141/78.
+
+**Decisión de Sergio: siempre catálogo.** El PDF es el documento que el proveedor publica e
+imprime; el CSV es un volcado que arrastra errores. Cuando las dos hablen, gana el catálogo.
+
+- CSV **==** catálogo → cota confirmada por doble fuente, la mejor situación
+- CSV **≠** catálogo → **catálogo**, sin dudarlo
+- solo CSV (la serie no está en el PDF) → CSV, es fuente del proveedor
+- ninguna de las dos → **esa ficha no lleva imagen de medidas**
+
+Ojo: el **título de Shopify** puede llevar la cota vieja del CSV. Eso es SEO (trabajo del
+compañero) y se anota, no se toca; pero la cota que se DIBUJA sale del catálogo.
+
+
 ## La cota se dibuja donde diga el detector, y el detector se verifica (21-08-2026)
 
 El overlay lleva su propio detector de contorno *por neutralidad* (§ el producto es gris, el fondo bone es

@@ -1659,5 +1659,192 @@
     "alt_len": 89
    }
   ]
+ },
+ "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "bolxl3_sofa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 163
+   },
+   {
+    "fichero": "02_ambiente_cadaques.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 160
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 126
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "bolxl2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 163
+   },
+   {
+    "fichero": "02_ambiente_cadaques.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 122
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 159
+   }
+  ]
+ },
+ "sillon-exterior-estilo-elegante-80104-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "bolxl1_sillon",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "02_ambiente_cadaques.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 134
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 111
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 117
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-moderno-128115-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "haston2_sofa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   },
+   {
+    "fichero": "02_ambiente_carmen.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 151
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   }
+  ]
+ },
+ "sillon-exterior-estilo-versatil-7685-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "leisa1_sillon",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 115
+   },
+   {
+    "fichero": "02_ambiente_cuenca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 78
+   }
+  ]
+ },
+ "silla-exterior-estilo-contemporaneo": {
+  "fecha": "2026-08-21",
+  "carpeta": "corcega_silla",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 133
+   },
+   {
+    "fichero": "02_ambiente_segovia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 80
+   }
+  ]
+ },
+ "sillon-exterior-estilo-versatil-58100-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "avalon_silla",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "02_ambiente_valencia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 124
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 80
+   }
+  ]
  }
 }

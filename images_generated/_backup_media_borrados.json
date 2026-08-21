@@ -1127,5 +1127,91 @@
    "gid://shopify/MediaImage/71487706562884",
    "gid://shopify/MediaImage/71487706595652"
   ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm",
+  "producto": "gid://shopify/Product/15507127238980",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552622916"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489333657924",
+   "gid://shopify/MediaImage/71489333690692",
+   "gid://shopify/MediaImage/71489333723460"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm",
+  "producto": "gid://shopify/Product/15507127206212",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552590148"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489336049988",
+   "gid://shopify/MediaImage/71489336082756",
+   "gid://shopify/MediaImage/71489336115524",
+   "gid://shopify/MediaImage/71489336148292"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-elegante-80104-cm",
+  "producto": "gid://shopify/Product/15507127173444",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552524612"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489337262404",
+   "gid://shopify/MediaImage/71489337295172",
+   "gid://shopify/MediaImage/71489337327940",
+   "gid://shopify/MediaImage/71489337360708"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-moderno-128115-cm",
+  "producto": "gid://shopify/Product/15507128222020",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554916676"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489394180420",
+   "gid://shopify/MediaImage/71489394213188",
+   "gid://shopify/MediaImage/71489394245956"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-versatil-7685-cm",
+  "producto": "gid://shopify/Product/15507127730500",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554294084"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489396965700",
+   "gid://shopify/MediaImage/71489396998468",
+   "gid://shopify/MediaImage/71489397031236"
+  ]
+ },
+ {
+  "handle": "silla-exterior-estilo-contemporaneo",
+  "producto": "gid://shopify/Product/15507129205060",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556587844"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489398178116",
+   "gid://shopify/MediaImage/71489398210884",
+   "gid://shopify/MediaImage/71489398243652"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-versatil-58100-cm",
+  "producto": "gid://shopify/Product/15507129303364",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556817220"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489399882052",
+   "gid://shopify/MediaImage/71489399914820",
+   "gid://shopify/MediaImage/71489399947588"
+  ]
  }
 ]

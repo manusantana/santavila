@@ -92,6 +92,58 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Los tres reposapies estaban en fotos COMPARTIDAS con su sillon (el proveedor no los
 # fotografia solos): se aislo cada uno sin tocar su geometria y cada uno va al habitat de
 # su familia. Cotas confirmadas por doble fuente.
+# TANDA 2026-08-21 J · BOLONIA XL, desbloqueada por la regla "siempre catalogo" (3 fichas, 4.708 EUR)
+# El CSV decia 215/164/80 y el catalogo 200/141/78. Sergio: manda el catalogo. Las cotas
+# dibujadas son las del PDF (pag. 30). OJO: el TITULO de Shopify aun lleva la del CSV -> es SEO.
+#
+# Ademas, el CSV asigna a BOLONIA XL-3 (sofa de 3 plazas) la foto de un sofa de DOS plazas:
+# la misma pieza que XL-2. Para el 3 plazas se uso la foto oficial del SET XL-8, donde si
+# aparece el sofa de tres plazas real (3 cojines de respaldo y 3 de asiento).
+# TANDA 2026-08-21 K · piezas sueltas y sillas de comedor (4 fichas, 1.845 EUR)
+# HASTON-1 (559) NO entra: su unica foto la ocupa una modelo sentada en el sillon.
+GALERIAS_SUELTAS_SILLAS = {
+    "haston2_sofa": ("sofa-terraza-2-plazas-estilo-moderno-128115-cm", {
+        "01_packshot.jpg": "Sofa de terraza Haston de 2 plazas con respaldo alto, estructura de aluminio tortola y cojines beige, 128x62x115 cm, sobre fondo neutro",
+        "02_ambiente_carmen.jpg": "Sofa Haston de 2 plazas de respaldo alto en el jardin de un carmen del Albaicin granadino, junto a una alberca de piedra, con cipreses y setos de mirto",
+        "05_medidas.jpg": "Medidas del sofa Haston de 2 plazas: 128 cm de ancho y 115 de alto. Se vende solo el sofa; la mesa y los cojines decorativos no se incluyen",
+    }),
+    "leisa1_sillon": ("sillon-exterior-estilo-versatil-7685-cm", {
+        "01_packshot.jpg": "Sillon de exterior Leisa con estructura de aluminio antracita y cojines gris claro, 76x80x85 cm, sobre fondo neutro",
+        "02_ambiente_cuenca.jpg": "Sillon Leisa antracita en una terraza de piedra sobre el casco viejo de Cuenca, con las casas colgadas y la hoz del Huecar al fondo",
+        "05_medidas.jpg": "Medidas del sillon Leisa: 76 cm de ancho y 85 de alto. Se vende solo el sillon",
+    }),
+    "corcega_silla": ("silla-exterior-estilo-contemporaneo", {
+        "01_packshot.jpg": "Silla de exterior Corcega apilable, de aluminio antracita con asiento y respaldo de textileno oscuro, 55x50x90 cm, sobre fondo neutro",
+        "02_ambiente_segovia.jpg": "Silla Corcega antracita sola en una terraza de sillar granitico de Segovia, con lavanda en un pilon de piedra y la sierra de Guadarrama al fondo",
+        "05_medidas.jpg": "Medidas de la silla Corcega: 55 cm de ancho y 90 de alto. Se vende solo la silla",
+    }),
+    "avalon_silla": ("sillon-exterior-estilo-versatil-58100-cm", {
+        "01_packshot.jpg": "Silla de exterior Avalon apilable, de aluminio blanco con asiento y respaldo de textileno blanco, 58x57x100 cm, sobre fondo neutro",
+        "02_ambiente_valencia.jpg": "Silla Avalon blanca sola en una terraza valenciana de suelo de barro, con persiana de esparto, romero y un naranjo en tinaja",
+        "05_medidas.jpg": "Medidas de la silla Avalon: 58 cm de ancho y 100 de alto. Se vende solo la silla",
+    }),
+}
+
+GALERIAS_BOLONIA_XL = {
+    "bolxl3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm", {
+        "01_packshot.jpg": "Sofa de terraza Bolonia XL de 3 plazas en aluminio azul marino con brazos de marco abierto y base de patin, cojines azul lavanda, 200x84x104 cm, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Sofa Bolonia XL de 3 plazas en una terraza de Cadaques, sobre laja de pizarra, con muro encalado, postigos de lamas azules, buganvilla y la bahia con los llauts",
+        "05_medidas.jpg": "Medidas del sofa Bolonia XL de 3 plazas segun el catalogo del fabricante: 200 cm de ancho y 104 de alto. Se vende solo el sofa",
+    }),
+    "bolxl2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm", {
+        "01_packshot.jpg": "Sofa de terraza Bolonia XL de 2 plazas en aluminio azul marino con brazos de marco abierto y base de patin, cojines azul lavanda, 141x84x104 cm, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Sofa Bolonia XL de 2 plazas en una terraza de Cadaques, con olivo en tinaja, postigos de lamas azules, buganvilla y las barcas de la bahia al fondo",
+        "04_asmr_brazo.jpg": "Detalle de la esquina soldada del brazo de aluminio azul marino del sofa Bolonia XL, junto al canto del cojin azul lavanda",
+        "05_medidas.jpg": "Medidas del sofa Bolonia XL de 2 plazas segun el catalogo del fabricante: 141 cm de ancho y 104 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "bolxl1_sillon": ("sillon-exterior-estilo-elegante-80104-cm", {
+        "01_packshot.jpg": "Sillon de exterior Bolonia XL en aluminio azul marino con brazo de marco abierto y base de patin, cojines azul lavanda, 78x84x104 cm, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Sillon Bolonia XL en una terraza de Cadaques, sobre laja de pizarra, junto a un olivo en tinaja y con los llauts fondeados en la bahia",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio azul marino del sillon Bolonia XL y del acolchado acanalado del cojin de respaldo",
+        "05_medidas.jpg": "Medidas del sillon Bolonia XL segun el catalogo del fabricante: 78 cm de ancho y 104 de alto. Se vende solo el sillon",
+    }),
+}
+
 GALERIAS_REPOSAPIES = {
     "bellagio4_mesa": ("mesa-de-centro-exterior-125-cm-altura-38-cm", {
         "01_packshot.jpg": "Mesa de centro de exterior Bellagio de aluminio antracita con tablero de lamas y patas curvadas, 125x60x38 cm, sobre fondo neutro",
@@ -842,7 +894,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_REPOSAPIES
+    ACTIVA = GALERIAS_SUELTAS_SILLAS
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
