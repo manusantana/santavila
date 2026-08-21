@@ -1969,8 +1969,8 @@
  },
  "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2": {
   "fecha": "2026-08-21",
-  "carpeta": "cupra8_set",
-  "n_imagenes": 2,
+  "carpeta": "cupra3_set",
+  "n_imagenes": 4,
   "imagenes": [
    {
     "fichero": "01_packshot.jpg",
@@ -1982,64 +1982,112 @@
     "fichero": "02_ambiente_toledo.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 155
+    "alt_len": 127
+   },
+   {
+    "fichero": "03_ambiente_tajo.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 119
+   },
+   {
+    "fichero": "04_asmr_brazo_salvia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 92
    }
   ]
  },
  "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5": {
   "fecha": "2026-08-21",
-  "carpeta": "bolxl7_set",
-  "n_imagenes": 2,
+  "carpeta": "bolxl2_set",
+  "n_imagenes": 4,
   "imagenes": [
    {
     "fichero": "01_packshot.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 147
+    "alt_len": 151
    },
    {
     "fichero": "02_ambiente_cadaques.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 145
+    "alt_len": 93
+   },
+   {
+    "fichero": "03_ambiente_bahia_cadaques.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 128
+   },
+   {
+    "fichero": "04_asmr_brazo_marino.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 101
    }
   ]
  },
  "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2": {
   "fecha": "2026-08-21",
-  "carpeta": "cupra7_set",
-  "n_imagenes": 2,
+  "carpeta": "cupra2_set",
+  "n_imagenes": 4,
   "imagenes": [
    {
     "fichero": "01_packshot.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 135
+    "alt_len": 139
    },
    {
     "fichero": "02_ambiente_toledo.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 130
+    "alt_len": 100
+   },
+   {
+    "fichero": "03_ambiente_arco_toledo.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 127
+   },
+   {
+    "fichero": "04_asmr_lamas_asiento.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
    }
   ]
  },
  "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa": {
   "fecha": "2026-08-21",
-  "carpeta": "damasco8_set",
-  "n_imagenes": 2,
+  "carpeta": "damasco_set",
+  "n_imagenes": 4,
   "imagenes": [
    {
     "fichero": "01_packshot.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 162
+    "alt_len": 142
    },
    {
     "fichero": "02_ambiente_cortijo.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 144
+    "alt_len": 101
+   },
+   {
+    "fichero": "03_ambiente_arcos_cortijo.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 120
+   },
+   {
+    "fichero": "04_asmr_cuerda_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 99
    }
   ]
  },
@@ -2307,6 +2355,130 @@
     "px": "2600x2600",
     "mp": 6.8,
     "alt_len": 110
+   }
+  ]
+ },
+ "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4": {
+  "fecha": "2026-08-21",
+  "carpeta": "haston8_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 153
+   },
+   {
+    "fichero": "02_ambiente_carmen_albaicin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   },
+   {
+    "fichero": "03_ambiente_cipreses_albaicin.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 125
+   },
+   {
+    "fichero": "04_asmr_respaldo_alto.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 112
+   }
+  ]
+ },
+ "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3": {
+  "fecha": "2026-08-21",
+  "carpeta": "haston7_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 149
+   },
+   {
+    "fichero": "02_ambiente_la_alberca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "03_ambiente_lavanda_alberca.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 120
+   },
+   {
+    "fichero": "04_asmr_respaldo_tortola.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 78
+   }
+  ]
+ },
+ "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-21",
+  "carpeta": "leisa7_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_cuenca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   },
+   {
+    "fichero": "03_ambiente_hoz_huecar.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 126
+   },
+   {
+    "fichero": "04_asmr_brazo_marengo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 114
+   }
+  ]
+ },
+ "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro": {
+  "fecha": "2026-08-21",
+  "carpeta": "adel7_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_puerto_cartagena.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 163
+   },
+   {
+    "fichero": "03_ambiente_cupula_cartagena.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 106
+   },
+   {
+    "fichero": "04_asmr_brazo_mesa.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 99
    }
   ]
  }

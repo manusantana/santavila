@@ -66,10 +66,21 @@
 | **`set-rinconera-...-hpl-elegante-...`** (Loira-8) | antracita + gris claro, HPL / **frío** | Frío/verde atlántico | **C18 Terraza de laja, Cangas de Onís (Asturias)** — hórreo, prado, Picos de Europa, laja mojada de lluvia | — (set, 4 tomas) | manta de lino · libro · helechos en maceta de piedra |
 | **`banco-jardin-con-mesa-integrada-220-cm`** (Yulien) | aluminio **negro mate** / **oscuro-vegetal** | Cálido/piedra seca | **C19 Huerto de casa de campo, La Vera (Extremadura)** — muro de piedra seca, cerezos e higuera, grava y hierba alta | — (pieza única, 5 tomas) | manta de lino · libro · romero en tinaja |
 
+| **`set-jardin-3-plazas-sofisticado-...-mesa-2`** (Cupra 3 pl.) | blanco + verde salvia / **blanco-vegetal** | Blanco/piedra | **C15 Cigarral toledano** — mampostería, olivos viejos, el Tajo y Toledo (mundo ya fijado por Cupra-2) | — (set, 4 tomas) | manta de lino |
+| **`set-jardin-2-plazas-elegante-...-mesa-5`** (Bolonia XL 2 pl.) | azul marino + azul lavanda / **frío** | Frío/pizarra marina | **C8 Cadaqués** — laja, postigos de lamas azules, olivo, la bahía con los llaüts | — (set, 4 tomas) | manta de lino |
+| **`set-jardin-2-plazas-elegante-...-mesa-2`** (Cupra 2 pl.) | blanco + gris claro / **blanco** | Blanco/piedra | **C15 Cigarral toledano** — otro rincón: arco de granito, lavanda en pilón | — (set, 4 tomas) | libro |
+| **`set-jardin-3-plazas-sofisticado-...-mesa`** (Damasco) | tórtola + cuerda beige / **cálido-neutro** | Cálido/cal | **B2 Cortijo campiña sevillana** — arcos encalados, olivo en tinaja, caliza | — (set, 4 tomas) | manta de lino |
+| **`set-jardin-3-plazas-contemporaneo-...-mesa-4`** (Haston-8) | blanco + gris claro, respaldo alto / **blanco-vegetal** | Blanco/vegetal | **C13 Carmen del Albaicín** — cipreses, pilón de piedra, cal, empedrado (mundo de la serie Haston) | — (set, 4 tomas) | manta de lino · libro |
+| **`set-jardin-2-plazas-moderno-...-mesa-3`** (Haston-7) | **tórtola** + beige, respaldo alto / **cálido** | Cálido/granito | **C20 Plaza de La Alberca (Salamanca)** — balcones de entramado, granito empedrado, Sierra de Francia | — (set, 4 tomas) | manta de lino · lavanda en gres |
+| **`set-jardin-2-plazas-contemporaneo-...-mesa`** (Leisa-7) | blanco + gris marengo / **frío** | Frío/caliza | **C14 Terraza sobre Cuenca** — casas colgadas, hoz del Huécar, caliza (mundo de la serie Leisa) | — (set, 4 tomas) | manta de lino · libro |
+| **`set-rinconera-exterior-contemporaneo-...`** (Adel-7) | blanco + gris marengo / **frío** | Blanco/cal marina | **C17 Azotea de Cartagena** — puerto, palmeras, tejados de teja (mundo de la serie Adel) | — (set, 4 tomas) | manta de lino |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
-**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), **Castilla y León rural**, Tarragona/Costa Daurada, Aragón (Teruel), Navarra.
+**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), Tarragona/Costa Daurada, **Aragón (Teruel/Albarracín)**, **Navarra**, León.
+*(21-08-2026 noche: se estrena **C20 La Alberca (Salamanca)** — cae Castilla y León rural. Ocho sets mas se publican REUSANDO el mundo ya fijado por su serie (C8, C13, C14, C15, C17, B2): un set y sus piezas sueltas comparten hábitat, y eso es lo que hace que el catalogo se lea como una sola tienda.)*
+
 *(21-08-2026 tarde: se estrenan **C16 Cáceres, C17 Cartagena, C18 Cangas de Onís y C19 La Vera** — caen tres de las zonas infrautilizadas: Extremadura, Murcia capital y Asturias interior.)*
 
 *(21-08-2026: se estrenan C11 Lanzarote, C12 Altea, C13 Albaicín, C14 Cuenca y C15 cigarral toledano; Canarias, Aragón/Pirineo y La Rioja dejan de estar infrautilizadas.)*

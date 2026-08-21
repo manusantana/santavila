@@ -134,6 +134,80 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # (el CSV la trae vacia y la serie no aparece en el catalogo PDF) -> no se dibuja.
 # El Yulien si: sus cotas salen del catalogo (pag. 64 y 104), 220 x 150 x 75 H.
 # ############################################################################
+# ############################################################################
+# TANDA 2026-08-21 (F) — COMPLETAR LO EMPEZADO: cuatro sets que ya tenian
+# packshot + un ambiente publicados y se quedaron a medias. Solo faltaban la
+# toma 3 (segundo ambiente del MISMO mundo) y el ASMR -> 2 tomas por ficha en
+# vez de 4. 15.885 EUR por la mitad de creditos.
+# Las tomas 01 y 02 se redeclaran tal cual (el publicador borra y resube todo).
+# ############################################################################
+# ############################################################################
+# TANDA 2026-08-21 (G) — LA FORMULA DEL CATALOGO CONTRA LA PIEZA FANTASMA.
+# Catalogo pag. 32, serie HASTON, literal:
+#     A=HASTON-1 sillon · B=HASTON-2 sofa 2pl · C=HASTON-3 sofa 3pl
+#     D=SAIPROS-90 mesa · E=SAIPROS-120 mesa · F=LIEVAN-5 REPOSAPIES
+#     HASTON-7 = 2xA + B + D        HASTON-8 = 2xA + C + E
+# La F no entra en ninguna de las dos formulas -> los DOS REPOSAPIES que salen
+# en las fotos del proveedor NO se venden con el set. Se han borrado de todas
+# las tomas. Lo mismo en Leisa-7 (misma estructura de set, el titulo tampoco
+# los incluye).
+# Ademas se quito la modelo sentada de Haston-7, Leisa-7 y Adel-7, y los
+# consumibles de las fotos originales (copas de vino, vela).
+# ############################################################################
+GALERIAS_SETS_FORMULA = {
+    "haston8_set": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4", {
+        "01_packshot.jpg": "Conjunto de jardin Haston en aluminio blanco con sofa de 3 plazas de respaldo alto, dos sillones y mesa de centro, cojines gris claro, sobre fondo neutro",
+        "02_ambiente_carmen_albaicin.jpg": "Conjunto Haston blanco en el jardin de un carmen del Albaicin granadino, entre cipreses y un pilon de piedra, con una manta de lino sobre el sofa",
+        "03_ambiente_cipreses_albaicin.jpg": "Detalle del conjunto Haston junto al muro encalado del carmen, con cipreses y boj en maceta de piedra sobre empedrado antiguo",
+        "04_asmr_respaldo_alto.jpg": "Detalle del respaldo alto del sillon Haston: el perfil de aluminio blanco lacado y la trama del cojin gris claro",
+    }),
+    "haston7_set": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3", {
+        "01_packshot.jpg": "Conjunto de jardin Haston en aluminio tortola con sofa de 2 plazas de respaldo alto, dos sillones y mesa de centro, cojines beige, sobre fondo neutro",
+        "02_ambiente_la_alberca.jpg": "Conjunto Haston tortola en una plaza empedrada de La Alberca, Salamanca, con los balcones de entramado de madera y la Sierra de Francia al fondo",
+        "03_ambiente_lavanda_alberca.jpg": "Detalle del conjunto Haston junto al muro de granito, con lavanda en una tinaja de gres y un libro abierto sobre la mesa",
+        "04_asmr_respaldo_tortola.jpg": "Detalle del respaldo alto del sillon Haston tortola y la trama del cojin beige",
+    }),
+    "leisa7_set": ("set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Leisa en aluminio blanco con sofa de 2 plazas, dos sillones y mesa de centro, cojines gris marengo, sobre fondo neutro",
+        "02_ambiente_cuenca.jpg": "Conjunto Leisa blanco en una terraza de caliza sobre la hoz del Huecar, con las casas colgadas de Cuenca al fondo, manta de lino y un libro abierto",
+        "03_ambiente_hoz_huecar.jpg": "Detalle del conjunto Leisa en la terraza de Cuenca, con romero en maceta de piedra y la hoz al fondo a ultima hora de la tarde",
+        "04_asmr_brazo_marengo.jpg": "Detalle del brazo de aluminio blanco del sillon Leisa, con las lamas del asiento y la trama del cojin gris marengo",
+    }),
+    "adel7_set": ("set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Set rinconera de exterior Adel-7 en aluminio blanco con cojines gris marengo, dos cojines de acento y mesa de centro baja, sobre fondo neutro",
+        "02_ambiente_puerto_cartagena.jpg": "Set rinconera Adel-7 en una azotea encalada de Cartagena, con el puerto, las palmeras y los tejados de teja al fondo, y una manta de lino sobre el cojin de esquina",
+        "03_ambiente_cupula_cartagena.jpg": "Detalle del set Adel-7 en la azotea, con la cupula encalada detras y un olivo joven en maceta de gres gris",
+        "04_asmr_brazo_mesa.jpg": "Detalle del brazo de aluminio blanco del sofa Adel-7 junto al tablero de lamas de la mesa de centro",
+    }),
+}
+
+GALERIAS_SETS_A_MEDIAS = {
+    "cupra3_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Cupra en aluminio blanco con sofa de 3 plazas, dos sillones y mesa de centro, con cojines verde salvia, sobre fondo neutro",
+        "02_ambiente_toledo.jpg": "Conjunto Cupra blanco con cojines verde salvia en la terraza de un cigarral toledano, entre olivos viejos y muro de mamposteria",
+        "03_ambiente_tajo.jpg": "Conjunto Cupra visto desde un sillon, con el Tajo y Toledo al fondo, olivos y una manta de lino sobre el brazo del sofa",
+        "04_asmr_brazo_salvia.jpg": "Detalle del brazo de aluminio blanco lacado del sofa Cupra y la trama del cojin verde salvia",
+    }),
+    "bolxl2_set": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5", {
+        "01_packshot.jpg": "Conjunto de jardin Bolonia XL en aluminio azul marino con sofa de 2 plazas, dos sillones y mesa de centro, con cojines azul lavanda, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Conjunto Bolonia XL en una terraza de Cadaques, sobre laja de pizarra y con la bahia al fondo",
+        "03_ambiente_bahia_cadaques.jpg": "Conjunto Bolonia XL con los postigos azules de lamas y la bahia de Cadaques llena de llauts, con una manta de lino sobre el sofa",
+        "04_asmr_brazo_marino.jpg": "Detalle del brazo de aluminio azul marino del sofa Bolonia XL junto a la trama del cojin azul lavanda",
+    }),
+    "cupra2_set": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Cupra en aluminio blanco con sofa de 2 plazas, dos sillones y mesa de centro, con cojines gris claro, sobre fondo neutro",
+        "02_ambiente_toledo.jpg": "Conjunto Cupra blanco en la terraza de un cigarral toledano, con olivos y el valle del Tajo al fondo",
+        "03_ambiente_arco_toledo.jpg": "Conjunto Cupra junto a un arco de granito del cigarral, con lavanda y un olivo en pilon de piedra y un libro abierto en la mesa",
+        "04_asmr_lamas_asiento.jpg": "Detalle del perfil de aluminio blanco del sillon Cupra, con las lamas del asiento y la trama del cojin gris claro",
+    }),
+    "damasco_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Damasco en aluminio tortola con brazos de cuerda beige, sofa de 3 plazas, dos sillones y mesa de centro, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Conjunto Damasco en la terraza de caliza de un cortijo de la campina sevillana, entre muros encalados",
+        "03_ambiente_arcos_cortijo.jpg": "Conjunto Damasco bajo los arcos encalados del cortijo, con un olivo en tinaja de barro y una manta de lino sobre el sofa",
+        "04_asmr_cuerda_brazo.jpg": "Detalle de la cuerda beige trenzada del brazo Damasco enrollada sobre el perfil de aluminio tortola",
+    }),
+}
+
 GALERIAS_SETS_ALTA = {
     "loira30_set": ("set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro", {
         "01_packshot.jpg": "Set rinconera de exterior Loira-30 con estructura de aluminio antracita, siete cojines gris claro, mesa alta de tablero HPL y banco a juego, sobre fondo neutro",
@@ -1035,7 +1109,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_SETS_ALTA
+    ACTIVA = GALERIAS_SETS_FORMULA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

@@ -1448,5 +1448,117 @@
    "gid://shopify/MediaImage/71490758541636",
    "gid://shopify/MediaImage/71490758574404"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507126157636",
+  "borrados": [
+   "gid://shopify/MediaImage/71489630929220",
+   "gid://shopify/MediaImage/71489630961988"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490865660228",
+   "gid://shopify/MediaImage/71490865692996",
+   "gid://shopify/MediaImage/71490865725764",
+   "gid://shopify/MediaImage/71490865758532"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5",
+  "producto": "gid://shopify/Product/15507127337284",
+  "borrados": [
+   "gid://shopify/MediaImage/71489631748420",
+   "gid://shopify/MediaImage/71489631781188"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490868183364",
+   "gid://shopify/MediaImage/71490868216132",
+   "gid://shopify/MediaImage/71490868248900",
+   "gid://shopify/MediaImage/71490868281668"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507126124868",
+  "borrados": [
+   "gid://shopify/MediaImage/71489632895300",
+   "gid://shopify/MediaImage/71489632928068"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490869854532",
+   "gid://shopify/MediaImage/71490869887300",
+   "gid://shopify/MediaImage/71490869920068",
+   "gid://shopify/MediaImage/71490869952836"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125698884",
+  "borrados": [
+   "gid://shopify/MediaImage/71489633648964",
+   "gid://shopify/MediaImage/71489633681732"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490871951684",
+   "gid://shopify/MediaImage/71490871984452",
+   "gid://shopify/MediaImage/71490872017220",
+   "gid://shopify/MediaImage/71490872049988"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4",
+  "producto": "gid://shopify/Product/15507128320324",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555113284",
+   "gid://shopify/MediaImage/70108304310596"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490958328132",
+   "gid://shopify/MediaImage/71490958360900",
+   "gid://shopify/MediaImage/71490958393668",
+   "gid://shopify/MediaImage/71490958426436"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-3",
+  "producto": "gid://shopify/Product/15507128287556",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555014980",
+   "gid://shopify/MediaImage/70108304277828"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490960064836",
+   "gid://shopify/MediaImage/71490960097604",
+   "gid://shopify/MediaImage/71490960130372",
+   "gid://shopify/MediaImage/71490960163140"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507127828804",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554392388",
+   "gid://shopify/MediaImage/70108304146756"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490961211716",
+   "gid://shopify/MediaImage/71490961244484",
+   "gid://shopify/MediaImage/71490961277252",
+   "gid://shopify/MediaImage/71490961310020"
+  ]
+ },
+ {
+  "handle": "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128910148",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556096324",
+   "gid://shopify/MediaImage/70108304572740"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490962587972",
+   "gid://shopify/MediaImage/71490962620740",
+   "gid://shopify/MediaImage/71490962653508",
+   "gid://shopify/MediaImage/71490962686276"
+  ]
  }
 ]

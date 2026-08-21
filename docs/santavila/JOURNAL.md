@@ -13,6 +13,71 @@
 
 ---
 
+## 2026-08-21 (F+G) — LA FORMULA DEL CATALOGO CONTRA LA PIEZA FANTASMA · 8 sets mas
+
+Ocho fichas mas, **26.109 EUR**, en dos tandas. Con la (E) de esta misma tarde: **12 fichas y
+40.847 EUR** verificados (media>=4, min_lado>=2000 px, 0 alt vacios).
+
+### (F) Completar lo empezado — 15.885 EUR por la mitad de creditos
+Cuatro sets tenian **packshot + un ambiente** publicados y se habian quedado a medias. Solo
+faltaban la toma 3 y el ASMR: **2 tomas por ficha en vez de 4**.
+
+| Ficha | € | Mundo (ya fijado por su serie) |
+|---|---|---|
+| Cupra 3 pl. | 4.345 | C15 cigarral toledano |
+| Bolonia XL 2 pl. | 4.175 | C8 Cadaques |
+| Cupra 2 pl. | 3.825 | C15, otro rincon |
+| Damasco | 3.540 | B2 cortijo sevillano |
+
+**Lo que hay que mirar antes de abrir un frente nuevo:** cuantas fichas estan a medias. Salen
+mucho mas baratas que empezar de cero y ademas heredan su mundo, asi que la coherencia de
+secuencia sale gratis.
+
+### (G) La formula del catalogo desmonta una pieza fantasma
+Catalogo **pagina 32**, serie HASTON, literal:
+
+```
+A=HASTON-1 sillon   B=HASTON-2 sofa 2pl   C=HASTON-3 sofa 3pl
+D=SAIPROS-90 mesa   E=SAIPROS-120 mesa    F=LIEVAN-5 REPOSAPIES
+HASTON-7 = 2xA + B + D          HASTON-8 = 2xA + C + E
+```
+
+**La F no entra en ninguna de las dos formulas.** Los **dos reposapies** que salen en las fotos
+del proveedor de Haston-7 y Haston-8 **no se venden con el set**: son un articulo aparte con su
+propio codigo. Se han borrado de todas las tomas. Lo mismo en **Leisa-7** (misma estructura de
+set y el titulo tampoco los incluye; Leisa no esta en el catalogo, asi que se aplica el criterio
+que no promete de mas).
+
+Ademas se quito la modelo sentada de Haston-7, Leisa-7 y Adel-7 —ya con la formula que funciono
+en Loira-8— y los consumibles de las fotos originales (dos copas de vino en Leisa-7, una vela en
+Haston-7).
+
+| Ficha | € | Mundo |
+|---|---|---|
+| Haston-8 | 2.755 | C13 carmen del Albaicin |
+| Adel-7 | 2.579 | C17 azotea de Cartagena |
+| Leisa-7 | 2.535 | C14 sobre la hoz del Huecar |
+| Haston-7 | 2.355 | **C20 La Alberca (Salamanca)** — estrena Castilla y Leon rural |
+
+### Un rechazo objetivo mas
+El ambiente A de Adel-7 saco **la mitad izquierda de los cojines en beige** y la derecha en gris.
+Medido: oficial **R−B = +10**, packshot generado **+0,6**, y ese lado izquierdo **+48,4** con el
+doble de luminancia. No era la luz, era otro tejido. Regenerado diciendo *"ALL the seat and back
+cushions are the SAME DARK GREY fabric — none of them beige, cream or tan"* -> **+0,5 / −21**.
+
+### Nota de proceso
+Un packshot de producto **blanco sobre fondo bone** da **std ~26**, cerca del umbral de "imagen
+vacia" (~15). No es un fallo: el std detecta el gradiente en blanco, **no juzga la calidad**. Hay
+que mirarla igual.
+
+**Coste de las dos tandas:** 25 generaciones + 25 upscales ≈ **98 creditos** (205 → 107).
+
+**Siguiente:** quedan ~21 fichas ACTIVE con <=2 imagenes (unos 15.400 EUR), casi todas por debajo
+de 1.100 px de origen. Ahi la foto del proveedor ya no da para 2.000 px y habra que decidir si se
+acepta menos resolucion o se pide material.
+
+---
+
 ## 2026-08-21 (E) — LOS SETS GRANDES: 14.738 € que solo tenian la foto del proveedor
 
 Cuatro fichas de alto ticket del frente de baja resolucion, publicadas con galeria completa:
