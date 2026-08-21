@@ -1459,5 +1459,105 @@
     "alt_len": 85
    }
   ]
+ },
+ "mesa-de-centro-exterior-120-cm-altura-40-cm-2": {
+  "fecha": "2026-08-21",
+  "carpeta": "univ120_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
+   },
+   {
+    "fichero": "02_ambiente_pirineo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 91
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2": {
+  "fecha": "2026-08-21",
+  "carpeta": "hpl120_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
+   },
+   {
+    "fichero": "02_ambiente_segovia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 154
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 85
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-90-cm-altura-41-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "saipros90_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 107
+   },
+   {
+    "fichero": "02_ambiente_valencia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 134
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 88
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-hpl-90-cm-altura-40-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "hpl90_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 100
+   },
+   {
+    "fichero": "02_ambiente_sevilla.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 140
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 84
+   }
+  ]
  }
 }

@@ -1031,5 +1031,53 @@
    "gid://shopify/MediaImage/71487549145412",
    "gid://shopify/MediaImage/71487549178180"
   ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm-2",
+  "producto": "gid://shopify/Product/15507128156484",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554785604"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487629492548",
+   "gid://shopify/MediaImage/71487629525316",
+   "gid://shopify/MediaImage/71487629558084"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2",
+  "producto": "gid://shopify/Product/15507128484164",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555440964"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487630999876",
+   "gid://shopify/MediaImage/71487631032644",
+   "gid://shopify/MediaImage/71487631065412"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-90-cm-altura-41-cm",
+  "producto": "gid://shopify/Product/15507126780228",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551705412"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487632638276",
+   "gid://shopify/MediaImage/71487632671044",
+   "gid://shopify/MediaImage/71487632703812"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-hpl-90-cm-altura-40-cm",
+  "producto": "gid://shopify/Product/15507128451396",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555408196"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487634112836",
+   "gid://shopify/MediaImage/71487634145604",
+   "gid://shopify/MediaImage/71487634178372"
+  ]
  }
 ]

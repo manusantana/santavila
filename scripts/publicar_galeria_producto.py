@@ -83,6 +83,34 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Cotas confirmadas por doble fuente (CSV maestro Hevea == catalogo PDF).
 # Cada pieza va al habitat de SU familia: la mesa bicolor con Diva (Ibiza), la Saipros-120
 # con Odin (Segovia) y el reposapies Cloe con Cloe (Altea).
+# TANDA 2026-08-21 H · las cuatro mesas de centro que quedaban (4 fichas, 1.556 EUR)
+# Todas salian acompanadas en la foto del proveedor (sofa detras, plantas o vajilla encima,
+# y en un caso una persona sentada al fondo): se aislo la mesa sin tocar su geometria.
+# NO entran: banco Gulliver (424) y silla Janeiro (200) — sus fotos de catalogo son montajes
+# con recortes superpuestos, no sirven como referencia.
+GALERIAS_MESAS_2 = {
+    "univ120_mesa": ("mesa-de-centro-exterior-120-cm-altura-40-cm-2", {
+        "01_packshot.jpg": "Mesa de centro de exterior Universal de aluminio antracita con tablero de lamas, 120x60x40 cm, sobre fondo neutro",
+        "02_ambiente_pirineo.jpg": "Mesa de centro antracita sola en una terraza de pizarra del Pirineo aragones, con muro de piedra seca, lavanda y los picos al fondo",
+        "05_medidas.jpg": "Medidas de la mesa de centro Universal: 120 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "hpl120_mesa": ("mesa-de-centro-exterior-hpl-120-cm-altura-40-cm-2", {
+        "01_packshot.jpg": "Mesa de centro de exterior de aluminio antracita con tablero HPL efecto cemento, 120x60x40 cm, sobre fondo neutro",
+        "02_ambiente_segovia.jpg": "Mesa de centro antracita con tablero de cemento sola en una terraza de sillar granitico de Segovia, con lavanda en un pilon de piedra y la sierra al fondo",
+        "05_medidas.jpg": "Medidas de la mesa de centro HPL: 120 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "saipros90_mesa": ("mesa-de-centro-exterior-90-cm-altura-41-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Saipros de aluminio blanco con tablero de lamas, 90x50x41 cm, sobre fondo neutro",
+        "02_ambiente_valencia.jpg": "Mesa de centro Saipros blanca sola en una terraza valenciana de suelo de barro, con persiana de esparto, romero y un naranjo en tinaja",
+        "05_medidas.jpg": "Medidas de la mesa de centro Saipros: 90 cm de ancho y 41 de alto. Se vende solo la mesa",
+    }),
+    "hpl90_mesa": ("mesa-de-centro-exterior-hpl-90-cm-altura-40-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior de aluminio blanco con tablero HPL claro, 90x50x40 cm, sobre fondo neutro",
+        "02_ambiente_sevilla.jpg": "Mesa de centro blanca con tablero HPL sola en una azotea sevillana de suelo de ladrillo, con jazmin en tinaja y la Giralda sobre los tejados",
+        "05_medidas.jpg": "Medidas de la mesa de centro HPL: 90 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+}
+
 GALERIAS_MESAS_BANCOS = {
     "mesa135_bicolor": ("mesa-de-centro-exterior-hpl-135-cm-altura-40-cm", {
         "01_packshot.jpg": "Mesa de centro de exterior bicolor con estructura de aluminio blanco y tablero de lamas antracita, 135x60x40 cm, sobre fondo neutro",
@@ -787,7 +815,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_MESAS_BANCOS
+    ACTIVA = GALERIAS_MESAS_2
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
