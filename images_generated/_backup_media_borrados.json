@@ -1079,5 +1079,53 @@
    "gid://shopify/MediaImage/71487634145604",
    "gid://shopify/MediaImage/71487634178372"
   ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-125-cm-altura-38-cm",
+  "producto": "gid://shopify/Product/15507126321476",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550558532"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487701778756",
+   "gid://shopify/MediaImage/71487701811524",
+   "gid://shopify/MediaImage/71487701844292"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-bicolor-704544-cm",
+  "producto": "gid://shopify/Product/15507127599428",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554163012"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487703253316",
+   "gid://shopify/MediaImage/71487703286084",
+   "gid://shopify/MediaImage/71487703318852"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-855043-cm",
+  "producto": "gid://shopify/Product/15507127140676",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552360772"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487704990020",
+   "gid://shopify/MediaImage/71487705022788",
+   "gid://shopify/MediaImage/71487705055556"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-605040-cm",
+  "producto": "gid://shopify/Product/15507126092100",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550296388"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487706530116",
+   "gid://shopify/MediaImage/71487706562884",
+   "gid://shopify/MediaImage/71487706595652"
+  ]
  }
 ]

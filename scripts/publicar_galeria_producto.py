@@ -88,6 +88,33 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # y en un caso una persona sentada al fondo): se aislo la mesa sin tocar su geometria.
 # NO entran: banco Gulliver (424) y silla Janeiro (200) — sus fotos de catalogo son montajes
 # con recortes superpuestos, no sirven como referencia.
+# TANDA 2026-08-21 I · reposapies y mesa Bellagio (4 fichas, 1.562 EUR)
+# Los tres reposapies estaban en fotos COMPARTIDAS con su sillon (el proveedor no los
+# fotografia solos): se aislo cada uno sin tocar su geometria y cada uno va al habitat de
+# su familia. Cotas confirmadas por doble fuente.
+GALERIAS_REPOSAPIES = {
+    "bellagio4_mesa": ("mesa-de-centro-exterior-125-cm-altura-38-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Bellagio de aluminio antracita con tablero de lamas y patas curvadas, 125x60x38 cm, sobre fondo neutro",
+        "02_ambiente_cabodegata.jpg": "Mesa de centro Bellagio antracita sola en la terraza encalada de una casa de Cabo de Gata, entre agaves y chumberas, con el mar al fondo",
+        "05_medidas.jpg": "Medidas de la mesa de centro Bellagio: 125 cm de ancho y 38 de alto. Se vende solo la mesa",
+    }),
+    "std55bic_repo": ("reposapies-exterior-bicolor-704544-cm", {
+        "01_packshot.jpg": "Reposapies de exterior bicolor con estructura de aluminio tortola, lamas oscuras en el lateral y cojin claro, 70x45x44 cm, sobre fondo neutro",
+        "02_ambiente_ibiza.jpg": "Reposapies bicolor solo en la terraza de una casa payesa de Ibiza, sobre grava clara, con muros de cal y una sabina",
+        "05_medidas.jpg": "Medidas del reposapies bicolor: 70 cm de ancho y 44 de alto. Se vende solo el reposapies",
+    }),
+    "std55xl_repo": ("reposapies-exterior-855043-cm", {
+        "01_packshot.jpg": "Reposapies de exterior Standard XL con estructura de aluminio antracita y cojin gris claro, 85x50x43 cm, sobre fondo neutro",
+        "02_ambiente_puerto.jpg": "Reposapies Standard XL antracita solo en una terraza de piedra sobre un puerto pesquero asturiano, con reja de forja y las barcas abajo",
+        "05_medidas.jpg": "Medidas del reposapies Standard XL: 85 cm de ancho y 43 de alto. Se vende solo el reposapies",
+    }),
+    "std5_repo": ("reposapies-exterior-605040-cm", {
+        "01_packshot.jpg": "Reposapies de exterior Standard con estructura de aluminio tortola y cojin verde claro, 60x50x40 cm, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Reposapies Standard solo bajo los arcos encalados de un cortijo de la campina sevillana, con un olivo viejo y los trigales al fondo",
+        "05_medidas.jpg": "Medidas del reposapies Standard: 60 cm de ancho y 40 de alto. Se vende solo el reposapies",
+    }),
+}
+
 GALERIAS_MESAS_2 = {
     "univ120_mesa": ("mesa-de-centro-exterior-120-cm-altura-40-cm-2", {
         "01_packshot.jpg": "Mesa de centro de exterior Universal de aluminio antracita con tablero de lamas, 120x60x40 cm, sobre fondo neutro",
@@ -815,7 +842,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_MESAS_2
+    ACTIVA = GALERIAS_REPOSAPIES
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

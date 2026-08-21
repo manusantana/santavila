@@ -1559,5 +1559,105 @@
     "alt_len": 84
    }
   ]
+ },
+ "mesa-de-centro-exterior-125-cm-altura-38-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "bellagio4_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 129
+   },
+   {
+    "fichero": "02_ambiente_cabodegata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 136
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 90
+   }
+  ]
+ },
+ "reposapies-exterior-bicolor-704544-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "std55bic_repo",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_ibiza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 115
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 88
+   }
+  ]
+ },
+ "reposapies-exterior-855043-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "std55xl_repo",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 123
+   },
+   {
+    "fichero": "02_ambiente_puerto.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 92
+   }
+  ]
+ },
+ "reposapies-exterior-605040-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "std5_repo",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
  }
 }

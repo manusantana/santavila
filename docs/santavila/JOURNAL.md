@@ -78,12 +78,48 @@ claro **y** lo más cálido* — y trata los dos ejes distinto:
 Regla añadida al skill: **un detector que no se ha mirado no ha detectado nada.** Se ejecuta con
 `--hoja`, se mira la hoja, y solo entonces se pasa el bbox al overlay.
 
-### Estado
+### Segunda mitad de la jornada: mesas, bancos y reposapiés (12 fichas más)
 
-171 fichas ACTIVE · **38 pendientes** de galería (~21.500 €) · 707 → ~480 créditos de Higgsfield.
+| Pieza | € | Hábitat |
+|---|---|---|
+| Mesa centro bicolor 135 | 835 | B6 Ibiza |
+| Mesa Saipros-120 antracita | 450 | C2 Segovia |
+| Mesa Universal-120 antracita | 442 | C5 Pirineo |
+| Mesa HPL-120 antracita | 442 | C2 Segovia |
+| Mesa Bellagio-4 (125) | 376 | B10 Cabo de Gata |
+| Mesa Saipros-90 blanca | 339 | B12 Valencia |
+| Mesa HPL-90 blanca | 333 | B13 Sevilla |
+| Banco Sevilla | 382 | jardín de grava |
+| Reposapiés bicolor | 509 | B6 Ibiza |
+| Reposapiés Standard XL | 350 | A10 puerto asturiano |
+| Reposapiés Standard | 327 | B2 cortijo sevillano |
+| Reposapiés Cloe | 188 | C12 Altea |
 
-**Siguiente:** mesas de centro, reposapiés, bancos y sillas (unas 20 fichas, ~7.000 €).
-**Decisión pendiente de Sergio:** Bolonia XL — el CSV dice 215/164/80 y el catálogo PDF 200/141/78.
+**Ninguna de estas piezas la fotografía el proveedor sola**: salen dentro del set, con un
+sofá detrás, vajilla encima o el sillón al lado. Se aislaron todas sin tocar su geometría,
+y cada una va al hábitat de SU familia — quien compre el conjunto y luego la pieza suelta
+ve el mismo mundo.
+
+### Estado al cierre
+
+**171 fichas ACTIVE · 35 publicadas hoy · 31.074 € de catálogo** que pasan de una foto a
+galería. Quedan **26 fichas** con una sola imagen (16.579 €), y de esas la mitad están
+bloqueadas por un motivo concreto, no por falta de créditos:
+
+| Bloqueo | Fichas | € |
+|---|---|---|
+| Persona sentada tapando el asiento | Acapulco-2, Albania-2, Dounvil-3, Manhatan-2 | 3.685 |
+| Única foto de espaldas | Diva-1 | 945 |
+| Foto de catálogo rota (montaje con recortes) | Gulliver, Janeiro | 624 |
+| **CSV y PDF se contradicen en el ancho** | Bolonia XL ×3 | 4.708 |
+| Identidad sin confirmar (¿exenta o adosada?) | Pérgola Venecia | 2.045 |
+
+**Créditos: 707 → 455.** Coste real de la jornada: ~252 créditos para 35 fichas ≈ **7 por
+ficha**, menos de lo previsto porque las piezas pequeñas llevan 2 generaciones en vez de 3.
+
+**Decisión pendiente de Sergio:** Bolonia XL — el CSV maestro dice 215/164/80 y el catálogo
+PDF dice 200/141/78 para las mismas tres referencias. Son 4.708 € esperando a saber cuál de
+las dos fuentes del proveedor manda.
 
 ---
 
