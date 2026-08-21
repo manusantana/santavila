@@ -61,10 +61,17 @@
 | **`bellagio8` / `bellagio1`** (set 3 pl. y sillón) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Casa cúbica de Cabo de Gata** — cal, agave y chumbera, mar árido | — | manta de lino |
 | **`cupra2`** (Cupra 2 pl.) | blanco + gris claro / **blanco** | Blanco/piedra | **C15 Cigarral toledano** — muro de mampostería, olivos viejos, el Tajo y Toledo al fondo | — | manta de lino · libro |
 
+| **`set-rinconera-...-hpl-moderno-...`** (Loira-30) | antracita + gris claro, HPL / **frío** | Frío/piedra dorada | **C16 Patio de casona de piedra, Cáceres** — silleria dorada, suelo de pizarra, torre medieval al fondo | — (set, 4 tomas) | manta de lino · libro · romero en maceta de piedra |
+| **`set-rinconera-...-sofisticado-...`** (Adel-30) | antracita + blanco crudo / **blanco** | Blanco/cal marina | **C17 Azotea encalada de Cartagena (Murcia)** — fachadas modernistas, el puerto con palmeras, cúpula, piedra pálida | — (set, 4 tomas) | manta de lino · libro · olivo en gres gris |
+| **`set-rinconera-...-hpl-elegante-...`** (Loira-8) | antracita + gris claro, HPL / **frío** | Frío/verde atlántico | **C18 Terraza de laja, Cangas de Onís (Asturias)** — hórreo, prado, Picos de Europa, laja mojada de lluvia | — (set, 4 tomas) | manta de lino · libro · helechos en maceta de piedra |
+| **`banco-jardin-con-mesa-integrada-220-cm`** (Yulien) | aluminio **negro mate** / **oscuro-vegetal** | Cálido/piedra seca | **C19 Huerto de casa de campo, La Vera (Extremadura)** — muro de piedra seca, cerezos e higuera, grava y hierba alta | — (pieza única, 5 tomas) | manta de lino · libro · romero en tinaja |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
-**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), **Extremadura**, Murcia capital, Tarragona/Costa Daurada, Asturias interior, Castilla y León rural.
+**Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), **Castilla y León rural**, Tarragona/Costa Daurada, Aragón (Teruel), Navarra.
+*(21-08-2026 tarde: se estrenan **C16 Cáceres, C17 Cartagena, C18 Cangas de Onís y C19 La Vera** — caen tres de las zonas infrautilizadas: Extremadura, Murcia capital y Asturias interior.)*
+
 *(21-08-2026: se estrenan C11 Lanzarote, C12 Altea, C13 Albaicín, C14 Cuenca y C15 cigarral toledano; Canarias, Aragón/Pirineo y La Rioja dejan de estar infrautilizadas.)*
 
 ## ⛔ Consumibles DEROGADOS (03-08-2026)

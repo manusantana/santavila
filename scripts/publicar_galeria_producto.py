@@ -124,6 +124,44 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #   MUNDRA    — el catalogo HORECA (pag. 13) permite contar sus patas: son CUATRO, no tres.
 #   GULLIVER  — la pag. 207 trae el banco limpio, en color, no el montaje roto en B/N.
 # Cotas: manda el catalogo (Haston-1 60x115, no los 68 del titulo).
+# ############################################################################
+# TANDA 2026-08-21 (E) — EL FRENTE DE LA BAJA RESOLUCION: los sets grandes.
+# Cuatro fichas de alto ticket cuya unica foto era la del proveedor. Loira-8 y
+# Adel-7 llevaban MODELO SENTADA sobre el sofa; en Loira-8 se pidio de forma
+# explicita "restore the empty seat cushions as separate individual cushions"
+# y se conto 7 respaldos contra la foto oficial antes de aceptar.
+# Los tres sets rinconera NO llevan ficha de medidas: no hay cota verificada
+# (el CSV la trae vacia y la serie no aparece en el catalogo PDF) -> no se dibuja.
+# El Yulien si: sus cotas salen del catalogo (pag. 64 y 104), 220 x 150 x 75 H.
+# ############################################################################
+GALERIAS_SETS_ALTA = {
+    "loira30_set": ("set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Set rinconera de exterior Loira-30 con estructura de aluminio antracita, siete cojines gris claro, mesa alta de tablero HPL y banco a juego, sobre fondo neutro",
+        "02_ambiente_patio_caceres.jpg": "Set rinconera Loira-30 en el patio de una casona de piedra en Caceres, con la torre al fondo, suelo de pizarra, una manta de lino sobre el cojin de esquina y un libro abierto en el banco",
+        "03_ambiente_sillar_caceres.jpg": "Detalle del set Loira-30 junto al muro de silleria dorada, con romero en una maceta de piedra y el sol bajo de la tarde",
+        "04_asmr_canto_hpl.jpg": "Detalle del canto del tablero HPL gris pizarra de la mesa Loira-30 y su union con el perfil de aluminio antracita",
+    }),
+    "adel30_set": ("set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Set rinconera de exterior Adel-30 con estructura de aluminio antracita, cojines blanco crudo, mesa de lamas y banco a juego, sobre fondo neutro",
+        "02_ambiente_azotea_cartagena.jpg": "Set rinconera Adel-30 en una azotea encalada de Cartagena, con el puerto y las palmeras al fondo, una manta de lino sobre un cojin y un libro abierto en el banco",
+        "03_ambiente_cupula_cartagena.jpg": "Detalle del set Adel-30 en la azotea, con la cupula modernista detras y un olivo joven en maceta de gres gris",
+        "04_asmr_lamas_mesa.jpg": "Detalle de las lamas de aluminio antracita de la mesa Adel-30 junto al canto de un cojin blanco crudo",
+    }),
+    "loira8_set": ("set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Set rinconera de exterior Loira-8 con estructura de aluminio antracita, siete cojines gris claro y mesa de centro baja de tablero gris pizarra, sobre fondo neutro",
+        "02_ambiente_prado_asturias.jpg": "Set rinconera Loira-8 en una terraza de piedra en Asturias, con un horreo y los Picos de Europa al fondo, manta de lino y un libro abierto sobre la mesa",
+        "03_ambiente_laja_mojada.jpg": "Detalle del set Loira-8 sobre laja mojada tras la lluvia, con helechos en maceta de piedra y las montanas verdes detras",
+        "04_asmr_canto_hpl.jpg": "Detalle del canto del tablero gris pizarra de la mesa de centro Loira-8 y su union con el perfil de aluminio antracita",
+    }),
+    "yulien_banco": ("banco-jardin-con-mesa-integrada-220-cm", {
+        "01_packshot.jpg": "Banco de jardin Yulien con mesa integrada, de aluminio negro mate con tablero de lamas y patas trapezoidales, 220 cm, sobre fondo neutro",
+        "02_ambiente_huerto_la_vera.jpg": "Banco con mesa Yulien en el huerto de una casa de campo extremena, junto a un muro de piedra seca, con cerezos e higuera y romero en una tinaja",
+        "03_ambiente_muro_piedra.jpg": "Detalle del banco Yulien a lo largo de la mesa, con el muro de piedra seca al fondo, hierba alta a contraluz y un libro abierto sobre el banco",
+        "04_asmr_lamas_pata.jpg": "Detalle de las lamas negras mate del tablero Yulien y su encuentro con la pata trapezoidal de aluminio",
+        "05_medidas.jpg": "Medidas del banco Yulien con mesa: 220 cm de ancho total y 75 de alto. Los cojines de banco no estan incluidos",
+    }),
+}
+
 GALERIAS_RESCATE_CATALOGO = {
     "pergola_venecia": ("pergola-aluminio-para-jardin-300300250-cm", {
         "01_packshot.jpg": "Pergola de jardin Venecia de aluminio blanco, autoportante de cuatro patas, con toldo corredero de lona, 300x300x250 cm, sobre fondo neutro",
@@ -997,7 +1035,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_RESCATE_CATALOGO
+    ACTIVA = GALERIAS_SETS_ALTA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

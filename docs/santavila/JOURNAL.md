@@ -13,6 +13,66 @@
 
 ---
 
+## 2026-08-21 (E) — LOS SETS GRANDES: 14.738 € que solo tenian la foto del proveedor
+
+Cuatro fichas de alto ticket del frente de baja resolucion, publicadas con galeria completa:
+
+| Ficha | € | Habitat estrenado | Tomas |
+|---|---|---|---|
+| Loira-30 rinconera HPL | 4.225 | **C16 patio de casona, Caceres** | 4 |
+| Adel-30 rinconera | 3.819 | **C17 azotea de Cartagena** | 4 |
+| Loira-8 rinconera HPL | 3.795 | **C18 terraza de laja, Cangas de Onis** | 4 |
+| Banco Yulien con mesa | 2.899 | **C19 huerto de La Vera, Extremadura** | 5 (con medidas) |
+
+Caen tres de las cuatro zonas infrautilizadas del registro: Extremadura, Murcia capital y
+Asturias interior.
+
+### Tres rechazos objetivos, y por que
+1. **El aluminio antracita se volvio laton.** Los dos ASMR (Loira-30 y Adel-30) salieron con el
+   faldon de la mesa dorado. Medido sobre los pixeles del mueble: el aluminio oficial da
+   **R−B = −7 a −23** (frio) y el generado **+67 / +60**. Lo causaba la frase `warm raking
+   afternoon light` del prompt. Corregido nombrando el color y fijando balance neutro
+   (`the aluminium must stay dark neutral anthracite grey — never golden, brass or bronze`):
+   los regenerados dan **+1,1 y −19**. Aceptados.
+2. **El tablero de la mesa de centro cambio de acabado.** El packshot de Loira-8 devolvio un
+   tablero **beige claro tipo madera** donde el original es **gris pizarra oscuro**. Aqui la
+   metrica no valio: mis cajas de muestreo cayeron fuera del mueble (fondo bone y suelo) y
+   daban numeros sin sentido — el mismo error del "brazo alu" de la manana. **Decidio el
+   recorte lado a lado.** Corregido nombrando el material.
+3. **La modelo sentada, resuelta.** Loira-8 y Adel-7 traen una modelo sentada ENCIMA del sofa.
+   En Loira-8 funciono pedir de forma explicita *"restore the empty seat cushions as separate
+   individual cushions, never one continuous pad"*: se conto **7 respaldos** contra la foto
+   oficial antes de aceptar. Es la primera vez que el fallo "modelo sentada" se supera sin
+   necesidad de otra foto.
+
+### El catalogo, otra vez, decide
+- **El Yulien no tenia cotas** en el CSV (vacias). Estan en el catalogo, **paginas 64 y 104**:
+  mesa 150×80×75 H, **totales 220×150×75 H**. Con eso se dibujo la toma 5.
+- **El cojin de banco NO esta incluido** (COD LUX BN95 aparte). Se declara en el alt de la
+  ficha de medidas, sin dibujarlo. Pieza fantasma evitada.
+- **Los tres sets rinconera NO llevan ficha de medidas**: el CSV trae las cotas vacias y la
+  serie no aparece en el catalogo PDF. Sin dato verificado, no se dibuja. 4 tomas y punto.
+
+### ⚠️ Discrepancia que hay que preguntar al proveedor
+El catalogo describe el **YULIEN Banco con mesa** como *"Blanco / White / Blanc"*, pero **su
+unica foto —la del propio catalogo— es NEGRA**. La etiqueta "Blanco" aparece identica en la
+Kavana, la Venecia, la Boston y el Gulliver de esa misma pagina, asi que parece heredada de la
+plantilla. Se genero **en negro**, que es lo que muestra su foto: la ley de fidelidad manda
+sobre la etiqueta (*variante = su propia foto*), y pintarlo de blanco habria sido inventar el
+mueble. **Pendiente de confirmar con Hevea si existe acabado blanco**; si existe, necesita su
+propia foto.
+
+*(Nota aparte: la foto oficial del Yulien es ella misma un render con comida y un chalet de
+lujo. No hay otra. Se uso como ancla de geometria y se limpio la escena entera: mesa vacia y
+huerto extremeno.)*
+
+**Coste:** 19 generaciones + 16 upscales ≈ **70 creditos** (275 → 205).
+
+**Siguiente en este frente:** Adel-7 (2.579 €) — misma familia, misma modelo sentada, y ahora
+sabemos como quitarla. Despues siguen ~88 fichas por debajo de 2.000 px.
+
+---
+
 ## 2026-08-21 (D) · EL CATÁLOGO TENÍA LAS FOTOS — 5 rescates, 4.558 €
 
 Sergio: *«revisa el catálogo, ahí lo tienes todo, todo todo... no tengo fotos de las que me

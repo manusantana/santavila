@@ -2179,5 +2179,135 @@
     "alt_len": 80
    }
   ]
+ },
+ "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro": {
+  "fecha": "2026-08-21",
+  "carpeta": "loira30_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 159
+   },
+   {
+    "fichero": "02_ambiente_patio_caceres.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 186
+   },
+   {
+    "fichero": "03_ambiente_sillar_caceres.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 119
+   },
+   {
+    "fichero": "04_asmr_canto_hpl.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
+   }
+  ]
+ },
+ "set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro": {
+  "fecha": "2026-08-21",
+  "carpeta": "adel30_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 143
+   },
+   {
+    "fichero": "02_ambiente_azotea_cartagena.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 161
+   },
+   {
+    "fichero": "03_ambiente_cupula_cartagena.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 109
+   },
+   {
+    "fichero": "04_asmr_lamas_mesa.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 101
+   }
+  ]
+ },
+ "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro": {
+  "fecha": "2026-08-21",
+  "carpeta": "loira8_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 162
+   },
+   {
+    "fichero": "02_ambiente_prado_asturias.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "03_ambiente_laja_mojada.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 119
+   },
+   {
+    "fichero": "04_asmr_canto_hpl.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 118
+   }
+  ]
+ },
+ "banco-jardin-con-mesa-integrada-220-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "yulien_banco",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 136
+   },
+   {
+    "fichero": "02_ambiente_huerto_la_vera.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 143
+   },
+   {
+    "fichero": "03_ambiente_muro_piedra.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 142
+   },
+   {
+    "fichero": "04_asmr_lamas_pata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 102
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   }
+  ]
  }
 }

@@ -1390,5 +1390,63 @@
    "gid://shopify/MediaImage/71490593882436",
    "gid://shopify/MediaImage/71490593915204"
   ]
+ },
+ {
+  "handle": "set-rinconera-exterior-hpl-moderno-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128844612",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555899716",
+   "gid://shopify/MediaImage/70108304539972"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490752119108",
+   "gid://shopify/MediaImage/71490752151876",
+   "gid://shopify/MediaImage/71490752184644",
+   "gid://shopify/MediaImage/71490752217412"
+  ]
+ },
+ {
+  "handle": "set-rinconera-exterior-sofisticado-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128942916",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556161860",
+   "gid://shopify/MediaImage/70108313354564"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490755297604",
+   "gid://shopify/MediaImage/71490755330372",
+   "gid://shopify/MediaImage/71490755363140",
+   "gid://shopify/MediaImage/71490755395908"
+  ]
+ },
+ {
+  "handle": "set-rinconera-exterior-hpl-elegante-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128811844",
+  "borrados": [
+   "gid://shopify/MediaImage/70106358546756",
+   "gid://shopify/MediaImage/70106358579524",
+   "gid://shopify/MediaImage/70106358612292"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490756936004",
+   "gid://shopify/MediaImage/71490756968772",
+   "gid://shopify/MediaImage/71490757001540",
+   "gid://shopify/MediaImage/71490757034308"
+  ]
+ },
+ {
+  "handle": "banco-jardin-con-mesa-integrada-220-cm",
+  "producto": "gid://shopify/Product/15507129663812",
+  "borrados": [
+   "gid://shopify/MediaImage/70103557865796",
+   "gid://shopify/MediaImage/70108305359172"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490758443332",
+   "gid://shopify/MediaImage/71490758476100",
+   "gid://shopify/MediaImage/71490758508868",
+   "gid://shopify/MediaImage/71490758541636",
+   "gid://shopify/MediaImage/71490758574404"
+  ]
  }
 ]
