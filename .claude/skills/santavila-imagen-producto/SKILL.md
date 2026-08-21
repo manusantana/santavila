@@ -618,6 +618,30 @@ por mi cuenta, persiguiendo una métrica.
 
 ---
 
+
+## La cota se dibuja donde diga el detector, y el detector se verifica (21-08-2026)
+
+El overlay lleva su propio detector de contorno *por neutralidad* (§ el producto es gris, el fondo bone es
+cálido). Con los packshots nuevos **falla**, y falla en silencio: devuelve un bbox que llega al borde de la
+imagen, así que la cota de alto arranca del cielo y la de ancho se pasa de largo. Nadie lo ve si no se mira.
+
+Cuatro detectores se probaron antes de dar con el bueno, y cada uno enseñó algo:
+
+| Detector | Por qué falla |
+|---|---|
+| neutralidad (R≈B) | el producto **blanco** también es neutro |
+| fondo por mediana de los bordes | el bone lleva **viñeta** (198 en la esquina, 252 bajo el foco) |
+| umbral global de luminancia | la viñeta cae bajo el umbral y arrastra el borde entero |
+| solo oscuridad local | el cojín claro del sillón blanco no la supera → cortaba el respaldo |
+
+**Lo que sí se cumple siempre:** el fondo es, en su vecindad, *lo más claro* **y** *lo más cálido*. Las dos
+cosas se estiman con un máximo local (que salta por encima del producto) y es producto lo que queda por
+debajo en cualquiera de las dos. Eso es `scripts/bbox_producto.py`, con margen del 1 % hacia fuera porque
+**una cota corta engaña más que una larga**.
+
+**Regla de trabajo:** ejecutar `bbox_producto.py --hoja /tmp/x.jpg`, **mirar la hoja** y solo entonces pasar
+el bbox al overlay. Un detector que no se ha mirado no ha detectado nada.
+
 ## Herramientas
 
 | Script | Para qué |
@@ -627,6 +651,9 @@ por mi cuenta, persiguiendo una métrica.
 | `scripts/auditar_fotos_duplicadas.py` | fichas que comparten foto principal (huella perceptual) |
 | `scripts/publicar_galeria_producto.py` | publicar (dry-run por defecto; `--apply`) |
 | `scripts/overlay_medidas_producto.py` | cotas deterministas, **NO IA**, solo con medidas del PASO 0 |
+| `scripts/bbox_producto.py <packshot>` | **el contorno para la cota.** Pásaselo al overlay con `--bbox` |
+| `scripts/auditar_galerias.py` | qué fichas ACTIVE están sin galería, en baja resolución o sin alt |
+| `scripts/auditar_identidad.py` | puerta de identidad: packshot contra la foto oficial del SKU |
 
 ## Contexto obligatorio antes de empezar
 [`ROL_FOTOGRAFO_SENIOR.md`](../../docs/santavila/ROL_FOTOGRAFO_SENIOR.md) (el oficio: §8 paleta · §11 roster ·

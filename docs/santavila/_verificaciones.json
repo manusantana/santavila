@@ -664,5 +664,315 @@
     "alt_len": 127
    }
   ]
+ },
+ "sofa-terraza-3-plazas-estilo-sofisticado-17578-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "odin3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_segovia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 117
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "odin2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 134
+   },
+   {
+    "fichero": "02_ambiente_lanzarote.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 142
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   }
+  ]
+ },
+ "sillon-exterior-estilo-elegante-6578-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "odin1_sillon",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 124
+   },
+   {
+    "fichero": "02_ambiente_lanzarote.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 132
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 104
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-sofisticado-19475-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "damasco3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 160
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-envolvente-13575-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "damasco2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 160
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 149
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 103
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-moderno-18570-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "acapulco3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 138
+   },
+   {
+    "fichero": "02_ambiente_valencia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 132
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 114
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 123
+   }
+  ]
+ },
+ "sillon-exterior-estilo-versatil-6470-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "acapulco1_sillon",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "02_ambiente_salamanca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 106
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "cloe2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 162
+   },
+   {
+    "fichero": "02_ambiente_altea.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 94
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 86
+   }
+  ]
+ },
+ "sillon-exterior-estilo-estilizado-7069-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "cloe1_sillon",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   },
+   {
+    "fichero": "02_ambiente_altea.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 77
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "haston3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   },
+   {
+    "fichero": "02_ambiente_carmen.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   },
+   {
+    "fichero": "04_asmr_brazo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 115
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 122
+   }
+  ]
  }
 }

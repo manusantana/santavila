@@ -1,0 +1,1341 @@
+{
+ " ARMANIA": {
+  "pagina": 4,
+  "piezas": [
+   "B- ARMANIA - 2"
+  ],
+  "medidas": [
+   "94 x 92 x 88 cm",
+   "140 x 60 x 45 cm",
+   "247 x 92 x 88 cm",
+   "84 x 50 x 40 cm",
+   "165 x 92 x 88 cm"
+  ],
+  "sets": [
+   "2XA+B+D ARMANIA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ OT5920 EN6070 JO325 TI500",
+   "2XA+C+D ARMANIA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ SR6380 TF6680 MZ355 MT545"
+  ]
+ },
+ "DÉDALO ALUMINIO / IROKO": {
+  "pagina": 5,
+  "piezas": [],
+  "medidas": [
+   "100 x 85 x 95 cm",
+   "192 x 85 x 95 cm",
+   "100 x 100 x 46 cm"
+  ],
+  "sets": [
+   "2xA+B+C DEDALO-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ ZV7590 XF7870 SH325 JR500"
+  ]
+ },
+ "JAVA": {
+  "pagina": 6,
+  "piezas": [
+   "A- JAVA - 1",
+   "D- JAVA - 120",
+   "B- JAVA - 2 C- JAVA - 3",
+   "E- JAVA",
+   "E- JAVA - 140"
+  ],
+  "medidas": [
+   "80 x 80 x 88 cm",
+   "120 x 60 x 40 cm",
+   "150 x 80 x 88 cm",
+   "206 x 80 x 88 cm",
+   "85 x 50 x 43 cm",
+   "140 x 60 x 40 cm"
+  ],
+  "sets": []
+ },
+ "MELBOURNE": {
+  "pagina": 8,
+  "piezas": [
+   "E- ARENAS - 120"
+  ],
+  "medidas": [
+   "72 x 80 x 80 cm",
+   "140 x 80 x 80 cm",
+   "190 x 80 x 80 cm",
+   "120 x 60 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D MELBOURNE-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ JB2625 NH2760 WJ310 KC470",
+   "2xA+C+D MELBOURNE-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ MQ2985 IN3150 XJ340 TU495"
+  ]
+ },
+ "CORINTO  BARKIS": {
+  "pagina": 9,
+  "piezas": [
+   "A- CORINTO - 1 A- BARKIS - 1",
+   "D- ARENAS - 120",
+   "B- CORINTO - 2 B- BARKIS - 3C- CORINTO - 3",
+   "F- STANDARD - 5"
+  ],
+  "medidas": [
+   "72 x 80 x 80 cm",
+   "105 x 105 x 90 cm",
+   "120 x 60 x 40 cm",
+   "140 x 80 x 80 cm",
+   "204 x 105 x 90 cm",
+   "190 x 80 x 80 cm",
+   "60 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D CORINTO-7 SET SOFA 2 PLAZAS TO2060 KA2195 GU310 ZY470",
+   "2xA+C+E CORINTO-8SET SOFA 3 PLAZAS GL2285 RI2445 TY340 MI495"
+  ]
+ },
+ " VADARA": {
+  "pagina": 10,
+  "piezas": [
+   "A- VADARA - 1 B- VADARA - 2 C- VADARA - 3",
+   "E- VADARA",
+   "D- VADARA - 120"
+  ],
+  "medidas": [
+   "80 x 80 x 88 cm",
+   "150 x 80 x 88 cm",
+   "206 x 80 x 88 cm",
+   "85 x 50 x 43 cm",
+   "120 x 60 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D VADARA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ YW2520 YI2670 SK310 HU470",
+   "2xA+C+D VADARA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ SP2810 KP2995 LN340 XH495"
+  ]
+ },
+ "LUBLIAN": {
+  "pagina": 10,
+  "piezas": [
+   "F- VADARA - 5"
+  ],
+  "medidas": [
+   "120 x 60 x 40 cm",
+   "85 x 50 x 43 cm",
+   "80 x 80 x 88 cm",
+   "150 x 80 x 88 cm",
+   "206 x 80 x 88 cm"
+  ],
+  "sets": [
+   "2xA+B+D LUBLIAN-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ KR2965 WV3105 US290 GI450",
+   "2xA+C+D LUBLIAN-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ VN3270 OU3445 TK320 JK495"
+  ]
+ },
+ " LIEVAN": {
+  "pagina": 11,
+  "piezas": [
+   "A- LIEVAN - 1",
+   "D- LIEVAN - 120",
+   "B- LIEVAN - 2 C- LIEVAN - 3",
+   "E- LIEVAN"
+  ],
+  "medidas": [
+   "76 x 80 x 80 cm",
+   "120 x 60 x 40 cm",
+   "139 x 80 x 80 cm",
+   "198 x 80 x 80 cm",
+   "85 x 50 x 43 cm"
+  ],
+  "sets": [
+   "2xA+B+D LIEVAN-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ QS2835 YD2980 XH310 SQ470",
+   "2xA+C+D LIEVAN-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ UF3095 LB3285 IG340 HV515"
+  ]
+ },
+ " NUSA": {
+  "pagina": 12,
+  "piezas": [
+   "A- NUSA - 1",
+   "A- URBIA - 30",
+   "D- NUSA - 4B- NUSA - 2",
+   "C- NUSA - 3 F- NUSA - 5"
+  ],
+  "medidas": [
+   "90 x 90 x 100 cm",
+   "60 x 50 x 87 cm",
+   "120 x 70 x 45 cm",
+   "171 x 90 x 100 cm",
+   "215 x 90 x 100 cm",
+   "78 x 46 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D NUSA-7 SET SOFA 2 PLAZAS/SOFA /CANAPE QM6915 CW7155 BM325 UD500",
+   "2xA+B+D NUSA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ ZE7605 TE7890 TM335 MR545"
+  ]
+ },
+ " URBIA": {
+  "pagina": 13,
+  "piezas": [
+   "F- URBIA - 30",
+   "E- URBIA - 5"
+  ],
+  "medidas": [
+   "75 x 75 x 90 cm",
+   "60 x 50 x 87 cm",
+   "120 x 70 x 47 cm",
+   "137 x 75 x 90 cm",
+   "196 x 75 x 90 cm",
+   "72 x 50 x 37 cm"
+  ],
+  "sets": [
+   "2xA+B+D URBIA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ ZD3375 LP3535 AW320 ZD480",
+   "2xA+C+D URBIA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ OQ3795 CO3990 LG340 ZB515",
+   "2xA+C+D+2xE URBIA-10 SET SOFA 3 PLAZAS/SOFA/CANAPÉ CE4545 WX4770 TQ470 DW685"
+  ]
+ },
+ " MERLOT": {
+  "pagina": 14,
+  "piezas": [
+   "G- MERLOT - 30"
+  ],
+  "medidas": [
+   "80 x 88 x 90 cm",
+   "120 x 70 x 47 cm",
+   "135 x 70 x 47 cm",
+   "160 x 88 x 90 cm",
+   "200 x 88 x 90 cm",
+   "72 x 51 x 42 cm",
+   "55 x 64 x 90 cm"
+  ],
+  "sets": [
+   "2xA+B+E MERLOT-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ UM3740 VC3870 LF310 ML470",
+   "2xA+C+F MERLOT-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ IT4185 AI4325 EN350 IS525"
+  ]
+ },
+ "SARAH": {
+  "pagina": 15,
+  "piezas": [
+   "A- SARAH - 1",
+   "D- ALHAMA - 120 E- ALHAMA - 135",
+   "B- SARAH - 2 C- SARAH - 3",
+   "F- STANDARD - XL",
+   "G- SARAH - 30"
+  ],
+  "medidas": [
+   "76 x 80 x 95 cm",
+   "120 x 60 x 40 cm",
+   "135 x 60 x 40 cm",
+   "164 x 80 x 95 cm",
+   "205 x 80 x 95 cm",
+   "85 x 50 x 43 cm",
+   "58 x 64 x 97 cm"
+  ],
+  "sets": [
+   "2xA+B+D SARAH-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ KT2925 VP3080 DQ310 XH370",
+   "2xA+C+E SARAH-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ AJ3245 YH3410 RG350 SQ405"
+  ]
+ },
+ "ARIZONA": {
+  "pagina": 16,
+  "piezas": [
+   "A- ARIZONA - 1",
+   "H- BOLONIA - 31 I- BOLONIA - 25",
+   "G- VALISAN - 5",
+   "D- ARIZONA - 2 E- ARIZONA - 3"
+  ],
+  "medidas": [
+   "85 x 85 x 80 cm",
+   "75 x 60 x 100 cm",
+   "69 x 60 x 100 cm",
+   "135 x 60 x 46 cm",
+   "170 x 135 x 80 cm",
+   "83 x 60 x 40 cm",
+   "170 x 85 x 80 cm",
+   "215 x 85 x 80 cm"
+  ],
+  "sets": [
+   "2xA+D+F ARIZONA-7 CON COJINES SET SOFA 2 PLAZAS/SOFA/CANAPÉ AI5340 CR5690 VA310 DC470",
+   "2xA+E+F ARIZONA-8 CON COJINES SET SOFA 2 PLAZAS/SOFA/CANAPÉ SV5650 JF6055 HE340 HA515"
+  ]
+ },
+ "ABIGUEIL": {
+  "pagina": 17,
+  "piezas": [
+   "G- Sillón comedor"
+  ],
+  "medidas": [
+   "120 x 60 x 40 cm",
+   "135 x 60 x 40 cm",
+   "85 x 50 x 43 cm",
+   "77 x 70 x 100 cm",
+   "140 x 70 x 100 cm",
+   "204 x 70 x 100 cm",
+   "61 x 65 x 90 cm"
+  ],
+  "sets": [
+   "2xA+B+E ABIGUEIL-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ SZ2890 PS3085 XR310 LZ470",
+   "2xA+C+D ABIGUEIL-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ RN3210 BH3425 EE340 ZN565"
+  ]
+ },
+ "BRANDON": {
+  "pagina": 18,
+  "piezas": [
+   "C- BRANDON - 3",
+   "B- TELDE - 2"
+  ],
+  "medidas": [
+   "98 x 90 x 90 cm",
+   "166 x 90 x 90 cm",
+   "80 cm Ø x 40 cm",
+   "60 cm Ø x 40 cm",
+   "220 x 90 x 90 cm",
+   "225 x 118 x 85 cm"
+  ],
+  "sets": [
+   "2xA+B+D BRANDON-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ IL3865 DB320 YK480",
+   "2xA+C+D BRANDON-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ UR4335 LG350 NI525"
+  ]
+ },
+ "ARENAS": {
+  "pagina": 19,
+  "piezas": [
+   "G- ARENAS - 5"
+  ],
+  "medidas": [
+   "80 x 80 x 40 cm",
+   "120 x 60 x 40 cm",
+   "92 x 78 x 84 cm",
+   "181 x 78 x 84 cm",
+   "219 x 78 x 84 cm",
+   "228 x 78 x 84 cm",
+   "65 x 45 x 45 cm",
+   "55 x 64 x 90 cm"
+  ],
+  "sets": [
+   "2xA+B+E ARENAS-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ BA2985 JY3155 YO310 VU470",
+   "2xA+C+F ARENAS-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ EQ3535 WF3700 AM355 MO545"
+  ]
+ },
+ "DESIRA": {
+  "pagina": 20,
+  "piezas": [
+   "A- DESIRA - 1 B- DESIRA - 2 C- DESIRA - 3",
+   "F- LIEVAN - 5",
+   "E- SAIPROS - 120",
+   "D- SAIPROS - 90",
+   "G- LIEVAN - XL"
+  ],
+  "medidas": [
+   "78 x 83 x 89 cm",
+   "157 x 83 x 89 cm",
+   "200 x 83 x 89 cm",
+   "60 x 50 x 40 cm",
+   "120 x 60 x 41 cm",
+   "90 x 50 x 41 cm",
+   "85 x 50 x 43 cm"
+  ],
+  "sets": [
+   "2xA+B+D DESIRA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ RV2750 ET2895 XG290 FV455",
+   "2xA+C+E DESIRA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ ZM3190 WL3350 RD340 TT515"
+  ]
+ },
+ "CELINA": {
+  "pagina": 21,
+  "piezas": [
+   "A- CELINA - 1",
+   "E- CELINA - 6",
+   "B- CELINA - 2 C- CELINA - 3",
+   "F- CELINA - 5",
+   "D- CELINA - 4"
+  ],
+  "medidas": [
+   "92 x 78 x 84 cm",
+   "120 x 60 x 47 cm",
+   "177 x 78 x 84 cm",
+   "222 x 78 x 84 cm",
+   "76 x 51 x 47 cm",
+   "76 x 51 x 47 cm"
+  ],
+  "sets": [
+   "2xA+B+D CELINA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ KG3770 EX3950 XB285 GO455",
+   "2xA+C+E CELINA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ UF4195 CG4385 AO340 RW515"
+  ]
+ },
+ "MONTERREY": {
+  "pagina": 22,
+  "piezas": [
+   "A- MONTERREY - 1",
+   "F- MONTERREY - 135",
+   "B- MONTERREY - 2 C- MONTERREY - 3",
+   "D- MONTERREY - 5",
+   "E- MONTERREY - 120"
+  ],
+  "medidas": [
+   "120 x 64 x 46 cm",
+   "85 x 50 x 43 cm",
+   "135 x 74 x 46 cm"
+  ],
+  "sets": [
+   "2xA+B+E MONTERREY-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ HV5090 LD5320 DF310 SQ470",
+   "2xA+C+F MONTERREY-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ PY5790 JE6080 XX350 AX525"
+  ]
+ },
+ "ESTAMBUL": {
+  "pagina": 23,
+  "piezas": [
+   "E- ESTAMBUL -120"
+  ],
+  "medidas": [
+   "84 x 76 x 100 cm",
+   "120 x 75 x 60 cm",
+   "160 x 76 x 100 cm",
+   "210 x 76 x 100 cm",
+   "80 x 55 x 45 cm",
+   "135 x 75 x 60 cm"
+  ],
+  "sets": [
+   "2xA+B+E ESTAMBUL-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ HN4955 CJ5165 SD310 OZ470",
+   "2xA+C+F ESTAMBUL-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ EL5550 OH5825 VY340 EX515"
+  ]
+ },
+ "SAONA": {
+  "pagina": 24,
+  "piezas": [
+   "A- SAONA - 1",
+   "B- SAONA - 2",
+   "D- SAONA",
+   "C- SAONA - 3",
+   "E- SAONA"
+  ],
+  "medidas": [
+   "94 x 80 x 80 cm",
+   "72 x 61 x 87 cm",
+   "140 x 60 x 48 cm",
+   "165 x 80 x 80 cm",
+   "207 x 80 x 80 cm",
+   "200 x 80 x 38 cm",
+   "98 x 85 x 45 cm"
+  ],
+  "sets": [
+   "2xA+B+D SAONA- 7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ PY5940 UQ6170 YW325 MT500",
+   "2xA+C+D SAONA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ CM6260 MH6700 CK355 IP545",
+   "2xA+C+D+2xE SAONA-10 SET SOFA 3 PLAZAS+ 2 REPOSAPIESSOFA/CANAPÉ OZ7670 AO8185 WR445 VV675"
+  ]
+ },
+ " LLAKER": {
+  "pagina": 25,
+  "piezas": [
+   "A- LLAKER - 1",
+   "B- LLAKER - 2",
+   "C- LLAKER - 3",
+   "D- ALHAMA - 135",
+   "H- ALHAMA - 120",
+   "E- LLAKER - 5",
+   "G- Sillón"
+  ],
+  "medidas": [
+   "97 x 95 x 65 cm",
+   "186 x 95 x 65 cm",
+   "230 x 95 x 65 cm",
+   "135 x 60 x 45 cm",
+   "120 x 60 x 40 cm",
+   "65 x 66 x 95 cm"
+  ],
+  "sets": [
+   "2xA+B+D LLAKER-7 SOFA 2 PLAZAS/SOFA/CANAPÉ JP4290 PK4530 YR320 XD480",
+   "2xA+C+D LLAKER-8 SOFA 3 PLAZAS/SOFA/CANAPÉ AS4535 DW4765 BF350 SW550"
+  ]
+ },
+ "ZAFIRO": {
+  "pagina": 26,
+  "piezas": [
+   "A- ZAFIRO - 1 B- ZAFIRO - 2",
+   "D- ZAFIRO",
+   "C- ZAFIRO- 3",
+   "E- ZAFIRO"
+  ],
+  "medidas": [
+   "94 x 89 x 80 cm",
+   "144 x 84 x 42 cm",
+   "175 x 89 x 80 cm",
+   "243 x 89 x 80 cm",
+   "94 x 63 x 50 cm",
+   "213 x 87 x 103 cm",
+   "64 x 71 x 103 cm"
+  ],
+  "sets": [
+   "2xA+B+D ZAFIRO-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ JL4160 SZ4355 WC310 QG470",
+   "2xA+C+D ZAFIRO-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ GZ4550 VH4780 FI340 ST515"
+  ]
+ },
+ "SAMIRA": {
+  "pagina": 27,
+  "piezas": [
+   "A- SAMIRA - 1 B- SAMIRA - 2 C- SAMIRA - 3",
+   "D- BOLONIA - 4",
+   "E- STANDARD - 5"
+  ],
+  "medidas": [
+   "78 x 94 x 108 cm",
+   "141 x 105 x 108 cm",
+   "200 x 105 x 108 cm",
+   "125 x 65 x 41 cm",
+   "60 x 50 x 43 cm"
+  ],
+  "sets": [
+   "2xA+B+D SAMIRA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ AJ4310 YK4510 QA310 TJ470",
+   "2xA+C+D SAMIRA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ AN4895 BR5140 SW340 GQ515"
+  ]
+ },
+ "MARIET  GALA": {
+  "pagina": 28,
+  "piezas": [
+   "F- GALA - 5"
+  ],
+  "medidas": [
+   "135 x 60 x 46 cm",
+   "83 x 55 x 44 cm"
+  ],
+  "sets": [
+   "2xA+B+D MARIET-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ EZ3410 PM3600 SL320 AH480",
+   "2xA+C+D MARIET-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ VZ3785 RW4020 OG350 NV525",
+   "2xA+B+D GALA-7 BICOLOR SET SOFA 2 PLAZAS/SOFA/CANAPÉ IH4770 EB5390 OQ310 JV470",
+   "2xA+C+E GALA-8 BICOLOR SET SOFA 3 PLAZAS/SOFA/CANAPÉ AC5210 CU5890 VR340 YV515"
+  ]
+ },
+ "BOLONIA": {
+  "pagina": 29,
+  "piezas": [
+   "D- BOLONIA - 4",
+   "E- STANDARD - 5",
+   "D- BOLONIA - 606"
+  ],
+  "medidas": [
+   "78 x 83 x 89 cm",
+   "141 x 83 x 89 cm",
+   "200 x 83 x 89 cm",
+   "125 x 65 x 41 cm",
+   "60 x 50 x 39 cm",
+   "60 x 60 x 45 cm"
+  ],
+  "sets": [
+   "2xA+B+D BOLONIA-7 SET SOFA 2 PLAZAS MU2650 RL2805 QZ285 QZ445",
+   "2xA+C+D BOLONIA-8 SET SOFA 3 PLAZAS JX2990 DO3190 LH315 PY490"
+  ]
+ },
+ "BOLONIA XL": {
+  "pagina": 30,
+  "piezas": [
+   "A- BOLONIA XL - 1",
+   "I- BOLONIA - 25",
+   "B- BOLONIA XL - 2 C- BOLONIA XL - 3",
+   "D- BOLONIA - 4",
+   "E- STANDARD"
+  ],
+  "medidas": [
+   "78 x 84 x 104 cm",
+   "69 x 68 x 103 cm",
+   "141 x 84 x 104 cm",
+   "200 x 84 x 104 cm",
+   "125 x 65 x 42 cm",
+   "85 x 50 x 43 cm"
+  ],
+  "sets": [
+   "2XA+B+D BOLONIA XL-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ WU3450 OZ3840 DC310 CQ470",
+   "2XA+C+D BOLONIA XL-8 SET SOFA 3 PLAZAS/SOFA/CANAPE FU3890 OI4330 UW340 OH515"
+  ]
+ },
+ "RECLINABLE BOLONIA": {
+  "pagina": 30,
+  "piezas": [
+   "A- BOLONIA - 19 B- BOLONIA - 29",
+   "C- BOLONIA - 39",
+   "D- BOLONIA - 4",
+   "E- STANDARD - 5"
+  ],
+  "medidas": [
+   "78 x 94 x 89 cm",
+   "141 x 94 x 89 cm",
+   "200 x 94 x 89 cm",
+   "125 x 65 x 41 cm",
+   "60 x 50 x 39 cm"
+  ],
+  "sets": [
+   "2XA + B + D BOLONIA-620/P SET SOFA 2 PLAZAS/SOFA /CANAPE NI2995 PU3185 DU310 HW470",
+   "2XA + C + D BOLONIA-630/P SET SOFA 3 PLAZAS/SOFA /CANAPE WX3400 BV3620 XK340 UG515"
+  ]
+ },
+ "BOLONIA CUERDA RECLINABLE": {
+  "pagina": 31,
+  "piezas": [
+   "D- BOLONIA - 4",
+   "E- STANDARD - 15",
+   "I- BOLONIA - 45",
+   "E- BOLONIA- 60"
+  ],
+  "medidas": [
+   "78 x 94 x 100 cm",
+   "141 x 94 x 100 cm",
+   "207 x 94 x 100 cm",
+   "125 x 65 x 41 cm",
+   "65 x 50 x 40 cm",
+   "70 x 62 x 104 cm",
+   "60 x 60 x 50 cm"
+  ],
+  "sets": [
+   "2xA+B+D BOLONIA 850/CP SET SOFA SOFA/CANAPÉ EX3870 PG4150 FF310 ZF470",
+   "2xA+B+D+2xE BOLONIA 870/CP SET SOFA SOFA/CANAPÉ UY4690 XD5050 HY390 IB590",
+   "2xA+C+D BOLONIA 960/CP SET SOFA SOFA/CANAPÉ UG4460 EY4810 GC340 IG515"
+  ]
+ },
+ "VORIAM RECLINABLE": {
+  "pagina": 32,
+  "piezas": [
+   "A- VORIAM - 1",
+   "D- SAIPROS - 90 E- SAIPROS - 120",
+   "B- VORIAM - 2 C- VORIAM - 3",
+   "F- LIEVAN - 5"
+  ],
+  "medidas": [
+   "90 x 50 x 40 cm",
+   "120 x 60 x 40 cm",
+   "60 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+E VORIAM-7 SET SOFA  RECLINABLE DL2525 MS2670 TE290 NJ450",
+   "2xA+C+E VORIAM-8 SET SOFA  RECLINABLE NQ2945 XF3110 PA320 KP495"
+  ]
+ },
+ "HASTON": {
+  "pagina": 32,
+  "piezas": [
+   "A- HASTON - 1",
+   "D- SAIPROS - 90 E- SAIPROS - 120",
+   "B- HASTON - 2 C- HASTON - 3",
+   "F- LIEVAN - 5"
+  ],
+  "medidas": [
+   "60 x 62 x 115 cm",
+   "90 x 50 x 40 cm",
+   "120 x 60 x 40 cm",
+   "128 x 62 x 115 cm",
+   "188 x 62 x 115 cm",
+   "60 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D HASTON-7 SET SOFA 2 PLAZAS MA2225 DC2370 TE285 NJ445",
+   "2xA+C+E HASTON-8SET SOFA 3 PLAZAS UL2730 OI2910 PA320 KP495"
+  ]
+ },
+ "CARMEL": {
+  "pagina": 33,
+  "piezas": [
+   "A- CARMEL - 1",
+   "D- ALHAMA - 120 E- CARTAGO - 140",
+   "B- CARMEL - 2 C- CARMEL - 3",
+   "F- STANDARD - XL"
+  ],
+  "medidas": [
+   "88 x 80 x 95 cm",
+   "120 x 60 x 40 cm",
+   "140 x 65 x 45 cm",
+   "175 x 80 x 95 cm",
+   "219 x 80 x 95 cm",
+   "85 x 50 x 43 cm"
+  ],
+  "sets": [
+   "2xA+B+D CARMEL-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ MY3720 DV3890 XO310 CK470",
+   "2xA+C+E CARMEL-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ VO4225 PI4405 JG350 IX525"
+  ]
+ },
+ "ALELI": {
+  "pagina": 34,
+  "piezas": [],
+  "medidas": [
+   "120 x 60 x 40 cm",
+   "60 x 50 x 39 cm"
+  ],
+  "sets": [
+   "2xA+B+D ALELI-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ SZ3115 BH3320 KU320 BP480",
+   "2xA+C+D ALELI-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ KT3585 CN3795 RN350 ZD525"
+  ]
+ },
+ "DAMASCO": {
+  "pagina": 35,
+  "piezas": [
+   "A- DAMASCO - 1",
+   "E- UNIVERSAL - 120",
+   "B- DAMASCO - 2 C- DAMASCO - 3",
+   "F- STANDARD - 5",
+   "D- UNIVERSAL - 90"
+  ],
+  "medidas": [
+   "72 x 79 x 75 cm",
+   "120 x 60 x 40 cm",
+   "135 x 79 x 75 cm",
+   "194 x 79 x 75 cm",
+   "60 x 50 x 40 cm",
+   "90 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D DAMASCO-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ SX2555 DG2695 XY285 SV455",
+   "2xA+C+E DAMASCO-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ JN2925 HR3120 NL340 BZ515"
+  ]
+ },
+ " YINA": {
+  "pagina": 35,
+  "piezas": [],
+  "medidas": [
+   "77 x 72 x 83 cm",
+   "143 x 72 x 83 cm",
+   "185 x 72 x 83 cm",
+   "73 x 46 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D YINA -7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ JM3155 OG3350 AA225 HM345",
+   "2xA+C+D YINA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ QF3465 UY3700 KQ250 MT370"
+  ]
+ },
+ "NAROHA": {
+  "pagina": 36,
+  "piezas": [],
+  "medidas": [],
+  "sets": [
+   "4xA+B NAROHA-8C SET SOFA SOFA/CANAPÉ ST7625 LF8195 IT425 PQ650"
+  ]
+ },
+ "CUPRA": {
+  "pagina": 37,
+  "piezas": [
+   "A- CUPRA - 1",
+   "D- UNIVERSAL - 90",
+   "E- UNIVERSAL - 120",
+   "B- CUPRA - 2",
+   "C- CUPRA - 3",
+   "F- STANDARD - 5"
+  ],
+  "medidas": [
+   "65 x 75 x 90 cm",
+   "90 x 50 x 40 cm",
+   "120 x 60 x 40 cm",
+   "130 x 75 x 90 cm",
+   "185 x 75 x 90 cm",
+   "60 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2XA+B+D CUPRA-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ QZ3160 TA3375 LU230 FP355",
+   "2XA+C+E CUPRA-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ VQ3590 NR3830 RP280 RE395"
+  ]
+ },
+ "BELLAGIO": {
+  "pagina": 37,
+  "piezas": [
+   "A- BELLAGIO - 1",
+   "B- BELLAGIO - 2",
+   "C- BELLAGIO - 3",
+   "D- BELLAGIO - 90",
+   "E- STANDARD - 5"
+  ],
+  "medidas": [
+   "125 x 60 x 38 cm",
+   "60 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D BELLAGIO-7 SET SOFA 2 PLAZAS UR2490 SW2670 AA225 HM345",
+   "2xA+C+D BELLAGIO-8 SET SOFA 3 PLAZAS NU2850 GK3060 KQ250 MT370"
+  ]
+ },
+ "COSMOS": {
+  "pagina": 38,
+  "piezas": [],
+  "medidas": [
+   "135 x 74 x 38 cm"
+  ],
+  "sets": [
+   "2xA+B+D COSMOS-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ BL3525 QY3760 HG310 KB470",
+   "2xA+C+D COSMOS-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ VB3965 PF4235 OI340 LJ515"
+  ]
+ },
+ "PORTOFINO": {
+  "pagina": 39,
+  "piezas": [
+   "D- SAIPROS - 90 E- SAIPROS - 120"
+  ],
+  "medidas": [
+   "64 x 66 x 70 cm",
+   "131 x 66 x 70 cm",
+   "185 x 66 x 70 cm",
+   "90 x 50 x 40 cm",
+   "120 x 60 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D PORTOFINO-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ AT2295 JT2470 WJ230 KC355",
+   "2xA+C+E PORTOFINO-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ SQ2635 NS2795 XJ280 TU395"
+  ]
+ },
+ "CARTAGO": {
+  "pagina": 40,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CHAISELONGUE COLOSEO": {
+  "pagina": 40,
+  "piezas": [
+   "A- CARTAGO - 1",
+   "D- ALHAMA - 120",
+   "B- CARTAGO - 2",
+   "B- COLOSEO - 2",
+   "C- CARTAGO - 3",
+   "A- COLOSEO - 3",
+   "F- PREMIUM - 5",
+   "D- COLOSEO - 135"
+  ],
+  "medidas": [
+   "96 x 82 x 102 cm",
+   "120 x 60 x 45 cm",
+   "160 x 82 x 102 cm",
+   "220 x 82 x 102 cm",
+   "98 x 70 x 46 cm",
+   "135 x 60 x 45 cm"
+  ],
+  "sets": [
+   "2xA+B+D CARTAGO-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ MV3535 MQ3750 MS320 JU480",
+   "2xA+C+D CARTAGO-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ NZ3875 YC4100 IC350 DI525",
+   "A+B+D COLOSEO-8 CHAISELONGUE RZ5180 IU5470 XR315 SN465"
+  ]
+ },
+ "BROMO": {
+  "pagina": 41,
+  "piezas": [
+   "A- BROMO - 1 B- BROMO - 2",
+   "A- BROMO -11",
+   "A- BROMO - 12"
+  ],
+  "medidas": [
+   "110 x 75 x 75 cm",
+   "138 x 75 x 75 cm",
+   "60 x 75 x 75 cm",
+   "92 x 75 x 75 cm",
+   "97 x 91 x 40 cm"
+  ],
+  "sets": [
+   "A+B+C+D+E BROMO-4 SET RINCONERA(BROMO-3+BROMO-10) SS5350 ZA5675 GK385 MF590"
+  ]
+ },
+ "CLOE": {
+  "pagina": 41,
+  "piezas": [
+   "A- CLOE - 1 B- CLOE - 2 C- CLOE - 3",
+   "F- CLOE - 5",
+   "D- LUNA - 80 D- LUNA - 60"
+  ],
+  "medidas": [
+   "70 x 64 x 69 cm",
+   "162 x 64 x 69 cm",
+   "220 x 64 x 69 cm",
+   "50 x 45 x 40 cm",
+   "80 cm Ø x 45 cm",
+   "60 cm Ø x 45 cm"
+  ],
+  "sets": [
+   "2XA+B+D CLOE-7 SET SOFA 2 PLAZAS KH3185 WH3370 DN255 XX370",
+   "2XA+C+D CLOE-8 SET SOFA 3 PLAZAS KM3625 QN3845 FR280 BX395",
+   "A+B+C+D CLOE-14 SET SOFA 2 PLAZAS + 3 PLAZAS UR3965 EW4225 XK305 PX425"
+  ]
+ },
+ "TISEN (100% Hermético)": {
+  "pagina": 42,
+  "piezas": [
+   "D- UNIVERSAL - 90"
+  ],
+  "medidas": [
+   "78 x 83 x 89 cm",
+   "120 x 60 x 40 cm",
+   "141 x 83 x 89 cm",
+   "200 x 83 x 89 cm",
+   "60 x 50 x 40 cm",
+   "90 x 50 x 40 cm"
+  ],
+  "sets": [
+   "2xA+B+D TISEN-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ JZ3680 WO3840 UP310 UD490",
+   "2xA+C+E TISEN-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ EI4135 UN4310 YO350 HS525"
+  ]
+ },
+ "ODÍN": {
+  "pagina": 42,
+  "piezas": [
+   "A- ODÍN - 1 B- ODÍN - 2 C- ODÍN - 3",
+   "D- SAIPROS - 90",
+   "D- SAIPROS - 120"
+  ],
+  "medidas": [
+   "65 x 66 x 78 cm",
+   "120 x 66 x 78 cm",
+   "175 x 66 x 78 cm",
+   "90 x 50 x 41 cm",
+   "120 x 60 x 41 cm"
+  ],
+  "sets": [
+   "2xA+B+D ODIN-7 SET SOFA 2 PLAZAS/SOFA/CANAPÉ YT1850 DA1980 RJ235 SK355",
+   "2xA+C+E ODIN-8 SET SOFA 3 PLAZAS/SOFA/CANAPÉ QI2185 VH2355 ZC280 YE395"
+  ]
+ },
+ "RINCONERA BRANDON": {
+  "pagina": 44,
+  "piezas": [
+   "D- BRANDON - 20",
+   "E- BRANDON - 25 F- BRANDON - 80",
+   "C- BRANDON - 21"
+  ],
+  "medidas": [
+   "135 x 90 x 90 cm",
+   "90 x 90 x 90 cm",
+   "80 cm Ø x 40 cm",
+   "135 x 90 x 90 cm"
+  ],
+  "sets": [
+   "A+B+C+D+E ESCARGLET-40 SET SOFA ALUMINIO VB8740 ON9165 GX500 LE760"
+  ]
+ },
+ "RINCONERA ESCARGLET": {
+  "pagina": 44,
+  "piezas": [
+   "D- ESCARGLET - 23",
+   "A- BRANDON - 32",
+   "B- BRANDON - 33",
+   "G- LUNA - 60"
+  ],
+  "medidas": [
+   "115 x 115 x 86 cm",
+   "120 x 85 x 27 cm",
+   "190 x 130 x 86 cm",
+   "188 x 115 x 86 cm",
+   "200 x 90 x 90 cm",
+   "200 x 90 x 90 cm",
+   "60 cm Ø x 40 cm"
+  ],
+  "sets": []
+ },
+ "MENFIS": {
+  "pagina": 45,
+  "piezas": [],
+  "medidas": [],
+  "sets": [
+   "A+B+2xD+C+H+J MENFIS-30 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ FZ7580 PK8130 LE625 TZ950",
+   "A+B+D+F MENFIS-7 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ FJ4405 WS4755 TN370 OJ565",
+   "A+B+D+G MENFIS-8 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ BJ4740 UU5085 ZJ380 LW575"
+  ]
+ },
+ "RINCONERA MONTERREY": {
+  "pagina": 46,
+  "piezas": [
+   "D- MONTERREY - 25"
+  ],
+  "medidas": [],
+  "sets": [
+   "A+B+C+F MONTERREY-27 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ D´ANGLE DH5020 SF5360 QV330 TA495",
+   "A+B+C+D+G MONTERREY-28 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ D´ANGLE CS5880 MA6270 US405 GV615",
+   "A+B+C+D+H+2xE MONTERREY-30 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ D´ANGLE DJ6400 CC6850 HJ425 NR660"
+  ]
+ },
+ "RINCONERA COSMOS": {
+  "pagina": 47,
+  "piezas": [],
+  "medidas": [
+   "165 x 85 x 86 cm",
+   "85 x 85 x 86 cm",
+   "135 x 75 x 38 cm",
+   "165 x 85 x 86 cm",
+   "75 x 85 x 86 cm"
+  ],
+  "sets": [
+   "A+B+C+D+E COSMOS-29 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ VD4970 CX5310 NX405 NY615",
+   "A+B+D+E COSMOS-27 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ VD4280 CX4575 NX330 NY495"
+  ]
+ },
+ "SET RINCONERA ABIGUEIL": {
+  "pagina": 47,
+  "piezas": [
+   "D- ALHAMA - 120 E- ALHAMA - 135"
+  ],
+  "medidas": [
+   "120 x 60 x 40 cm",
+   "135 x 60 x 40 cm",
+   "77 x 70 x 100 cm",
+   "134 x 70 x 100 cm",
+   "204 x 70 x 100 cm"
+  ],
+  "sets": [
+   "A+B+C+D ABIGUEIL-28 SET RINCONERA VH3890 AB4140 CJ340 EI720"
+  ]
+ },
+ "RINCONERA BOLONIA": {
+  "pagina": 48,
+  "piezas": [],
+  "medidas": [],
+  "sets": [
+   "A+C+E+F BOLONIA-28 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ RB3405 XQ3665 LD360 PZ540"
+  ]
+ },
+ "RINCONERA ZAFIRO": {
+  "pagina": 48,
+  "piezas": [],
+  "medidas": [],
+  "sets": [
+   "A+B+C+D+E ZAFIRO-28 SET SOFA RINCONERA/CORNER SET/SET CANAPÉ LX5670 IY5915 NF405 HN615"
+  ]
+ },
+ "RINCONERA DUBLIAN": {
+  "pagina": 49,
+  "piezas": [
+   "A- DUBLIAN - 11",
+   "E- ALHAMA - 150 D- UNIVERSAL - 120",
+   "B- DUBLIAN - 22 C- DUBLIAN - 33",
+   "F- BANCO AUX - 120",
+   "D- HAVANA - 25",
+   "C- HAVANA - 26",
+   "G- HAVANA - 90F- HAVANA - 105",
+   "B- HAVANA - 22A- HAVANA - 21"
+  ],
+  "medidas": [
+   "70 x 80 x 82 cm",
+   "150 x 90 x 66 cm",
+   "120 x 60 x 46 cm",
+   "160 x 80 x 82 cm",
+   "240 x 80 x 82 cm",
+   "120 x 40 x 45 cm",
+   "90 x 50 x 40 cm",
+   "105 x 55 x 40 cm",
+   "130 x 70 x 90 cm"
+  ],
+  "sets": [
+   "C+A+B+D DUBLIAN-29 SET SOFA RINCONERA GQ4035 VM4305 XC370 BC550",
+   "C+A+B+E+F DUBLIAN-30 SET SOFA RINCONERA BO4715 FA5010 TQ375 OL575"
+  ]
+ },
+ "RINCONERA HAVANA": {
+  "pagina": 49,
+  "piezas": [],
+  "medidas": [],
+  "sets": [
+   "A+B+C+F HAVANA -27 SET SOFA RINCONERA KO2920 UR3190 YK270 HV530",
+   "A+B+C+D+H HAVANA-29 SET SOFA RINCONERA JM3670 YA3985 CR350 MX700"
+  ]
+ },
+ "ARMANIA /  ALBI": {
+  "pagina": 51,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "VENETO": {
+  "pagina": 52,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "MOSAICO": {
+  "pagina": 56,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PALAWAN": {
+  "pagina": 58,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BEIRUT": {
+  "pagina": 59,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "EVEREST": {
+  "pagina": 59,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "RODHOS - CUERDA": {
+  "pagina": 60,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CAMELIA": {
+  "pagina": 61,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PAOLA - TABLERO ALUMINIO": {
+  "pagina": 62,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PAOLA ALUMINIO": {
+  "pagina": 62,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CALIFORNIA": {
+  "pagina": 62,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PALMA - TABLERO HPL": {
+  "pagina": 63,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NALOA - TABLERO ALUMINIO": {
+  "pagina": 63,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NALOA": {
+  "pagina": 63,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "ORINOCO / CAMELIA EXTENSIBLE": {
+  "pagina": 65,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "SANTANIA": {
+  "pagina": 66,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "EXTENSION LATERAL": {
+  "pagina": 66,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PALMA EXTENSIBLE": {
+  "pagina": 67,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "Serie Interior": {
+  "pagina": 68,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BEIRUT / LANZAROTE": {
+  "pagina": 69,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NEMUS": {
+  "pagina": 70,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NEMUS  / VENETO": {
+  "pagina": 70,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "VASELIN": {
+  "pagina": 71,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "FIORANO / PUMA": {
+  "pagina": 72,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "RODHOS": {
+  "pagina": 72,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BRISOL-GIGLIO": {
+  "pagina": 73,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "GIGLIO / NIOVA": {
+  "pagina": 73,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BORUS / VASELIN": {
+  "pagina": 74,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "INTERIOR": {
+  "pagina": 77,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "DANTEL": {
+  "pagina": 78,
+  "piezas": [],
+  "medidas": [
+   "80 x 50 x 90 cm"
+  ],
+  "sets": []
+ },
+ "VENETO - PALAWAN": {
+  "pagina": 81,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "HERODIN": {
+  "pagina": 81,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PAOLA": {
+  "pagina": 82,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CALIFORNIA ALUMINIO": {
+  "pagina": 82,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "PALMA HPL": {
+  "pagina": 82,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "EXTENSIBLE SANTANIA / BAIRON / SINGAPUR  / MANTUA": {
+  "pagina": 83,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "EXTENSIBLE ORINOCO / CAMELIA": {
+  "pagina": 83,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "EXTENSIBLE PALMA": {
+  "pagina": 83,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "LANZAROTE": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NEMUS COMEDOR": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "ADELID": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CANVAS COMEDOR": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "GIGLIO": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BRISOL": {
+  "pagina": 84,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "NEMUS BAR": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CANVAS BAR": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "GIGLIO BAR": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "TROPEA / CAELI": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "RODHOS / MARLET": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "BORACAY": {
+  "pagina": 85,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "CAMAS BICOLOR LAGOS": {
+  "pagina": 91,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "MESAS AUXILIARES": {
+  "pagina": 96,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "INTERIOR 153": {
+  "pagina": 121,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ },
+ "serie de servicios básicos, como el almacenaje, transporte": {
+  "pagina": 122,
+  "piezas": [],
+  "medidas": [],
+  "sets": []
+ }
+}

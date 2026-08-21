@@ -1,72 +1,12 @@
 {
  "total_activas": 171,
- "con_galeria_completa": 55,
+ "con_galeria_completa": 62,
  "fallos": {
   "una_sola_imagen": [
-   {
-    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa",
-    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa",
-    "precio": 4195.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-bicolor-2-plazas-bicolor-sofa-2-plazas-2-sillones-mesa",
-    "titulo": "Set jardín bicolor 2 plazas · bicolor | sofá 2 plazas + 2 sillones + mesa",
-    "precio": 3965.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa",
-    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa",
-    "precio": 3819.0,
-    "n": 1
-   },
    {
     "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3",
     "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 3",
     "precio": 3449.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4",
-    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 4",
-    "precio": 3140.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
-    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 3",
-    "precio": 3015.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
-    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 5",
-    "precio": 2765.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
-    "titulo": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa",
-    "precio": 2645.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-2-plazas-contemporaneo-sofa-2-plazas-2-sillones-mesa-2",
-    "titulo": "Set jardín 2 plazas · contemporáneo | sofá 2 plazas + 2 sillones + mesa 2",
-    "precio": 2405.0,
-    "n": 1
-   },
-   {
-    "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
-    "titulo": "Sofá terraza aluminio 3 plazas · estilo contemporáneo | 220×90 cm",
-    "precio": 2349.0,
-    "n": 1
-   },
-   {
-    "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-4",
-    "titulo": "Set jardín 2 plazas · moderno | sofá 2 plazas + 2 sillones + mesa 4",
-    "precio": 2349.0,
     "n": 1
    },
    {
@@ -79,24 +19,6 @@
     "handle": "pergola-aluminio-para-jardin-300300250-cm",
     "titulo": "Pérgola aluminio para jardín · 300×300×250 cm",
     "precio": 2045.0,
-    "n": 1
-   },
-   {
-    "handle": "balancin-jardin-exterior-148194-cm",
-    "titulo": "Balancín jardín exterior · 148×194 cm",
-    "precio": 1805.0,
-    "n": 1
-   },
-   {
-    "handle": "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm",
-    "titulo": "Sofá terraza aluminio 2 plazas · estilo contemporáneo | 166×90 cm",
-    "precio": 1779.0,
-    "n": 1
-   },
-   {
-    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm",
-    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×83 cm",
-    "precio": 1775.0,
     "n": 1
    },
    {
@@ -124,12 +46,6 @@
     "n": 1
    },
    {
-    "handle": "sofa-terraza-2-plazas-estilo-estilizado-14383-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
-    "precio": 1399.0,
-    "n": 1
-   },
-   {
     "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm",
     "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 162×69 cm",
     "precio": 1389.0,
@@ -151,12 +67,6 @@
     "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm",
     "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 188×115 cm",
     "precio": 1199.0,
-    "n": 1
-   },
-   {
-    "handle": "sillon-exterior-aluminio-estilo-envolvente-9890-cm",
-    "titulo": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
-    "precio": 1189.0,
     "n": 1
    },
    {
@@ -205,12 +115,6 @@
     "handle": "sillon-exterior-estilo-estilizado-7069-cm",
     "titulo": "Sillón exterior · estilo estilizado | 70×69 cm",
     "precio": 975.0,
-    "n": 1
-   },
-   {
-    "handle": "sillon-exterior-estilo-versatil-7783-cm",
-    "titulo": "Sillón exterior · estilo versátil | 77×83 cm",
-    "precio": 959.0,
     "n": 1
    },
    {
@@ -322,12 +226,6 @@
     "n": 1
    },
    {
-    "handle": "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm",
-    "titulo": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
-    "precio": 505.0,
-    "n": 1
-   },
-   {
     "handle": "mesa-de-centro-exterior-120-cm-altura-41-cm",
     "titulo": "Mesa de centro exterior 120 cm · altura 41 cm",
     "precio": 449.9,
@@ -355,12 +253,6 @@
     "handle": "banco-de-exterior-150-cm",
     "titulo": "Banco de exterior 150 cm",
     "precio": 423.95,
-    "n": 1
-   },
-   {
-    "handle": "reposapies-exterior-734640-cm",
-    "titulo": "Reposapiés exterior · 73×46×40 cm",
-    "precio": 387.95,
     "n": 1
    },
    {
@@ -544,22 +436,6 @@
     "min_px": 1562
    },
    {
-    "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4",
-    "titulo": "Set jardín 3 plazas · sofisticado | sofá 3 plazas + 2 sillones + mesa 4",
-    "precio": 3140.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 978
-   },
-   {
-    "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-3",
-    "titulo": "Set jardín 2 plazas · elegante | sofá 2 plazas + 2 sillones + mesa 3",
-    "precio": 3015.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 996
-   },
-   {
     "handle": "banco-jardin-con-mesa-integrada-220-cm",
     "titulo": "Banco jardín con mesa integrada · 220 cm",
     "precio": 2899.0,
@@ -568,28 +444,12 @@
     "min_px": 1024
    },
    {
-    "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-5",
-    "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 5",
-    "precio": 2765.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 875
-   },
-   {
     "handle": "set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4",
     "titulo": "Set jardín 3 plazas · contemporáneo | sofá 3 plazas + 2 sillones + mesa 4",
     "precio": 2755.0,
     "n": 2,
     "cuantas": 1,
     "min_px": 1333
-   },
-   {
-    "handle": "set-jardin-3-plazas-elegante-sofa-3-plazas-2-sillones-mesa",
-    "titulo": "Set jardín 3 plazas · elegante | sofá 3 plazas + 2 sillones + mesa",
-    "precio": 2645.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1024
    },
    {
     "handle": "set-rinconera-exterior-contemporaneo-sofa-de-esquina-mesa-de-centro",
@@ -614,14 +474,6 @@
     "n": 2,
     "cuantas": 1,
     "min_px": 1287
-   },
-   {
-    "handle": "sofa-terraza-aluminio-3-plazas-estilo-contemporaneo-22090-cm",
-    "titulo": "Sofá terraza aluminio 3 plazas · estilo contemporáneo | 220×90 cm",
-    "precio": 2349.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1024
    },
    {
     "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2",
@@ -654,22 +506,6 @@
     "n": 2,
     "cuantas": 2,
     "min_px": 1024
-   },
-   {
-    "handle": "sofa-terraza-aluminio-2-plazas-estilo-contemporaneo-16690-cm",
-    "titulo": "Sofá terraza aluminio 2 plazas · estilo contemporáneo | 166×90 cm",
-    "precio": 1779.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
-    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18583-cm",
-    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 185×83 cm",
-    "precio": 1775.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm",
@@ -728,14 +564,6 @@
     "min_px": 1080
    },
    {
-    "handle": "sofa-terraza-2-plazas-estilo-estilizado-14383-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo estilizado | 143×83 cm",
-    "precio": 1399.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
     "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm",
     "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 162×69 cm",
     "precio": 1389.0,
@@ -766,14 +594,6 @@
     "n": 1,
     "cuantas": 1,
     "min_px": 1080
-   },
-   {
-    "handle": "sillon-exterior-aluminio-estilo-envolvente-9890-cm",
-    "titulo": "Sillón exterior aluminio · estilo envolvente | 98×90 cm",
-    "precio": 1189.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1024
    },
    {
     "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19685-cm",
@@ -878,14 +698,6 @@
     "n": 1,
     "cuantas": 1,
     "min_px": 1024
-   },
-   {
-    "handle": "sillon-exterior-estilo-versatil-7783-cm",
-    "titulo": "Sillón exterior · estilo versátil | 77×83 cm",
-    "precio": 959.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm",
@@ -1096,14 +908,6 @@
     "min_px": 1080
    },
    {
-    "handle": "mesa-de-centro-exterior-hpl-70-cm-altura-45-cm",
-    "titulo": "Mesa de centro exterior HPL 70 cm · altura 45 cm",
-    "precio": 505.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
     "handle": "balliu-tumbona-de-exterior-aluminio-d08586c1",
     "titulo": "Tumbona exterior aluminio alta · acceso fácil · Etna Alta",
     "precio": 496.95,
@@ -1198,14 +1002,6 @@
     "n": 4,
     "cuantas": 4,
     "min_px": 614
-   },
-   {
-    "handle": "reposapies-exterior-734640-cm",
-    "titulo": "Reposapiés exterior · 73×46×40 cm",
-    "precio": 387.95,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "banco-de-exterior-108-cm",

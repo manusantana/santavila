@@ -53,6 +53,86 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 #
 # TANDA 2026-08 · Brandon 3 pl. (5.249 EUR) — verificada con el skill v4
 # NO publicar hasta el "ok" explicito de Sergio (PASO 6) y la puerta de identidad (PASO 7.a).
+# TANDA 2026-08-21 A · piezas sueltas ODIN (3 fichas, 2.535 EUR)
+# Cotas CONFIRMADAS POR DOBLE FUENTE (CSV maestro Hevea == catalogo PDF pag. 33).
+# Acabado: cada pieza en el de SU foto oficial -> ODIN-3 antracita, ODIN-2 y ODIN-1 blancos.
+# La mesa de centro sale en las fotos del proveedor y NO se vende: se retiro de la imagen.
+# TANDA 2026-08-21 B · piezas sueltas DAMASCO y ACAPULCO (4 fichas, 4.389 EUR)
+# Cotas CONFIRMADAS POR DOBLE FUENTE (CSV maestro Hevea == catalogo PDF, pags. 35 y 33).
+# ACAPULCO-2 NO entra: su unica foto oficial la ocupa una persona sentada y, al retirarla,
+# el modelo reconstruyo el asiento como una pieza continua cuando el real lleva DOS cojines.
+# TANDA 2026-08-21 C · piezas sueltas CLOE y HASTON (3 fichas, 3.563 EUR)
+# Cotas CONFIRMADAS POR DOBLE FUENTE (CSV maestro Hevea == catalogo PDF, pags. 41 y 32).
+# Habitats nuevos: C12 Altea (Cloe, blanco y cuerda gris) y C13 carmen del Albaicin (Haston, salvia).
+GALERIAS_CLOE_HASTON = {
+    "cloe2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm", {
+        "01_packshot.jpg": "Sofa de terraza Cloe de 2 plazas con estructura de tubo redondo blanco, laterales de cuerda gris trenzada y cojines blanco crudo, 162x64x69 cm, sobre fondo neutro",
+        "02_ambiente_altea.jpg": "Sofa Cloe de 2 plazas en una terraza encalada de Altea, con la cupula de teja azul, buganvilla y el Mediterraneo al fondo",
+        "04_asmr_cuerda.jpg": "Detalle de la cuerda gris enrollada en vertical sobre el tubo blanco del lateral del sofa Cloe",
+        "05_medidas.jpg": "Medidas del sofa Cloe de 2 plazas: 162 cm de ancho y 69 de alto. Se vende solo el sofa",
+    }),
+    "cloe1_sillon": ("sillon-exterior-estilo-estilizado-7069-cm", {
+        "01_packshot.jpg": "Sillon de exterior Cloe con estructura de tubo redondo blanco, laterales de cuerda gris trenzada y cojines blanco crudo, 70x64x69 cm, sobre fondo neutro",
+        "02_ambiente_altea.jpg": "Sillon Cloe en una terraza encalada de Altea, junto a una calle empedrada que baja al mar, con buganvilla y la cupula de teja azul",
+        "04_asmr_cuerda.jpg": "Detalle del encuentro entre el tubo blanco del sillon Cloe, el panel de cuerda gris y el canto del cojin crudo",
+        "05_medidas.jpg": "Medidas del sillon Cloe: 70 cm de ancho y 69 de alto. Se vende solo el sillon",
+    }),
+    "haston3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm", {
+        "01_packshot.jpg": "Sofa de terraza Haston de 3 plazas con respaldo alto, estructura de aluminio blanco y cojines verde salvia claro, 188x62x115 cm, sobre fondo neutro",
+        "02_ambiente_carmen.jpg": "Sofa Haston de respaldo alto en el jardin de un carmen del Albaicin granadino, junto a una alberca de piedra, con cipreses y setos de mirto",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio blanco del sofa Haston en su union con la pata inclinada, junto al cojin verde salvia",
+        "05_medidas.jpg": "Medidas del sofa Haston de 3 plazas: 188 cm de ancho y 115 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+}
+
+GALERIAS_DAMASCO_ACAPULCO = {
+    "damasco3_sofa": ("sofa-terraza-3-plazas-estilo-sofisticado-19475-cm", {
+        "01_packshot.jpg": "Sofa de terraza Damasco de 3 plazas con estructura de aluminio antracita, brazos forrados de cuerda beige y cojines gris claro, 194x79x75 cm, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Sofa Damasco de 3 plazas en la terraza de caliza de un cortijo de la campina sevillana, bajo arcos encalados, con un olivo viejo y los trigales al fondo",
+        "04_asmr_cuerda.jpg": "Detalle de la cuerda beige enrollada en el brazo del sofa Damasco, donde termina contra el montante de aluminio antracita",
+        "05_medidas.jpg": "Medidas del sofa Damasco de 3 plazas: 194 cm de ancho y 75 de alto. Se vende solo el sofa",
+    }),
+    "damasco2_sofa": ("sofa-terraza-2-plazas-estilo-envolvente-13575-cm", {
+        "01_packshot.jpg": "Sofa de terraza Damasco de 2 plazas con estructura de aluminio antracita, brazos forrados de cuerda beige y cojines gris claro, 135x79x75 cm, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Sofa Damasco de 2 plazas en la terraza de caliza de un cortijo de la campina sevillana, con un olivo en tinaja de barro y los campos dorados al fondo",
+        "04_asmr_cuerda.jpg": "Detalle del cordaje vertical del lateral del sofa Damasco, tensado sobre el marco de aluminio antracita",
+        "05_medidas.jpg": "Medidas del sofa Damasco de 2 plazas: 135 cm de ancho y 75 de alto. Se vende solo el sofa",
+    }),
+    "acapulco3_sofa": ("sofa-terraza-3-plazas-estilo-moderno-18570-cm", {
+        "01_packshot.jpg": "Sofa de terraza Acapulco de 3 plazas en aluminio blanco con brazos de marco abierto y cojines gris claro, 185x66x70 cm, sobre fondo neutro",
+        "02_ambiente_valencia.jpg": "Sofa Acapulco de 3 plazas blanco en una terraza valenciana de suelo de barro, con persiana de esparto, un naranjo en tinaja y romero",
+        "04_asmr_brazo.jpg": "Detalle del brazo de marco abierto de aluminio blanco del sofa Acapulco, en la union del travesano con el montante",
+        "05_medidas.jpg": "Medidas del sofa Acapulco de 3 plazas: 185 cm de ancho y 70 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "acapulco1_sillon": ("sillon-exterior-estilo-versatil-6470-cm", {
+        "01_packshot.jpg": "Sillon de exterior Acapulco en aluminio antracita con brazos de marco abierto y cojines gris claro, 64x66x70 cm, sobre fondo neutro",
+        "02_ambiente_salamanca.jpg": "Sillon Acapulco antracita en una azotea de Salamanca, sobre suelo de piedra de Villamayor y con las torres de la catedral al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo de marco abierto de aluminio antracita del sillon Acapulco junto al canto del cojin gris",
+        "05_medidas.jpg": "Medidas del sillon Acapulco: 64 cm de ancho y 70 de alto. Se vende solo el sillon; el reposapies no se incluye",
+    }),
+}
+
+GALERIAS_ODIN_PIEZAS = {
+    "odin3_sofa": ("sofa-terraza-3-plazas-estilo-sofisticado-17578-cm", {
+        "01_packshot.jpg": "Sofa de terraza Odin de 3 plazas en aluminio antracita con brazos de marco abierto y cojines gris claro, 175x66x78 cm, sobre fondo neutro",
+        "02_ambiente_segovia.jpg": "Sofa Odin de 3 plazas en una terraza de sillar granitico de Segovia, con lavanda en un pilon de piedra, el pinar y la sierra de Guadarrama al fondo",
+        "04_asmr_brazo.jpg": "Detalle del brazo plano de aluminio antracita del sofa Odin y su cordon de soldadura, junto a la trama del cojin gris",
+        "05_medidas.jpg": "Medidas del sofa Odin de 3 plazas: 175 cm de ancho y 78 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "odin2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm", {
+        "01_packshot.jpg": "Sofa de terraza Odin de 2 plazas en aluminio blanco con brazos de marco abierto y cojines gris claro, 120x66x78 cm, sobre fondo neutro",
+        "02_ambiente_lanzarote.jpg": "Sofa Odin de 2 plazas blanco en una terraza de Lanzarote, con suelo de picon negro, muro encalado y una higuera en su zoco de piedra volcanica",
+        "04_asmr_brazo.jpg": "Detalle del brazo de aluminio blanco del sofa Odin y del vivo cosido del cojin gris claro",
+        "05_medidas.jpg": "Medidas del sofa Odin de 2 plazas: 120 cm de ancho y 78 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "odin1_sillon": ("sillon-exterior-estilo-elegante-6578-cm", {
+        "01_packshot.jpg": "Sillon de exterior Odin en aluminio blanco con brazos de marco abierto y cojines gris claro, 65x66x78 cm, sobre fondo neutro",
+        "02_ambiente_lanzarote.jpg": "Sillon Odin blanco en una terraza de Lanzarote, con suelo de picon negro, muro encalado y una higuera en su zoco de piedra volcanica",
+        "04_asmr_brazo.jpg": "Detalle de la esquina redondeada del brazo de aluminio blanco del sillon Odin y del canto del cojin gris",
+        "05_medidas.jpg": "Medidas del sillon Odin: 65 cm de ancho y 78 de alto. Se vende solo el sillon; la mesa de centro no se incluye",
+    }),
+}
+
 GALERIAS_ALBANIA8 = {
     "albania8": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-4", {
         "01_packshot.jpg": "Conjunto de jardin Albania de 3 plazas en aluminio gris claro con patas en A y tapiceria verde salvia: sofa, dos sillones y mesa de centro, sobre fondo neutro",
@@ -581,7 +661,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_ALBANIA8
+    ACTIVA = GALERIAS_CLOE_HASTON
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

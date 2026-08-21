@@ -687,5 +687,135 @@
    "gid://shopify/MediaImage/71483965964612",
    "gid://shopify/MediaImage/71483965997380"
   ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-sofisticado-17578-cm",
+  "producto": "gid://shopify/Product/15507126747460",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551672644"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486611587396",
+   "gid://shopify/MediaImage/71486611620164",
+   "gid://shopify/MediaImage/71486611652932",
+   "gid://shopify/MediaImage/71486611685700"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-12078-cm",
+  "producto": "gid://shopify/Product/15507126714692",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551541572"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486613127492",
+   "gid://shopify/MediaImage/71486613160260",
+   "gid://shopify/MediaImage/71486613193028",
+   "gid://shopify/MediaImage/71486613225796"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-elegante-6578-cm",
+  "producto": "gid://shopify/Product/15507126649156",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551279428"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486613979460",
+   "gid://shopify/MediaImage/71486614012228",
+   "gid://shopify/MediaImage/71486614044996",
+   "gid://shopify/MediaImage/71486614077764"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-sofisticado-19475-cm",
+  "producto": "gid://shopify/Product/15507125567812",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549477188"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486891884868",
+   "gid://shopify/MediaImage/71486891917636",
+   "gid://shopify/MediaImage/71486891950404",
+   "gid://shopify/MediaImage/71486891983172"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-envolvente-13575-cm",
+  "producto": "gid://shopify/Product/15507125535044",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549378884"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486892769604",
+   "gid://shopify/MediaImage/71486892802372",
+   "gid://shopify/MediaImage/71486892835140",
+   "gid://shopify/MediaImage/71486892867908"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-moderno-18570-cm",
+  "producto": "gid://shopify/Product/15507128418628",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555277124"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486893719876",
+   "gid://shopify/MediaImage/71486893752644",
+   "gid://shopify/MediaImage/71486893785412",
+   "gid://shopify/MediaImage/71486893818180"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-versatil-6470-cm",
+  "producto": "gid://shopify/Product/15507128353092",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555146052"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71486894342468",
+   "gid://shopify/MediaImage/71486894375236",
+   "gid://shopify/MediaImage/71486894408004",
+   "gid://shopify/MediaImage/71486894440772"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm",
+  "producto": "gid://shopify/Product/15507126550852",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550722372"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487001887044",
+   "gid://shopify/MediaImage/71487001919812",
+   "gid://shopify/MediaImage/71487001952580",
+   "gid://shopify/MediaImage/71487001985348"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-estilizado-7069-cm",
+  "producto": "gid://shopify/Product/15507126485316",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550689604"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487004148036",
+   "gid://shopify/MediaImage/71487004180804",
+   "gid://shopify/MediaImage/71487004213572",
+   "gid://shopify/MediaImage/71487004246340"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-188115-cm",
+  "producto": "gid://shopify/Product/15507128254788",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554982212"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487006507332",
+   "gid://shopify/MediaImage/71487006540100",
+   "gid://shopify/MediaImage/71487006572868",
+   "gid://shopify/MediaImage/71487006605636"
+  ]
  }
 ]
