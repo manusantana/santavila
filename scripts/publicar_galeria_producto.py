@@ -113,6 +113,47 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Primer ataque al frente de la BAJA RESOLUCION: fichas con galeria pero con las fotos
 # viejas del proveedor por debajo de 2.000 px. Estos cuatro sets son los de mas valor.
 # Los sets no traen cotas en el CSV -> ninguno lleva imagen de medidas.
+# TANDA 2026-08-21 O · RESCATE POR CATALOGO (5 fichas, 4.558 EUR)
+# Sergio: "revisa el catalogo, ahi lo tienes todo". Cinco fichas que estaban en cuarentena
+# se desbloquearon SIN pedir una sola foto nueva al proveedor:
+#   PERGOLA VENECIA — el catalogo (pag. 207) le ofrece "anclaje OPCIONAL en patas para
+#     sujetar al suelo": es EXENTA, autoportante. Las 4 imagenes que dormian en cuarentena
+#     eran correctas -> se publican con coste CERO de creditos.
+#   HASTON-1  — la pag. 32 del catalogo trae la serie SIN modelo: sillon entero y de frente.
+#   DIVA-1    — la foto oficial del SET Diva-7 tiene un sillon libre, de frente, a la derecha.
+#   MUNDRA    — el catalogo HORECA (pag. 13) permite contar sus patas: son CUATRO, no tres.
+#   GULLIVER  — la pag. 207 trae el banco limpio, en color, no el montaje roto en B/N.
+# Cotas: manda el catalogo (Haston-1 60x115, no los 68 del titulo).
+GALERIAS_RESCATE_CATALOGO = {
+    "pergola_venecia": ("pergola-aluminio-para-jardin-300300250-cm", {
+        "01_packshot.jpg": "Pergola de jardin Venecia de aluminio blanco, autoportante de cuatro patas, con toldo corredero de lona, 300x300x250 cm, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Pergola Venecia blanca sobre tarima en un jardin con muro encalado, seto y un olivo en tinaja, proyectando su sombra",
+        "03_bajo_la_pergola.jpg": "Vista desde debajo de la pergola Venecia: la lona a contraluz y la sombra que dibuja sobre la tarima",
+        "04_asmr_perfil_carril.jpg": "Detalle del perfil de aluminio blanco de la pergola Venecia con el carril por el que corre el toldo",
+        "05_medidas.jpg": "Medidas de la pergola Venecia: 300 cm de ancho y 250 de alto. Estructura autoportante; el anclaje al suelo es opcional",
+    }),
+    "diva1_sillon": ("sillon-exterior-bicolor-estilo-bicolor-7376-cm", {
+        "01_packshot.jpg": "Sillon de exterior Diva bicolor con estructura de aluminio tortola, lamas oscuras en el lateral, cojines crudo y base de patin, 73x70x76 cm, sobre fondo neutro",
+        "02_ambiente_cordoba.jpg": "Sillon Diva bicolor en un patio cordobes, con geranios en macetas de barro colgadas del muro, reja de forja y un limonero en tinaja",
+        "05_medidas.jpg": "Medidas del sillon Diva bicolor: 73 cm de ancho y 76 de alto. Se vende solo el sillon",
+    }),
+    "mundra_mesa2": ("mesa-comedor-exterior-hpl-10090-cm", {
+        "01_packshot.jpg": "Mesa de comedor de exterior Mundra, redonda de 100 cm con tablero HPL y cuatro patas cilindricas de aluminio antracita, 76 cm de alto, sobre fondo neutro",
+        "02_ambiente_salamanca.jpg": "Mesa Mundra redonda sola en una azotea de Salamanca, sobre piedra de Villamayor y con las torres de la catedral al fondo",
+        "05_medidas.jpg": "Medidas de la mesa Mundra: 100 cm de diametro y 76 de alto. Se vende solo la mesa",
+    }),
+    "haston1_sillon": ("sillon-exterior-estilo-contemporaneo-68115-cm", {
+        "01_packshot.jpg": "Sillon de exterior Haston de respaldo alto, con estructura de aluminio tortola y cojines beige, 60x62x115 cm, sobre fondo neutro",
+        "02_ambiente_carmen.jpg": "Sillon Haston de respaldo alto en el jardin de un carmen del Albaicin granadino, junto a una alberca de piedra, con cipreses y setos de mirto",
+        "05_medidas.jpg": "Medidas del sillon Haston segun el catalogo del fabricante: 60 cm de ancho y 115 de alto. Se vende solo el sillon",
+    }),
+    "gulliver_banco": ("banco-de-exterior-150-cm", {
+        "01_packshot.jpg": "Banco de exterior Gulliver de aluminio blanco, con respaldo de lamas en abanico y asiento de listones, 150x49x90 cm, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Banco Gulliver blanco en un jardin de grava con seto, un olivo en tinaja de barro y un muro de piedra dorada",
+        "05_medidas.jpg": "Medidas del banco Gulliver: 150 cm de ancho y 90 de alto. Se vende solo el banco",
+    }),
+}
+
 GALERIAS_SETS_HD = {
     "cupra8_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2", {
         "01_packshot.jpg": "Conjunto de jardin Cupra en aluminio blanco con sofa de 3 plazas, dos sillones y mesa de centro, con cojines verde salvia, sobre fondo neutro",
@@ -956,7 +997,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_SETS_HD
+    ACTIVA = GALERIAS_RESCATE_CATALOGO
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

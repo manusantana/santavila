@@ -1328,5 +1328,67 @@
    "gid://shopify/MediaImage/71489633648964",
    "gid://shopify/MediaImage/71489633681732"
   ]
+ },
+ {
+  "handle": "pergola-aluminio-para-jardin-300300250-cm",
+  "producto": "gid://shopify/Product/15507128582468",
+  "borrados": [
+   "gid://shopify/MediaImage/71319234937156"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490591260996",
+   "gid://shopify/MediaImage/71490591293764",
+   "gid://shopify/MediaImage/71490591326532",
+   "gid://shopify/MediaImage/71490591359300",
+   "gid://shopify/MediaImage/71490591392068"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-bicolor-estilo-bicolor-7376-cm",
+  "producto": "gid://shopify/Product/15507127402820",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553540420"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490591457604",
+   "gid://shopify/MediaImage/71490591490372",
+   "gid://shopify/MediaImage/71490591523140"
+  ]
+ },
+ {
+  "handle": "mesa-comedor-exterior-hpl-10090-cm",
+  "producto": "gid://shopify/Product/15507129237828",
+  "borrados": [
+   "gid://shopify/MediaImage/70106366116164"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490591916356",
+   "gid://shopify/MediaImage/71490591949124",
+   "gid://shopify/MediaImage/71490591981892"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-contemporaneo-68115-cm",
+  "producto": "gid://shopify/Product/15507128189252",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554851140"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490593161540",
+   "gid://shopify/MediaImage/71490593194308",
+   "gid://shopify/MediaImage/71490593227076"
+  ]
+ },
+ {
+  "handle": "banco-de-exterior-150-cm",
+  "producto": "gid://shopify/Product/15507129696580",
+  "borrados": [
+   "gid://shopify/MediaImage/70103557996868"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71490593849668",
+   "gid://shopify/MediaImage/71490593882436",
+   "gid://shopify/MediaImage/71490593915204"
+  ]
  }
 ]

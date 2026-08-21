@@ -13,6 +13,62 @@
 
 ---
 
+## 2026-08-21 (D) · EL CATÁLOGO TENÍA LAS FOTOS — 5 rescates, 4.558 €
+
+Sergio: *«revisa el catálogo, ahí lo tienes todo, todo todo... no tengo fotos de las que me
+solicitas, tienes que buscarlas dentro del catálogo, o revísalas en todas las carpetas de
+proveedores»*. Tenía razón. **Cinco de las siete fichas bloqueadas se desbloquearon sin pedir
+una sola foto nueva.**
+
+| Ficha | € | Qué lo resolvió |
+|---|---|---|
+| **Pérgola Venecia** | 2.045 | catálogo pág. 207 |
+| Diva-1 bicolor | 945 | foto oficial del set Diva-7 |
+| Mesa Mundra Ø100 | 585 | catálogo HORECA pág. 13 |
+| Haston-1 | 559 | catálogo pág. 32 |
+| Banco Gulliver | 424 | catálogo pág. 207 |
+
+### La pérgola: lo decidió una línea de tarifa
+
+> *Pérgola VENECIA · 300×300×250 H · COD VC1690 · **Opcional: anclaje en patas para sujetar
+> al suelo** (COD: AJ30)*
+
+Ofrecer anclaje **opcional en las patas** solo tiene sentido en una estructura **exenta**. La
+foto de la misma página lo confirma: autoportante, seis patas sobre dados de hormigón, en
+mitad de un césped, sin tocar fachada. Y aparece junto a la Kavana y la Boston, que llevan
+cuatro jardineras de lastre — el mismo concepto.
+
+**El packshot que dormía en cuarentena era el correcto.** Sus cuatro imágenes se publicaron
+**con coste cero de créditos**; solo hubo que añadirle la ficha de medidas.
+
+### Lo que enseñó cada rescate
+
+- **Haston-1**: la pág. 32 trae la serie completa **sin modelo**. El sillón, entero y de
+  frente. La foto que el CSV le asigna (`reposapies haston.jpg`) tiene una modelo sentada
+  encima; la del catálogo, no.
+- **Diva-1**: la foto oficial del **set** Diva-7 tiene un sillón libre a la derecha, de
+  frente. La del SKU lo muestra de espaldas.
+- **Mundra**: el catálogo HORECA permite **contar las patas**: son **CUATRO**. El modelo había
+  dibujado tres y por eso se rechazó — el rechazo era correcto y ahora se puede regenerar bien.
+- **Gulliver**: la pág. 207 trae el banco limpio y **en color**, no el montaje roto en blanco
+  y negro con recortes superpuestos que da el CSV.
+
+### Regla que sale de aquí
+
+**Cuando la foto del SKU no sirve, el catálogo es la segunda fuente — y muchas veces la
+buena.** Antes de mandar una ficha a cuarentena hay que mirar: (1) el catálogo PDF general,
+(2) el catálogo HORECA, (3) la foto oficial del SET al que pertenece la pieza. Las tres
+existían y ninguna se había peinado.
+
+### Estado
+
+**57 fichas publicadas hoy · 59.212 € de catálogo.** De las 13 que quedaban con una sola foto
+se bajó a **8**; y de esas, cuatro son las de la modelo sentada en el sofá (Dounvil-3,
+Albania-2, Acapulco-2, Manhatan-2 = 3.685 €), donde ni el catálogo ni las fotos de set
+resuelven: en todas la modelo se sienta justo en el sofá que hace falta.
+
+---
+
 ## 2026-08-21 (C) · SE ABRE EL FRENTE DE LA BAJA RESOLUCIÓN — 52 fichas, 54.654 €
 
 Con las 13 de una sola foto bloqueadas por falta de material, se pasó al **frente grande**:
