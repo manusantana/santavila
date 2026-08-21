@@ -817,5 +817,57 @@
    "gid://shopify/MediaImage/71487006572868",
    "gid://shopify/MediaImage/71487006605636"
   ]
+ },
+ {
+  "handle": "sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm",
+  "producto": "gid://shopify/Product/15507127468356",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553704260"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487094849860",
+   "gid://shopify/MediaImage/71487094882628",
+   "gid://shopify/MediaImage/71487094915396",
+   "gid://shopify/MediaImage/71487094948164"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-bicolor-2-plazas-estilo-bicolor-14076-cm",
+  "producto": "gid://shopify/Product/15507127435588",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553671492"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487095963972",
+   "gid://shopify/MediaImage/71487095996740",
+   "gid://shopify/MediaImage/71487096029508",
+   "gid://shopify/MediaImage/71487096062276"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-sofisticado-212100-cm",
+  "producto": "gid://shopify/Product/15507127009604",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552196932"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487096684868",
+   "gid://shopify/MediaImage/71487096717636",
+   "gid://shopify/MediaImage/71487096750404",
+   "gid://shopify/MediaImage/71487096783172"
+  ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-versatil-76100-cm",
+  "producto": "gid://shopify/Product/15507126944068",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552000324"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487097045316",
+   "gid://shopify/MediaImage/71487097078084",
+   "gid://shopify/MediaImage/71487097110852",
+   "gid://shopify/MediaImage/71487097143620"
+  ]
  }
 ]

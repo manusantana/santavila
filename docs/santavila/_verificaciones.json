@@ -974,5 +974,129 @@
     "alt_len": 122
    }
   ]
+ },
+ "sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "diva3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 161
+   },
+   {
+    "fichero": "02_ambiente_ibiza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   },
+   {
+    "fichero": "04_asmr_lamas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 125
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 94
+   }
+  ]
+ },
+ "sofa-terraza-bicolor-2-plazas-estilo-bicolor-14076-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "diva2_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 170
+   },
+   {
+    "fichero": "02_ambiente_cordoba.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "04_asmr_lamas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 127
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-sofisticado-212100-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "albania3_sofa",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   },
+   {
+    "fichero": "02_ambiente_huerta.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 159
+   },
+   {
+    "fichero": "04_asmr_pata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 108
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 123
+   }
+  ]
+ },
+ "sillon-exterior-estilo-versatil-76100-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "albania1_sillon",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   },
+   {
+    "fichero": "02_ambiente_puerto.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "04_asmr_pata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 109
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   }
+  ]
  }
 }

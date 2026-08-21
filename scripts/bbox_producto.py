@@ -64,7 +64,8 @@ def bbox(path, umbral=40, min_frac=0.06):
 if __name__ == "__main__":
     p = sys.argv[1]
     u = int(sys.argv[sys.argv.index("--umbral")+1]) if "--umbral" in sys.argv else 40
-    b = bbox(p, u)
+    mf = float(sys.argv[sys.argv.index("--masa")+1]) if "--masa" in sys.argv else 0.06
+    b = bbox(p, u, mf)
     im = Image.open(p).convert("RGB")
     print(f"{b[0]},{b[1]},{b[2]},{b[3]}   ({b[2]-b[0]}x{b[3]-b[1]} px de {im.size[0]}x{im.size[1]})")
     if "--hoja" in sys.argv:

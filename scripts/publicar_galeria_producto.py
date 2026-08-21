@@ -64,6 +64,39 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # TANDA 2026-08-21 C · piezas sueltas CLOE y HASTON (3 fichas, 3.563 EUR)
 # Cotas CONFIRMADAS POR DOBLE FUENTE (CSV maestro Hevea == catalogo PDF, pags. 41 y 32).
 # Habitats nuevos: C12 Altea (Cloe, blanco y cuerda gris) y C13 carmen del Albaicin (Haston, salvia).
+# TANDA 2026-08-21 D · piezas sueltas DIVA BICOLOR y ALBANIA (4 fichas, 4.854 EUR)
+# Cotas del CSV maestro Hevea (estas dos series no figuran en el PDF con sus cotas).
+# Acabados: cada SKU con el de SU foto oficial -> Diva-3 blanco, Diva-2 tortola,
+# Albania-3 verde salvia sobre gris claro, Albania-1 antracita.
+# NO entran: Albania-2 (persona sentada -> el asiento salio de una pieza cuando lleva DOS
+# cojines) ni Diva-1 (su unica foto lo muestra de espaldas: no hay cara frontal que usar).
+GALERIAS_DIVA_ALBANIA = {
+    "diva3_sofa": ("sofa-terraza-bicolor-3-plazas-estilo-bicolor-20076-cm", {
+        "01_packshot.jpg": "Sofa de terraza Diva bicolor de 3 plazas con estructura de aluminio blanco, laterales de lamas antracita y cojines blanco crudo, 200x70x76 cm, sobre fondo neutro",
+        "02_ambiente_ibiza.jpg": "Sofa Diva bicolor de 3 plazas en la terraza de una casa payesa de Ibiza, con muros de cal de aristas redondeadas, pergola de sabina y grava clara",
+        "04_asmr_lamas.jpg": "Detalle de las lamas horizontales antracita del lateral del sofa Diva, donde se encuentran con el montante de aluminio blanco",
+        "05_medidas.jpg": "Medidas del sofa Diva bicolor de 3 plazas: 200 cm de ancho y 76 de alto. Se vende solo el sofa",
+    }),
+    "diva2_sofa": ("sofa-terraza-bicolor-2-plazas-estilo-bicolor-14076-cm", {
+        "01_packshot.jpg": "Sofa de terraza Diva bicolor de 2 plazas con estructura de aluminio tortola, laterales de lamas marron oscuro y cojines crudo con ribete, 140x70x76 cm, sobre fondo neutro",
+        "02_ambiente_cordoba.jpg": "Sofa Diva bicolor de 2 plazas en un patio cordobes, con geranios en macetas de barro colgadas del muro, reja de forja y un limonero en tinaja",
+        "04_asmr_lamas.jpg": "Detalle de las lamas horizontales marron oscuro del lateral del sofa Diva, donde se encuentran con el montante de aluminio tortola",
+        "05_medidas.jpg": "Medidas del sofa Diva bicolor de 2 plazas: 140 cm de ancho y 76 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "albania3_sofa": ("sofa-terraza-3-plazas-estilo-sofisticado-212100-cm", {
+        "01_packshot.jpg": "Sofa de terraza Albania de 3 plazas con estructura de aluminio gris claro y patas en A, tapiceria verde salvia, 212x70x100 cm, sobre fondo neutro",
+        "02_ambiente_huerta.jpg": "Sofa Albania de 3 plazas bajo una pergola de canizo en la huerta de Murcia, con suelo de gres arena, muro encalado, un limonero en tinaja y el limonar al fondo",
+        "04_asmr_pata.jpg": "Detalle de la pata en A de aluminio gris claro del sofa Albania, en el encuentro de la diagonal con el brazo",
+        "05_medidas.jpg": "Medidas del sofa Albania de 3 plazas: 212 cm de ancho y 100 de alto. Se vende solo el sofa; la mesa de centro no se incluye",
+    }),
+    "albania1_sillon": ("sillon-exterior-estilo-versatil-76100-cm", {
+        "01_packshot.jpg": "Sillon de exterior Albania con estructura de aluminio antracita y patas en A, cojines gris claro, 76x70x100 cm, sobre fondo neutro",
+        "02_ambiente_puerto.jpg": "Sillon Albania antracita en una terraza de piedra sobre un puerto pesquero asturiano, con reja de forja, las casas de colores y las barcas abajo",
+        "04_asmr_pata.jpg": "Detalle de la pata en A de aluminio antracita del sillon Albania, en el encuentro de la diagonal con el brazo",
+        "05_medidas.jpg": "Medidas del sillon Albania: 76 cm de ancho y 100 de alto. Se vende solo el sillon; el reposapies no se incluye",
+    }),
+}
+
 GALERIAS_CLOE_HASTON = {
     "cloe2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-16269-cm", {
         "01_packshot.jpg": "Sofa de terraza Cloe de 2 plazas con estructura de tubo redondo blanco, laterales de cuerda gris trenzada y cojines blanco crudo, 162x64x69 cm, sobre fondo neutro",
@@ -661,7 +694,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_CLOE_HASTON
+    ACTIVA = GALERIAS_DIVA_ALBANIA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
