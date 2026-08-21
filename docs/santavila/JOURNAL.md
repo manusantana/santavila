@@ -13,6 +13,59 @@
 
 ---
 
+## 2026-08-21 (B) · HASTA DONDE LLEGA EL MATERIAL — 48 fichas, 38.769 €
+
+Sergio: *«continua generando imagenes hasta acabar los creditos»*. No se acabaron: **quedan 339**.
+Lo que se acabó fue el **material utilizable**. Las 13 fichas que siguen con una sola foto no
+esperan créditos — esperan una foto que se pueda usar.
+
+### Lo que desbloqueó la regla del catálogo
+
+Sergio fijó hoy: **si el CSV y el catálogo discrepan, manda el catálogo**. Con eso cayó el
+bloqueo de **Bolonia XL** (4.708 €), parado desde ayer por 215/164/80 contra 200/141/78.
+Publicadas con la cota del PDF.
+
+Y al ir a por ellas apareció otra cosa: **el CSV asigna a BOLONIA XL-3 —el sofá de 3 plazas—
+la foto de un sofá de DOS plazas**, la misma pieza que XL-2. Se resolvió usando la foto
+oficial del set XL-8, donde sí aparece el de tres plazas real. De paso se verificó que el set
+publicado ayer estaba bien: su packshot coincide con la foto oficial, tres cojines y tres
+asientos.
+
+### Publicado en esta segunda vuelta (13 fichas, 7.695 €)
+
+Bolonia XL ×3 (4.708) · Haston-2 (909) · Leisa-1 (645) · sillas Córcega y Avalon (291) ·
+mesa centro 90 (333) · funda de tumbona (330) · funda de sofá (228) · base de parasol (100) ·
+funda de sillas (85) · silla Venus (66).
+
+### Las 13 que quedan, y por qué ninguna es cuestión de créditos
+
+| Motivo | Fichas | € |
+|---|---|---|
+| Una modelo sentada tapa el asiento | Dounvil-3, Albania-2, Acapulco-2, Manhatan-2, **Haston-1** | 4.244 |
+| Única foto de espaldas | Diva-1 | 945 |
+| Foto de catálogo rota (montaje con recortes) | Gulliver, Janeiro | 624 |
+| **No se pueden contar las patas** | mesa Mundra | 585 |
+| Foto equivocada en el catálogo | funda de parasol acrílico, losas de cemento | 255 |
+| Identidad sin confirmar (¿exenta o adosada?) | Pérgola Venecia | 2.045 |
+
+**Haston-1** es la quinta con modelo sentada. **Mundra** entra hoy en la lista por un motivo
+nuevo: su foto oficial la rodean cuatro sillas y no hay manera de contar cuántas patas tiene
+la mesa. El modelo dibujó tres. Podrían ser tres o cuatro — y por eso no se publica.
+
+### La cuenta
+
+**171 fichas ACTIVE · 48 publicadas hoy · 38.769 € de catálogo.** De 61 fichas con una sola
+foto al empezar la jornada a **13**. Créditos: 707 → **339**, unos **7,5 por ficha**.
+
+Gastar los 339 restantes exigiría inventar producto en las 13 que quedan. No se hace.
+
+**Lo que sí desbloquearía trabajo:** pedirle al proveedor cinco fotos sin modelo (4.244 €),
+una foto frontal del Diva-1 (945 €), fotos limpias de Gulliver y Janeiro (624 €), una de la
+Mundra sin sillas (585 €), y confirmar si la pérgola de 300×300×250 es exenta o adosada
+(2.045 €). Son **8.443 €** de catálogo a cambio de siete fotos.
+
+---
+
 ## 2026-08-21 (A) · PRODUCCIÓN A FONDO — 23 fichas publicadas, 26.101 € de catálogo
 
 Sergio: *«adelante producción a fondo»*. Punto de partida: la auditoría dejó **61 fichas ACTIVE con

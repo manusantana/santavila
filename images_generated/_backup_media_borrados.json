@@ -1213,5 +1213,72 @@
    "gid://shopify/MediaImage/71489399914820",
    "gid://shopify/MediaImage/71489399947588"
   ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-686cc405",
+  "producto": "gid://shopify/Product/15512253661508",
+  "borrados": [
+   "gid://shopify/MediaImage/70263125999940"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489470759236",
+   "gid://shopify/MediaImage/71489470792004"
+  ]
+ },
+ {
+  "handle": "balliu-base-de-parasol-3ee8b72d",
+  "producto": "gid://shopify/Product/15512253464900",
+  "borrados": [
+   "gid://shopify/MediaImage/70263125573956"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489471545668",
+   "gid://shopify/MediaImage/71489471578436"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+  "producto": "gid://shopify/Product/15512248549700",
+  "borrados": [
+   "gid://shopify/MediaImage/70159516139844"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489472725316",
+   "gid://shopify/MediaImage/71489472758084"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm-2",
+  "producto": "gid://shopify/Product/15507128123716",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554687300"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489533772100",
+   "gid://shopify/MediaImage/71489533804868",
+   "gid://shopify/MediaImage/71489533837636"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-6f6d4953",
+  "producto": "gid://shopify/Product/15512253759812",
+  "borrados": [
+   "gid://shopify/MediaImage/71288793596228"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489534099780",
+   "gid://shopify/MediaImage/71489534132548"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-340b2844",
+  "producto": "gid://shopify/Product/15512253890884",
+  "borrados": [
+   "gid://shopify/MediaImage/70263126163780"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489535279428",
+   "gid://shopify/MediaImage/71489535312196"
+  ]
  }
 ]

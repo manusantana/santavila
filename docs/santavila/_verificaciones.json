@@ -1846,5 +1846,125 @@
     "alt_len": 80
    }
   ]
+ },
+ "balliu-funda-protectora-exterior-686cc405": {
+  "fecha": "2026-08-21",
+  "carpeta": "funda_tumbona",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 117
+   },
+   {
+    "fichero": "02_ambiente_cantabrico.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 160
+   }
+  ]
+ },
+ "balliu-base-de-parasol-3ee8b72d": {
+  "fecha": "2026-08-21",
+  "carpeta": "base_parasol",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 105
+   },
+   {
+    "fichero": "02_ambiente_jardin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 134
+   }
+  ]
+ },
+ "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6": {
+  "fecha": "2026-08-21",
+  "carpeta": "venus_silla",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_cordoba.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-90-cm-altura-40-cm-2": {
+  "fecha": "2026-08-21",
+  "carpeta": "mesa90_blanca",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 99
+   },
+   {
+    "fichero": "02_ambiente_rioja.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 127
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 80
+   }
+  ]
+ },
+ "balliu-funda-protectora-exterior-6f6d4953": {
+  "fecha": "2026-08-21",
+  "carpeta": "funda_sofa",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 126
+   },
+   {
+    "fichero": "02_ambiente_galicia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   }
+  ]
+ },
+ "balliu-funda-protectora-exterior-340b2844": {
+  "fecha": "2026-08-21",
+  "carpeta": "funda_silla",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 180
+   }
+  ]
  }
 }

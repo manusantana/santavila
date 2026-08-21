@@ -312,13 +312,6 @@
     "alt_vacios": 1
    },
    {
-    "handle": "balliu-funda-protectora-exterior-686cc405",
-    "titulo": "Funda protectora para tumbona exterior",
-    "precio": 329.95,
-    "n": 1,
-    "alt_vacios": 1
-   },
-   {
     "handle": "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8",
     "titulo": "Tumbona exterior aluminio apilable · 68 cm · Marina",
     "precio": 323.95,
@@ -480,13 +473,6 @@
     "alt_vacios": 7
    },
    {
-    "handle": "balliu-base-de-parasol-3ee8b72d",
-    "titulo": "Base de hormigón para parasol",
-    "precio": 99.9,
-    "n": 1,
-    "alt_vacios": 1
-   },
-   {
     "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec",
     "titulo": "Silla exterior aluminio · tejido Balliu · Mila",
     "precio": 97.95,
@@ -499,13 +485,6 @@
     "precio": 84.95,
     "n": 11,
     "alt_vacios": 10
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-340b2844",
-    "titulo": "Funda protectora exterior",
-    "precio": 84.95,
-    "n": 1,
-    "alt_vacios": 1
    },
    {
     "handle": "balliu-silla-exterior-resina-estilo-minimalista-484cbea0",
@@ -670,14 +649,6 @@
     "min_px": 1024
    },
    {
-    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm",
-    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 215×104 cm",
-    "precio": 2109.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
     "handle": "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab",
     "titulo": "Mesa extensible exterior aluminio · HPL · Java",
     "precio": 2019.0,
@@ -700,14 +671,6 @@
     "n": 9,
     "cuantas": 9,
     "min_px": 600
-   },
-   {
-    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
-    "precio": 1580.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1",
@@ -766,14 +729,6 @@
     "min_px": 1024
    },
    {
-    "handle": "sillon-exterior-estilo-elegante-80104-cm",
-    "titulo": "Sillón exterior · estilo elegante | 80×104 cm",
-    "precio": 1019.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
     "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268",
     "titulo": "Sofá exterior aluminio · estilo elegante | 62 cm",
     "precio": 995.0,
@@ -804,14 +759,6 @@
     "n": 30,
     "cuantas": 30,
     "min_px": 614
-   },
-   {
-    "handle": "sofa-terraza-2-plazas-estilo-moderno-128115-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo moderno | 128×115 cm",
-    "precio": 909.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "sofa-terraza-2-plazas-estilo-elegante-13170-cm",
@@ -852,14 +799,6 @@
     "n": 2,
     "cuantas": 1,
     "min_px": 1565
-   },
-   {
-    "handle": "sillon-exterior-estilo-versatil-7685-cm",
-    "titulo": "Sillón exterior · estilo versátil | 76×85 cm",
-    "precio": 645.0,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
    },
    {
     "handle": "balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9",
@@ -1006,22 +945,6 @@
     "min_px": 1024
    },
    {
-    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm-2",
-    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm 2",
-    "precio": 332.95,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1080
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-686cc405",
-    "titulo": "Funda protectora para tumbona exterior",
-    "precio": 329.95,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 614
-   },
-   {
     "handle": "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8",
     "titulo": "Tumbona exterior aluminio apilable · 68 cm · Marina",
     "precio": 323.95,
@@ -1083,14 +1006,6 @@
     "precio": 227.95,
     "n": 11,
     "cuantas": 11,
-    "min_px": 614
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-6f6d4953",
-    "titulo": "Funda protectora para sofá exterior",
-    "precio": 227.95,
-    "n": 1,
-    "cuantas": 1,
     "min_px": 614
    },
    {
@@ -1214,27 +1129,11 @@
     "min_px": 614
    },
    {
-    "handle": "sillon-exterior-estilo-versatil-58100-cm",
-    "titulo": "Sillón exterior · estilo versátil | 58×100 cm",
-    "precio": 114.95,
-    "n": 1,
-    "cuantas": 1,
-    "min_px": 1024
-   },
-   {
     "handle": "balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65",
     "titulo": "Silla exterior resina · estilo clásico · Bimba",
     "precio": 99.9,
     "n": 8,
     "cuantas": 8,
-    "min_px": 614
-   },
-   {
-    "handle": "balliu-base-de-parasol-3ee8b72d",
-    "titulo": "Base de hormigón para parasol",
-    "precio": 99.9,
-    "n": 1,
-    "cuantas": 1,
     "min_px": 614
    },
    {
@@ -1251,14 +1150,6 @@
     "precio": 84.95,
     "n": 11,
     "cuantas": 11,
-    "min_px": 614
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-340b2844",
-    "titulo": "Funda protectora exterior",
-    "precio": 84.95,
-    "n": 1,
-    "cuantas": 1,
     "min_px": 614
    },
    {
@@ -1283,14 +1174,6 @@
     "precio": 67.95,
     "n": 7,
     "cuantas": 7,
-    "min_px": 614
-   },
-   {
-    "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
-    "titulo": "Silla exterior resina · Venus",
-    "precio": 65.95,
-    "n": 1,
-    "cuantas": 1,
     "min_px": 614
    },
    {
@@ -1336,33 +1219,15 @@
   ],
   "una_sola_imagen": [
    {
-    "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm",
-    "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 215×104 cm",
-    "precio": 2109.0,
-    "n": 1
-   },
-   {
     "handle": "pergola-aluminio-para-jardin-300300250-cm",
     "titulo": "Pérgola aluminio para jardín · 300×300×250 cm",
     "precio": 2045.0,
     "n": 1
    },
    {
-    "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 164×104 cm",
-    "precio": 1580.0,
-    "n": 1
-   },
-   {
     "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm",
     "titulo": "Sofá terraza 3 plazas · estilo contemporáneo | 190×85 cm",
     "precio": 1175.0,
-    "n": 1
-   },
-   {
-    "handle": "sillon-exterior-estilo-elegante-80104-cm",
-    "titulo": "Sillón exterior · estilo elegante | 80×104 cm",
-    "precio": 1019.0,
     "n": 1
    },
    {
@@ -1378,12 +1243,6 @@
     "n": 1
    },
    {
-    "handle": "sofa-terraza-2-plazas-estilo-moderno-128115-cm",
-    "titulo": "Sofá terraza 2 plazas · estilo moderno | 128×115 cm",
-    "precio": 909.0,
-    "n": 1
-   },
-   {
     "handle": "sofa-terraza-2-plazas-estilo-elegante-13170-cm",
     "titulo": "Sofá terraza 2 plazas · estilo elegante | 131×70 cm",
     "precio": 845.0,
@@ -1393,12 +1252,6 @@
     "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm",
     "titulo": "Sofá terraza 2 plazas · estilo contemporáneo | 133×70 cm",
     "precio": 715.0,
-    "n": 1
-   },
-   {
-    "handle": "sillon-exterior-estilo-versatil-7685-cm",
-    "titulo": "Sillón exterior · estilo versátil | 76×85 cm",
-    "precio": 645.0,
     "n": 1
    },
    {
@@ -1420,24 +1273,6 @@
     "n": 1
    },
    {
-    "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm-2",
-    "titulo": "Mesa de centro exterior 90 cm · altura 40 cm 2",
-    "precio": 332.95,
-    "n": 1
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-686cc405",
-    "titulo": "Funda protectora para tumbona exterior",
-    "precio": 329.95,
-    "n": 1
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-6f6d4953",
-    "titulo": "Funda protectora para sofá exterior",
-    "precio": 227.95,
-    "n": 1
-   },
-   {
     "handle": "set-losas-cemento-para-base-de-parasol",
     "titulo": "Set losas cemento para base de parasol",
     "precio": 217.95,
@@ -1453,36 +1288,6 @@
     "handle": "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a",
     "titulo": "Taburete exterior aluminio · tejido Balliu · Etna",
     "precio": 186.95,
-    "n": 1
-   },
-   {
-    "handle": "silla-exterior-estilo-contemporaneo",
-    "titulo": "Silla exterior · estilo contemporáneo",
-    "precio": 175.95,
-    "n": 1
-   },
-   {
-    "handle": "sillon-exterior-estilo-versatil-58100-cm",
-    "titulo": "Sillón exterior · estilo versátil | 58×100 cm",
-    "precio": 114.95,
-    "n": 1
-   },
-   {
-    "handle": "balliu-base-de-parasol-3ee8b72d",
-    "titulo": "Base de hormigón para parasol",
-    "precio": 99.9,
-    "n": 1
-   },
-   {
-    "handle": "balliu-funda-protectora-exterior-340b2844",
-    "titulo": "Funda protectora exterior",
-    "precio": 84.95,
-    "n": 1
-   },
-   {
-    "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
-    "titulo": "Silla exterior resina · Venus",
-    "precio": 65.95,
     "n": 1
    },
    {

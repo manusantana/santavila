@@ -101,6 +101,45 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # aparece el sofa de tres plazas real (3 cojines de respaldo y 3 de asiento).
 # TANDA 2026-08-21 K · piezas sueltas y sillas de comedor (4 fichas, 1.845 EUR)
 # HASTON-1 (559) NO entra: su unica foto la ocupa una modelo sentada en el sillon.
+# TANDA 2026-08-21 L · accesorios Balliu (3 fichas, 496 EUR)
+# NINGUNO tiene cotas en el catalogo -> ninguno lleva imagen de medidas. Solo packshot y
+# ambiente: la regla es que una cota no se deduce nunca de la foto.
+# MESA MUNDRA (585) a cuarentena: su foto oficial la rodean cuatro sillas y NO se puede
+# contar cuantas patas tiene. No se publica un mueble cuya estructura no se puede verificar.
+# TANDA 2026-08-21 M · mesa 90 y las dos fundas que quedaban (3 fichas, 646 EUR)
+# La funda de parasol acrilico (37) NO entra: el catalogo le asigna la foto de una funda de
+# TUMBONA. Foto equivocada, no hay producto que anclar.
+GALERIAS_FUNDAS = {
+    "mesa90_blanca": ("mesa-de-centro-exterior-90-cm-altura-40-cm-2", {
+        "01_packshot.jpg": "Mesa de centro de exterior de aluminio blanco con tablero de lamas, 90x50x40 cm, sobre fondo neutro",
+        "02_ambiente_rioja.jpg": "Mesa de centro blanca sola en una terraza de piedra arenisca sobre los vinedos de La Rioja, con la Sierra de Cantabria al fondo",
+        "05_medidas.jpg": "Medidas de la mesa de centro: 90 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "funda_sofa": ("balliu-funda-protectora-exterior-6f6d4953", {
+        "01_packshot.jpg": "Funda protectora de exterior gris puesta sobre un sillon, con su faldon ajustado y la lengueta de sujecion, sobre fondo neutro",
+        "02_ambiente_galicia.jpg": "Sillon cubierto con su funda protectora gris en una terraza de granito gallega en una manana de lluvia, con el tojo en flor y las gotas perlando la tela",
+    }),
+    "funda_silla": ("balliu-funda-protectora-exterior-340b2844", {
+        "01_packshot.jpg": "Funda protectora de exterior gris oscuro puesta sobre una pila de sillas, con sus costuras y su caida, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Sillas apiladas y cubiertas con su funda protectora bajo los arcos encalados del porche de un cortijo sevillano al final de la temporada, con el olivo y el rastrojo dorado al fondo",
+    }),
+}
+
+GALERIAS_ACCESORIOS = {
+    "funda_tumbona": ("balliu-funda-protectora-exterior-686cc405", {
+        "01_packshot.jpg": "Funda protectora de exterior gris puesta sobre una tumbona, con sus costuras y el faldon ajustado, sobre fondo neutro",
+        "02_ambiente_cantabrico.jpg": "Tumbona cubierta con su funda protectora gris en una terraza de granito del Cantabrico en una manana de otono, con las hortensias pasadas y el mar gris al fondo",
+    }),
+    "base_parasol": ("balliu-base-de-parasol-3ee8b72d", {
+        "01_packshot.jpg": "Base de parasol de hormigon gris de forma redonda con tubo de acero y pomo de apriete, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Base de parasol de hormigon sola sobre la grava de un jardin, junto a un seto de boj y un muro de piedra, con su sombra marcada al sol",
+    }),
+    "venus_silla": ("balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6", {
+        "01_packshot.jpg": "Silla de exterior Venus sin brazos, de polipropileno color tortola, con respaldo de aros entrelazados y patas conicas, sobre fondo neutro",
+        "02_ambiente_cordoba.jpg": "Silla Venus color tortola sola en un patio cordobes, con geranios en macetas de barro colgadas del muro encalado, reja de forja y suelo de barro",
+    }),
+}
+
 GALERIAS_SUELTAS_SILLAS = {
     "haston2_sofa": ("sofa-terraza-2-plazas-estilo-moderno-128115-cm", {
         "01_packshot.jpg": "Sofa de terraza Haston de 2 plazas con respaldo alto, estructura de aluminio tortola y cojines beige, 128x62x115 cm, sobre fondo neutro",
@@ -894,7 +933,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_SUELTAS_SILLAS
+    ACTIVA = GALERIAS_FUNDAS
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
