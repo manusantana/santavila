@@ -983,5 +983,53 @@
    "gid://shopify/MediaImage/71487443042628",
    "gid://shopify/MediaImage/71487443075396"
   ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-hpl-135-cm-altura-40-cm",
+  "producto": "gid://shopify/Product/15507127566660",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554097476"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487544951108",
+   "gid://shopify/MediaImage/71487544983876",
+   "gid://shopify/MediaImage/71487545016644"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-120-cm-altura-41-cm",
+  "producto": "gid://shopify/Product/15507126812996",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551770948"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487546196292",
+   "gid://shopify/MediaImage/71487546229060",
+   "gid://shopify/MediaImage/71487546261828"
+  ]
+ },
+ {
+  "handle": "banco-de-exterior-108-cm",
+  "producto": "gid://shopify/Product/15507129729348",
+  "borrados": [
+   "gid://shopify/MediaImage/70103558095172"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487547539780",
+   "gid://shopify/MediaImage/71487547572548",
+   "gid://shopify/MediaImage/71487547605316"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-504540-cm",
+  "producto": "gid://shopify/Product/15507126616388",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551148356"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71487549112644",
+   "gid://shopify/MediaImage/71487549145412",
+   "gid://shopify/MediaImage/71487549178180"
+  ]
  }
 ]

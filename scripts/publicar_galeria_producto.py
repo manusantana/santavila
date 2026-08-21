@@ -79,6 +79,33 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # 3 plazas y mesa de centro. Los DOS REPOSAPIES que salen en la foto del proveedor NO
 # entran en el lote: se retiraron de la imagen.
 # El set no tiene cotas en el CSV -> no lleva imagen de medidas (nunca se deduce de la foto).
+# TANDA 2026-08-21 G · mesas de centro, banco y reposapies (4 fichas, 1.855 EUR)
+# Cotas confirmadas por doble fuente (CSV maestro Hevea == catalogo PDF).
+# Cada pieza va al habitat de SU familia: la mesa bicolor con Diva (Ibiza), la Saipros-120
+# con Odin (Segovia) y el reposapies Cloe con Cloe (Altea).
+GALERIAS_MESAS_BANCOS = {
+    "mesa135_bicolor": ("mesa-de-centro-exterior-hpl-135-cm-altura-40-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior bicolor con estructura de aluminio blanco y tablero de lamas antracita, 135x60x40 cm, sobre fondo neutro",
+        "02_ambiente_ibiza.jpg": "Mesa de centro bicolor sola en la terraza de una casa payesa de Ibiza, sobre grava clara, con muros de cal y una sabina",
+        "05_medidas.jpg": "Medidas de la mesa de centro bicolor: 135 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "saipros120_mesa": ("mesa-de-centro-exterior-120-cm-altura-41-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Saipros de aluminio antracita con tablero de lamas, 120x60x41 cm, sobre fondo neutro",
+        "02_ambiente_segovia.jpg": "Mesa de centro Saipros antracita sola en una terraza de sillar granitico de Segovia, con lavanda en un pilon de piedra y la sierra al fondo",
+        "05_medidas.jpg": "Medidas de la mesa de centro Saipros: 120 cm de ancho y 41 de alto. Se vende solo la mesa",
+    }),
+    "sevilla_banco": ("banco-de-exterior-108-cm", {
+        "01_packshot.jpg": "Banco de exterior Sevilla de aluminio blanco con respaldo de tres lamas horizontales y asiento gris, 108x42x88 cm, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Banco Sevilla blanco en un jardin de grava con seto de boj, un olivo en tinaja de barro y un muro de piedra",
+        "05_medidas.jpg": "Medidas del banco Sevilla: 108 cm de ancho y 88 de alto. Se vende solo el banco",
+    }),
+    "cloe5_repo": ("reposapies-exterior-504540-cm", {
+        "01_packshot.jpg": "Reposapies de exterior Cloe con estructura de tubo redondo blanco y cojin blanco crudo, 50x45x40 cm, sobre fondo neutro",
+        "02_ambiente_altea.jpg": "Reposapies Cloe solo en una terraza encalada de Altea, junto a una calle empedrada que baja al mar, con buganvilla y la cupula de teja azul",
+        "05_medidas.jpg": "Medidas del reposapies Cloe: 50 cm de ancho y 40 de alto. Se vende solo el reposapies",
+    }),
+}
+
 GALERIAS_BELLAGIO_CUPRA = {
     "bellagio8_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-3", {
         "01_packshot.jpg": "Conjunto de jardin Bellagio en aluminio antracita con sofa de 3 plazas, dos sillones y mesa de centro, con cojines azul claro, sobre fondo neutro",
@@ -760,7 +787,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BELLAGIO_CUPRA
+    ACTIVA = GALERIAS_MESAS_BANCOS
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

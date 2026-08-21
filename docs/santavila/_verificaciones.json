@@ -1359,5 +1359,105 @@
     "alt_len": 87
    }
   ]
+ },
+ "mesa-de-centro-exterior-hpl-135-cm-altura-40-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "mesa135_bicolor",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "02_ambiente_ibiza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-120-cm-altura-41-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "saipros120_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 111
+   },
+   {
+    "fichero": "02_ambiente_segovia.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "banco-de-exterior-108-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "sevilla_banco",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 133
+   },
+   {
+    "fichero": "02_ambiente_jardin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 107
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 79
+   }
+  ]
+ },
+ "reposapies-exterior-504540-cm": {
+  "fecha": "2026-08-21",
+  "carpeta": "cloe5_repo",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "02_ambiente_altea.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 85
+   }
+  ]
  }
 }
