@@ -1280,5 +1280,53 @@
    "gid://shopify/MediaImage/71489535279428",
    "gid://shopify/MediaImage/71489535312196"
   ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507126157636",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550361924",
+   "gid://shopify/MediaImage/70108303884612"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489630929220",
+   "gid://shopify/MediaImage/71489630961988"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5",
+  "producto": "gid://shopify/Product/15507127337284",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553343812",
+   "gid://shopify/MediaImage/70108304048452"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489631748420",
+   "gid://shopify/MediaImage/71489631781188"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507126124868",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550329156",
+   "gid://shopify/MediaImage/70108303851844"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489632895300",
+   "gid://shopify/MediaImage/71489632928068"
+  ]
+ },
+ {
+  "handle": "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125698884",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549608260",
+   "gid://shopify/MediaImage/70108303688004"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71489633648964",
+   "gid://shopify/MediaImage/71489633681732"
+  ]
  }
 ]

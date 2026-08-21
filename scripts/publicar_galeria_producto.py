@@ -109,6 +109,29 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # TANDA 2026-08-21 M · mesa 90 y las dos fundas que quedaban (3 fichas, 646 EUR)
 # La funda de parasol acrilico (37) NO entra: el catalogo le asigna la foto de una funda de
 # TUMBONA. Foto equivocada, no hay producto que anclar.
+# TANDA 2026-08-21 N · SETS de alto valor que solo tenian 2 imagenes (4 fichas, 15.885 EUR)
+# Primer ataque al frente de la BAJA RESOLUCION: fichas con galeria pero con las fotos
+# viejas del proveedor por debajo de 2.000 px. Estos cuatro sets son los de mas valor.
+# Los sets no traen cotas en el CSV -> ninguno lleva imagen de medidas.
+GALERIAS_SETS_HD = {
+    "cupra8_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Cupra en aluminio blanco con sofa de 3 plazas, dos sillones y mesa de centro, con cojines verde salvia, sobre fondo neutro",
+        "02_ambiente_toledo.jpg": "Conjunto Cupra blanco con cojines verde salvia en la terraza de un cigarral toledano, con muro de mamposteria, olivos viejos y el Tajo y la ciudad al fondo",
+    }),
+    "bolxl7_set": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5", {
+        "01_packshot.jpg": "Conjunto de jardin Bolonia XL en aluminio azul marino con sofa de 2 plazas, dos sillones y mesa de centro, cojines azul lavanda, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Conjunto Bolonia XL en una terraza de Cadaques, sobre laja de pizarra, con postigos de lamas azules, buganvilla, olivos y la bahia con los llauts",
+    }),
+    "cupra7_set": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Cupra en aluminio blanco con sofa de 2 plazas, dos sillones y mesa de centro, cojines gris claro, sobre fondo neutro",
+        "02_ambiente_toledo.jpg": "Conjunto Cupra blanco en la terraza de un cigarral toledano, con muro de mamposteria, olivos viejos y el Tajo y la ciudad al fondo",
+    }),
+    "damasco8_set": ("set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Conjunto de jardin Damasco en aluminio tortola con brazos de cuerda beige, sofa de 3 plazas, dos sillones y mesa de centro, cojines gris claro, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Conjunto Damasco en la terraza de caliza de un cortijo de la campina sevillana, bajo arcos encalados, con un olivo viejo y los trigales al fondo",
+    }),
+}
+
 GALERIAS_FUNDAS = {
     "mesa90_blanca": ("mesa-de-centro-exterior-90-cm-altura-40-cm-2", {
         "01_packshot.jpg": "Mesa de centro de exterior de aluminio blanco con tablero de lamas, 90x50x40 cm, sobre fondo neutro",
@@ -933,7 +956,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_FUNDAS
+    ACTIVA = GALERIAS_SETS_HD
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

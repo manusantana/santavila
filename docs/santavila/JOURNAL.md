@@ -13,6 +13,35 @@
 
 ---
 
+## 2026-08-21 (C) · SE ABRE EL FRENTE DE LA BAJA RESOLUCIÓN — 52 fichas, 54.654 €
+
+Con las 13 de una sola foto bloqueadas por falta de material, se pasó al **frente grande**:
+las fichas que tienen galería pero con las fotos viejas del proveedor **por debajo de
+2.000 px**. Eran 96 al empezar la jornada (85.949 €).
+
+Los primeros cuatro son los de más valor de todo el catálogo pendiente: **sets de 3.500 a
+4.345 € que solo tenían DOS imágenes**, una de ellas a 977–1.333 px.
+
+| Set | € | Hábitat |
+|---|---|---|
+| Cupra-8 (3 pl. + 2 sillones + mesa) | 4.345 | C15 cigarral toledano |
+| Bolonia XL-7 (2 pl. + 2 sillones + mesa) | 4.175 | C8 Cadaqués |
+| Cupra-7 (2 pl. + 2 sillones + mesa) | 3.825 | C15 cigarral toledano |
+| Damasco-8 (3 pl. + 2 sillones + mesa) | 3.540 | B2 cortijo sevillano |
+
+Sus fotos oficiales son las mejores del catálogo: **5.000–6.000 px y limpias**. Ninguno lleva
+imagen de medidas: los sets no traen cotas en el CSV.
+
+El filtro de contenido bloqueó dos generaciones por mencionar a la modelo de la foto de
+referencia; se resolvió redactando el prompt sin nombrarla («remove everything else»).
+
+**Total de la jornada: 52 fichas, 54.654 € de catálogo.** Créditos 707 → ~290.
+
+**Siguiente en este frente:** Loira-30 (4.225), Adel-30 (3.819), Loira-8 (3.795) y el banco
+Yulien (2.899) — los cuatro con foto oficial limpia y en alta resolución, unos 48 créditos.
+
+---
+
 ## 2026-08-21 (B) · HASTA DONDE LLEGA EL MATERIAL — 48 fichas, 38.769 €
 
 Sergio: *«continua generando imagenes hasta acabar los creditos»*. No se acabaron: **quedan 339**.

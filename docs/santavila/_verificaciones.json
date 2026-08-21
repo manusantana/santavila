@@ -1966,5 +1966,81 @@
     "alt_len": 180
    }
   ]
+ },
+ "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa-2": {
+  "fecha": "2026-08-21",
+  "carpeta": "cupra8_set",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_toledo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 155
+   }
+  ]
+ },
+ "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-5": {
+  "fecha": "2026-08-21",
+  "carpeta": "bolxl7_set",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   },
+   {
+    "fichero": "02_ambiente_cadaques.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   }
+  ]
+ },
+ "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa-2": {
+  "fecha": "2026-08-21",
+  "carpeta": "cupra7_set",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   },
+   {
+    "fichero": "02_ambiente_toledo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   }
+  ]
+ },
+ "set-jardin-3-plazas-sofisticado-sofa-3-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-21",
+  "carpeta": "damasco8_set",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 162
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   }
+  ]
  }
 }
