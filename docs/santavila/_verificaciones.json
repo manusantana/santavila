@@ -2761,5 +2761,80 @@
     "alt_len": 90
    }
   ]
+ },
+ "sillon-exterior-estilo-elegante-6590-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "cupra1_sillon",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 133
+   },
+   {
+    "fichero": "02_ambiente_cigarral.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 170
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 78
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "diva120_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 156
+   },
+   {
+    "fichero": "02_ambiente_ibiza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 153
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "mesa-comedor-exterior-hpl-15090-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "mundra150_mesa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 151
+   },
+   {
+    "fichero": "02_ambiente_salamanca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 163
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 90
+   }
+  ]
  }
 }

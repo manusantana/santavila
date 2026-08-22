@@ -38,6 +38,11 @@ COMIDA = ['queso','pan de','aceite de oliva','vino','cerveza','limonada','sandia
  'gazpacho','berberecho','picatoste','melocotón','té helado','te helado','agua con gas','almendra',
  'albariño','copa de','jarra de','horchata','vermut','tinto','aceitun','higo','farton','botijo',
  'churro','torrija','merienda','desayuno','refresco','plato de','tabla de queso']
+# Recipientes VACIOS: son ceramica/atrezzo permitido, no consumible. Sin esta lista, "jarra de
+# gres con romero" saltaba como comida (22-08-2026). Es la misma trampa que 'buganVILLA'.
+NO_ES_COMIDA = ['jarra de gres','jarra de barro','jarra de ceramica','jarra de cerámica',
+ 'bucaro','búcaro','tinaja','maceta','cuenco vacio','cuenco vacío','copa de los arboles',
+ 'copa de los árboles','plato de ducha']
 PALABRA = [r'\bvilla\b', r'\bvillas\b', r'\bchalet\b', r'\bresort\b', r'\btropical\b', r'\bbungalow\b']
 MACRO = ['macro del tejido','macro de tejido','macro textil']
 
@@ -93,7 +98,7 @@ def main():
         for i, m in enumerate(f["media"]):
             a = m["alt"].lower()
             if not a.strip(): n_vac += 1; continue
-            if any(k in a for k in COMIDA):
+            if any(k in a for k in COMIDA) and not any(k in a for k in NO_ES_COMIDA):
                 n_com += 1; print(f"  COMIDA   {f['price']:7.0f} EUR pos{i} {f['handle'][:44]}\n           {m['alt'][:104]}")
             if any(re.search(w, a) for w in PALABRA):
                 n_res += 1; print(f"  LUJO     {f['price']:7.0f} EUR pos{i} {f['handle'][:44]}\n           {m['alt'][:104]}")

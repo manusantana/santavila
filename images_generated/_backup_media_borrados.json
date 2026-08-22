@@ -1699,5 +1699,44 @@
    "gid://shopify/MediaImage/71494089867588",
    "gid://shopify/MediaImage/71494089900356"
   ]
+ },
+ {
+  "handle": "sillon-exterior-estilo-elegante-6590-cm",
+  "producto": "gid://shopify/Product/15507125993796",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550165316",
+   "gid://shopify/MediaImage/70108303786308"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494281331012",
+   "gid://shopify/MediaImage/71494281363780",
+   "gid://shopify/MediaImage/71494281396548"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-hpl-120-cm-altura-40-cm",
+  "producto": "gid://shopify/Product/15507127533892",
+  "borrados": [
+   "gid://shopify/MediaImage/70103553900868",
+   "gid://shopify/MediaImage/70108304113988"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494281888068",
+   "gid://shopify/MediaImage/71494281920836",
+   "gid://shopify/MediaImage/71494281953604"
+  ]
+ },
+ {
+  "handle": "mesa-comedor-exterior-hpl-15090-cm",
+  "producto": "gid://shopify/Product/15507129270596",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556751684",
+   "gid://shopify/MediaImage/70108304998724"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494282510660",
+   "gid://shopify/MediaImage/71494282543428",
+   "gid://shopify/MediaImage/71494282576196"
+  ]
  }
 ]

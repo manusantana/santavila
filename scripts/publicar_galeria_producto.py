@@ -194,6 +194,33 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # cotas distintas (43/39 es la altura del ASIENTO; 82 la total). Se publica 82,
 # que es la comparable y la que coincide con el titulo.
 # ############################################################################
+# ############################################################################
+# TANDA 2026-08-22 (K) — el sillon y las dos mesas. Dos piezas fantasma fuera:
+#   · MUNDRA 150: su foto oficial (5494x4300, en la playa) sale con SEIS SILLAS
+#     que no se venden con la mesa -> borradas.
+#   · CUPRA-1: el packshot devolvio la estructura TORTOLA y parecia un fallo.
+#     La metrica decia L=209 (oficial) vs 151 (generado)... pero mi caja habia
+#     caido en el SUELO, no en el brazo. Ampliada la foto oficial, la estructura
+#     ES tortola. El generado era fiel; el alt dice "tortola", no "blanco".
+# ############################################################################
+GALERIAS_PIEZAS_K = {
+    "cupra1_sillon": ("sillon-exterior-estilo-elegante-6590-cm", {
+        "01_packshot.jpg": "Sillon de exterior Cupra con estructura de aluminio tortola, brazos tapizados y cojines verde salvia, 65x75x90 cm, sobre fondo neutro",
+        "02_ambiente_cigarral.jpg": "Sillon Cupra en la terraza de un cigarral toledano, junto a un olivo viejo y el muro de mamposteria, con el Tajo y los viñedos al fondo y una manta de lino sobre el brazo",
+        "03_medidas.jpg": "Medidas del sillon Cupra: 65 cm de ancho y 90 de alto. Se vende solo el sillon",
+    }),
+    "diva120_mesa": ("mesa-de-centro-exterior-hpl-120-cm-altura-40-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior bicolor de 120 cm, con patas de aluminio blanco, faldon de lamas antracita y tablero HPL blanco, 120x60x40 cm, sobre fondo neutro",
+        "02_ambiente_ibiza.jpg": "Mesa de centro bicolor sola en el porche de una casa payesa de Ibiza, con muro encalado, vigas de sabina, una higuera y un libro abierto sobre el tablero",
+        "03_medidas.jpg": "Medidas de la mesa de centro bicolor: 120 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "mundra150_mesa": ("mesa-comedor-exterior-hpl-15090-cm", {
+        "01_packshot.jpg": "Mesa de comedor de exterior Mundra de 150x90 cm, con tablero HPL claro y cuatro patas cilindricas de aluminio blanco, 76 cm de alto, sobre fondo neutro",
+        "02_ambiente_salamanca.jpg": "Mesa Mundra de 150 cm sola en una azotea de Salamanca, sobre piedra dorada de Villamayor y con las torres de la catedral al fondo, con una jarra de gres con romero",
+        "03_medidas.jpg": "Medidas de la mesa Mundra: 150 cm de ancho y 76 de alto. Se vende solo la mesa, sin sillas",
+    }),
+}
+
 GALERIAS_BAJA_RES_J = {
     "odin7_set": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2", {
         "01_packshot.jpg": "Conjunto de jardin Odin-7 de aluminio blanco con sofa de 2 plazas, dos sillones y mesa de centro, con cojines gris, sobre fondo neutro",
@@ -1221,7 +1248,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_BAJA_RES_J
+    ACTIVA = GALERIAS_PIEZAS_K
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

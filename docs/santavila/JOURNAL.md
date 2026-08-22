@@ -13,6 +13,46 @@
 
 ---
 
+## 2026-08-22 (K) — el sillon y las dos mesas · 2.403 EUR · se acaban los creditos
+
+Tres fichas mas, y con ellas se agota el saldo (7 creditos).
+
+| Ficha | € | Mundo |
+|---|---|---|
+| Cupra-1 sillon | 1.019 | **C15 cigarral toledano** (mundo de Cupra-8, mismo blanco+salvia... ver abajo) |
+| Mesa centro bicolor 120 | 715 | **B6 Casa payesa de Ibiza** |
+| Mesa Mundra 150 | 669 | **C6 Azotea de Salamanca** (mundo de la Mundra redonda) |
+
+**Pieza fantasma fuera:** la foto oficial de la Mundra 150 (5.494x4.300, en la playa) sale con
+**seis sillas** que no se venden con la mesa. Borradas. El alt lo dice: *"se vende solo la mesa,
+sin sillas"*.
+
+### La caja de muestreo vuelve a mentir (cuarta vez en el dia)
+El packshot de CUPRA-1 devolvio la estructura **tortola** y parecia un fallo de acabado. La
+metrica lo confirmaba: **L=209 en la oficial frente a L=151 en la generada**. Pero al ampliar la
+foto oficial, **la estructura ES tortola**: mi caja habia caido en el SUELO claro, no en el
+brazo. El generado era fiel. Corregido el alt para que diga "tortola" y no "blanco".
+
+Cuatro veces hoy: cajas fuera del mueble (Loira-8), filtro por subcadena (buganVILLA), miniatura
+(Cupra-7 "con dos mesas") y ahora otra vez la caja. **Siempre el mismo antidoto: mirar en grande.**
+
+### Y el propio auditor cayo en su trampa
+Tras publicar, `auditar_reglas_galeria.py` marco la Mundra como COMIDA por *"una **jarra de**
+gres con romero"* — que es ceramica con una planta, atrezzo permitido. Se ha añadido al script
+una lista `NO_ES_COMIDA` (jarra de gres/barro, bucaro, tinaja, maceta...) y se reescribio el alt
+a "bucaro de gres". **Un filtro de reglas necesita su propia lista de excepciones, o genera el
+mismo ruido que pretende cazar.**
+
+### Cierre del dia
+- **106 fichas con galeria completa** (>=3 imagenes, todas >=2.000 px).
+- **Pendientes: 14 fichas, 2.764 EUR** — todas por debajo de 570 EUR. Se empezo el dia con
+  **25 fichas y 15.475 EUR**.
+- **0 violaciones de regla** en las imagenes publicadas.
+- Alt vacio: 356 imagenes en 66 fichas — sigue pendiente (SEO del compañero).
+- **Creditos: 7.** Hasta aqui llega la produccion.
+
+---
+
 ## 2026-08-22 (J) — CUATRO MAS DESDE 1536x1024 · 6.603 EUR
 
 Con la formula del catalogo en la mano y la tecnica de anclaje ya probada, cuatro fichas mas

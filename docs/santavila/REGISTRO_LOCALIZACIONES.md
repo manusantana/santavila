@@ -86,6 +86,10 @@
 | **`sofa-terraza-3-plazas-...-19882-cm`** (Bellagio-3) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Cabo de Gata** — cal, chumberas y agaves, mar árido (mundo del set Bellagio-8) | — | manta de lino |
 | **`sofa-terraza-2-plazas-...-15082-cm`** (Bellagio-2) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Cabo de Gata** — otro rincón del mismo muro encalado | — | manta de lino |
 
+| **`sillon-exterior-estilo-elegante-6590-cm`** (Cupra-1) | **tórtola** + verde salvia / **cálido-vegetal** | Cálido/piedra | **C15 Cigarral toledano** — olivo viejo, mampostería, el Tajo y los viñedos | — | manta de lino |
+| **`mesa-de-centro-exterior-hpl-120-cm...`** (mesa bicolor 120) | blanco + lamas antracita + HPL blanco / **blanco** | Blanco/cal | **B6 Casa payesa de Ibiza** — cal, vigas de sabina, higuera, piedra seca | — | libro |
+| **`mesa-comedor-exterior-hpl-15090-cm`** (Mundra 150) | blanco + HPL claro / **blanco** | Blanco/piedra dorada | **C6 Azotea de Salamanca** — piedra de Villamayor, las torres de la catedral (mundo de la Mundra redonda) | — | búcaro de gres con romero |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
