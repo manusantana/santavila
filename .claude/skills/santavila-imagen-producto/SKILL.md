@@ -635,6 +635,19 @@ imprime; el CSV es un volcado que arrastra errores. Cuando las dos hablen, gana 
 Ojo: el **título de Shopify** puede llevar la cota vieja del CSV. Eso es SEO (trabajo del
 compañero) y se anota, no se toca; pero la cota que se DIBUJA sale del catálogo.
 
+### La letra pequeña: solo manda si las dos fuentes miden LA MISMA cota *(22-08-2026)*
+
+En **BELLAGIO** el catálogo da `43/39` y el CSV `82`. Parecía el caso de siempre… pero **no miden
+lo mismo**: 43/39 es la altura del **ASIENTO** (es un lounge bajo) y 82 la **total**. Un sofá con
+respaldo de 43 cm de alto no existe — LEY 0: *si no soy capaz de creerlo, no lo creo*.
+
+**Cómo distinguirlo en 5 segundos:** mirar **ancho y fondo**.
+- Coinciden en las dos fuentes → estás en la pieza correcta y lo que baila es *otra magnitud*. Se
+  publica la comparable (la que cuadra con el título), no "la del catálogo" a ciegas.
+- Discrepa el **ancho** → ahí sí es discrepancia de verdad y **manda el catálogo**.
+
+*(Bolonia XL y Haston son discrepancia real: 215→200, 164→141, 80→78, 68→60. Bellagio no lo era.)*
+
 
 ## La cota se dibuja donde diga el detector, y el detector se verifica (21-08-2026)
 
@@ -659,6 +672,102 @@ debajo en cualquiera de las dos. Eso es `scripts/bbox_producto.py`, con margen d
 **Regla de trabajo:** ejecutar `bbox_producto.py --hoja /tmp/x.jpg`, **mirar la hoja** y solo entonces pasar
 el bbox al overlay. Un detector que no se ha mirado no ha detectado nada.
 
+## LO QUE NO SE HA MIRADO NO HA MEDIDO NADA *(cuatro falsos positivos en un día, 22-08-2026)*
+
+La misma ley, en cuatro disfraces distintos. Los cuatro estuvieron a punto de provocar un rechazo
+—o un borrado— equivocado:
+
+| Disfraz | Qué pasó | Antídoto |
+|---|---|---|
+| **Caja de muestreo fuera del mueble** | El tablero de Loira-8 y la estructura de Cupra-1 "cambiaban de color": la caja había caído en el fondo bone y en el suelo | Recorte **lado a lado**, no una media de píxeles |
+| **Filtro por subcadena** | `villa` marcó buga**nvilla**, se**villa**na y **Villa**mayor: **25 falsos de 29** | `\bvilla\b`, siempre |
+| **Miniatura** | Cupra-7 "tenía dos mesas"; en grande eran dos sillones y una mesa. El asiento de Cupra-3 "era corrido"; ampliado tiene dos costuras, como el original | Contar **en grande** |
+| **El propio auditor** | Marcó como COMIDA una *"jarra de gres con romero"* — cerámica con planta, atrezzo permitido | Todo filtro lleva su lista de **excepciones** |
+
+> **Una métrica RECHAZA, nunca acepta** — y antes de dejar que rechace, hay que comprobar **dónde
+> ha mirado**. El `std` de una imagen es otro ejemplo: un packshot **blanco sobre bone** da
+> `std ≈ 26`, cerca del umbral de "imagen vacía" (≈15), y es perfecto. El `std` detecta el colapso
+> a gradiente, **no juzga la calidad**.
+
+## LA MODELO SENTADA SÍ SE PUEDE QUITAR *(21/22-08-2026)*
+
+El fallo clásico: al borrar a la persona sentada, el modelo rehace el asiento como **un cojín
+corrido** donde hay varios. Bloqueó cuatro fichas durante días. Se resuelve **diciendo qué debe
+quedar**, no solo qué se va:
+
+> *"Remove the seated person completely and **restore the empty seat cushions underneath as
+> separate individual cushions, never one continuous pad**."*
+
+Funcionó **a la primera** en Loira-8, Haston-7, Leisa-7, Adel-7, Dounvil-3, Albania-2, Acapulco-2 y
+Manhatan-2 — estas cuatro últimas **partiendo de fotos de 1.080 px**.
+
+**La orden no basta: hay que CONTAR** los respaldos y asientos contra la foto oficial antes de
+aceptar (3+3 en Dounvil-3, 2+2 en las otras, 7 respaldos en Loira-8). Y de paso se limpian los
+consumibles y el atrezzo ajeno que traiga la foto (copas, libros, sombreros, mesas de otro lote).
+
+**1.080 px bastan** si el anclaje y el conteo se hacen bien. La baja resolución del original no es
+motivo para dejar una ficha sin galería.
+
+## DOS FRASES DEL PROMPT QUE ROMPEN LA FIDELIDAD *(21-08-2026)*
+
+**1 · `warm raking light` convierte el aluminio antracita en LATÓN.**
+
+| | R−B |
+|---|---|
+| Aluminio antracita **oficial** | **−7 a −23** (frío) |
+| Generado con `warm raking afternoon light` | **+67 / +60** ❌ |
+| Regenerado nombrando el color + balance neutro | **+1,1 / −19** ✅ |
+
+Antídoto literal: *"the aluminium must stay dark neutral anthracite grey — never golden, brass or
+bronze. Neutral white balance, soft even daylight."* **En ASMR de piezas antracita no se pide luz
+cálida rasante.**
+
+**2 · El packshot se inventa el acabado que la escena le daba.** Al aislar el mueble sobre bone, el
+modelo pierde la referencia de material: el tablero de Loira-8 pasó de **gris pizarra** a **beige
+madera**. **Nombrar el acabado en el prompt del packshot** (*"the low table top is DARK SLATE GREY
+stone-look HPL, never light wood or beige"*).
+
+*(Y el mismo aviso para los tejidos: en un ambiente, medio sofá de Adel-7 salió beige y la otra
+mitad gris. Se arregla con "ALL the cushions are the SAME DARK GREY fabric — none of them beige".)*
+
+## AUDITAR LO YA PUBLICADO, NO SOLO LO QUE SE GENERA *(22-08-2026)*
+
+**Una regla nueva no se aplica sola hacia atrás.** La derogación de los consumibles (03-08-2026)
+dejó **8 imágenes de comida vivas** en fichas ACTIVE por 17.082 €, más un macro de tejido prohibido
+y tres escenas en "villa con piscina". Se descubrieron **tres semanas tarde**, barriendo los alt.
+
+`scripts/auditar_reglas_galeria.py` cruza las **~100 fórmulas de composición** del catálogo con todo
+lo publicado y revisa los alt contra las reglas de marca. **Pasarlo después de cada cambio de regla.**
+
+Dos trampas del matcheo, ya resueltas dentro del script:
+- **`BOLONIA XL-8` no es `BOLONIA-8`.** Son series distintas en páginas distintas — hay **cinco**
+  series Bolonia (normal, XL, reclinable, cuerda reclinable y rinconera). Probar el nombre **más
+  largo primero**.
+- El conteo de piezas es **visual**: el script localiza la fórmula y prepara el contraste, pero
+  quien cuenta eres tú, **en grande**.
+
+**Al quitar una toma prohibida, no hay que reponerla.** La receta canónica son 4 tomas + medidas;
+esas quintas tomas de consumible eran un extra del sistema viejo. **Borrar cuesta 0 créditos;
+regenerar, 4 por ficha.** Eso sí: descargar la imagen **antes** de borrarla (`borrar_media_consumibles.py`
+lo hace) para que sea reversible.
+
+## EL HÁBITAT LO HEREDA EL ACABADO, NO LA FAMILIA *(22-08-2026)*
+
+Odin-7 es el hermano **blanco** de Odin-8 (antracita). No heredó el mundo del set (C2 Segovia), sino
+el de **Odin-1 y Odin-2, los otros dos blancos**: C11 Lanzarote.
+
+> Un producto y su variante **de otro color** viven en sitios distintos.
+> Un producto y su hermano **del mismo color**, en el mismo.
+
+Y antes de abrir un frente nuevo, mirar **cuántas fichas están a medias** (packshot + un ambiente ya
+publicados): solo necesitan 2 tomas en vez de 4, **la mitad de créditos**, y heredan el mundo ya
+fijado por su serie — la coherencia de secuencia sale gratis.
+
+## CON EL SALDO DE CRÉDITOS BAJO, LOTES DE 4
+Dos generaciones se perdieron con *"out of credits"* en mitad de un lote de 8. Con poco saldo:
+lanzar **de 4 en 4** y **upscalar lo aprobado antes de generar más** — el upscale es lo que convierte
+una imagen en publicable; **una generación sin upscale no vale nada**.
+
 ## Herramientas
 
 | Script | Para qué |
@@ -671,6 +780,11 @@ el bbox al overlay. Un detector que no se ha mirado no ha detectado nada.
 | `scripts/bbox_producto.py <packshot>` | **el contorno para la cota.** Pásaselo al overlay con `--bbox` |
 | `scripts/auditar_galerias.py` | qué fichas ACTIVE están sin galería, en baja resolución o sin alt |
 | `scripts/auditar_identidad.py` | puerta de identidad: packshot contra la foto oficial del SKU |
+| `scripts/auditar_reglas_galeria.py` | **fórmulas del catálogo + reglas de marca sobre los alt.** Pasarlo tras cada cambio de regla |
+| `scripts/publicar_galeria_producto.py --verificar` | integridad de los 40 dicts (qué ficheros declarados ya no existen) |
+| `scripts/ficha_medidas_set.py` | toma 5 de un SET: tabla de medidas por pieza + composición declarada |
+| `scripts/borrar_media_consumibles.py` | borra media de Shopify **con backup local previo** |
+| `scripts/limpiar_intermedios.py` | limpia `_raw*` y `_RETIRADA_*` comprobando que existe el master |
 
 ## Contexto obligatorio antes de empezar
 [`ROL_FOTOGRAFO_SENIOR.md`](../../docs/santavila/ROL_FOTOGRAFO_SENIOR.md) (el oficio: §8 paleta · §11 roster ·

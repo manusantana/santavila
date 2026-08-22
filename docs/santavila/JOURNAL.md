@@ -27,10 +27,23 @@ hecho, y **que le toca a quien siga**.
 | Fichas ACTIVE | **171** |
 | Con galeria completa (≥3 imagenes, todas ≥2.000 px) | **106** |
 | Pendientes (≤2 imagenes) | **14 fichas · 2.764 EUR** |
+| **Con galeria pero en BAJA RESOLUCION** (≥3 imagenes, alguna <2.000 px) | **51 fichas · 17.699 EUR** |
 | Imagenes publicadas | **810** |
+| Imagenes por debajo de 2.000 px | **386** |
 | Violaciones de regla de marca | **0** |
 | Alt vacios | 356 imagenes en 59 fichas |
 | Creditos Higgsfield | **7** |
+
+> **⚠️ El tercer grupo es el que faltaba en la primera version de este cierre.** 171 = 106 + 14 + 51.
+> Esas **51 fichas (17.699 EUR)** tienen galeria, pero con imagenes por debajo de 2.000 px.
+> **50 de las 51 son de BALLIU** — el otro proveedor, que en estas dos jornadas **no se ha tocado**:
+> todo el trabajo ha sido Hevea. Y encajan con los alt vacios: 346 de los 356 son de Balliu, y 375
+> de las 386 imagenes pequeñas tambien. **Son las mismas fichas**: galerias del proveedor, con
+> varias fotos pequeñas y sin alt.
+>
+> La unica de Hevea en ese grupo es **`mesa-comedor-exterior-hpl-13590-cm` (mesa Corcega, 720 EUR)**:
+> sus 3 imagenes son de 1.536x1.024 y 1.600x1.197, y 2 de las 3 estan sin alt. Esa si es nuestra y
+> deberia entrar en la proxima tanda junto a las 14 pendientes.
 
 En dos jornadas se ha pasado de 61 fichas con una sola foto a 106 con galeria completa.
 **Ya no queda ninguna ficha bloqueada por falta de material**: lo ultimo que lo estaba —las
@@ -144,6 +157,23 @@ fidelidad manda sobre la etiqueta). **Si existe acabado blanco, necesita su prop
 
 **Coste estimado: ~110 creditos** (8 por ficha: 2 generaciones + 2 upscales + la ficha de
 medidas, que es overlay y no gasta).
+
+**Mas la mesa Corcega (720 EUR)**, unica ficha Hevea del grupo de baja resolucion: 8 creditos mas.
+
+### El frente BALLIU — sin abrir
+**50 fichas, 17.699 EUR.** No se ha tocado en estas dos jornadas. Antes de decidir nada hay que
+mirar dos cosas, porque **no se parece al frente Hevea**:
+1. **De donde salen sus fotos.** Son galerias del proveedor (hasta 14 imagenes por ficha), no la
+   foto unica que teniamos en Hevea. Puede que baste con pedir material mejor a Balliu.
+2. **Si Balliu tiene catalogo con formula de composicion**, como Hevea. **COMPROBADO HOY: NO.**
+   Su catalogo (`proveedores_raw/balliu/2025 CATALOGO GENERAL - Baja resolución.pdf`, 212 paginas)
+   tiene **cero** lineas con el patron `NxA+B+...`. Es decir: **la auditoria de pieza fantasma que
+   tan bien funciono en Hevea NO se puede aplicar igual en Balliu**; habra que deducir la
+   composicion de otra forma (tarifa por piezas, `balliu_smart_mapping.json`, o preguntando).
+
+A ojo, rehacerlas con el metodo Hevea serian **~400 creditos**. Antes de gastarlos, conviene la
+conversacion con Sergio: quiza para Balliu la respuesta no sea generar, sino **pedir las fotos en
+alta al proveedor**.
 
 ---
 
