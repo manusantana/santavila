@@ -23,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SHOP = "mueblesexterior.myshopify.com"
 API = f"https://{SHOP}/admin/api/2025-01/graphql.json"
 APPLY = "--apply" in sys.argv
+VERIFICAR = "--verificar" in sys.argv
 SOLO = None
 if "--solo" in sys.argv:
     SOLO = sys.argv[sys.argv.index("--solo") + 1]
@@ -31,6 +32,68 @@ TOKEN = None
 for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
     if line.startswith("SHOPIFY_ACCESS_TOKEN="):
         TOKEN = line.split("=", 1)[1].strip()
+
+
+# ############################################################################
+# ESTADO DE LOS DICTS  (revisado 22-08-2026)
+#
+# Este fichero acumula TODAS las tandas publicadas desde el principio. Solo se
+# publica la que apunta `ACTIVA` (al final del fichero); las demas se conservan
+# como TRAZABILIDAD: dicen que se publico, con que alt y cuando.
+#
+# ⚠️ 31 ficheros declarados en dicts ANTIGUOS ya no existen en disco. Es
+# ESPERADO, y hay dos motivos, los dos deliberados:
+#   1. Las tomas `05_asmr_<consumible>` (cafe, cerveza, horchata, botijo, vino,
+#      te helado, tinto de verano, tomate raf, naranjas, sandia...) se retiraron
+#      cuando Sergio derogo la comida en escena el 03-08-2026. Primero se
+#      renombraron a `_RETIRADA_*.bak` y el 22-08-2026 se borraron del todo.
+#   2. Las carpetas `brandon/`, `brandon2p/` y `albania/` se rehicieron con otro
+#      nombre en tandas posteriores.
+#
+# Por eso: **NO reactives un dict antiguo poniendolo en ACTIVA.** El guardia de
+# "faltan ficheros declarados" lo abortara, que es justo lo que debe hacer.
+# Si necesitas republicar una de esas fichas, crea un dict NUEVO con los
+# ficheros que existan hoy.
+#
+# Para ver el estado de integridad de todos los dicts:
+#     python3 scripts/publicar_galeria_producto.py --verificar
+# ############################################################################
+
+
+def _verificar_todo():
+    """Integridad de TODOS los dicts: que ficheros declarados no existen en disco.
+    Nace de la limpieza del 22-08-2026: los dicts historicos apuntan a tomas de
+    consumible retiradas y a carpetas rehechas. Sirve para que nadie reactive a
+    ciegas una tanda antigua."""
+    import ast, re as _re
+    src = open(os.path.abspath(__file__), encoding="utf-8").read()
+    faltan, total, dicts = [], 0, 0
+    for m in _re.finditer(r"^(GALERIAS_\w+)\s*=\s*\{", src, _re.M):
+        ini = m.end() - 1; dep = 0; fin = None
+        for i in range(ini, len(src)):
+            if src[i] == "{": dep += 1
+            elif src[i] == "}":
+                dep -= 1
+                if dep == 0: fin = i + 1; break
+        if fin is None: continue
+        try: d = ast.literal_eval(src[ini:fin])
+        except Exception: continue
+        dicts += 1
+        for carpeta, (handle, alts) in d.items():
+            for f in alts:
+                total += 1
+                if not os.path.exists(os.path.join(ROOT, "images_generated", carpeta, f)):
+                    faltan.append((m.group(1), carpeta, f))
+    print(f"dicts: {dicts}   ficheros declarados: {total}   NO EXISTEN: {len(faltan)}")
+    porgrupo = {}
+    for g, c, f in faltan: porgrupo.setdefault(g, []).append(f"{c}/{f}")
+    for g in sorted(porgrupo):
+        print(f"  [{g}]  {len(porgrupo[g])}")
+        for x in porgrupo[g]: print(f"      {x}")
+    print("\nRecuerda: esto es ESPERADO en los dicts antiguos (consumibles retirados el"
+          "\n03-08-2026 y carpetas rehechas). NO reactives un dict antiguo en ACTIVA.")
+    sys.exit(0)
+
 
 # carpeta -> (handle, {fichero: alt en español})
 #
@@ -1248,6 +1311,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
+    if VERIFICAR: _verificar_todo()
     ACTIVA = GALERIAS_PIEZAS_K
     registro = []
     for slug, (handle, alts) in ACTIVA.items():

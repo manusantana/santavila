@@ -13,6 +13,163 @@
 
 ---
 
+## 2026-08-22 (CIERRE) — LIMPIEZA, ESTADO DEL PROYECTO Y TRASPASO AL COMPAÑERO
+
+Se acaban los creditos de imagen (quedan 7). Este es el punto de parada: que hay, que se ha
+hecho, y **que le toca a quien siga**.
+
+---
+
+### 1 · DONDE ESTA EL PROYECTO (datos verificados hoy)
+
+| | |
+|---|---|
+| Fichas ACTIVE | **171** |
+| Con galeria completa (≥3 imagenes, todas ≥2.000 px) | **106** |
+| Pendientes (≤2 imagenes) | **14 fichas · 2.764 EUR** |
+| Imagenes publicadas | **810** |
+| Violaciones de regla de marca | **0** |
+| Alt vacios | 356 imagenes en 59 fichas |
+| Creditos Higgsfield | **7** |
+
+En dos jornadas se ha pasado de 61 fichas con una sola foto a 106 con galeria completa.
+**Ya no queda ninguna ficha bloqueada por falta de material**: lo ultimo que lo estaba —las
+cuatro de "la modelo sentada"— se resolvio el 22-08 partiendo de fotos de 1080 px.
+
+---
+
+### 2 · LIMPIEZA HECHA HOY
+
+**Borrado (48,3 MB), con registro en `images_generated/_limpieza_20260822.json`:**
+- **131 ficheros `_raw*`** — capturas a 1024 px ANTES del upscale. Solo se borro cada una tras
+  comprobar que en su misma carpeta existe un master ≥2.000 px. Uno se conservo por ser
+  huerfano (`mundra_mesa/_raw01.jpg`).
+- **12 ficheros `_RETIRADA_*.bak`** — tomas de consumible apartadas al derogarse la comida.
+- `__pycache__/` y los `.pyc`.
+
+Herramienta: `scripts/limpiar_intermedios.py` (dry-run por defecto).
+
+**NO se ha borrado, y conviene saber por que:**
+
+| Que | Por que se queda |
+|---|---|
+| `_foto_oficial_proveedor.*`, `_foto_catalogo_*` | Son la **referencia de fidelidad**: sin ellas no se puede auditar despues si el mueble se respeto |
+| `images_generated/brand/` | **La usa `theme/templates/product.json`** |
+| `images_generated/leisa/` y `tumbona/` | **Siguen publicadas en Shopify** (y ambas fichas llevan VIDEO en la posicion 0, de `spot-leisa/`) |
+| `spot-leisa/` (88 MB) | Produce ese video, que esta **en produccion** |
+| `_BORRADAS_consumibles_20260822/` | Backup reversible del borrado de hoy |
+| Los `.csv` / `.json` de la raiz | O los usa un script, o son **evidencia citada en este JOURNAL** (backups de precios, auditorias) |
+
+> **Aviso:** el primer barrido de limpieza iba a borrar `leisa/`, `tumbona/` y `brand/` por
+> "no declaradas en el publicador". Las tres estaban VIVAS. **Que una carpeta no aparezca en el
+> publicador no significa que no se use**: puede estar publicada desde una tanda antigua, o
+> usarla el tema. Comprobar SIEMPRE contra Shopify y contra `theme/` antes de borrar.
+
+---
+
+### 3 · DEUDA CONOCIDA: los dicts antiguos del publicador
+
+`scripts/publicar_galeria_producto.py` acumula **40 dicts y 481 ficheros declarados**. De esos,
+**31 ficheros ya no existen** y es ESPERADO:
+- las tomas `05_asmr_<consumible>` se retiraron el 03-08-2026 al derogarse la comida;
+- las carpetas `brandon/`, `brandon2p/` y `albania/` se rehicieron con otro nombre.
+
+**No se han borrado los dicts**: son la trazabilidad de que se publico, con que alt y cuando.
+Para verlo en cualquier momento:
+
+```
+python3 scripts/publicar_galeria_producto.py --verificar
+```
+
+⚠️ **No reactives un dict antiguo poniendolo en `ACTIVA`.** El guardia lo abortara (para eso
+esta). Si hay que republicar una de esas fichas, se crea un dict NUEVO con los ficheros que
+existan hoy.
+
+---
+
+### 4 · PARA EL COMPAÑERO (GEO/SEO) — tres cosas, por orden de importancia
+
+#### 4.1 · Cinco fichas donde el TITULO y la ficha de medidas NO dicen lo mismo
+El titulo lo generaste tu (SEO) a partir del CSV; la imagen de medidas sale del **catalogo PDF**,
+que es la fuente que manda cuando discrepan (regla de Sergio, 21-08-2026). **Las cinco tienen el
+ANCHO mal en el titulo:**
+
+| € | Handle | Titulo dice | Catalogo dice |
+|---|---|---|---|
+| 2.109 | `sofa-terraza-3-plazas-estilo-contemporaneo-215104-cm` | 215×104 | **200**×104 |
+| 1.805 | `balancin-jardin-exterior-148194-cm` | 148×194 | 148×**207** |
+| 1.580 | `sofa-terraza-2-plazas-estilo-contemporaneo-164104-cm` | 164×104 | **141**×104 |
+| 1.019 | `sillon-exterior-estilo-elegante-80104-cm` | 80×104 | **78**×104 |
+| 559 | `sillon-exterior-estilo-contemporaneo-68115-cm` | 68×115 | **60**×115 |
+
+Las tres primeras son la serie **BOLONIA XL** (catalogo pag. 30: XL-1 78×84×104, XL-2
+141×84×104, XL-3 200×84×104) y la ultima es **HASTON-1** (pag. 32: 60×62×115). El titulo lleva
+la cota vieja del CSV. **Yo no toco titulos: son tuyos.** Pero el handle tambien lleva el numero,
+asi que cambiarlo implica redireccion — decide tu como hacerlo.
+
+*(Ojo con los reposapies: sus titulos llevan TRES cotas —"70×45×44"— y parecen discrepar cuando
+no lo hacen. Estan bien.)*
+
+#### 4.2 · Los 356 alt vacios NO son donde parece
+**346 de los 356 son de BALLIU**, no de Hevea. De los 10 de Hevea, 7 estan en fichas todavia
+pendientes de galeria: **se resolveran solos** cuando se completen. En fichas Hevea ya
+terminadas solo quedan **3**.
+
+O sea: el trabajo de alt es practicamente todo **Balliu**, y son fichas con foto original del
+proveedor, no galerias generadas. Cuesta 0 creditos.
+
+#### 4.3 · Pregunta pendiente al proveedor (Hevea) — el YULIEN
+El catalogo (pags. 64 y 104) describe el **YULIEN Banco con mesa** como *"Blanco / White /
+Blanc"*, pero **su unica foto —la del propio catalogo— es NEGRA**. Esa etiqueta "Blanco" aparece
+identica en la Kavana, la Venecia, la Boston y el Gulliver de la misma pagina, asi que parece
+heredada de la plantilla. **Se publico en negro**, que es lo que muestra su foto (la ley de
+fidelidad manda sobre la etiqueta). **Si existe acabado blanco, necesita su propia foto.**
+
+---
+
+### 5 · LO QUE QUEDA POR PRODUCIR (cuando haya creditos)
+
+14 fichas, **2.764 EUR**, todas por debajo de 570 EUR:
+
+| € | Ficha | Nota |
+|---|---|---|
+| 569 | mesa de centro 125 (BOLONIA-4) | cota **doble fuente** 125×65×42; su foto tiene vasos que hay que quitar |
+| 400 | reposapies 85×50×43 | |
+| 339 | mesa de centro 90 (UNIVERSAL-80) | |
+| 323 | mesa de centro 120 | |
+| 218 | set losas cemento | el CSV le asigna la foto de OTRO producto — mirar antes |
+| 200 | silla Janeiro | catalogo pags. 67/81, la imagen embebida salio a 167×216 px |
+| 187 | taburete Etna | |
+| resto | fundas, bases de parasol, silla Venus | piezas de <130 EUR |
+
+**Coste estimado: ~110 creditos** (8 por ficha: 2 generaciones + 2 upscales + la ficha de
+medidas, que es overlay y no gasta).
+
+---
+
+### 6 · COMO SEGUIR (el metodo, en cuatro lineas)
+
+1. **Antes de generar un SET**, buscar su serie en el catalogo y leer la **formula**
+   (`2xA+B+D`). Lo que no este en la formula **no se vende**: no se dibuja.
+2. **Anclar siempre** a la foto oficial y **CONTAR** los cojines contra ella antes de aceptar.
+3. **Mirar en grande.** Hoy, cuatro veces, una caja de muestreo / un filtro / una miniatura
+   dieron un falso positivo. *Un filtro que no se ha mirado no ha filtrado nada.*
+4. Tras cada cambio de regla, pasar **`python3 scripts/auditar_reglas_galeria.py`**: una norma
+   nueva no limpia sola lo ya publicado (asi aparecieron 8 imagenes de comida tres semanas
+   despues de prohibirla).
+
+**Herramientas** (todas con dry-run):
+| Script | Para que |
+|---|---|
+| `publicar_galeria_producto.py` | publica una tanda · `--verificar` para la integridad de los dicts |
+| `auditar_reglas_galeria.py` | formulas del catalogo + reglas de marca sobre los alt |
+| `bbox_producto.py` | contorno del producto · **siempre con `--hoja`, y mirar la hoja** |
+| `overlay_medidas_producto.py` / `ficha_medidas_set.py` | toma 5, determinista, 0 creditos |
+| `borrar_media_consumibles.py` | borra media de Shopify con backup local previo |
+| `limpiar_intermedios.py` | limpia `_raw*` y `_RETIRADA_*` comprobando que hay master |
+
+---
+
 ## 2026-08-22 (K) — el sillon y las dos mesas · 2.403 EUR · se acaban los creditos
 
 Tres fichas mas, y con ellas se agota el saldo (7 creditos).
