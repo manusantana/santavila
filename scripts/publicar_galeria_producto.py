@@ -154,6 +154,45 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Ademas se quito la modelo sentada de Haston-7, Leisa-7 y Adel-7, y los
 # consumibles de las fotos originales (copas de vino, vela).
 # ############################################################################
+# ############################################################################
+# TANDA 2026-08-22 (H) — CORRECCIONES DE LA AUDITORIA POR FORMULA.
+# La auditoria del 22-08 cruzo las 98 formulas de composicion del catalogo con
+# las fichas publicadas. Composicion: 15/15 correctas. Cotas: 6/6 exactas.
+# Lo que SI aparecio (y se corrige aqui):
+#   · LOIRA-7: sus DOS ambientes vivian en "una villa de la Costa Blanca con
+#     piscina" y "un porche abierto a la piscina" -> prohibido (§ nunca resort
+#     ni chalet de lujo). Rehechos en Albarracin (Teruel), estrena Aragon.
+#   · DAMASCO-7: se le anade la ficha de MEDIDAS que le faltaba, con las cotas
+#     del catalogo p35 (2xA+B+D) y la composicion declarada. Coste: 0 creditos.
+# (Las 9 imagenes de comida/bebida + el macro de tejido se borraron aparte con
+#  scripts/borrar_media_consumibles.py, con backup local reversible.)
+# ############################################################################
+GALERIAS_AUDITORIA_H2 = {
+    "balinesa198": ("balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8", {
+        "01_packshot.jpg": "Cama balinesa de exterior de aluminio blanco con cubierta integrada y dos paneles laterales de tejido nautico, 198 cm, sobre fondo neutro",
+        "02_ambiente_mallorca.jpg": "Cama balinesa blanca junto a la piscina de una casa de piedra mallorquina, entre pinos y muro de piedra seca",
+        "03_ambiente_casa_campo.jpg": "Cama balinesa en la terraza de barro cocido de una casa de campo mallorquina, con muro de piedra seca, olivos viejos y una manta de lino sobre el colchon",
+        "04_asmr_tejido.jpg": "Detalle del poste de aluminio blanco y la trama del tejido nautico del panel lateral de la cama balinesa",
+        "05_medidas.jpg": "Medidas de la cama balinesa de exterior: 198 cm de ancho y 200 cm de alto",
+    }),
+}
+
+GALERIAS_AUDITORIA_H = {
+    "loira7_set": ("set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro", {
+        "01_packshot.jpg": "Conjunto rinconera de exterior Loira-7 de aluminio blanco con tableros HPL y cojines arena, sofa de esquina y mesa de centro, sobre fondo neutro",
+        "02_ambiente_albarracin.jpg": "Rinconera Loira-7 en una terraza empedrada de Albarracin, Teruel, con muros de rodeno rosado, tejados de teja y la muralla en la ladera, con una manta de lino y un libro abierto",
+        "03_ambiente_rodeno.jpg": "Detalle de la rinconera Loira-7 junto al muro de piedra rosada y el balcon de madera de Albarracin, con romero en una maceta de piedra",
+        "04_asmr_canto_hpl.jpg": "Detalle del canto del tablero HPL con su linea oscura y el perfil de aluminio blanco mate de la rinconera Loira-7",
+    }),
+    "damasco7_set": ("set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa", {
+        "01_packshot.jpg": "Set de jardin Damasco-7 de aluminio gris tortola con sofa de 2 plazas, dos sillones de cuerda beige y mesa de centro, sobre fondo neutro",
+        "02_ambiente_cortijo.jpg": "Set de jardin tortola en la terraza de un cortijo contemporaneo de la campina sevillana, junto a un olivo",
+        "03_ambiente_galeria.jpg": "Sofa y sillones de exterior en la galeria de arcos encalados de un cortijo andaluz, abierta al olivar",
+        "04_asmr_cuerda.jpg": "Detalle del trenzado de cuerda beige del lateral del sillon sobre el perfil de aluminio gris tortola",
+        "05_medidas.jpg": "Medidas de cada pieza del conjunto Damasco-7: sofa de 2 plazas 135x79x75 cm, sillon 72x79x75 cm y mesa de centro 90x50x40 cm. Incluye 1 sofa, 2 sillones y 1 mesa",
+    }),
+}
+
 GALERIAS_SETS_FORMULA = {
     "haston8_set": ("set-jardin-3-plazas-contemporaneo-sofa-3-plazas-2-sillones-mesa-4", {
         "01_packshot.jpg": "Conjunto de jardin Haston en aluminio blanco con sofa de 3 plazas de respaldo alto, dos sillones y mesa de centro, cojines gris claro, sobre fondo neutro",
@@ -1109,7 +1148,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_SETS_FORMULA
+    ACTIVA = GALERIAS_AUDITORIA_H2
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

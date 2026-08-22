@@ -1560,5 +1560,56 @@
    "gid://shopify/MediaImage/71490962653508",
    "gid://shopify/MediaImage/71490962686276"
   ]
+ },
+ {
+  "handle": "set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro",
+  "producto": "gid://shopify/Product/15507128779076",
+  "borrados": [
+   "gid://shopify/MediaImage/71254848471364",
+   "gid://shopify/MediaImage/71254848504132",
+   "gid://shopify/MediaImage/71254848536900",
+   "gid://shopify/MediaImage/71254848569668"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71493644157252",
+   "gid://shopify/MediaImage/71493644190020",
+   "gid://shopify/MediaImage/71493644222788",
+   "gid://shopify/MediaImage/71493644255556"
+  ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507125666116",
+  "borrados": [
+   "gid://shopify/MediaImage/71268867080516",
+   "gid://shopify/MediaImage/71268867113284",
+   "gid://shopify/MediaImage/71268867146052",
+   "gid://shopify/MediaImage/71268867178820"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71493644353860",
+   "gid://shopify/MediaImage/71493644386628",
+   "gid://shopify/MediaImage/71493644419396",
+   "gid://shopify/MediaImage/71493644452164",
+   "gid://shopify/MediaImage/71493644484932"
+  ]
+ },
+ {
+  "handle": "balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8",
+  "producto": "gid://shopify/Product/15512247861572",
+  "borrados": [
+   "gid://shopify/MediaImage/71268873863492",
+   "gid://shopify/MediaImage/71268873896260",
+   "gid://shopify/MediaImage/71268873929028",
+   "gid://shopify/MediaImage/71268873961796",
+   "gid://shopify/MediaImage/71268873994564"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71493652021572",
+   "gid://shopify/MediaImage/71493652054340",
+   "gid://shopify/MediaImage/71493652087108",
+   "gid://shopify/MediaImage/71493652119876",
+   "gid://shopify/MediaImage/71493652152644"
+  ]
  }
 ]

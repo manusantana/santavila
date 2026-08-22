@@ -2481,5 +2481,110 @@
     "alt_len": 99
    }
   ]
+ },
+ "set-rinconera-exterior-hpl-sofisticado-sofa-de-esquina-mesa-de-centro": {
+  "fecha": "2026-08-22",
+  "carpeta": "loira7_set",
+  "n_imagenes": 4,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 144
+   },
+   {
+    "fichero": "02_ambiente_albarracin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 177
+   },
+   {
+    "fichero": "03_ambiente_rodeno.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 134
+   },
+   {
+    "fichero": "04_asmr_canto_hpl.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
+   }
+  ]
+ },
+ "set-jardin-2-plazas-elegante-sofa-2-plazas-2-sillones-mesa": {
+  "fecha": "2026-08-22",
+  "carpeta": "damasco7_set",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 136
+   },
+   {
+    "fichero": "02_ambiente_cortijo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 105
+   },
+   {
+    "fichero": "03_ambiente_galeria.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 101
+   },
+   {
+    "fichero": "04_asmr_cuerda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 100
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 161
+   }
+  ]
+ },
+ "balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8": {
+  "fecha": "2026-08-22",
+  "carpeta": "balinesa198",
+  "n_imagenes": 5,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_mallorca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 108
+   },
+   {
+    "fichero": "03_ambiente_casa_campo.jpg",
+    "px": "2102x2600",
+    "mp": 5.5,
+    "alt_len": 153
+   },
+   {
+    "fichero": "04_asmr_tejido.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 104
+   },
+   {
+    "fichero": "05_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 73
+   }
+  ]
  }
 }

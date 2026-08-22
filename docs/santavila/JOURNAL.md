@@ -13,6 +13,73 @@
 
 ---
 
+## 2026-08-22 — AUDITORIA POR FORMULA: 98 formulas del catalogo contra todo lo publicado
+
+Sergio: *«gracias a esta formula haz auditoria de lo hecho por si hay alguna discrepancia»*.
+Si la formula de composicion existe para HASTON, existe para todas las series. Se extrajeron
+**100 formulas** del catalogo y se cruzaron con las **795 imagenes** de las 171 fichas ACTIVE.
+Herramienta nueva y reutilizable: `scripts/auditar_reglas_galeria.py`.
+
+### Resultado
+
+| Bloque | Resultado |
+|---|---|
+| **Composicion** (formula vs. piezas dibujadas) | **15 / 15 correctas** |
+| **Cotas** (alt vs. catalogo) | **6 / 6 exactas** |
+| **Reglas de marca** sobre los alt | **13 incumplimientos** -> corregidos |
+
+**La composicion y las cotas estaban limpias.** Ni un reposapies fantasma mas alla de los tres
+que ya se corrigieron el 21-08 (Bellagio-8, Haston-7 y Haston-8). Las 6 fichas de medidas
+auditables coinciden **al centimetro** con el catalogo: Bolonia XL-8 (200x84x104 / 78x84x104 /
+mesa 125x65x42), Odin-8, Brandon-8 (mesas 80 y 60 Ø), Bellagio-7, Yina-7 y Yina-8.
+
+### Lo que SI aparecio: 13 imagenes que incumplian reglas nuestras
+
+**a) Comida y bebida — 8 imagenes.** La derogacion del 03-08-2026 (*"nada de comida ni bebida"*)
+nunca se aplico hacia atras: seguian vivas 8 tomas de consumible en fichas ACTIVE por valor de
+**17.082 EUR** — queso y pan (Damasco-7), limonada y sandia (Loira-7), te helado (Leisa-8),
+sidra (Albania-7), albariño y berberechos (Dounvil-8), gazpacho (Manhatan-8), melocoton
+(Manhatan-7) y agua con gas (tumbona).
+
+**b) Macro de tejido — 1.** Leisa-8 pos4, *"detalle macro del tejido"*: mostraba una trama
+gruesa tipo tweed. Es exactamente lo que prohibe la §15 (el macro extremo empuja al modelo a
+fabricar textura).
+
+**c) Chalet de lujo y piscina — 3.** LOIRA-7 (2.899 EUR) tenia sus **dos** ambientes en *"una
+villa de la Costa Blanca con piscina"* y *"un porche abierto a la piscina"*; la cama balinesa de
+198 cm, en *"una villa mallorquina"*.
+
+**d) Alt vacio — 363 imagenes** en 66 fichas. Anotado, no tocado: es SEO, territorio del
+compañero.
+
+### Correcciones aplicadas
+- **9 borradas** (8 de comida + el macro) con `scripts/borrar_media_consumibles.py`. Las fichas
+  bajan de 5-6 a 4-5 imagenes, que es **la receta canonica** (packshot + 2 ambientes + ASMR):
+  esa quinta toma de consumible era un extra del sistema viejo. Coste: **0 creditos**.
+  Reversible: cada imagen se descargo antes a `images_generated/_BORRADAS_consumibles_20260822/`.
+- **LOIRA-7 rehecha** en **C21 Albarracin (Teruel)** — rodeno rosado, la muralla en la ladera,
+  balcon de madera. Estrena Aragon interior. Conteo verificado: 6 respaldos, igual que su foto.
+- **Cama balinesa 198**: la "villa mallorquina" pasa a **casa de campo mallorquina** — piedra
+  seca, olivos, barro cocido.
+- **DAMASCO-7**: se le añade la ficha de MEDIDAS que le faltaba, con las cotas del catalogo p35
+  y **la composicion declarada** ("1 sofa de 2 plazas · 2 sillones · 1 mesa"). **0 creditos.**
+
+**Verificacion final: 0 violaciones en las 791 imagenes.**
+
+### Dos trampas de metodo que la auditoria se comio (y que el script ya evita)
+1. **Buscar `villa` por subcadena da 25 falsos positivos de 29**: buganVILLA, seVILLAna,
+   VILLAmayor. Hay que usar `\bvilla\b`. Es el mismo error que las cajas de muestreo fuera del
+   mueble: **un filtro que no se ha mirado no ha filtrado nada.**
+2. **`BOLONIA XL-8` casaba con `BOLONIA-8`**, que es otra serie en otra pagina (hay **5** series
+   Bolonia: normal, XL, reclinable, cuerda reclinable y rinconera). Aqui las formulas coincidian
+   por suerte. El script prueba ahora el nombre **mas largo primero**.
+3. Y una tercera, visual: en el mosaico pequeño **CUPRA-7 parecia tener dos mesas**. En grande
+   eran dos sillones a la derecha y una sola mesa. **La miniatura no decide.**
+
+**Coste total de la auditoria + correcciones:** 3 generaciones + 3 upscales = **12 creditos**.
+
+---
+
 ## 2026-08-21 (F+G) — LA FORMULA DEL CATALOGO CONTRA LA PIEZA FANTASMA · 8 sets mas
 
 Ocho fichas mas, **26.109 EUR**, en dos tandas. Con la (E) de esta misma tarde: **12 fichas y
