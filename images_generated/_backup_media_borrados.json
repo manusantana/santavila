@@ -1647,5 +1647,57 @@
    "gid://shopify/MediaImage/71494034227524",
    "gid://shopify/MediaImage/71494034260292"
   ]
+ },
+ {
+  "handle": "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2",
+  "producto": "gid://shopify/Product/15507126845764",
+  "borrados": [
+   "gid://shopify/MediaImage/70103551803716",
+   "gid://shopify/MediaImage/70108303982916"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494086689092",
+   "gid://shopify/MediaImage/71494086721860",
+   "gid://shopify/MediaImage/71494086754628"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-18590-cm",
+  "producto": "gid://shopify/Product/15507126059332",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550230852",
+   "gid://shopify/MediaImage/70108303819076"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494087639364",
+   "gid://shopify/MediaImage/71494087672132",
+   "gid://shopify/MediaImage/71494087704900"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19882-cm",
+  "producto": "gid://shopify/Product/15507126223172",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550427460",
+   "gid://shopify/MediaImage/70108303917380"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494088720708",
+   "gid://shopify/MediaImage/71494088753476",
+   "gid://shopify/MediaImage/71494088786244"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm",
+  "producto": "gid://shopify/Product/15507126255940",
+  "borrados": [
+   "gid://shopify/MediaImage/70103550492996",
+   "gid://shopify/MediaImage/70108303950148"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494089834820",
+   "gid://shopify/MediaImage/71494089867588",
+   "gid://shopify/MediaImage/71494089900356"
+  ]
  }
 ]

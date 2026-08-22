@@ -181,6 +181,42 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # Cotas: del CSV (estas series no estan en el catalogo PDF), verificadas contra
 # el titulo de Shopify una por una.
 # ############################################################################
+# ############################################################################
+# TANDA 2026-08-22 (J) — MAS BAJA RESOLUCION, con la formula del catalogo en la
+# mano. Las cuatro partian de una unica foto de 1536x1024.
+#   · ODIN-7 = 2xA+B+D (catalogo p42): 2 sillones + sofa 2pl + SAIPROS-90. Es
+#     el hermano BLANCO de Odin-8 (antracita) -> hereda C11 Lanzarote, que es
+#     donde viven Odin-1 y Odin-2, los otros dos blancos.
+#   · CUPRA-3 y BELLAGIO-3/-2: piezas sueltas. En la foto de Cupra-3 salia una
+#     mesa de centro que NO se vende con el sofa -> borrada.
+# Cotas: Cupra doble fuente (CSV == catalogo, 185x75x90 y 65x75x90).
+# En BELLAGIO el catalogo da "43/39" y el CSV "82": NO es discrepancia, son
+# cotas distintas (43/39 es la altura del ASIENTO; 82 la total). Se publica 82,
+# que es la comparable y la que coincide con el titulo.
+# ############################################################################
+GALERIAS_BAJA_RES_J = {
+    "odin7_set": ("set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2", {
+        "01_packshot.jpg": "Conjunto de jardin Odin-7 de aluminio blanco con sofa de 2 plazas, dos sillones y mesa de centro, con cojines gris, sobre fondo neutro",
+        "02_ambiente_lanzarote.jpg": "Conjunto Odin-7 blanco en el patio de una casa de Lanzarote, sobre suelo de picon negro, con muro de piedra volcanica, higuera en su zoco y cactus",
+        "03_medidas.jpg": "Medidas de cada pieza del conjunto Odin-7: sofa de 2 plazas 120x66x78 cm, sillon 65x66x78 cm y mesa de centro 90x50x41 cm. Incluye 1 sofa, 2 sillones y 1 mesa",
+    }),
+    "cupra3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-18590-cm", {
+        "01_packshot.jpg": "Sofa de terraza Cupra de 3 plazas con estructura de aluminio antracita, brazos tapizados, cojines gris claro y tres cojines de acento azules, 185x75x90 cm, sobre fondo neutro",
+        "02_ambiente_costa_daurada.jpg": "Sofa Cupra de 3 plazas en una terraza de piedra clara entre pinos pineros de la Costa Daurada, con muro de piedra seca y una cala del Mediterraneo al fondo",
+        "03_medidas.jpg": "Medidas del sofa Cupra de 3 plazas: 185 cm de ancho y 90 de alto. Se vende solo el sofa",
+    }),
+    "bellagio3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-19882-cm", {
+        "01_packshot.jpg": "Sofa de terraza Bellagio de 3 plazas con estructura de aluminio antracita de base de patin, cojines azul claro y dos cojines de acento azul marino, 198x75x82 cm, sobre fondo neutro",
+        "02_ambiente_cabo_de_gata.jpg": "Sofa Bellagio de 3 plazas en una terraza encalada de Cabo de Gata, entre chumberas y agaves, con el mar arido y los cerros al fondo",
+        "03_medidas.jpg": "Medidas del sofa Bellagio de 3 plazas: 198 cm de ancho y 82 de alto. Se vende solo el sofa",
+    }),
+    "bellagio2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm", {
+        "01_packshot.jpg": "Sofa de terraza Bellagio de 2 plazas con estructura de aluminio antracita de base de patin, cojines azul claro y un cojin de acento azul marino, 150x75x82 cm, sobre fondo neutro",
+        "02_ambiente_cabo_de_gata.jpg": "Sofa Bellagio de 2 plazas en una terraza encalada de Cabo de Gata, junto a un muro con agaves y con el mar arido al fondo",
+        "03_medidas.jpg": "Medidas del sofa Bellagio de 2 plazas: 150 cm de ancho y 82 de alto. Se vende solo el sofa",
+    }),
+}
+
 GALERIAS_MODELO_SENTADA = {
     "dounvil3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm", {
         "01_packshot.jpg": "Sofa de terraza Dounvil de 3 plazas con estructura de aluminio antracita y tres cojines de asiento y tres de respaldo en gris claro, 190x80x85 cm, sobre fondo neutro",
@@ -1185,7 +1221,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_MODELO_SENTADA
+    ACTIVA = GALERIAS_BAJA_RES_J
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

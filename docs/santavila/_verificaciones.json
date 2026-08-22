@@ -2661,5 +2661,105 @@
     "alt_len": 90
    }
   ]
+ },
+ "set-jardin-2-plazas-moderno-sofa-2-plazas-2-sillones-mesa-2": {
+  "fecha": "2026-08-22",
+  "carpeta": "odin7_set",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 134
+   },
+   {
+    "fichero": "02_ambiente_lanzarote.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 146
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 158
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-contemporaneo-18590-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "cupra3_sofa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 174
+   },
+   {
+    "fichero": "02_ambiente_costa_daurada.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 155
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 87
+   }
+  ]
+ },
+ "sofa-terraza-3-plazas-estilo-contemporaneo-19882-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "bellagio3_sofa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 180
+   },
+   {
+    "fichero": "02_ambiente_cabo_de_gata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 90
+   }
+  ]
+ },
+ "sofa-terraza-2-plazas-estilo-contemporaneo-15082-cm": {
+  "fecha": "2026-08-22",
+  "carpeta": "bellagio2_sofa",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 177
+   },
+   {
+    "fichero": "02_ambiente_cabo_de_gata.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 90
+   }
+  ]
  }
 }

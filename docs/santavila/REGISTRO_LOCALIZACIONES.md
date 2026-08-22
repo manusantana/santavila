@@ -81,10 +81,17 @@
 | **`sofa-terraza-2-plazas-...-13370-cm`** (Manhatan-2) | antracita + gris claro / **frío** | Frío/pizarra | **C5 Pirineo aragonés** — muro de piedra seca, lavanda, pinos y picos (mundo de Manhatan-1) | — | manta de lino |
 | **`set-rinconera-...-hpl-sofisticado-...`** (Loira-7) | blanco + arena, HPL / **cálido** | Cálido/rodeno | **C21 Albarracín (Teruel)** — rodeno rosado, tejados de teja, la muralla en la ladera, balcón de madera | — | manta de lino · libro · romero |
 
+| **`set-jardin-2-plazas-moderno-...-mesa-2`** (Odin-7, **blanco**) | blanco + gris / **blanco** | Blanco/volcánico | **C11 Casa de Lanzarote** — cal, picón negro, higuera en zoco de lava (mundo de Odin-1 y Odin-2, los otros **blancos**; el set Odin-8 antracita vive en C2 Segovia) | — | manta de lino |
+| **`sofa-terraza-3-plazas-...-18590-cm`** (Cupra-3) | antracita + gris claro + azul / **frío** | Frío/pinar litoral | **B15 Costa Daurada** — piedra clara, muro seco, pinos piñoneros, una cala | — | manta de lino |
+| **`sofa-terraza-3-plazas-...-19882-cm`** (Bellagio-3) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Cabo de Gata** — cal, chumberas y agaves, mar árido (mundo del set Bellagio-8) | — | manta de lino |
+| **`sofa-terraza-2-plazas-...-15082-cm`** (Bellagio-2) | antracita + azul claro / **frío marino** | Frío/cal árida | **B10 Cabo de Gata** — otro rincón del mismo muro encalado | — | manta de lino |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
 **Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), Tarragona/Costa Daurada, **Aragón (Teruel/Albarracín)**, **Navarra**, León.
+*(22-08-2026 · regla afinada: **el hábitat lo hereda el ACABADO, no la familia**. Odin-7 es blanco y se va a Lanzarote con Odin-1 y Odin-2, aunque el set Odin-8 (antracita) viva en Segovia.)*
+
 *(22-08-2026: se estrena **C21 Albarracín (Teruel)** — cae Aragón interior. Las 4 piezas de "la modelo sentada" NO estrenan mundo: **heredan el de su hermana del mismo acabado** (A10, A11, C5, C6). Un producto y su variante de otro color viven en sitios distintos; un producto y su hermano del MISMO color, en el mismo.)*
 
 *(21-08-2026 noche: se estrena **C20 La Alberca (Salamanca)** — cae Castilla y León rural. Ocho sets mas se publican REUSANDO el mundo ya fijado por su serie (C8, C13, C14, C15, C17, B2): un set y sus piezas sueltas comparten hábitat, y eso es lo que hace que el catalogo se lea como una sola tienda.)*

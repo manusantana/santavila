@@ -13,6 +13,53 @@
 
 ---
 
+## 2026-08-22 (J) — CUATRO MAS DESDE 1536x1024 · 6.603 EUR
+
+Con la formula del catalogo en la mano y la tecnica de anclaje ya probada, cuatro fichas mas
+cuyo unico material era **una foto de 1536x1024**:
+
+| Ficha | € | Fórmula / pieza | Mundo |
+|---|---|---|---|
+| Odin-7 set | 2.239 | **2xA+B+D** (p42): 2 sillones + sofa 2pl + SAIPROS-90 | **C11 Lanzarote** |
+| Cupra-3 sofa 3pl | 1.840 | pieza suelta | **B15 Costa Daurada** |
+| Bellagio-3 sofa 3pl | 1.489 | pieza suelta | **B10 Cabo de Gata** |
+| Bellagio-2 sofa 2pl | 1.055 | pieza suelta | **B10 Cabo de Gata** |
+
+**Odin-7 es el hermano BLANCO de Odin-8 (antracita)**, asi que NO hereda el mundo del set sino
+el de **Odin-1 y Odin-2, los otros dos blancos**: C11 Lanzarote. La regla del habitat va por
+ACABADO, no por familia.
+
+**Pieza fantasma evitada:** en la foto de Cupra-3 salia una mesa de centro que no se vende con
+el sofa. Borrada.
+
+### Una discrepancia de cotas que NO era discrepancia
+En BELLAGIO el catalogo da **"43/39"** y el CSV **"82"**. Parecia el caso clasico de "manda el
+catalogo"... pero **no miden lo mismo**: 43/39 es la altura del **ASIENTO** (el Bellagio es un
+lounge bajo) y 82 la altura **total**. Un sofa con respaldo de 43 cm de alto total no existe
+(LEY 0: *si no soy capaz de creerlo, no lo creo*). Lo que valida la lectura es que **ancho y
+fondo SI coinciden** en las dos fuentes (198x75 y 150x75): estoy mirando la pieza correcta.
+Se publica **82**, que es la cota comparable y la que coincide con el titulo.
+
+**"Manda el catalogo" presupone que las dos fuentes miden LA MISMA cota.** Antes de aplicar la
+regla hay que comprobar que ancho y fondo cuadran; si solo baila el alto, probablemente sean
+cotas distintas, no una contradiccion.
+
+En CUPRA, en cambio, CSV y catalogo coinciden al centimetro (185x75x90 y 65x75x90): doble
+fuente.
+
+### Estado del catalogo al cierre
+- **103 fichas con galeria completa** (>=3 imagenes, todas >=2.000 px).
+- **Pendientes: 17 fichas, 5.167 EUR** (se empezo el dia con 25 y 15.475 EUR).
+- **0 violaciones de regla** en las 807 imagenes.
+- Alt vacio: 359 imagenes en 66 fichas — sigue pendiente, es SEO del compañero.
+
+**Coste:** 10 generaciones + 9 upscales = **~38 creditos** (63 -> ~31). Dos generaciones
+fallaron con "out of credits" en pleno lote y hubo que relanzarlas: **con el saldo bajo conviene
+lanzar de 4 en 4, no de 8 en 8**, y upscalear lo aprobado antes de generar mas (el upscale es lo
+que convierte una imagen en publicable).
+
+---
+
 ## 2026-08-22 (I) — CAEN LAS CUATRO DE "LA MODELO SENTADA" · 3.685 EUR
 
 Las unicas cuatro fichas que quedaban **bloqueadas por falta de material**: en su UNICA foto
