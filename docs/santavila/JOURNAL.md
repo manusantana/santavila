@@ -13,6 +13,47 @@
 
 ---
 
+## 2026-08-22 (I) — CAEN LAS CUATRO DE "LA MODELO SENTADA" · 3.685 EUR
+
+Las unicas cuatro fichas que quedaban **bloqueadas por falta de material**: en su UNICA foto
+(1080 px) la modelo se sienta EXACTAMENTE sobre el sofa que se vende, y al borrarla el modelo
+rehacia el asiento como **un cojin corrido** donde hay varios.
+
+La formula que funciono el 21-08 en Loira-8 las abre las cuatro:
+
+> *"remove the seated person completely and restore the empty seat cushions as separate
+> individual cushions, never one continuous pad"*
+
+...y despues **contar** contra la foto: **3 respaldos + 3 asientos** en Dounvil-3, **2 + 2** en
+Albania-2, Acapulco-2 y Manhatan-2. Las cuatro salieron bien **a la primera**, partiendo de
+1080 px. Ademas se limpiaron los consumibles de las fotos originales (una copa de vino en
+Acapulco-2) y el atrezzo ajeno (mesas, reposapies, libros, sombrero).
+
+| Ficha | € | Mundo (heredado de su hermana del mismo acabado) |
+|---|---|---|
+| Dounvil-3 | 1.175 | **A11 Costa da Morte** — granito, tojo en flor, brezo, el Atlantico |
+| Albania-2 | 950 | **A10 Puerto pesquero asturiano** — casas de colores, barcos, granito mojado |
+| Acapulco-2 | 845 | **C6 Azotea de Salamanca** — piedra de Villamayor, la catedral al atardecer |
+| Manhatan-2 | 715 | **C5 Pirineo aragones** — muro de piedra seca, lavanda, pizarra |
+
+Las cuatro son **antracita**, y las cuatro heredan el habitat de la pieza hermana con ese mismo
+acabado. Cotas del CSV (estas series no estan en el catalogo PDF), verificadas una a una contra
+el titulo de Shopify: 190x85, 145x100, 131x70 y 133x70. Contorno comprobado con `--hoja` en las
+cuatro antes de dibujar.
+
+**Ya no queda ninguna ficha bloqueada por falta de material.** Lo que queda son 21 fichas
+(~11.790 EUR) cuyo original esta por debajo de 1.100 px — el mismo caso que estas cuatro, que
+han demostrado que **1080 px bastan** si el anclaje y el conteo se hacen bien.
+
+**Nota de incidencia:** Acapulco-2 corto con un error SSL DESPUES de subir las 3 imagenes; las
+nuevas estaban dentro pero la foto vieja seguia en pos 0. Se completo a mano (borrado +
+reorder) y se verifico. **Un fallo de red tras "todas READY" deja la ficha a medias, no vacia:
+hay que mirar el estado real antes de reintentar.**
+
+**Coste:** 8 generaciones + 8 upscales = **32 creditos** (95 -> 63).
+
+---
+
 ## 2026-08-22 — AUDITORIA POR FORMULA: 98 formulas del catalogo contra todo lo publicado
 
 Sergio: *«gracias a esta formula haz auditoria de lo hecho por si hay alguna discrepancia»*.

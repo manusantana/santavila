@@ -167,6 +167,43 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 # (Las 9 imagenes de comida/bebida + el macro de tejido se borraron aparte con
 #  scripts/borrar_media_consumibles.py, con backup local reversible.)
 # ############################################################################
+# ############################################################################
+# TANDA 2026-08-22 (I) — SE DESBLOQUEAN LAS CUATRO DE "LA MODELO SENTADA".
+# Estas 4 fichas llevaban dias bloqueadas: en su UNICA foto (1080 px) la modelo
+# se sienta EXACTAMENTE sobre el sofa que se vende, y al borrarla el modelo
+# rehacia el asiento como un cojin corrido. La formula que funciono el 21-08 en
+# Loira-8 las abre todas:
+#   "remove the seated person completely and restore the empty seat cushions as
+#    separate individual cushions, never one continuous pad"
+# + CONTAR los cojines contra la foto antes de aceptar (3+3 en Dounvil-3, 2+2
+#   en las otras tres). Funciona incluso partiendo de 1080 px.
+# Cada pieza hereda el mundo de su hermana del MISMO acabado (todas antracita).
+# Cotas: del CSV (estas series no estan en el catalogo PDF), verificadas contra
+# el titulo de Shopify una por una.
+# ############################################################################
+GALERIAS_MODELO_SENTADA = {
+    "dounvil3_sofa": ("sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm", {
+        "01_packshot.jpg": "Sofa de terraza Dounvil de 3 plazas con estructura de aluminio antracita y tres cojines de asiento y tres de respaldo en gris claro, 190x80x85 cm, sobre fondo neutro",
+        "02_ambiente_costa_da_morte.jpg": "Sofa Dounvil de 3 plazas sobre un afloramiento de granito en la Costa da Morte, entre tojo en flor y brezo, con el Atlantico rompiendo al fondo y una manta de lino sobre el brazo",
+        "03_medidas.jpg": "Medidas del sofa Dounvil de 3 plazas: 190 cm de ancho y 85 de alto. Se vende solo el sofa",
+    }),
+    "albania2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm", {
+        "01_packshot.jpg": "Sofa de terraza Albania de 2 plazas con estructura de aluminio antracita, travesano diagonal en V en el lateral y cojines gris claro, 145x70x100 cm, sobre fondo neutro",
+        "02_ambiente_puerto_asturiano.jpg": "Sofa Albania de 2 plazas sobre el muelle de granito de un puerto pesquero asturiano, con las casas de colores y los barcos amarrados detras, y una manta de lino sobre el brazo",
+        "03_medidas.jpg": "Medidas del sofa Albania de 2 plazas: 145 cm de ancho y 100 de alto. Se vende solo el sofa",
+    }),
+    "acapulco2_sofa": ("sofa-terraza-2-plazas-estilo-elegante-13170-cm", {
+        "01_packshot.jpg": "Sofa de terraza Acapulco de 2 plazas con estructura de aluminio antracita y cojines gris, 131x66x70 cm, sobre fondo neutro",
+        "02_ambiente_salamanca.jpg": "Sofa Acapulco de 2 plazas en una azotea de Salamanca, sobre piedra dorada de Villamayor y con las torres de la catedral al atardecer, con una manta de lino sobre el brazo",
+        "03_medidas.jpg": "Medidas del sofa Acapulco de 2 plazas: 131 cm de ancho y 70 de alto. Se vende solo el sofa",
+    }),
+    "manhatan2_sofa": ("sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm", {
+        "01_packshot.jpg": "Sofa de terraza Manhatan de 2 plazas con estructura de aluminio antracita de brazo plano y base de patin, con cojines gris claro, 133x66x70 cm, sobre fondo neutro",
+        "02_ambiente_pirineo.jpg": "Sofa Manhatan de 2 plazas en una terraza de pizarra del Pirineo aragones, junto a un muro de piedra seca con lavanda, pinos y los picos rocosos al fondo",
+        "03_medidas.jpg": "Medidas del sofa Manhatan de 2 plazas: 133 cm de ancho y 70 de alto. Se vende solo el sofa",
+    }),
+}
+
 GALERIAS_AUDITORIA_H2 = {
     "balinesa198": ("balliu-cama-balinesa-exterior-aluminio-estilo-minimalista-198-cm-dcaf71d8", {
         "01_packshot.jpg": "Cama balinesa de exterior de aluminio blanco con cubierta integrada y dos paneles laterales de tejido nautico, 198 cm, sobre fondo neutro",
@@ -1148,7 +1185,7 @@ def anotar_verificacion(entradas):
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
-    ACTIVA = GALERIAS_AUDITORIA_H2
+    ACTIVA = GALERIAS_MODELO_SENTADA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

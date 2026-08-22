@@ -75,10 +75,18 @@
 | **`set-jardin-2-plazas-contemporaneo-...-mesa`** (Leisa-7) | blanco + gris marengo / **frío** | Frío/caliza | **C14 Terraza sobre Cuenca** — casas colgadas, hoz del Huécar, caliza (mundo de la serie Leisa) | — (set, 4 tomas) | manta de lino · libro |
 | **`set-rinconera-exterior-contemporaneo-...`** (Adel-7) | blanco + gris marengo / **frío** | Blanco/cal marina | **C17 Azotea de Cartagena** — puerto, palmeras, tejados de teja (mundo de la serie Adel) | — (set, 4 tomas) | manta de lino |
 
+| **`sofa-terraza-3-plazas-...-19085-cm`** (Dounvil-3) | antracita + gris claro / **frío** | Frío/granito | **A11 Costa da Morte** — granito, tojo en flor, brezo, el Atlántico bravo (mundo de Dounvil-1) | — | manta de lino |
+| **`sofa-terraza-2-plazas-...-145100-cm`** (Albania-2) | antracita + gris claro / **frío** | Frío/atlántico | **A10 Puerto pesquero asturiano** — casas de colores, barcos amarrados, granito mojado (mundo de Albania-1) | — | manta de lino |
+| **`sofa-terraza-2-plazas-...-13170-cm`** (Acapulco-2) | antracita + gris / **frío** | Frío/piedra dorada | **C6 Azotea de Salamanca** — piedra de Villamayor, las torres de la catedral (mundo de Acapulco-1) | — | manta de lino |
+| **`sofa-terraza-2-plazas-...-13370-cm`** (Manhatan-2) | antracita + gris claro / **frío** | Frío/pizarra | **C5 Pirineo aragonés** — muro de piedra seca, lavanda, pinos y picos (mundo de Manhatan-1) | — | manta de lino |
+| **`set-rinconera-...-hpl-sofisticado-...`** (Loira-7) | blanco + arena, HPL / **cálido** | Cálido/rodeno | **C21 Albarracín (Teruel)** — rodeno rosado, tejados de teja, la muralla en la ladera, balcón de madera | — | manta de lino · libro · romero |
+
 ## Cobertura regional (acumulado)
 Cantabria · Asturias · País Vasco (Bilbao) · Galicia (Rías Baixas y Costa da Morte) · Castilla (Segovia, Salamanca) · Madrid (Pozuelo y Chamberí) · Levante (Murcia) · C. Valenciana (Costa Blanca y Valencia ciudad) · Baleares (Menorca, Ibiza, Mallorca) · Andalucía (Cádiz, campiña sevillana, Sevilla capital, Córdoba, Almería, Málaga/Axarquía, Alpujarra granadina) · *(previas: Barcelona, Salamanca, Toledo)*.
 
 **Infrautilizadas — empujar en las próximas tandas:** HORECA (A8/B9), Tarragona/Costa Daurada, **Aragón (Teruel/Albarracín)**, **Navarra**, León.
+*(22-08-2026: se estrena **C21 Albarracín (Teruel)** — cae Aragón interior. Las 4 piezas de "la modelo sentada" NO estrenan mundo: **heredan el de su hermana del mismo acabado** (A10, A11, C5, C6). Un producto y su variante de otro color viven en sitios distintos; un producto y su hermano del MISMO color, en el mismo.)*
+
 *(21-08-2026 noche: se estrena **C20 La Alberca (Salamanca)** — cae Castilla y León rural. Ocho sets mas se publican REUSANDO el mundo ya fijado por su serie (C8, C13, C14, C15, C17, B2): un set y sus piezas sueltas comparten hábitat, y eso es lo que hace que el catalogo se lea como una sola tienda.)*
 
 *(21-08-2026 tarde: se estrenan **C16 Cáceres, C17 Cartagena, C18 Cangas de Onís y C19 La Vera** — caen tres de las zonas infrautilizadas: Extremadura, Murcia capital y Asturias interior.)*

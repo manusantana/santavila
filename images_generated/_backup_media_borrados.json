@@ -1611,5 +1611,41 @@
    "gid://shopify/MediaImage/71493652119876",
    "gid://shopify/MediaImage/71493652152644"
   ]
+ },
+ {
+  "handle": "sofa-terraza-3-plazas-estilo-contemporaneo-19085-cm",
+  "producto": "gid://shopify/Product/15507127992644",
+  "borrados": [
+   "gid://shopify/MediaImage/70103554556228"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494032949572",
+   "gid://shopify/MediaImage/71494032982340",
+   "gid://shopify/MediaImage/71494033015108"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-145100-cm",
+  "producto": "gid://shopify/Product/15507126976836",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552065860"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494033604932",
+   "gid://shopify/MediaImage/71494033637700",
+   "gid://shopify/MediaImage/71494033670468"
+  ]
+ },
+ {
+  "handle": "sofa-terraza-2-plazas-estilo-contemporaneo-13370-cm",
+  "producto": "gid://shopify/Product/15507128648004",
+  "borrados": [
+   "gid://shopify/MediaImage/70103555604804"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71494034194756",
+   "gid://shopify/MediaImage/71494034227524",
+   "gid://shopify/MediaImage/71494034260292"
+  ]
  }
 ]
