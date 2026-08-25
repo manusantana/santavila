@@ -160,6 +160,43 @@ medidas, que es overlay y no gasta).
 
 **Mas la mesa Corcega (720 EUR)**, unica ficha Hevea del grupo de baja resolucion: 8 creditos mas.
 
+### PRESUPUESTO DE LO QUE QUEDA *(medido, no estimado — 22-08-2026)*
+
+**Coste unitario real:** en la sesion de hoy se gastaron **268 creditos** para **65 imagenes IA
+publicadas** = **4,12 creditos por imagen**. El teorico es 4,00 (2 de generacion + 2 de upscale,
+confirmado en el historico de transacciones); el 0,12 extra son los rechazos, ya descontados los
+refunds de los jobs que fallan solos.
+
+**Una ficha de pieza suelta = 2 imagenes IA + la de medidas (overlay, 0 creditos) = 8,2 creditos.**
+
+| Bloque | Fichas | Creditos | € |
+|---|---|---|---|
+| A · 14 pendientes (mesas de centro, fundas, sillas, accesorios) | 14 | 129 | 6,34 |
+| B · mesa Corcega — la unica Hevea en baja resolucion | 1 | 8 | 0,40 |
+| C · 50 fichas BALLIU, receta de 3 tomas | 50 | 412 | 20,20 |
+| **TOTAL minimo viable** | **65** | **~550** | **~27 €** |
+| *variante: Balliu con receta completa de 4 tomas* | 65 | ~960 | ~47 € |
+
+*(al precio del pack de 1.000 creditos: 49 € = 0,049 €/credito)*
+
+**Lo importante: el plan PLUS ya incluye 1.000 creditos al mes**, o sea **~121 fichas mensuales
+sin pagar nada extra**. Los ~550 creditos que faltan **caben de sobra en una sola renovacion**.
+Comprar solo tiene sentido si hay prisa por cerrarlo antes de que renueve.
+
+**Coste por ficha: 0,40 €.** Puesto al lado del valor de catalogo que mueve (fichas de 300 a
+1.500 €), la produccion de imagen no es el cuello de botella economico — lo es el tiempo y los
+creditos disponibles en el mes.
+
+### Antes de gastar en BALLIU, dos comprobaciones hechas hoy
+1. **Su catalogo NO trae formulas de composicion** (212 paginas, cero patrones `NxA+B+...`): la
+   auditoria de pieza fantasma que tan bien funciono en Hevea **no se puede portar tal cual**.
+2. **Su catalogo tampoco trae fotos mejores**: las imagenes embebidas llegan como mucho a
+   **1.119 px** de lado menor y la mayoria no pasa de 600. Se llama *"Baja resolución"* con razon.
+   Las fotos ya publicadas (mediana **921 px**) son lo mejor que hay.
+
+Conclusion: para Balliu **no hay atajo gratis**. O se genera (412 creditos) o **se le piden las
+fotos en alta al proveedor** — que es gratis y deberia intentarse primero.
+
 ### El frente BALLIU — sin abrir
 **50 fichas, 17.699 EUR.** No se ha tocado en estas dos jornadas. Antes de decidir nada hay que
 mirar dos cosas, porque **no se parece al frente Hevea**:
