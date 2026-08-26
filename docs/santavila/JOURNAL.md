@@ -13,6 +13,53 @@
 
 ---
 
+## 2026-08-22 (L) — SE EXTRAE UN SKILL PORTABLE DE FOTOGRAFIA DE PRODUCTO
+
+Sergio: *«esta skill podria exportarla y llevarla a otro proyecto, que sea otro tipo de producto…
+sin estropear nada de lo que esta»*.
+
+Hecho: **`foto-producto-ia`**, skill generico e independiente. **El skill de Santavila NO se ha
+tocado** — verificado por md5: `a6cddcf9db2edb1e16c41772445511ec` antes y despues.
+
+### Donde vive
+| Ruta | Que es |
+|---|---|
+| `~/.claude/skills/foto-producto-ia/` | **instalacion** — activa en todos los proyectos de esta maquina |
+| `skills-exportables/foto-producto-ia/` | **copia canonica y versionada** — la que se toca y se comparte |
+
+Si se edita, se edita en el repo y se reinstala con `cp -r`. Lo comprueba un `diff -r`.
+
+### Que se llevo y que se quedo
+**Se llevo** (vale para cualquier producto fisico): las cinco leyes (fidelidad, LEY 0, lo que no se
+vende no se dibuja, la metrica rechaza pero no acepta, lo que no se ha mirado no ha medido nada) ·
+el cuestionario de arranque · la mecanica del generador (prompt corto, 1k + upscale, fisica y no
+adjetivos) · las dos frases que rompen la fidelidad · la formula de composicion contra la pieza
+fantasma · el QA de 4 bloques · las cuatro trampas · auditar hacia atras · el calculo de coste.
+
+**Se quedo en Santavila** (y por eso el skill de proyecto sigue siendo necesario): los habitats
+españoles y el registro de localizaciones · la paleta y el fondo bone · Hevea y Balliu · el
+publicador de Shopify · las reglas de marca (nada de comida, nada de chalet de lujo, no montamos
+a domicilio) · los scripts.
+
+### El cuestionario, que es lo que lo hace portable
+12 preguntas en 4 bloques. **Los bloques 1 (el producto) y 4 (lo prohibido) son obligatorios**:
+son los que impiden inventar el producto y prometer de mas. Los bloques 2 y 3 traen valores por
+defecto, pero se enseñan y se confirman — *un defecto aceptado a sabiendas es una decision; uno
+aplicado en silencio es una suposicion*. Incluye una tabla de **que comprobar cuando el cliente no
+sabe responder**, que pasa en la mitad de los proyectos.
+
+### La prueba destapo un hueco real
+Se recorrio el cuestionario con cuatro productos que NO son muebles: zapatilla, crema de 50 ml,
+lavavajillas y anillo. **La toma 5 asumia centimetros** y ahi se rompia: en calzado el dato que
+decide es la TALLA y la horma; en cosmetica el formato; en joyeria la ESCALA. Corregido: la toma 5
+pasa a ser **"el dato por el que se devuelve el producto si falla"**, con una tabla por categoria.
+
+*(Y al verificar que el exportable no arrastraba nada del proyecto, el filtro marco "Shopify"… en
+la frase "Subir a Shopify, WooCommerce, PrestaShop o un PIM", donde es un ejemplo legitimo. Falso
+positivo de manual, y justo la trampa que el propio skill documenta.)*
+
+---
+
 ## 2026-08-22 (CIERRE) — LIMPIEZA, ESTADO DEL PROYECTO Y TRASPASO AL COMPAÑERO
 
 Se acaban los creditos de imagen (quedan 7). Este es el punto de parada: que hay, que se ha
