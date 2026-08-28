@@ -5708,3 +5708,25 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ### Siguiente paso recomendado
 - Delta GSC ~30-ago-1-sep → temas de la siguiente guía y resto de sept. ASMR PDP/reels: esperando OK de créditos del dueño. Pinterest: meta-tag + tableros (dueño). Mirar analítica Metricool de agosto para sesgar formatos de sept.
+
+---
+
+## 2026-08-28 (tarde) · Septiembre planificado hasta el 17 + restricción de créditos
+
+**Paso del flujo:** RRSS — plan de septiembre
+**Estado:** ✅ programado
+**Quién/qué:** Claude Code + compositor + Metricool (JSON-RPC)
+
+### Contexto de créditos (del presupuesto del compañero, commit 9fc65fd)
+- Créditos Higgsfield AGOTADOS hasta la renovación del ~5-sep (1.000/mes, plan Plus). De esos, ~550 ya comprometidos para las fichas Balliu del compañero → para los 5 vídeos ASMR quedan ~450: caben (~150-300) pero SIN margen de retries alegres. Coordinar antes de gastar.
+
+### Programado hoy (además del lote 3 de la mañana)
+- Mar 9-sep 21:00 IG+FB · Carrusel 13 "Sofás por España" (Rioja/Córdoba/Cabo de Gata, sets dounvil-diva-bellagio ESTRENADOS, QA visual hecho).
+- Mié 10-sep 14:00 Pinterest · Pin foto → colección sofás (leisa Madrid).
+- Dom 14-sep 21:00 IG+FB · Carrusel 14 "También puertas adentro" (zaguán/bóveda/hornacinas).
+- Mié 17-sep 14:00 Pinterest · Pin foto → hub tumbonas-de-resina (tumbona costera).
+- Cobertura continua 30-ago → 17-sep. Nuevos pins de COLECCIÓN (no de guía): estrategia Pinterest comercial.
+
+### Reservado (sin programar aún)
+- Reels ASMR: tras renovación 5-sep + OK de gasto del dueño + coordinación con los 550 del compañero.
+- Piezas de la próxima guía: tras delta GSC (~30-ago/1-sep).
