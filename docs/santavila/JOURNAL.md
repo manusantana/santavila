@@ -5730,3 +5730,9 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 ### Reservado (sin programar aún)
 - Reels ASMR: tras renovación 5-sep + OK de gasto del dueño + coordinación con los 550 del compañero.
 - Piezas de la próxima guía: tras delta GSC (~30-ago/1-sep).
+
+### Cadencia ampliada a petición del dueño (2026-08-28, noche)
+- IG pasa a 4/semana con la serie nueva "El detalle" (primeros planos ASMR ya generados, QA visual hecho): melocotón-Manhattan vie 5-sep · granada-Diva jue 11-sep · limonada/sandía-rinconera mar 16-sep (21:00, IG+FB).
+- Pinterest pasa a ~3/semana con pins de colección/producto: mesas sáb 6-sep · parasoles vie 12-sep · cama balinesa (PDP) vie 19-sep (14:00).
+- ⚠️ Parte del material ASMR antiguo fue borrado por la limpieza de intermedios del compañero (sidney/05, dounvil2p/05 ya no existen) — verificar existencia antes de planificar. El catálogo nuevo de sets (ago) trae decenas de ASMR frescos.
+- Cobertura total: 30-ago → 19-sep con 16 piezas; IG 4/sem, Pinterest 3/sem. Gotcha API: el access token del MCP caduca a la hora → refresh con token_endpoint del well-known (client_id de client_info.json).
