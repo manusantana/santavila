@@ -5689,3 +5689,22 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ### Siguiente paso recomendado
 - Próximo delta ~30-ago (decide temas de sept; candidatos: sets/conjuntos o balinesas según RRSS). Lote 3 RRSS con pins/carruseles de las guías 3-4. Pendientes dueño: consent screen, meta-tag Pinterest + tableros, móvil GBP.
+
+---
+
+## 2026-08-28 · Metricool reconectado + repaso de agosto + lote 3 programado
+
+**Paso del flujo:** RRSS — cierre de agosto y arranque de septiembre
+**Estado:** ✅
+**Quién/qué:** Claude Code + mcp-remote (OAuth nuevo) + JSON-RPC directo
+
+### Qué se ejecutó
+- MCP Metricool reconectado (scope local, OAuth limpio; tokens rotos apartados a ~/.mcp-auth/_backup_rotos_20260828). ⚠️ REGLA NUEVA en memoria: en flujos OAuth dar SOLO la URL en texto plano, jamás abrir navegador (usuario multi-navegador; para mcp-remote usar BROWSER=/usr/bin/true).
+- Repaso del planner de agosto: TODO publicado salvo el carrusel 1 (4-ago 21:00, ERROR en IG+FB en el primer envío tras conectar cuentas) que se republicó a la mañana siguiente (5-ago 7:31) con éxito. 8 pins + 7 carruseles + 3 reels OK. Pendientes intactos: c7 (30-ago) y c8 (1-sep).
+- Lote 3 producido y programado (guías 3-4, que no tenían pieza social):
+  · Pin pérgolas → mié 3-sep 14:00 (id 367763355) · Carrusel pérgolas → jue 4-sep 21:00 (367763359)
+  · Pin ¿parasol o pérgola? → vie 5-sep 14:00 (367763366) · Carrusel comparativa → dom 7-sep 21:00 (367763372)
+  · Pins con enlace a su guía; 14 archivos nuevos en Shopify Files (cdn_urls.json).
+
+### Siguiente paso recomendado
+- Delta GSC ~30-ago-1-sep → temas de la siguiente guía y resto de sept. ASMR PDP/reels: esperando OK de créditos del dueño. Pinterest: meta-tag + tableros (dueño). Mirar analítica Metricool de agosto para sesgar formatos de sept.

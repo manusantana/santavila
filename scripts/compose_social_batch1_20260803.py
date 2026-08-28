@@ -179,6 +179,28 @@ PINS = [
         ],
     },
     {
+        "slug": "09-pergola",
+        "image": "images_generated/pergola/03_bajo_la_pergola.jpg",
+        "title": "Pérgola de aluminio: medidas, altura y sombra",
+        "bullets": [
+            "Una 300×300 cm cubre unos 9 m² de sombra",
+            "250 cm de altura: paso holgado y proporción",
+            "Cabe un comedor de 6, un chill out o dos tumbonas",
+            "Anclada siempre a suelo firme: sin anclar es una vela",
+        ],
+    },
+    {
+        "slug": "10-parasol-o-pergola",
+        "image": "images_generated/parasol_roma/03_bajo_el_parasol.jpg",
+        "title": "¿Parasol o pérgola? Qué sombra te conviene",
+        "bullets": [
+            "Parasol: sombra flexible, se mueve y se guarda",
+            "Pérgola: habitación exterior fija, ~9 m² constantes",
+            "Con viento: parasol cerrado, pérgola anclada",
+            "En jardines grandes, la combinación de ambos gana",
+        ],
+    },
+    {
         "slug": "08-base-parasol",
         "image": "images_generated/parasol_roma/02_ambiente_terraza.jpg",
         "title": "Base de parasol: qué peso necesitas",
@@ -337,6 +359,40 @@ CAROUSELS = [
         ],
         "close_image": "images_generated/balinesa/02_ambiente_exterior_mallorca.jpg",
         "close_body": "Comparativa por material, peso y mantenimiento.",
+    },
+    {
+        "dirname": "carrusel-11",
+        "cover_image": "images_generated/pergola/02_ambiente_jardin.jpg",
+        "cover_title": "Pérgola de aluminio: lo que hay que saber",
+        "slides": [
+            ("02", "9 m² de sombra", "Una 300×300 cm cubre un comedor de 6 o un chill out completo."),
+            ("03", "250 cm de altura", "Paso holgado, aire y proporción con tus muebles."),
+            ("04", "Anclaje siempre", "A suelo firme y según el fabricante."),
+        ],
+        "avoid": ("05", "Evita", [
+            "Montarla sin anclar «de momento»",
+            "Elegir medida sin marcar la huella",
+            "El textil desplegado con rachas",
+        ]),
+        "close_image": "images_generated/acapulco2p/02_ambiente_exterior_azotea_salamanca.jpg",
+        "close_body": "Medidas, altura, anclaje y qué cabe debajo, en la guía.",
+    },
+    {
+        "dirname": "carrusel-12",
+        "cover_image": "images_generated/parasol_roma/03_bajo_el_parasol.jpg",
+        "cover_title": "¿Parasol o pérgola?",
+        "slides": [
+            ("02", "Parasol", "Sombra flexible: se mueve con el sol y se guarda en invierno."),
+            ("03", "Pérgola", "Habitación exterior fija: unos 9 m² de sombra constante."),
+            ("04", "Con viento", "El parasol se cierra; la pérgola, anclada y con el textil recogido."),
+        ],
+        "avoid": ("05", "Evita", [
+            "Parasol grande con base pequeña",
+            "Pérgola sin anclar",
+            "Decidir sin haber vivido la terraza",
+        ]),
+        "close_image": "images_generated/tumbona/02_ambiente_costero.jpg",
+        "close_body": "La comparativa completa, con tabla y casos, en la guía.",
     },
     {
         "dirname": "carrusel-07",
