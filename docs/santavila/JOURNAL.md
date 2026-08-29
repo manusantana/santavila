@@ -5736,3 +5736,20 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 - Pinterest pasa a ~3/semana con pins de colección/producto: mesas sáb 6-sep · parasoles vie 12-sep · cama balinesa (PDP) vie 19-sep (14:00).
 - ⚠️ Parte del material ASMR antiguo fue borrado por la limpieza de intermedios del compañero (sidney/05, dounvil2p/05 ya no existen) — verificar existencia antes de planificar. El catálogo nuevo de sets (ago) trae decenas de ASMR frescos.
 - Cobertura total: 30-ago → 19-sep con 16 piezas; IG 4/sem, Pinterest 3/sem. Gotcha API: el access token del MCP caduca a la hora → refresh con token_endpoint del well-known (client_id de client_info.json).
+
+---
+
+## 2026-08-29 · Auditoría de contenido del catálogo (títulos, metas, alt, galerías)
+
+**Paso del flujo:** catálogo — auditoría solicitada por el dueño (el compañero señala trabajo pendiente en alt/descripciones/títulos)
+**Estado:** ✅ auditoría + 1 corrección aplicada · plan priorizado en `AUDITORIA_CONTENIDO_CATALOGO_2026-08-29.md`
+**Quién/qué:** Claude Code + `scripts/audit_contenido_catalogo_20260829.py`
+
+### Hallazgos clave (171 ACTIVE)
+- Texto resuelto: descripciones 100% ≥80p (87% 120-199), metas 100%, taxonomía completa.
+- **Hueco real = imágenes Balliu**: 372/826 alts vacíos (364 Balliu), 184 imágenes <1000px (182 Balliu), 20 destacadas sin alt. Hevea (galerías IA del compañero) impecable.
+- Títulos: 20 >70 chars (sets/rinconeras con sufijos `2/3/4/5` visibles) + 1 duplicado exacto (reposapiés 85×50×43 ×2).
+- ⚠️ Regresión mía del 3-ago: `productUpdate.seo` solo con `title` BORRA la description → 4 metas perdidas (pérgola, base 25 kg, sofás 120/130). RESTAURADAS hoy desde backup. Regla: enviar siempre title+description.
+
+### Siguiente paso recomendado
+- Con OK: alt baseline programático (372 imgs) + recorte de 32 metas. Compañero: retitular 21 sets con modelo. Dueño: email a Balliu (fotos HD + EAN).
