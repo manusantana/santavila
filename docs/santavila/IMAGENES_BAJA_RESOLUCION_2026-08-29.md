@@ -1,0 +1,52 @@
+# Fichas con imágenes de baja resolución (<1000 px) — 2026-08-29
+
+> Fuente: auditoría de contenido 29-ago. Formato: imágenes pequeñas / imágenes totales · URL. 48 productos, 184 imágenes; 182 son fotos de proveedor Balliu (su catálogo no tiene mejores: máx. 1.119 px). Candidatas a regeneración IA tras la renovación de créditos del 5-sep, priorizando por señales GSC (Lola, Eva RG, Noa, mesa Atlanta, sofás 3 plazas).
+
+- 10/25 | https://santavila.com/products/balliu-mesa-exterior-aluminio-7070-cm-724b0db0
+- 9/12 | https://santavila.com/products/balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf
+- 8/11 | https://santavila.com/products/balliu-tumbona-de-exterior-aluminio-36870d09
+- 7/25 | https://santavila.com/products/balliu-mesa-exterior-aluminio-8080-cm-ef580ae2
+- 7/ 7 | https://santavila.com/products/balliu-mobiliario-exterior-resina-28-cm-6264905d
+- 6/ 8 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-75-cm-aca076ae
+- 6/11 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42
+- 6/ 8 | https://santavila.com/products/balliu-mesa-exterior-aluminio-75-cm-dd745448
+- 6/14 | https://santavila.com/products/balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268
+- 6/12 | https://santavila.com/products/balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1
+- 5/11 | https://santavila.com/products/balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c
+- 5/ 6 | https://santavila.com/products/balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec
+- 5/ 9 | https://santavila.com/products/balliu-mesa-exterior-140-18090-cm-e4ec7d7c
+- 4/ 4 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-73-cm-d369d964
+- 4/ 7 | https://santavila.com/products/balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9
+- 4/ 9 | https://santavila.com/products/balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8
+- 4/ 4 | https://santavila.com/products/balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce
+- 4/ 9 | https://santavila.com/products/balliu-silla-exterior-resina-estilo-minimalista-484cbea0
+- 4/ 8 | https://santavila.com/products/balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65
+- 4/11 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-aluminio-54-cm-6c7a42d9
+- 4/ 6 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-aluminio-90b11e5b
+- 4/11 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-aluminio-54-cm-19d3d0ee
+- 4/ 4 | https://santavila.com/products/balliu-colchoneta-para-tumbona-0e9a3256
+- 3/ 6 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-923110d9
+- 3/ 6 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-b19af1ea
+- 3/ 3 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-73-cm-0648657b
+- 3/ 6 | https://santavila.com/products/balliu-mini-tumbona-de-exterior-madera-59-cm-fa211c70
+- 3/10 | https://santavila.com/products/balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-5c88bd77
+- 3/10 | https://santavila.com/products/balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a
+- 3/ 5 | https://santavila.com/products/balliu-mesa-exterior-5d0fb586
+- 3/ 5 | https://santavila.com/products/balliu-mesa-alta-exterior-hpl-94512eab
+- 3/ 9 | https://santavila.com/products/balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6
+- 3/ 4 | https://santavila.com/products/balliu-parasol-para-terraza-acrilico-236bd5f0
+- 3/ 4 | https://santavila.com/products/balliu-parasol-para-terraza-f1ed8b8b
+- 3/ 4 | https://santavila.com/products/balliu-parasol-para-terraza-acrilico-c8dd492d
+- 2/ 2 | https://santavila.com/products/reposapies-exterior-855043-cm-2
+- 2/ 4 | https://santavila.com/products/balliu-tumbona-de-exterior-resina-75-cm-009e68e4
+- 2/ 4 | https://santavila.com/products/balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24
+- 2/ 8 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-resina-48-cm-35554775
+- 2/ 5 | https://santavila.com/products/balliu-mesa-auxiliar-exterior-aluminio-60-cm-9c991818
+- 2/ 7 | https://santavila.com/products/balliu-mesa-exterior-resina-70-cm-33ce1613
+- 2/ 8 | https://santavila.com/products/balliu-mesa-exterior-hpl-140-180100-cm-8e073aab
+- 2/ 4 | https://santavila.com/products/balliu-mesa-exterior-aluminio-72-cm-72514f40
+- 2/ 4 | https://santavila.com/products/balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7
+- 1/ 7 | https://santavila.com/products/balliu-tumbona-de-exterior-aluminio-d08586c1
+- 1/ 4 | https://santavila.com/products/balliu-silla-exterior-resina-estilo-funcional-0b607ec7
+- 1/ 7 | https://santavila.com/products/balliu-pie-de-parasol-c2147052
+- 1/ 1 | https://santavila.com/products/balliu-funda-protectora-exterior-acrilico-a1c16324

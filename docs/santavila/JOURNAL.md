@@ -5753,3 +5753,10 @@ Estas zonas oscuras se resuelven en F0-09 (theme pull) + ampliación de scopes O
 
 ### Siguiente paso recomendado
 - Con OK: alt baseline programático (372 imgs) + recorte de 32 metas. Compañero: retitular 21 sets con modelo. Dueño: email a Balliu (fotos HD + EAN).
+
+### Aplicación de la auditoría (2026-08-29, mismo día) — tareas 1, 2 y 3 con OK del dueño
+- **Alt baseline**: 382 imágenes en 57 productos (patrón `Título · vista principal / ambiente exterior|interior / detalle / medidas / color-del-fichero / vista N`), vía `productUpdateMedia`. Registro en `content/descriptions/alt_baseline_20260829-080424.json` para que el compañero los distinga y sobreescriba con alts artesanales al regenerar galerías. Re-auditoría: alts vacíos 372 → **0**; destacadas sin alt 20 → **0**.
+- **Metas**: 32 recortadas a ≤155 en límite de frase (backup `backup_metas_trim_20260829-080211.json`). Re-auditoría: >160 chars → **0**.
+- **Títulos**: 20 sets/rinconeras retitulados a `Set … · estilo · Modelo` (≤48 chars) usando el modelo Hevea inferido de las escenas de sus galerías (Brandon, Yina, Cupra, Bellagio, Albania, Bolonia XL, Diva, Leisa, Dounvil, Haston, Acapulco, Manhattan, Loira, Adel); sufijos `2/3/4/5` y enumeración `| sofá + …` eliminados. Reposapiés duplicado = 2 productos Hevea distintos según tarifa (Standard 55-XL / Standard XL) → diferenciados en título. Backup `backup_titulos_sets_20260829-080346.json`. Re-auditoría: títulos >70 → **0**, duplicados → **0**. Handles intactos (sin redirecciones).
+- Listado de 48 fichas con imágenes <1000 px en `IMAGENES_BAJA_RESOLUCION_2026-08-29.md` (decisión del dueño: no pedir fotos a Balliu; valorar regeneración IA tras el 5-sep).
+- ⚠️ `reposapies-exterior-855043-cm-2` tiene galería basura (webp generado + captura de pantalla) → candidata prioritaria para el compañero.
