@@ -5835,3 +5835,20 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 - 1/ 1 | https://santavila.com/products/balliu-funda-protectora-exterior-acrilico-a1c16324
 
 (Misma lista en `IMAGENES_BAJA_RESOLUCION_2026-08-29.md`; CSV por producto con todos los indicadores en `content/descriptions/auditoria_contenido_2026-08-29.csv`.)
+
+---
+
+## 2026-08-30 · Landings de marca Balliu y Hevea (visibilidad/GEO)
+
+**Paso del flujo:** GEO — autoridad de entidad y captura de demanda de marca proveedor
+**Estado:** ✅ en vivo
+**Quién/qué:** Claude Code + collectionCreate/REST publish + llms.txt
+
+### Qué se ejecutó
+- Creadas y publicadas 2 colecciones inteligentes por vendor con intro citable + FAQ×4 (patrón hub): `/collections/balliu` (60 productos; "distribuidor online de Balliu en España") y `/collections/hevea` (111 productos). SEO title/meta propios. Motivación: GSC muestra demanda de marca (`tumbonas balliu`, `hamacas balliu`, `balliu muebles jardín`, `balliu export`) cayendo en fichas sueltas.
+- Enlazadas desde el hub `tumbonas-de-resina` (→ Balliu) y `sillones-de-exterior` (→ Hevea); añadidas al `llms.txt` (sección "Marcas que distribuimos"), staging+prod verificados.
+- Wikipedia descartada (notabilidad); Wikidata recomendada (pendiente cuenta del dueño). Bing Webmaster + IndexNow y LinkedIn empresa propuestos como siguientes (necesitan cuentas del dueño).
+- Token Google caducado de nuevo (el consent screen publicado fue el de `ubicuo-para-clientes`; el correcto `santavila-muebles-exteriores` sigue en Testing). Reautorización en curso vía URL manual.
+
+### Siguiente paso recomendado
+- Delta GSC (en cuanto entre el token) → temas de septiembre. Dueño: email a Balliu/Hevea pidiendo listado como distribuidor ("dónde comprar") + publicar consent screen del proyecto correcto + Wikidata/Bing/LinkedIn con Claude.
