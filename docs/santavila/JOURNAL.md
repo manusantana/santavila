@@ -5852,3 +5852,8 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 
 ### Siguiente paso recomendado
 - Delta GSC (en cuanto entre el token) → temas de septiembre. Dueño: email a Balliu/Hevea pidiendo listado como distribuidor ("dónde comprar") + publicar consent screen del proyecto correcto + Wikidata/Bing/LinkedIn con Claude.
+
+### Delta GSC 30-ago (mismo día)
+- 14 clics / **1.040 impr** (+20% quincenal, +50% en agosto) / pos 25,9. Detalle en `GEO-DELTA-2026-08-30.md`.
+- Pérgola 250x300 mejora a pos 13,1; sofá 120 cm a 12,8; `tumbona playa` pos 4 (Lola). Resina: 339 impr, sigue pos 40-47 → cluster de AUTORIDAD (landing Balliu + listado como distribuidor), no de on-page.
+- Decisión: próxima guía "Tumbonas de resina para piscinas comunitarias y hostelería" (query `…profesionales` 76 impr). Próximo delta ~13-sep.
