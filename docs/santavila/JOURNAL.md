@@ -5857,3 +5857,6 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 - 14 clics / **1.040 impr** (+20% quincenal, +50% en agosto) / pos 25,9. Detalle en `GEO-DELTA-2026-08-30.md`.
 - Pérgola 250x300 mejora a pos 13,1; sofá 120 cm a 12,8; `tumbona playa` pos 4 (Lola). Resina: 339 impr, sigue pos 40-47 → cluster de AUTORIDAD (landing Balliu + listado como distribuidor), no de on-page.
 - Decisión: próxima guía "Tumbonas de resina para piscinas comunitarias y hostelería" (query `…profesionales` 76 impr). Próximo delta ~13-sep.
+
+### Consent screen publicado + token permanente (2026-08-30)
+- Causa raíz de los tokens que morían cada 7 días resuelta: app OAuth `santavila-muebles-exteriores` publicada en producción (la nueva Google Auth Platform exige Página principal + Política de privacidad + Dominio autorizado aunque no lleven asterisco). Reautorizado en modo producción y verificado (GSC responde). No volver a reautorizar salvo revocación manual.
