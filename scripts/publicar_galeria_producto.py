@@ -1732,11 +1732,27 @@ GALERIAS_FASE3_H = {
     }),
 }
 
+# FASE 2 · mesa Corcega — la ultima Hevea que quedaba en baja resolucion (07-09-2026).
+# Dos trampas resueltas antes de generar:
+#  1) Las tres fotos del proveedor salen con SEIS SILLAS que no se venden -> se aislan.
+#  2) El CSV daba 135x90x**90** de alto (no creible en una mesa de comedor, y ese SKU arrastra
+#     el problema conocido de mapeo desplazado). El catalogo p.74 da CORCEGA HPL-90 a **76 H**,
+#     y toda la familia HPL (Naloa, Palma, Camelia) es 76. Manda el catalogo.
+#  3) El primer intento convirtio el tablero HPL opaco en un CRISTAL transparente apoyado encima
+#     del marco. Se corrigio nombrando el material y la construccion en el prompt.
+GALERIAS_FASE2 = {
+    "mesa_corcega": ("mesa-comedor-exterior-hpl-13590-cm", {
+        "01_packshot.jpg": "Mesa de comedor de exterior con estructura de aluminio blanco y tablero de HPL gris perla encastrado en el marco, sobre fondo neutro. Se vende solo la mesa, sin sillas",
+        "02_ambiente_menorca.jpg": "Mesa de comedor de exterior de aluminio blanco sola en el porche encalado de una casa menorquina, con columnas de mares, un olivo y el mar al fondo. Se vende solo la mesa, sin sillas",
+        "03_medidas.jpg": "Medidas de la mesa de comedor de exterior: 135 x 90 x 76 cm y 160 x 90 x 76 cm de alto. Solo la mesa, las sillas no estan incluidas",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_H
+    ACTIVA = GALERIAS_FASE2
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
