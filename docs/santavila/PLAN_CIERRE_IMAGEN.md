@@ -100,10 +100,20 @@ centro 90 y 120 (339 y 323 €), taburete Etna (187 €), funda acrílica (37 �
 
 ---
 
-## FASE 2 · La mesa Córcega · **8 créditos**
+## FASE 2 · La mesa Córcega — **CERRADA** (07-09-2026) · ~20 créditos
 
-`mesa-comedor-exterior-hpl-13590-cm` (720 €), la **única Hevea** del grupo B: 3 imágenes de
-1.536×1.024 y 2 de ellas sin alt. Packshot + ambiente + toma 5.
+`mesa-comedor-exterior-hpl-13590-cm` (720 €), la **única Hevea** del grupo B. Con ella **el
+frente Hevea queda cerrado del todo**.
+
+Costó el doble de lo presupuestado por una razón que merece quedar escrita: el packshot aislado
+sobre bone **convirtió el tablero HPL opaco en un cristal transparente** apoyado encima del
+marco, y el ambiente heredó el mismo fallo. Se vio comparando el canto **a tamaño real** contra
+la foto del proveedor —en la miniatura no se aprecia— y se corrigió nombrando material y
+construcción en el prompt: *"opaque matte compact laminate, never glass"* + *"sits flush INSIDE
+the aluminium frame"*.
+
+También salieron **seis sillas fantasma** en las tres fotos del proveedor, y una altura que no
+se pudo escribir: ver [`AVISOS_CATALOGO_2026-09-07.md`](AVISOS_CATALOGO_2026-09-07.md).
 
 ---
 
@@ -155,19 +165,63 @@ convierte estas fichas en galerías completas de verdad.)*
 
 ---
 
+## FASE 3 · **CERRADA** (07-09-2026) — 49 de 50 fichas · ~305 créditos
+
+**La tienda pasa de 120 a 170 fichas (de 171) con la primera imagen en alta.** Se publicaron en
+ocho tandas, con packshot + ambiente por ficha y conservando las fotos de acabado del proveedor.
+
+Solo queda fuera **a propósito** el parasol «Ocean tela» (382 €): su título dice redondo y sus
+fotos son de un parasol cuadrado. No se inventa la forma de un producto.
+
+### Lo que Balliu enseñó y Hevea no
+
+**1 · La resolución no elige el ancla; lo hace ver la pieza.** Tres veces la foto de más píxeles
+no era del producto: en la mesa alta era **solo el pie** (2.480 px), en el pie de parasol eran
+**tres adaptadores de mástil** (2.312 px), y en la Eva Pro T era **otro producto**. Vale más una
+foto de 800 px que enseña la pieza entera.
+
+**2 · El ambiente se ancla al packshot ya validado, no a la foto del proveedor.** Generando los
+dos a la vez desde el original de 800 px, fallaba **uno de cada cuatro**: la tumbona Iris perdió
+su bastidor arqueado, la mesa Altea aclaró su tablero topo a beige y perdió el canto negro. Con
+el flujo en dos pasos —packshot, validar, y de ahí el ambiente— la tanda D salió con **cero
+regeneraciones**.
+
+**3 · El conteo 1:1 también vale para listones y para tramas.** El modelo ensanchó los listones
+de la mesa Atlanta (12 en vez de 30 y pico) y le inventó a la colchoneta un **acolchado en
+rombos** cuando el original tiene costuras rectas. Se arreglan nombrando el rasgo en el prompt.
+
+**4 · La pieza de más también la inventa el modelo.** Dos ambientes duplicaron el producto —una
+tumbona de teca, una silla— siendo fichas de una sola unidad. Y en un caso la segunda salía
+**cortada por el borde**: cortada también cuenta.
+
+**5 · Un producto que se usa sobre otro se fotografía sin el otro.** La colchoneta de tumbona va
+sobre un poyete de obra, no sobre una tumbona que no se vende.
+
+**6 · El auditor de reglas tiene un punto ciego.** Solo mira los ALT, y las fotos de Balliu
+tienen alt genéricos («vista 3»). Una foto con comida y ese alt le pasa desapercibida: se
+encontraron dos —un bodegón de fruta y unas manzanas sobre una mesa— **mirándolas**, no
+auditándolas. Ambas retiradas.
+
+### Coste real
+
+~305 créditos para 49 fichas ≈ **6,2 créditos por ficha**, por debajo de los 8,4 que salían de
+las dos tomas a 4,12. Saldo tras la fase: **487 créditos**.
+
+---
+
 ## Presupuesto
 
-| Fase | Créditos |
-|---|---|
-| 0 · duplicados | 0 |
-| 1 · grupo A (14 fichas) | 82 |
-| 2 · mesa Córcega | 8 |
-| **Subtotal — cierra Hevea entero** | **90** |
-| 3 · Balliu, opción "añadir" | 210–420 |
-| **Total** | **300–510** |
+| Fase | Presupuestado | **Real** |
+|---|---|---|
+| 0 · duplicados | 0 | **0** |
+| 1 · grupo A (14 fichas) | 82 | **~120** |
+| 2 · mesa Córcega | 8 | **~20** |
+| 3 · Balliu (49 fichas) | 210–420 | **~305** |
+| **Total** | 300–510 | **~445** |
 
-**Saldo: 1.007 créditos.** Las fases 0–2 consumen el **9%**. Aun con Balliu completo queda la
-mitad del saldo como reserva.
+**Saldo: 1.007 → 487 créditos.** Dentro de lo previsto: la fase 3 salió incluso barata (6,2
+créditos por ficha frente a los 8,4 teóricos), y lo que se desvió fueron las fases 1 y 2, donde
+las regeneraciones por control de calidad pesaron más que el volumen.
 
 ---
 
@@ -180,3 +234,20 @@ mitad del saldo como reserva.
 5. **Fase 3** — Balliu, según la decisión
 
 Tras cada fase: `auditar_reglas_galeria.py` y commit. Sin excepción.
+
+---
+
+## Lo que queda (07-09-2026)
+
+1. **Parasol «Ocean tela»** (382 €) — en cuanto Balliu diga si es redondo o cuadrado.
+2. **Altura de la mesa Córcega** — en cuanto Hevea la confirme, se añade a su ficha de medidas.
+3. **Fotos en alta a Balliu** — sigue mereciendo la pena pedirlas: es gratis, y convertiría estas
+   50 fichas en galerías completas de verdad en vez de "primera imagen premium + acabados
+   pequeños detrás".
+4. Los avisos de catálogo del compañero: [`AVISOS_CATALOGO_2026-09-07.md`](AVISOS_CATALOGO_2026-09-07.md).
+
+Herramientas nuevas de esta fase:
+- `scripts/inventario_balliu.py` — qué fichas tienen la primera imagen en baja (filtra vídeos).
+- `scripts/anclas_balliu.py` — propone el packshot de proveedor de cada ficha por blancura del borde.
+- `scripts/ver_ficha_balliu.py` — mosaico numerado de TODA la galería de una ficha.
+- `publicar_galeria_producto.py --anadir` — publica conservando los media del proveedor.

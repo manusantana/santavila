@@ -13,6 +13,91 @@
 
 ---
 
+## 2026-09-07 (D) — LA TIENDA ENTERA CON LA PRIMERA IMAGEN EN ALTA: 170 DE 171 FICHAS
+
+Sergio: *«sigue pero con las premisas que definimos, no falles adelante!!!»* — y antes:
+*«sigue con orden, acaba el A y después el resto… no me valen fallos, quiero clientes que
+compren y resultados»*.
+
+Se cerraron **la fase 2 y la fase 3 enteras** en una jornada. La tienda pasa de 120 a **170 de
+171 fichas con la primera imagen en alta resolución**, y la única que falta está fuera a
+propósito.
+
+### Lo que se hizo
+
+| | Fichas | Valor |
+|---|---|---|
+| Fase 2 · mesa Córcega (cierra Hevea) | 1 | 720 € |
+| Fase 3 · Balliu, en ocho tandas | 49 | 16.597 € |
+| **Publicado hoy** | **50** | **17.317 €** |
+
+**Coste: ~325 créditos** (saldo 812 → 487). En Balliu salieron a **6,2 créditos por ficha**, por
+debajo de los 8,4 teóricos.
+
+Modo nuevo en el publicador: **`--anadir`**, que sube las tomas premium, las pone delante y
+**conserva las fotos del proveedor**. En Balliu esas fotos de 800 px *son* las fotos de variante
+—hasta 96 combinaciones en una ficha—; sustituirlas habría dado belleza a costa de la
+información que el cliente necesita para elegir. Es la opción 1 que decidió Sergio el 22-08.
+
+### Los seis fallos que se cazaron, y qué enseñan
+
+**1 · El tablero HPL que se volvió cristal.** El packshot de la mesa Córcega, aislado sobre bone,
+convirtió un tablero opaco en un **vidrio transparente apoyado encima del marco**; el ambiente
+heredó el fallo. Se vio comparando el canto **a tamaño real** contra la foto del proveedor —en
+la miniatura no se nota— y se arregló nombrando material y construcción en el prompt.
+
+**2 · La resolución no elige el ancla; lo hace ver la pieza.** Tres veces la foto de más píxeles
+no era del producto: **solo el pie** de la mesa alta (2.480 px), **tres adaptadores de mástil**
+en vez del pie de parasol (2.312 px), y **otro producto** en la Eva Pro T. Vale más una foto de
+800 px que enseña la pieza entera.
+
+**3 · El ambiente se ancla al packshot validado, no al original.** Generando ambos a la vez
+desde la foto de 800 px fallaba **uno de cada cuatro** —la tumbona Iris perdió su bastidor
+arqueado, la mesa Altea aclaró el tablero topo a beige y perdió el canto negro—. Con el flujo en
+dos pasos, la tanda siguiente salió con **cero regeneraciones**.
+
+**4 · El conteo 1:1 vale para listones y para tramas.** El modelo ensanchó los listones de la
+mesa Atlanta (12 en vez de 30 y pico) y le inventó a la colchoneta un **acolchado en rombos**
+teniendo el original costuras rectas.
+
+**5 · La pieza de más también la inventa el modelo.** Dos ambientes duplicaron el producto en
+fichas de una sola unidad; en uno la segunda salía **cortada por el borde**. Cortada cuenta.
+
+**6 · El auditor tiene un punto ciego.** Solo mira los ALT, y las fotos de Balliu los tienen
+genéricos («vista 3»). Dos fotos con comida —un bodegón de fruta, unas manzanas sobre una mesa—
+le pasaban desapercibidas. Se encontraron **mirándolas**, y se retiraron.
+
+### Hay que tener en cuenta
+
+Fotografiar 50 fichas una a una destapó **cosas del catálogo que no cuadran**, ninguna de imagen.
+Están todas en [`AVISOS_CATALOGO_2026-09-07.md`](AVISOS_CATALOGO_2026-09-07.md). Las dos que
+necesitan respuesta del proveedor:
+
+- **Parasol «Ocean tela» (382 €)** — título Ø200/Ø250 (redondo), fotos de un parasol
+  **cuadrado**. Es la única ficha sin imagen nueva: no se inventa la forma de un producto.
+- **Mesa Córcega (720 €)** — el CSV da **alto 90 cm**, imposible en una mesa de comedor (en su
+  propia foto los respaldos superan el tablero) y el catálogo no lista esa referencia. Su ficha
+  de medidas declara **solo el tablero**, que sí está verificado por triplicado.
+
+Y tres títulos que no describen el producto —una **caja de seguridad** titulada «Mobiliario
+exterior resina», una mesa **redonda** titulada «72×72 cm», una «Mesa alta 110 cm» donde 110 es
+la altura—: eso lo lleva el compañero de SEO, no se ha tocado.
+
+### Decisiones pendientes
+
+- Los **dos vídeos en posición 0** (set Leisa 2.899 € y tumbona Hevea) — ¿deliberado? Es la
+  imagen del listado y la `og:image`.
+- **Pedir a Balliu las fotos en alta** sigue siendo gratis y convertiría estas 50 fichas en
+  galerías completas de verdad, no solo con la primera imagen premium.
+
+### Siguiente paso recomendado
+
+Con 487 créditos y el frente de resolución cerrado, lo que más mueve la aguja ya no es la
+imagen: es la **honestidad de las ~200 descripciones** con claims no verificables (UV,
+«no almacenamiento en invierno»), pendiente desde hace tiempo y con solo la tumbona corregida.
+
+---
+
 ## 2026-08-22 (L) — SE EXTRAE UN SKILL PORTABLE DE FOTOGRAFIA DE PRODUCTO
 
 Sergio: *«esta skill podria exportarla y llevarla a otro proyecto, que sea otro tipo de producto…
