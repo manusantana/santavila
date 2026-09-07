@@ -2068,5 +2068,89 @@
    "gid://shopify/MediaImage/71681537081668",
    "gid://shopify/MediaImage/71681537114436"
   ]
+ },
+ {
+  "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268",
+  "producto": "gid://shopify/Product/15512251892036",
+  "borrados": [
+   "gid://shopify/MediaImage/70159529115972",
+   "gid://shopify/MediaImage/70427910996292",
+   "gid://shopify/MediaImage/70427911094596",
+   "gid://shopify/MediaImage/70427911192900",
+   "gid://shopify/MediaImage/70427911258436",
+   "gid://shopify/MediaImage/70427911356740",
+   "gid://shopify/MediaImage/70427911422276",
+   "gid://shopify/MediaImage/70427911455044",
+   "gid://shopify/MediaImage/70427911586116",
+   "gid://shopify/MediaImage/70427911651652",
+   "gid://shopify/MediaImage/70427911749956",
+   "gid://shopify/MediaImage/70427911782724",
+   "gid://shopify/MediaImage/70427911848260",
+   "gid://shopify/MediaImage/70427912012100"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681643479364",
+   "gid://shopify/MediaImage/71681643512132"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6",
+  "producto": "gid://shopify/Product/15512251433284",
+  "borrados": [
+   "gid://shopify/MediaImage/70159522070852",
+   "gid://shopify/MediaImage/70427904803140",
+   "gid://shopify/MediaImage/70427904934212",
+   "gid://shopify/MediaImage/70427905032516",
+   "gid://shopify/MediaImage/70427905065284",
+   "gid://shopify/MediaImage/70427905163588",
+   "gid://shopify/MediaImage/70427905196356",
+   "gid://shopify/MediaImage/70427905229124"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681647706436",
+   "gid://shopify/MediaImage/71681647739204"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-aluminio-8080-cm-ef580ae2",
+  "producto": "gid://shopify/Product/15512249631044",
+  "borrados": [
+   "gid://shopify/MediaImage/70159517942084",
+   "gid://shopify/MediaImage/70427877310788",
+   "gid://shopify/MediaImage/70427877409092",
+   "gid://shopify/MediaImage/70427877441860",
+   "gid://shopify/MediaImage/70427877507396",
+   "gid://shopify/MediaImage/70427877572932",
+   "gid://shopify/MediaImage/70427877605700",
+   "gid://shopify/MediaImage/70427877671236",
+   "gid://shopify/MediaImage/70427877736772",
+   "gid://shopify/MediaImage/70427877802308",
+   "gid://shopify/MediaImage/70427877900612",
+   "gid://shopify/MediaImage/70427877966148",
+   "gid://shopify/MediaImage/70427877998916",
+   "gid://shopify/MediaImage/70427878129988",
+   "gid://shopify/MediaImage/70427993866564"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681653047620",
+   "gid://shopify/MediaImage/71681653080388"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-aluminio-d08586c1",
+  "producto": "gid://shopify/Product/15512247435588",
+  "borrados": [
+   "gid://shopify/MediaImage/70263122788676",
+   "gid://shopify/MediaImage/70338246377796",
+   "gid://shopify/MediaImage/70427856798020",
+   "gid://shopify/MediaImage/70427856830788",
+   "gid://shopify/MediaImage/70427856863556",
+   "gid://shopify/MediaImage/70427856896324",
+   "gid://shopify/MediaImage/70427856961860"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681657012548",
+   "gid://shopify/MediaImage/71681657045316"
+  ]
  }
 ]

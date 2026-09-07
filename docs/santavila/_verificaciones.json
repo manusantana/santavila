@@ -3214,5 +3214,81 @@
     "alt_len": 179
    }
   ]
+ },
+ "balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_sillon_olimpia",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 112
+   },
+   {
+    "fichero": "02_ambiente_pergola.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 153
+   }
+  ]
+ },
+ "balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_altea",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   },
+   {
+    "fichero": "02_ambiente_patio.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 179
+   }
+  ]
+ },
+ "balliu-mesa-exterior-aluminio-8080-cm-ef580ae2": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_brunei",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 105
+   },
+   {
+    "fichero": "02_ambiente_patio.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 155
+   }
+  ]
+ },
+ "balliu-tumbona-de-exterior-aluminio-d08586c1": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_tumbona_etna_alta",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 165
+   },
+   {
+    "fichero": "02_ambiente_tarima.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   }
+  ]
  }
 }

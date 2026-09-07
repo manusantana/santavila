@@ -1503,11 +1503,37 @@ GALERIAS_FASE3_B = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda C (07-09-2026).
+# LECCION que cambia el flujo a partir de aqui: DOS ambientes seguidos deformaron la pieza al
+# generarse desde la foto de 800 px del proveedor -- la tumbona Iris perdio su bastidor arqueado
+# y la mesa Altea aclaro su tablero topo a beige y perdio el canto negro del HPL.
+# Receta: generar primero el PACKSHOT, validarlo contra el ancla, y **anclar el ambiente al
+# packshot ya validado**. Un master de 1.024 px limpio manda mas fidelidad que un original de 800
+# px con ruido de fondo. Las dos se arreglaron a la primera asi.
+GALERIAS_FASE3_C = {
+    "balliu_sillon_olimpia": ("balliu-sofa-exterior-3-plazas-aluminio-estilo-elegante-62-cm-5e2ef268", {
+        "01_packshot.jpg": "Sillon de exterior Olimpia de una plaza, con estructura de aluminio blanco y cojines tortola, sobre fondo neutro",
+        "02_ambiente_pergola.jpg": "Sillon de exterior Olimpia blanco con cojines tortola, solo bajo una pergola de canizo en una terraza de piedra encalada, con una cesta de mimbre al lado",
+    }),
+    "balliu_mesa_altea": ("balliu-mesa-exterior-aluminio-7070-cm-1b61e6b6", {
+        "01_packshot.jpg": "Mesa de exterior Altea de 70x70 cm con tablero topo de canto negro, columna central y base de estrella en color tortola, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Mesa de exterior Altea con tablero topo, sola en un rincon de patio espanol con suelo de barro cocido, muro encalado y macetas de geranios rojos. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_mesa_brunei": ("balliu-mesa-exterior-aluminio-8080-cm-ef580ae2", {
+        "01_packshot.jpg": "Mesa de exterior Brunei de 80x80 cm con estructura de aluminio blanco y tablero claro, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Mesa de exterior blanca, sola en un patio mediterraneo de suelo de piedra junto a una celosia de ladrillo con buganvilla. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_tumbona_etna_alta": ("balliu-tumbona-de-exterior-aluminio-d08586c1", {
+        "01_packshot.jpg": "Tumbona de exterior Etna Alta de aluminio blanco con bastidor arqueado, asiento elevado para entrar y salir con facilidad y tejido tecnico blanco, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Tumbona de exterior blanca de asiento elevado, sola en una terraza de tarima de madera con grava y lavanda junto a un muro encalado",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_B
+    ACTIVA = GALERIAS_FASE3_C
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
