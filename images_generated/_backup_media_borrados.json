@@ -2664,5 +2664,108 @@
    "gid://shopify/MediaImage/71682323284292",
    "gid://shopify/MediaImage/71682323317060"
   ]
+ },
+ {
+  "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c",
+  "producto": "gid://shopify/Product/15512248320324",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515648324",
+   "gid://shopify/MediaImage/70427864203588",
+   "gid://shopify/MediaImage/70427864334660",
+   "gid://shopify/MediaImage/70427864367428",
+   "gid://shopify/MediaImage/70427864400196",
+   "gid://shopify/MediaImage/70427864432964",
+   "gid://shopify/MediaImage/70427864465732",
+   "gid://shopify/MediaImage/70427864564036",
+   "gid://shopify/MediaImage/70427864596804",
+   "gid://shopify/MediaImage/70427864629572"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683030352196",
+   "gid://shopify/MediaImage/71683030384964"
+  ]
+ },
+ {
+  "handle": "balliu-mobiliario-exterior-resina-28-cm-6264905d",
+  "producto": "gid://shopify/Product/15512253333828",
+  "borrados": [
+   "gid://shopify/MediaImage/70159531049284",
+   "gid://shopify/MediaImage/70427921219908",
+   "gid://shopify/MediaImage/70427921285444",
+   "gid://shopify/MediaImage/70427921318212",
+   "gid://shopify/MediaImage/70427921416516",
+   "gid://shopify/MediaImage/70427921449284"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683031630148",
+   "gid://shopify/MediaImage/71683031662916"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-35554775",
+  "producto": "gid://shopify/Product/15512249041220",
+  "borrados": [
+   "gid://shopify/MediaImage/70159516795204",
+   "gid://shopify/MediaImage/70427870855492",
+   "gid://shopify/MediaImage/70427870888260",
+   "gid://shopify/MediaImage/70427871084868",
+   "gid://shopify/MediaImage/70427871117636",
+   "gid://shopify/MediaImage/70427871379780",
+   "gid://shopify/MediaImage/70427871445316"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683032351044",
+   "gid://shopify/MediaImage/71683032383812"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-resina-estilo-funcional-0b607ec7",
+  "producto": "gid://shopify/Product/15512248222020",
+  "borrados": [
+   "gid://shopify/MediaImage/70263122854212",
+   "gid://shopify/MediaImage/70427864039748",
+   "gid://shopify/MediaImage/70427864072516",
+   "gid://shopify/MediaImage/70427864105284"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683034186052",
+   "gid://shopify/MediaImage/71683034218820"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42",
+  "producto": "gid://shopify/Product/15512248942916",
+  "borrados": [
+   "gid://shopify/MediaImage/70427869413700",
+   "gid://shopify/MediaImage/70159516631364",
+   "gid://shopify/MediaImage/70427869184324",
+   "gid://shopify/MediaImage/70427869249860",
+   "gid://shopify/MediaImage/70427869315396",
+   "gid://shopify/MediaImage/70427869348164",
+   "gid://shopify/MediaImage/70427869479236",
+   "gid://shopify/MediaImage/70427869544772",
+   "gid://shopify/MediaImage/70427869577540",
+   "gid://shopify/MediaImage/70427869675844",
+   "gid://shopify/MediaImage/70427869708612"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683037987140",
+   "gid://shopify/MediaImage/71683038019908"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-5d0fb586",
+  "producto": "gid://shopify/Product/15512248877380",
+  "borrados": [
+   "gid://shopify/MediaImage/70427868332356",
+   "gid://shopify/MediaImage/70427867742532",
+   "gid://shopify/MediaImage/70427868463428",
+   "gid://shopify/MediaImage/70427868496196",
+   "gid://shopify/MediaImage/70427868561732"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71683040051524",
+   "gid://shopify/MediaImage/71683040084292"
+  ]
  }
 ]

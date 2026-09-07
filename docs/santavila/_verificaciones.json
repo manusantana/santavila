@@ -3879,5 +3879,119 @@
     "alt_len": 133
    }
   ]
+ },
+ "balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_silla_bruna",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 103
+   },
+   {
+    "fichero": "02_ambiente_patio.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 136
+   }
+  ]
+ },
+ "balliu-mobiliario-exterior-resina-28-cm-6264905d": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_caja_seguridad",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "02_ambiente_poyete.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 156
+   }
+  ]
+ },
+ "balliu-mesa-auxiliar-exterior-resina-48-cm-35554775": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_evapro_bcn",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 120
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 122
+   }
+  ]
+ },
+ "balliu-silla-exterior-resina-estilo-funcional-0b607ec7": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_silla_selva",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 109
+   },
+   {
+    "fichero": "02_ambiente_jardin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   }
+  ]
+ },
+ "balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_evapro_mini",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   },
+   {
+    "fichero": "02_ambiente_tarima.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 150
+   }
+  ]
+ },
+ "balliu-mesa-exterior-5d0fb586": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_mini_deco",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "02_ambiente_balcon.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 119
+   }
+  ]
  }
 }

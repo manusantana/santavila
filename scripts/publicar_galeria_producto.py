@@ -1696,11 +1696,47 @@ GALERIAS_FASE3_G = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda H (07-09-2026). Las 6 ultimas. Con esto quedan 49 de las 50.
+#  - "Mobiliario exterior resina | 28 cm" (68 EUR) NO es mobiliario: es una CAJA DE SEGURIDAD
+#    WEGUARD con cerradura de combinacion (lo dice su propio SKU). Se fotografia lo que es; el
+#    titulo lo tiene que revisar quien lleva SEO.
+#  - Tres mesas auxiliares de resina blanca de 48x48 conviven en el catalogo y solo se distinguen
+#    por la TAPA: rejilla perforada (Eva Pro BCN), lisa (Eva Pro Mini) y con relieve (Mini
+#    decorativa). Se escribio la diferencia en cada prompt para que el modelo no las uniformase.
+#  - Un ambiente regenerado: asomaba una SEGUNDA silla cortada por el borde. Cortada tambien
+#    cuenta -- "no second chair even partially cut off at the edges".
+GALERIAS_FASE3_H = {
+    "balliu_silla_bruna": ("balliu-silla-exterior-sin-brazos-resina-estilo-contemporaneo-49-cm-af080e9c", {
+        "01_packshot.jpg": "Silla de exterior Bruna de resina blanca con respaldo calado de celosia, sin brazos, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Silla de resina blanca calada, sola en un patio encalado de losas de piedra junto a un romero en tinaja de barro. Se vende solo la silla",
+    }),
+    "balliu_caja_seguridad": ("balliu-mobiliario-exterior-resina-28-cm-6264905d", {
+        "01_packshot.jpg": "Caja de seguridad de exterior en resina color arena, con cerradura de combinacion de cuatro digitos, sobre fondo neutro",
+        "02_ambiente_poyete.jpg": "Caja de seguridad de resina color arena sobre una toalla de lino doblada en el pretil encalado de una terraza mediterranea, con un capazo de esparto al lado",
+    }),
+    "balliu_mesa_evapro_bcn": ("balliu-mesa-auxiliar-exterior-resina-48-cm-35554775", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior Eva Pro BCN de 48x48 cm en resina blanca, con tablero de rejilla perforada, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Mesa auxiliar blanca de rejilla, sola en una terraza de barro cocido contra un muro encalado, con un aloe en maceta encima",
+    }),
+    "balliu_silla_selva": ("balliu-silla-exterior-resina-estilo-funcional-0b607ec7", {
+        "01_packshot.jpg": "Silla de exterior Selva apilable de resina blanca con respaldo de listones y reposabrazos, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Silla de resina blanca apilable, sola sobre el cesped de un jardin junto a un seto recortado y un muro encalado. Se vende solo la silla",
+    }),
+    "balliu_mesa_evapro_mini": ("balliu-mesa-auxiliar-exterior-resina-48-cm-de421a42", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior Eva Pro Mini de 48x48 cm en resina blanca, con tablero completamente liso, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Mesa auxiliar blanca de tablero liso, sola en una terraza de tarima de madera junto a un muro encalado, con una toalla enrollada y un cactus en maceta",
+    }),
+    "balliu_mesa_mini_deco": ("balliu-mesa-exterior-5d0fb586", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior decorativa de 48x48 cm en resina blanca, con relieve moldeado en el tablero, sobre fondo neutro",
+        "02_ambiente_balcon.jpg": "Mesa auxiliar blanca decorativa, sola en un balcon de baldosa hidraulica con barandilla de forja y un geranio en maceta",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_G
+    ACTIVA = GALERIAS_FASE3_H
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
