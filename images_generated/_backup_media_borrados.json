@@ -2273,5 +2273,135 @@
    "gid://shopify/MediaImage/71681718714692",
    "gid://shopify/MediaImage/71681718747460"
   ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8",
+  "producto": "gid://shopify/Product/15512247566660",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514337604",
+   "gid://shopify/MediaImage/70427857518916",
+   "gid://shopify/MediaImage/70427857715524",
+   "gid://shopify/MediaImage/70427858174276",
+   "gid://shopify/MediaImage/70427858239812",
+   "gid://shopify/MediaImage/70427858272580",
+   "gid://shopify/MediaImage/70427859321156",
+   "gid://shopify/MediaImage/70427859353924"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681773666628",
+   "gid://shopify/MediaImage/71681773699396"
+  ]
+ },
+ {
+  "handle": "balliu-mini-tumbona-de-exterior-madera-59-cm-fa211c70",
+  "producto": "gid://shopify/Product/15512247730500",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514566980",
+   "gid://shopify/MediaImage/70427861221700",
+   "gid://shopify/MediaImage/70427861254468",
+   "gid://shopify/MediaImage/70427861287236",
+   "gid://shopify/MediaImage/70427861352772"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681774321988",
+   "gid://shopify/MediaImage/71681774354756"
+  ]
+ },
+ {
+  "handle": "balliu-mini-tumbona-de-exterior-aluminio-62-cm-5a6f53eb",
+  "producto": "gid://shopify/Product/15512247664964",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514534212",
+   "gid://shopify/MediaImage/70427859943748",
+   "gid://shopify/MediaImage/70427860009284",
+   "gid://shopify/MediaImage/70427860074820",
+   "gid://shopify/MediaImage/70427860140356",
+   "gid://shopify/MediaImage/70427860173124",
+   "gid://shopify/MediaImage/70427860664644"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681774813508",
+   "gid://shopify/MediaImage/71681774846276"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-b19af1ea",
+  "producto": "gid://shopify/Product/15512246485316",
+  "borrados": [
+   "gid://shopify/MediaImage/70427852079428",
+   "gid://shopify/MediaImage/70427852144964",
+   "gid://shopify/MediaImage/70427852210500",
+   "gid://shopify/MediaImage/70427852636484",
+   "gid://shopify/MediaImage/70427852669252",
+   "gid://shopify/MediaImage/70263122493764"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681775305028",
+   "gid://shopify/MediaImage/71681775337796"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-19d3d0ee",
+  "producto": "gid://shopify/Product/15512252023108",
+  "borrados": [
+   "gid://shopify/MediaImage/70159529410884",
+   "gid://shopify/MediaImage/70427912044868",
+   "gid://shopify/MediaImage/70427912307012",
+   "gid://shopify/MediaImage/70427912339780",
+   "gid://shopify/MediaImage/70427912569156",
+   "gid://shopify/MediaImage/70427912601924",
+   "gid://shopify/MediaImage/70427912634692",
+   "gid://shopify/MediaImage/70427912798532",
+   "gid://shopify/MediaImage/70427912831300",
+   "gid://shopify/MediaImage/70427912962372",
+   "gid://shopify/MediaImage/70427913060676"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681775731012",
+   "gid://shopify/MediaImage/71681775763780"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-aluminio-72-cm-72514f40",
+  "producto": "gid://shopify/Product/15512251826500",
+  "borrados": [
+   "gid://shopify/MediaImage/70159529017668",
+   "gid://shopify/MediaImage/70427910799684",
+   "gid://shopify/MediaImage/70427910865220",
+   "gid://shopify/MediaImage/70427910930756"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681776681284",
+   "gid://shopify/MediaImage/71681776714052"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-923110d9",
+  "producto": "gid://shopify/Product/15512246419780",
+  "borrados": [
+   "gid://shopify/MediaImage/70427851653444",
+   "gid://shopify/MediaImage/70427851718980",
+   "gid://shopify/MediaImage/70427851751748",
+   "gid://shopify/MediaImage/70427852013892",
+   "gid://shopify/MediaImage/70427852046660",
+   "gid://shopify/MediaImage/70263122297156"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681777271108",
+   "gid://shopify/MediaImage/71681777303876"
+  ]
+ },
+ {
+  "handle": "balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce",
+  "producto": "gid://shopify/Product/15512247763268",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514599748",
+   "gid://shopify/MediaImage/70427861483844",
+   "gid://shopify/MediaImage/70427861516612"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681777566020",
+   "gid://shopify/MediaImage/71681777598788"
+  ]
  }
 ]

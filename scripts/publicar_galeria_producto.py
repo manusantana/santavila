@@ -1568,11 +1568,55 @@ GALERIAS_FASE3_D = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda E (07-09-2026). 8 fichas. Dos hallazgos que no son de imagen sino de
+# CATALOGO, y que hay que pasar al compañero:
+#  - "Tumbona resina Ø73 tablillas Eva Pro T": su packshot y casi toda su galeria son de la
+#    version de TELA (otra ficha). La unica foto real de la version de tablillas era un ambiente
+#    con dos unidades; de ahi se aislo una. La ficha llevaba fotos de otro producto.
+#  - "Mesa exterior aluminio 72x72 Nora": el titulo dice 72x72 pero el producto es REDONDO en sus
+#    cuatro fotos. Se fotografia lo que es -- redonda -- y el titulo lo revisa quien lleva SEO.
+# Y un ambiente regenerado: el modelo DUPLICO la tumbona de teca. Se arreglo con "exactly ONE
+# deckchair in the whole image, never two, do not duplicate it".
+GALERIAS_FASE3_E = {
+    "balliu_tumbona_marina": ("balliu-tumbona-de-exterior-aluminio-68-cm-f7ab4da8", {
+        "01_packshot.jpg": "Tumbona de exterior Marina apilable, con estructura tubular de aluminio blanco y tejido tecnico tortola, sobre fondo neutro",
+        "02_ambiente_azotea.jpg": "Tumbona de exterior blanca apilable, sola en una azotea de gres junto a un pretil encalado y un olivo en maceta, con una manta de lino",
+    }),
+    "balliu_tumbona_bristol": ("balliu-mini-tumbona-de-exterior-madera-59-cm-fa211c70", {
+        "01_packshot.jpg": "Mini tumbona plegable Bristol de madera de teca con lona naranja, sobre fondo neutro",
+        "02_ambiente_duna.jpg": "Mini tumbona de teca con lona naranja, sola en una pasarela de madera entre dunas con un sombrero de paja apoyado en el brazo",
+    }),
+    "balliu_tumbona_cannes": ("balliu-mini-tumbona-de-exterior-aluminio-62-cm-5a6f53eb", {
+        "01_packshot.jpg": "Mini tumbona plegable Cannes de aluminio blanco con tejido blanco y cojin de cabecero, sobre fondo neutro",
+        "02_ambiente_balcon.jpg": "Mini tumbona blanca plegable, sola en un balcon de madera junto a un muro encalado y un aloe en maceta, con una toalla de lino enrollada",
+    }),
+    "balliu_tumbona_evapro": ("balliu-tumbona-de-exterior-resina-b19af1ea", {
+        "01_packshot.jpg": "Tumbona de exterior Eva Pro de resina blanca con tejido tecnico azul y respaldo reclinable, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Tumbona de resina blanca con tejido azul, sola en un patio de hormigon pulido junto a una adelfa en flor y un muro encalado",
+    }),
+    "balliu_mesa_centro_olimpia": ("balliu-mesa-auxiliar-exterior-aluminio-54-cm-19d3d0ee", {
+        "01_packshot.jpg": "Mesa de centro de exterior Olimpia de 74x54 cm con estructura de aluminio blanco y tablero claro, sobre fondo neutro",
+        "02_ambiente_porche.jpg": "Mesa de centro blanca de exterior, sola en el suelo de piedra de un porche encalado con un libro abierto y un helecho en maceta. Se vende solo la mesa",
+    }),
+    "balliu_mesa_nora": ("balliu-mesa-exterior-aluminio-72-cm-72514f40", {
+        "01_packshot.jpg": "Mesa de exterior Nora redonda con tablero blanco, columna central y base redonda de aluminio, sobre fondo neutro",
+        "02_ambiente_hiedra.jpg": "Mesa redonda blanca de exterior, sola en una terraza de losas de piedra contra un muro antiguo cubierto de hiedra. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_tumbona_evapro_tablillas": ("balliu-tumbona-de-exterior-resina-923110d9", {
+        "01_packshot.jpg": "Tumbona de exterior Eva Pro T de resina blanca con asiento de tablillas y respaldo reclinable, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Tumbona de resina blanca de tablillas, sola sobre el cesped de un jardin mediterraneo junto a un seto recortado y cipreses, con una toalla de lino doblada",
+    }),
+    "balliu_tumbona_mini_marina": ("balliu-mini-tumbona-de-exterior-aluminio-57-cm-98ab84ce", {
+        "01_packshot.jpg": "Mini tumbona Marina apilable de aluminio blanco con brazos y tejido azul marino, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Mini tumbona blanca con tejido azul marino, sola en una terraza de tarima de madera frente al mar, con una toalla de lino enrollada",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_D
+    ACTIVA = GALERIAS_FASE3_E
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
