@@ -27,7 +27,11 @@ def _font(size):
         _ov = importlib.util.module_from_spec(spec)
         try: spec.loader.exec_module(_ov)
         except SystemExit: pass
-    return _ov.load_font(size, "/tmp")[0]
+    # OJO: "/tmp" estaba fijo y en un entorno con sandbox NO es escribible -> la conversion
+    # de JetBrains Mono fallaba en silencio y la ficha salia en Menlo, rompiendo la tipografia
+    # de marca. Se usa TMPDIR, que es el temporal real del entorno (07-09-2026).
+    tmp = os.environ.get("TMPDIR") or "/tmp"
+    return _ov.load_font(size, tmp)[0]
 
 INK=(35,37,29); GRIS=(112,114,106); LIN=(203,196,184); BONE=(242,238,230)
 

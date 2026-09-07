@@ -50,7 +50,34 @@ decidir nada sobre Balliu.
 
 ---
 
-## FASE 1 · Grupo A — cerrar las 14 pendientes · **82 créditos**
+## FASE 1 · Grupo A — **CERRADA** (07-09-2026) · 14 fichas, ~120 créditos
+
+**Las 14 publicadas.** El catálogo pasa de 106 a **120 fichas con todas sus imágenes ≥2.000 px**.
+De Hevea solo queda la mesa Córcega (Fase 2). Coste real: ~120 créditos frente a los 82
+presupuestados — la diferencia son tres regeneraciones por control de calidad y dos upscales
+que hubo que relanzar.
+
+### Dos piezas fantasma cazadas en el catálogo ANTES de generar
+- **LOSAS DE CEMENTO (218 €).** Su foto sale con la base de ruedas **y** el mástil del parasol.
+  El catálogo lo dice tres veces —*"(Las losas se venden por separado)"*, *"(No incluye losas)"*—
+  y en la pág. 101 las lista como producto propio: **JUEGO 4 LOSAS, 25 kg cada una, COD LS210**.
+  Se dibujan **solo las cuatro losas**, y la toma 5 lo declara por escrito.
+  Aquí **el dato que decide la compra no son los centímetros: es el PESO** — justo el caso que
+  el skill portable recoge.
+- **TABURETE ETNA (187 €).** Su foto sale con una mesa alta que no se vende. Aislado.
+
+### Una imagen rota, rescatada
+La **silla Janeiro (200 €)** venía de un recorte con artefactos azules pegados. El producto sí era
+legible, así que se reconstruyó el packshot. Su ambiente se **rechazó** por aclarar el textilene
+(pixeles de estructura a L=59 frente a L=85 del packshot) y se regeneró nombrando el color:
+**R−B +5,2 frente a +5,0**. Sin cota fiable en catálogo, **no lleva ficha de medidas**.
+
+### Un fallo de tipografía, detectado y corregido
+La primera ficha de medidas de las losas salió en **Menlo** en vez de JetBrains Mono:
+`ficha_medidas_set.py` tenía `/tmp` **fijo** y en un entorno con sandbox no es escribible, así que
+la conversión de la fuente fallaba **en silencio**. Corregido para usar `TMPDIR`.
+
+### Planteamiento original
 
 Al mirarlas de una en una, **8 de las 14 ya tienen packshot en alta**: no necesitan packshot, solo
 ambiente y la toma 5.

@@ -1790,5 +1790,136 @@
    "gid://shopify/MediaImage/71680403669316",
    "gid://shopify/MediaImage/71680403702084"
   ]
+ },
+ {
+  "handle": "set-losas-cemento-para-base-de-parasol",
+  "producto": "gid://shopify/Product/15507129565508",
+  "borrados": [
+   "gid://shopify/MediaImage/70103557374276"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680723124548",
+   "gid://shopify/MediaImage/71680723157316",
+   "gid://shopify/MediaImage/71680723190084"
+  ]
+ },
+ {
+  "handle": "silla-exterior-estilo-estilizado",
+  "producto": "gid://shopify/Product/15507129172292",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556489540"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680725221700",
+   "gid://shopify/MediaImage/71680725254468"
+  ]
+ },
+ {
+  "handle": "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a",
+  "producto": "gid://shopify/Product/15512247894340",
+  "borrados": [
+   "gid://shopify/MediaImage/71288792613188"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680727286084",
+   "gid://shopify/MediaImage/71680727318852"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-acrilico-a1c16324",
+  "producto": "gid://shopify/Product/15512253727044",
+  "borrados": [
+   "gid://shopify/MediaImage/70263126032708"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680728564036",
+   "gid://shopify/MediaImage/71680728596804"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-6f6d4953",
+  "producto": "gid://shopify/Product/15512253759812",
+  "borrados": [
+   "gid://shopify/MediaImage/71489534099780",
+   "gid://shopify/MediaImage/71489534132548"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680808911172",
+   "gid://shopify/MediaImage/71680808943940"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-340b2844",
+  "producto": "gid://shopify/Product/15512253890884",
+  "borrados": [
+   "gid://shopify/MediaImage/71489535279428",
+   "gid://shopify/MediaImage/71489535312196"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680811630916",
+   "gid://shopify/MediaImage/71680811663684"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-686cc405",
+  "producto": "gid://shopify/Product/15512253661508",
+  "borrados": [
+   "gid://shopify/MediaImage/71489470759236",
+   "gid://shopify/MediaImage/71489470792004"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680813367620",
+   "gid://shopify/MediaImage/71680813400388"
+  ]
+ },
+ {
+  "handle": "base-de-parasol-25-kg",
+  "producto": "gid://shopify/Product/15507129499972",
+  "borrados": [
+   "gid://shopify/MediaImage/70103557275972",
+   "gid://shopify/MediaImage/70108305228100"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680815464772",
+   "gid://shopify/MediaImage/71680815497540"
+  ]
+ },
+ {
+  "handle": "balliu-base-de-parasol-3ee8b72d",
+  "producto": "gid://shopify/Product/15512253464900",
+  "borrados": [
+   "gid://shopify/MediaImage/71489471545668",
+   "gid://shopify/MediaImage/71489471578436"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680822214980",
+   "gid://shopify/MediaImage/71680822247748"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+  "producto": "gid://shopify/Product/15512248549700",
+  "borrados": [
+   "gid://shopify/MediaImage/71680817365316",
+   "gid://shopify/MediaImage/71680817398084",
+   "gid://shopify/MediaImage/71489472725316",
+   "gid://shopify/MediaImage/71489472758084"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680831455556",
+   "gid://shopify/MediaImage/71680831488324"
+  ]
+ },
+ {
+  "handle": "base-de-parasol-25-kg",
+  "producto": "gid://shopify/Product/15507129499972",
+  "borrados": [
+   "gid://shopify/MediaImage/71680815464772",
+   "gid://shopify/MediaImage/71680815497540"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680861962564",
+   "gid://shopify/MediaImage/71680861995332"
+  ]
  }
 ]

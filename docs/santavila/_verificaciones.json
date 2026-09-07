@@ -1848,8 +1848,46 @@
   ]
  },
  "balliu-funda-protectora-exterior-686cc405": {
-  "fecha": "2026-08-21",
+  "fecha": "2026-09-07",
   "carpeta": "funda_tumbona",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 94
+   },
+   {
+    "fichero": "02_ambiente_otono.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 139
+   }
+  ]
+ },
+ "balliu-base-de-parasol-3ee8b72d": {
+  "fecha": "2026-09-07",
+  "carpeta": "base_parasol_balliu",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 78
+   },
+   {
+    "fichero": "02_ambiente_lavanda.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 147
+   }
+  ]
+ },
+ "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6": {
+  "fecha": "2026-09-07",
+  "carpeta": "silla_venus",
   "n_imagenes": 2,
   "imagenes": [
    {
@@ -1859,48 +1897,10 @@
     "alt_len": 117
    },
    {
-    "fichero": "02_ambiente_cantabrico.jpg",
+    "fichero": "02_ambiente_mediterraneo.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 160
-   }
-  ]
- },
- "balliu-base-de-parasol-3ee8b72d": {
-  "fecha": "2026-08-21",
-  "carpeta": "base_parasol",
-  "n_imagenes": 2,
-  "imagenes": [
-   {
-    "fichero": "01_packshot.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 105
-   },
-   {
-    "fichero": "02_ambiente_jardin.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 134
-   }
-  ]
- },
- "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6": {
-  "fecha": "2026-08-21",
-  "carpeta": "venus_silla",
-  "n_imagenes": 2,
-  "imagenes": [
-   {
-    "fichero": "01_packshot.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 137
-   },
-   {
-    "fichero": "02_ambiente_cordoba.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 144
+    "alt_len": 120
    }
   ]
  },
@@ -1930,7 +1930,7 @@
   ]
  },
  "balliu-funda-protectora-exterior-6f6d4953": {
-  "fecha": "2026-08-21",
+  "fecha": "2026-09-07",
   "carpeta": "funda_sofa",
   "n_imagenes": 2,
   "imagenes": [
@@ -1938,32 +1938,32 @@
     "fichero": "01_packshot.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 126
+    "alt_len": 106
    },
    {
-    "fichero": "02_ambiente_galicia.jpg",
+    "fichero": "02_ambiente_pergola.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 152
+    "alt_len": 148
    }
   ]
  },
  "balliu-funda-protectora-exterior-340b2844": {
-  "fecha": "2026-08-21",
-  "carpeta": "funda_silla",
+  "fecha": "2026-09-07",
+  "carpeta": "funda_sillas",
   "n_imagenes": 2,
   "imagenes": [
    {
     "fichero": "01_packshot.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 121
+    "alt_len": 95
    },
    {
-    "fichero": "02_ambiente_cortijo.jpg",
+    "fichero": "02_ambiente_arcada.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 180
+    "alt_len": 152
    }
   ]
  },
@@ -2934,6 +2934,107 @@
     "px": "2600x2600",
     "mp": 6.8,
     "alt_len": 91
+   }
+  ]
+ },
+ "set-losas-cemento-para-base-de-parasol": {
+  "fecha": "2026-09-07",
+  "carpeta": "losas_cemento",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 116
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 134
+   }
+  ]
+ },
+ "silla-exterior-estilo-estilizado": {
+  "fecha": "2026-09-07",
+  "carpeta": "silla_janeiro",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 142
+   },
+   {
+    "fichero": "02_ambiente_pirineo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 138
+   }
+  ]
+ },
+ "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a": {
+  "fecha": "2026-09-07",
+  "carpeta": "taburete_etna",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 142
+   },
+   {
+    "fichero": "02_ambiente_mallorca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 156
+   }
+  ]
+ },
+ "balliu-funda-protectora-exterior-acrilico-a1c16324": {
+  "fecha": "2026-09-07",
+  "carpeta": "funda_acrilica",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 98
+   },
+   {
+    "fichero": "02_ambiente_otono.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 164
+   }
+  ]
+ },
+ "base-de-parasol-25-kg": {
+  "fecha": "2026-09-07",
+  "carpeta": "base_parasol25",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 115
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 148
    }
   ]
  }

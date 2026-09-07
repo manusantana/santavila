@@ -276,6 +276,77 @@ def _verificar_todo():
 #   BOLONIA-4 125x65x42 · UNIVERSAL-80 90x50x40 · UNIVERSAL-120 120x60x40
 #   STANDARD-XL 85x50x43
 # ############################################################################
+# ############################################################################
+# TANDA 2026-09-07 (N) — FASE 1, resto del grupo A. Cuatro fichas con dos
+# piezas fantasma cazadas en el catalogo ANTES de generar:
+#   · LOSAS (218 EUR): su foto sale con la base de ruedas Y el mastil del
+#     parasol. El catalogo lo dice tres veces —"(Las losas se venden por
+#     separado)", "(No incluye losas)"— y en la pag. 101 las lista como
+#     producto propio: JUEGO 4 LOSAS, 25 kg cada una, COD LS210. Se dibujan
+#     SOLO las cuatro losas, y la toma 5 lo declara.
+#     Aqui el dato que decide la compra NO son los cm: es el PESO.
+#   · TABURETE ETNA (187 EUR): su foto sale con una mesa alta que no se vende.
+#     Aislado.
+# La SILLA JANEIRO venia de un recorte ROTO (fondo con artefactos azules): el
+# producto si era legible, asi que se reconstruyo el packshot. Su ambiente se
+# rechazo por aclarar el textilene (L 59 frente a 85 del packshot) y se
+# regenero nombrando el color -> R-B +5,2 vs +5,0. Sin cota fiable en catalogo,
+# NO lleva ficha de medidas.
+# ############################################################################
+# ############################################################################
+# TANDA 2026-09-07 (O) — cierre del grupo A. Seis fichas que YA tenian packshot
+# en alta: solo les faltaba el ambiente. 1 imagen IA por ficha.
+# Las fundas se ambientan en FINAL DE TEMPORADA (pergola desnuda, hojas secas):
+# es lo que comunica para que sirven, sin inventar nada.
+# Sin cota verificada -> ninguna lleva toma 5.
+# ############################################################################
+GALERIAS_FASE1_CIERRE = {
+    "funda_sofa": ("balliu-funda-protectora-exterior-6f6d4953", {
+        "01_packshot.jpg": "Funda protectora gris para sofa de exterior, de tejido tecnico con costuras reforzadas, sobre fondo neutro",
+        "02_ambiente_pergola.jpg": "Funda protectora gris cubriendo un sofa en una terraza encalada al final de la temporada, bajo una pergola de madera desnuda. Se vende solo la funda",
+    }),
+    "funda_sillas": ("balliu-funda-protectora-exterior-340b2844", {
+        "01_packshot.jpg": "Funda protectora oscura para sillas apiladas, de tejido tecnico impermeable, sobre fondo neutro",
+        "02_ambiente_arcada.jpg": "Funda protectora cubriendo una pila de sillas bajo la arcada encalada de un patio, con suelo de barro cocido y un olivo al fondo. Se vende solo la funda",
+    }),
+    "funda_tumbona": ("balliu-funda-protectora-exterior-686cc405", {
+        "01_packshot.jpg": "Funda protectora gris alargada para tumbona de exterior, de tejido tecnico, sobre fondo neutro",
+        "02_ambiente_otono.jpg": "Funda protectora gris cubriendo una tumbona en una terraza encalada en otono, con hojas secas en el suelo de piedra. Se vende solo la funda",
+    }),
+    "base_parasol25": ("base-de-parasol-25-kg", {
+        "01_packshot.jpg": "Base de parasol de hormigon de 25 kg en gris azulado, con tubo de acero negro y pomo de apriete, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Base de parasol de 25 kg sola sobre el suelo de piedra de una terraza encalada, junto a una jardinera con olivos. Se vende solo la base, sin parasol",
+    }),
+    "silla_venus": ("balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6", {
+        "01_packshot.jpg": "Silla de exterior Venus de resina en color tortola, con respaldo de lazo continuo y patas conicas, sobre fondo neutro",
+        "02_ambiente_mediterraneo.jpg": "Silla Venus tortola sola en una terraza de barro cocido de una casa mediterranea, junto a un muro encalado y una higuera",
+    }),
+    "base_parasol_balliu": ("balliu-base-de-parasol-3ee8b72d", {
+        "01_packshot.jpg": "Base de parasol redonda de hormigon gris con tubo de acero, sobre fondo neutro",
+        "02_ambiente_lavanda.jpg": "Base de parasol redonda sola sobre el empedrado de una terraza encalada, junto a un pilon de piedra con lavanda. Se vende solo la base, sin parasol",
+    }),
+}
+
+GALERIAS_FASE1_RESTO = {
+    "losas_cemento": ("set-losas-cemento-para-base-de-parasol", {
+        "01_packshot.jpg": "Juego de cuatro losas de lastre de cemento blanco para base de parasol, apiladas, 25 kg cada una, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Las cuatro losas de lastre colocadas sobre el suelo de piedra de una terraza encalada, con un olivo en tinaja y un muro blanco al fondo",
+        "03_medidas.jpg": "Juego de 4 losas de lastre de 25 kg cada una, 100 kg en total. No incluye la base con ruedas ni el parasol, que se venden por separado",
+    }),
+    "silla_janeiro": ("silla-exterior-estilo-estilizado", {
+        "01_packshot.jpg": "Silla de exterior apilable con estructura de aluminio antracita, brazos y asiento y respaldo alto de textileno gris oscuro, sobre fondo neutro",
+        "02_ambiente_pirineo.jpg": "Silla de exterior antracita sola en una terraza de pizarra del Pirineo, junto a un muro de piedra seca con lavanda y las montanas al fondo",
+    }),
+    "taburete_etna": ("balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a", {
+        "01_packshot.jpg": "Taburete alto de exterior Etna con estructura de aluminio blanco, asiento y respaldo de tejido tecnico blanco y reposapies, sobre fondo neutro",
+        "02_ambiente_mallorca.jpg": "Taburete Etna blanco solo en una terraza de barro cocido de una casa mallorquina, junto a un muro de piedra seca y un olivo viejo. Se vende solo el taburete",
+    }),
+    "funda_acrilica": ("balliu-funda-protectora-exterior-acrilico-a1c16324", {
+        "01_packshot.jpg": "Funda protectora de tejido acrilico gris para tumbona, con costuras reforzadas, sobre fondo neutro",
+        "02_ambiente_otono.jpg": "Funda protectora gris cubriendo una tumbona en un patio encalado al final de la temporada, con una pergola desnuda y hojas secas en el suelo. Se vende solo la funda",
+    }),
+}
+
 GALERIAS_FASE1_A2 = {
     "mesa125_bolonia": ("mesa-de-centro-exterior-125-cm-altura-42-cm", {
         "01_packshot.jpg": "Mesa de centro de exterior Bolonia de aluminio antracita con tablero de lamas y patas de patin, 125x65x42 cm, sobre fondo neutro",
@@ -1345,7 +1416,7 @@ if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE1_A2
+    ACTIVA = GALERIAS_FASE1_CIERRE
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
