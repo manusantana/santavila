@@ -2403,5 +2403,134 @@
    "gid://shopify/MediaImage/71681777566020",
    "gid://shopify/MediaImage/71681777598788"
   ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-73-cm-0648657b",
+  "producto": "gid://shopify/Product/15512247140676",
+  "borrados": [
+   "gid://shopify/MediaImage/70159513846084",
+   "gid://shopify/MediaImage/70427854733636",
+   "gid://shopify/MediaImage/70427854766404"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681849327940",
+   "gid://shopify/MediaImage/71681849360708"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a",
+  "producto": "gid://shopify/Product/15512247992644",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515255108",
+   "gid://shopify/MediaImage/70427862532420",
+   "gid://shopify/MediaImage/70427862565188",
+   "gid://shopify/MediaImage/70427862630724",
+   "gid://shopify/MediaImage/70427862663492",
+   "gid://shopify/MediaImage/70427862729028",
+   "gid://shopify/MediaImage/70427862761796",
+   "gid://shopify/MediaImage/70427862827332",
+   "gid://shopify/MediaImage/70427862925636",
+   "gid://shopify/MediaImage/70427862958404"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681850081604",
+   "gid://shopify/MediaImage/71681850114372"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-73-cm-d369d964",
+  "producto": "gid://shopify/Product/15512247042372",
+  "borrados": [
+   "gid://shopify/MediaImage/70159513747780",
+   "gid://shopify/MediaImage/70427854635332",
+   "gid://shopify/MediaImage/70427854668100",
+   "gid://shopify/MediaImage/70427854700868"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681850769732",
+   "gid://shopify/MediaImage/71681850802500"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-75-cm-009e68e4",
+  "producto": "gid://shopify/Product/15512246649156",
+  "borrados": [
+   "gid://shopify/MediaImage/70159513157956",
+   "gid://shopify/MediaImage/70427853816132",
+   "gid://shopify/MediaImage/70427853848900",
+   "gid://shopify/MediaImage/70427853881668"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681851326788",
+   "gid://shopify/MediaImage/71681851359556"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-75-cm-aca076ae",
+  "producto": "gid://shopify/Product/15512246878532",
+  "borrados": [
+   "gid://shopify/MediaImage/70159513420100",
+   "gid://shopify/MediaImage/70427853979972",
+   "gid://shopify/MediaImage/70427854012740",
+   "gid://shopify/MediaImage/70427854078276",
+   "gid://shopify/MediaImage/70427854143812",
+   "gid://shopify/MediaImage/70427854176580",
+   "gid://shopify/MediaImage/70427854209348"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681852670276",
+   "gid://shopify/MediaImage/71681852703044"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-5c88bd77",
+  "producto": "gid://shopify/Product/15512247927108",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515222340",
+   "gid://shopify/MediaImage/70427862008132",
+   "gid://shopify/MediaImage/70427862073668",
+   "gid://shopify/MediaImage/70427862139204",
+   "gid://shopify/MediaImage/70427862237508",
+   "gid://shopify/MediaImage/70427862270276",
+   "gid://shopify/MediaImage/70427862303044",
+   "gid://shopify/MediaImage/70427862368580",
+   "gid://shopify/MediaImage/70427862401348",
+   "gid://shopify/MediaImage/70427862499652"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681853489476",
+   "gid://shopify/MediaImage/71681853522244"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-resina-70-cm-33ce1613",
+  "producto": "gid://shopify/Product/15512249401668",
+  "borrados": [
+   "gid://shopify/MediaImage/70159517253956",
+   "gid://shopify/MediaImage/70427873804612",
+   "gid://shopify/MediaImage/70427873902916",
+   "gid://shopify/MediaImage/70427873935684",
+   "gid://shopify/MediaImage/70427873968452",
+   "gid://shopify/MediaImage/70427874033988"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681854996804",
+   "gid://shopify/MediaImage/71681855029572"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-aluminio-60-cm-9c991818",
+  "producto": "gid://shopify/Product/15512249368900",
+  "borrados": [
+   "gid://shopify/MediaImage/70427873476932",
+   "gid://shopify/MediaImage/70427873542468",
+   "gid://shopify/MediaImage/70427873575236",
+   "gid://shopify/MediaImage/70427873640772",
+   "gid://shopify/MediaImage/70427873673540"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681855521092",
+   "gid://shopify/MediaImage/71681855553860"
+  ]
  }
 ]

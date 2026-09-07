@@ -1612,11 +1612,51 @@ GALERIAS_FASE3_E = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda F (07-09-2026). 8 fichas. Lo que costo tiempo aqui no fue la calidad
+# sino el UPSCALER: varios trabajos a 4k fallaron sin motivo. Dos salieron a 2k (2.160 px, que
+# cumplen), y uno fallo tres veces seguidas en 4k y en 2k -- se resolvio REGENERANDO el ambiente
+# con otra escena y upscalando ese. Cuando una imagen concreta rompe el upscaler, es mas barato
+# rehacer la imagen que insistir.
+GALERIAS_FASE3_F = {
+    "balliu_tumbona_eva_rtg": ("balliu-tumbona-de-exterior-resina-73-cm-0648657b", {
+        "01_packshot.jpg": "Tumbona de exterior Eva RTG de resina blanca con asiento de tablillas y respaldo reclinable, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Tumbona de resina blanca de tablillas, sola sobre el cesped de un jardin bajo un pino, con una manta de lino doblada",
+    }),
+    "balliu_silla_etna_alta": ("balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-eaf4a34a", {
+        "01_packshot.jpg": "Silla de exterior Etna Alta con estructura de aluminio blanco, respaldo alto de tejido tecnico tortola y reposabrazos, sobre fondo neutro",
+        "02_ambiente_porche.jpg": "Silla de exterior blanca de respaldo alto, sola en el suelo de piedra de un porche encalado junto a un limonero en maceta. Se vende solo la silla",
+    }),
+    "balliu_tumbona_eva_rg": ("balliu-tumbona-de-exterior-resina-73-cm-d369d964", {
+        "01_packshot.jpg": "Tumbona de exterior Eva RG de resina blanca con tejido tecnico azul, sobre fondo neutro",
+        "02_ambiente_pasarela.jpg": "Tumbona de resina blanca con tejido azul, sola en una pasarela de madera sobre la arena con hierba de duna detras y una toalla de lino enrollada",
+    }),
+    "balliu_tumbona_carmen": ("balliu-tumbona-de-exterior-resina-75-cm-009e68e4", {
+        "01_packshot.jpg": "Tumbona de exterior Carmen de resina blanca con tejido tecnico azul y respaldo reclinable, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Tumbona de resina blanca con tejido azul, sola en una terraza de barro cocido junto a un muro encalado con romero en maceta y una toalla de lino",
+    }),
+    "balliu_tumbona_lola": ("balliu-tumbona-de-exterior-resina-75-cm-aca076ae", {
+        "01_packshot.jpg": "Tumbona de exterior Lola de resina blanca con tejido tecnico azul, sobre fondo neutro",
+        "02_ambiente_duna.jpg": "Tumbona de resina blanca con tejido azul, sola sobre la arena junto a un cerramiento de canizo y dunas bajas, con un sombrero de paja",
+    }),
+    "balliu_silla_etna": ("balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-56-cm-5c88bd77", {
+        "01_packshot.jpg": "Silla de exterior Etna con estructura de aluminio blanco, asiento y respaldo de tejido tecnico tortola y reposabrazos, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Silla de exterior blanca, sola en un patio espanol de barro cocido junto a un muro encalado y una jarra de gres con romero. Se vende solo la silla",
+    }),
+    "balliu_mesa_selva": ("balliu-mesa-exterior-resina-70-cm-33ce1613", {
+        "01_packshot.jpg": "Mesa de exterior Selva redonda de 70 cm en resina blanca con cuatro patas, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Mesa redonda blanca de exterior, sola en una terraza de tarima de madera junto a una higuera en maceta y un muro encalado. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_mesa_aux_etna": ("balliu-mesa-auxiliar-exterior-aluminio-60-cm-9c991818", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior Etna de 45x45 cm con tablero claro y estructura de aluminio blanco de patin, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Mesa auxiliar blanca de exterior, sola en el suelo de piedra de una terraza encalada junto a un aloe en maceta, con un libro abierto encima",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_E
+    ACTIVA = GALERIAS_FASE3_F
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
