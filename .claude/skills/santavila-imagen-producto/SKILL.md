@@ -763,6 +763,80 @@ Y antes de abrir un frente nuevo, mirar **cuántas fichas están a medias** (pac
 publicados): solo necesitan 2 tomas en vez de 4, **la mitad de créditos**, y heredan el mundo ya
 fijado por su serie — la coherencia de secuencia sale gratis.
 
+## EL ANCLA NO LA ELIGE LA RESOLUCIÓN, LA ELIGE VER LA PIEZA *(07-09-2026, Balliu)*
+
+Fotografiando 50 fichas de Balliu, **tres veces** la foto de más píxeles no era del producto:
+
+| Ficha | La de más resolución era… |
+|---|---|
+| Mesa alta 110 | **solo el pie**, sin tablero (2.480 px) |
+| Pie de parasol 40 kg | **tres adaptadores de mástil**, no el pie (2.312 px) |
+| Tumbona Eva Pro **T** (tablillas) | el packshot de la versión de **TELA** — otra ficha |
+
+Vale más un ancla de 800 px que enseña la pieza entera. El detector automático
+(`anclas_balliu.py`) **propone**; la vista decide. Y antes de dar por buena la propuesta, se mira
+el mosaico de TODA la galería (`ver_ficha_balliu.py <i>`): ahí aparecen la pieza recortada, el
+packshot de otro producto y la foto de la variante equivocada.
+
+## EL AMBIENTE SE ANCLA AL PACKSHOT VALIDADO, NO AL ORIGINAL *(07-09-2026)*
+
+Generando packshot y ambiente **a la vez** desde una foto de proveedor de 800 px, fallaba **uno
+de cada cuatro**, y siempre por lo mismo: el ambiente **deformaba la pieza**.
+
+- La tumbona **Iris** perdió su bastidor **arqueado** —su rasgo característico— y salió con patas
+  rectas.
+- La mesa **Altea** aclaró su tablero **topo a beige** y perdió el canto negro del HPL.
+
+Las dos se arreglaron a la primera **re-anclando el ambiente al packshot ya aprobado**. Un master
+limpio de 1.024 px manda más fidelidad que un original de 800 px con ruido de fondo.
+
+**El flujo es en DOS PASOS**, y así una tanda de 7 fichas salió con cero regeneraciones:
+1. Los packshots de todo el lote → comparar cada uno contra su ancla → aprobar.
+2. Los ambientes, anclados a los packshots aprobados.
+
+## LA PIEZA DE MÁS TAMBIÉN LA INVENTA EL MODELO *(07-09-2026)*
+
+La pieza fantasma no siempre viene del proveedor: a veces la **duplica el modelo**. Pasó dos
+veces en fichas de una sola unidad —una tumbona de teca, una silla—, y en un caso la segunda
+salía **cortada por el borde**.
+
+**Cortada también cuenta.** La frase que lo arregla:
+
+> `exactly ONE <pieza> in the whole frame, never two, do not duplicate it, no second one even
+> partially cut off at the edges`
+
+## UN PRODUCTO QUE SE USA SOBRE OTRO SE FOTOGRAFÍA SIN EL OTRO *(07-09-2026)*
+
+La **colchoneta de tumbona** va, por definición, sobre una tumbona… que no se vende con ella. Se
+fotografía sobre un **poyete de obra encalado**: cumple su función de enseñar cómo cae el tejido
+y no mete en cuadro la pieza que no se vende. Vale igual para fundas, cojines y bases.
+
+## EL AUDITOR SOLO MIRA LOS ALT — ESE ES SU PUNTO CIEGO *(07-09-2026)*
+
+`auditar_reglas_galeria.py --reglas` da 0 violaciones y **aun así puede haber comida publicada**:
+solo lee los **textos alternativos**, y las fotos de proveedor los tienen genéricos («vista 3»).
+Una foto con un bodegón de fruta y ese alt le pasa desapercibida.
+
+Se encontraron dos así —un bodegón de fruta en la mesa Java, unas manzanas en la mesa Nora—
+**mirando las galerías**, no auditándolas. Regla: al tocar una ficha, **se mira su galería
+entera**; el auditor cubre la espalda, no los ojos.
+
+## AISLAR SOBRE BONE PUEDE REINTERPRETAR EL MATERIAL *(07-09-2026, mesa Córcega)*
+
+Ya estaba escrito que el aislado sobre bone hace que el packshot **invente el acabado**. El caso
+de la Córcega añade lo grave que puede ser: convirtió un **tablero HPL opaco** en un **cristal
+transparente apoyado encima del marco** — no cambió un tono, cambió el material y la
+construcción del mueble.
+
+Se caza comparando el **canto a tamaño real** contra la foto del proveedor; en la miniatura no se
+aprecia. Y se evita nombrando material **y** construcción:
+
+> `opaque matte compact laminate, never glass: no transparency, no reflections` +
+> `the top sits flush INSIDE the aluminium frame, it does not overhang`
+
+Lo mismo con las tramas: a la colchoneta le inventó un **acolchado en rombos** teniendo costuras
+rectas → `plain straight longitudinal seams, never diamond quilting`.
+
 ## CON EL SALDO DE CRÉDITOS BAJO, LOTES DE 4
 Dos generaciones se perdieron con *"out of credits"* en mitad de un lote de 8. Con poco saldo:
 lanzar **de 4 en 4** y **upscalar lo aprobado antes de generar más** — el upscale es lo que convierte

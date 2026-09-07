@@ -162,6 +162,20 @@ distancia de cámara. Nunca "8k, ultrarrealista, calidad premium".
 | `warm raking light` | el metal oscuro se vuelve **latón** (R−B pasó de −7 a **+67**) | *"must stay dark neutral grey — never golden or brass. Neutral white balance"* |
 | aislar sobre fondo neutro | el packshot **se inventa el acabado** que la escena le daba (gris pizarra → beige madera) | **nombrar el material** en el prompt del packshot |
 
+Lo de "inventarse el acabado" puede llegar mucho más lejos que un tono: al aislar una mesa sobre
+fondo neutro, el modelo convirtió su **tablero opaco de laminado compacto** en un **cristal
+transparente apoyado encima del marco**. No cambió el color: cambió el material **y la
+construcción del mueble**. En la miniatura no se ve; se caza recortando el **canto a tamaño real**
+contra la foto oficial.
+
+Por eso el prompt del packshot nombra **material y construcción**, y en negativo:
+> *"opaque matte compact laminate, **never glass**: no transparency, no reflections"* +
+> *"the top sits **flush INSIDE** the frame, it does not overhang"*
+
+**Lo mismo con las tramas de un textil.** A una colchoneta le inventó un **acolchado en rombos**
+teniendo el original costuras rectas → *"plain straight longitudinal seams, **never diamond
+quilting**"*. Un tejido liso es tan fácil de adornar como un metal de dorar.
+
 **Quitar personas u objetos sí se puede pedir. Recolocar el producto, no:** si le pides
 recomponer, lo redibuja, y al redibujar inventa. Si la composición no sirve, **cambia el encuadre,
 no la escena**.
@@ -219,6 +233,61 @@ pieza dudosa. **Mostrar de menos no engaña; mostrar de más, sí.**
 
 ---
 
+## ELEGIR EL ANCLA: LA RESOLUCIÓN NO DECIDE, VER LA PIEZA SÍ
+
+El ancla es la foto oficial a la que se ata todo lo que generes. Es tentador coger **la de más
+píxeles**; es un error. En una producción de 50 fichas, **tres veces** la de más resolución no
+era del producto: era **solo la base** de una mesa, eran **tres accesorios sueltos** en vez de la
+pieza, y era el packshot de **otra variante que es otra ficha**.
+
+Vale más un ancla de 800 px que enseña la pieza entera. Y como los catálogos de proveedor mezclan
+producto, accesorios, recambios y despieces:
+
+- **Automatiza la propuesta, no la decisión.** Un detector de "fondo liso y claro" acierta el 90 %
+  de las veces en encontrar los packshots de catálogo; la vista descarta el 10 % restante.
+- **Mira la galería entera antes de elegir**, en un mosaico numerado. Ahí saltan la pieza
+  recortada, el despiece, el recambio y la foto de la variante equivocada.
+
+**Si el proveedor no tiene ninguna foto que enseñe la pieza, no la fotografíes.** Pregunta. Una
+ficha se quedó sin imagen porque su título decía "redondo" y sus dos fotos eran de un producto
+cuadrado: inventar la forma habría sido peor que esperar.
+
+---
+
+## GENERA EL PACKSHOT PRIMERO Y ANCLA EL AMBIENTE A ÉL
+
+La secuencia importa más de lo que parece. Generando **packshot y ambiente a la vez** desde la
+foto del proveedor —a menudo de 800 px, con ruido de fondo—, fallaba **uno de cada cuatro**, y
+siempre igual: el ambiente **deformaba la pieza**. Una tumbona perdió el bastidor arqueado que la
+distingue; una mesa aclaró su tablero y perdió el canto oscuro del material.
+
+**En dos pasos, el mismo lote salió con cero regeneraciones:**
+
+1. Los **packshots** del lote entero → comparar cada uno contra su ancla → aprobar.
+2. Los **ambientes**, anclados al packshot ya aprobado.
+
+Un master limpio manda más fidelidad que un original pequeño y sucio, aunque tenga menos píxeles.
+Y si un ambiente sale deformado, la reparación es **re-anclarlo al packshot bueno**, no insistir
+con el prompt.
+
+---
+
+## LA PIEZA DE MÁS TAMBIÉN LA INVENTA EL MODELO
+
+La pieza fantasma tiene un gemelo: el modelo **duplica el producto**. En fichas de una sola
+unidad aparecieron dos tumbonas, dos sillas… y en un caso la segunda salía **cortada por el
+borde del encuadre**. Cortada cuenta igual: sugiere que se venden dos.
+
+> `exactly ONE <pieza> in the whole frame, never two, do not duplicate it, no second one even
+> partially cut off at the edges`
+
+**Y un producto que se USA sobre otro se fotografía sin el otro.** Una colchoneta de tumbona va,
+por definición, sobre una tumbona que no se vende con ella: se fotografía sobre un poyete, un
+banco de obra o un suelo. Enseña cómo cae el tejido sin meter en cuadro lo que no entra en la
+caja. Vale igual para fundas, cojines y bases.
+
+---
+
 ## LAS CUATRO TRAMPAS
 
 Cuatro disfraces de la misma ley (nº 5). Los cuatro estuvieron a punto de provocar un rechazo —o
@@ -241,6 +310,15 @@ imágenes vivas** en fichas activas por valor de 17.000 €, descubiertas **tres
 Monta un auditor que barra **los textos alternativos** de todo lo publicado contra las reglas del
 bloque 4, y **pásalo después de cada cambio de regla**. El alt es el único texto que delata lo que
 hay dentro de una imagen sin abrirla.
+
+**Y conoce su punto ciego: solo ve lo que el alt cuenta.** Las fotos que vienen del proveedor
+suelen tener alts genéricos —«vista 3», «detalle»— y con eso el auditor da **cero violaciones**
+mientras la regla se sigue incumpliendo dentro de la imagen. Aparecieron dos bodegones con comida
+en fichas que el auditor daba por limpias; se encontraron **mirando las galerías** al tocarlas,
+no auditándolas.
+
+Regla práctica: **al tocar una ficha, mira su galería entera**. El auditor cubre la espalda en lo
+que ya no vas a volver a abrir; no sustituye a los ojos en lo que sí.
 
 **Al quitar una toma prohibida, no hace falta reponerla:** si tu receta canónica son 4 tomas +
 medidas, esa quinta era un extra. **Borrar cuesta 0; regenerar, el precio de una ficha entera.**
