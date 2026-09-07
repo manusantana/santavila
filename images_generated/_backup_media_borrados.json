@@ -1738,5 +1738,57 @@
    "gid://shopify/MediaImage/71494282543428",
    "gid://shopify/MediaImage/71494282576196"
   ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-125-cm-altura-42-cm",
+  "producto": "gid://shopify/Product/15507127271748",
+  "borrados": [
+   "gid://shopify/MediaImage/70103552950596",
+   "gid://shopify/MediaImage/70108304015684"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680400687428",
+   "gid://shopify/MediaImage/71680400720196",
+   "gid://shopify/MediaImage/71680400752964"
+  ]
+ },
+ {
+  "handle": "reposapies-exterior-855043-cm-2",
+  "producto": "gid://shopify/Product/15507127304516",
+  "borrados": [
+   "gid://shopify/MediaImage/70432704332100",
+   "gid://shopify/MediaImage/70432707215684"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680401473860",
+   "gid://shopify/MediaImage/71680401506628",
+   "gid://shopify/MediaImage/71680401539396"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-90-cm-altura-40-cm",
+  "producto": "gid://shopify/Product/15507125600580",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549509956",
+   "gid://shopify/MediaImage/70108303622468"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680403374404",
+   "gid://shopify/MediaImage/71680403407172",
+   "gid://shopify/MediaImage/71680403439940"
+  ]
+ },
+ {
+  "handle": "mesa-de-centro-exterior-120-cm-altura-40-cm",
+  "producto": "gid://shopify/Product/15507125633348",
+  "borrados": [
+   "gid://shopify/MediaImage/70103549542724",
+   "gid://shopify/MediaImage/70108303655236"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71680403636548",
+   "gid://shopify/MediaImage/71680403669316",
+   "gid://shopify/MediaImage/71680403702084"
+  ]
  }
 ]

@@ -266,6 +266,39 @@ def _verificar_todo():
 #     caido en el SUELO, no en el brazo. Ampliada la foto oficial, la estructura
 #     ES tortola. El generado era fiel; el alt dice "tortola", no "blanco".
 # ############################################################################
+# ############################################################################
+# TANDA 2026-09-07 (M) — FASE 1 del PLAN_CIERRE_IMAGEN: grupo A2, las piezas
+# sueltas cuyo material estaba en baja (912-1.536 px).
+# Las tres mesas y el reposapies traian CONSUMIBLES en la foto del proveedor
+# (vasos, cuenco, bandeja de limones, taza, revistas) -> fuera, derogados el
+# 03-08-2026. Cada pieza hereda el mundo de su serie.
+# Cotas: las cuatro con doble fuente (CSV Hevea == catalogo).
+#   BOLONIA-4 125x65x42 · UNIVERSAL-80 90x50x40 · UNIVERSAL-120 120x60x40
+#   STANDARD-XL 85x50x43
+# ############################################################################
+GALERIAS_FASE1_A2 = {
+    "mesa125_bolonia": ("mesa-de-centro-exterior-125-cm-altura-42-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Bolonia de aluminio antracita con tablero de lamas y patas de patin, 125x65x42 cm, sobre fondo neutro",
+        "02_ambiente_cadaques.jpg": "Mesa de centro Bolonia sola en una terraza de Cadaques, sobre laja de pizarra, con muro encalado, postigos de lamas azules, un olivo y la bahia con los llauts al fondo",
+        "03_medidas.jpg": "Medidas de la mesa de centro Bolonia: 125 cm de ancho y 42 de alto. Se vende solo la mesa",
+    }),
+    "reposapies_xl": ("reposapies-exterior-855043-cm-2", {
+        "01_packshot.jpg": "Reposapies de exterior Standard XL con estructura de aluminio antracita y cojin gris claro, 85x50x43 cm, sobre fondo neutro",
+        "02_ambiente_pirineo.jpg": "Reposapies Standard XL solo en una terraza de pizarra del Pirineo aragones, junto a un muro de piedra seca con lavanda y los picos rocosos al fondo, con una manta de lino doblada",
+        "03_medidas.jpg": "Medidas del reposapies Standard XL: 85 cm de ancho y 43 de alto. Se vende solo el reposapies",
+    }),
+    "mesa90_universal": ("mesa-de-centro-exterior-90-cm-altura-40-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Universal de aluminio blanco con tablero de lamas, 90x50x40 cm, sobre fondo neutro",
+        "02_ambiente_cigarral.jpg": "Mesa de centro Universal blanca sola en la terraza de un cigarral toledano, junto a un muro de mamposteria y un olivo viejo, con el valle del Tajo al fondo y un libro abierto encima",
+        "03_medidas.jpg": "Medidas de la mesa de centro Universal: 90 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+    "mesa120_universal": ("mesa-de-centro-exterior-120-cm-altura-40-cm", {
+        "01_packshot.jpg": "Mesa de centro de exterior Universal de aluminio antracita con tablero de lamas, 120x60x40 cm, sobre fondo neutro",
+        "02_ambiente_salamanca.jpg": "Mesa de centro Universal antracita sola en una azotea de Salamanca, sobre piedra dorada de Villamayor, con las torres de la catedral al atardecer y romero en una tinaja de gres",
+        "03_medidas.jpg": "Medidas de la mesa de centro Universal: 120 cm de ancho y 40 de alto. Se vende solo la mesa",
+    }),
+}
+
 GALERIAS_PIEZAS_K = {
     "cupra1_sillon": ("sillon-exterior-estilo-elegante-6590-cm", {
         "01_packshot.jpg": "Sillon de exterior Cupra con estructura de aluminio tortola, brazos tapizados y cojines verde salvia, 65x75x90 cm, sobre fondo neutro",
@@ -1312,7 +1345,7 @@ if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_PIEZAS_K
+    ACTIVA = GALERIAS_FASE1_A2
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

@@ -2836,5 +2836,105 @@
     "alt_len": 90
    }
   ]
+ },
+ "mesa-de-centro-exterior-125-cm-altura-42-cm": {
+  "fecha": "2026-09-07",
+  "carpeta": "mesa125_bolonia",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 128
+   },
+   {
+    "fichero": "02_ambiente_cadaques.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 167
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 89
+   }
+  ]
+ },
+ "reposapies-exterior-855043-cm-2": {
+  "fecha": "2026-09-07",
+  "carpeta": "reposapies_xl",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 123
+   },
+   {
+    "fichero": "02_ambiente_pirineo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 178
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 92
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-90-cm-altura-40-cm": {
+  "fecha": "2026-09-07",
+  "carpeta": "mesa90_universal",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 109
+   },
+   {
+    "fichero": "02_ambiente_cigarral.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 181
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 90
+   }
+  ]
+ },
+ "mesa-de-centro-exterior-120-cm-altura-40-cm": {
+  "fecha": "2026-09-07",
+  "carpeta": "mesa120_universal",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 113
+   },
+   {
+    "fichero": "02_ambiente_salamanca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 176
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 91
+   }
+  ]
  }
 }
