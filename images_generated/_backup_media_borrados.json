@@ -2152,5 +2152,126 @@
    "gid://shopify/MediaImage/71681657012548",
    "gid://shopify/MediaImage/71681657045316"
   ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-aluminio-36870d09",
+  "producto": "gid://shopify/Product/15512247337284",
+  "borrados": [
+   "gid://shopify/MediaImage/70263122690372",
+   "gid://shopify/MediaImage/70338246017348",
+   "gid://shopify/MediaImage/70427856437572",
+   "gid://shopify/MediaImage/70427856503108",
+   "gid://shopify/MediaImage/70427856535876",
+   "gid://shopify/MediaImage/70427856568644",
+   "gid://shopify/MediaImage/70427856601412",
+   "gid://shopify/MediaImage/70427856634180",
+   "gid://shopify/MediaImage/70427856666948",
+   "gid://shopify/MediaImage/70427856732484",
+   "gid://shopify/MediaImage/70427856765252"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681712718148",
+   "gid://shopify/MediaImage/71681712750916"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-resina-28ff014d",
+  "producto": "gid://shopify/Product/15512247173444",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514042692",
+   "gid://shopify/MediaImage/70427854831940",
+   "gid://shopify/MediaImage/70427854864708",
+   "gid://shopify/MediaImage/70427854897476",
+   "gid://shopify/MediaImage/70427854963012",
+   "gid://shopify/MediaImage/70427855126852",
+   "gid://shopify/MediaImage/70427855585604",
+   "gid://shopify/MediaImage/70427856044356"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681713668420",
+   "gid://shopify/MediaImage/71681713701188"
+  ]
+ },
+ {
+  "handle": "balliu-parasol-para-terraza-acrilico-236bd5f0",
+  "producto": "gid://shopify/Product/15512252350788",
+  "borrados": [
+   "gid://shopify/MediaImage/70263124853060",
+   "gid://shopify/MediaImage/70427917091140",
+   "gid://shopify/MediaImage/70427917156676",
+   "gid://shopify/MediaImage/70427917254980"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681714487620",
+   "gid://shopify/MediaImage/71681714520388"
+  ]
+ },
+ {
+  "handle": "balliu-parasol-para-terraza-acrilico-c8dd492d",
+  "producto": "gid://shopify/Product/15512252907844",
+  "borrados": [
+   "gid://shopify/MediaImage/70263125016900",
+   "gid://shopify/MediaImage/70427917615428",
+   "gid://shopify/MediaImage/70427917648196",
+   "gid://shopify/MediaImage/70427917779268"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681715142980",
+   "gid://shopify/MediaImage/71681715175748"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-aluminio-7070-cm-724b0db0",
+  "producto": "gid://shopify/Product/15512250679620",
+  "borrados": [
+   "gid://shopify/MediaImage/70159521022276",
+   "gid://shopify/MediaImage/70427897004356",
+   "gid://shopify/MediaImage/70427897037124",
+   "gid://shopify/MediaImage/70427897135428",
+   "gid://shopify/MediaImage/70427897168196",
+   "gid://shopify/MediaImage/70427897200964",
+   "gid://shopify/MediaImage/70427897299268",
+   "gid://shopify/MediaImage/70428001370436",
+   "gid://shopify/MediaImage/70428001435972",
+   "gid://shopify/MediaImage/70428001468740"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681716126020",
+   "gid://shopify/MediaImage/71681716158788"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e",
+  "producto": "gid://shopify/Product/15512252252484",
+  "borrados": [
+   "gid://shopify/MediaImage/70159530066244",
+   "gid://shopify/MediaImage/70427916796228",
+   "gid://shopify/MediaImage/70427916861764",
+   "gid://shopify/MediaImage/70427916927300",
+   "gid://shopify/MediaImage/70427916960068",
+   "gid://shopify/MediaImage/70427916992836",
+   "gid://shopify/MediaImage/70427917058372"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681716748612",
+   "gid://shopify/MediaImage/71681716781380"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-aluminio-75-cm-dd745448",
+  "producto": "gid://shopify/Product/15512251728196",
+  "borrados": [
+   "gid://shopify/MediaImage/70159528952132",
+   "gid://shopify/MediaImage/70427910111556",
+   "gid://shopify/MediaImage/70427910144324",
+   "gid://shopify/MediaImage/70427910177092",
+   "gid://shopify/MediaImage/70427910275396",
+   "gid://shopify/MediaImage/70427910340932",
+   "gid://shopify/MediaImage/70427910373700"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681718714692",
+   "gid://shopify/MediaImage/71681718747460"
+  ]
  }
 ]

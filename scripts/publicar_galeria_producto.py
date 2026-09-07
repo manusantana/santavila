@@ -1529,11 +1529,50 @@ GALERIAS_FASE3_C = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda D (07-09-2026). Primera tanda con el flujo en DOS PASOS: los 7
+# packshots primero, validados contra su ancla, y despues los 7 ambientes anclados a ellos.
+# Cero regeneraciones. Antes, generando ambiente y packshot a la vez desde la foto del
+# proveedor, fallaba uno de cada cuatro.
+#
+# Una ficha se queda FUERA a proposito: "Parasol exterior tela - Ocean tela" (382 EUR). El
+# titulo dice Ø200/Ø250 (redondo) y sus dos unicas fotos son de un parasol CUADRADO. No se
+# inventa la forma de un producto: hay que preguntar a Balliu cual es.
+GALERIAS_FASE3_D = {
+    "balliu_tumbona_etna": ("balliu-tumbona-de-exterior-aluminio-36870d09", {
+        "01_packshot.jpg": "Tumbona de exterior Etna de aluminio con bastidor arqueado y tejido tecnico tortola, sobre fondo neutro",
+        "02_ambiente_piedra.jpg": "Tumbona de exterior con bastidor arqueado, sola en un patio de piedra junto a un muro de piedra seca con agaves y chumberas, con una toalla de lino doblada",
+    }),
+    "balliu_tumbona_noa": ("balliu-tumbona-de-exterior-resina-28ff014d", {
+        "01_packshot.jpg": "Tumbona de exterior Noa de resina con patas cilindricas y tejido tecnico tortola, respaldo reclinable, sobre fondo neutro",
+        "02_ambiente_azotea.jpg": "Tumbona de exterior de resina, sola en una azotea de baldosa de barro con un cerramiento de canizo y una manta de lino sobre el respaldo",
+    }),
+    "balliu_parasol_pamela": ("balliu-parasol-para-terraza-acrilico-236bd5f0", {
+        "01_packshot.jpg": "Parasol redondo de exterior Pamela de 200 cm en tejido acrilico azul, con mastil de aluminio, sobre fondo neutro. El pie se vende por separado",
+        "02_ambiente_hidraulico.jpg": "Parasol redondo azul abierto sobre una terraza de baldosa hidraulica junto a un muro encalado, con sombra limpia de mediodia. El pie se vende por separado",
+    }),
+    "balliu_parasol_ocean_acrilico": ("balliu-parasol-para-terraza-acrilico-c8dd492d", {
+        "01_packshot.jpg": "Parasol redondo de exterior Ocean en tejido acrilico azul, con mastil de aluminio, sobre fondo neutro. El pie se vende por separado",
+        "02_ambiente_cala.jpg": "Parasol redondo azul abierto en una terraza de piedra sobre una cala mediterranea con pinos. El pie se vende por separado",
+    }),
+    "balliu_mesa_capri": ("balliu-mesa-exterior-aluminio-7070-cm-724b0db0", {
+        "01_packshot.jpg": "Mesa de exterior Capri redonda de 70 cm con tablero blanco, columna de aluminio y base cuadrada, sobre fondo neutro",
+        "02_ambiente_balcon.jpg": "Mesa redonda blanca de exterior, sola en un balcon de baldosa hidraulica con barandilla de forja y jazmin en la pared. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_mesa_centro": ("balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e", {
+        "01_packshot.jpg": "Mesa de centro de exterior de 110x60 cm con tablero claro veteado y estructura de aluminio blanco de patas inclinadas, sobre fondo neutro",
+        "02_ambiente_porche.jpg": "Mesa de centro de exterior blanca, sola sobre una alfombra de yute en el suelo de piedra de un porche encalado, con libros y una manta de lino al lado. Se vende solo la mesa",
+    }),
+    "balliu_mesa_agata": ("balliu-mesa-exterior-aluminio-75-cm-dd745448", {
+        "01_packshot.jpg": "Mesa de exterior Agata de 75x75 cm con tablero de aluminio de esquinas redondeadas, columna central y base cuadrada, sobre fondo neutro",
+        "02_ambiente_ladrillo.jpg": "Mesa de exterior de aluminio, sola en un patio contra un muro de ladrillo visto con una enredadera. Se vende solo la mesa, sin sillas",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_C
+    ACTIVA = GALERIAS_FASE3_D
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

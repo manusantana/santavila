@@ -3290,5 +3290,138 @@
     "alt_len": 131
    }
   ]
+ },
+ "balliu-tumbona-de-exterior-aluminio-36870d09": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_tumbona_etna",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 103
+   },
+   {
+    "fichero": "02_ambiente_piedra.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 155
+   }
+  ]
+ },
+ "balliu-tumbona-de-exterior-resina-28ff014d": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_tumbona_noa",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   },
+   {
+    "fichero": "02_ambiente_azotea.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 136
+   }
+  ]
+ },
+ "balliu-parasol-para-terraza-acrilico-236bd5f0": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_parasol_pamela",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 142
+   },
+   {
+    "fichero": "02_ambiente_hidraulico.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 154
+   }
+  ]
+ },
+ "balliu-parasol-para-terraza-acrilico-c8dd492d": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_parasol_ocean_acrilico",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 131
+   },
+   {
+    "fichero": "02_ambiente_cala.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 121
+   }
+  ]
+ },
+ "balliu-mesa-exterior-aluminio-7070-cm-724b0db0": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_capri",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 115
+   },
+   {
+    "fichero": "02_ambiente_balcon.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 152
+   }
+  ]
+ },
+ "balliu-mesa-de-centro-exterior-aluminio-60-cm-510b363e": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_centro",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_porche.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 173
+   }
+  ]
+ },
+ "balliu-mesa-exterior-aluminio-75-cm-dd745448": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_agata",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 135
+   },
+   {
+    "fichero": "02_ambiente_ladrillo.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 133
+   }
+  ]
  }
 }
