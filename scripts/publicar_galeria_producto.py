@@ -1477,11 +1477,37 @@ GALERIAS_FASE3_A = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda B (07-09-2026). Dos anclas hubo que corregir a mano:
+#  - Mesa alta 110: el packshot de mas resolucion (2.480 px) era **solo el pie**, sin tablero.
+#    Vale mas una foto de 800 px que ensena la pieza entera que una de 2.480 que no.
+#  - Sofa Etna: la ficha vende Individual / Doble / Triple y el SKU por defecto es INDIVIDUAL,
+#    asi que el ancla es el sillon de una plaza, no el sofa de tres que hay en la misma galeria.
+# Y una regeneracion: el ambiente de la tumbona Iris le cambio el bastidor ARQUEADO por patas
+# rectas. Se arreglo anclando el ambiente al packshot ya validado en vez de a la foto de origen.
+GALERIAS_FASE3_B = {
+    "balliu_sillon_etna": ("balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1", {
+        "01_packshot.jpg": "Sillon de exterior Etna de una plaza, con estructura de aluminio blanco y cojines gris claro, sobre fondo neutro",
+        "02_ambiente_porche.jpg": "Sillon de exterior Etna blanco con cojines grises, solo en un porche encalado de suelo de barro cocido, con una manta de lino sobre el brazo y un olivo en maceta",
+    }),
+    "balliu_tumbona_iris": ("balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9", {
+        "01_packshot.jpg": "Tumbona de exterior Iris con bastidor arqueado de aluminio blanco y tejido tecnico blanco, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Tumbona de exterior blanca de bastidor arqueado, sola en una terraza de piedra frente al mar, con una toalla de lino enrollada y lavanda en tinaja de barro",
+    }),
+    "balliu_tumbona_olimpia": ("balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24", {
+        "01_packshot.jpg": "Tumbona de exterior Olimpia de aluminio blanco con tejido tortola y dos ruedas de traslado, sobre fondo neutro",
+        "02_ambiente_jardin.jpg": "Tumbona de exterior blanca con tejido tortola, sola en un jardin mediterraneo de grava con romero y lavanda junto a una casa encalada",
+    }),
+    "balliu_mesa_alta": ("balliu-mesa-alta-exterior-hpl-94512eab", {
+        "01_packshot.jpg": "Mesa alta de exterior con tablero cuadrado claro, columna de aluminio y base cuadrada de acero, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Mesa alta de exterior sola en una terraza mediterranea encalada con suelo de piedra, un olivo en maceta y una jarra de gres con romero encima. Se vende solo la mesa, sin taburetes",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_A
+    ACTIVA = GALERIAS_FASE3_B
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

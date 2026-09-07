@@ -3138,5 +3138,81 @@
     "alt_len": 160
    }
   ]
+ },
+ "balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_sillon_etna",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 112
+   },
+   {
+    "fichero": "02_ambiente_porche.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 161
+   }
+  ]
+ },
+ "balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_tumbona_iris",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 109
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 155
+   }
+  ]
+ },
+ "balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_tumbona_olimpia",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 110
+   },
+   {
+    "fichero": "02_ambiente_jardin.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 133
+   }
+  ]
+ },
+ "balliu-mesa-alta-exterior-hpl-94512eab": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_alta",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 114
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 179
+   }
+  ]
  }
 }

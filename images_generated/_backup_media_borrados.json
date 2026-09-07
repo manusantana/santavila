@@ -2002,5 +2002,71 @@
    "gid://shopify/MediaImage/71681507230020",
    "gid://shopify/MediaImage/71681507262788"
   ]
+ },
+ {
+  "handle": "balliu-sofa-exterior-3-plazas-aluminio-estilo-contemporaneo-77-cm-674ab9a1",
+  "producto": "gid://shopify/Product/15512252154180",
+  "borrados": [
+   "gid://shopify/MediaImage/70159529967940",
+   "gid://shopify/MediaImage/70427915583812",
+   "gid://shopify/MediaImage/70427915845956",
+   "gid://shopify/MediaImage/70427915911492",
+   "gid://shopify/MediaImage/70427916009796",
+   "gid://shopify/MediaImage/70427916075332",
+   "gid://shopify/MediaImage/70427916108100",
+   "gid://shopify/MediaImage/70427916206404",
+   "gid://shopify/MediaImage/70427916337476",
+   "gid://shopify/MediaImage/70427916435780",
+   "gid://shopify/MediaImage/70427916501316"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681534820676",
+   "gid://shopify/MediaImage/71681534853444"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-con-ruedas-aluminio-58-cm-9064b7b9",
+  "producto": "gid://shopify/Product/15512247533892",
+  "borrados": [
+   "gid://shopify/MediaImage/70159514304836",
+   "gid://shopify/MediaImage/70427857092932",
+   "gid://shopify/MediaImage/70427857125700",
+   "gid://shopify/MediaImage/70427857158468",
+   "gid://shopify/MediaImage/70427857191236",
+   "gid://shopify/MediaImage/70427857224004"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681535312196",
+   "gid://shopify/MediaImage/71681535344964"
+  ]
+ },
+ {
+  "handle": "balliu-tumbona-de-exterior-sin-ruedas-aluminio-da3f5c24",
+  "producto": "gid://shopify/Product/15512247271748",
+  "borrados": [
+   "gid://shopify/MediaImage/70263122624836",
+   "gid://shopify/MediaImage/70427856077124",
+   "gid://shopify/MediaImage/70427856142660",
+   "gid://shopify/MediaImage/70427856175428"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681536000324",
+   "gid://shopify/MediaImage/71681536033092"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-alta-exterior-hpl-94512eab",
+  "producto": "gid://shopify/Product/15512251105604",
+  "borrados": [
+   "gid://shopify/MediaImage/70263124263236",
+   "gid://shopify/MediaImage/70427900313924",
+   "gid://shopify/MediaImage/70427900346692",
+   "gid://shopify/MediaImage/70427900444996",
+   "gid://shopify/MediaImage/70427900477764"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681537081668",
+   "gid://shopify/MediaImage/71681537114436"
+  ]
  }
 ]
