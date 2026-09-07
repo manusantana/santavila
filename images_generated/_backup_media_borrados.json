@@ -1921,5 +1921,19 @@
    "gid://shopify/MediaImage/71680861962564",
    "gid://shopify/MediaImage/71680861995332"
   ]
+ },
+ {
+  "handle": "mesa-comedor-exterior-hpl-13590-cm",
+  "producto": "gid://shopify/Product/15507129073988",
+  "borrados": [
+   "gid://shopify/MediaImage/70103556227396",
+   "gid://shopify/MediaImage/70108304834884",
+   "gid://shopify/MediaImage/70108537258308"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681443201348",
+   "gid://shopify/MediaImage/71681443234116",
+   "gid://shopify/MediaImage/71681443266884"
+  ]
  }
 ]

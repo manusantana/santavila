@@ -3037,5 +3037,30 @@
     "alt_len": 148
    }
   ]
+ },
+ "mesa-comedor-exterior-hpl-13590-cm": {
+  "fecha": "2026-09-07",
+  "carpeta": "mesa_corcega",
+  "n_imagenes": 3,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 141
+   },
+   {
+    "fichero": "02_ambiente_menorca.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 191
+   },
+   {
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 121
+   }
+  ]
  }
 }

@@ -59,7 +59,15 @@ def _encuadre(src, W, M, bbox=None):
     x1, y1 = min(src.width, x1+m), min(src.height, y1+m)
     return src.crop((x0, y0, x1, y1))
 
-def ficha_medidas(packshot, filas, incluye, salida, nota_pie="ancho x fondo x alto", preview=None, bbox=None):
+def ficha_medidas(packshot, filas, incluye, salida, nota_pie="ancho x fondo x alto", preview=None, bbox=None,
+                  titulo="MEDIDAS DE CADA PIEZA", rotulo_incluye="EL CONJUNTO INCLUYE"):
+    """`titulo` y `rotulo_incluye` se parametrizaron el 07-09-2026: la misma ficha sirve para un
+    SET (varias piezas) y para un producto con VARIOS TAMANOS, y "MEDIDAS DE CADA PIEZA" /
+    "EL CONJUNTO INCLUYE" mentian en el segundo caso.
+
+    La tipografia SI admite acentos y enye: se comprobo renderizando (JetBrains Mono via PIL los
+    dibuja bien). La regla de "sin enye" es del ANNOUNCEMENT del tema web, otra fuente distinta;
+    no aplica aqui."""
     src = Image.open(packshot).convert("RGB")
     W, M = 2400, 110
     pack = _encuadre(src, W, M, bbox)
@@ -74,7 +82,7 @@ def ficha_medidas(packshot, filas, incluye, salida, nota_pie="ancho x fondo x al
     total = 110 + ph + 120 + 48 + len(filas)*112 + 60 + 118 + 76 + 60
     y = max(90, (W-total)//2)
     lz = Image.new("RGB",(W,W),BONE); d = ImageDraw.Draw(lz)
-    d.text((M,y),"MEDIDAS DE CADA PIEZA",font=_font(48),fill=INK); y += 110
+    d.text((M,y),titulo,font=_font(48),fill=INK); y += 110
     lz.paste(pack,(px,y)); y += ph + 120
     d.line([(M,y),(W-M,y)],fill=INK,width=3); y += 48
     for nombre, cota in filas:
@@ -82,7 +90,7 @@ def ficha_medidas(packshot, filas, incluye, salida, nota_pie="ancho x fondo x al
         f = _font(46); d.text((W-M-d.textlength(cota,font=f), y), cota, font=f, fill=INK)
         y += 112; d.line([(M,y-30),(W-M,y-30)],fill=LIN,width=2)
     d.text((M,y),nota_pie,font=_font(32),fill=GRIS); y += 118
-    d.text((M,y),"EL CONJUNTO INCLUYE",font=_font(38),fill=INK); y += 76
+    d.text((M,y),rotulo_incluye,font=_font(38),fill=INK); y += 76
     d.text((M,y),incluye,font=_font(44),fill=INK)
     lz.save(salida, quality=95)
     if preview: lz.resize((760,760),Image.LANCZOS).save(preview, quality=93)

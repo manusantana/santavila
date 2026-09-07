@@ -1412,11 +1412,29 @@ def anotar_verificacion(entradas):
     print(f"\nregistro de verificacion -> {REG}")
 
 
+# FASE 2 (07-09-2026) - la ultima ficha Hevea en baja resolucion.
+# Tres avisos que costaron dos generaciones y merecen quedar escritos:
+#  1. El packshot aislado sobre bone convirtio el tablero HPL opaco en un CRISTAL transparente
+#     apoyado encima del marco. Se corrigio nombrando el material y la construccion en el prompt
+#     ("opaque matte compact laminate, never glass" + "sits flush INSIDE the aluminium frame").
+#  2. Las tres fotos del proveedor salen con SEIS SILLAS que no se venden -> se borran todas.
+#  3. El CSV da alto = 90 cm para una mesa de comedor: imposible (en la foto los respaldos de las
+#     sillas superan el tablero) y el catalogo da 76 H para toda la familia HPL. Como el catalogo
+#     NO lista la CORCEGA-135x90, la altura NO esta verificada: la ficha de medidas solo declara
+#     el tablero (largo x fondo), que si esta verificado por triplicado. Pendiente: preguntar a Hevea.
+GALERIAS_FASE2 = {
+    "mesa_corcega": ("mesa-comedor-exterior-hpl-13590-cm", {
+        "01_packshot.jpg": "Mesa de comedor de exterior con estructura de aluminio blanco y tablero HPL gris claro, sobre fondo neutro. Se vende solo la mesa, sin sillas",
+        "02_ambiente_menorca.jpg": "Mesa de comedor de exterior con tablero HPL gris claro, sola en el porche encalado de una casa menorquina con columnas de piedra, un olivo y el mar al fondo. Se vende solo la mesa, sin sillas",
+        "03_medidas.jpg": "Medidas de la mesa de comedor de exterior HPL: tablero de 135 x 90 cm y de 160 x 90 cm. Se vende solo la mesa, sin sillas",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE1_CIERRE
+    ACTIVA = GALERIAS_FASE2
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
