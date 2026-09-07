@@ -2532,5 +2532,137 @@
    "gid://shopify/MediaImage/71681855521092",
    "gid://shopify/MediaImage/71681855553860"
   ]
+ },
+ {
+  "handle": "balliu-pie-de-parasol-c2147052",
+  "producto": "gid://shopify/Product/15512253366596",
+  "borrados": [
+   "gid://shopify/MediaImage/70263125475652",
+   "gid://shopify/MediaImage/70427921482052",
+   "gid://shopify/MediaImage/70427921678660",
+   "gid://shopify/MediaImage/70427921711428",
+   "gid://shopify/MediaImage/70427921776964",
+   "gid://shopify/MediaImage/70427921875268",
+   "gid://shopify/MediaImage/70427921940804"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682248868164",
+   "gid://shopify/MediaImage/71682248900932"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-aluminio-54-cm-6c7a42d9",
+  "producto": "gid://shopify/Product/15512249106756",
+  "borrados": [
+   "gid://shopify/MediaImage/70159516991812",
+   "gid://shopify/MediaImage/70427872002372",
+   "gid://shopify/MediaImage/70427872067908",
+   "gid://shopify/MediaImage/70427872133444",
+   "gid://shopify/MediaImage/70427872297284",
+   "gid://shopify/MediaImage/70427872330052",
+   "gid://shopify/MediaImage/70427872362820",
+   "gid://shopify/MediaImage/70427872493892",
+   "gid://shopify/MediaImage/70427872526660",
+   "gid://shopify/MediaImage/70427872592196",
+   "gid://shopify/MediaImage/70427872723268"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682260795716",
+   "gid://shopify/MediaImage/71682260828484"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-auxiliar-exterior-aluminio-90b11e5b",
+  "producto": "gid://shopify/Product/15512249172292",
+  "borrados": [
+   "gid://shopify/MediaImage/70159517024580",
+   "gid://shopify/MediaImage/70427872985412",
+   "gid://shopify/MediaImage/70427873018180",
+   "gid://shopify/MediaImage/70427873083716",
+   "gid://shopify/MediaImage/70427873149252"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682263679300",
+   "gid://shopify/MediaImage/71682263712068"
+  ]
+ },
+ {
+  "handle": "balliu-colchoneta-para-tumbona-0e9a3256",
+  "producto": "gid://shopify/Product/15512253202756",
+  "borrados": [
+   "gid://shopify/MediaImage/70263125311812",
+   "gid://shopify/MediaImage/70427920793924",
+   "gid://shopify/MediaImage/70427920859460",
+   "gid://shopify/MediaImage/70427920990532"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682270527812",
+   "gid://shopify/MediaImage/71682270560580"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65",
+  "producto": "gid://shopify/Product/15512248123716",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515582788",
+   "gid://shopify/MediaImage/70427863712068",
+   "gid://shopify/MediaImage/70427863744836",
+   "gid://shopify/MediaImage/70427863777604",
+   "gid://shopify/MediaImage/70427863908676",
+   "gid://shopify/MediaImage/70427863974212",
+   "gid://shopify/MediaImage/70427864006980"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682296250692",
+   "gid://shopify/MediaImage/71682296283460"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec",
+  "producto": "gid://shopify/Product/15512248680772",
+  "borrados": [
+   "gid://shopify/MediaImage/70159516401988",
+   "gid://shopify/MediaImage/70427865383236",
+   "gid://shopify/MediaImage/70427865416004",
+   "gid://shopify/MediaImage/70427865448772",
+   "gid://shopify/MediaImage/70427865481540"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682313355588",
+   "gid://shopify/MediaImage/71682313388356"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf",
+  "producto": "gid://shopify/Product/15512248418628",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515877700",
+   "gid://shopify/MediaImage/70427864727876",
+   "gid://shopify/MediaImage/70427864760644",
+   "gid://shopify/MediaImage/70427992817988",
+   "gid://shopify/MediaImage/70427992981828"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682318893380",
+   "gid://shopify/MediaImage/71682318926148"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-resina-estilo-minimalista-484cbea0",
+  "producto": "gid://shopify/Product/15512248025412",
+  "borrados": [
+   "gid://shopify/MediaImage/70159515287876",
+   "gid://shopify/MediaImage/70427863155012",
+   "gid://shopify/MediaImage/70427863187780",
+   "gid://shopify/MediaImage/70427863220548",
+   "gid://shopify/MediaImage/70427863318852",
+   "gid://shopify/MediaImage/70427863351620",
+   "gid://shopify/MediaImage/70427863417156",
+   "gid://shopify/MediaImage/70427863515460"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71682323284292",
+   "gid://shopify/MediaImage/71682323317060"
+  ]
  }
 ]

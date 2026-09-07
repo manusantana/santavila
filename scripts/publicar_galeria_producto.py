@@ -1652,11 +1652,55 @@ GALERIAS_FASE3_F = {
     }),
 }
 
+# FASE 3 - BALLIU, tanda G (07-09-2026). 8 fichas.
+#  - El "Pie de parasol 40 kg" tenia como packshot de mas resolucion **tres adaptadores de
+#    mastil**, no el pie. Otra vez: la resolucion no elige el ancla, lo hace ver la pieza.
+#  - La COLCHONETA obligo a regenerar: el modelo le invento un acolchado en ROMBOS y el original
+#    tiene costuras rectas longitudinales. Es la linea roja de texturas del skill (no inventar
+#    tramas) aplicada a un producto textil. Se arreglo nombrandolo: "plain straight longitudinal
+#    seams, never diamond quilting".
+#  - Un producto que se USA sobre otro (la colchoneta va en una tumbona) se fotografia sobre un
+#    poyete de obra, no sobre la tumbona: asi no aparece la pieza que no se vende.
+GALERIAS_FASE3_G = {
+    "balliu_pie_parasol": ("balliu-pie-de-parasol-c2147052", {
+        "01_packshot.jpg": "Pie de parasol redondo de hormigon blanco de 40 kg con tubo de acero y pomo de apriete, sobre fondo neutro",
+        "02_ambiente_terraza.jpg": "Pie de parasol de hormigon blanco, solo sobre el suelo de piedra de una terraza encalada junto a un olivo en maceta. Se vende solo el pie, sin parasol",
+    }),
+    "balliu_mesa_aux_olimpia": ("balliu-mesa-auxiliar-exterior-aluminio-54-cm-6c7a42d9", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior Olimpia de 48x48 cm con estructura de aluminio blanco y tablero de tejido tecnico, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Mesa auxiliar blanca de exterior, sola en una terraza de barro cocido contra un muro encalado, con unos libros encima y albahaca en maceta",
+    }),
+    "balliu_mesa_aux_noa": ("balliu-mesa-auxiliar-exterior-aluminio-90b11e5b", {
+        "01_packshot.jpg": "Mesa auxiliar de exterior Noa redonda de 42 cm con tablero blanco y tres patas, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Mesa auxiliar redonda blanca, sola en una tarima de madera junto a un muro encalado, con un cactus en maceta y un libro abierto encima",
+    }),
+    "balliu_colchoneta": ("balliu-colchoneta-para-tumbona-0e9a3256", {
+        "01_packshot.jpg": "Colchoneta de exterior para tumbona en tejido tortola, con cabecero abatible y cintas de sujecion, sobre fondo neutro. Se vende solo la colchoneta",
+        "02_ambiente_poyete.jpg": "Colchoneta de exterior tortola sobre un poyete de obra encalado de una terraza mediterranea, con una toalla de lino enrollada al lado. Se vende solo la colchoneta, sin tumbona",
+    }),
+    "balliu_silla_bimba": ("balliu-silla-exterior-resina-estilo-clasico-57-cm-8164cc65", {
+        "01_packshot.jpg": "Silla de exterior Bimba de resina blanca con respaldo liso y reposabrazos, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Silla de resina blanca, sola en un patio de barro cocido contra un muro encalado junto a un geranio en maceta. Se vende solo la silla",
+    }),
+    "balliu_silla_mila": ("balliu-silla-exterior-con-brazos-aluminio-estilo-elegante-58-cm-bc0c02ec", {
+        "01_packshot.jpg": "Silla de exterior Mila con estructura de aluminio blanco, tejido tecnico blanco y reposabrazos curvos, sobre fondo neutro",
+        "02_ambiente_piedra.jpg": "Silla de exterior blanca de aluminio, sola en una terraza de piedra junto a un muro de piedra seca con lavanda. Se vende solo la silla",
+    }),
+    "balliu_silla_vera": ("balliu-silla-exterior-sin-brazos-resina-estilo-funcional-daabcdaf", {
+        "01_packshot.jpg": "Silla de exterior Vera de resina tortola con respaldo de listones verticales, sin brazos, sobre fondo neutro",
+        "02_ambiente_patio.jpg": "Silla de resina tortola sin brazos, sola en un patio encalado de suelo de piedra con un jazmin trepando por la pared. Se vende solo la silla",
+    }),
+    "balliu_silla_duna": ("balliu-silla-exterior-resina-estilo-minimalista-484cbea0", {
+        "01_packshot.jpg": "Silla de exterior Duna de resina blanca con respaldo abierto redondeado y brazos integrados, sobre fondo neutro",
+        "02_ambiente_tarima.jpg": "Silla de resina blanca, sola en una terraza de tarima de madera junto a un olivo en maceta y un muro encalado. Se vende solo la silla",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE3_F
+    ACTIVA = GALERIAS_FASE3_G
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
