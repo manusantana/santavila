@@ -3993,5 +3993,18 @@
     "alt_len": 119
    }
   ]
+ },
+ "set-jardin-bicolor-3-plazas-bicolor-sofa-3-plazas-2-sillones-mesa": {
+  "fecha": "2026-09-07",
+  "carpeta": "diva3p",
+  "n_imagenes": 1,
+  "imagenes": [
+   {
+    "fichero": "05_detalle_canto.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 130
+   }
+  ]
  }
 }

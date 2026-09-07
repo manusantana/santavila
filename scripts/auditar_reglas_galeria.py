@@ -37,7 +37,31 @@ for line in open(os.path.join(ROOT, ".envlocal"), encoding="utf-8"):
 COMIDA = ['queso','pan de','aceite de oliva','vino','cerveza','limonada','sandia','sandía','sidra',
  'gazpacho','berberecho','picatoste','melocotón','té helado','te helado','agua con gas','almendra',
  'albariño','copa de','jarra de','horchata','vermut','tinto','aceitun','higo','farton','botijo',
- 'churro','torrija','merienda','desayuno','refresco','plato de','tabla de queso']
+ 'churro','torrija','merienda','desayuno','refresco','plato de','tabla de queso',
+ # El generico faltaba: la lista tenia vino, cerveza, limonada, refresco... pero NO "bebida",
+ # y un video en posicion 0 llevaba meses anunciando "bebida fria sobre la mesa" (07-09-2026).
+ # Enumerar casos concretos deja siempre el hiperonimo fuera.
+ 'bebida','bebidas','copa de vino','vaso de','trago',
+ # y los frutos, que es por donde se escapo la ficha mas cara del catalogo: la lista tenia
+ # higo, melocoton y sandia, pero no GRANADA (07-09-2026).
+ 'granada partida','granada abierta','media granada','uvas','cerezas','fresas','frambuesas',
+ 'manzana','pera madura','ciruela','naranja partida','platano','mango','papaya','helado']
+
+# La leccion de fondo: una lista de casos concretos SIEMPRE deja algo fuera. Por eso el alt no
+# es la unica prueba — el NOMBRE DEL FICHERO tambien acusa, y no lo redacta nadie a posteriori:
+# `05_asmr_granada.jpg`, `05_asmr_gazpacho.jpg`, `07_asmr_te_helado.jpg`. Se comparan TOKENS
+# exactos (partiendo por _ - .), nunca subcadenas: 'te' dentro de 'ambiente', 'sal' dentro de
+# 'Salamanca' y 'jarra' dentro de 'Alpujarra' dan 17 falsos positivos de 18.
+FICHERO_CONSUMIBLE = {
+ 'gazpacho','granada','albarino','albariño','limonada','sandia','sandía','melocoton','melocotón',
+ 'sidra','queso','vino','cerveza','pan','cafe','café','te','vermut','horchata','higo','higos',
+ 'aceitunas','comida','bebida','desayuno','merienda','copa','vaso','jarra','botella','fruta',
+ 'frutas','tapa','tapas','almuerzo','cena','brindis','picnic','torrija','churros','helado',
+ 'zumo','mojito','sangria','sangría','tinto','uvas','fresas','cerezas','pastel','tarta'}
+
+def _tokens_fichero(url):
+    base = re.sub(r"_[0-9a-f]{8}-[0-9a-f]{4}-.*$", "", os.path.splitext(url.split("/")[-1].split("?")[0])[0])
+    return set(re.split(r"[_\-\.]+", base.lower()))
 # Recipientes VACIOS: son ceramica/atrezzo permitido, no consumible. Sin esta lista, "jarra de
 # gres con romero" saltaba como comida (22-08-2026). Es la misma trampa que 'buganVILLA'.
 NO_ES_COMIDA = ['jarra de gres','jarra de barro','jarra de ceramica','jarra de cerámica',
@@ -46,16 +70,34 @@ NO_ES_COMIDA = ['jarra de gres','jarra de barro','jarra de ceramica','jarra de c
 PALABRA = [r'\bvilla\b', r'\bvillas\b', r'\bchalet\b', r'\bresort\b', r'\btropical\b', r'\bbungalow\b']
 MACRO = ['macro del tejido','macro de tejido','macro textil']
 
-def gql(q, v=None):
-    req = urllib.request.Request(API, data=json.dumps({"query": q, "variables": v or {}}).encode(),
-        headers={"X-Shopify-Access-Token": TOKEN, "Content-Type": "application/json"})
-    return json.loads(urllib.request.urlopen(req).read())
+def gql(q, v=None, intentos=4):
+    """Por curl y no por urllib: al pedir tambien los VIDEOS la respuesta crecio y urllib
+    empezo a reventar con `IncompleteRead` a mitad de pagina (07-09-2026). Es el mismo fallo
+    que ya nos comio descargas: urllib no reintenta una respuesta chunked truncada y curl con
+    --retry-all-errors si. Un auditor que casca a mitad no audita: da un falso 'todo bien'."""
+    import subprocess
+    payload = json.dumps({"query": q, "variables": v or {}}).encode()
+    for i in range(intentos):
+        r = subprocess.run(["curl", "-s", "--retry", "3", "--retry-all-errors", "--max-time", "120",
+            "-X", "POST", API, "-H", f"X-Shopify-Access-Token: {TOKEN}",
+            "-H", "Content-Type: application/json", "--data-binary", "@-"],
+            input=payload, capture_output=True)
+        try:
+            d = json.loads(r.stdout)
+            if d.get("data"): return d
+        except Exception:
+            pass
+        time.sleep(2 + 2 * i)
+    raise RuntimeError(f"la consulta fallo tras {intentos} intentos: {r.stdout[:200]!r}")
 
 def fichas():
     q = '''query($c:String){products(first:200,after:$c,query:"status:active"){
       pageInfo{hasNextPage endCursor}
       edges{node{handle title variants(first:1){edges{node{sku price}}}
-      media(first:16){edges{node{... on MediaImage{alt image{width height}}}}}}}}}'''
+      media(first:16){edges{node{mediaContentType
+        ... on MediaImage{alt image{width height url}}
+        ... on Video{alt}
+        ... on ExternalVideo{alt}}}}}}}}'''
     out, c = [], None
     while True:
         d = gql(q, {"c": c})["data"]["products"]
@@ -63,7 +105,15 @@ def fichas():
             n = e["node"]; v = n["variants"]["edges"][0]["node"] if n["variants"]["edges"] else {}
             out.append({"handle": n["handle"], "title": n["title"], "sku": v.get("sku"),
                         "price": float(v.get("price") or 0),
+                        # 07-09-2026 — EL AUDITOR TENIA UN PUNTO CIEGO MAS: solo pedia
+                        # `... on MediaImage`, asi que los VIDEOS no llegaban aqui y sus alt
+                        # nunca se auditaban. Dos videos en posicion 0 llevaban meses diciendo
+                        # "bebida fria" y "junto a la piscina" — las dos reglas que mas veces
+                        # hemos hecho cumplir— sin que ninguna pasada los viera.
+                        # Un medio que no se pide es un medio que no se audita.
                         "media": [{"alt": m["node"].get("alt") or "",
+                                   "tipo": m["node"].get("mediaContentType", "IMAGE"),
+                                   "url": (m["node"].get("image") or {}).get("url", "") or "",
                                    "w": (m["node"].get("image") or {}).get("width", 0),
                                    "h": (m["node"].get("image") or {}).get("height", 0)}
                                   for m in n["media"]["edges"]]})
@@ -93,7 +143,7 @@ def main():
     print(f"fichas ACTIVE: {len(fs)}   ·   imagenes: {sum(len(x['media']) for x in fs)}\n")
 
     print("=== 3 · REGLAS DE MARCA SOBRE EL ALT")
-    n_com = n_res = n_mac = n_vac = 0
+    n_com = n_res = n_mac = n_vac = n_fic = 0
     for f in fs:
         for i, m in enumerate(f["media"]):
             a = m["alt"].lower()
@@ -104,7 +154,12 @@ def main():
                 n_res += 1; print(f"  LUJO     {f['price']:7.0f} EUR pos{i} {f['handle'][:44]}\n           {m['alt'][:104]}")
             if any(k in a for k in MACRO):
                 n_mac += 1; print(f"  MACRO    {f['price']:7.0f} EUR pos{i} {f['handle'][:44]}\n           {m['alt'][:104]}")
-    print(f"\n  comida/bebida={n_com}  lujo/resort={n_res}  macro de tejido={n_mac}  alt vacio={n_vac}")
+            tk = _tokens_fichero(m.get("url", "")) & FICHERO_CONSUMIBLE
+            if tk:
+                n_fic += 1; print(f"  FICHERO  {f['price']:7.0f} EUR pos{i} {f['handle'][:44]}\n           "
+                                  f"el nombre del fichero dice {sorted(tk)}: {m.get('url','').split('/')[-1].split('?')[0]}")
+    print(f"\n  comida/bebida={n_com}  lujo/resort={n_res}  macro de tejido={n_mac}  "
+          f"alt vacio={n_vac}  nombre de fichero={n_fic}")
     if solo_reglas: return
 
     print("\n=== 1 · COMPOSICION: formula del catalogo por ficha")

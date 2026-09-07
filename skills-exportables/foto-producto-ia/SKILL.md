@@ -320,6 +320,29 @@ no auditándolas.
 Regla práctica: **al tocar una ficha, mira su galería entera**. El auditor cubre la espalda en lo
 que ya no vas a volver a abrir; no sustituye a los ojos en lo que sí.
 
+### Los dos fallos que hacen que un auditor mienta
+
+**1 · Un medio que no se pide es un medio que no se audita.** El auditor consultaba solo las
+imágenes de cada ficha. Los **vídeos** no entraban en la consulta, así que sus textos nunca se
+revisaron: dos de ellos —**y en primera posición**— llevaban meses describiendo justo el atrezzo
+prohibido. El informe decía cero. Pide **todos** los tipos de medio, no solo el que te interesa.
+
+*(Segundo motivo para mirar la primera posición: si ahí hay un vídeo, es él y no tu packshot lo
+que la tienda usa de miniatura en el listado y de imagen para compartir.)*
+
+**2 · Una lista de casos concretos siempre deja algo fuera.** La lista de consumibles prohibidos
+enumeraba una docena de ejemplos, pero no la fruta concreta que salía en la **ficha más cara del
+catálogo**, ni el **hiperónimo** («bebida»). Enumerar casos no cierra la puerta: falta siempre el
+que no se te ocurrió.
+
+Por eso conviene una **segunda prueba independiente: el nombre del fichero**. Nadie lo reescribe
+a posteriori para quedar bien, así que `05_detalle_<lo-que-sea>.jpg` delata el contenido igual
+que el alt. Cuando las dos pruebas señalan lo mismo, puedes fiarte del resultado.
+
+**Compara TOKENS exactos, nunca subcadenas.** Un barrido por subcadena dio 18 avisos y **17 eran
+falsos**: una palabra prohibida escondida dentro de un topónimo, de un nombre de modelo o de un
+color. Parte el texto por `_ - .` y compara palabras completas.
+
 **Al quitar una toma prohibida, no hace falta reponerla:** si tu receta canónica son 4 tomas +
 medidas, esa quinta era un extra. **Borrar cuesta 0; regenerar, el precio de una ficha entera.**
 Descarga la imagen **antes** de borrarla: así es reversible.

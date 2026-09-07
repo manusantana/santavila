@@ -2781,5 +2781,19 @@
    "gid://shopify/MediaImage/71688318320964",
    "gid://shopify/MediaImage/71688318353732"
   ]
+ },
+ {
+  "handle": "set-jardin-bicolor-3-plazas-bicolor-sofa-3-plazas-2-sillones-mesa",
+  "producto": "gid://shopify/Product/15507127697732",
+  "borrados": [
+   "gid://shopify/MediaImage/71268861903172",
+   "gid://shopify/MediaImage/71268861935940",
+   "gid://shopify/MediaImage/71268861968708",
+   "gid://shopify/MediaImage/71268862001476",
+   "gid://shopify/MediaImage/71268862034244"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71688370716996"
+  ]
  }
 ]

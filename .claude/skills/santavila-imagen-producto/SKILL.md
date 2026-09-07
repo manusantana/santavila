@@ -821,6 +821,29 @@ Se encontraron dos así —un bodegón de fruta en la mesa Java, unas manzanas e
 **mirando las galerías**, no auditándolas. Regla: al tocar una ficha, **se mira su galería
 entera**; el auditor cubre la espalda, no los ojos.
 
+### El punto ciego tenía dos capas más *(07-09-2026, segunda pasada)*
+
+**1 · Un medio que no se pide es un medio que no se audita.** La consulta pedía
+`... on MediaImage` y nada más, así que los **vídeos no llegaban al auditor**. Dos vídeos, y
+además **en posición 0**, llevaban meses anunciando *«bebida fría sobre la mesa»* y *«junto a la
+piscina»*. Cero violaciones, decía el informe. Ahora pide también `... on Video`.
+Y de paso: **un vídeo en la posición 0 desplaza al packshot** de la miniatura del listado y de la
+`og:image`. La pos 0 es del packshot, siempre.
+
+**2 · Una lista de casos concretos siempre deja algo fuera.** `COMIDA` enumeraba higo, melocotón,
+sandía, limonada… pero no **granada**, y por ahí se coló la ficha **más cara del catálogo**
+(4.405 €) con *«granada partida y vaso de agua con hielo»*. Tampoco estaba el hiperónimo
+**«bebida»**. Enumerar casos nunca cierra la puerta: falta siempre el que no se te ocurrió.
+
+Por eso el alt ya no es la única prueba: **el nombre del fichero también acusa**, y nadie lo
+redacta a posteriori para quedar bien —`05_asmr_granada.jpg`, `05_asmr_gazpacho.jpg`—. Cruzarlo
+señaló exactamente lo mismo que el barrido de alts, y esa coincidencia es lo que da confianza.
+
+**Se comparan TOKENS exactos, nunca subcadenas.** Un barrido por subcadena dio 18 avisos y
+**17 eran falsos**: `sal` en *Salamanca* y *Univer**sal***, `te` en *ambien**te***, `jarra` en
+*Alpu**jarra***, `limon` en *limonero*, `pescado` en *casa de pescadores*, `naranja` como color
+de una lona. Es la misma trampa que `bugan**villa**`.
+
 ## AISLAR SOBRE BONE PUEDE REINTERPRETAR EL MATERIAL *(07-09-2026, mesa Córcega)*
 
 Ya estaba escrito que el aislado sobre bone hace que el packshot **invente el acabado**. El caso

@@ -1748,11 +1748,23 @@ GALERIAS_FASE2 = {
     }),
 }
 
+# CORRECCION 07-09-2026 — la ficha mas cara del catalogo llevaba comida.
+# El ASMR del set Diva (4.405 EUR) era "granada partida y vaso de agua con hielo sobre el
+# tablero". Sobrevivio a la barrida de agosto porque la lista COMIDA del auditor enumeraba
+# casos concretos (higo, melocoton, sandia...) y "granada" no estaba entre ellos. Se sustituye
+# por el mismo encuadre con el tablero VACIO. Se publica con --anadir y despues se borra la
+# vieja, para no reescribir las URL de las otras cuatro imagenes de la ficha.
+GALERIAS_CORRECCION = {
+    "diva3p": ("set-jardin-bicolor-3-plazas-bicolor-sofa-3-plazas-2-sillones-mesa", {
+        "05_detalle_canto.jpg": "Detalle del canto del tablero blanco encajado sobre las lamas de aluminio antracita de la mesa de centro, con luz rasante de tarde",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE2
+    ACTIVA = GALERIAS_CORRECCION
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

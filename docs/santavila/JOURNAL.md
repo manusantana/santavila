@@ -13,6 +13,61 @@
 
 ---
 
+## 2026-09-07 (E) — EL AUDITOR DABA CERO Y HABÍA COMIDA EN LA FICHA MÁS CARA
+
+Se cerró la mesa Córcega (Fase 2) y, en vez de seguir generando, se hizo la auditoría profunda
+que faltaba. **Merecía la pena: el informe de reglas decía 0 violaciones y había 2.**
+
+### Lo que estaba mal
+
+| | Qué | Valor |
+|---|---|---|
+| **Comida publicada** | *«Granada partida y vaso de agua con hielo»* — ASMR del set Diva | **4.405 €**, la ficha más cara |
+| **Vídeo con bebida** | *«…junto al mar: bebida fría sobre la mesa»* — set Leisa | 2.899 € |
+| **Vídeo en posición 0** | en dos fichas: desplazaba al packshot de la miniatura y de la `og:image` | Leisa y Tumbona |
+
+### Por qué el auditor no lo veía — dos capas
+
+**1 · Un medio que no se pide es un medio que no se audita.** La consulta pedía
+`... on MediaImage` y nada más: **los vídeos nunca llegaban**. Ahora pide también `... on Video`.
+
+**2 · Enumerar casos concretos nunca cierra la puerta.** La lista `COMIDA` tenía higo, melocotón,
+sandía, limonada… pero no **granada**, ni el hiperónimo **«bebida»**. Falta siempre el caso que no
+se te ocurrió.
+
+Por eso el alt ya no es la única prueba: se añadió el cruce por **nombre de fichero**, que nadie
+reescribe a posteriori (`05_asmr_granada.jpg`). **Las dos pruebas señalaron exactamente lo mismo**
+—una sola imagen— y esa coincidencia es lo que permite cerrar el tema con confianza. De 8 masters
+con nombre de comida, 7 ya estaban retirados desde la barrida de agosto; solo la granada seguía
+publicada.
+
+Se comparan **tokens exactos, nunca subcadenas**: el barrido por subcadena dio 18 avisos y **17
+eran falsos** (`sal` en *Salamanca* y *Universal*, `te` en *ambiente*, `jarra` en *Alpujarra*,
+`limon` en *limonero*, `pescado` en *casa de pescadores*, `naranja` como color de lona).
+
+### Qué se hizo
+
+- **Set Diva (4.405 €)**: regenerado el mismo encuadre con el tablero **vacío**. Se sustituyó solo
+  esa imagen —con `--anadir`, reorden y borrado puntual— para **no reescribir las URL** de las
+  otras cuatro. La ficha sigue con 5 imágenes, packshot en pos 0.
+- **Leisa y Tumbona**: reordenadas, **el packshot vuelve a la posición 0**.
+- **Auditor**: pide vídeos, lista ampliada, cruce por nombre de fichero y transporte por `curl`
+  (con vídeos la respuesta creció y `urllib` empezó a cortar con `IncompleteRead` — un auditor que
+  casca a mitad da un falso «todo bien»).
+
+### Estado
+
+**171 ACTIVE · 0 sin foto · 0 sin coste · 0 alt vacíos · 0 imágenes que incumplan reglas.**
+Hevea: **111 de 111** con todas sus imágenes ≥2.000 px. Balliu: 60 fichas, según lo decidido
+(ambiente nuevo delante, fotos de acabado del proveedor conservadas).
+
+### Decisión pendiente de Sergio
+
+Queda **un vídeo** (set Leisa) que muestra una bebida fría: incumple la regla igual que la imagen
+de la granada, pero **borrar un vídeo no se hace sin su visto bueno**. Ya está fuera de la pos 0.
+
+---
+
 ## 2026-09-07 (D) — LA TIENDA ENTERA CON LA PRIMERA IMAGEN EN ALTA: 170 DE 171 FICHAS
 
 Sergio: *«sigue pero con las premisas que definimos, no falles adelante!!!»* — y antes:
