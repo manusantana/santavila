@@ -1935,5 +1935,72 @@
    "gid://shopify/MediaImage/71681443234116",
    "gid://shopify/MediaImage/71681443266884"
   ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab",
+  "producto": "gid://shopify/Product/15512250155332",
+  "borrados": [
+   "gid://shopify/MediaImage/70427889500484",
+   "gid://shopify/MediaImage/70427889533252",
+   "gid://shopify/MediaImage/70427889566020",
+   "gid://shopify/MediaImage/70427889598788",
+   "gid://shopify/MediaImage/70427889631556",
+   "gid://shopify/MediaImage/70427889762628",
+   "gid://shopify/MediaImage/70427889795396",
+   "gid://shopify/MediaImage/70427889828164"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681506705732",
+   "gid://shopify/MediaImage/71681506738500"
+  ]
+ },
+ {
+  "handle": "balliu-mesa-exterior-140-18090-cm-e4ec7d7c",
+  "producto": "gid://shopify/Product/15512250057028",
+  "borrados": [
+   "gid://shopify/MediaImage/70263123411268",
+   "gid://shopify/MediaImage/70427888779588",
+   "gid://shopify/MediaImage/70427888877892",
+   "gid://shopify/MediaImage/70427888910660",
+   "gid://shopify/MediaImage/70427888943428",
+   "gid://shopify/MediaImage/70427889041732",
+   "gid://shopify/MediaImage/70427889074500",
+   "gid://shopify/MediaImage/70427889107268",
+   "gid://shopify/MediaImage/70427889140036"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681506869572",
+   "gid://shopify/MediaImage/71681506902340"
+  ]
+ },
+ {
+  "handle": "balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1",
+  "producto": "gid://shopify/Product/15512252973380",
+  "borrados": [
+   "gid://shopify/MediaImage/70159530197316",
+   "gid://shopify/MediaImage/70427917844804",
+   "gid://shopify/MediaImage/70427918074180",
+   "gid://shopify/MediaImage/70427918139716",
+   "gid://shopify/MediaImage/70427919188292",
+   "gid://shopify/MediaImage/70427919221060"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681506967876",
+   "gid://shopify/MediaImage/71681507000644"
+  ]
+ },
+ {
+  "handle": "balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7",
+  "producto": "gid://shopify/Product/15512253006148",
+  "borrados": [
+   "gid://shopify/MediaImage/70427919417668",
+   "gid://shopify/MediaImage/70159530230084",
+   "gid://shopify/MediaImage/70427919352132",
+   "gid://shopify/MediaImage/70427919548740"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71681507230020",
+   "gid://shopify/MediaImage/71681507262788"
+  ]
  }
 ]

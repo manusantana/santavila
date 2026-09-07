@@ -24,6 +24,8 @@ SHOP = "mueblesexterior.myshopify.com"
 API = f"https://{SHOP}/admin/api/2025-01/graphql.json"
 APPLY = "--apply" in sys.argv
 VERIFICAR = "--verificar" in sys.argv
+# --anadir: NO borra los media del proveedor, solo pone los nuevos delante (fase 3 Balliu)
+ANADIR = "--anadir" in sys.argv
 SOLO = None
 if "--solo" in sys.argv:
     SOLO = sys.argv[sys.argv.index("--solo") + 1]
@@ -1302,7 +1304,17 @@ def post_multipart(url, params, filepath):
         return r.status
 
 
-def publicar(slug, handle, alts):
+def publicar(slug, handle, alts, anadir=False):
+    """`anadir=True` -> modo ANADIR (fase 3, Balliu): sube las tomas nuevas, las pone delante y
+    **conserva** las del proveedor. Es lo contrario del modo normal, que sustituye la galeria.
+
+    Por que existe: en Balliu una ficha puede tener hasta 96 combinaciones de color/chasis/tejido
+    y las fotos pequenas del proveedor **son** las fotos de variante -- la unica informacion real
+    de acabado que existe. Si se sustituyen, la ficha gana belleza y pierde justo lo que el
+    cliente necesita para elegir. Decision de Sergio, 22-08-2026.
+
+    Se acepta que esas fichas NO cumplan "todas las imagenes >=2.000 px": ese criterio se hizo
+    para fichas de un solo acabado. Aqui el objetivo es que la PRIMERA imagen venda."""
     d = gql(Q_PROD, {"h": f"handle:{handle}"})["data"] if False else gql(Q_PROD, {"h": f"handle:{handle}"})
     nodes = d["products"]["nodes"]
     if not nodes:
@@ -1373,11 +1385,15 @@ def publicar(slug, handle, alts):
         raise RuntimeError(r["userErrors"])
     time.sleep(4)
 
-    # 5) borrar los antiguos
-    dl = gql(M_DELETE, {"pid": p["id"], "ids": viejos})["productDeleteMedia"]
-    if dl["mediaUserErrors"]:
-        raise RuntimeError(dl["mediaUserErrors"])
-    print(f"   borrados {len(dl['deletedMediaIds'])} media antiguos")
+    # 5) borrar los antiguos -- salvo en modo ANADIR
+    if anadir:
+        print(f"   modo ANADIR: se conservan los {len(viejos)} media del proveedor")
+        dl = {"deletedMediaIds": []}
+    else:
+        dl = gql(M_DELETE, {"pid": p["id"], "ids": viejos})["productDeleteMedia"]
+        if dl["mediaUserErrors"]:
+            raise RuntimeError(dl["mediaUserErrors"])
+        print(f"   borrados {len(dl['deletedMediaIds'])} media antiguos")
 
     fin = gql(Q_STATUS, {"id": p["id"]})["product"]
     print(f"   RESULTADO: mediaCount={fin['mediaCount']['count']}  pos0={fin['media']['nodes'][0]['image']['url'][-40:]}")
@@ -1430,17 +1446,48 @@ GALERIAS_FASE2 = {
     }),
 }
 
+# FASE 3 - BALLIU (07-09-2026). Modo ANADIR: se publican con --anadir, que conserva las fotos
+# del proveedor. Lo que se arregla es la PRIMERA imagen, la que vende en el listado.
+#
+# Lo que ensena el material de Balliu, y que no pasaba con Hevea:
+#  - Sus fotos de ambiente casi nunca sirven de ancla: salen DOS unidades de un producto que se
+#    vende suelto, sillas que no se venden, piscinas y villas. El ancla es siempre el packshot
+#    sobre fondo liso, que es la unica foto que ensena EL producto y nada mas.
+#  - Atlanta obligo a regenerar: el modelo ENSANCHO los listones del tablero (unos 12 en vez de
+#    los 30 y pico del original). Se arreglo escribiendolo en el prompt: "MANY very narrow slats,
+#    tightly spaced, do not widen them". El conteo 1:1 tambien vale para los listones.
+#  - Los parasoles se venden SIN pie (el pie es otra ficha). El ambiente los encuadra desde abajo
+#    con la base fuera de plano, y el alt lo declara. Es la regla de la pieza fantasma.
+GALERIAS_FASE3_A = {
+    "balliu_mesa_java": ("balliu-mesa-exterior-hpl-140-180100-cm-8e073aab", {
+        "01_packshot.jpg": "Mesa extensible de exterior Java con estructura de aluminio blanco y tablero claro, sobre fondo neutro. Se vende solo la mesa, sin sillas",
+        "02_ambiente_terraza.jpg": "Mesa extensible de exterior blanca, sola en una terraza mediterranea de microcemento junto a un muro encalado y un olivo en maceta de barro. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_mesa_atlanta": ("balliu-mesa-exterior-140-18090-cm-e4ec7d7c", {
+        "01_packshot.jpg": "Mesa extensible de exterior Atlanta en aluminio antracita con tablero de listones estrechos, sobre fondo neutro. Se vende solo la mesa, sin sillas",
+        "02_ambiente_terraza.jpg": "Mesa extensible de exterior antracita con tablero de listones, sola en una terraza de piedra clara junto a un muro encalado y una maceta de romero. Se vende solo la mesa, sin sillas",
+    }),
+    "balliu_parasol_garbi": ("balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1", {
+        "01_packshot.jpg": "Parasol redondo de exterior Garbi de 300 cm, con lona color crema, ocho varillas con tirantes y mastil de aluminio, sobre fondo neutro. El pie se vende por separado",
+        "02_ambiente_terraza.jpg": "Parasol redondo crema abierto sobre una terraza mediterranea de piedra, junto a un muro encalado y olivos en maceta. El pie se vende por separado",
+    }),
+    "balliu_parasol_brisa": ("balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7", {
+        "01_packshot.jpg": "Parasol cuadrado de exterior Brisa de 300x300 cm, con lona color avena y manivela de apertura, sobre fondo neutro. El pie se vende por separado",
+        "02_ambiente_terraza.jpg": "Parasol cuadrado color avena abierto sobre una terraza mediterranea de barro cocido, junto a un muro encalado y un olivo en maceta. El pie se vende por separado",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_FASE2
+    ACTIVA = GALERIAS_FASE3_A
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:
             continue
         try:
-            r = publicar(slug, handle, alts)
+            r = publicar(slug, handle, alts, anadir=ANADIR)
             if r:
                 backup.append(r)
                 registro.append({"handle": handle, "slug": slug, "alts": alts,

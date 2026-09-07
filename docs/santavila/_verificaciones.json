@@ -3062,5 +3062,81 @@
     "alt_len": 121
    }
   ]
+ },
+ "balliu-mesa-exterior-hpl-140-180100-cm-8e073aab": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_java",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 137
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 174
+   }
+  ]
+ },
+ "balliu-mesa-exterior-140-18090-cm-e4ec7d7c": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_mesa_atlanta",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 146
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 181
+   }
+  ]
+ },
+ "balliu-parasol-para-terraza-aluminio-300-cm-3b7e77d1": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_parasol_garbi",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 164
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 145
+   }
+  ]
+ },
+ "balliu-parasol-para-terraza-aluminio-300-cm-0ceba8e7": {
+  "fecha": "2026-09-07",
+  "carpeta": "balliu_parasol_brisa",
+  "n_imagenes": 2,
+  "imagenes": [
+   {
+    "fichero": "01_packshot.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 143
+   },
+   {
+    "fichero": "02_ambiente_terraza.jpg",
+    "px": "2600x2600",
+    "mp": 6.8,
+    "alt_len": 160
+   }
+  ]
  }
 }
