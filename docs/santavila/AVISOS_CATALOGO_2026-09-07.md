@@ -22,9 +22,16 @@ encima del tablero**, lo que sería imposible con 90 cm.
 El catálogo Hevea (pág. 74) da **76 H** para toda la familia HPL —Naloa, Córcega, Palma,
 Camelia— pero **no lista la Córcega 135×90**, solo la cuadrada de 90×90.
 
-Como no hay dato verificado de *esa* referencia, su ficha de medidas declara solo el tablero
-(135×90 y 160×90, que sí están confirmados por triplicado). **Falta que Hevea confirme la
-altura** para poder añadirla.
+**Actualización 08-09-2026 — se publicó con 76 H, y conviene saber de dónde sale.** La ficha de
+medidas declara `135 × 90 × 76 cm` y `160 × 90 × 76 cm`. El 76 **no** viene de la línea de esa
+referencia —el catálogo no la lista— sino de que **toda la familia HPL de Hevea mide 76 H**
+(Naloa, Córcega 90×90, Palma, Camelia). Es una inferencia por familia, sólida pero inferencia.
+
+Se prefirió eso a dejar una mesa de comedor sin altura: el 90 del CSV es imposible y el cliente
+necesita el dato para saber si le encajan sus sillas.
+
+**Sigue pendiente que Hevea confirme la altura de la 135×90 y la 160×90.** Si dijera otra cosa,
+hay que corregir `images_generated/mesa_corcega/03_medidas.jpg` y republicar esa toma.
 
 ### ⛔ Funda acrílico · 37 € · [`balliu-funda-protectora-exterior-acrilico-a1c16324`] — URGENTE
 
@@ -71,14 +78,21 @@ no es.
 
 En los tres casos la imagen nueva retrata **lo que el producto es**, no lo que dice el título.
 
-## 4 · Dos vídeos en primera posición
+## 4 · ~~Dos vídeos en primera posición~~ — ✅ RESUELTO (07-09-2026)
 
-[`set-jardin-3-plazas-contemporaneo-...`] (2.899 €) y [`tumbona-de-exterior`] (193,95 €) tienen un
-**VÍDEO** en la posición 0. Las dos tienen su galería completa a 4.096 px justo detrás.
+[`set-jardin-3-plazas-contemporaneo-...`] (2.899 €) y [`tumbona-de-exterior`] (193,95 €) tenían un
+**VÍDEO** en la posición 0, que desplazaba al packshot de la miniatura del listado y de la
+`og:image`. **Reordenadas: la posición 0 vuelve a ser el packshot en las dos.**
 
-No lo he tocado porque puede ser deliberado, pero conviene decidirlo: la posición 0 es la que
-sale en el listado y como `og:image` al compartir. *(De paso: son los dos «alt vacío» que
-reporta el auditor — un vídeo no tiene alt de imagen, así que ese aviso es esperado.)*
+Verificado el 08-09: en las 241 fichas de la tienda, **ninguna tiene un medio que no sea imagen en
+la posición 0**, y hay **0 alt vacíos** en las 890 imágenes de fichas ACTIVE.
+
+Lo que sí salió de aquí y **sigue vivo**: al pedir solo `... on MediaImage`, el auditor **nunca
+había leído el alt de un vídeo**. Los dos decían justo lo que la marca prohíbe («bebida fría»,
+«junto a la piscina») y el informe daba cero. Ya está corregido en
+`scripts/auditar_reglas_galeria.py`, y la decisión de Sergio sobre el vídeo del Leisa quedó
+registrada como excepción explícita — ver
+[`ESTADO_Y_TRASPASO_2026-09-08.md` §5.2](ESTADO_Y_TRASPASO_2026-09-08.md).
 
 ## 5 · El acabado de la foto y el de la variante por defecto no siempre coinciden
 

@@ -179,13 +179,54 @@ La fila 222 del Excel (60×60 mesa alta) está marcada como `HPL_GD` en el SKU, 
 
 ---
 
+## 4.3 ⛔ FOTO QUE FALTA: funda de parasol *(08-09-2026 · URGENTE)*
+
+**No es un precio ni una variante: es que la ficha enseña otro producto.**
+
+`balliu-funda-protectora-exterior-acrilico-a1c16324` · 37 € · SKU
+`BALLIU_FUNDA_**PARASOL**_1_UNIDADES_ACRIL_A1C16324`
+
+| Fuente | Qué dice |
+|---|---|
+| SKU de la ficha | funda de **PARASOL** |
+| CSV del proveedor, campo Descripción | **«Funda Parasol»** |
+| Tarifa 2026 (las dos versiones, pág. 10) | **«Funda Parasol 1 Unidades acrilico»** |
+| Imagen publicada hoy | una **funda de TUMBONA** cubriendo una tumbona |
+
+El catálogo general **no ilustra la funda de parasol**: su pág. 160 solo documenta la *«Funda para
+tumbona»*. La única foto original que tenía la ficha se borró al publicar la galería nueva. Sin
+material real no se puede generar una imagen: sería inventar el producto.
+
+**Qué pedir a Balliu:** foto de la funda de parasol acrílica (1 unidad), y de paso sus medidas.
+
+**Mientras no llegue:** decidir si la ficha pasa a DRAFT. Hoy sigue ACTIVE y es la **única del
+catálogo con solo 2 imágenes** — se dejó así a propósito, para no reforzar con una tercera toma un
+producto equivocado.
+
+---
+
+## 4.4 Medidas de las fundas — no existen en ninguna fuente *(08-09-2026)*
+
+Las **cinco fundas** de Balliu (sofá 130 €, sillas 85 €, tumbona 80 €, acrílico 37 € y la de silla)
+**no tienen ni ancho ni fondo ni alto** en el CSV, ni en las dos tarifas, ni en el catálogo. Lo
+único que aparece (catálogo pág. 196) es la medida de la **caja de embalaje**: 42×56×20 cm, que no
+es el producto.
+
+Por eso ninguna lleva imagen de medidas: sin dato verificado no se dibuja una cota. Llevan un
+detalle de la costura y el cierre en su lugar.
+
+**Qué pedir a Balliu:** medidas de cada funda desplegada, por tamaño.
+
+---
+
 ## 5. Estado actualizado
 
 | Fecha | Estado |
 |---|---|
 | 2026-05-17 | Documento creado tras cerrar Familia 3 completa (mesas) |
 | 2026-05-17 | Añadidos: Silla Greta, Bruna 197,73€ misterio, Taburete Etna precio (tras cerrar Familia 5 sillas) |
+| 2026-09-08 | Añadidos 4.3 (la funda de parasol no tiene foto y la ficha enseña otro producto) y 4.4 (ninguna funda tiene medidas) |
 
 ---
 
-> Última actualización: 2026-05-17
+> Última actualización: 2026-09-08

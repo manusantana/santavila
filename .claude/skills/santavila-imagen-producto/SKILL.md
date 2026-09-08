@@ -632,6 +632,31 @@ imprime; el CSV es un volcado que arrastra errores. Cuando las dos hablen, gana 
 - solo CSV (la serie no está en el PDF) → CSV, es fuente del proveedor
 - ninguna de las dos → **esa ficha no lleva imagen de medidas**
 
+### Pero esto vale para las COTAS, no para el ACABADO *(08-09-2026, taburete Etna)*
+
+Para **material, color y acabado manda la FOTO**, no el texto del catálogo. Son dos preguntas
+distintas y la regla de arriba solo contesta la primera.
+
+El detalle del taburete Etna salió con la **barra reposapiés cromada**. El fallo fue del prompt:
+el catálogo dice *«tornillería en acero inoxidable»* —los **tornillos**— y eso se escribió como
+`stainless steel footrest bar`. En la foto real la barra es **del mismo aluminio blanco** que la
+estructura. El modelo no inventó nada: obedeció.
+
+**Un adjetivo de material copiado del catálogo puede describir otra pieza.** Antes de meterlo en
+un prompt, comprueba en la foto que se refiere a la pieza que vas a fotografiar.
+
+### Y un grep devuelve líneas, no relaciones *(08-09-2026, silla Janeiro)*
+
+Buscando la cota de la Janeiro, un `grep` mostró junto a `JANEIRO -3 SILLÓN NB165` la cifra
+`55 x 50 x 44 / 90`. Encajaba: la foto de la ficha **tiene brazos**, o sea es un sillón. Estuvo a
+punto de publicarse 90 cm de alto.
+
+Al leer **la página entera** se vio que tiene dos bloques distintos —uno de cotas y otro de
+precios—: el `/90` era de **Moasis-3 y Córcega-3**, y `NB165` es un **código de tarifa**, no una
+medida. La única línea "Janeiro-3" dice `55 x 50 x 44 / 107`, que además coincide con el CSV.
+
+**Para una cota, lee el contexto, nunca la línea suelta que devuelve la búsqueda.**
+
 Ojo: el **título de Shopify** puede llevar la cota vieja del CSV. Eso es SEO (trabajo del
 compañero) y se anota, no se toca; pero la cota que se DIBUJA sale del catálogo.
 

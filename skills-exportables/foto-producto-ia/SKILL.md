@@ -70,6 +70,20 @@ si el ancho y el fondo coinciden en ambas fuentes y solo baila el alto, probable
 contradicción sino **dos magnitudes distintas** (alto total vs. alto de asiento, con/sin embalaje).
 Discrepa el ancho → ahí sí es discrepancia.
 
+**La jerarquía vale para las COTAS, no para el ACABADO.** Son dos preguntas distintas. Para
+**material, color y acabado manda la FOTO**, aunque la ficha técnica diga otra cosa: el texto
+describe a menudo *otra pieza* del mismo producto. Un detalle salió con una barra metálica
+cromada porque la ficha técnica decía «acero inoxidable» — refiriéndose a **la tornillería**,
+mientras que la barra era del mismo aluminio pintado que el resto. El modelo no inventó nada:
+obedeció al prompt. **Antes de meter un adjetivo de material en un prompt, comprueba en la foto
+que se refiere a la pieza que vas a fotografiar.**
+
+**Y busca la cota leyendo, no con un grep.** Una búsqueda devuelve **líneas, no relaciones**. En
+un catálogo, la línea de al lado puede pertenecer a otro modelo, o ser un **código de tarifa** que
+parece una medida. Una cota estuvo a punto de publicarse con el alto de otro producto porque la
+cifra aparecía junto al nombre correcto en la salida del grep — y en la página eran dos bloques
+distintos, uno de medidas y otro de precios. **Abre la página entera y lee el contexto.**
+
 **El catálogo suele tener más de lo que parece.** Cuando la foto del SKU no sirve, mira, en este
 orden: (1) el PDF general, (2) los catálogos secundarios (profesional, contract, temporada),
 (3) la foto oficial del **lote o set** al que pertenece la pieza. Las imágenes embebidas de un PDF

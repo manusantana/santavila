@@ -1397,7 +1397,11 @@ def publicar(slug, handle, alts, anadir=False):
 
     fin = gql(Q_STATUS, {"id": p["id"]})["product"]
     print(f"   RESULTADO: mediaCount={fin['mediaCount']['count']}  pos0={fin['media']['nodes'][0]['image']['url'][-40:]}")
-    return {"handle": handle, "producto": p["id"], "borrados": viejos, "nuevos": nuevos}
+    # OJO: aqui se devolvia SIEMPRE `viejos`, tambien en modo ANADIR, donde no se ha borrado
+    # nada. El fichero que existe para poder deshacer registraba como borrados media que
+    # seguian vivos en Shopify (08-09-2026). Se devuelve lo que REALMENTE se borro.
+    return {"handle": handle, "producto": p["id"],
+            "borrados": dl["deletedMediaIds"], "nuevos": nuevos}
 
 
 REG = os.path.join(ROOT, "docs", "santavila", "_verificaciones.json")
@@ -1805,7 +1809,12 @@ if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_TERCERA_TOMA
+    # ACTIVA VACIA A PROPOSITO (08-09-2026, al cerrar la sesion).
+    # Dejarla apuntando a la ultima tanda publicada es una mina: un `--apply` SIN `--anadir`
+    # borra todos los media previos, y las 8 fichas de GALERIAS_TERCERA_TOMA declaran UN solo
+    # fichero cada una -> se quedarian con una unica imagen, que ademas es una hoja de medidas.
+    # El dry-run no avisa de eso. Para publicar: crea un dict NUEVO y apunta ACTIVA aqui.
+    ACTIVA = {}
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

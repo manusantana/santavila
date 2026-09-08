@@ -13,6 +13,68 @@
 
 ---
 
+## 2026-09-08 (G) — CIERRE DE SESIÓN · AUDITORÍA FINAL Y TRASPASO
+
+> **Punto de entrada para quien siga:**
+> [`ESTADO_Y_TRASPASO_2026-09-08.md`](ESTADO_Y_TRASPASO_2026-09-08.md).
+> Ese documento tiene el estado verificado, los pendientes por dueño y cómo continuar sin romper
+> nada. Esta entrada solo resume qué encontró la auditoría de cierre.
+
+Se lanzó una auditoría en seis frentes (tienda, documentación, skills, herramientas, pendientes
+del compañero y git) más un crítico de completitud. Encontró **tres cosas que ninguna revisión
+anterior había visto**:
+
+### 1 · Cinco fichas ACTIVE que el cliente no puede ver — 6.091,95 €
+
+`publishedAt = null`, **0 canales de venta**, sin `onlineStoreUrl`: en la web dan 404. Dos camas
+balinesas (2.815 € y 1.999 €), dos sofás (685 € y 525 €, con 13 y 16 imágenes) y una pieza de
+resina. **Dos de ellas se retocaron el 07-09 sin que nadie notara que apuntaban a ninguna parte.**
+
+No se han tocado —publicar es decisión de negocio— y **no hay ninguna nota que explique por qué
+están así**, así que ni siquiera se sabe si fue deliberado. Es lo primero que hay que preguntar.
+
+### 2 · El publicador se quedaba armado
+
+`ACTIVA` apuntaba a la tanda recién publicada. Un `--apply` **sin** `--anadir` borra los media
+previos, y esas 8 fichas declaran **un solo fichero** cada una: se habrían quedado con una única
+imagen, y encima una hoja de medidas. El dry-run no avisa. **Se deja `ACTIVA = {}`.**
+
+### 3 · El registro de deshacer mentía
+
+En modo `--anadir` no se borra nada, pero el registro guardaba igualmente la lista de media
+«borrados». El fichero que existe para poder revertir daba por borrados 9 media que seguían vivos.
+Corregido: ahora anota lo que realmente se borró.
+
+### Dos cifras nuestras que estaban mal
+
+- **«~200 descripciones con claims no sostenibles» es falso: son 3.** Lo que sí existe, y es
+  mayor, son **101 descripciones que no nombran ningún material** — que es justo lo que busca el
+  cliente. Corregido en el traspaso para que el compañero no dimensione mal su trabajo.
+- **El importe del lote Balliu.** Circulaban 20.130 €, 17.699 € y 16.979 €. El primero es la suma
+  del precio **máximo** de variante; por precio de entrada son **16.933,60 €**. Lo único sólido es
+  el recuento: **50 fichas**.
+
+### Y un contexto que recalibra la urgencia de todo
+
+**La tienda tiene 0 pedidos.** Nadie ha comprado la funda con la foto equivocada: no hay daño
+consumado. Todo lo urgente es riesgo prospectivo — y tampoco hay ninguna señal de conversión que
+valide todavía ni el trabajo de imagen ni el de GEO.
+
+### También se corrigió
+
+Dos alt nuestros decían **«impermeable»**, un claim absoluto que no podemos sostener: el catálogo
+dice *«tejido acrílico resinado»* y *«protección eficaz contra la lluvia»*, que no es lo mismo.
+Retirado de los dos. Y se actualizaron dos avisos del catálogo que ya describían problemas
+resueltos.
+
+### Estado al cerrar
+
+**171 ACTIVE · 170 con 3 o más imágenes · 0 sin coste · 0 alt vacíos · 0 violaciones de reglas**
+(+1 excepción documentada). Hevea **111 de 111** en alta; Balliu **10 de 60**, que es la
+consecuencia aceptada de la decisión del 22-08. **453 créditos. 17 commits pendientes de push.**
+
+---
+
 ## 2026-09-08 (F) — LAS 9 FICHAS CORTAS SUBEN A 3 TOMAS · 170 DE 171
 
 Quedaban 9 fichas con solo packshot + ambiente. **Ocho ya tienen su tercera toma**; la novena se
