@@ -26,6 +26,31 @@ Como no hay dato verificado de *esa* referencia, su ficha de medidas declara sol
 (135×90 y 160×90, que sí están confirmados por triplicado). **Falta que Hevea confirme la
 altura** para poder añadirla.
 
+### ⛔ Funda acrílico · 37 € · [`balliu-funda-protectora-exterior-acrilico-a1c16324`] — URGENTE
+
+**La foto es de otro producto, y no tenemos ninguna del bueno.**
+
+| Fuente | Qué dice |
+|---|---|
+| SKU de la ficha | `BALLIU_FUNDA_**PARASOL**_1_UNIDADES_ACRIL_A1C16324` |
+| CSV del proveedor, campo Descripción | **«Funda Parasol»** |
+| Tarifa 2026 (las dos versiones) | **«Funda Parasol 1 Unidades acrilico»** |
+| Nuestra imagen publicada | una **funda de tumbona** cubriendo una tumbona |
+
+El producto es una **funda de parasol**; lo que se ve es una **funda de tumbona**. Un cliente
+puede comprar lo que no es.
+
+**Por qué no se ha arreglado generando otra imagen:** el catálogo general **no ilustra la funda
+de parasol** — su pág. 160 solo documenta la *«Funda para tumbona»*, y la de parasol aparece
+únicamente en la tarifa, sin foto ni descripción. La única imagen original que tenía la ficha se
+borró al publicar la galería nueva. **Sin foto real no se genera: sería inventar el producto.**
+
+Por eso esta ficha se ha dejado **en 2 imágenes a propósito** —es la única del catálogo—, en vez
+de añadirle una tercera toma que reforzaría un producto equivocado.
+
+**Qué hace falta:** pedir a Balliu la foto de la funda de parasol. Mientras no llegue, decidir si
+la ficha pasa a DRAFT.
+
 ## 2 · Fotos que no son del producto
 
 ### «Tumbona resina Ø73 tablillas · Eva Pro T» · 220 € · [`balliu-tumbona-de-exterior-resina-923110d9`]

@@ -2795,5 +2795,93 @@
   "nuevos": [
    "gid://shopify/MediaImage/71688370716996"
   ]
+ },
+ {
+  "handle": "silla-exterior-estilo-estilizado",
+  "producto": "gid://shopify/Product/15507129172292",
+  "borrados": [
+   "gid://shopify/MediaImage/71680725221700",
+   "gid://shopify/MediaImage/71680725254468"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691168514372"
+  ]
+ },
+ {
+  "handle": "base-de-parasol-25-kg",
+  "producto": "gid://shopify/Product/15507129499972",
+  "borrados": [
+   "gid://shopify/MediaImage/71680861962564",
+   "gid://shopify/MediaImage/71680861995332"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691168973124"
+  ]
+ },
+ {
+  "handle": "balliu-base-de-parasol-3ee8b72d",
+  "producto": "gid://shopify/Product/15512253464900",
+  "borrados": [
+   "gid://shopify/MediaImage/71680822214980",
+   "gid://shopify/MediaImage/71680822247748"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691169268036"
+  ]
+ },
+ {
+  "handle": "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a",
+  "producto": "gid://shopify/Product/15512247894340",
+  "borrados": [
+   "gid://shopify/MediaImage/71680727286084",
+   "gid://shopify/MediaImage/71680727318852"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691169759556"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-6f6d4953",
+  "producto": "gid://shopify/Product/15512253759812",
+  "borrados": [
+   "gid://shopify/MediaImage/71680808911172",
+   "gid://shopify/MediaImage/71680808943940"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691170185540"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-340b2844",
+  "producto": "gid://shopify/Product/15512253890884",
+  "borrados": [
+   "gid://shopify/MediaImage/71680811630916",
+   "gid://shopify/MediaImage/71680811663684"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691170545988"
+  ]
+ },
+ {
+  "handle": "balliu-funda-protectora-exterior-686cc405",
+  "producto": "gid://shopify/Product/15512253661508",
+  "borrados": [
+   "gid://shopify/MediaImage/71680813367620",
+   "gid://shopify/MediaImage/71680813400388"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691170971972"
+  ]
+ },
+ {
+  "handle": "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6",
+  "producto": "gid://shopify/Product/15512248549700",
+  "borrados": [
+   "gid://shopify/MediaImage/71680831455556",
+   "gid://shopify/MediaImage/71680831488324"
+  ],
+  "nuevos": [
+   "gid://shopify/MediaImage/71691171463492"
+  ]
  }
 ]

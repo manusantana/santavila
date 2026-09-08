@@ -13,6 +13,62 @@
 
 ---
 
+## 2026-09-08 (F) — LAS 9 FICHAS CORTAS SUBEN A 3 TOMAS · 170 DE 171
+
+Quedaban 9 fichas con solo packshot + ambiente. **Ocho ya tienen su tercera toma**; la novena se
+ha dejado a 2 a propósito y merece leerse (abajo).
+
+### La tercera toma no es siempre una cota
+
+Se decidió producto a producto, y el reparto salió casi a la mitad:
+
+| Ficha | Tercera toma | Por qué |
+|---|---|---|
+| Silla Janeiro (200 €) | **medidas** 55 × 50 × 107, asiento 44 | CSV y catálogo p.81 coinciden |
+| Base parasol Hevea (79 €) | **peso** 25 kg | aquí el dato que decide no son los cm |
+| Base hormigón Balliu (52 €) | **peso** 25 / 30 kg | dos variantes, confirmadas en tarifa |
+| Taburete Etna (187 €) | detalle del **reposapiés** | cotas solo en dibujo, no en texto |
+| Silla Venus (66 €) | detalle del **asiento** | ídem |
+| 3 fundas (130, 85, 80 €) | detalle de **costura, dobladillo y cremallera** | **sin ninguna medida** en CSV, tarifas ni catálogo |
+
+**Las fundas no tienen cota en ninguna fuente.** El catálogo (pág. 196) solo da la medida de la
+**caja de embalaje** —42×56×20 cm—, que no es el producto. Sin dato verificado no se dibuja cota:
+se enseña una **feature real** (la costura reforzada, el dobladillo elástico, la cremallera y su
+cordón), nunca un macro de tejido inventado.
+
+### Leer mal el catálogo por poco cuesta una cota falsa
+
+Un `grep` mostró junto a *«JANEIRO -3 SILLÓN NB165»* la cifra `55 x 50 x 44 / 90`, y como la foto
+de la ficha **tiene brazos** (o sea, es un sillón), todo encajaba para publicar 90 cm de alto.
+Al leer **la página entera** se vio que esa página tiene dos bloques distintos: uno de cotas y
+otro de precios. El `/90` era de **Moasis-3 y Córcega-3**; `NB165` es un **código de tarifa**, no
+una medida. La única línea "Janeiro-3" dice `55 x 50 x 44 / 107`, que además coincide con el CSV.
+
+**Un grep devuelve líneas, no relaciones.** Para una cota hay que leer el contexto.
+
+### Un prompt puede inventar el material citando el propio catálogo
+
+El primer detalle del taburete Etna salió con la **barra reposapiés cromada**. El fallo fue del
+prompt: el catálogo dice *«tornillería en acero inoxidable»* —los tornillos— y eso se escribió
+como `stainless steel footrest bar`. En la foto real la barra es **del mismo aluminio blanco**.
+**Para el acabado manda la foto, no el texto del catálogo.**
+
+### La novena: una foto de otro producto
+
+**Funda acrílico (37 €).** El SKU (`..._FUNDA_PARASOL_...`), el CSV y las dos tarifas dicen
+**funda de PARASOL**; nuestra imagen muestra una **funda de tumbona**. El catálogo no ilustra la
+de parasol y la única foto original de la ficha se borró al publicar la galería nueva.
+**Sin foto real no se genera** — sería inventar el producto. Se deja en 2 imágenes a propósito,
+en vez de reforzar con una tercera toma un producto equivocado.
+Detalle y decisión pendiente en [`AVISOS_CATALOGO_2026-09-07.md`](AVISOS_CATALOGO_2026-09-07.md).
+
+### Estado
+
+**171 ACTIVE · 170 con 3 o más imágenes · 0 violaciones de reglas · 0 alt vacíos.**
+La posición 0 sigue siendo el packshot en todas. Créditos: quedan **~465**.
+
+---
+
 ## 2026-09-07 (E) — EL AUDITOR DABA CERO Y HABÍA COMIDA EN LA FICHA MÁS CARA
 
 Se cerró la mesa Córcega (Fase 2) y, en vez de seguir generando, se hizo la auditoría profunda

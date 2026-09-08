@@ -1848,59 +1848,41 @@
   ]
  },
  "balliu-funda-protectora-exterior-686cc405": {
-  "fecha": "2026-09-07",
+  "fecha": "2026-09-08",
   "carpeta": "funda_tumbona",
-  "n_imagenes": 2,
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
+    "fichero": "03_detalle_costura.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 94
-   },
-   {
-    "fichero": "02_ambiente_otono.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 139
+    "alt_len": 109
    }
   ]
  },
  "balliu-base-de-parasol-3ee8b72d": {
-  "fecha": "2026-09-07",
-  "carpeta": "base_parasol_balliu",
-  "n_imagenes": 2,
+  "fecha": "2026-09-08",
+  "carpeta": "base_hormigon_balliu",
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 78
-   },
-   {
-    "fichero": "02_ambiente_lavanda.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 147
+    "fichero": "03_peso.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 108
    }
   ]
  },
  "balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6": {
-  "fecha": "2026-09-07",
+  "fecha": "2026-09-08",
   "carpeta": "silla_venus",
-  "n_imagenes": 2,
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
+    "fichero": "03_detalle_asiento.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 117
-   },
-   {
-    "fichero": "02_ambiente_mediterraneo.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 120
+    "alt_len": 100
    }
   ]
  },
@@ -1930,40 +1912,28 @@
   ]
  },
  "balliu-funda-protectora-exterior-6f6d4953": {
-  "fecha": "2026-09-07",
+  "fecha": "2026-09-08",
   "carpeta": "funda_sofa",
-  "n_imagenes": 2,
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
+    "fichero": "03_detalle_costura.jpg",
     "px": "2600x2600",
     "mp": 6.8,
     "alt_len": 106
-   },
-   {
-    "fichero": "02_ambiente_pergola.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 148
    }
   ]
  },
  "balliu-funda-protectora-exterior-340b2844": {
-  "fecha": "2026-09-07",
+  "fecha": "2026-09-08",
   "carpeta": "funda_sillas",
-  "n_imagenes": 2,
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
+    "fichero": "03_detalle_cremallera.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 95
-   },
-   {
-    "fichero": "02_ambiente_arcada.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 152
+    "alt_len": 105
    }
   ]
  },
@@ -2963,40 +2933,28 @@
   ]
  },
  "silla-exterior-estilo-estilizado": {
-  "fecha": "2026-09-07",
-  "carpeta": "silla_janeiro",
-  "n_imagenes": 2,
+  "fecha": "2026-09-08",
+  "carpeta": "janeiro",
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 142
-   },
-   {
-    "fichero": "02_ambiente_pirineo.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 138
+    "fichero": "03_medidas.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 107
    }
   ]
  },
  "balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a": {
-  "fecha": "2026-09-07",
+  "fecha": "2026-09-08",
   "carpeta": "taburete_etna",
-  "n_imagenes": 2,
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
+    "fichero": "03_detalle_reposapies.jpg",
     "px": "2600x2600",
     "mp": 6.8,
-    "alt_len": 142
-   },
-   {
-    "fichero": "02_ambiente_mallorca.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 156
+    "alt_len": 110
    }
   ]
  },
@@ -3020,21 +2978,15 @@
   ]
  },
  "base-de-parasol-25-kg": {
-  "fecha": "2026-09-07",
-  "carpeta": "base_parasol25",
-  "n_imagenes": 2,
+  "fecha": "2026-09-08",
+  "carpeta": "base_parasol_hevea",
+  "n_imagenes": 1,
   "imagenes": [
    {
-    "fichero": "01_packshot.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 115
-   },
-   {
-    "fichero": "02_ambiente_terraza.jpg",
-    "px": "2600x2600",
-    "mp": 6.8,
-    "alt_len": 148
+    "fichero": "03_peso.jpg",
+    "px": "2400x2400",
+    "mp": 5.8,
+    "alt_len": 69
    }
   ]
  },

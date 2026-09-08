@@ -1760,11 +1760,52 @@ GALERIAS_CORRECCION = {
     }),
 }
 
+# TERCERA TOMA para las fichas que se quedaron en 2 imagenes (08-09-2026).
+# Decision de Sergio: subirlas de 2 a 3. La tercera NO es siempre una cota:
+#   - Con dato VERIFICADO -> ficha (overlay, no IA):
+#       * silla Janeiro: CSV Santavila (55/50/107) y catalogo Hevea p.81 "55 x 50 x 44 / 107"
+#         coinciden. El catalogo ademas da el alto de ASIENTO (44), que es el dato util.
+#         (Ojo al leerlo: el "/90" de esa pagina es de Moasis-3 y Corcega-3, no del Janeiro;
+#          "JANEIRO -3 SILLON NB165" es una linea de PRECIO, no una cota.)
+#       * las dos bases de parasol: aqui el dato que decide NO son los centimetros, es el PESO.
+#   - SIN cota verificada -> detalle de una feature REAL, nunca un macro de tejido inventado:
+#       las 5 fundas no tienen ninguna medida ni en el CSV ni en las dos tarifas ni en el
+#       catalogo (la pag. 196 solo da la medida de la CAJA), y el taburete Etna y la silla
+#       Venus solo tienen sus cotas en dibujos, no en texto. Sin dato, no se dibuja cota.
+# Se publican con --anadir y despues se reordena, para no reescribir las URL de las dos
+# imagenes que ya tenian.
+GALERIAS_TERCERA_TOMA = {
+    "janeiro": ("silla-exterior-estilo-estilizado", {
+        "03_medidas.jpg": "Medidas de la silla de exterior: 55 x 50 x 107 cm, con el asiento a 44 cm del suelo. Se vende solo la silla",
+    }),
+    "base_parasol_hevea": ("base-de-parasol-25-kg", {
+        "03_peso.jpg": "Peso de la base de parasol: 25 kg. Se vende solo la base, sin parasol",
+    }),
+    "base_hormigon_balliu": ("balliu-base-de-parasol-3ee8b72d", {
+        "03_peso.jpg": "Peso de la base de hormigon para parasol: 25 kg o 30 kg segun la version. Se vende solo la base, sin parasol",
+    }),
+    "taburete_etna": ("balliu-taburete-exterior-aluminio-estilo-elegante-56-cm-a66b4a0a", {
+        "03_detalle_reposapies.jpg": "Detalle de la barra reposapies y de la union del tejido con la estructura de aluminio blanco del taburete Etna",
+    }),
+    "funda_sofa": ("balliu-funda-protectora-exterior-6f6d4953", {
+        "03_detalle_costura.jpg": "Detalle de la costura reforzada y el dobladillo elastico de la funda protectora gris para sofa de exterior",
+    }),
+    "funda_sillas": ("balliu-funda-protectora-exterior-340b2844", {
+        "03_detalle_cremallera.jpg": "Detalle de la cremallera lateral y el cordon de ajuste de la funda protectora oscura para sillas apiladas",
+    }),
+    "funda_tumbona": ("balliu-funda-protectora-exterior-686cc405", {
+        "03_detalle_costura.jpg": "Detalle de la costura reforzada y el dobladillo elastico de la funda protectora gris para tumbona de exterior",
+    }),
+    "silla_venus": ("balliu-silla-exterior-sin-brazos-estilo-contemporaneo-53-cm-cd07e7d6", {
+        "03_detalle_asiento.jpg": "Detalle del asiento de resina color tortola y de su union con el respaldo de lazos de la silla Venus",
+    }),
+}
+
 if __name__ == "__main__":
     backup = []
     # ACTIVA: la tanda del Brandon 3 pl. (las de abajo son historicas y NO se publican)
     if VERIFICAR: _verificar_todo()
-    ACTIVA = GALERIAS_CORRECCION
+    ACTIVA = GALERIAS_TERCERA_TOMA
     registro = []
     for slug, (handle, alts) in ACTIVA.items():
         if SOLO and slug != SOLO:

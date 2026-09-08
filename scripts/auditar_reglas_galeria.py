@@ -59,6 +59,17 @@ FICHERO_CONSUMIBLE = {
  'frutas','tapa','tapas','almuerzo','cena','brindis','picnic','torrija','churros','helado',
  'zumo','mojito','sangria','sangría','tinto','uvas','fresas','cerezas','pastel','tarta'}
 
+# EXCEPCIONES ACEPTADAS — decididas por Sergio, no fallos olvidados.
+# Se listan aqui a proposito: al cambiar un alt para que deje de delatar el contenido, el
+# auditor se queda ciego a ese medio y la informacion se PIERDE. Registrarla es lo contrario
+# de taparla: el informe sigue diciendo que existe y por que se acepta.
+EXCEPCIONES = {
+    "gid://shopify/Video/71140971184452": (
+        "set Leisa (2.899 EUR) · el VIDEO muestra una bebida fria sobre la mesa. Incumple la "
+        "regla de atrezzo del 03-08-2026 igual que la imagen de la granada, pero Sergio decidio "
+        "el 07-09-2026 conservarlo y reescribir solo el alt. Esta fuera de la posicion 0."),
+}
+
 def _tokens_fichero(url):
     base = re.sub(r"_[0-9a-f]{8}-[0-9a-f]{4}-.*$", "", os.path.splitext(url.split("/")[-1].split("?")[0])[0])
     return set(re.split(r"[_\-\.]+", base.lower()))
@@ -160,6 +171,10 @@ def main():
                                   f"el nombre del fichero dice {sorted(tk)}: {m.get('url','').split('/')[-1].split('?')[0]}")
     print(f"\n  comida/bebida={n_com}  lujo/resort={n_res}  macro de tejido={n_mac}  "
           f"alt vacio={n_vac}  nombre de fichero={n_fic}")
+    if EXCEPCIONES:
+        print(f"\n  + {len(EXCEPCIONES)} excepcion(es) ACEPTADA(S), que el auditor ya no puede ver:")
+        for mid, por_que in EXCEPCIONES.items():
+            print(f"      {mid.split('/')[-1]}  {por_que}")
     if solo_reglas: return
 
     print("\n=== 1 · COMPOSICION: formula del catalogo por ficha")
