@@ -134,7 +134,7 @@
               <span>Ordenar</span>
               <select name="sort_by" aria-label="Ordenar por" onchange="this.form.submit()">
                 {%- for option in collection.sort_options -%}
-                  <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{{ option.name }}</option>
+                  <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{% if option.value == 'manual' %}Destacados{% else %}{{ option.name }}{% endif %}</option>
                 {%- endfor -%}
               </select>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>

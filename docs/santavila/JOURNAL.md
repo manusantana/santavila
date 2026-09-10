@@ -6118,3 +6118,16 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 
 ### Consent screen publicado + token permanente (2026-08-30)
 - Causa raíz de los tokens que morían cada 7 días resuelta: app OAuth `santavila-muebles-exteriores` publicada en producción (la nueva Google Auth Platform exige Página principal + Política de privacidad + Dominio autorizado aunque no lleven asterisco). Reautorizado en modo producción y verificado (GSC responde). No volver a reautorizar salvo revocación manual.
+
+---
+
+## 2026-09-10 · Traducción de filtros y ordenación en colecciones
+
+**Paso del flujo:** UX/i18n tienda
+**Estado:** ✅ sort arreglado en prod · filtros pendientes de 1 clic del dueño en la app
+**Quién/qué:** Claude Code + Asset API
+
+### Qué se ejecutó
+- Diagnóstico: "Availability"/"Price" NO son un fallo del tema — son las etiquetas FUENTE de los filtros en la app Search & Discovery (creados con defaults en inglés; el locale primario es `es`, así que la Translations API no aplica y la app no tiene API pública de renombrado). "Tipo" y "Color" ya estaban bien.
+- "Ordenar: Características" = traducción core de Shopify para "Featured" (no editable) → sobreescrita en tema a **"Destacados"** solo para `option.value == 'manual'` en `santavila-collection-grid.liquid` y `snippets/sorting.liquid` (usado por blocks/filters). Staging→prod, verificado en público (0 "Características").
+- PENDIENTE dueño: Apps → Search & Discovery → Filtros → renombrar "Availability" → "Disponibilidad" y "Price" → "Precio".

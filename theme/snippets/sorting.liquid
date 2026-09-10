@@ -24,6 +24,9 @@
     for option in results.sort_options
       if option.value == sort_by
         assign status = option.name
+        if option.value == 'manual'
+          assign status = 'Destacados'
+        endif
       endif
     endfor
   %}
@@ -51,7 +54,7 @@
               selected
             {% endif %}
           >
-            {{ option.name }}
+            {% if option.value == 'manual' %}Destacados{% else %}{{ option.name }}{% endif %}
           </option>
         {% endfor %}
       </select>
@@ -135,7 +138,7 @@
                 <span class="svg-wrapper icon-checkmark sorting-filter__checkmark">
                   {{- 'icon-checkmark.svg' | inline_asset_content -}}
                 </span>
-                <span class="sorting-filter__label">{{ option.name }}</span>
+                <span class="sorting-filter__label">{% if option.value == 'manual' %}Destacados{% else %}{{ option.name }}{% endif %}</span>
               </div>
             </label>
           {% endfor %}
