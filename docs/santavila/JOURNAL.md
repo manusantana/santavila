@@ -6131,3 +6131,11 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 - Diagnóstico: "Availability"/"Price" NO son un fallo del tema — son las etiquetas FUENTE de los filtros en la app Search & Discovery (creados con defaults en inglés; el locale primario es `es`, así que la Translations API no aplica y la app no tiene API pública de renombrado). "Tipo" y "Color" ya estaban bien.
 - "Ordenar: Características" = traducción core de Shopify para "Featured" (no editable) → sobreescrita en tema a **"Destacados"** solo para `option.value == 'manual'` en `santavila-collection-grid.liquid` y `snippets/sorting.liquid` (usado por blocks/filters). Staging→prod, verificado en público (0 "Características").
 - PENDIENTE dueño: Apps → Search & Discovery → Filtros → renombrar "Availability" → "Disponibilidad" y "Price" → "Precio".
+
+---
+
+## 2026-09-15 · Proyecto compactado en ESTADO_PROYECTO.md
+
+- Creado `docs/santavila/ESTADO_PROYECTO.md`: foto completa en una página (infra/flujos, catálogo, GEO, RRSS, pendientes por persona, mapa de documentos). Es el punto de entrada para cualquier sesión nueva (humana o IA); el JOURNAL sigue siendo el histórico cronológico.
+- Ritual de arranque aplicado (regla nueva en memoria): repo sincronizado, working tree limpio, sin commits nuevos del compañero.
+- ⏰ Recordatorio activo: delta GSC vencido (~13-sep) — correr al retomar el trabajo GEO.
