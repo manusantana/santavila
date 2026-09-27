@@ -6139,3 +6139,39 @@ Tras la auditoría de contenido del 29-ago (`AUDITORIA_CONTENIDO_CATALOGO_2026-0
 - Creado `docs/santavila/ESTADO_PROYECTO.md`: foto completa en una página (infra/flujos, catálogo, GEO, RRSS, pendientes por persona, mapa de documentos). Es el punto de entrada para cualquier sesión nueva (humana o IA); el JOURNAL sigue siendo el histórico cronológico.
 - Ritual de arranque aplicado (regla nueva en memoria): repo sincronizado, working tree limpio, sin commits nuevos del compañero.
 - ⏰ Recordatorio activo: delta GSC vencido (~13-sep) — correr al retomar el trabajo GEO.
+
+---
+
+## 2026-09-27 · Lote 4 RRSS: las marcas como protagonistas
+
+**Paso del flujo:** RRSS (Metricool)
+**Estado:** ✅ 6 piezas programadas (30-sep → 11-oct)
+**Quién/qué:** Claude Code + compositor Pillow + Shopify Files + MCP Metricool
+
+### Contexto
+El planner estaba vacío desde el 20-sep (los 7 posts del 10–19-sep salieron todos OK, pero el lote 4 nunca se montó). Se retoma con las landings de marca (`/collections/balliu` y `/collections/hevea`) como eje, que es justo el frente de autoridad que pide el cluster de resina.
+
+### Qué se compuso (nuevo en `content/social/`)
+- **Carrusel 15 "Balliu"** (5 slides): cover Tumbona-Etna + Eva Pro / Noa-Lola-Carmen / mesas-parasoles + cierre "DISTRIBUIDOR ONLINE DE BALLIU" → santavila.com.
+- **Carrusel 16 "Hevea"** (5 slides): cover leisa Toledo + sofás-sets / rinconeras / balinesas + cierre de marca.
+- **Detalles 04 y 05** (1080×1350): gazpacho manhattan3p (Giralda) y sidra+queso albania2p (giro otoñal).
+- **Pins de marca** (1000×1500): Tumbona-Etna → /collections/balliu y bellagio Cabo de Gata → /collections/hevea.
+- Mejoras del compositor aplicadas inline: eyebrow "MARCAS DE SANTAVILA" (no "GUÍA DE EXTERIOR"), scrim superior para que el logo blanco no se pierda en cielos claros, contador `/05` (el `slide_statement` del script tiene `/06` fijo).
+- 14 archivos subidos a Shopify Files → `cdn_urls.json` (112 entradas).
+
+### Calendario programado (Metricool, autoPublish, IG+FB salvo pins)
+| Fecha | Pieza | Destino |
+|---|---|---|
+| mar 30-sep 21:00 | Carrusel 15 Balliu | /collections/balliu |
+| mié 1-oct 14:00 | Pin marca Balliu (Pinterest) | /collections/balliu |
+| jue 2-oct 21:00 | Detalle 04 gazpacho | santavila.com |
+| dom 4-oct 21:00 | Carrusel 16 Hevea | /collections/hevea |
+| mié 7-oct 14:00 | Pin marca Hevea (Pinterest) | /collections/hevea |
+| dom 11-oct 21:00 | Detalle 05 sidra (otoño) | santavila.com |
+
+Verificado en el planner (6 posts PENDING, ids 382750735–382750797). Gotcha nuevo: el MCP de Metricool estaba disponible directamente esta sesión (sin RPC manual).
+
+### Siguiente
+- Delta GSC sigue VENCIDO (~13-sep) → correr `gsc_baseline.py`/`gsc_opportunities.py`.
+- Guía "Tumbonas de resina para piscinas comunitarias y hostelería" + sus piezas sociales (lote 5).
+- Vídeos ASMR: esperando OK de gasto de créditos (renovación ~día 5).
