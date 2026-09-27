@@ -30,12 +30,12 @@ Shopify `mueblesexterior.myshopify.com` → **santavila.com** · mobiliario de e
 
 ## RRSS (Metricool)
 - Agosto: 22 piezas publicadas (1 fallo el 4-ago, republicado). Sept cubierto **hasta el 19-sep** (guías pérgola/parasol, carruseles Sofás-por-España y Puertas-adentro, serie "El detalle", pins de colección). IG ~4/sem · Pinterest ~3/sem · IG tiene ~6K seguidores (el activo); Pinterest = siembra a meses.
-- **Sin programar del 20-sep en adelante** → lote 4 pendiente (carrusel/pin landing Balliu + piezas de la próxima guía + reels ASMR si se aprueban créditos).
+- **Lote 4 programado el 27-sep** (30-sep → 11-oct): carruseles + pins de las landings de marca Balliu/Hevea y detalles 04-05 (gazpacho Sevilla, sidra otoño). Piezas y URLs en `content/social/` + `cdn_urls.json`; detalle en JOURNAL 27-sep. Siguiente hueco a cubrir: a partir del ~12-oct (lote 5 = piezas de la guía de resina profesional).
 
 ## Pendientes por persona
 **Dueño (Manu):** renombrar filtros "Availability/Price" en app Search & Discovery → Disponibilidad/Precio · email Balliu/Hevea (listado como distribuidor + EAN; borrador en chat 30-ago) · GBP (falta móvil) · Pinterest: meta-tag dominio + 3 tableros · Bing Webmaster (importar de GSC) → avisar para IndexNow · cuentas Wikidata/LinkedIn · OK borrado 9 mesas DRAFT.
 **Compañero (Sergio):** regeneración galerías Balliu según orden del traspaso (JOURNAL 29-ago) · reposapiés Standard XL prioritario · sobreescribir alts baseline al regenerar.
-**Claude:** delta GSC (vencido) · escribir/programar guía resina profesional · lote 4 RRSS · vídeos ASMR PDP tras OK de créditos (5 candidatas elegidas) · IndexNow cuando haya Bing.
+**Claude:** delta GSC (vencido ~13-sep) · escribir/programar guía resina profesional + lote 5 RRSS (desde ~12-oct) · vídeos ASMR PDP tras OK de créditos (5 candidatas elegidas) · IndexNow cuando haya Bing.
 
 ## Dónde está cada cosa
 `JOURNAL.md` (historia) · `GEO-DELTA-*.md` (métricas) · `AUDITORIA_CONTENIDO_CATALOGO_2026-08-29.md` (catálogo) · `WORKFLOW_STAGING_PRODUCCION.md` (tema) · `GEO-SOCIAL-CONTENT-PACK.md` + `content/social/` (RRSS, URLs CDN en `cdn_urls.json`) · scripts idempotentes con backup en `scripts/` (backups en `content/descriptions/`).
