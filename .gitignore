@@ -37,3 +37,13 @@ consolidate_balliu_sillas_report.csv
 
 .secrets
 .secrets/
+
+# skills de la agencia enlazadas por Super-IA/install.sh (no son de este proyecto)
+.claude/skills/foto-producto-ia
+.claude/skills/seo-audit
+.claude/skills/impeccable
+.claude/skills/seguimiento-cliente
+.claude/skills/tracking-shopify
+.claude/skills/migracion-shopify
+.claude/skills/nuevo-cliente-seo
+.claude/skills/reporte-ads

@@ -1,5 +1,17 @@
 # Skills exportables
 
+> ⚠️ **`foto-producto-ia` ya no se mantiene aquí (25-09-2026).** Se ha integrado en la capa
+> workspace del repo **Super-IA**, que es ahora la **copia canónica**, y desde allí está disponible
+> en todos los e-commerce del workspace sin copiar nada:
+>
+> ```
+> Super-IA/workspace/skills/foto-producto-ia/
+> ```
+>
+> Lo que queda en esta carpeta es el **origen histórico**: no lo edites. Si aprendes algo genérico
+> nuevo, tócalo en Super-IA y haz `git push` (así llega a las dos máquinas). Pendiente de hablarlo
+> con Manu, por si prefiere otro reparto.
+
 Skills **genéricos**, sin nada de este proyecto dentro, listos para llevar a otro cliente.
 
 | Skill | Qué hace |
